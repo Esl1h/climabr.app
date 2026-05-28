@@ -9,9 +9,14 @@
  *   curl climabr.app/sp/cotia?format=j1  → JSON completo
  *   curl climabr.app/sp/cotia?format=prometheus → métricas Prometheus
  *   curl climabr.app/sp/cotia.svg        → card SVG (compartilhável)
+ *   curl climabr.app/sp/cotia.png        → card PNG (og:image, preview social)
  *   curl climabr.app                     → geolocaliza pelo IP e redireciona
  *   ?T                                   → desativa cores ANSI
  */
+
+import { Resvg, initWasm } from '@resvg/resvg-wasm';
+// @ts-ignore — o wrangler empacota o .wasm como WebAssembly.Module
+import resvgWasm from './resvg.wasm';
 
 // ---------------------------------------------------------------------------
 // Tipos e constantes
@@ -19,6 +24,19 @@
 
 interface Env {
   SITE_URL?: string;
+}
+
+// Inicializa o wasm do resvg uma única vez por instância do Worker
+let wasmInit: Promise<unknown> | null = null;
+function initResvg(): Promise<unknown> {
+  if (!wasmInit) wasmInit = initWasm(resvgWasm as WebAssembly.Module);
+  return wasmInit;
+}
+
+async function svgParaPng(svg: string): Promise<Uint8Array> {
+  await initResvg();
+  const resvg = new Resvg(svg, { fitTo: { mode: 'width', value: 1200 } });
+  return resvg.render().asPng();
 }
 
 type Dados = Record<string, unknown>;
@@ -581,11 +599,31 @@ export default {
     if (info) {
       const { estado, cidade, ext } = info;
 
-      // SVG — qualquer user-agent
-      if (ext === '.svg' || ext === '.png' || format === 'svg' || format === 'png') {
+      // Imagem (SVG ou PNG) — qualquer user-agent
+      const querPng = ext === '.png' || format === 'png';
+      const querSvg = ext === '.svg' || format === 'svg';
+      if (querPng || querSvg) {
         const dados = await buscarDados(siteUrl, estado, cidade);
         if (dados && !dados._status) {
           const svg = formatarSvg(dados);
+
+          if (querPng) {
+            // PNG real para og:image (Twitter/X, Facebook, WhatsApp exigem raster)
+            try {
+              const png = await svgParaPng(svg);
+              return new Response(png, {
+                headers: {
+                  'Content-Type': 'image/png',
+                  'Cache-Control': 'public, max-age=1800',
+                  'Access-Control-Allow-Origin': '*',
+                  ...SECURITY_HEADERS,
+                },
+              });
+            } catch {
+              // Degradação graciosa: se o wasm falhar, devolve o SVG
+            }
+          }
+
           return new Response(svg, {
             headers: {
               'Content-Type': 'image/svg+xml; charset=utf-8',

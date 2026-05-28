@@ -7,9 +7,15 @@ const SITE = 'https://climabr.app';
 const HOJE = new Date().toISOString().split('T')[0];
 
 export const GET: APIRoute = () => {
+  const estados = [...new Set(municipios.map((m) => m.estado))];
+
   const urls: string[] = [
     `  <url><loc>${SITE}/</loc><changefreq>daily</changefreq><priority>1.0</priority><lastmod>${HOJE}</lastmod></url>`,
     `  <url><loc>${SITE}/curl</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>`,
+    ...estados.map(
+      (uf) =>
+        `  <url><loc>${SITE}/${uf}</loc><changefreq>daily</changefreq><priority>0.6</priority><lastmod>${HOJE}</lastmod></url>`
+    ),
     ...municipios.map(
       (m) =>
         `  <url><loc>${SITE}/${m.estado}/${m.slug}</loc><changefreq>hourly</changefreq><priority>0.8</priority><lastmod>${HOJE}</lastmod></url>`

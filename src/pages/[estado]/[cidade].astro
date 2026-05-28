@@ -9,6 +9,7 @@ import BlocoDengue from '../../components/BlocoDengue.astro';
 import BlocoSol from '../../components/BlocoSol.astro';
 import BlocoVento from '../../components/BlocoVento.astro';
 import BlocoOndas from '../../components/BlocoOndas.astro';
+import { descricaoTextual } from '../../lib/descricao';
 import municipiosRaw from '../../../data/municipios.json';
 import type { Municipio, DadosCidade } from '../../lib/types';
 
@@ -83,7 +84,7 @@ const temDados = dados && (
   <nav class="mb-6 text-sm text-slate-500" aria-label="Navegação">
     <a href="/" class="hover:text-slate-300">ClimaBR.app</a>
     <span class="mx-2">/</span>
-    <span class="text-slate-300">{municipio.estado.toUpperCase()}</span>
+    <a href={`/${municipio.estado}`} class="text-slate-300 hover:text-emerald-400">{municipio.estado.toUpperCase()}</a>
     <span class="mx-2">/</span>
     <span class="text-white">{municipio.nome}</span>
   </nav>
@@ -103,6 +104,11 @@ const temDados = dados && (
     ) : (
       <p class="mt-1 text-xs text-slate-500">Dados ainda não coletados para esta cidade.</p>
     )}
+
+    <!-- Resumo textual (SEO + acessibilidade): prosa indexável antes dos blocos visuais -->
+    <p class="mt-4 text-sm leading-relaxed text-slate-400">
+      {descricaoTextual(municipio, dados)}
+    </p>
   </div>
 
   {temDados ? (
@@ -179,7 +185,7 @@ const temDados = dados && (
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "ClimaBR.app", "item": "https://climabr.app" },
-          { "@type": "ListItem", "position": 2, "name": municipio.estado_nome, "item": `https://climabr.app/#${municipio.estado}` },
+          { "@type": "ListItem", "position": 2, "name": municipio.estado_nome, "item": `https://climabr.app/${municipio.estado}` },
           { "@type": "ListItem", "position": 3, "name": municipio.nome, "item": `https://climabr.app/${estado}/${cidade}` },
         ],
       },

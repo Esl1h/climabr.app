@@ -1,0 +1,86 @@
+---
+import PainelLayout from '../../layouts/PainelLayout.astro';
+import municipiosRaw from '../../../data/municipios.json';
+import type { Municipio } from '../../lib/types';
+
+export async function getStaticPaths() {
+  const municipios = municipiosRaw as Municipio[];
+  const estados = [...new Set(municipios.map((m) => m.estado))];
+  return estados.map((uf) => ({
+    params: { estado: uf },
+    props: {
+      uf,
+      nome: municipios.find((m) => m.estado === uf)!.estado_nome,
+      cidades: municipios
+        .filter((m) => m.estado === uf)
+        .sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR')),
+    },
+  }));
+}
+
+interface Props {
+  uf: string;
+  nome: string;
+  cidades: Municipio[];
+}
+
+const { uf, nome, cidades } = Astro.props;
+
+const titulo = `${nome} (${uf.toUpperCase()}) — ${cidades.length} municípios — ClimaBR.app`;
+const descricao = `Dados ambientais dos ${cidades.length} municípios de ${nome}: previsão do tempo, ` +
+  `qualidade do ar, índice UV, vento, reservatórios, queimadas e alertas de dengue por cidade.`;
+
+// Agrupa por letra inicial para navegação
+const porLetra = cidades.reduce<Record<string, Municipio[]>>((acc, c) => {
+  const letra = c.nome[0].toUpperCase();
+  (acc[letra] ??= []).push(c);
+  return acc;
+}, {});
+const letras = Object.keys(porLetra).sort((a, b) => a.localeCompare(b, 'pt-BR'));
+---
+
+<PainelLayout title={titulo} description={descricao}>
+  <nav class="mb-6 text-sm text-slate-500" aria-label="Navegação">
+    <a href="/" class="hover:text-slate-300">ClimaBR.app</a>
+    <span class="mx-2">/</span>
+    <span class="text-white">{nome}</span>
+  </nav>
+
+  <div class="mb-8">
+    <h1 class="text-2xl font-bold text-white">
+      {nome}
+      <span class="text-slate-400 text-lg">/{uf.toUpperCase()}</span>
+    </h1>
+    <p class="mt-2 text-sm leading-relaxed text-slate-400">
+      Dados ambientais dos <strong class="text-slate-200">{cidades.length}</strong> municípios
+      de {nome}. Selecione uma cidade para ver previsão do tempo, qualidade do ar, índice UV,
+      vento, nível de reservatórios, focos de queimada e alertas de dengue.
+    </p>
+  </div>
+
+  {letras.map((letra) => (
+    <section class="mb-6">
+      <h2 class="mb-2 text-sm font-bold text-emerald-400">{letra}</h2>
+      <div class="grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-3">
+        {porLetra[letra].map((c) => (
+          <a
+            href={`/${c.estado}/${c.slug}`}
+            class="truncate py-1 text-sm text-slate-300 hover:text-emerald-400 transition-colors"
+          >
+            {c.nome}
+          </a>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": `Municípios de ${nome}`,
+    "description": descricao,
+    "url": `https://climabr.app/${uf}`,
+    "isPartOf": { "@type": "WebSite", "name": "ClimaBR.app", "url": "https://climabr.app" },
+    "about": { "@type": "Place", "name": nome, "addressRegion": uf.toUpperCase(), "addressCountry": "BR" },
+  })} />
+</PainelLayout>

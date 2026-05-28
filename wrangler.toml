@@ -10,5 +10,7 @@ SITE_URL = "https://climabr.app"
 pattern = "climabr.app/*"
 zone_name = "climabr.app"
 
-# Desenvolvimento local: wrangler pages dev dist/ --port 8788
-# O Worker serve os estáticos do dist/ e intercepta curl automaticamente
+# Desenvolvimento local (o Worker importa .wasm, então usar wrangler dev):
+#   npm run dev   (Astro :4321)
+#   npx wrangler dev --port 8788 --var SITE_URL:http://localhost:4321
+# O Worker lê os JSONs do Astro e gera curl/SVG/PNG/Prometheus.

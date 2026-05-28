@@ -175,32 +175,44 @@ O Worker acessa via `env.DADOS.get('sp/cotia.json')` — sem expor o bucket.
 
 ---
 
-## Parte 4 — Worker (curl, SVG, Prometheus, geolocalização)
+## Parte 4 — Worker (curl, SVG, PNG, Prometheus, geolocalização)
 
 O Worker em `worker/index.ts` intercepta requisições de terminal e gera formatos
-especiais. Já está configurado no `wrangler.toml`.
+especiais. Já está configurado no `wrangler.toml`. Inclui `worker/resvg.wasm`
+(~2.4 MB / 0.9 MB gzip) que converte o card SVG em PNG para og:image.
 
 ### 4.1 Deploy do Worker
 
 ```bash
-wrangler deploy worker/index.ts
+wrangler deploy            # usa main = worker/index.ts do wrangler.toml
+# Validar sem publicar:
+wrangler deploy --dry-run --outdir=/tmp/worker-build
 ```
 
 ### 4.2 Rota do Worker
 
 No `wrangler.toml`, a rota `climabr.app/*` faz o Worker processar todas as
-requisições do domínio. Ele decide: curl → texto, browser → repassa ao Pages.
+requisições do domínio. Ele decide: curl → texto, `.png`/`.svg` → imagem,
+browser → repassa ao Pages.
 
 ### 4.3 Dev local do Worker
 
-```bash
-# Terminal 1
-npm run dev                                    # Astro em :4321
+Como o Worker importa `.wasm`, usar `wrangler dev` (que empacota wasm nativamente).
+O esbuild manual + `pages dev` **não** lida com o wasm.
 
-# Terminal 2
-npx esbuild worker/index.ts --bundle --platform=browser --format=esm \
-  --outfile=dist/_worker.js --external:@cloudflare/workers-types
-npx wrangler pages dev dist/ --port 8788       # Worker em :8788
+```bash
+# Terminal 1 — Astro (serve HTML e JSONs)
+npm run dev                                          # :4321
+
+# Terminal 2 — Worker (lê os JSONs do Astro)
+npx wrangler dev --port 8788 --var SITE_URL:http://localhost:4321
+```
+
+Testar:
+```bash
+curl localhost:8788/sp/cotia                 # terminal ANSI
+curl localhost:8788/sp/cotia.png -o card.png # og:image PNG (via resvg-wasm)
+curl localhost:8788/sp/cotia.svg             # card SVG
 ```
 
 `.dev.vars` já tem `SITE_URL=http://localhost:4321`.

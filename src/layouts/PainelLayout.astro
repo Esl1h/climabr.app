@@ -22,8 +22,9 @@ const {
 const canonical = new URL(Astro.url.pathname, 'https://climabr.app').href;
 const ogTitle = cidade && estado ? `${cidade}/${estado.toUpperCase()} — ClimaBR.app` : title;
 
-// Em páginas de cidade: card SVG como imagem social e link para o JSON
-const cardImage = ogImage ?? (estado && slug ? `https://climabr.app/${estado}/${slug}.svg` : undefined);
+// Em páginas de cidade: card PNG (gerado pelo Worker) como imagem social.
+// PNG tem suporte universal (Twitter/X, Facebook, WhatsApp). O SVG fica como alternativo.
+const cardImage = ogImage ?? (estado && slug ? `https://climabr.app/${estado}/${slug}.png` : undefined);
 const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.json` : undefined;
 ---
 
@@ -52,7 +53,8 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
     <meta property="og:site_name" content="ClimaBR.app" />
     <meta property="og:locale" content="pt_BR" />
     {cardImage && <meta property="og:image" content={cardImage} />}
-    {cardImage && <meta property="og:image:type" content="image/svg+xml" />}
+    {cardImage && <meta property="og:image:type" content="image/png" />}
+    {cardImage && <meta property="og:image:alt" content={ogTitle} />}
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content={cardImage ? 'summary_large_image' : 'summary'} />
