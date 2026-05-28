@@ -51,9 +51,60 @@ const ogTitle = cidade && estado ? `${cidade}/${estado.toUpperCase()} — climab
   </head>
   <body class="min-h-screen bg-slate-950 text-slate-100 antialiased">
     <header class="border-b border-slate-800 px-4 py-3">
-      <a href="/" class="text-lg font-bold tracking-tight text-white hover:text-slate-300">
-        climabr<span class="text-emerald-400">.app</span>
-      </a>
+      <div class="flex items-center justify-between max-w-3xl mx-auto">
+        <!-- Logo -->
+        <a href="/" class="text-lg font-bold tracking-tight hover:opacity-80 transition-opacity">
+          <span class="text-blue-400">Clima</span><span class="text-yellow-400">BR</span><span class="text-emerald-400">.app</span>
+        </a>
+
+        <!-- Menu hamburguer -->
+        <div class="relative" id="menu-wrapper">
+          <button
+            id="menu-btn"
+            aria-label="Menu"
+            aria-expanded="false"
+            class="flex flex-col justify-center gap-1.5 w-8 h-8 p-1 rounded hover:bg-slate-800 transition-colors"
+          >
+            <span class="block h-0.5 w-full bg-slate-400 transition-all" id="bar1"></span>
+            <span class="block h-0.5 w-full bg-slate-400 transition-all" id="bar2"></span>
+            <span class="block h-0.5 w-full bg-slate-400 transition-all" id="bar3"></span>
+          </button>
+
+          <nav
+            id="menu-dropdown"
+            class="hidden absolute right-0 top-10 w-44 bg-slate-900 border border-slate-700 rounded-lg shadow-xl z-50 py-1"
+            role="menu"
+          >
+            <a
+              href="/curl"
+              class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
+              role="menuitem"
+            >
+              <span class="font-mono text-emerald-400 text-xs bg-slate-800 px-1.5 py-0.5 rounded">$</span>
+              cUrl
+            </a>
+            <div class="border-t border-slate-800 my-1"></div>
+            <a
+              href="/llms.txt"
+              class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
+              role="menuitem"
+              target="_blank"
+            >
+              <span class="text-slate-500 text-xs">AI</span>
+              llms.txt
+            </a>
+            <a
+              href="/.well-known/mcp.json"
+              class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
+              role="menuitem"
+              target="_blank"
+            >
+              <span class="text-slate-500 text-xs">MCP</span>
+              mcp.json
+            </a>
+          </nav>
+        </div>
+      </div>
     </header>
 
     <main class="mx-auto max-w-3xl px-4 py-8">
@@ -64,5 +115,43 @@ const ogTitle = cidade && estado ? `${cidade}/${estado.toUpperCase()} — climab
       Dados de fontes públicas: INMET, ANA, INPE, CETESB, SVS/MS, ANEEL &nbsp;·&nbsp;
       <a href="/llms.txt" class="underline hover:text-slate-300">llms.txt</a>
     </footer>
+
+    <script>
+      const btn = document.getElementById('menu-btn');
+      const dropdown = document.getElementById('menu-dropdown');
+      const bar1 = document.getElementById('bar1');
+      const bar2 = document.getElementById('bar2');
+      const bar3 = document.getElementById('bar3');
+
+      function toggleMenu() {
+        const open = dropdown?.classList.toggle('hidden') === false;
+        btn?.setAttribute('aria-expanded', String(open));
+        if (open) {
+          bar1?.classList.add('rotate-45', 'translate-y-2');
+          bar2?.classList.add('opacity-0');
+          bar3?.classList.add('-rotate-45', '-translate-y-2');
+        } else {
+          bar1?.classList.remove('rotate-45', 'translate-y-2');
+          bar2?.classList.remove('opacity-0');
+          bar3?.classList.remove('-rotate-45', '-translate-y-2');
+        }
+      }
+
+      btn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
+      });
+
+      // Fecha ao clicar fora
+      document.addEventListener('click', () => {
+        if (!dropdown?.classList.contains('hidden')) {
+          dropdown?.classList.add('hidden');
+          btn?.setAttribute('aria-expanded', 'false');
+          bar1?.classList.remove('rotate-45', 'translate-y-2');
+          bar2?.classList.remove('opacity-0');
+          bar3?.classList.remove('-rotate-45', '-translate-y-2');
+        }
+      });
+    </script>
   </body>
 </html>
