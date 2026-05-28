@@ -4,47 +4,84 @@
   "slug": "bananal",
   "latitude": -22.7338,
   "longitude": -44.3345,
-  "atualizado_em": "2026-05-28T11:46:29.813696-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 15,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 14.3,
+      "max": 20.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 5.5,
+      "nascer_sol": "06:28",
+      "por_sol": "17:20"
     },
     {
       "data": "2026-05-29",
-      "min": 14,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 12.5,
+      "max": 19.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 4.2,
+      "nascer_sol": "06:29",
+      "por_sol": "17:20"
     },
     {
       "data": "2026-05-30",
-      "min": 13,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 13.9,
+      "max": 18.6,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 5.7,
+      "uv": 4.2,
+      "nascer_sol": "06:29",
+      "por_sol": "17:20"
     },
     {
       "data": "2026-05-31",
-      "min": 15,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 14.0,
+      "max": 20.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 5.4,
+      "nascer_sol": "06:29",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 13.4,
+      "max": 21.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 4.8,
+      "nascer_sol": "06:30",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 13.5,
+      "max": 18.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 3.5,
+      "nascer_sol": "06:30",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 11.2,
+      "max": 19.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 4.2,
+      "nascer_sol": "06:31",
+      "por_sol": "17:19"
     }
   ],
   "queimadas": {
@@ -62,5 +99,60 @@
     "nota": "Reservatório hidrelétrico mais próximo (33km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
     "atualizado_em": "2026-05-28T12:52:28.221558-03:00"
-  }
+  },
+  "dengue": {
+    "nivel_alerta": 1,
+    "nivel_label": "Atenção",
+    "nivel_incidencia": 0,
+    "nivel_incidencia_label": "Baixa",
+    "casos_semana": 0,
+    "casos_estimados": 0,
+    "semana_epidemiologica": 202620,
+    "fonte": "InfoDengue / Fiocruz / SVS",
+    "atualizado_em": "2026-05-28T13:36:28.571279-03:00"
+  },
+  "chikungunya": {
+    "nivel_alerta": 1,
+    "nivel_label": "Atenção",
+    "nivel_incidencia": 0,
+    "nivel_incidencia_label": "Baixa",
+    "casos_semana": 0,
+    "casos_estimados": 0,
+    "semana_epidemiologica": 202620,
+    "fonte": "InfoDengue / Fiocruz / SVS",
+    "atualizado_em": "2026-05-28T13:36:28.571279-03:00"
+  },
+  "uv": {
+    "indice": 5.5,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 24,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 3.7,
+    "pm10": 5.2,
+    "no2": 0.2,
+    "o3": 72.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:28",
+    "por": "17:20",
+    "duracao_h": 10.9,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 20.4
 }

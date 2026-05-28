@@ -4,52 +4,122 @@
   "slug": "jardim-de-piranhas",
   "latitude": -6.3345,
   "longitude": -37.2859,
-  "atualizado_em": "2026-05-28T11:43:53.655013-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 22,
-      "max": 31,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 22.6,
+      "max": 30.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.7,
+      "nascer_sol": "05:33",
+      "por_sol": "17:20"
     },
     {
       "data": "2026-05-29",
-      "min": 23,
-      "max": 30,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.5,
+      "max": 31.7,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.2,
+      "uv": 6.1,
+      "nascer_sol": "05:33",
+      "por_sol": "17:20"
     },
     {
       "data": "2026-05-30",
-      "min": 22,
-      "max": 31,
-      "condicao": "Chuvas Isoladas",
-      "condicao_codigo": "ci",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.1,
+      "max": 32.1,
+      "condicao": "Chuva moderada",
+      "condicao_codigo": 63,
+      "chuva_mm": 8.0,
+      "uv": 7.6,
+      "nascer_sol": "05:33",
+      "por_sol": "17:20"
     },
     {
       "data": "2026-05-31",
-      "min": 22,
-      "max": 32,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 22.6,
+      "max": 31.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 7.2,
+      "nascer_sol": "05:33",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 21.3,
+      "max": 33.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.3,
+      "nascer_sol": "05:33",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 21.8,
+      "max": 33.5,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.8,
+      "nascer_sol": "05:34",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 23.2,
+      "max": 35.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "05:34",
+      "por_sol": "17:20"
     }
   ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.7,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 20,
+    "categoria": "Boa",
+    "principal_poluente": "PM10",
+    "pm25": 2.6,
+    "pm10": 4.0,
+    "no2": 0.4,
+    "o3": 51.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "05:33",
+    "por": "17:20",
+    "duracao_h": 11.8,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 30.5
 }

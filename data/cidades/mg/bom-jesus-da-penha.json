@@ -4,47 +4,84 @@
   "slug": "bom-jesus-da-penha",
   "latitude": -21.0138,
   "longitude": -46.5291,
-  "atualizado_em": "2026-05-28T11:38:19.617163-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 15,
-      "max": 26,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 15.8,
+      "max": 25.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.9,
+      "nascer_sol": "06:34",
+      "por_sol": "17:32"
     },
     {
       "data": "2026-05-29",
-      "min": 12,
-      "max": 26,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 13.9,
+      "max": 24.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.7,
+      "nascer_sol": "06:34",
+      "por_sol": "17:32"
     },
     {
       "data": "2026-05-30",
-      "min": 13,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 14.3,
+      "max": 23.0,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 5.3,
+      "uv": 5.5,
+      "nascer_sol": "06:35",
+      "por_sol": "17:32"
     },
     {
       "data": "2026-05-31",
-      "min": 13,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 14.9,
+      "max": 22.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:35",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 12.7,
+      "max": 23.4,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.3,
+      "nascer_sol": "06:36",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 12.9,
+      "max": 21.5,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 5.1,
+      "nascer_sol": "06:36",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 12.7,
+      "max": 21.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.1,
+      "nascer_sol": "06:36",
+      "por_sol": "17:32"
     }
   ],
   "reservatorio": {
@@ -62,5 +99,38 @@
     "focos_100km": 18,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 5.9,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 48,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 6.9,
+    "pm10": 7.0,
+    "no2": 0.2,
+    "o3": 99.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:34",
+    "por": "17:32",
+    "duracao_h": 11.0,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 25.2
 }

@@ -4,52 +4,122 @@
   "slug": "novo-santo-antonio",
   "latitude": -12.3134,
   "longitude": -50.8879,
-  "atualizado_em": "2026-05-28T11:37:47.851678-03:00",
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 23,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 21.3,
+      "max": 34.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.5,
+      "nascer_sol": "06:36",
+      "por_sol": "18:04"
     },
     {
       "data": "2026-05-29",
-      "min": 24,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 21.9,
+      "max": 34.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.8,
+      "nascer_sol": "06:37",
+      "por_sol": "18:04"
     },
     {
       "data": "2026-05-30",
-      "min": 25,
-      "max": 33,
-      "condicao": "Chuvas Isoladas",
-      "condicao_codigo": "ci",
+      "min": 21.2,
+      "max": 34.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.0,
+      "nascer_sol": "06:37",
+      "por_sol": "18:04"
     },
     {
       "data": "2026-05-31",
-      "min": 23,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 23.0,
+      "max": 34.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.5,
+      "nascer_sol": "06:37",
+      "por_sol": "18:04"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 23.9,
+      "max": 35.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.7,
+      "nascer_sol": "06:38",
+      "por_sol": "18:04"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 23.1,
+      "max": 34.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:38",
+      "por_sol": "18:04"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 25.0,
+      "max": 34.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "06:38",
+      "por_sol": "18:04"
     }
   ],
   "queimadas": {
     "focos_100km": 12,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 6.5,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 24,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 1.5,
+    "pm10": 1.6,
+    "no2": 0.2,
+    "o3": 72.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "06:36",
+    "por": "18:04",
+    "duracao_h": 11.5,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 34.0
 }

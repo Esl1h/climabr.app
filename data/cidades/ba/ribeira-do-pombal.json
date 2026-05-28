@@ -4,52 +4,122 @@
   "slug": "ribeira-do-pombal",
   "latitude": -10.7919,
   "longitude": -38.5438,
-  "atualizado_em": "2026-05-28T11:35:26.466189-03:00",
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 19,
-      "max": 29,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 17.0,
+      "max": 29.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.1,
+      "nascer_sol": "05:44",
+      "por_sol": "17:17"
     },
     {
       "data": "2026-05-29",
-      "min": 19,
-      "max": 30,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 19.3,
+      "max": 29.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 7.2,
+      "nascer_sol": "05:45",
+      "por_sol": "17:17"
     },
     {
       "data": "2026-05-30",
-      "min": 20,
-      "max": 29,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 18.8,
+      "max": 30.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 6.5,
+      "nascer_sol": "05:45",
+      "por_sol": "17:17"
     },
     {
       "data": "2026-05-31",
-      "min": 20,
-      "max": 29,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 20.0,
+      "max": 29.4,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.4,
+      "uv": 5.9,
+      "nascer_sol": "05:45",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 20.4,
+      "max": 29.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.7,
+      "uv": 6.0,
+      "nascer_sol": "05:46",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 20.6,
+      "max": 28.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 5.5,
+      "nascer_sol": "05:46",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 21.1,
+      "max": 26.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.5,
+      "uv": 4.5,
+      "nascer_sol": "05:46",
+      "por_sol": "17:17"
     }
   ],
   "queimadas": {
     "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.1,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 22,
+    "categoria": "Boa",
+    "principal_poluente": "PM10",
+    "pm25": 4.0,
+    "pm10": 6.9,
+    "no2": 0.3,
+    "o3": 59.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "05:44",
+    "por": "17:17",
+    "duracao_h": 11.5,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 29.1
 }

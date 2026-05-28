@@ -4,47 +4,84 @@
   "slug": "santo-antonio-do-planalto",
   "latitude": -28.3651,
   "longitude": -52.6815,
-  "atualizado_em": "2026-05-28T11:45:07.918909-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 8,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 8.6,
+      "max": 22.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.8,
+      "nascer_sol": "07:13",
+      "por_sol": "17:43"
     },
     {
       "data": "2026-05-29",
-      "min": 11,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 11.4,
+      "max": 19.5,
+      "condicao": "Chuva moderada",
+      "condicao_codigo": 63,
+      "chuva_mm": 13.3,
+      "uv": 4.5,
+      "nascer_sol": "07:13",
+      "por_sol": "17:42"
     },
     {
       "data": "2026-05-30",
-      "min": 14,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 12.4,
+      "max": 18.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.6,
+      "uv": 4.6,
+      "nascer_sol": "07:14",
+      "por_sol": "17:42"
     },
     {
       "data": "2026-05-31",
-      "min": 13,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 10.6,
+      "max": 19.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 3.9,
+      "nascer_sol": "07:14",
+      "por_sol": "17:42"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 9.4,
+      "max": 16.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.6,
+      "nascer_sol": "07:15",
+      "por_sol": "17:42"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 9.5,
+      "max": 20.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.2,
+      "nascer_sol": "07:15",
+      "por_sol": "17:42"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 11.8,
+      "max": 20.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 4.0,
+      "nascer_sol": "07:16",
+      "por_sol": "17:41"
     }
   ],
   "reservatorio": {
@@ -62,5 +99,38 @@
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 4.8,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 23,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 2.9,
+    "pm10": 3.0,
+    "no2": 1.0,
+    "o3": 74.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "07:13",
+    "por": "17:43",
+    "duracao_h": 10.5,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 21.8
 }

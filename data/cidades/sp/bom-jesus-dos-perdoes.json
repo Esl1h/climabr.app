@@ -4,47 +4,84 @@
   "slug": "bom-jesus-dos-perdoes",
   "latitude": -23.1725,
   "longitude": -46.479,
-  "atualizado_em": "2026-05-28T11:46:33.631694-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 11,
-      "max": 19,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 10.8,
+      "max": 20.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.5,
+      "nascer_sol": "06:38",
+      "por_sol": "17:28"
     },
     {
       "data": "2026-05-29",
-      "min": 11,
-      "max": 19,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 12.6,
+      "max": 19.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.5,
+      "nascer_sol": "06:38",
+      "por_sol": "17:28"
     },
     {
       "data": "2026-05-30",
-      "min": 12,
-      "max": 20,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 13.6,
+      "max": 20.7,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 2.3,
+      "uv": 4.9,
+      "nascer_sol": "06:38",
+      "por_sol": "17:27"
     },
     {
       "data": "2026-05-31",
-      "min": 11,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 13.0,
+      "max": 22.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.3,
+      "nascer_sol": "06:39",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 12.6,
+      "max": 22.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.8,
+      "nascer_sol": "06:39",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 12.5,
+      "max": 19.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.8,
+      "nascer_sol": "06:40",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 11.9,
+      "max": 21.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.5,
+      "nascer_sol": "06:40",
+      "por_sol": "17:27"
     }
   ],
   "queimadas": {
@@ -62,5 +99,60 @@
     "nota": "Reservatório hidrelétrico mais próximo (47km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
     "atualizado_em": "2026-05-28T12:52:28.221558-03:00"
+  },
+  "uv": {
+    "indice": 5.5,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 48,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 11.3,
+    "pm10": 14.5,
+    "no2": 4.8,
+    "o3": 104.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:38",
+    "por": "17:28",
+    "duracao_h": 10.8,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 20.0,
+  "dengue": {
+    "nivel_alerta": 1,
+    "nivel_label": "Atenção",
+    "nivel_incidencia": 0,
+    "nivel_incidencia_label": "Baixa",
+    "casos_semana": 0,
+    "casos_estimados": 0,
+    "semana_epidemiologica": 202620,
+    "fonte": "InfoDengue / Fiocruz / SVS",
+    "atualizado_em": "2026-05-28T13:36:28.571279-03:00"
+  },
+  "chikungunya": {
+    "nivel_alerta": 1,
+    "nivel_label": "Atenção",
+    "nivel_incidencia": 0,
+    "nivel_incidencia_label": "Baixa",
+    "casos_semana": 0,
+    "casos_estimados": 0,
+    "semana_epidemiologica": 202620,
+    "fonte": "InfoDengue / Fiocruz / SVS",
+    "atualizado_em": "2026-05-28T13:36:28.571279-03:00"
   }
 }

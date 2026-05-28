@@ -4,52 +4,122 @@
   "slug": "lago-da-pedra",
   "latitude": -4.739,
   "longitude": -45.2053,
-  "atualizado_em": "2026-05-28T11:37:17.594295-03:00",
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 24,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 23.8,
+      "max": 30.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.7,
+      "nascer_sol": "06:01",
+      "por_sol": "17:54"
     },
     {
       "data": "2026-05-29",
-      "min": 25,
-      "max": 32,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 24.2,
+      "max": 30.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 7.7,
+      "nascer_sol": "06:02",
+      "por_sol": "17:54"
     },
     {
       "data": "2026-05-30",
-      "min": 24,
-      "max": 34,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.2,
+      "max": 29.2,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 3.5,
+      "uv": 7.7,
+      "nascer_sol": "06:02",
+      "por_sol": "17:54"
     },
     {
       "data": "2026-05-31",
-      "min": 24,
-      "max": 32,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.4,
+      "max": 29.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 7.3,
+      "nascer_sol": "06:02",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 23.0,
+      "max": 29.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 7.5,
+      "nascer_sol": "06:02",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 23.1,
+      "max": 28.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 7.1,
+      "nascer_sol": "06:02",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 22.8,
+      "max": 27.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 6.2,
+      "nascer_sol": "06:03",
+      "por_sol": "17:54"
     }
   ],
   "queimadas": {
     "focos_100km": 4,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.7,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 26,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 8.3,
+    "pm10": 11.0,
+    "no2": 0.3,
+    "o3": 62.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "06:01",
+    "por": "17:54",
+    "duracao_h": 11.9,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 30.2
 }

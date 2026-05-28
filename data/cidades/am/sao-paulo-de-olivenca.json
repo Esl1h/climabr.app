@@ -4,52 +4,122 @@
   "slug": "sao-paulo-de-olivenca",
   "latitude": -4.5014,
   "longitude": -69.4511,
-  "atualizado_em": "2026-05-28T11:34:33.519344-03:00",
+  "atualizado_em": "2026-05-28T13:47:06.893338-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 23,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.3,
+      "max": 28.0,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 11.2,
+      "uv": 7.8,
+      "nascer_sol": "07:38",
+      "por_sol": "19:31"
     },
     {
       "data": "2026-05-29",
-      "min": 24,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.6,
+      "max": 30.0,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 9.1,
+      "uv": 6.3,
+      "nascer_sol": "07:38",
+      "por_sol": "19:31"
     },
     {
       "data": "2026-05-30",
-      "min": 23,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.6,
+      "max": 27.2,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 11.9,
+      "uv": 7.3,
+      "nascer_sol": "07:38",
+      "por_sol": "19:31"
     },
     {
       "data": "2026-05-31",
-      "min": 23,
-      "max": 29,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.6,
+      "max": 30.2,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 3.0,
+      "uv": 7.1,
+      "nascer_sol": "07:39",
+      "por_sol": "19:31"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 23.0,
+      "max": 29.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.2,
+      "uv": 6.8,
+      "nascer_sol": "07:39",
+      "por_sol": "19:31"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 23.4,
+      "max": 27.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.5,
+      "uv": 5.0,
+      "nascer_sol": "07:39",
+      "por_sol": "19:32"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 22.9,
+      "max": 24.4,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 6.0,
+      "uv": 7.3,
+      "nascer_sol": "07:39",
+      "por_sol": "19:32"
     }
   ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.8,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 30,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 11.4,
+    "pm10": 11.4,
+    "no2": 0.1,
+    "o3": 33.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:47:06.893338-03:00"
+  },
+  "sol": {
+    "nascer": "07:38",
+    "por": "19:31",
+    "duracao_h": 11.9,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 28.2
 }

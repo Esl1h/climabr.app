@@ -4,52 +4,122 @@
   "slug": "sao-goncalo-do-gurgueia",
   "latitude": -10.0883,
   "longitude": -45.3217,
-  "atualizado_em": "2026-05-28T11:43:23.851971-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 17,
-      "max": 31,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 20.0,
+      "max": 30.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.7,
+      "nascer_sol": "06:11",
+      "por_sol": "17:46"
     },
     {
       "data": "2026-05-29",
-      "min": 15,
-      "max": 31,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 18.7,
+      "max": 31.5,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.0,
+      "nascer_sol": "06:11",
+      "por_sol": "17:46"
     },
     {
       "data": "2026-05-30",
-      "min": 17,
-      "max": 31,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 20.0,
+      "max": 32.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.9,
+      "nascer_sol": "06:11",
+      "por_sol": "17:46"
     },
     {
       "data": "2026-05-31",
-      "min": 17,
-      "max": 31,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 21.1,
+      "max": 32.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.4,
+      "nascer_sol": "06:11",
+      "por_sol": "17:46"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 21.5,
+      "max": 32.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 6.9,
+      "nascer_sol": "06:12",
+      "por_sol": "17:46"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 21.5,
+      "max": 32.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.0,
+      "nascer_sol": "06:12",
+      "por_sol": "17:46"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 22.2,
+      "max": 31.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.6,
+      "nascer_sol": "06:12",
+      "por_sol": "17:46"
     }
   ],
   "queimadas": {
     "focos_100km": 29,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 6.7,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 21,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 1.6,
+    "pm10": 2.1,
+    "no2": 0.2,
+    "o3": 62.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:11",
+    "por": "17:46",
+    "duracao_h": 11.6,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 30.5
 }

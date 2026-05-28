@@ -4,52 +4,122 @@
   "slug": "nova-maringa",
   "latitude": -12.7839,
   "longitude": -57.2203,
-  "atualizado_em": "2026-05-28T11:37:54.918027-03:00",
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 20,
-      "max": 32,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 21.2,
+      "max": 30.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.7,
+      "nascer_sol": "07:02",
+      "por_sol": "18:29"
     },
     {
       "data": "2026-05-29",
-      "min": 20,
-      "max": 32,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 20.2,
+      "max": 31.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.2,
+      "nascer_sol": "07:03",
+      "por_sol": "18:29"
     },
     {
       "data": "2026-05-30",
-      "min": 19,
-      "max": 31,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 21.1,
+      "max": 31.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.7,
+      "nascer_sol": "07:03",
+      "por_sol": "18:29"
     },
     {
       "data": "2026-05-31",
-      "min": 20,
-      "max": 32,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 19.6,
+      "max": 31.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.7,
+      "nascer_sol": "07:03",
+      "por_sol": "18:29"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 20.0,
+      "max": 31.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.0,
+      "nascer_sol": "07:04",
+      "por_sol": "18:29"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 19.9,
+      "max": 31.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.6,
+      "nascer_sol": "07:04",
+      "por_sol": "18:29"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 21.5,
+      "max": 31.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.1,
+      "nascer_sol": "07:04",
+      "por_sol": "18:29"
     }
   ],
   "queimadas": {
     "focos_100km": 8,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 6.7,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 23,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 4.4,
+    "pm10": 4.8,
+    "no2": 0.3,
+    "o3": 76.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "07:02",
+    "por": "18:29",
+    "duracao_h": 11.4,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 30.9
 }

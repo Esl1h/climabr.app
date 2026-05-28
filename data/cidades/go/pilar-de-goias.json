@@ -4,52 +4,122 @@
   "slug": "pilar-de-goias",
   "latitude": -14.5869,
   "longitude": -49.5217,
-  "atualizado_em": "2026-05-28T11:36:51.308716-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 20,
-      "max": 31,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 21.5,
+      "max": 32.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.4,
+      "nascer_sol": "06:35",
+      "por_sol": "17:55"
     },
     {
       "data": "2026-05-29",
-      "min": 20,
-      "max": 30,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 22.3,
+      "max": 31.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:35",
+      "por_sol": "17:55"
     },
     {
       "data": "2026-05-30",
-      "min": 18,
-      "max": 30,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 21.4,
+      "max": 31.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.8,
+      "nascer_sol": "06:36",
+      "por_sol": "17:55"
     },
     {
       "data": "2026-05-31",
-      "min": 20,
-      "max": 31,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 22.5,
+      "max": 32.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.5,
+      "nascer_sol": "06:36",
+      "por_sol": "17:55"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 21.6,
+      "max": 32.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "06:36",
+      "por_sol": "17:55"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 22.5,
+      "max": 32.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.9,
+      "nascer_sol": "06:36",
+      "por_sol": "17:55"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 22.6,
+      "max": 32.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "06:37",
+      "por_sol": "17:55"
     }
   ],
   "queimadas": {
     "focos_100km": 4,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 6.4,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 21,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 3.0,
+    "pm10": 3.9,
+    "no2": 0.2,
+    "o3": 71.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:35",
+    "por": "17:55",
+    "duracao_h": 11.3,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 32.1
 }

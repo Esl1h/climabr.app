@@ -4,52 +4,122 @@
   "slug": "licinio-de-almeida",
   "latitude": -14.586,
   "longitude": -42.4701,
-  "atualizado_em": "2026-05-28T11:35:12.347049-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 18,
-      "max": 29,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 16.0,
+      "max": 25.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 6.2,
+      "nascer_sol": "06:06",
+      "por_sol": "17:27"
     },
     {
       "data": "2026-05-29",
-      "min": 17,
-      "max": 29,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 17.1,
+      "max": 25.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 4.5,
+      "nascer_sol": "06:07",
+      "por_sol": "17:27"
     },
     {
       "data": "2026-05-30",
-      "min": 19,
-      "max": 28,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 17.8,
+      "max": 23.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 6.2,
+      "nascer_sol": "06:07",
+      "por_sol": "17:27"
     },
     {
       "data": "2026-05-31",
-      "min": 16,
-      "max": 27,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 16.0,
+      "max": 24.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:07",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 13.8,
+      "max": 25.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "06:08",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 14.8,
+      "max": 25.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "06:08",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 17.1,
+      "max": 24.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 6.0,
+      "nascer_sol": "06:08",
+      "por_sol": "17:27"
     }
   ],
   "queimadas": {
     "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 6.2,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 18,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 1.1,
+    "pm10": 1.6,
+    "no2": 0.2,
+    "o3": 55.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:06",
+    "por": "17:27",
+    "duracao_h": 11.3,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 25.2
 }

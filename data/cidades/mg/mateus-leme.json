@@ -4,63 +4,131 @@
   "slug": "mateus-leme",
   "latitude": -20.0273,
   "longitude": -44.4375,
-  "atualizado_em": "2026-05-28T11:39:21.955478-03:00",
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 15,
-      "max": 27,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 15.2,
+      "max": 25.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.0,
+      "nascer_sol": "06:24",
+      "por_sol": "17:25"
     },
     {
       "data": "2026-05-29",
-      "min": 13,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 14.5,
+      "max": 23.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.6,
+      "nascer_sol": "06:24",
+      "por_sol": "17:25"
     },
     {
       "data": "2026-05-30",
-      "min": 12,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 13.2,
+      "max": 23.3,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 1.8,
+      "uv": 5.2,
+      "nascer_sol": "06:25",
+      "por_sol": "17:25"
     },
     {
       "data": "2026-05-31",
-      "min": 12,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 13.8,
+      "max": 23.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.1,
+      "uv": 5.8,
+      "nascer_sol": "06:25",
+      "por_sol": "17:25"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 13.1,
+      "max": 24.4,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.4,
+      "uv": 5.5,
+      "nascer_sol": "06:25",
+      "por_sol": "17:25"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 12.4,
+      "max": 22.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 5.3,
+      "nascer_sol": "06:26",
+      "por_sol": "17:25"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 13.5,
+      "max": 22.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 5.3,
+      "nascer_sol": "06:26",
+      "por_sol": "17:25"
     }
   ],
   "reservatorio": {
-    "nome": "Retiro Baixo",
-    "nivel_pct": 92.6,
-    "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-05-27",
-    "distancia_km": 131.0,
-    "aproximado": true,
-    "nota": "Reservatório hidrelétrico mais próximo (131km). Pode não ser o sistema de abastecimento desta cidade.",
-    "fonte": "ONS / ANA",
-    "atualizado_em": "2026-05-28T12:52:28.221558-03:00"
+    "nome": "Rio Manso",
+    "nivel_pct": 94.9,
+    "variacao_semana_pct": null,
+    "data_medicao": "2026-05-28",
+    "aproximado": false,
+    "fonte": "COPASA",
+    "atualizado_em": "2026-05-28T13:36:19.703916-03:00"
   },
   "queimadas": {
     "focos_100km": 16,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 6.0,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 57,
+    "categoria": "Moderada",
+    "principal_poluente": "PM2.5",
+    "pm25": 8.4,
+    "pm10": 8.5,
+    "no2": 0.6,
+    "o3": 128.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "06:24",
+    "por": "17:25",
+    "duracao_h": 11.0,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 25.0
 }

@@ -4,47 +4,84 @@
   "slug": "senador-la-rocque",
   "latitude": -5.3885,
   "longitude": -47.1444,
-  "atualizado_em": "2026-05-28T11:37:32.785803-03:00",
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 22,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 21.8,
+      "max": 31.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 7.6,
+      "nascer_sol": "06:10",
+      "por_sol": "18:01"
     },
     {
       "data": "2026-05-29",
-      "min": 22,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 21.7,
+      "max": 30.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 7.6,
+      "nascer_sol": "06:11",
+      "por_sol": "18:01"
     },
     {
       "data": "2026-05-30",
-      "min": 23,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.2,
+      "max": 30.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 7.0,
+      "nascer_sol": "06:11",
+      "por_sol": "18:01"
     },
     {
       "data": "2026-05-31",
-      "min": 22,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 23.4,
+      "max": 30.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 7.5,
+      "nascer_sol": "06:11",
+      "por_sol": "18:01"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 22.1,
+      "max": 29.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.5,
+      "nascer_sol": "06:11",
+      "por_sol": "18:01"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 22.2,
+      "max": 29.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 6.5,
+      "nascer_sol": "06:11",
+      "por_sol": "18:01"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 22.9,
+      "max": 30.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 5.7,
+      "nascer_sol": "06:12",
+      "por_sol": "18:01"
     }
   ],
   "reservatorio": {
@@ -62,5 +99,38 @@
     "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.6,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 20,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 4.6,
+    "pm10": 5.8,
+    "no2": 0.3,
+    "o3": 55.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "06:10",
+    "por": "18:01",
+    "duracao_h": 11.8,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 30.8
 }

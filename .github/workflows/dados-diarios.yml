@@ -1,4 +1,4 @@
-name: Coleta dados diários (SABESP + futuros)
+name: Coleta dados diários
 
 on:
   schedule:
@@ -8,7 +8,7 @@ on:
 jobs:
   coletar:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 40
 
     steps:
       - uses: actions/checkout@v4
@@ -18,22 +18,32 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Coleta SABESP mananciais
+      - name: Open-Meteo — previsão, UV, qualidade do ar, sol/lua
+        run: python3 scripts/scrape-openmeteo.py
+
+      - name: SABESP — reservatórios SP
         run: python3 scripts/scrape-sabesp.py
+
+      - name: COPASA — reservatórios MG
+        run: python3 scripts/scrape-copasa.py
+
+      - name: Dengue / Chikungunya / Zika (InfoDengue)
+        run: python3 scripts/scrape-dengue.py
+        continue-on-error: true
 
       - name: Upload para R2
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: r2 object put climabr-dados --recursive --local-path=data/cidades/sp/
+          command: r2 object put climabr-dados --recursive --local-path=data/cidades/
         continue-on-error: true
 
       - name: Commit dados locais (fallback)
         if: always()
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'dados: SABESP mananciais atualizados'
-          file_pattern: 'data/cidades/sp/*.json'
+          commit_message: 'dados: coleta diária (Open-Meteo, SABESP, COPASA, dengue)'
+          file_pattern: 'data/cidades/**/*.json'
           push_options: '--force-with-lease'
         continue-on-error: true

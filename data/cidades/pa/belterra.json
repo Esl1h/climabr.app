@@ -4,47 +4,84 @@
   "slug": "belterra",
   "latitude": -3.1911,
   "longitude": -54.9928,
-  "atualizado_em": "2026-05-28T11:40:25.553754-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 23,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.7,
+      "max": 30.1,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.7,
+      "uv": 7.8,
+      "nascer_sol": "06:38",
+      "por_sol": "18:35"
     },
     {
       "data": "2026-05-29",
-      "min": 24,
-      "max": 31,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.0,
+      "max": 31.0,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 2.8,
+      "uv": 7.8,
+      "nascer_sol": "06:38",
+      "por_sol": "18:35"
     },
     {
       "data": "2026-05-30",
-      "min": 24,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.3,
+      "max": 28.9,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 4.6,
+      "uv": 7.7,
+      "nascer_sol": "06:39",
+      "por_sol": "18:36"
     },
     {
       "data": "2026-05-31",
-      "min": 24,
-      "max": 31,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.0,
+      "max": 28.7,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 20.4,
+      "uv": 7.5,
+      "nascer_sol": "06:39",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 22.1,
+      "max": 27.2,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 7.2,
+      "uv": 7.2,
+      "nascer_sol": "06:39",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 22.2,
+      "max": 27.0,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 10.8,
+      "uv": 7.2,
+      "nascer_sol": "06:39",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 22.7,
+      "max": 28.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 5.2,
+      "uv": 6.5,
+      "nascer_sol": "06:39",
+      "por_sol": "18:36"
     }
   ],
   "reservatorio": {
@@ -62,5 +99,38 @@
     "focos_100km": 2,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.8,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 20,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 5.8,
+    "pm10": 6.5,
+    "no2": 0.1,
+    "o3": 50.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:38",
+    "por": "18:35",
+    "duracao_h": 12.0,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 28.9
 }

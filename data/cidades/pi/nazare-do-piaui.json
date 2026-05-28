@@ -4,47 +4,84 @@
   "slug": "nazare-do-piaui",
   "latitude": -7.0523,
   "longitude": -42.7456,
-  "atualizado_em": "2026-05-28T11:43:15.984564-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 22,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 23.6,
+      "max": 32.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.4,
+      "nascer_sol": "05:55",
+      "por_sol": "17:40"
     },
     {
       "data": "2026-05-29",
-      "min": 23,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 24.4,
+      "max": 33.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.3,
+      "nascer_sol": "05:55",
+      "por_sol": "17:40"
     },
     {
       "data": "2026-05-30",
-      "min": 23,
-      "max": 35,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 24.6,
+      "max": 34.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.0,
+      "nascer_sol": "05:56",
+      "por_sol": "17:40"
     },
     {
       "data": "2026-05-31",
-      "min": 21,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 25.1,
+      "max": 34.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.2,
+      "nascer_sol": "05:56",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 25.0,
+      "max": 34.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "05:56",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 25.0,
+      "max": 34.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "05:56",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 25.6,
+      "max": 34.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 3.3,
+      "nascer_sol": "05:57",
+      "por_sol": "17:41"
     }
   ],
   "reservatorio": {
@@ -62,5 +99,38 @@
     "focos_100km": 7,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.4,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 21,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 4.3,
+    "pm10": 5.7,
+    "no2": 0.3,
+    "o3": 61.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "05:55",
+    "por": "17:40",
+    "duracao_h": 11.7,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 32.4
 }

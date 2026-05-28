@@ -4,8 +4,86 @@
   "slug": "bataypora",
   "latitude": -22.3908,
   "longitude": -53.1776,
-  "atualizado_em": "2026-05-28T11:37:57.004927-03:00",
-  "previsao": [],
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
+  "previsao": [
+    {
+      "data": "2026-05-28",
+      "min": 17.6,
+      "max": 25.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "07:03",
+      "por_sol": "17:56"
+    },
+    {
+      "data": "2026-05-29",
+      "min": 17.4,
+      "max": 24.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.2,
+      "nascer_sol": "07:04",
+      "por_sol": "17:56"
+    },
+    {
+      "data": "2026-05-30",
+      "min": 17.0,
+      "max": 24.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.3,
+      "nascer_sol": "07:04",
+      "por_sol": "17:56"
+    },
+    {
+      "data": "2026-05-31",
+      "min": 16.2,
+      "max": 24.6,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.3,
+      "nascer_sol": "07:04",
+      "por_sol": "17:56"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 16.1,
+      "max": 24.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.2,
+      "nascer_sol": "07:05",
+      "por_sol": "17:56"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 16.6,
+      "max": 24.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 4.8,
+      "nascer_sol": "07:05",
+      "por_sol": "17:56"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 16.5,
+      "max": 23.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.8,
+      "nascer_sol": "07:06",
+      "por_sol": "17:55"
+    }
+  ],
   "reservatorio": {
     "nome": "Porto Primavera",
     "nivel_pct": 17.8,
@@ -21,5 +99,38 @@
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 5.5,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 51,
+    "categoria": "Moderada",
+    "principal_poluente": "PM2.5",
+    "pm25": 6.3,
+    "pm10": 6.4,
+    "no2": 0.8,
+    "o3": 86.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "07:03",
+    "por": "17:56",
+    "duracao_h": 10.9,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 25.9
 }

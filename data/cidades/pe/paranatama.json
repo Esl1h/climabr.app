@@ -4,47 +4,84 @@
   "slug": "paranatama",
   "latitude": -8.8939,
   "longitude": -36.7071,
-  "atualizado_em": "2026-05-28T11:42:43.337913-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 18,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 17.5,
+      "max": 23.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.0,
+      "uv": 6.1,
+      "nascer_sol": "05:34",
+      "por_sol": "17:13"
     },
     {
       "data": "2026-05-29",
-      "min": 17,
-      "max": 24,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 16.5,
+      "max": 25.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 6.8,
+      "nascer_sol": "05:34",
+      "por_sol": "17:13"
     },
     {
       "data": "2026-05-30",
-      "min": 17,
-      "max": 24,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 18.5,
+      "max": 25.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.3,
+      "uv": 5.5,
+      "nascer_sol": "05:35",
+      "por_sol": "17:13"
     },
     {
       "data": "2026-05-31",
-      "min": 18,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 16.4,
+      "max": 25.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.6,
+      "nascer_sol": "05:35",
+      "por_sol": "17:13"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 18.0,
+      "max": 25.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.5,
+      "uv": 6.8,
+      "nascer_sol": "05:35",
+      "por_sol": "17:13"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 17.6,
+      "max": 25.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.8,
+      "nascer_sol": "05:35",
+      "por_sol": "17:13"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 16.6,
+      "max": 24.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.0,
+      "nascer_sol": "05:36",
+      "por_sol": "17:13"
     }
   ],
   "reservatorio": {
@@ -62,5 +99,38 @@
     "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 6.1,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 20,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 4.5,
+    "pm10": 6.5,
+    "no2": 0.8,
+    "o3": 55.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "05:34",
+    "por": "17:13",
+    "duracao_h": 11.6,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 23.6
 }

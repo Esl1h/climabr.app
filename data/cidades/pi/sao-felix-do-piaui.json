@@ -4,52 +4,122 @@
   "slug": "sao-felix-do-piaui",
   "latitude": -5.9356,
   "longitude": -42.1029,
-  "atualizado_em": "2026-05-28T11:43:23.370002-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 22,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 22.8,
+      "max": 32.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.5,
+      "nascer_sol": "05:51",
+      "por_sol": "17:39"
     },
     {
       "data": "2026-05-29",
-      "min": 24,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 23.4,
+      "max": 33.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.0,
+      "nascer_sol": "05:51",
+      "por_sol": "17:39"
     },
     {
       "data": "2026-05-30",
-      "min": 24,
-      "max": 36,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 24.9,
+      "max": 34.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.5,
+      "nascer_sol": "05:51",
+      "por_sol": "17:39"
     },
     {
       "data": "2026-05-31",
-      "min": 23,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 23.2,
+      "max": 34.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.0,
+      "nascer_sol": "05:52",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 22.6,
+      "max": 34.6,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 7.3,
+      "nascer_sol": "05:52",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 23.8,
+      "max": 34.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "05:52",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 26.0,
+      "max": 35.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "05:52",
+      "por_sol": "17:40"
     }
   ],
   "queimadas": {
     "focos_100km": 6,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.5,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 21,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 3.7,
+    "pm10": 5.1,
+    "no2": 0.2,
+    "o3": 61.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "05:51",
+    "por": "17:39",
+    "duracao_h": 11.8,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 32.4
 }

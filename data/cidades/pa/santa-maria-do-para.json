@@ -4,52 +4,122 @@
   "slug": "santa-maria-do-para",
   "latitude": -1.3745,
   "longitude": -47.5216,
-  "atualizado_em": "2026-05-28T11:40:39.162557-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 24,
-      "max": 31,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.4,
+      "max": 30.9,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 10.0,
+      "uv": 7.9,
+      "nascer_sol": "06:05",
+      "por_sol": "18:08"
     },
     {
       "data": "2026-05-29",
-      "min": 24,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.1,
+      "max": 30.1,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 10.7,
+      "uv": 6.5,
+      "nascer_sol": "06:06",
+      "por_sol": "18:08"
     },
     {
       "data": "2026-05-30",
-      "min": 23,
-      "max": 31,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.3,
+      "max": 30.1,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 1.9,
+      "uv": 8.0,
+      "nascer_sol": "06:06",
+      "por_sol": "18:09"
     },
     {
       "data": "2026-05-31",
-      "min": 23,
-      "max": 31,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.9,
+      "max": 29.8,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 11.6,
+      "uv": 6.8,
+      "nascer_sol": "06:06",
+      "por_sol": "18:09"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 22.2,
+      "max": 29.5,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 9.6,
+      "uv": 6.8,
+      "nascer_sol": "06:06",
+      "por_sol": "18:09"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 22.5,
+      "max": 29.3,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 13.2,
+      "uv": 7.2,
+      "nascer_sol": "06:06",
+      "por_sol": "18:09"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 22.8,
+      "max": 27.7,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 5.4,
+      "uv": 7.3,
+      "nascer_sol": "06:06",
+      "por_sol": "18:09"
     }
   ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.9,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 24,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 6.3,
+    "pm10": 8.1,
+    "no2": 0.6,
+    "o3": 60.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:05",
+    "por": "18:08",
+    "duracao_h": 12.0,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 27.8
 }

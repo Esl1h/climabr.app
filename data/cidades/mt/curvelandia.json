@@ -4,8 +4,86 @@
   "slug": "curvelandia",
   "latitude": -15.6171,
   "longitude": -57.8764,
-  "atualizado_em": "2026-05-28T11:37:41.537455-03:00",
-  "previsao": [],
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
+  "previsao": [
+    {
+      "data": "2026-05-28",
+      "min": 20.9,
+      "max": 30.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 6.3,
+      "nascer_sol": "07:10",
+      "por_sol": "18:27"
+    },
+    {
+      "data": "2026-05-29",
+      "min": 21.9,
+      "max": 30.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 4.8,
+      "nascer_sol": "07:10",
+      "por_sol": "18:27"
+    },
+    {
+      "data": "2026-05-30",
+      "min": 21.0,
+      "max": 30.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 6.0,
+      "nascer_sol": "07:11",
+      "por_sol": "18:27"
+    },
+    {
+      "data": "2026-05-31",
+      "min": 21.2,
+      "max": 30.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 6.1,
+      "nascer_sol": "07:11",
+      "por_sol": "18:27"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 21.1,
+      "max": 31.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "07:11",
+      "por_sol": "18:27"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 21.2,
+      "max": 31.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "07:12",
+      "por_sol": "18:27"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 21.5,
+      "max": 33.1,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "07:12",
+      "por_sol": "18:27"
+    }
+  ],
   "reservatorio": {
     "nome": "Jauru",
     "nivel_pct": 0.0,
@@ -21,5 +99,38 @@
     "focos_100km": 9,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 6.3,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 23,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 3.9,
+    "pm10": 4.0,
+    "no2": 0.3,
+    "o3": 91.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "07:10",
+    "por": "18:27",
+    "duracao_h": 11.3,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 30.4
 }

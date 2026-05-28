@@ -4,47 +4,84 @@
   "slug": "guaruja",
   "latitude": -23.951,
   "longitude": -46.2353,
-  "atualizado_em": "2026-05-28T11:46:53.689212-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 17,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 17.2,
+      "max": 21.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.5,
+      "uv": 5.1,
+      "nascer_sol": "06:38",
+      "por_sol": "17:25"
     },
     {
       "data": "2026-05-29",
-      "min": 17,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 17.5,
+      "max": 21.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 4.0,
+      "nascer_sol": "06:39",
+      "por_sol": "17:25"
     },
     {
       "data": "2026-05-30",
-      "min": 16,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 17.2,
+      "max": 22.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 4.8,
+      "nascer_sol": "06:39",
+      "por_sol": "17:25"
     },
     {
       "data": "2026-05-31",
-      "min": 17,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 15.9,
+      "max": 22.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.0,
+      "nascer_sol": "06:39",
+      "por_sol": "17:25"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 15.3,
+      "max": 22.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.5,
+      "uv": 4.4,
+      "nascer_sol": "06:40",
+      "por_sol": "17:25"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 16.9,
+      "max": 21.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 5.1,
+      "uv": 4.0,
+      "nascer_sol": "06:40",
+      "por_sol": "17:25"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 16.0,
+      "max": 20.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 4.0,
+      "nascer_sol": "06:41",
+      "por_sol": "17:25"
     }
   ],
   "reservatorio": {
@@ -60,5 +97,60 @@
     "focos_100km": 5,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
+  },
+  "uv": {
+    "indice": 5.1,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 34,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 6.0,
+    "pm10": 8.9,
+    "no2": 2.8,
+    "o3": 71.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:38",
+    "por": "17:25",
+    "duracao_h": 10.8,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 21.5,
+  "dengue": {
+    "nivel_alerta": 2,
+    "nivel_label": "Alerta",
+    "nivel_incidencia": 1,
+    "nivel_incidencia_label": "Média",
+    "casos_semana": 5,
+    "casos_estimados": 60,
+    "semana_epidemiologica": 202620,
+    "fonte": "InfoDengue / Fiocruz / SVS",
+    "atualizado_em": "2026-05-28T13:36:28.571279-03:00"
+  },
+  "chikungunya": {
+    "nivel_alerta": 1,
+    "nivel_label": "Atenção",
+    "nivel_incidencia": 0,
+    "nivel_incidencia_label": "Baixa",
+    "casos_semana": 0,
+    "casos_estimados": 0,
+    "semana_epidemiologica": 202620,
+    "fonte": "InfoDengue / Fiocruz / SVS",
+    "atualizado_em": "2026-05-28T13:36:28.571279-03:00"
   }
 }

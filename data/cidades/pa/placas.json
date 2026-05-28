@@ -4,47 +4,84 @@
   "slug": "placas",
   "latitude": -3.8898,
   "longitude": -54.5007,
-  "atualizado_em": "2026-05-28T11:40:36.432560-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 22,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.0,
+      "max": 32.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 7.8,
+      "nascer_sol": "06:37",
+      "por_sol": "18:32"
     },
     {
       "data": "2026-05-29",
-      "min": 23,
-      "max": 33,
-      "condicao": "Chuvas Isoladas",
-      "condicao_codigo": "ci",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.2,
+      "max": 31.4,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.4,
+      "uv": 7.3,
+      "nascer_sol": "06:37",
+      "por_sol": "18:32"
     },
     {
       "data": "2026-05-30",
-      "min": 24,
-      "max": 33,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.9,
+      "max": 29.2,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 4.7,
+      "uv": 7.2,
+      "nascer_sol": "06:38",
+      "por_sol": "18:32"
     },
     {
       "data": "2026-05-31",
-      "min": 23,
-      "max": 32,
-      "condicao": "Chuvas Isoladas",
-      "condicao_codigo": "ci",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.5,
+      "max": 29.4,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 11.1,
+      "uv": 7.7,
+      "nascer_sol": "06:38",
+      "por_sol": "18:32"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 22.4,
+      "max": 28.9,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 16.0,
+      "uv": 7.5,
+      "nascer_sol": "06:38",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 22.4,
+      "max": 27.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.8,
+      "uv": 7.1,
+      "nascer_sol": "06:38",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 22.9,
+      "max": 28.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.8,
+      "uv": 3.1,
+      "nascer_sol": "06:38",
+      "por_sol": "18:33"
     }
   ],
   "reservatorio": {
@@ -62,5 +99,38 @@
     "focos_100km": 3,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.8,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 15,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 3.4,
+    "pm10": 3.8,
+    "no2": 0.2,
+    "o3": 57.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:37",
+    "por": "18:32",
+    "duracao_h": 11.9,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 31.4
 }

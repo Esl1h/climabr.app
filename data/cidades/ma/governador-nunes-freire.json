@@ -4,52 +4,122 @@
   "slug": "governador-nunes-freire",
   "latitude": -2.0617,
   "longitude": -45.8182,
-  "atualizado_em": "2026-05-28T11:37:14.951598-03:00",
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 24,
-      "max": 32,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 24.0,
+      "max": 29.8,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 10.6,
+      "uv": 7.5,
+      "nascer_sol": "06:00",
+      "por_sol": "18:00"
     },
     {
       "data": "2026-05-29",
-      "min": 24,
-      "max": 31,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.0,
+      "max": 29.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 12.9,
+      "uv": 7.9,
+      "nascer_sol": "06:00",
+      "por_sol": "18:01"
     },
     {
       "data": "2026-05-30",
-      "min": 24,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.8,
+      "max": 29.5,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 10.3,
+      "uv": 7.8,
+      "nascer_sol": "06:00",
+      "por_sol": "18:01"
     },
     {
       "data": "2026-05-31",
-      "min": 24,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.5,
+      "max": 27.8,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 17.6,
+      "uv": 5.3,
+      "nascer_sol": "06:00",
+      "por_sol": "18:01"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 23.0,
+      "max": 28.7,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 9.3,
+      "uv": 7.5,
+      "nascer_sol": "06:00",
+      "por_sol": "18:01"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 22.2,
+      "max": 29.0,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 7.2,
+      "uv": 6.8,
+      "nascer_sol": "06:01",
+      "por_sol": "18:01"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 22.8,
+      "max": 27.1,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 7.2,
+      "uv": 4.8,
+      "nascer_sol": "06:01",
+      "por_sol": "18:01"
     }
   ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.5,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 25,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 7.6,
+    "pm10": 9.7,
+    "no2": 0.3,
+    "o3": 57.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "06:00",
+    "por": "18:00",
+    "duracao_h": 12.0,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 29.8
 }

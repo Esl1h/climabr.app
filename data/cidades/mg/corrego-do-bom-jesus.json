@@ -4,47 +4,84 @@
   "slug": "corrego-do-bom-jesus",
   "latitude": -22.6345,
   "longitude": -45.9932,
-  "atualizado_em": "2026-05-28T11:38:41.936508-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 10,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 10.6,
+      "max": 21.7,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.7,
+      "nascer_sol": "06:35",
+      "por_sol": "17:27"
     },
     {
       "data": "2026-05-29",
-      "min": 9,
-      "max": 20,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 10.0,
+      "max": 20.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.6,
+      "nascer_sol": "06:35",
+      "por_sol": "17:27"
     },
     {
       "data": "2026-05-30",
-      "min": 10,
-      "max": 19,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 11.6,
+      "max": 18.9,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 3.1,
+      "uv": 5.5,
+      "nascer_sol": "06:35",
+      "por_sol": "17:27"
     },
     {
       "data": "2026-05-31",
-      "min": 9,
-      "max": 20,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 12.1,
+      "max": 19.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.5,
+      "nascer_sol": "06:36",
+      "por_sol": "17:26"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 11.2,
+      "max": 20.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 5.2,
+      "nascer_sol": "06:36",
+      "por_sol": "17:26"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 10.8,
+      "max": 20.9,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 4.7,
+      "nascer_sol": "06:37",
+      "por_sol": "17:26"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 10.1,
+      "max": 19.1,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 4.7,
+      "nascer_sol": "06:37",
+      "por_sol": "17:26"
     }
   ],
   "reservatorio": {
@@ -62,5 +99,38 @@
     "focos_100km": 4,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 5.7,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 39,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 3.5,
+    "pm10": 4.4,
+    "no2": 0.5,
+    "o3": 83.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:35",
+    "por": "17:27",
+    "duracao_h": 10.9,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 21.4
 }

@@ -4,52 +4,122 @@
   "slug": "maracana",
   "latitude": -0.8101,
   "longitude": -47.4974,
-  "atualizado_em": "2026-05-28T11:40:32.563331-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 24,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 24.1,
+      "max": 31.8,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 11.6,
+      "uv": 7.8,
+      "nascer_sol": "06:05",
+      "por_sol": "18:09"
     },
     {
       "data": "2026-05-29",
-      "min": 24,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.6,
+      "max": 30.0,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 17.1,
+      "uv": 7.0,
+      "nascer_sol": "06:05",
+      "por_sol": "18:09"
     },
     {
       "data": "2026-05-30",
-      "min": 24,
-      "max": 31,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.4,
+      "max": 29.6,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 8.7,
+      "uv": 7.1,
+      "nascer_sol": "06:05",
+      "por_sol": "18:09"
     },
     {
       "data": "2026-05-31",
-      "min": 24,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.4,
+      "max": 29.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 5.8,
+      "uv": 7.2,
+      "nascer_sol": "06:05",
+      "por_sol": "18:10"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 22.8,
+      "max": 30.5,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 13.2,
+      "uv": 7.7,
+      "nascer_sol": "06:05",
+      "por_sol": "18:10"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 22.8,
+      "max": 29.6,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 6.3,
+      "uv": 7.0,
+      "nascer_sol": "06:05",
+      "por_sol": "18:10"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 23.2,
+      "max": 29.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 7.2,
+      "nascer_sol": "06:06",
+      "por_sol": "18:10"
     }
   ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.8,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 24,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 5.8,
+    "pm10": 7.9,
+    "no2": 0.3,
+    "o3": 54.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:05",
+    "por": "18:09",
+    "duracao_h": 12.1,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 26.1
 }

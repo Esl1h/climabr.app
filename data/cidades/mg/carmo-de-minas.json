@@ -4,47 +4,84 @@
   "slug": "carmo-de-minas",
   "latitude": -22.092,
   "longitude": -45.1615,
-  "atualizado_em": "2026-05-28T11:38:30.858759-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 13,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 12.4,
+      "max": 22.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.7,
+      "nascer_sol": "06:30",
+      "por_sol": "17:25"
     },
     {
       "data": "2026-05-29",
-      "min": 11,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 10.0,
+      "max": 21.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.4,
+      "nascer_sol": "06:31",
+      "por_sol": "17:24"
     },
     {
       "data": "2026-05-30",
-      "min": 11,
-      "max": 20,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 10.9,
+      "max": 19.1,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 4.6,
+      "uv": 5.3,
+      "nascer_sol": "06:31",
+      "por_sol": "17:24"
     },
     {
       "data": "2026-05-31",
-      "min": 11,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 13.5,
+      "max": 20.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 5.5,
+      "nascer_sol": "06:32",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 11.0,
+      "max": 21.2,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.3,
+      "nascer_sol": "06:32",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 9.9,
+      "max": 21.1,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.0,
+      "nascer_sol": "06:33",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 10.5,
+      "max": 20.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 5.0,
+      "nascer_sol": "06:33",
+      "por_sol": "17:24"
     }
   ],
   "reservatorio": {
@@ -62,5 +99,38 @@
     "focos_100km": 3,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 5.7,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 31,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 2.5,
+    "pm10": 2.6,
+    "no2": 0.2,
+    "o3": 85.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:30",
+    "por": "17:25",
+    "duracao_h": 10.9,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 22.0
 }

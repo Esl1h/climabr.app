@@ -4,8 +4,86 @@
   "slug": "palmeira-dos-indios",
   "latitude": -9.4182,
   "longitude": -36.6057,
-  "atualizado_em": "2026-05-28T11:34:17.249467-03:00",
-  "previsao": [],
+  "atualizado_em": "2026-05-28T13:47:06.893338-03:00",
+  "previsao": [
+    {
+      "data": "2026-05-28",
+      "min": 20.9,
+      "max": 25.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.3,
+      "uv": 5.8,
+      "nascer_sol": "05:35",
+      "por_sol": "17:12"
+    },
+    {
+      "data": "2026-05-29",
+      "min": 19.6,
+      "max": 27.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.4,
+      "nascer_sol": "05:35",
+      "por_sol": "17:12"
+    },
+    {
+      "data": "2026-05-30",
+      "min": 20.8,
+      "max": 27.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.9,
+      "uv": 5.7,
+      "nascer_sol": "05:35",
+      "por_sol": "17:12"
+    },
+    {
+      "data": "2026-05-31",
+      "min": 18.8,
+      "max": 27.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 7.3,
+      "nascer_sol": "05:35",
+      "por_sol": "17:12"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 21.3,
+      "max": 27.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 5.5,
+      "nascer_sol": "05:36",
+      "por_sol": "17:12"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 20.9,
+      "max": 27.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 5.0,
+      "nascer_sol": "05:36",
+      "por_sol": "17:12"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 19.3,
+      "max": 27.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 6.0,
+      "nascer_sol": "05:36",
+      "por_sol": "17:12"
+    }
+  ],
   "reservatorio": {
     "nome": "Xingo",
     "nivel_pct": 46.3,
@@ -21,5 +99,38 @@
     "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 5.8,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 37,
+    "categoria": "Boa",
+    "principal_poluente": "PM10",
+    "pm25": 5.8,
+    "pm10": 8.8,
+    "no2": 0.6,
+    "o3": 52.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:47:06.893338-03:00"
+  },
+  "sol": {
+    "nascer": "05:35",
+    "por": "17:12",
+    "duracao_h": 11.6,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 25.0
 }

@@ -4,8 +4,86 @@
   "slug": "santo-antonio-de-leverger",
   "latitude": -16.5358,
   "longitude": -55.4471,
-  "atualizado_em": "2026-05-28T11:37:52.372055-03:00",
-  "previsao": [],
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
+  "previsao": [
+    {
+      "data": "2026-05-28",
+      "min": 20.5,
+      "max": 31.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "07:02",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-05-29",
+      "min": 20.4,
+      "max": 31.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.3,
+      "nascer_sol": "07:02",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-05-30",
+      "min": 20.8,
+      "max": 32.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.0,
+      "nascer_sol": "07:02",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-05-31",
+      "min": 20.5,
+      "max": 32.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 6.1,
+      "nascer_sol": "07:03",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 20.9,
+      "max": 32.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.0,
+      "nascer_sol": "07:03",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 21.1,
+      "max": 32.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "07:03",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 21.1,
+      "max": 32.9,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 4.5,
+      "nascer_sol": "07:04",
+      "por_sol": "18:15"
+    }
+  ],
   "reservatorio": {
     "nome": "Itiquira I",
     "nivel_pct": 89.5,
@@ -21,5 +99,38 @@
     "focos_100km": 5,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 6.2,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 28,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 3.5,
+    "pm10": 4.4,
+    "no2": 0.4,
+    "o3": 90.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "07:02",
+    "por": "18:15",
+    "duracao_h": 11.2,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 31.9
 }

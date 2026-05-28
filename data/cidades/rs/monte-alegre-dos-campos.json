@@ -4,47 +4,84 @@
   "slug": "monte-alegre-dos-campos",
   "latitude": -28.7002,
   "longitude": -50.8051,
-  "atualizado_em": "2026-05-28T11:44:49.533014-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 7,
-      "max": 18,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 7.0,
+      "max": 19.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.8,
+      "nascer_sol": "07:06",
+      "por_sol": "17:34"
     },
     {
       "data": "2026-05-29",
-      "min": 8,
-      "max": 18,
-      "condicao": "Chuvas Isoladas",
-      "condicao_codigo": "ci",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 8.6,
+      "max": 18.7,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 4.6,
+      "uv": 4.6,
+      "nascer_sol": "07:06",
+      "por_sol": "17:34"
     },
     {
       "data": "2026-05-30",
-      "min": 11,
-      "max": 17,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 11.2,
+      "max": 15.9,
+      "condicao": "Chuva moderada",
+      "condicao_codigo": 63,
+      "chuva_mm": 12.2,
+      "uv": 2.5,
+      "nascer_sol": "07:07",
+      "por_sol": "17:34"
     },
     {
       "data": "2026-05-31",
-      "min": 11,
-      "max": 19,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 9.2,
+      "max": 17.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 4.1,
+      "nascer_sol": "07:07",
+      "por_sol": "17:34"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 6.1,
+      "max": 15.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.6,
+      "nascer_sol": "07:08",
+      "por_sol": "17:34"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 9.0,
+      "max": 16.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 4.1,
+      "nascer_sol": "07:08",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 9.6,
+      "max": 18.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.1,
+      "nascer_sol": "07:09",
+      "por_sol": "17:33"
     }
   ],
   "reservatorio": {
@@ -62,5 +99,38 @@
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 4.8,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 19,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 1.6,
+    "pm10": 2.0,
+    "no2": 0.2,
+    "o3": 70.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "07:06",
+    "por": "17:34",
+    "duracao_h": 10.5,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 18.7
 }

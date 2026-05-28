@@ -4,8 +4,86 @@
   "slug": "figueiropolis-d-oeste",
   "latitude": -15.5274,
   "longitude": -58.7026,
-  "atualizado_em": "2026-05-28T11:37:42.155780-03:00",
-  "previsao": [],
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
+  "previsao": [
+    {
+      "data": "2026-05-28",
+      "min": 19.5,
+      "max": 28.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 0.7,
+      "uv": 6.3,
+      "nascer_sol": "07:13",
+      "por_sol": "18:30"
+    },
+    {
+      "data": "2026-05-29",
+      "min": 20.6,
+      "max": 29.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "07:13",
+      "por_sol": "18:30"
+    },
+    {
+      "data": "2026-05-30",
+      "min": 19.8,
+      "max": 29.5,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.1,
+      "nascer_sol": "07:14",
+      "por_sol": "18:30"
+    },
+    {
+      "data": "2026-05-31",
+      "min": 20.6,
+      "max": 29.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "07:14",
+      "por_sol": "18:30"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 20.5,
+      "max": 29.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "07:14",
+      "por_sol": "18:30"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 20.8,
+      "max": 30.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "07:15",
+      "por_sol": "18:30"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 21.3,
+      "max": 30.8,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "07:15",
+      "por_sol": "18:30"
+    }
+  ],
   "reservatorio": {
     "nome": "Jauru",
     "nivel_pct": 0.0,
@@ -21,5 +99,38 @@
     "focos_100km": 5,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 6.3,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 26,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 3.2,
+    "pm10": 3.3,
+    "no2": 0.4,
+    "o3": 87.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "07:13",
+    "por": "18:30",
+    "duracao_h": 11.3,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 28.8
 }

@@ -4,47 +4,84 @@
   "slug": "flores-da-cunha",
   "latitude": -29.0315,
   "longitude": -51.2211,
-  "atualizado_em": "2026-05-28T11:44:34.723277-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 8,
-      "max": 18,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 7.7,
+      "max": 21.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.7,
+      "nascer_sol": "07:08",
+      "por_sol": "17:35"
     },
     {
       "data": "2026-05-29",
-      "min": 10,
-      "max": 18,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 8.4,
+      "max": 20.3,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 6.9,
+      "uv": 4.1,
+      "nascer_sol": "07:08",
+      "por_sol": "17:35"
     },
     {
       "data": "2026-05-30",
-      "min": 13,
-      "max": 19,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 12.1,
+      "max": 18.8,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 4.9,
+      "uv": 4.2,
+      "nascer_sol": "07:09",
+      "por_sol": "17:35"
     },
     {
       "data": "2026-05-31",
-      "min": 11,
-      "max": 19,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 8.9,
+      "max": 18.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 4.2,
+      "nascer_sol": "07:09",
+      "por_sol": "17:35"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 7.4,
+      "max": 17.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.5,
+      "nascer_sol": "07:10",
+      "por_sol": "17:34"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 10.4,
+      "max": 18.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.0,
+      "nascer_sol": "07:11",
+      "por_sol": "17:34"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 10.1,
+      "max": 21.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 4.0,
+      "nascer_sol": "07:11",
+      "por_sol": "17:34"
     }
   ],
   "reservatorio": {
@@ -62,5 +99,38 @@
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 4.7,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 25,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 2.8,
+    "pm10": 3.2,
+    "no2": 0.9,
+    "o3": 78.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "07:08",
+    "por": "17:35",
+    "duracao_h": 10.5,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 20.4
 }

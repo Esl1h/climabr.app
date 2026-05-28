@@ -4,47 +4,84 @@
   "slug": "santa-rita-de-jacutinga",
   "latitude": -22.1015,
   "longitude": -44.0918,
-  "atualizado_em": "2026-05-28T11:39:56.694317-03:00",
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 15,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 13.4,
+      "max": 19.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.1,
+      "uv": 4.5,
+      "nascer_sol": "06:26",
+      "por_sol": "17:20"
     },
     {
       "data": "2026-05-29",
-      "min": 13,
-      "max": 20,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 13.8,
+      "max": 19.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.4,
+      "nascer_sol": "06:26",
+      "por_sol": "17:20"
     },
     {
       "data": "2026-05-30",
-      "min": 13,
-      "max": 20,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 13.4,
+      "max": 20.1,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 4.1,
+      "uv": 3.6,
+      "nascer_sol": "06:27",
+      "por_sol": "17:20"
     },
     {
       "data": "2026-05-31",
-      "min": 13,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 14.2,
+      "max": 22.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 5.5,
+      "nascer_sol": "06:27",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 13.4,
+      "max": 23.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 5.5,
+      "nascer_sol": "06:28",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 13.8,
+      "max": 19.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.9,
+      "uv": 3.4,
+      "nascer_sol": "06:28",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 13.5,
+      "max": 20.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 4.5,
+      "uv": 4.8,
+      "nascer_sol": "06:29",
+      "por_sol": "17:19"
     }
   ],
   "reservatorio": {
@@ -62,5 +99,38 @@
     "focos_100km": 17,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 4.5,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 27,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 5.6,
+    "pm10": 6.4,
+    "no2": 2.6,
+    "o3": 83.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "06:26",
+    "por": "17:20",
+    "duracao_h": 10.9,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 19.7
 }

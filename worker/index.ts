@@ -43,40 +43,61 @@ function formatarTexto(dados: Record<string, unknown>, estado: string): string {
     ? new Date(dados.atualizado_em as string).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
     : 'N/A';
 
+  const temp = dados.temperatura_atual != null ? ` · ${dados.temperatura_atual}°C agora` : '';
   const linhas: string[] = [
-    `${cidade}/${ufUpper} — ${agora}`,
+    `${cidade}/${ufUpper} — ${agora}${temp}`,
     '─'.repeat(40),
   ];
 
   const previsao = (dados.previsao as Array<Record<string, unknown>> | undefined)?.[0];
   if (previsao) {
-    linhas.push(`Tempo:     ${previsao.condicao}, min ${previsao.min}°C / max ${previsao.max}°C`);
+    const uv_dia = previsao.uv ? ` · UV ${previsao.uv}` : '';
+    linhas.push(`Tempo:     ${previsao.condicao}, min ${previsao.min}°C / max ${previsao.max}°C${uv_dia}`);
   }
 
   const ar = dados.qualidade_ar as Record<string, unknown> | undefined;
   if (ar) {
-    linhas.push(`Ar:        ${ar.categoria} (IQAr ${ar.indice}) — ${ar.principal_poluente}`);
-  }
-
-  const res = dados.reservatorio as Record<string, unknown> | undefined;
-  if (res) {
-    const seta = (res.variacao_semana_pct as number) > 0 ? '↑' : (res.variacao_semana_pct as number) < 0 ? '↓' : '→';
-    linhas.push(`Represa:   ${res.nivel_pct}% ${seta}${Math.abs(res.variacao_semana_pct as number)}% (${res.nome})`);
+    const pm = ar.pm25 ? ` · PM2.5: ${ar.pm25}µg/m³` : '';
+    linhas.push(`Ar:        ${ar.categoria} (AQI ${ar.indice}) — ${ar.principal_poluente}${pm}`);
   }
 
   const uv = dados.uv as Record<string, unknown> | undefined;
-  if (uv) {
-    linhas.push(`UV:        ${uv.indice} — ${uv.categoria} (pico ${uv.pico_inicio}–${uv.pico_fim})`);
+  if (uv && uv.indice) {
+    linhas.push(`UV:        ${uv.indice} — ${uv.categoria}`);
+  }
+
+  const res = dados.reservatorio as Record<string, unknown> | undefined;
+  if (res && res.nivel_pct != null) {
+    const var_pct = res.variacao_semana_pct as number | null;
+    const seta = var_pct == null ? '' : var_pct > 0 ? ` ↑${var_pct}%` : var_pct < 0 ? ` ↓${Math.abs(var_pct)}%` : '';
+    const aprox = res.aproximado ? ' (aprox.)' : '';
+    linhas.push(`Represa:   ${res.nivel_pct}%${seta} — ${res.nome}${aprox}`);
   }
 
   const dengue = dados.dengue as Record<string, unknown> | undefined;
-  if (dengue) {
-    linhas.push(`Dengue:    Alerta nível ${dengue.nivel_alerta} (${dengue.casos_semana} casos/semana)`);
+  if (dengue && dengue.nivel_alerta != null) {
+    const label = dengue.nivel_label || `nível ${dengue.nivel_alerta}`;
+    linhas.push(`Dengue:    ${label} (${dengue.casos_semana} casos/semana)`);
+  }
+
+  const chik = dados.chikungunya as Record<string, unknown> | undefined;
+  if (chik && (chik.nivel_alerta as number) >= 1) {
+    linhas.push(`Chikung.:  ${chik.nivel_label || `nível ${chik.nivel_alerta}`} (${chik.casos_semana} casos)`);
   }
 
   const q = dados.queimadas as Record<string, unknown> | undefined;
   if (q) {
     linhas.push(`Queimadas: ${q.focos_100km} focos (raio 100km)`);
+  }
+
+  const sol = dados.sol as Record<string, unknown> | undefined;
+  if (sol) {
+    linhas.push(`Sol:       ↑${sol.nascer}  ↓${sol.por} · ${sol.estacao}`);
+  }
+
+  const lua = dados.lua as Record<string, unknown> | undefined;
+  if (lua) {
+    linhas.push(`Lua:       ${lua.nome} (${lua.iluminacao_pct}%)`);
   }
 
   const bt = dados.bandeira_tarifaria as Record<string, unknown> | undefined;

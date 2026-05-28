@@ -1,0 +1,77 @@
+---
+interface Props {
+  sol?: {
+    nascer: string;
+    por: string;
+    duracao_h: number;
+    estacao: string;
+    fonte: string;
+  } | null;
+  lua?: {
+    nome: string;
+    iluminacao_pct: number;
+    dias_proxima_cheia?: number;
+    fonte: string;
+  } | null;
+}
+const { sol, lua } = Astro.props;
+
+const LUA_EMOJI: Record<string, string> = {
+  'Nova': '🌑',
+  'Crescente': '🌒',
+  'Quarto Crescente': '🌓',
+  'Gibosa Crescente': '🌔',
+  'Cheia': '🌕',
+  'Gibosa Minguante': '🌖',
+  'Quarto Minguante': '🌗',
+  'Minguante': '🌘',
+};
+
+const ESTACAO_EMOJI: Record<string, string> = {
+  'Verão': '☀️', 'Outono': '🍂', 'Inverno': '❄️', 'Primavera': '🌸',
+};
+---
+
+{(sol || lua) && (
+  <section aria-label="Dados astronômicos">
+    <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-slate-200">
+      <span aria-hidden="true">🌙</span> Sol & Lua
+    </h2>
+    <div class="rounded-lg border border-slate-800 bg-slate-900 p-4">
+      <div class="grid grid-cols-2 gap-4">
+        {sol && (
+          <div class="space-y-2">
+            <p class="text-xs text-slate-500 uppercase tracking-wide">Sol hoje</p>
+            <div class="flex items-center gap-2">
+              <span class="text-yellow-400">🌅</span>
+              <span class="text-sm text-slate-300">{sol.nascer}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-orange-400">🌇</span>
+              <span class="text-sm text-slate-300">{sol.por}</span>
+            </div>
+            <p class="text-xs text-slate-500">{sol.duracao_h}h de luz</p>
+            {sol.estacao && (
+              <p class="text-xs text-slate-400">
+                {ESTACAO_EMOJI[sol.estacao] ?? ''} {sol.estacao}
+              </p>
+            )}
+          </div>
+        )}
+        {lua && (
+          <div class="space-y-2">
+            <p class="text-xs text-slate-500 uppercase tracking-wide">Lua</p>
+            <p class="text-2xl">{LUA_EMOJI[lua.nome] ?? '🌙'}</p>
+            <p class="text-sm text-slate-300">{lua.nome}</p>
+            <p class="text-xs text-slate-500">{lua.iluminacao_pct}% iluminada</p>
+            {(lua.dias_proxima_cheia ?? 0) > 0 && (
+              <p class="text-xs text-slate-500">
+                Próx. cheia em {lua.dias_proxima_cheia} dias
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+)}

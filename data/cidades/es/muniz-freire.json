@@ -4,47 +4,84 @@
   "slug": "muniz-freire",
   "latitude": -20.4268,
   "longitude": -41.435,
-  "atualizado_em": "2026-05-28T11:36:17.377546-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 15,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 19.0,
+      "max": 25.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 5.5,
+      "nascer_sol": "06:13",
+      "por_sol": "17:13"
     },
     {
       "data": "2026-05-29",
-      "min": 15,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 17.1,
+      "max": 23.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 3.2,
+      "nascer_sol": "06:13",
+      "por_sol": "17:13"
     },
     {
       "data": "2026-05-30",
-      "min": 13,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 15.9,
+      "max": 22.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 4.9,
+      "nascer_sol": "06:13",
+      "por_sol": "17:13"
     },
     {
       "data": "2026-05-31",
-      "min": 13,
-      "max": 24,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 15.5,
+      "max": 25.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 5.8,
+      "nascer_sol": "06:14",
+      "por_sol": "17:12"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 14.3,
+      "max": 26.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:14",
+      "por_sol": "17:12"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 17.1,
+      "max": 21.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 13.5,
+      "uv": 5.2,
+      "nascer_sol": "06:15",
+      "por_sol": "17:12"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 16.5,
+      "max": 22.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.8,
+      "uv": 5.0,
+      "nascer_sol": "06:15",
+      "por_sol": "17:12"
     }
   ],
   "reservatorio": {
@@ -62,5 +99,38 @@
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 5.5,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 52,
+    "categoria": "Moderada",
+    "principal_poluente": "PM2.5",
+    "pm25": 12.0,
+    "pm10": 12.7,
+    "no2": 0.8,
+    "o3": 84.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:13",
+    "por": "17:13",
+    "duracao_h": 11.0,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 25.0
 }

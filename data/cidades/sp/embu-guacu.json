@@ -4,8 +4,86 @@
   "slug": "embu-guacu",
   "latitude": -23.8543,
   "longitude": -46.8307,
-  "atualizado_em": "2026-05-28T11:46:47.392090-03:00",
-  "previsao": [],
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
+  "previsao": [
+    {
+      "data": "2026-05-28",
+      "min": 9.6,
+      "max": 18.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.3,
+      "nascer_sol": "06:40",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-05-29",
+      "min": 11.9,
+      "max": 18.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 2.9,
+      "nascer_sol": "06:41",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-05-30",
+      "min": 12.2,
+      "max": 17.4,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 2.9,
+      "uv": 2.5,
+      "nascer_sol": "06:41",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-05-31",
+      "min": 12.8,
+      "max": 22.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.2,
+      "nascer_sol": "06:42",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 11.8,
+      "max": 20.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 4.5,
+      "nascer_sol": "06:42",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 12.9,
+      "max": 16.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.4,
+      "uv": 2.5,
+      "nascer_sol": "06:43",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 13.0,
+      "max": 17.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 2.4,
+      "nascer_sol": "06:43",
+      "por_sol": "17:27"
+    }
+  ],
   "reservatorio": {
     "nome": "Guarapiranga",
     "nivel_pct": 78.6,
@@ -20,5 +98,60 @@
     "focos_100km": 5,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
+  },
+  "uv": {
+    "indice": 5.3,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 27,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 5.6,
+    "pm10": 8.0,
+    "no2": 1.9,
+    "o3": 65.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:40",
+    "por": "17:28",
+    "duracao_h": 10.8,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 18.4,
+  "dengue": {
+    "nivel_alerta": 1,
+    "nivel_label": "Atenção",
+    "nivel_incidencia": 0,
+    "nivel_incidencia_label": "Baixa",
+    "casos_semana": 0,
+    "casos_estimados": 0,
+    "semana_epidemiologica": 202620,
+    "fonte": "InfoDengue / Fiocruz / SVS",
+    "atualizado_em": "2026-05-28T13:36:28.571279-03:00"
+  },
+  "chikungunya": {
+    "nivel_alerta": 1,
+    "nivel_label": "Atenção",
+    "nivel_incidencia": 0,
+    "nivel_incidencia_label": "Baixa",
+    "casos_semana": 0,
+    "casos_estimados": 0,
+    "semana_epidemiologica": 202620,
+    "fonte": "InfoDengue / Fiocruz / SVS",
+    "atualizado_em": "2026-05-28T13:36:28.571279-03:00"
   }
 }

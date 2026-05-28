@@ -4,52 +4,122 @@
   "slug": "itapecuru-mirim",
   "latitude": -3.3873,
   "longitude": -44.2777,
-  "atualizado_em": "2026-05-28T11:37:16.503159-03:00",
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 24,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 24.2,
+      "max": 32.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 7.8,
+      "nascer_sol": "05:56",
+      "por_sol": "17:52"
     },
     {
       "data": "2026-05-29",
-      "min": 25,
-      "max": 31,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 24.0,
+      "max": 32.2,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 4.3,
+      "uv": 7.8,
+      "nascer_sol": "05:56",
+      "por_sol": "17:52"
     },
     {
       "data": "2026-05-30",
-      "min": 24,
-      "max": 31,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.0,
+      "max": 31.5,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 4.3,
+      "uv": 7.5,
+      "nascer_sol": "05:56",
+      "por_sol": "17:52"
     },
     {
       "data": "2026-05-31",
-      "min": 24,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.4,
+      "max": 30.9,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 2.4,
+      "uv": 6.8,
+      "nascer_sol": "05:56",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 23.6,
+      "max": 31.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.7,
+      "uv": 7.7,
+      "nascer_sol": "05:56",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 22.2,
+      "max": 31.7,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 4.2,
+      "uv": 6.7,
+      "nascer_sol": "05:57",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 23.3,
+      "max": 29.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.2,
+      "uv": 6.3,
+      "nascer_sol": "05:57",
+      "por_sol": "17:53"
     }
   ],
   "queimadas": {
     "focos_100km": 2,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.8,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 33,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 8.2,
+    "pm10": 10.1,
+    "no2": 0.2,
+    "o3": 67.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "05:56",
+    "por": "17:52",
+    "duracao_h": 11.9,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 32.7
 }

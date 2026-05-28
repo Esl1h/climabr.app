@@ -3,6 +3,10 @@ import PainelLayout from '../../layouts/PainelLayout.astro';
 import BlocoPrevisao from '../../components/BlocoPrevisao.astro';
 import BlocoReservatorio from '../../components/BlocoReservatorio.astro';
 import BlocoQueimadas from '../../components/BlocoQueimadas.astro';
+import BlocoAr from '../../components/BlocoAr.astro';
+import BlocoUV from '../../components/BlocoUV.astro';
+import BlocoDengue from '../../components/BlocoDengue.astro';
+import BlocoSol from '../../components/BlocoSol.astro';
 import municipiosRaw from '../../../data/municipios.json';
 import type { Municipio, DadosCidade } from '../../lib/types';
 
@@ -21,26 +25,32 @@ interface Props {
 const { municipio } = Astro.props;
 const { estado, cidade } = Astro.params;
 
-// Tenta carregar JSON de dados (será populado pelos GitHub Actions → R2)
-// Em dev/build sem dados, exibe estado vazio gracefully
 let dados: DadosCidade | null = null;
 
 try {
-  // No ambiente de produção os dados vêm do R2 via fetch
-  // Em build estático, usamos um JSON local se disponível
   const fs = await import('node:fs/promises');
   const path = await import('node:path');
   const filePath = path.join(process.cwd(), 'data', 'cidades', estado, `${cidade}.json`);
   const raw = await fs.readFile(filePath, 'utf-8');
   dados = JSON.parse(raw) as DadosCidade;
 } catch {
-  // Arquivo não existe ainda — dados ainda não coletados
+  // Dados ainda não coletados
+}
+
+// Monta description dinâmica com os dados disponíveis
+function montarDescricao(): string {
+  if (!dados) return `Painel ambiental de ${municipio.nome}, ${municipio.estado_nome}.`;
+  const partes: string[] = [];
+  if (dados.qualidade_ar?.categoria) partes.push(`Ar: ${dados.qualidade_ar.categoria}`);
+  if (dados.reservatorio?.nivel_pct != null) partes.push(`Reservatório: ${dados.reservatorio.nivel_pct}%`);
+  if (dados.dengue?.nivel_label) partes.push(`Dengue: ${dados.dengue.nivel_label}`);
+  if (dados.queimadas?.focos_100km != null) partes.push(`Queimadas: ${dados.queimadas.focos_100km} focos`);
+  const base = `Painel ambiental de ${municipio.nome}/${municipio.estado.toUpperCase()}`;
+  return partes.length ? `${base} — ${partes.join(', ')}.` : `${base}.`;
 }
 
 const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — climabr.app`;
-const descricao = dados
-  ? `Qualidade do ar, reservatórios, queimadas e previsão do tempo para ${municipio.nome}/${municipio.estado.toUpperCase()}.`
-  : `Painel ambiental de ${municipio.nome}, ${municipio.estado_nome}.`;
+const descricao = montarDescricao();
 
 function formatarDataHora(iso: string): string {
   return new Date(iso).toLocaleString('pt-BR', {
@@ -49,6 +59,16 @@ function formatarDataHora(iso: string): string {
     timeZone: 'America/Sao_Paulo',
   });
 }
+
+const temDados = dados && (
+  dados.previsao?.length ||
+  dados.qualidade_ar ||
+  dados.uv ||
+  dados.reservatorio ||
+  dados.dengue ||
+  dados.queimadas ||
+  dados.sol
+);
 ---
 
 <PainelLayout
@@ -57,7 +77,6 @@ function formatarDataHora(iso: string): string {
   cidade={municipio.nome}
   estado={municipio.estado}
 >
-  <!-- Breadcrumb -->
   <nav class="mb-6 text-sm text-slate-500" aria-label="Navegação">
     <a href="/" class="hover:text-slate-300">climabr.app</a>
     <span class="mx-2">/</span>
@@ -66,13 +85,15 @@ function formatarDataHora(iso: string): string {
     <span class="text-white">{municipio.nome}</span>
   </nav>
 
-  <!-- Cabeçalho da cidade -->
   <div class="mb-8">
     <h1 class="text-2xl font-bold text-white">
       {municipio.nome}
       <span class="text-slate-400 text-lg">/{municipio.estado.toUpperCase()}</span>
     </h1>
-    {dados ? (
+    {dados?.temperatura_atual != null && (
+      <p class="mt-1 text-slate-300 text-sm">{dados.temperatura_atual}°C agora</p>
+    )}
+    {dados?.atualizado_em ? (
       <p class="mt-1 text-xs text-slate-500">
         Atualizado em {formatarDataHora(dados.atualizado_em)}
       </p>
@@ -81,11 +102,19 @@ function formatarDataHora(iso: string): string {
     )}
   </div>
 
-  {dados ? (
+  {temDados ? (
     <div class="space-y-8">
-      <BlocoPrevisao previsao={dados.previsao} />
-      <BlocoReservatorio reservatorio={dados.reservatorio} />
-      <BlocoQueimadas queimadas={dados.queimadas} />
+      <BlocoPrevisao previsao={dados!.previsao} />
+      <BlocoAr qualidade_ar={dados!.qualidade_ar} />
+      <BlocoUV uv={dados!.uv} />
+      <BlocoReservatorio reservatorio={dados!.reservatorio} />
+      <BlocoQueimadas queimadas={dados!.queimadas} />
+      <BlocoDengue
+        dengue={dados!.dengue}
+        chikungunya={dados!.chikungunya}
+        zika={dados!.zika}
+      />
+      <BlocoSol sol={dados!.sol} lua={dados!.lua} />
     </div>
   ) : (
     <div class="rounded-lg border border-slate-800 bg-slate-900 p-8 text-center">
@@ -106,7 +135,6 @@ function formatarDataHora(iso: string): string {
     </div>
   )}
 
-  <!-- JSON-LD estruturado -->
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Dataset",

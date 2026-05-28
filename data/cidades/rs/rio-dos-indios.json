@@ -4,8 +4,86 @@
   "slug": "rio-dos-indios",
   "latitude": -27.2528,
   "longitude": -52.8797,
-  "atualizado_em": "2026-05-28T11:45:03.023147-03:00",
-  "previsao": [],
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
+  "previsao": [
+    {
+      "data": "2026-05-28",
+      "min": 10.9,
+      "max": 23.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.9,
+      "nascer_sol": "07:11",
+      "por_sol": "17:46"
+    },
+    {
+      "data": "2026-05-29",
+      "min": 13.1,
+      "max": 21.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.3,
+      "uv": 4.3,
+      "nascer_sol": "07:12",
+      "por_sol": "17:45"
+    },
+    {
+      "data": "2026-05-30",
+      "min": 13.1,
+      "max": 22.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.8,
+      "nascer_sol": "07:12",
+      "por_sol": "17:45"
+    },
+    {
+      "data": "2026-05-31",
+      "min": 12.2,
+      "max": 21.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.7,
+      "nascer_sol": "07:13",
+      "por_sol": "17:45"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 9.9,
+      "max": 21.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.7,
+      "nascer_sol": "07:13",
+      "por_sol": "17:45"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 11.5,
+      "max": 22.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.3,
+      "nascer_sol": "07:14",
+      "por_sol": "17:45"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 13.4,
+      "max": 23.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.0,
+      "nascer_sol": "07:14",
+      "por_sol": "17:44"
+    }
+  ],
   "reservatorio": {
     "nome": "Monjolinho",
     "nivel_pct": 61.1,
@@ -21,5 +99,38 @@
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 4.9,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 31,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 3.8,
+    "pm10": 3.9,
+    "no2": 0.7,
+    "o3": 80.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "07:11",
+    "por": "17:46",
+    "duracao_h": 10.6,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 23.3
 }

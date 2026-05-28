@@ -4,8 +4,86 @@
   "slug": "capao-do-cipo",
   "latitude": -28.9593,
   "longitude": -54.5824,
-  "atualizado_em": "2026-05-28T11:44:22.087369-03:00",
-  "previsao": [],
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
+  "previsao": [
+    {
+      "data": "2026-05-28",
+      "min": 10.4,
+      "max": 21.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.7,
+      "nascer_sol": "07:22",
+      "por_sol": "17:49"
+    },
+    {
+      "data": "2026-05-29",
+      "min": 13.8,
+      "max": 18.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.1,
+      "uv": 4.2,
+      "nascer_sol": "07:22",
+      "por_sol": "17:49"
+    },
+    {
+      "data": "2026-05-30",
+      "min": 13.1,
+      "max": 19.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.5,
+      "nascer_sol": "07:23",
+      "por_sol": "17:48"
+    },
+    {
+      "data": "2026-05-31",
+      "min": 10.9,
+      "max": 18.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 3.8,
+      "nascer_sol": "07:23",
+      "por_sol": "17:48"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 12.0,
+      "max": 17.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.5,
+      "nascer_sol": "07:24",
+      "por_sol": "17:48"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 9.9,
+      "max": 18.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.0,
+      "nascer_sol": "07:24",
+      "por_sol": "17:48"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 12.1,
+      "max": 21.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 3.9,
+      "nascer_sol": "07:25",
+      "por_sol": "17:48"
+    }
+  ],
   "reservatorio": {
     "nome": "Sao Jose",
     "nivel_pct": 76.0,
@@ -21,5 +99,38 @@
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 4.7,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 23,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 3.6,
+    "pm10": 4.0,
+    "no2": 0.8,
+    "o3": 63.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "07:22",
+    "por": "17:49",
+    "duracao_h": 10.5,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 21.0
 }

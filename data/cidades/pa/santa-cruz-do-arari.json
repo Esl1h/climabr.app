@@ -4,52 +4,122 @@
   "slug": "santa-cruz-do-arari",
   "latitude": -0.5834,
   "longitude": -49.3139,
-  "atualizado_em": "2026-05-28T11:40:38.687252-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 24,
-      "max": 31,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.5,
+      "max": 30.8,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 27.6,
+      "uv": 7.8,
+      "nascer_sol": "06:11",
+      "por_sol": "18:17"
     },
     {
       "data": "2026-05-29",
-      "min": 23,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.2,
+      "max": 29.4,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 18.9,
+      "uv": 7.8,
+      "nascer_sol": "06:12",
+      "por_sol": "18:17"
     },
     {
       "data": "2026-05-30",
-      "min": 23,
-      "max": 31,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.0,
+      "max": 29.0,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 16.0,
+      "uv": 8.1,
+      "nascer_sol": "06:12",
+      "por_sol": "18:17"
     },
     {
       "data": "2026-05-31",
-      "min": 23,
-      "max": 31,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.8,
+      "max": 30.4,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 9.3,
+      "uv": 7.8,
+      "nascer_sol": "06:12",
+      "por_sol": "18:17"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 22.6,
+      "max": 30.2,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 8.7,
+      "uv": 6.5,
+      "nascer_sol": "06:12",
+      "por_sol": "18:17"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 21.9,
+      "max": 29.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 10.9,
+      "uv": 7.2,
+      "nascer_sol": "06:12",
+      "por_sol": "18:17"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 22.7,
+      "max": 26.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 6.0,
+      "uv": 6.8,
+      "nascer_sol": "06:12",
+      "por_sol": "18:18"
     }
   ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.8,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 20,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 4.9,
+    "pm10": 6.7,
+    "no2": 0.2,
+    "o3": 54.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:11",
+    "por": "18:17",
+    "duracao_h": 12.1,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 30.2
 }

@@ -4,52 +4,122 @@
   "slug": "santa-luzia-do-parua",
   "latitude": -2.5399,
   "longitude": -45.7723,
-  "atualizado_em": "2026-05-28T11:37:27.655095-03:00",
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 24,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 24.4,
+      "max": 30.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 7.6,
+      "uv": 6.8,
+      "nascer_sol": "06:00",
+      "por_sol": "18:00"
     },
     {
       "data": "2026-05-29",
-      "min": 24,
-      "max": 31,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.3,
+      "max": 30.2,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 15.3,
+      "uv": 7.8,
+      "nascer_sol": "06:01",
+      "por_sol": "18:00"
     },
     {
       "data": "2026-05-30",
-      "min": 24,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.0,
+      "max": 30.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 10.6,
+      "uv": 7.8,
+      "nascer_sol": "06:01",
+      "por_sol": "18:00"
     },
     {
       "data": "2026-05-31",
-      "min": 24,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.3,
+      "max": 27.9,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 12.3,
+      "uv": 7.4,
+      "nascer_sol": "06:01",
+      "por_sol": "18:00"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 23.5,
+      "max": 28.9,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 12.0,
+      "uv": 7.7,
+      "nascer_sol": "06:01",
+      "por_sol": "18:00"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 22.5,
+      "max": 28.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 5.4,
+      "uv": 7.3,
+      "nascer_sol": "06:01",
+      "por_sol": "18:00"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 23.4,
+      "max": 27.4,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 11.4,
+      "uv": 3.9,
+      "nascer_sol": "06:02",
+      "por_sol": "18:00"
     }
   ],
   "queimadas": {
     "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 6.8,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 25,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 7.9,
+    "pm10": 10.0,
+    "no2": 0.3,
+    "o3": 67.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "06:00",
+    "por": "18:00",
+    "duracao_h": 12.0,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 29.0
 }

@@ -4,8 +4,86 @@
   "slug": "pinhal-da-serra",
   "latitude": -27.8536,
   "longitude": -51.2194,
-  "atualizado_em": "2026-05-28T11:44:58.691675-03:00",
-  "previsao": [],
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
+  "previsao": [
+    {
+      "data": "2026-05-28",
+      "min": 7.6,
+      "max": 20.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.8,
+      "nascer_sol": "07:06",
+      "por_sol": "17:38"
+    },
+    {
+      "data": "2026-05-29",
+      "min": 9.3,
+      "max": 19.4,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 5.4,
+      "uv": 3.9,
+      "nascer_sol": "07:06",
+      "por_sol": "17:37"
+    },
+    {
+      "data": "2026-05-30",
+      "min": 10.8,
+      "max": 19.1,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 3.0,
+      "uv": 2.9,
+      "nascer_sol": "07:07",
+      "por_sol": "17:37"
+    },
+    {
+      "data": "2026-05-31",
+      "min": 9.2,
+      "max": 18.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 4.2,
+      "nascer_sol": "07:07",
+      "por_sol": "17:37"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 8.2,
+      "max": 18.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.7,
+      "nascer_sol": "07:08",
+      "por_sol": "17:37"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 8.9,
+      "max": 18.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.2,
+      "nascer_sol": "07:08",
+      "por_sol": "17:37"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 10.2,
+      "max": 19.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.2,
+      "nascer_sol": "07:09",
+      "por_sol": "17:36"
+    }
+  ],
   "reservatorio": {
     "nome": "Barra Grande",
     "nivel_pct": 36.0,
@@ -21,5 +99,38 @@
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 4.8,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 23,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 1.4,
+    "pm10": 1.5,
+    "no2": 0.3,
+    "o3": 72.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "07:06",
+    "por": "17:38",
+    "duracao_h": 10.5,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 19.5
 }

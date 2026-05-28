@@ -4,8 +4,86 @@
   "slug": "pinto-bandeira",
   "latitude": -29.0929,
   "longitude": -51.4617,
-  "atualizado_em": "2026-05-28T11:44:59.184821-03:00",
-  "previsao": [],
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
+  "previsao": [
+    {
+      "data": "2026-05-28",
+      "min": 7.2,
+      "max": 20.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.6,
+      "nascer_sol": "07:09",
+      "por_sol": "17:36"
+    },
+    {
+      "data": "2026-05-29",
+      "min": 7.7,
+      "max": 18.5,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 6.7,
+      "uv": 4.2,
+      "nascer_sol": "07:10",
+      "por_sol": "17:36"
+    },
+    {
+      "data": "2026-05-30",
+      "min": 11.6,
+      "max": 18.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.3,
+      "uv": 3.8,
+      "nascer_sol": "07:10",
+      "por_sol": "17:36"
+    },
+    {
+      "data": "2026-05-31",
+      "min": 8.5,
+      "max": 18.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 4.1,
+      "nascer_sol": "07:11",
+      "por_sol": "17:35"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 7.1,
+      "max": 16.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.5,
+      "nascer_sol": "07:11",
+      "por_sol": "17:35"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 10.2,
+      "max": 19.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.0,
+      "nascer_sol": "07:12",
+      "por_sol": "17:35"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 10.0,
+      "max": 21.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 4.0,
+      "nascer_sol": "07:12",
+      "por_sol": "17:35"
+    }
+  ],
   "reservatorio": {
     "nome": "Monte Claro",
     "nivel_pct": 13.3,
@@ -21,5 +99,38 @@
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 4.6,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 39,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 4.5,
+    "pm10": 5.2,
+    "no2": 1.1,
+    "o3": 72.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "07:09",
+    "por": "17:36",
+    "duracao_h": 10.5,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 20.1
 }

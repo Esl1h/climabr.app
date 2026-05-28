@@ -4,47 +4,84 @@
   "slug": "santo-antonio-do-jardim",
   "latitude": -22.1303,
   "longitude": -46.6835,
-  "atualizado_em": "2026-05-28T11:47:47.363789-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 13,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 13.4,
+      "max": 23.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.7,
+      "nascer_sol": "06:36",
+      "por_sol": "17:31"
     },
     {
       "data": "2026-05-29",
-      "min": 11,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 12.0,
+      "max": 22.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.5,
+      "nascer_sol": "06:37",
+      "por_sol": "17:30"
     },
     {
       "data": "2026-05-30",
-      "min": 11,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 12.4,
+      "max": 21.3,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 2.8,
+      "uv": 5.6,
+      "nascer_sol": "06:37",
+      "por_sol": "17:30"
     },
     {
       "data": "2026-05-31",
-      "min": 12,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 11.1,
+      "max": 21.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.6,
+      "nascer_sol": "06:38",
+      "por_sol": "17:30"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 8.7,
+      "max": 22.4,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.1,
+      "nascer_sol": "06:38",
+      "por_sol": "17:30"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 9.4,
+      "max": 22.4,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.0,
+      "nascer_sol": "06:39",
+      "por_sol": "17:30"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 11.9,
+      "max": 21.5,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.0,
+      "nascer_sol": "06:39",
+      "por_sol": "17:30"
     }
   ],
   "queimadas": {
@@ -62,5 +99,38 @@
     "nota": "Reservatório hidrelétrico mais próximo (62km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
     "atualizado_em": "2026-05-28T12:52:28.221558-03:00"
-  }
+  },
+  "uv": {
+    "indice": 5.7,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 59,
+    "categoria": "Moderada",
+    "principal_poluente": "PM2.5",
+    "pm25": 4.9,
+    "pm10": 4.9,
+    "no2": 0.6,
+    "o3": 99.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:36",
+    "por": "17:31",
+    "duracao_h": 10.9,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 23.1
 }

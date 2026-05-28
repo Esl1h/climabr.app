@@ -4,47 +4,84 @@
   "slug": "santa-cruz-da-esperanca",
   "latitude": -21.2748,
   "longitude": -47.4396,
-  "atualizado_em": "2026-05-28T11:47:44.118269-03:00",
+  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 15,
-      "max": 28,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 15.8,
+      "max": 26.2,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:38",
+      "por_sol": "17:35"
     },
     {
       "data": "2026-05-29",
-      "min": 13,
-      "max": 28,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 13.6,
+      "max": 26.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.3,
+      "nascer_sol": "06:39",
+      "por_sol": "17:35"
     },
     {
       "data": "2026-05-30",
-      "min": 14,
-      "max": 28,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 15.7,
+      "max": 25.5,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 3.5,
+      "uv": 5.5,
+      "nascer_sol": "06:39",
+      "por_sol": "17:35"
     },
     {
       "data": "2026-05-31",
-      "min": 14,
-      "max": 28,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 14.7,
+      "max": 24.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.7,
+      "nascer_sol": "06:39",
+      "por_sol": "17:35"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 12.4,
+      "max": 25.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 4.7,
+      "nascer_sol": "06:40",
+      "por_sol": "17:35"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 12.9,
+      "max": 24.5,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.2,
+      "nascer_sol": "06:40",
+      "por_sol": "17:35"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 14.1,
+      "max": 25.1,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.1,
+      "nascer_sol": "06:41",
+      "por_sol": "17:35"
     }
   ],
   "queimadas": {
@@ -62,5 +99,38 @@
     "nota": "Reservatório hidrelétrico mais próximo (59km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
     "atualizado_em": "2026-05-28T12:52:28.221558-03:00"
-  }
+  },
+  "uv": {
+    "indice": 5.8,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 64,
+    "categoria": "Moderada",
+    "principal_poluente": "PM2.5",
+    "pm25": 11.6,
+    "pm10": 11.7,
+    "no2": 1.3,
+    "o3": 124.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+  },
+  "sol": {
+    "nascer": "06:38",
+    "por": "17:35",
+    "duracao_h": 11.0,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 25.9
 }
