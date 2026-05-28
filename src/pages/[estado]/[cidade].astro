@@ -78,9 +78,10 @@ const temDados = dados && (
   description={descricao}
   cidade={municipio.nome}
   estado={municipio.estado}
+  slug={municipio.slug}
 >
   <nav class="mb-6 text-sm text-slate-500" aria-label="Navegação">
-    <a href="/" class="hover:text-slate-300">climabr.app</a>
+    <a href="/" class="hover:text-slate-300">ClimaBR.app</a>
     <span class="mx-2">/</span>
     <span class="text-slate-300">{municipio.estado.toUpperCase()}</span>
     <span class="mx-2">/</span>
@@ -141,17 +142,47 @@ const temDados = dados && (
 
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "Dataset",
-    "name": `Dados Ambientais — ${municipio.nome}/${municipio.estado.toUpperCase()}`,
-    "description": descricao,
-    "spatialCoverage": {
-      "@type": "Place",
-      "name": municipio.nome,
-      "addressRegion": municipio.estado.toUpperCase(),
-      "addressCountry": "BR"
-    },
-    "temporalCoverage": "2025/..",
-    "url": `https://climabr.app/${estado}/${cidade}`,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "@graph": [
+      {
+        "@type": "Dataset",
+        "name": `Dados Ambientais — ${municipio.nome}/${municipio.estado.toUpperCase()}`,
+        "description": descricao,
+        "keywords": [
+          "previsão do tempo", "qualidade do ar", "índice UV", "vento",
+          "reservatório", "queimadas", "dengue", municipio.nome, municipio.estado_nome,
+        ],
+        "spatialCoverage": {
+          "@type": "Place",
+          "name": municipio.nome,
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": municipio.nome,
+            "addressRegion": municipio.estado.toUpperCase(),
+            "addressCountry": "BR",
+          },
+          ...(municipio.lat && municipio.lon ? {
+            "geo": { "@type": "GeoCoordinates", "latitude": municipio.lat, "longitude": municipio.lon },
+          } : {}),
+        },
+        "temporalCoverage": `${new Date().getFullYear()}/..`,
+        "url": `https://climabr.app/${estado}/${cidade}`,
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": { "@type": "Organization", "name": "ClimaBR.app", "url": "https://climabr.app" },
+        "distribution": {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": `https://climabr.app/api/${estado}/${cidade}.json`,
+        },
+        ...(dados?.atualizado_em ? { "dateModified": dados.atualizado_em } : {}),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ClimaBR.app", "item": "https://climabr.app" },
+          { "@type": "ListItem", "position": 2, "name": municipio.estado_nome, "item": `https://climabr.app/#${municipio.estado}` },
+          { "@type": "ListItem", "position": 3, "name": municipio.nome, "item": `https://climabr.app/${estado}/${cidade}` },
+        ],
+      },
+    ],
   })} />
 </PainelLayout>

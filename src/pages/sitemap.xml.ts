@@ -8,7 +8,8 @@ const HOJE = new Date().toISOString().split('T')[0];
 
 export const GET: APIRoute = () => {
   const urls: string[] = [
-    `  <url><loc>${SITE}/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>`,
+    `  <url><loc>${SITE}/</loc><changefreq>daily</changefreq><priority>1.0</priority><lastmod>${HOJE}</lastmod></url>`,
+    `  <url><loc>${SITE}/curl</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>`,
     ...municipios.map(
       (m) =>
         `  <url><loc>${SITE}/${m.estado}/${m.slug}</loc><changefreq>hourly</changefreq><priority>0.8</priority><lastmod>${HOJE}</lastmod></url>`

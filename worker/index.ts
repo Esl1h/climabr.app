@@ -415,9 +415,19 @@ function formatarPrometheus(dados: Dados): string {
 // Formato SVG (card compartilhável)
 // ---------------------------------------------------------------------------
 
+// Escapa entidades XML — defesa em profundidade contra injeção no SVG
+function xmlEsc(s: unknown): string {
+  return String(s ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 function formatarSvg(dados: Dados): string {
-  const cidade = dados.cidade as string || '';
-  const uf = (dados.estado as string || '').toUpperCase();
+  const cidade = xmlEsc(dados.cidade as string || '');
+  const uf = xmlEsc((dados.estado as string || '').toUpperCase());
   const agora = dados.atualizado_em
     ? new Date(dados.atualizado_em as string).toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', year: 'numeric' })
     : '';
@@ -443,10 +453,10 @@ function formatarSvg(dados: Dados): string {
   const rows: string[] = [];
   let y = 110;
   const addRow = (icon: string, label: string, valor: string, cor: string, sub = '') => {
-    rows.push(`<text x="24" y="${y}" font-size="16">${icon}</text>`);
-    rows.push(`<text x="48" y="${y}" fill="#94a3b8" font-size="12" font-family="monospace">${label}</text>`);
-    rows.push(`<text x="180" y="${y}" fill="${cor}" font-size="14" font-weight="bold" font-family="monospace">${valor}</text>`);
-    if (sub) rows.push(`<text x="180" y="${y + 14}" fill="#64748b" font-size="11" font-family="monospace">${sub}</text>`);
+    rows.push(`<text x="24" y="${y}" font-size="16">${xmlEsc(icon)}</text>`);
+    rows.push(`<text x="48" y="${y}" fill="#94a3b8" font-size="12" font-family="monospace">${xmlEsc(label)}</text>`);
+    rows.push(`<text x="180" y="${y}" fill="${cor}" font-size="14" font-weight="bold" font-family="monospace">${xmlEsc(valor)}</text>`);
+    if (sub) rows.push(`<text x="180" y="${y + 14}" fill="#64748b" font-size="11" font-family="monospace">${xmlEsc(sub)}</text>`);
     y += sub ? 36 : 26;
   };
 
@@ -482,7 +492,7 @@ function formatarSvg(dados: Dados): string {
   <text x="24" y="38" fill="white" font-size="22" font-weight="bold" font-family="system-ui,sans-serif">${cidade}</text>
   <text x="24" y="58" fill="#64748b" font-size="13" font-family="monospace">/${uf}${temp != null ? `  ·  ${temp}°C agora` : ''}  ·  ${agora}</text>
   <line x1="24" y1="72" x2="456" y2="72" stroke="#1e293b" stroke-width="1"/>
-  <text x="24" y="90" fill="#334155" font-size="10" font-family="monospace">climabr.app/${(dados.estado as string || '').toLowerCase()}/${dados.slug}</text>
+  <text x="24" y="90" fill="#334155" font-size="10" font-family="monospace">climabr.app/${xmlEsc((dados.estado as string || '').toLowerCase())}/${xmlEsc(dados.slug)}</text>
   ${rows.join('\n  ')}
   <text x="24" y="${altura - 12}" fill="#1e293b" font-size="10" font-family="monospace">climabr.app · dados abertos · ${agora}</text>
 </svg>`;

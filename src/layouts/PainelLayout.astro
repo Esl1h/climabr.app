@@ -6,6 +6,7 @@ interface Props {
   description?: string;
   cidade?: string;
   estado?: string;
+  slug?: string;
   ogImage?: string;
 }
 
@@ -14,11 +15,16 @@ const {
   description = 'Painel ambiental brasileiro por cidade — qualidade do ar, água, clima e alertas.',
   cidade,
   estado,
+  slug,
   ogImage,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, 'https://climabr.app').href;
-const ogTitle = cidade && estado ? `${cidade}/${estado.toUpperCase()} — climabr` : title;
+const ogTitle = cidade && estado ? `${cidade}/${estado.toUpperCase()} — ClimaBR.app` : title;
+
+// Em páginas de cidade: card SVG como imagem social e link para o JSON
+const cardImage = ogImage ?? (estado && slug ? `https://climabr.app/${estado}/${slug}.svg` : undefined);
+const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.json` : undefined;
 ---
 
 <!doctype html>
@@ -30,20 +36,29 @@ const ogTitle = cidade && estado ? `${cidade}/${estado.toUpperCase()} — climab
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
 
-    <!-- AI crawlers -->
-    <meta name="robots" content="index, follow" />
-    <meta name="GPTBot" content="index" />
-    <meta name="ClaudeBot" content="index" />
-    <meta name="PerplexityBot" content="index" />
-    <meta name="CCBot" content="index" />
+    <!-- Crawlers (web + AI) -->
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Acesso programático e AI-first -->
+    {jsonHref && <link rel="alternate" type="application/json" href={jsonHref} title="Dados em JSON" />}
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:site_name" content="climabr.app" />
-    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta property="og:site_name" content="ClimaBR.app" />
+    <meta property="og:locale" content="pt_BR" />
+    {cardImage && <meta property="og:image" content={cardImage} />}
+    {cardImage && <meta property="og:image:type" content="image/svg+xml" />}
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content={cardImage ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={description} />
+    {cardImage && <meta name="twitter:image" content={cardImage} />}
 
     <!-- PWA / theme -->
     <meta name="theme-color" content="#0f172a" />
