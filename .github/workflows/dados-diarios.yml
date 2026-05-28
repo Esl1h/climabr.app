@@ -1,0 +1,39 @@
+name: Coleta dados diários (SABESP + futuros)
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Coleta SABESP mananciais
+        run: python3 scripts/scrape-sabesp.py
+
+      - name: Upload para R2
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: r2 object put climabr-dados --recursive --local-path=data/cidades/sp/
+        continue-on-error: true
+
+      - name: Commit dados locais (fallback)
+        if: always()
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'dados: SABESP mananciais atualizados'
+          file_pattern: 'data/cidades/sp/*.json'
+          push_options: '--force-with-lease'
+        continue-on-error: true
