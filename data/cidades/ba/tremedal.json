@@ -4,34 +4,45 @@
   "slug": "tremedal",
   "latitude": -15.0536,
   "longitude": -41.472,
-  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
+  "atualizado_em": "2026-05-28T18:06:33.098878-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
       "min": 18.0,
-      "max": 27.2,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.2,
-      "uv": 6.1,
+      "max": 27.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.2,
       "nascer_sol": "06:03",
       "por_sol": "17:22"
     },
     {
       "data": "2026-05-29",
-      "min": 17.9,
-      "max": 26.2,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 3.5,
+      "min": 18.0,
+      "max": 26.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 4.7,
       "nascer_sol": "06:04",
       "por_sol": "17:22"
     },
     {
       "data": "2026-05-30",
-      "min": 17.7,
-      "max": 24.6,
+      "min": 17.5,
+      "max": 23.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 6.0,
+      "nascer_sol": "06:04",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-05-31",
+      "min": 16.7,
+      "max": 26.1,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
@@ -40,46 +51,35 @@
       "por_sol": "17:22"
     },
     {
-      "data": "2026-05-31",
-      "min": 16.8,
-      "max": 26.8,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 5.6,
-      "nascer_sol": "06:04",
-      "por_sol": "17:22"
-    },
-    {
       "data": "2026-06-01",
-      "min": 14.9,
-      "max": 27.8,
+      "min": 16.4,
+      "max": 27.5,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 6.1,
+      "uv": 5.8,
       "nascer_sol": "06:05",
       "por_sol": "17:22"
     },
     {
       "data": "2026-06-02",
-      "min": 17.0,
-      "max": 27.0,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.6,
-      "uv": 5.6,
+      "min": 17.2,
+      "max": 26.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.1,
       "nascer_sol": "06:05",
       "por_sol": "17:22"
     },
     {
       "data": "2026-06-03",
-      "min": 17.8,
-      "max": 25.0,
+      "min": 17.9,
+      "max": 25.5,
       "condicao": "Chuvisco leve",
       "condicao_codigo": 51,
-      "chuva_mm": 0.6,
-      "uv": 6.1,
+      "chuva_mm": 1.5,
+      "uv": 5.6,
       "nascer_sol": "06:05",
       "por_sol": "17:22"
     }
@@ -90,22 +90,22 @@
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
   },
   "uv": {
-    "indice": 6.1,
+    "indice": 6.2,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 20,
+    "indice": 23,
     "categoria": "Boa",
-    "principal_poluente": "PM10",
-    "pm25": 1.4,
-    "pm10": 2.1,
-    "no2": 0.2,
-    "o3": 54.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 2.0,
+    "pm10": 2.8,
+    "no2": 1.3,
+    "o3": 42.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+    "atualizado_em": "2026-05-28T18:06:33.098878-03:00"
   },
   "sol": {
     "nascer": "06:03",
@@ -121,5 +121,14 @@
     "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 26.7
+  "temperatura_atual": 22.4,
+  "vento": {
+    "velocidade_kmh": 11.6,
+    "direcao_graus": 98,
+    "direcao": "E",
+    "max_kmh": 15.8,
+    "rajada_kmh": 33.1,
+    "direcao_dominante": "ESE",
+    "fonte": "Open-Meteo"
+  }
 }

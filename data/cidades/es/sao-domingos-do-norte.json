@@ -4,12 +4,34 @@
   "slug": "sao-domingos-do-norte",
   "latitude": -19.1224,
   "longitude": -40.5667,
-  "atualizado_em": "2026-05-28T13:36:28.572076-03:00",
+  "atualizado_em": "2026-05-28T18:06:33.098878-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
       "min": 19.6,
-      "max": 27.4,
+      "max": 27.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 5.8,
+      "nascer_sol": "06:07",
+      "por_sol": "17:11"
+    },
+    {
+      "data": "2026-05-29",
+      "min": 18.5,
+      "max": 27.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.2,
+      "nascer_sol": "06:07",
+      "por_sol": "17:11"
+    },
+    {
+      "data": "2026-05-30",
+      "min": 18.4,
+      "max": 25.1,
       "condicao": "Chuvisco leve",
       "condicao_codigo": 51,
       "chuva_mm": 0.1,
@@ -18,31 +40,9 @@
       "por_sol": "17:11"
     },
     {
-      "data": "2026-05-29",
-      "min": 19.1,
-      "max": 27.4,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.2,
-      "uv": 5.1,
-      "nascer_sol": "06:07",
-      "por_sol": "17:11"
-    },
-    {
-      "data": "2026-05-30",
-      "min": 18.8,
-      "max": 25.3,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.2,
-      "uv": 5.7,
-      "nascer_sol": "06:07",
-      "por_sol": "17:11"
-    },
-    {
       "data": "2026-05-31",
-      "min": 16.1,
-      "max": 27.2,
+      "min": 16.3,
+      "max": 27.0,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
@@ -52,10 +52,10 @@
     },
     {
       "data": "2026-06-01",
-      "min": 16.4,
-      "max": 27.8,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "min": 16.5,
+      "max": 27.7,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
       "uv": 5.8,
       "nascer_sol": "06:08",
@@ -63,22 +63,22 @@
     },
     {
       "data": "2026-06-02",
-      "min": 17.5,
-      "max": 26.8,
-      "condicao": "Chuva leve",
-      "condicao_codigo": 61,
-      "chuva_mm": 7.2,
+      "min": 17.0,
+      "max": 27.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.4,
       "uv": 5.0,
       "nascer_sol": "06:09",
       "por_sol": "17:11"
     },
     {
       "data": "2026-06-03",
-      "min": 16.6,
-      "max": 24.2,
+      "min": 15.9,
+      "max": 22.9,
       "condicao": "Chuvisco leve",
       "condicao_codigo": 51,
-      "chuva_mm": 2.4,
+      "chuva_mm": 3.0,
       "uv": 5.2,
       "nascer_sol": "06:09",
       "por_sol": "17:11"
@@ -101,22 +101,22 @@
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
   },
   "uv": {
-    "indice": 5.5,
+    "indice": 5.8,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 35,
+    "indice": 43,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 10.6,
-    "pm10": 12.5,
-    "no2": 0.8,
-    "o3": 99.0,
+    "pm25": 9.5,
+    "pm10": 12.0,
+    "no2": 4.7,
+    "o3": 75.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+    "atualizado_em": "2026-05-28T18:06:33.098878-03:00"
   },
   "sol": {
     "nascer": "06:07",
@@ -132,5 +132,14 @@
     "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 27.2
+  "temperatura_atual": 22.9,
+  "vento": {
+    "velocidade_kmh": 12.3,
+    "direcao_graus": 104,
+    "direcao": "ESE",
+    "max_kmh": 13.5,
+    "rajada_kmh": 25.2,
+    "direcao_dominante": "SE",
+    "fonte": "Open-Meteo"
+  }
 }

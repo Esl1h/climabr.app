@@ -27,8 +27,8 @@ MUNICIPIOS = Path(__file__).parent.parent / "data" / "municipios.json"
 FORECAST_URL = "https://api.open-meteo.com/v1/forecast"
 AQ_URL = "https://air-quality-api.open-meteo.com/v1/air-quality"
 
-BATCH_SIZE = 25   # Open-Meteo aceita até ~100 por requisição
-DELAY_BATCH = 3.0  # segundos entre lotes (evita rate limit 429)
+BATCH_SIZE = 20   # Open-Meteo aceita até ~100 por requisição
+DELAY_BATCH = 5.0  # segundos entre lotes (evita rate limit 429)
 
 # WMO Weather Codes → descrição PT-BR
 WMO_DESCRICAO: dict[int, str] = {
@@ -252,7 +252,8 @@ def main():
             return False
         try:
             d = json.loads(f.read_text(encoding="utf-8"))
-            return d.get("uv") is not None and d["uv"].get("indice") is not None
+            # Pula só se já tiver vento (campo novo desta versão)
+            return d.get("vento") is not None
         except Exception:
             return False
 
