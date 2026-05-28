@@ -1,0 +1,49 @@
+name: Coleta CPTEC/INMET (a cada 3h)
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+    inputs:
+      estado:
+        description: 'Estado para coletar (ex: sp). Deixe vazio para todos.'
+        required: false
+        default: ''
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Coleta previsão CPTEC
+        run: |
+          if [ -n "${{ github.event.inputs.estado }}" ]; then
+            python3 scripts/scrape-inmet.py ${{ github.event.inputs.estado }}
+          else
+            python3 scripts/scrape-inmet.py
+          fi
+
+      - name: Upload para R2
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: r2 object put climabr-dados --recursive --local-path=data/cidades/
+        continue-on-error: true  # não quebra se R2 não estiver configurado ainda
+
+      - name: Commit dados locais (fallback sem R2)
+        if: always()
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'dados: previsão CPTEC atualizada'
+          file_pattern: 'data/cidades/**/*.json'
+          push_options: '--force-with-lease'
+        continue-on-error: true

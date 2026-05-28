@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "climabr",
+  "name_for_model": "climabr",
+  "description_for_human": "Dados ambientais brasileiros por cidade — qualidade do ar, água, clima e alertas.",
+  "description_for_model": "Consulta qualidade do ar (IQAr), qualidade da água, nível de reservatórios, focos de queimada, alertas epidemiológicos, índice UV, bandeira tarifária e previsão meteorológica para qualquer um dos 5.571 municípios brasileiros. Use estado em minúsculas (ex: sp, rj) e cidade em slug (ex: sao-paulo, rio-de-janeiro).",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://climabr.app/openapi.json"
+  },
+  "logo_url": "https://climabr.app/icon-192.png",
+  "contact_email": "contato@climabr.app",
+  "legal_info_url": "https://climabr.app/sobre"
+}

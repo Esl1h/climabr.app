@@ -1,0 +1,134 @@
+---
+import PainelLayout from '../layouts/PainelLayout.astro';
+import municipiosRaw from '../../data/municipios.json';
+
+type Municipio = { id: number; nome: string; slug: string; estado: string; estado_nome: string };
+const municipios = municipiosRaw as Municipio[];
+
+const porEstado = municipios.reduce<Record<string, { nome: string; cidades: Municipio[] }>>(
+  (acc, m) => {
+    if (!acc[m.estado]) acc[m.estado] = { nome: m.estado_nome, cidades: [] };
+    acc[m.estado].cidades.push(m);
+    return acc;
+  },
+  {}
+);
+
+const estados = Object.entries(porEstado).sort((a, b) => a[1].nome.localeCompare(b[1].nome));
+---
+
+<PainelLayout title="climabr.app — Painel Ambiental Brasileiro">
+  <div class="space-y-8">
+    <div class="text-center space-y-2">
+      <h1 class="text-3xl font-bold">
+        climabr<span class="text-emerald-400">.app</span>
+      </h1>
+      <p class="text-slate-400">Painel ambiental por cidade — qualidade do ar, água, clima e alertas</p>
+    </div>
+
+    <form id="seletor" class="space-y-4" action="" method="get">
+      <div class="space-y-2">
+        <label for="estado" class="block text-sm font-medium text-slate-300">Estado</label>
+        <select
+          id="estado"
+          name="estado"
+          class="w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        >
+          <option value="">Selecione o estado...</option>
+          {estados.map(([uf, { nome }]) => (
+            <option value={uf}>{nome} ({uf.toUpperCase()})</option>
+          ))}
+        </select>
+      </div>
+
+      <div class="space-y-2">
+        <label for="cidade" class="block text-sm font-medium text-slate-300">Cidade</label>
+        <select
+          id="cidade"
+          name="cidade"
+          disabled
+          class="w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-40"
+        >
+          <option value="">Selecione a cidade...</option>
+        </select>
+      </div>
+
+      <button
+        type="submit"
+        id="btn-ir"
+        disabled
+        class="w-full rounded-md bg-emerald-600 px-4 py-2 font-semibold text-white hover:bg-emerald-500 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+      >
+        Ver painel
+      </button>
+    </form>
+
+    <p class="text-center text-xs text-slate-500">
+      Sua cidade é salva localmente — sem conta, sem rastreamento.
+    </p>
+  </div>
+</PainelLayout>
+
+<script define:vars={{ estados }}>
+  const municipiosPorEstado = Object.fromEntries(
+    estados.map(([uf, { cidades }]) => [uf, cidades])
+  );
+
+  const selectEstado = document.getElementById('estado');
+  const selectCidade = document.getElementById('cidade');
+  const btnIr = document.getElementById('btn-ir');
+  const form = document.getElementById('seletor');
+
+  function popularCidades(uf) {
+    selectCidade.innerHTML = '<option value="">Selecione a cidade...</option>';
+    if (!uf) {
+      selectCidade.disabled = true;
+      btnIr.disabled = true;
+      return;
+    }
+    const cidades = municipiosPorEstado[uf] || [];
+    cidades
+      .sort((a, b) => a.nome.localeCompare(b.nome))
+      .forEach(({ slug, nome }) => {
+        const opt = document.createElement('option');
+        opt.value = slug;
+        opt.textContent = nome;
+        selectCidade.appendChild(opt);
+      });
+    selectCidade.disabled = false;
+  }
+
+  selectEstado.addEventListener('change', () => {
+    popularCidades(selectEstado.value);
+    btnIr.disabled = true;
+    localStorage.setItem('climabr_estado', selectEstado.value);
+  });
+
+  selectCidade.addEventListener('change', () => {
+    btnIr.disabled = !selectCidade.value;
+    if (selectCidade.value) {
+      localStorage.setItem('climabr_cidade', selectCidade.value);
+    }
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const uf = selectEstado.value;
+    const cidade = selectCidade.value;
+    if (uf && cidade) {
+      window.location.href = `/${uf}/${cidade}`;
+    }
+  });
+
+  // Restaura seleção anterior
+  const ufSalvo = localStorage.getItem('climabr_estado');
+  const cidadeSalva = localStorage.getItem('climabr_cidade');
+  if (ufSalvo) {
+    selectEstado.value = ufSalvo;
+    popularCidades(ufSalvo);
+    if (cidadeSalva) {
+      selectCidade.value = cidadeSalva;
+      btnIr.disabled = false;
+    }
+  }
+</script>

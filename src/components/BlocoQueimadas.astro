@@ -1,0 +1,39 @@
+---
+import type { DadosCidade } from '../lib/types';
+
+interface Props {
+  queimadas: DadosCidade['queimadas'];
+}
+const { queimadas } = Astro.props;
+
+function nivelRisco(focos: number): { label: string; cor: string } {
+  if (focos === 0) return { label: 'Nenhum foco', cor: 'text-emerald-400' };
+  if (focos <= 5) return { label: 'Baixo', cor: 'text-yellow-400' };
+  if (focos <= 20) return { label: 'Moderado', cor: 'text-orange-400' };
+  return { label: 'Alto', cor: 'text-red-400' };
+}
+---
+
+{queimadas && (
+  <section aria-label="Focos de queimada">
+    <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-slate-200">
+      <span aria-hidden="true">🔥</span> Queimadas
+    </h2>
+    <div class="rounded-lg border border-slate-800 bg-slate-900 p-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class={`text-3xl font-bold ${nivelRisco(queimadas.focos_100km).cor}`}>
+            {queimadas.focos_100km}
+          </p>
+          <p class="text-sm text-slate-400">focos num raio de 100km</p>
+        </div>
+        <div class="text-right">
+          <span class={`text-sm font-medium ${nivelRisco(queimadas.focos_100km).cor}`}>
+            {nivelRisco(queimadas.focos_100km).label}
+          </span>
+          <p class="mt-1 text-xs text-slate-500">Fonte: {queimadas.fonte}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+)}

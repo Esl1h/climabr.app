@@ -1,0 +1,11 @@
+name = "climabr-worker"
+main = "worker/index.ts"
+compatibility_date = "2025-05-28"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+SITE_URL = "https://climabr.app"
+
+[[routes]]
+pattern = "climabr.app/*"
+zone_name = "climabr.app"

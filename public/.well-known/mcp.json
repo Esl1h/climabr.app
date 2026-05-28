@@ -1,0 +1,43 @@
+{
+  "name": "climabr",
+  "description": "Dados ambientais brasileiros por cidade em tempo real",
+  "version": "1.0",
+  "tools": [
+    {
+      "name": "get_dados_ambientais",
+      "description": "Retorna dados ambientais completos de um município brasileiro: qualidade do ar, água, reservatórios, queimadas, UV, dengue, bandeira tarifária e previsão do tempo.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "estado": {
+            "type": "string",
+            "description": "Sigla do estado em minúsculas (ex: sp, rj, mg, rs, ba)"
+          },
+          "cidade": {
+            "type": "string",
+            "description": "Slug do município sem acentos e com hífens (ex: sao-paulo, campinas, porto-alegre)"
+          }
+        },
+        "required": ["estado", "cidade"]
+      },
+      "endpoint": "https://climabr.app/api/{estado}/{cidade}.json",
+      "method": "GET"
+    },
+    {
+      "name": "get_alertas_estado",
+      "description": "Retorna alertas climáticos e epidemiológicos ativos em um estado brasileiro.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "estado": {
+            "type": "string",
+            "description": "Sigla do estado em minúsculas (ex: sp, rj, mg)"
+          }
+        },
+        "required": ["estado"]
+      },
+      "endpoint": "https://climabr.app/api/{estado}/alertas.json",
+      "method": "GET"
+    }
+  ]
+}
