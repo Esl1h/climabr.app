@@ -9,3 +9,6 @@ SITE_URL = "https://climabr.app"
 [[routes]]
 pattern = "climabr.app/*"
 zone_name = "climabr.app"
+
+# Desenvolvimento local: wrangler pages dev dist/ --port 8788
+# O Worker serve os estáticos do dist/ e intercepta curl automaticamente
