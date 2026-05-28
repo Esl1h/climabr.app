@@ -72,9 +72,18 @@ const ogTitle = cidade && estado ? `${cidade}/${estado.toUpperCase()} — climab
 
           <nav
             id="menu-dropdown"
-            class="hidden absolute right-0 top-10 w-44 bg-slate-900 border border-slate-700 rounded-lg shadow-xl z-50 py-1"
+            class="hidden absolute right-0 top-10 w-48 bg-slate-900 border border-slate-700 rounded-lg shadow-xl z-50 py-1"
             role="menu"
           >
+            <a
+              id="menu-telao"
+              href="#"
+              class="hidden items-center gap-2 px-4 py-2.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
+              role="menuitem"
+            >
+              <span class="text-emerald-400 text-xs">📺</span>
+              Modo Telão
+            </a>
             <a
               href="/curl"
               class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
@@ -152,6 +161,15 @@ const ogTitle = cidade && estado ? `${cidade}/${estado.toUpperCase()} — climab
           bar3?.classList.remove('-rotate-45', '-translate-y-2');
         }
       });
+
+      // Modo Telão: só aparece em páginas de cidade (/uf/slug)
+      const telaoLink = document.getElementById('menu-telao');
+      const m = location.pathname.match(/^\/([a-z]{2})\/([a-z0-9-]+)\/?$/);
+      if (telaoLink && m) {
+        telaoLink.setAttribute('href', `/${m[1]}/${m[2]}/telao`);
+        telaoLink.classList.remove('hidden');
+        telaoLink.classList.add('flex');
+      }
     </script>
   </body>
 </html>

@@ -1,0 +1,360 @@
+---
+import '../../../styles/global.css';
+import municipiosRaw from '../../../../data/municipios.json';
+import type { Municipio, DadosCidade } from '../../../lib/types';
+
+export async function getStaticPaths() {
+  const municipios = municipiosRaw as Municipio[];
+  return municipios.map((m) => ({
+    params: { estado: m.estado, cidade: m.slug },
+    props: { municipio: m },
+  }));
+}
+
+interface Props {
+  municipio: Municipio;
+}
+
+const { municipio } = Astro.props;
+const { estado, cidade } = Astro.params;
+
+let dados: DadosCidade | null = null;
+try {
+  const fs = await import('node:fs/promises');
+  const path = await import('node:path');
+  const filePath = path.join(process.cwd(), 'data', 'cidades', estado!, `${cidade}.json`);
+  dados = JSON.parse(await fs.readFile(filePath, 'utf-8')) as DadosCidade;
+} catch {
+  // sem dados
+}
+
+const TEMPO_EMOJI: Record<number, string> = {
+  0: '☀️', 1: '🌤', 2: '⛅', 3: '☁️', 45: '🌫', 48: '🌫',
+  51: '🌦', 53: '🌦', 55: '🌧', 61: '🌧', 63: '🌧', 65: '🌧',
+  71: '❄️', 73: '❄️', 75: '❄️', 77: '🌨', 80: '🌦', 81: '🌦',
+  82: '⛈', 95: '⛈', 96: '⛈', 99: '⛈',
+};
+const LUA_EMOJI: Record<string, string> = {
+  'Nova': '🌑', 'Crescente': '🌒', 'Quarto Crescente': '🌓', 'Gibosa Crescente': '🌔',
+  'Cheia': '🌕', 'Gibosa Minguante': '🌖', 'Quarto Minguante': '🌗', 'Minguante': '🌘',
+};
+
+function corAqi(i: number) { return i <= 50 ? '#34d399' : i <= 100 ? '#fbbf24' : i <= 150 ? '#fb923c' : '#f87171'; }
+function corUv(i: number) { return i < 3 ? '#34d399' : i < 6 ? '#fbbf24' : i < 8 ? '#fb923c' : i < 11 ? '#f87171' : '#a78bfa'; }
+function corNivel(p: number) { return p >= 70 ? '#34d399' : p >= 40 ? '#fbbf24' : '#f87171'; }
+function corVento(v: number) { return v < 20 ? '#34d399' : v < 40 ? '#fbbf24' : v < 60 ? '#fb923c' : '#f87171'; }
+function corDengue(n: number) { return ['#34d399','#fbbf24','#fb923c','#f87171','#ef4444'][n] ?? '#94a3b8'; }
+function corFocos(f: number) { return f === 0 ? '#34d399' : f <= 5 ? '#fbbf24' : f <= 20 ? '#fb923c' : '#f87171'; }
+
+const previsao = dados?.previsao ?? [];
+const hoje = previsao[0];
+const ar = dados?.qualidade_ar;
+const uv = dados?.uv;
+const vento = dados?.vento;
+const ondas = dados?.ondas;
+const res = dados?.reservatorio;
+const q = dados?.queimadas;
+const dengue = dados?.dengue;
+const sol = dados?.sol;
+const lua = dados?.lua;
+
+const SURF_COR: Record<string, string> = {
+  bom: '#34d399', razoavel: '#fbbf24', ruim: '#f87171', perigoso: '#ef4444', desconhecido: '#94a3b8',
+};
+
+const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Telão — climabr.app`;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{titulo}</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      :root { --gap: clamp(0.5rem, 1.2vmin, 1.5rem); }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; height: 100%; background: #020617; }
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        color: #e2e8f0;
+        overflow: hidden;
+      }
+      .telao {
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        padding: var(--gap);
+        gap: var(--gap);
+      }
+      .topo {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: var(--gap);
+        border-bottom: 2px solid #1e293b;
+        padding-bottom: var(--gap);
+      }
+      .cidade-nome { font-size: clamp(1.8rem, 5.5vmin, 6rem); font-weight: 800; line-height: 1; }
+      .cidade-uf { color: #64748b; font-weight: 400; font-size: 0.5em; }
+      .temp-atual { font-size: clamp(1.5rem, 5vmin, 5.5rem); font-weight: 800; color: #38bdf8; line-height: 1; }
+      .topo-meta { text-align: right; }
+      .relogio { font-size: clamp(1rem, 2.5vmin, 2.5rem); font-weight: 700; color: #cbd5e1; font-variant-numeric: tabular-nums; }
+      .data-hoje { font-size: clamp(0.7rem, 1.4vmin, 1.3rem); color: #64748b; }
+
+      .grid {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 18vmin), 1fr));
+        grid-auto-rows: 1fr;
+        gap: var(--gap);
+        min-height: 0;
+      }
+      .card {
+        background: linear-gradient(145deg, #0f172a, #1e293b);
+        border: 1px solid #1e293b;
+        border-radius: clamp(0.5rem, 1.2vmin, 1.5rem);
+        padding: clamp(0.6rem, 1.6vmin, 2rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        min-height: 0;
+      }
+      .card-wide { grid-column: span 2; }
+      .card-titulo {
+        font-size: clamp(0.65rem, 1.4vmin, 1.4rem);
+        color: #94a3b8;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        display: flex; align-items: center; gap: 0.4em;
+        margin-bottom: 0.3em;
+      }
+      .card-valor { font-size: clamp(1.3rem, 4vmin, 4.5rem); font-weight: 800; line-height: 1; }
+      .card-sub { font-size: clamp(0.6rem, 1.3vmin, 1.3rem); color: #64748b; margin-top: 0.3em; }
+      .card-ico { font-size: clamp(1rem, 2.2vmin, 2.5rem); }
+
+      .prev-dias { display: flex; gap: clamp(0.3rem, 0.8vmin, 1rem); justify-content: space-between; margin-top: auto; }
+      .prev-dia { text-align: center; flex: 1; }
+      .prev-dia .d { font-size: clamp(0.55rem, 1.1vmin, 1.1rem); color: #64748b; text-transform: capitalize; }
+      .prev-dia .e { font-size: clamp(1rem, 2.4vmin, 2.6rem); }
+      .prev-dia .t { font-size: clamp(0.6rem, 1.3vmin, 1.4rem); font-weight: 700; }
+
+      .barra { height: clamp(0.3rem, 0.8vmin, 0.8rem); background: #334155; border-radius: 99px; overflow: hidden; margin-top: 0.5em; }
+      .barra > div { height: 100%; border-radius: 99px; }
+
+      .sair {
+        position: fixed; top: var(--gap); right: var(--gap);
+        z-index: 10; opacity: 0.25; transition: opacity 0.2s;
+        display: flex; gap: 0.5rem;
+      }
+      .sair:hover { opacity: 1; }
+      .sair button, .sair a {
+        background: #1e293b; color: #cbd5e1; border: 1px solid #334155;
+        border-radius: 0.5rem; padding: 0.4rem 0.7rem; font-size: 0.85rem;
+        cursor: pointer; text-decoration: none; font-family: inherit;
+      }
+      .sair button:hover, .sair a:hover { background: #334155; }
+
+      .duo { display: flex; gap: 1em; align-items: baseline; }
+      .duo .lbl { font-size: clamp(0.55rem, 1.1vmin, 1.1rem); color: #64748b; }
+    </style>
+  </head>
+  <body>
+    <div class="sair">
+      <button id="fs-btn" title="Tela cheia">⛶ Tela cheia</button>
+      <a href={`/${estado}/${cidade}`} title="Sair">✕</a>
+    </div>
+
+    <div class="telao">
+      <!-- Cabeçalho -->
+      <div class="topo">
+        <div>
+          <div class="cidade-nome">
+            {municipio.nome}<span class="cidade-uf">/{municipio.estado.toUpperCase()}</span>
+          </div>
+          {hoje && (
+            <div class="card-sub" style="font-size: clamp(0.8rem, 1.8vmin, 1.8rem); margin-top: 0.3em;">
+              {TEMPO_EMOJI[hoje.condicao_codigo as number] ?? '⛅'} {hoje.condicao}
+            </div>
+          )}
+        </div>
+        <div style="display:flex; align-items:baseline; gap: var(--gap);">
+          {dados?.temperatura_atual != null && (
+            <div class="temp-atual">{dados.temperatura_atual}°</div>
+          )}
+          <div class="topo-meta">
+            <div class="relogio" id="relogio">--:--:--</div>
+            <div class="data-hoje" id="data-hoje"></div>
+            <div class="data-hoje">
+              <span style="color:#10b981; font-weight:700;">Clima<span style="color:#3b82f6;">BR</span><span style="color:#eab308;">.app</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid de cards -->
+      <div class="grid">
+        <!-- Previsão (largo) -->
+        {previsao.length > 0 && (
+          <div class="card card-wide">
+            <div class="card-titulo"><span class="card-ico">⛅</span> Previsão</div>
+            {hoje && (
+              <div class="duo" style="margin-bottom:0.3em;">
+                <span class="card-valor" style="color:#f87171;">{Math.round(hoje.max)}°</span>
+                <span class="card-valor" style="color:#38bdf8; font-size:clamp(1rem,2.8vmin,3rem);">{Math.round(hoje.min)}°</span>
+                {hoje.chuva_mm > 0 && <span class="card-sub">💧{hoje.chuva_mm}mm</span>}
+              </div>
+            )}
+            <div class="prev-dias">
+              {previsao.slice(1, 7).map((d) => {
+                const data = new Date((d.data as string) + 'T12:00:00');
+                const dia = data.toLocaleDateString('pt-BR', { weekday: 'short' }).slice(0, 3);
+                return (
+                  <div class="prev-dia">
+                    <div class="d">{dia}</div>
+                    <div class="e">{TEMPO_EMOJI[d.condicao_codigo as number] ?? '⛅'}</div>
+                    <div class="t" style="color:#f87171;">{Math.round(d.max)}°</div>
+                    <div class="t" style="color:#64748b;">{Math.round(d.min)}°</div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        <!-- Qualidade do ar -->
+        {ar && (
+          <div class="card">
+            <div class="card-titulo"><span class="card-ico">💨</span> Ar</div>
+            <div class="card-valor" style={`color:${corAqi(ar.indice)}`}>{ar.indice}</div>
+            <div class="card-sub">AQI · {ar.categoria}</div>
+            <div class="barra"><div style={`width:${Math.min(100, ar.indice / 3)}%; background:${corAqi(ar.indice)}`}></div></div>
+          </div>
+        )}
+
+        <!-- UV -->
+        {uv && uv.indice > 0 && (
+          <div class="card">
+            <div class="card-titulo"><span class="card-ico">☀️</span> UV</div>
+            <div class="card-valor" style={`color:${corUv(uv.indice)}`}>{uv.indice.toFixed(1)}</div>
+            <div class="card-sub">{uv.categoria}</div>
+            <div class="barra"><div style={`width:${Math.min(100, (uv.indice / 12) * 100)}%; background:${corUv(uv.indice)}`}></div></div>
+          </div>
+        )}
+
+        <!-- Vento -->
+        {vento && (vento.velocidade_kmh != null || vento.max_kmh != null) && (
+          <div class="card">
+            <div class="card-titulo"><span class="card-ico">🌬️</span> Vento</div>
+            <div class="card-valor" style={`color:${corVento(vento.velocidade_kmh ?? vento.max_kmh ?? 0)}`}>
+              {vento.velocidade_kmh ?? vento.max_kmh}<span style="font-size:0.35em;"> km/h</span>
+            </div>
+            <div class="card-sub">
+              {vento.direcao ? `de ${vento.direcao}` : ''}{vento.rajada_kmh ? ` · rajada ${vento.rajada_kmh}` : ''}
+            </div>
+          </div>
+        )}
+
+        <!-- Ondas / Surf -->
+        {ondas && (
+          <div class="card">
+            <div class="card-titulo"><span class="card-ico">🏄</span> Ondas</div>
+            <div class="duo">
+              <span class="card-valor" style="color:#38bdf8;">{(ondas.altura_m ?? ondas.altura_max_m ?? 0).toFixed(1)}<span style="font-size:0.35em;">m</span></span>
+              {ondas.periodo_s != null && <span class="card-sub">{ondas.periodo_s.toFixed(0)}s</span>}
+            </div>
+            <div class="card-sub" style={`color:${SURF_COR[ondas.surf_nivel] ?? '#94a3b8'}; font-weight:700; margin-top:0.4em;`}>
+              {ondas.surf_emoji} {ondas.surf_descricao}
+            </div>
+          </div>
+        )}
+
+        <!-- Reservatório -->
+        {res && res.nivel_pct != null && (
+          <div class="card">
+            <div class="card-titulo"><span class="card-ico">🌊</span> Represa</div>
+            <div class="card-valor" style={`color:${corNivel(res.nivel_pct)}`}>{res.nivel_pct.toFixed(0)}<span style="font-size:0.4em;">%</span></div>
+            <div class="card-sub">{res.nome}{res.aproximado ? ' (aprox.)' : ''}</div>
+            <div class="barra"><div style={`width:${Math.min(100, res.nivel_pct)}%; background:${corNivel(res.nivel_pct)}`}></div></div>
+          </div>
+        )}
+
+        <!-- Queimadas -->
+        {q && (
+          <div class="card">
+            <div class="card-titulo"><span class="card-ico">🔥</span> Queimadas</div>
+            <div class="card-valor" style={`color:${corFocos(q.focos_100km)}`}>{q.focos_100km}</div>
+            <div class="card-sub">focos · raio 100km</div>
+          </div>
+        )}
+
+        <!-- Dengue -->
+        {dengue && dengue.nivel_alerta != null && (
+          <div class="card">
+            <div class="card-titulo"><span class="card-ico">🦟</span> Dengue</div>
+            <div class="card-valor" style={`color:${corDengue(dengue.nivel_alerta)}; font-size:clamp(1rem,3vmin,3.2rem);`}>
+              {dengue.nivel_label ?? `Nível ${dengue.nivel_alerta}`}
+            </div>
+            <div class="card-sub">{dengue.casos_semana} casos/semana</div>
+          </div>
+        )}
+
+        <!-- Sol / Lua -->
+        {(sol || lua) && (
+          <div class="card">
+            <div class="card-titulo"><span class="card-ico">🌅</span> Sol / Lua</div>
+            {sol && (
+              <div class="card-sub" style="font-size:clamp(0.7rem,1.6vmin,1.6rem); color:#cbd5e1;">
+                <span style="color:#fbbf24;">↑{sol.nascer}</span> <span style="color:#fb923c;">↓{sol.por}</span>
+              </div>
+            )}
+            {lua && (
+              <div style="margin-top:auto;">
+                <span style="font-size:clamp(1.4rem,3.5vmin,3.5rem);">{LUA_EMOJI[lua.nome] ?? '🌙'}</span>
+                <div class="card-sub">{lua.nome} · {lua.iluminacao_pct}%</div>
+              </div>
+            )}
+            {sol?.estacao && <div class="card-sub">{sol.estacao}</div>}
+          </div>
+        )}
+      </div>
+    </div>
+
+    <script>
+      // Relógio em tempo real
+      function tick() {
+        const agora = new Date();
+        const rel = document.getElementById('relogio');
+        const dh = document.getElementById('data-hoje');
+        if (rel) rel.textContent = agora.toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+        if (dh) dh.textContent = agora.toLocaleDateString('pt-BR', {
+          timeZone: 'America/Sao_Paulo', weekday: 'long', day: '2-digit', month: 'long',
+        });
+      }
+      tick();
+      setInterval(tick, 1000);
+
+      // Botão tela cheia
+      const fsBtn = document.getElementById('fs-btn');
+      fsBtn?.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen?.();
+        } else {
+          document.exitFullscreen?.();
+        }
+      });
+
+      // Atalho: F entra/sai fullscreen, Esc volta
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'f' || e.key === 'F') fsBtn?.click();
+      });
+
+      // Recarrega a cada 10 min para manter dados frescos no telão
+      setTimeout(() => location.reload(), 10 * 60 * 1000);
+    </script>
+  </body>
+</html>
