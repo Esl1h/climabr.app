@@ -7,6 +7,8 @@ import BlocoAr from '../../components/BlocoAr.astro';
 import BlocoUV from '../../components/BlocoUV.astro';
 import BlocoDengue from '../../components/BlocoDengue.astro';
 import BlocoSol from '../../components/BlocoSol.astro';
+import BlocoVento from '../../components/BlocoVento.astro';
+import BlocoOndas from '../../components/BlocoOndas.astro';
 import municipiosRaw from '../../../data/municipios.json';
 import type { Municipio, DadosCidade } from '../../lib/types';
 
@@ -108,6 +110,8 @@ const temDados = dados && (
       <BlocoAr qualidade_ar={dados!.qualidade_ar} />
       <BlocoUV uv={dados!.uv} />
       <BlocoReservatorio reservatorio={dados!.reservatorio} />
+      <BlocoVento vento={dados!.vento} />
+      <BlocoOndas ondas={dados!.ondas} />
       <BlocoQueimadas queimadas={dados!.queimadas} />
       <BlocoDengue
         dengue={dados!.dengue}

@@ -105,10 +105,11 @@ def fetch_batch(lats: list[float], lons: list[float]) -> tuple[list[dict], list[
     lat_str = ",".join(str(round(x, 4)) for x in lats)
     lon_str = ",".join(str(round(x, 4)) for x in lons)
 
-    # Previsão + UV + sun
+    # Previsão + UV + sun + vento
     url_fc = (f"{FORECAST_URL}?latitude={lat_str}&longitude={lon_str}"
               "&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,"
-              "uv_index_max,weathercode,sunrise,sunset,daylight_duration"
+              "uv_index_max,weathercode,sunrise,sunset,daylight_duration,"
+              "windspeed_10m_max,winddirection_10m_dominant,windgusts_10m_max"
               "&current_weather=true"
               "&timezone=America%2FSao_Paulo&forecast_days=7")
 
@@ -204,12 +205,34 @@ def processar_cidade(fc: dict, aq: dict, municipio: dict, agora: str, hoje: date
     lua_dict = fase_lua(hoje)
     lua_dict["fonte"] = "Cálculo astronômico"
 
+    # Vento atual e máximo do dia
+    vento_max = daily.get("windspeed_10m_max", [None])[0]
+    vento_rajada = daily.get("windgusts_10m_max", [None])[0]
+    vento_direcao_dom = daily.get("winddirection_10m_dominant", [None])[0]
+    vento_atual_kmh = current.get("windspeed") if current else None
+    vento_atual_dir = current.get("winddirection") if current else None
+
+    def graus_para_cardinal(g: float) -> str:
+        dirs = ["N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSO","SO","OSO","O","ONO","NO","NNO"]
+        return dirs[round(g / 22.5) % 16]
+
+    vento_dict = {
+        "velocidade_kmh": round(float(vento_atual_kmh), 1) if vento_atual_kmh is not None else None,
+        "direcao_graus": int(vento_atual_dir) if vento_atual_dir is not None else None,
+        "direcao": graus_para_cardinal(float(vento_atual_dir)) if vento_atual_dir is not None else None,
+        "max_kmh": round(float(vento_max), 1) if vento_max is not None else None,
+        "rajada_kmh": round(float(vento_rajada), 1) if vento_rajada is not None else None,
+        "direcao_dominante": graus_para_cardinal(float(vento_direcao_dom)) if vento_direcao_dom is not None else None,
+        "fonte": "Open-Meteo",
+    }
+
     return {
         "previsao": previsao,
         "uv": uv_dict,
         "qualidade_ar": ar_dict,
         "sol": sol_dict,
         "lua": lua_dict,
+        "vento": vento_dict,
         "temperatura_atual": round(float(current.get("temperature", 0) or 0), 1) if current else None,
     }
 

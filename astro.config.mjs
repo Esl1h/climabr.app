@@ -9,8 +9,8 @@ import react from '@astrojs/react';
 function txtUtf8Plugin() {
   return {
     name: 'txt-utf8-charset',
-    configureServer(server) {
-      server.middlewares.use((req, res, next) => {
+    configureServer(/** @type {any} */ server) {
+      server.middlewares.use((/** @type {any} */ req, /** @type {any} */ res, /** @type {any} */ next) => {
         if (req.url?.endsWith('.txt')) {
           res.setHeader('Content-Type', 'text/plain; charset=utf-8');
         }

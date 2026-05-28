@@ -98,6 +98,33 @@ export interface DadosCidade {
     fonte: string;
   } | null;
 
+  vento?: {
+    velocidade_kmh: number | null;
+    direcao_graus?: number | null;
+    direcao?: string | null;
+    max_kmh?: number | null;
+    rajada_kmh?: number | null;
+    direcao_dominante?: string | null;
+    fonte: string;
+    atualizado_em?: string;
+  } | null;
+
+  ondas?: {
+    altura_m: number | null;
+    altura_max_m?: number | null;
+    periodo_s: number | null;
+    direcao_graus?: number | null;
+    direcao?: string | null;
+    swell_altura_m?: number | null;
+    swell_periodo_s?: number | null;
+    swell_direcao?: string | null;
+    surf_nivel: string;
+    surf_emoji: string;
+    surf_descricao: string;
+    fonte: string;
+    atualizado_em?: string;
+  } | null;
+
   queimadas?: {
     focos_100km: number;
     fonte: string;
