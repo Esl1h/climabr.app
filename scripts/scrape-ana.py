@@ -125,25 +125,11 @@ def main():
     print(f"  {len(reservatorios)} reservatórios com nível e coordenadas")
 
     # 5. Para cada município, encontra o reservatório mais próximo dentro do raio
+    # Não sobrescreve dados de fontes primárias (SABESP, etc.)
     agora = datetime.now(timezone.utc).astimezone().isoformat()
-    atualizados = 0
+    atualizados = ignorados = sem_vizinho = 0
 
     for m in municipios_com_coord:
-        lat_m = float(m["lat"])
-        lon_m = float(m["lon"])
-
-        mais_proximo = None
-        menor_dist = float("inf")
-
-        for res in reservatorios:
-            d = distancia_km(lat_m, lon_m, res["lat"], res["lon"])
-            if d < menor_dist and d <= RAIO_KM:
-                menor_dist = d
-                mais_proximo = res
-
-        if not mais_proximo:
-            continue
-
         uf = m["estado"]
         slug = m["slug"]
         pasta = DATA_DIR / uf
@@ -157,12 +143,36 @@ def main():
             except Exception:
                 pass
 
+        # Não sobrescreve fonte primária (SABESP cobre o sistema real)
+        fonte_atual = existente.get("reservatorio", {}).get("fonte", "")
+        if "SABESP" in fonte_atual:
+            ignorados += 1
+            continue
+
+        lat_m = float(m["lat"])
+        lon_m = float(m["lon"])
+
+        mais_proximo = None
+        menor_dist = float("inf")
+
+        for res in reservatorios:
+            d = distancia_km(lat_m, lon_m, res["lat"], res["lon"])
+            if d < menor_dist and d <= RAIO_KM:
+                menor_dist = d
+                mais_proximo = res
+
+        if not mais_proximo:
+            sem_vizinho += 1
+            continue
+
         existente["reservatorio"] = {
             "nome": mais_proximo["nome"],
             "nivel_pct": round(mais_proximo["nivel_pct"], 1),
             "variacao_semana_pct": 0.0,
             "data_medicao": mais_proximo["data"],
             "distancia_km": round(menor_dist, 1),
+            "aproximado": True,
+            "nota": f"Reservatório hidrelétrico mais próximo ({round(menor_dist)}km). Pode não ser o sistema de abastecimento desta cidade.",
             "fonte": "ONS / ANA",
             "atualizado_em": agora,
         }
@@ -175,7 +185,7 @@ def main():
         )
         atualizados += 1
 
-    print(f"Concluído: {atualizados} municípios atualizados com dados de reservatório")
+    print(f"Concluído: {atualizados} atualizados, {ignorados} com fonte primária preservada, {sem_vizinho} sem reservatório próximo")
 
 
 if __name__ == "__main__":

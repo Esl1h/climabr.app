@@ -29,9 +29,16 @@ export interface DadosCidade {
   };
   reservatorio?: {
     nome: string;
-    nivel_pct: number;
-    variacao_semana_pct: number;
+    nivel_pct: number | null;
+    variacao_semana_pct: number | null;
+    variacao_diaria_pct?: number;
+    data_medicao?: string;
+    distancia_km?: number;
+    sistema_id?: number;
+    aproximado?: boolean;
+    nota?: string;
     fonte: string;
+    atualizado_em?: string;
   };
   dengue?: {
     nivel_alerta: number;
