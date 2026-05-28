@@ -4,52 +4,122 @@
   "slug": "fernando-de-noronha",
   "latitude": -3.857,
   "longitude": -32.4265,
-  "atualizado_em": "2026-05-28T11:42:34.502040-03:00",
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 23,
-      "max": 30,
-      "condicao": "Chuvas Isoladas",
-      "condicao_codigo": "ci",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 27.3,
+      "max": 28.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 7.8,
+      "nascer_sol": "05:09",
+      "por_sol": "17:04"
     },
     {
       "data": "2026-05-29",
-      "min": 24,
-      "max": 29,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 27.0,
+      "max": 28.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.4,
+      "uv": 7.8,
+      "nascer_sol": "05:09",
+      "por_sol": "17:04"
     },
     {
       "data": "2026-05-30",
-      "min": 23,
-      "max": 29,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 24.7,
+      "max": 27.0,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 9.5,
+      "uv": 7.8,
+      "nascer_sol": "05:09",
+      "por_sol": "17:04"
     },
     {
       "data": "2026-05-31",
-      "min": 23,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 25.5,
+      "max": 27.0,
+      "condicao": "Chuva moderada",
+      "condicao_codigo": 63,
+      "chuva_mm": 14.3,
+      "uv": 7.7,
+      "nascer_sol": "05:09",
+      "por_sol": "17:04"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 25.8,
+      "max": 27.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 10.9,
+      "uv": 7.5,
+      "nascer_sol": "05:10",
+      "por_sol": "17:04"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 25.1,
+      "max": 27.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 7.7,
+      "uv": 7.2,
+      "nascer_sol": "05:10",
+      "por_sol": "17:05"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 24.4,
+      "max": 27.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.4,
+      "uv": 7.0,
+      "nascer_sol": "05:10",
+      "por_sol": "17:05"
     }
   ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.8,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 31,
+    "categoria": "Boa",
+    "principal_poluente": "PM10",
+    "pm25": 6.0,
+    "pm10": 10.4,
+    "no2": 0.1,
+    "o3": 43.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "05:09",
+    "por": "17:04",
+    "duracao_h": 11.9,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 28.2
 }

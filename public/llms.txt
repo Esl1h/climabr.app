@@ -3,43 +3,61 @@
 
 ## Sobre
 climabr.app consolida dados públicos de qualidade do ar, água, reservatórios,
-alertas epidemiológicos, queimadas, UV e clima em um painel único por município.
+alertas epidemiológicos, queimadas, UV, sol, lua e clima em um painel único por município.
 Dados são atualizados automaticamente a cada 3-6 horas via GitHub Actions.
+Cobre todos os 5.571 municípios brasileiros.
 
 ## Dados disponíveis por cidade
-- Previsão meteorológica 7 dias (CPTEC/INPE)
-- Qualidade do ar — IQAr com poluente principal (CETESB/IQAir)
-- Qualidade da água potável (SISAGUA/MS)
-- Nível de reservatórios e rios (ANA Hidroweb)
-- Focos de queimada num raio de 100km (INPE BDQueimadas)
-- Índice UV por hora (INMET)
-- Alertas de dengue por município (SVS/MS)
-- Bandeira tarifária de energia elétrica (ANEEL)
-- Alertas climáticos ativos (INMET/Defesa Civil)
-- Fase da lua, nascer/pôr do sol, maré (cidades litorâneas)
+- Previsão meteorológica 7 dias com temperatura, chuva, UV e condição (Open-Meteo)
+- Qualidade do ar — AQI US, PM2.5, PM10, NO2, O3 (Open-Meteo/Copernicus)
+- Índice UV máximo diário com categoria e horário de pico
+- Nível de reservatório de abastecimento — SABESP (SP), COPASA (MG), ONS/ANA (demais)
+- Focos de queimada num raio de 100km (NASA FIRMS)
+- Alertas de dengue, chikungunya e zika por município (InfoDengue/Fiocruz/SVS)
+- Nascer e pôr do sol, duração do dia, estação do ano
+- Fase da lua com iluminação percentual
 
 ## Como acessar
-- Web:  https://climabr.app/[estado]/[cidade]
-- JSON: https://climabr.app/api/[estado]/[cidade].json
-- CLI:  curl climabr.app/[estado]/[cidade]
+
+### Web
+https://climabr.app/[estado]/[cidade]
+
+### JSON (API)
+https://climabr.app/api/[estado]/[cidade].json
+
+### Terminal/CLI
+curl climabr.app/[estado]/[cidade]          # saída rica com ANSI e Unicode
+curl climabr.app/[estado]/[cidade]?format=1 # one-liner (tmux/i3/polybar/prompt)
+curl climabr.app/[estado]/[cidade]?format=2 # texto sem cores ANSI
+curl climabr.app/[estado]/[cidade]?T        # desativa cores ANSI
+curl climabr.app                            # detecta cidade pelo IP automaticamente
+
+### SVG (card compartilhável)
+https://climabr.app/[estado]/[cidade].svg   # card visual para README, Discord, etc.
+
+### Prometheus metrics (Grafana/alertmanager)
+curl climabr.app/[estado]/[cidade]?format=prometheus
 
 ## Exemplos
 - https://climabr.app/sp/sao-paulo
+- https://climabr.app/sp/cotia
 - https://climabr.app/rj/rio-de-janeiro
 - https://climabr.app/mg/belo-horizonte
 - https://climabr.app/rs/porto-alegre
 - https://climabr.app/api/sp/sao-paulo.json
 - https://climabr.app/api/rj/alertas.json
+- https://climabr.app/sp/sao-paulo.svg
+- curl climabr.app/sp/sao-paulo?format=1
 
 ## Cobertura
-Todos os 5.571 municípios brasileiros (cobertura de dados varia por disponibilidade das fontes).
+Todos os 5.571 municípios brasileiros.
 Estados: AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA, PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO
 
 ## Formato das URLs
 - Estado em minúsculas, sigla de 2 letras (ex: sp, rj, mg)
-- Cidade em slug sem acentos (ex: sao-paulo, rio-de-janeiro, belo-horizonte)
+- Cidade em slug sem acentos e com hífens (ex: sao-paulo, rio-de-janeiro, belo-horizonte)
 
 ## Sobre os dados
-Todos os dados são públicos e provenientes de órgãos governamentais brasileiros.
-Sem necessidade de autenticação para acesso ao JSON.
+Dados públicos de fontes governamentais brasileiras e internacionais.
+Sem necessidade de autenticação.
 Licença: CC BY 4.0

@@ -4,8 +4,86 @@
   "slug": "graccho-cardoso",
   "latitude": -10.2226,
   "longitude": -37.2188,
-  "atualizado_em": "2026-05-28T11:48:07.990899-03:00",
-  "previsao": [],
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
+  "previsao": [
+    {
+      "data": "2026-05-28",
+      "min": 20.6,
+      "max": 28.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 7.2,
+      "nascer_sol": "05:38",
+      "por_sol": "17:13"
+    },
+    {
+      "data": "2026-05-29",
+      "min": 19.8,
+      "max": 30.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "05:39",
+      "por_sol": "17:13"
+    },
+    {
+      "data": "2026-05-30",
+      "min": 21.5,
+      "max": 30.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 6.7,
+      "nascer_sol": "05:39",
+      "por_sol": "17:13"
+    },
+    {
+      "data": "2026-05-31",
+      "min": 21.4,
+      "max": 29.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.6,
+      "uv": 6.5,
+      "nascer_sol": "05:39",
+      "por_sol": "17:13"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 20.6,
+      "max": 27.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.6,
+      "uv": 5.8,
+      "nascer_sol": "05:39",
+      "por_sol": "17:13"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 21.3,
+      "max": 28.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 6.1,
+      "nascer_sol": "05:40",
+      "por_sol": "17:13"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 21.8,
+      "max": 27.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.9,
+      "uv": 5.3,
+      "nascer_sol": "05:40",
+      "por_sol": "17:13"
+    }
+  ],
   "reservatorio": {
     "nome": "Xingo",
     "nivel_pct": 46.3,
@@ -21,5 +99,38 @@
     "focos_100km": 4,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 7.2,
+    "categoria": "Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 30,
+    "categoria": "Boa",
+    "principal_poluente": "PM10",
+    "pm25": 5.7,
+    "pm10": 9.3,
+    "no2": 0.7,
+    "o3": 57.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "05:38",
+    "por": "17:13",
+    "duracao_h": 11.6,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 27.5
 }

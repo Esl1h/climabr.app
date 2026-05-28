@@ -4,8 +4,86 @@
   "slug": "perola-d-oeste",
   "latitude": -25.8499,
   "longitude": -53.7589,
-  "atualizado_em": "2026-05-28T11:42:02.974031-03:00",
-  "previsao": [],
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
+  "previsao": [
+    {
+      "data": "2026-05-28",
+      "min": 13.7,
+      "max": 25.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.0,
+      "nascer_sol": "07:12",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-05-29",
+      "min": 15.6,
+      "max": 25.0,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 5.0,
+      "uv": 4.3,
+      "nascer_sol": "07:12",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-05-30",
+      "min": 14.6,
+      "max": 24.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.0,
+      "nascer_sol": "07:13",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-05-31",
+      "min": 14.8,
+      "max": 23.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 4.4,
+      "nascer_sol": "07:13",
+      "por_sol": "17:51"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 11.6,
+      "max": 22.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.9,
+      "nascer_sol": "07:14",
+      "por_sol": "17:51"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 12.9,
+      "max": 23.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.5,
+      "nascer_sol": "07:14",
+      "por_sol": "17:51"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 14.6,
+      "max": 23.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.3,
+      "nascer_sol": "07:15",
+      "por_sol": "17:51"
+    }
+  ],
   "reservatorio": {
     "nome": "Baixo Iguacu",
     "nivel_pct": 59.0,
@@ -21,5 +99,38 @@
     "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 5.0,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 45,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 3.1,
+    "pm10": 3.2,
+    "no2": 0.0,
+    "o3": 81.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "07:12",
+    "por": "17:52",
+    "duracao_h": 10.7,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 25.2
 }

@@ -4,8 +4,86 @@
   "slug": "arco-iris",
   "latitude": -21.7663,
   "longitude": -50.4309,
-  "atualizado_em": "2026-05-28T11:46:27.190249-03:00",
-  "previsao": [],
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
+  "previsao": [
+    {
+      "data": "2026-05-28",
+      "min": 17.0,
+      "max": 27.5,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:51",
+      "por_sol": "17:46"
+    },
+    {
+      "data": "2026-05-29",
+      "min": 14.6,
+      "max": 26.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:51",
+      "por_sol": "17:46"
+    },
+    {
+      "data": "2026-05-30",
+      "min": 14.4,
+      "max": 27.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:52",
+      "por_sol": "17:46"
+    },
+    {
+      "data": "2026-05-31",
+      "min": 14.2,
+      "max": 27.1,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:52",
+      "por_sol": "17:46"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 13.6,
+      "max": 27.5,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.3,
+      "nascer_sol": "06:52",
+      "por_sol": "17:46"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 14.6,
+      "max": 26.5,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.0,
+      "nascer_sol": "06:53",
+      "por_sol": "17:46"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 14.9,
+      "max": 27.5,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 4.9,
+      "nascer_sol": "06:53",
+      "por_sol": "17:45"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
@@ -43,5 +121,38 @@
     "semana_epidemiologica": 202620,
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-05-28T13:36:28.571279-03:00"
-  }
+  },
+  "uv": {
+    "indice": 5.5,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 27,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 3.8,
+    "pm10": 3.9,
+    "no2": 1.0,
+    "o3": 97.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "06:51",
+    "por": "17:46",
+    "duracao_h": 10.9,
+    "estacao": "Outono",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 27.5
 }

@@ -4,52 +4,122 @@
   "slug": "mucajai",
   "latitude": 2.511,
   "longitude": -61.9968,
-  "atualizado_em": "2026-05-28T11:45:34.343686-03:00",
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 24,
-      "max": 28,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.1,
+      "max": 29.5,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 14.4,
+      "uv": 3.3,
+      "nascer_sol": "06:57",
+      "por_sol": "19:12"
     },
     {
       "data": "2026-05-29",
-      "min": 24,
-      "max": 28,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.8,
+      "max": 28.3,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 18.0,
+      "uv": 7.8,
+      "nascer_sol": "06:57",
+      "por_sol": "19:12"
     },
     {
       "data": "2026-05-30",
-      "min": 24,
-      "max": 29,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.5,
+      "max": 25.2,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 33.1,
+      "uv": 8.2,
+      "nascer_sol": "06:57",
+      "por_sol": "19:13"
     },
     {
       "data": "2026-05-31",
-      "min": 23,
-      "max": 28,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.2,
+      "max": 27.1,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 12.4,
+      "uv": 3.2,
+      "nascer_sol": "06:57",
+      "por_sol": "19:13"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 22.4,
+      "max": 27.5,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 18.3,
+      "uv": 1.4,
+      "nascer_sol": "06:58",
+      "por_sol": "19:13"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 22.6,
+      "max": 27.6,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 13.2,
+      "uv": 6.8,
+      "nascer_sol": "06:58",
+      "por_sol": "19:13"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 22.2,
+      "max": 26.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 14.1,
+      "uv": 7.8,
+      "nascer_sol": "06:58",
+      "por_sol": "19:13"
     }
   ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 3.3,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 12,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 2.8,
+    "pm10": 3.9,
+    "no2": 0.0,
+    "o3": 30.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "06:57",
+    "por": "19:12",
+    "duracao_h": 12.3,
+    "estacao": "Primavera",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 29.4
 }

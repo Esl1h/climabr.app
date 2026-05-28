@@ -4,52 +4,122 @@
   "slug": "sao-joao-da-baliza",
   "latitude": 0.6358,
   "longitude": -59.845,
-  "atualizado_em": "2026-05-28T11:45:34.999371-03:00",
+  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
   "previsao": [
     {
       "data": "2026-05-28",
-      "min": 24,
-      "max": 28,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.2,
+      "max": 28.7,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 31.4,
+      "uv": 8.2,
+      "nascer_sol": "06:52",
+      "por_sol": "19:01"
     },
     {
       "data": "2026-05-29",
-      "min": 23,
-      "max": 29,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.9,
+      "max": 28.5,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 4.8,
+      "uv": 1.8,
+      "nascer_sol": "06:52",
+      "por_sol": "19:01"
     },
     {
       "data": "2026-05-30",
-      "min": 23,
-      "max": 29,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.8,
+      "max": 28.4,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 23.8,
+      "uv": 5.1,
+      "nascer_sol": "06:52",
+      "por_sol": "19:01"
     },
     {
       "data": "2026-05-31",
-      "min": 23,
-      "max": 29,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.1,
+      "max": 26.9,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 19.8,
+      "uv": 7.2,
+      "nascer_sol": "06:52",
+      "por_sol": "19:01"
+    },
+    {
+      "data": "2026-06-01",
+      "min": 22.0,
+      "max": 26.4,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 17.3,
+      "uv": 2.6,
+      "nascer_sol": "06:52",
+      "por_sol": "19:02"
+    },
+    {
+      "data": "2026-06-02",
+      "min": 22.1,
+      "max": 27.9,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 7.6,
+      "uv": 5.7,
+      "nascer_sol": "06:52",
+      "por_sol": "19:02"
+    },
+    {
+      "data": "2026-06-03",
+      "min": 22.4,
+      "max": 28.3,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 9.2,
+      "uv": 7.5,
+      "nascer_sol": "06:52",
+      "por_sol": "19:02"
     }
   ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-05-28T12:07:23.153825-03:00"
-  }
+  },
+  "uv": {
+    "indice": 8.2,
+    "categoria": "Muito Alto",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 15,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 0.9,
+    "pm10": 1.0,
+    "no2": 0.2,
+    "o3": 23.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+  },
+  "sol": {
+    "nascer": "06:52",
+    "por": "19:01",
+    "duracao_h": 12.2,
+    "estacao": "Primavera",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 38.7,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 24.6
 }
