@@ -4,22 +4,11 @@
   "slug": "carlinda",
   "latitude": -10.1064,
   "longitude": -55.8342,
-  "atualizado_em": "2026-05-28T14:13:27.739579-03:00",
+  "atualizado_em": "2026-05-31T16:29:25.755784-03:00",
   "previsao": [
     {
-      "data": "2026-05-28",
-      "min": 19.5,
-      "max": 31.7,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 7.0,
-      "nascer_sol": "06:53",
-      "por_sol": "18:28"
-    },
-    {
-      "data": "2026-05-29",
-      "min": 19.9,
+      "data": "2026-05-31",
+      "min": 22.1,
       "max": 32.2,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
@@ -29,58 +18,69 @@
       "por_sol": "18:28"
     },
     {
-      "data": "2026-05-30",
-      "min": 21.5,
-      "max": 32.3,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 7.0,
-      "nascer_sol": "06:53",
-      "por_sol": "18:28"
-    },
-    {
-      "data": "2026-05-31",
-      "min": 20.6,
-      "max": 32.5,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 7.0,
-      "nascer_sol": "06:53",
-      "por_sol": "18:28"
-    },
-    {
       "data": "2026-06-01",
-      "min": 20.8,
-      "max": 33.1,
+      "min": 21.5,
+      "max": 32.2,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 6.9,
+      "uv": 6.6,
       "nascer_sol": "06:54",
       "por_sol": "18:28"
     },
     {
       "data": "2026-06-02",
-      "min": 20.5,
-      "max": 32.8,
+      "min": 21.4,
+      "max": 32.0,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 6.4,
+      "uv": 6.2,
       "nascer_sol": "06:54",
       "por_sol": "18:28"
     },
     {
       "data": "2026-06-03",
-      "min": 22.1,
+      "min": 21.5,
+      "max": 32.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.8,
+      "nascer_sol": "06:54",
+      "por_sol": "18:28"
+    },
+    {
+      "data": "2026-06-04",
+      "min": 21.5,
       "max": 32.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 6.8,
+      "nascer_sol": "06:55",
+      "por_sol": "18:28"
+    },
+    {
+      "data": "2026-06-05",
+      "min": 22.0,
+      "max": 32.8,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
       "uv": 6.4,
-      "nascer_sol": "06:54",
+      "nascer_sol": "06:55",
+      "por_sol": "18:28"
+    },
+    {
+      "data": "2026-06-06",
+      "min": 21.5,
+      "max": 32.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.4,
+      "nascer_sol": "06:55",
       "por_sol": "18:28"
     }
   ],
@@ -108,15 +108,15 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 24,
+    "indice": 37,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.3,
-    "pm10": 4.5,
-    "no2": 0.1,
-    "o3": 70.0,
+    "pm25": 3.5,
+    "pm10": 3.6,
+    "no2": 0.8,
+    "o3": 66.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+    "atualizado_em": "2026-05-31T16:29:25.755784-03:00"
   },
   "sol": {
     "nascer": "06:53",
@@ -127,10 +127,22 @@
   },
   "lua": {
     "nome": "Gibosa Crescente",
-    "iluminacao_pct": 65.0,
-    "fase_pct": 38.7,
-    "dias_proxima_cheia": 3,
+    "iluminacao_pct": 7.0,
+    "fase_pct": 48.9,
+    "dias_proxima_cheia": 0,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 31.7
+  "temperatura_atual": 31.5,
+  "vento": {
+    "velocidade_kmh": 4.4,
+    "direcao_graus": 99,
+    "direcao": "E",
+    "max_kmh": 10.1,
+    "rajada_kmh": 24.5,
+    "direcao_dominante": "ESE",
+    "fonte": "Open-Meteo"
+  },
+  "umidade_pct": 45,
+  "pressao_hpa": 1011,
+  "ponto_orvalho_c": 18.1
 }
