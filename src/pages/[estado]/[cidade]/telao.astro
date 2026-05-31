@@ -91,17 +91,23 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       }
       .topo {
         display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: var(--gap);
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: calc(var(--gap) * 0.4);
         border-bottom: 2px solid #1e293b;
         padding-bottom: var(--gap);
+      }
+      .topo-linha {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--gap);
       }
       .cidade-nome { font-size: clamp(1.8rem, 5.5vmin, 6rem); font-weight: 800; line-height: 1; }
       .cidade-uf { color: #64748b; font-weight: 400; font-size: 0.5em; }
       .temp-atual { font-size: clamp(1.5rem, 5vmin, 5.5rem); font-weight: 800; color: #38bdf8; line-height: 1; }
-      .topo-meta { text-align: right; }
       .relogio { font-size: clamp(1rem, 2.5vmin, 2.5rem); font-weight: 700; color: #cbd5e1; font-variant-numeric: tabular-nums; }
       .data-hoje { font-size: clamp(0.7rem, 1.4vmin, 1.3rem); color: #64748b; }
 
@@ -147,53 +153,55 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       .barra { height: clamp(0.3rem, 0.8vmin, 0.8rem); background: #334155; border-radius: 99px; overflow: hidden; }
       .barra > div { height: 100%; border-radius: 99px; }
 
-      .sair {
-        position: fixed; top: var(--gap); right: var(--gap);
+      .canto {
+        position: fixed; top: var(--gap);
         z-index: 10; opacity: 0.25; transition: opacity 0.2s;
         display: flex; gap: 0.5rem;
       }
-      .sair:hover { opacity: 1; }
-      .sair button, .sair a {
+      .canto.dir { right: var(--gap); }
+      .canto.esq { left: var(--gap); }
+      .canto:hover { opacity: 1; }
+      .canto button, .canto a {
         background: #1e293b; color: #cbd5e1; border: 1px solid #334155;
         border-radius: 0.5rem; padding: 0.4rem 0.7rem; font-size: 0.85rem;
         cursor: pointer; text-decoration: none; font-family: inherit;
       }
-      .sair button:hover, .sair a:hover { background: #334155; }
+      .canto button:hover, .canto a:hover { background: #334155; }
 
       .duo { display: flex; gap: 1em; align-items: baseline; }
       .duo .lbl { font-size: clamp(0.55rem, 1.1vmin, 1.1rem); color: #64748b; }
     </style>
   </head>
   <body>
-    <div class="sair">
+    <div class="canto esq">
       <button id="fs-btn" title="Tela cheia">⛶ Tela cheia</button>
+    </div>
+    <div class="canto dir">
       <a href={`/${estado}/${cidade}`} title="Sair">✕</a>
     </div>
 
     <div class="telao">
-      <!-- Cabeçalho -->
+      <!-- Cabeçalho centralizado -->
       <div class="topo">
-        <div>
-          <div class="cidade-nome">
-            {municipio.nome}<span class="cidade-uf">/{municipio.estado.toUpperCase()}</span>
-          </div>
-          {hoje && (
-            <div class="card-sub" style="font-size: clamp(0.8rem, 1.8vmin, 1.8rem); margin-top: 0.3em;">
-              {TEMPO_EMOJI[hoje.condicao_codigo as number] ?? '⛅'} {hoje.condicao}
-            </div>
-          )}
-        </div>
-        <div style="display:flex; align-items:baseline; gap: var(--gap);">
+        <div class="topo-linha">
           {dados?.temperatura_atual != null && (
             <div class="temp-atual">{dados.temperatura_atual}°</div>
           )}
-          <div class="topo-meta">
-            <div class="relogio" id="relogio">--:--:--</div>
-            <div class="data-hoje" id="data-hoje"></div>
-            <div class="data-hoje">
-              <span style="color:#10b981; font-weight:700;">Clima<span style="color:#3b82f6;">BR</span><span style="color:#eab308;">.app</span></span>
-            </div>
+          <div class="cidade-nome">
+            {municipio.nome}<span class="cidade-uf">/{municipio.estado.toUpperCase()}</span>
           </div>
+        </div>
+        {hoje && (
+          <div class="card-sub" style="font-size: clamp(0.8rem, 1.8vmin, 1.8rem);">
+            {TEMPO_EMOJI[hoje.condicao_codigo as number] ?? '⛅'} {hoje.condicao}
+          </div>
+        )}
+        <div class="topo-linha">
+          <span class="relogio" id="relogio">--:--:--</span>
+          <span class="data-hoje" id="data-hoje"></span>
+          <span class="data-hoje">
+            <span style="color:#10b981; font-weight:700;">Clima<span style="color:#3b82f6;">BR</span><span style="color:#eab308;">.app</span></span>
+          </span>
         </div>
       </div>
 
