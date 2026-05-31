@@ -256,8 +256,8 @@ def main():
             return False
         try:
             d = json.loads(f.read_text(encoding="utf-8"))
-            # Pula só se já tiver vento (campo novo desta versão)
-            return d.get("vento") is not None
+            # Pula só se já tiver umidade (campo novo desta versão)
+            return d.get("umidade_pct") is not None
         except Exception:
             return False
 
