@@ -238,7 +238,7 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       }
     </style>
   </head>
-  <body class={tema} data-nascer={nascer} data-por={por}>
+  <body class={tema} data-lat={municipio.lat ?? ''} data-lon={municipio.lon ?? ''} data-nascer={nascer} data-por={por}>
     <div class="cena"></div>
 
     <div class="canto esq">
@@ -252,18 +252,16 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       <!-- Cabeçalho centralizado -->
       <div class="topo">
         <div class="topo-linha">
-          {dados?.temperatura_atual != null && (
-            <div class="temp-atual">{dados.temperatura_atual}°</div>
-          )}
+          <div class="temp-atual" id="temp-atual" hidden={dados?.temperatura_atual == null}>
+            {dados?.temperatura_atual != null ? `${dados.temperatura_atual}°` : ''}
+          </div>
           <div class="cidade-nome">
             {municipio.nome}<span class="cidade-uf">/{municipio.estado.toUpperCase()}</span>
           </div>
         </div>
-        {hoje && (
-          <div class="card-sub" style="font-size: clamp(0.8rem, 1.8vmin, 1.8rem);">
-            {TEMPO_EMOJI[hoje.condicao_codigo as number] ?? '⛅'} {hoje.condicao}
-          </div>
-        )}
+        <div class="card-sub" id="condicao" style="font-size: clamp(0.8rem, 1.8vmin, 1.8rem);" hidden={!hoje}>
+          {hoje ? `${TEMPO_EMOJI[hoje.condicao_codigo as number] ?? '⛅'} ${hoje.condicao}` : ''}
+        </div>
         <div class="topo-linha">
           <span class="relogio" id="relogio">--:--:--</span>
           <span class="data-hoje" id="data-hoje"></span>
@@ -281,21 +279,21 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
             <div class="card-titulo"><span class="card-ico">⛅</span> Previsão</div>
             {hoje && (
               <div class="duo">
-                <span class="card-valor" style="color:#f87171;">{Math.round(hoje.max)}°</span>
-                <span class="card-valor" style="color:#38bdf8; font-size:clamp(1rem,2.8vmin,3rem);">{Math.round(hoje.min)}°</span>
-                {hoje.chuva_mm > 0 && <span class="card-sub">💧{hoje.chuva_mm}mm</span>}
+                <span class="card-valor" style="color:#f87171;" data-f="max">{Math.round(hoje.max)}°</span>
+                <span class="card-valor" style="color:#38bdf8; font-size:clamp(1rem,2.8vmin,3rem);" data-f="min">{Math.round(hoje.min)}°</span>
+                <span class="card-sub" data-f="chuva" hidden={!(hoje.chuva_mm > 0)}>{hoje.chuva_mm > 0 ? `💧${hoje.chuva_mm}mm` : ''}</span>
               </div>
             )}
-            <div class="prev-dias">
+            <div class="prev-dias" data-prev-dias>
               {previsao.slice(1, 7).map((d) => {
                 const data = new Date((d.data as string) + 'T12:00:00');
                 const dia = data.toLocaleDateString('pt-BR', { weekday: 'short' }).slice(0, 3);
                 return (
-                  <div class="prev-dia">
-                    <div class="d">{dia}</div>
-                    <div class="e">{TEMPO_EMOJI[d.condicao_codigo as number] ?? '⛅'}</div>
-                    <div class="t" style="color:#f87171;">{Math.round(d.max)}°</div>
-                    <div class="t" style="color:#64748b;">{Math.round(d.min)}°</div>
+                  <div class="prev-dia" data-dia>
+                    <div class="d" data-f="d">{dia}</div>
+                    <div class="e" data-f="e">{TEMPO_EMOJI[d.condicao_codigo as number] ?? '⛅'}</div>
+                    <div class="t" style="color:#f87171;" data-f="tmax">{Math.round(d.max)}°</div>
+                    <div class="t" style="color:#64748b;" data-f="tmin">{Math.round(d.min)}°</div>
                   </div>
                 );
               })}
@@ -426,6 +424,108 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       }
       tick();
       setInterval(tick, 1000);
+
+      // Hidratação em tempo real pela mesma fonte/cache da página da cidade
+      // (Open-Meteo no browser), para o painel não divergir do snapshot do build.
+      const lat = parseFloat(document.body.dataset.lat || '');
+      const lon = parseFloat(document.body.dataset.lon || '');
+
+      const WMO: Record<number, string> = {
+        0: 'Céu limpo', 1: 'Principalmente limpo', 2: 'Parcialmente nublado', 3: 'Encoberto',
+        45: 'Névoa', 48: 'Névoa com gelo', 51: 'Chuvisco leve', 53: 'Chuvisco moderado', 55: 'Chuvisco denso',
+        61: 'Chuva leve', 63: 'Chuva moderada', 65: 'Chuva forte', 71: 'Neve leve', 73: 'Neve moderada', 75: 'Neve forte',
+        77: 'Granizo', 80: 'Chuva isolada leve', 81: 'Chuva isolada moderada', 82: 'Chuva isolada forte',
+        85: 'Neve isolada', 86: 'Neve isolada forte', 95: 'Tempestade', 96: 'Tempestade com granizo leve', 99: 'Tempestade com granizo forte',
+      };
+      const EMOJI: Record<number, string> = {
+        0: '☀️', 1: '🌤', 2: '⛅', 3: '☁️', 45: '🌫', 48: '🌫', 51: '🌦', 53: '🌦', 55: '🌧',
+        61: '🌧', 63: '🌧', 65: '🌧', 71: '❄️', 73: '❄️', 75: '❄️', 77: '🌨', 80: '🌦', 81: '🌦',
+        82: '⛈', 95: '⛈', 96: '⛈', 99: '⛈',
+      };
+      const TEMAS = ['clima-limpo', 'clima-nublado', 'clima-encoberto', 'clima-chuva', 'clima-neve', 'clima-tempestade'];
+      function temaDoTempo(c: number): string {
+        if (!Number.isFinite(c)) return 'clima-limpo';
+        if (c <= 1) return 'clima-limpo';
+        if (c === 2) return 'clima-nublado';
+        if (c === 3 || c === 45 || c === 48) return 'clima-encoberto';
+        if ((c >= 51 && c <= 67) || (c >= 80 && c <= 82)) return 'clima-chuva';
+        if ((c >= 71 && c <= 77) || c === 85 || c === 86) return 'clima-neve';
+        if (c >= 95) return 'clima-tempestade';
+        return 'clima-limpo';
+      }
+      const arred = (n: number) => Math.round(n * 10) / 10;
+      function diaSemana(dataStr: string): string {
+        return new Date(dataStr + 'T12:00:00').toLocaleDateString('pt-BR', { weekday: 'short' }).slice(0, 3);
+      }
+
+      async function hidratarClima() {
+        if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}`
+          + `&current=temperature_2m,weather_code`
+          + `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_sum`
+          + `&timezone=America%2FSao_Paulo&forecast_days=7`;
+        const chave = `om:${lat},${lon}`;
+
+        let data: any;
+        try {
+          const raw = sessionStorage.getItem(chave);
+          if (raw) { const o = JSON.parse(raw); if (Date.now() - o.t < 600000) data = o.d; }
+        } catch { /* ignora */ }
+        if (!data) {
+          try {
+            const res = await fetch(url);
+            if (!res.ok) return;
+            data = await res.json();
+            try { sessionStorage.setItem(chave, JSON.stringify({ t: Date.now(), d: data })); } catch { /* ignora */ }
+          } catch { return; } // mantém o snapshot
+        }
+
+        // Temperatura atual + tema de fundo + condição (ao vivo)
+        const cur = data?.current;
+        if (cur && typeof cur.temperature_2m === 'number') {
+          const tEl = document.getElementById('temp-atual');
+          if (tEl) { tEl.textContent = `${arred(cur.temperature_2m)}°`; tEl.hidden = false; }
+
+          const code = Number(cur.weather_code);
+          if (Number.isFinite(code)) {
+            document.body.classList.remove(...TEMAS);
+            document.body.classList.add(temaDoTempo(code));
+            const condEl = document.getElementById('condicao');
+            if (condEl) { condEl.textContent = `${EMOJI[code] ?? '⛅'} ${WMO[code] ?? ''}`; condEl.hidden = false; }
+            aplicarNoite();
+          }
+        }
+
+        // Previsão: hoje (duo) + próximos 6 dias
+        const daily = data?.daily;
+        if (daily && Array.isArray(daily.time) && daily.time.length) {
+          const setF = (root: ParentNode, f: string, v: string) => {
+            const el = root.querySelector<HTMLElement>(`[data-f="${f}"]`);
+            if (el) el.textContent = v;
+          };
+          const card = document.querySelector<HTMLElement>('.card-wide');
+          if (card) {
+            setF(card, 'max', `${Math.round(daily.temperature_2m_max[0])}°`);
+            setF(card, 'min', `${Math.round(daily.temperature_2m_min[0])}°`);
+            const chuva = arred(daily.precipitation_sum?.[0] ?? 0);
+            const chuvaEl = card.querySelector<HTMLElement>('[data-f="chuva"]');
+            if (chuvaEl) {
+              if (chuva > 0) { chuvaEl.textContent = `💧${chuva}mm`; chuvaEl.hidden = false; }
+              else chuvaEl.hidden = true;
+            }
+          }
+          const dias = document.querySelectorAll<HTMLElement>('[data-prev-dias] [data-dia]');
+          dias.forEach((dia, i) => {
+            const idx = i + 1; // pula hoje
+            if (idx >= daily.time.length) return;
+            setF(dia, 'd', diaSemana(daily.time[idx]));
+            setF(dia, 'e', EMOJI[Number(daily.weather_code[idx])] ?? '⛅');
+            setF(dia, 'tmax', `${Math.round(daily.temperature_2m_max[idx])}°`);
+            setF(dia, 'tmin', `${Math.round(daily.temperature_2m_min[idx])}°`);
+          });
+        }
+      }
+      hidratarClima();
 
       // Botão tela cheia
       const fsBtn = document.getElementById('fs-btn');
