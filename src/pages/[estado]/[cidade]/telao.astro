@@ -62,6 +62,22 @@ const SURF_COR: Record<string, string> = {
   bom: '#34d399', razoavel: '#fbbf24', ruim: '#f87171', perigoso: '#ef4444', desconhecido: '#94a3b8',
 };
 
+// Tema do plano de fundo conforme a condição do tempo (WMO weather code)
+function temaDoTempo(code?: number | string | null): string {
+  const c = Number(code);
+  if (!Number.isFinite(c)) return 'clima-limpo';
+  if (c <= 1) return 'clima-limpo';
+  if (c === 2) return 'clima-nublado';
+  if (c === 3 || c === 45 || c === 48) return 'clima-encoberto';
+  if ((c >= 51 && c <= 67) || (c >= 80 && c <= 82)) return 'clima-chuva';
+  if ((c >= 71 && c <= 77) || c === 85 || c === 86) return 'clima-neve';
+  if (c >= 95) return 'clima-tempestade';
+  return 'clima-limpo';
+}
+const tema = temaDoTempo(hoje?.condicao_codigo);
+const nascer = sol?.nascer ?? '';
+const por = sol?.por ?? '';
+
 const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Painel — climabr.app`;
 ---
 
@@ -74,15 +90,54 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
     <meta name="robots" content="noindex" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <style>
-      :root { --gap: clamp(0.5rem, 1.2vmin, 1.5rem); }
+      :root { --gap: clamp(0.6rem, 1.4vmin, 1.6rem); }
       * { box-sizing: border-box; }
       html, body { margin: 0; padding: 0; height: 100%; background: #020617; }
       body {
         font-family: system-ui, -apple-system, sans-serif;
-        color: #e2e8f0;
+        color: #f1f5f9;
         overflow: hidden;
       }
+
+      /* Plano de fundo dinâmico conforme o clima */
+      .cena {
+        position: fixed; inset: 0; z-index: 0;
+        background: linear-gradient(160deg, #0f172a, #1e293b);
+        transition: background 1.5s ease, filter 1.5s ease;
+      }
+      .cena::before {
+        content: ''; position: absolute; inset: -25%;
+        background: radial-gradient(circle, var(--glow, rgba(255,255,255,0.06)), transparent 60%);
+        animation: flutua 22s ease-in-out infinite alternate;
+      }
+      @keyframes flutua {
+        from { transform: translate(-6%, -4%) scale(1); }
+        to   { transform: translate(6%, 5%) scale(1.15); }
+      }
+      .clima-limpo .cena      { --glow: rgba(250,204,21,0.28); background: radial-gradient(circle at 78% 18%, rgba(250,204,21,0.30), transparent 42%), linear-gradient(160deg, #075985, #0c4a6e 55%, #0e7490); }
+      .clima-nublado .cena    { --glow: rgba(148,163,184,0.20); background: linear-gradient(160deg, #1e293b, #334155 60%, #475569); }
+      .clima-encoberto .cena  { --glow: rgba(148,163,184,0.16); background: linear-gradient(160deg, #1f2937, #374151 60%, #4b5563); }
+      .clima-chuva .cena      { --glow: rgba(59,130,246,0.20); background: radial-gradient(circle at 50% -10%, rgba(59,130,246,0.22), transparent 50%), linear-gradient(160deg, #0f172a, #1e3a5f 60%, #1e293b); }
+      .clima-neve .cena       { --glow: rgba(226,232,240,0.25); background: linear-gradient(160deg, #334155, #475569 55%, #64748b); }
+      .clima-tempestade .cena { --glow: rgba(167,139,250,0.28); background: radial-gradient(circle at 30% 8%, rgba(167,139,250,0.28), transparent 45%), linear-gradient(160deg, #0f0a1f, #1e1b4b 55%, #312e81); }
+
+      /* Variante noturna (definida via JS conforme nascer/pôr do sol) */
+      .noite .cena { filter: brightness(0.6) saturate(0.85); }
+      .noite.clima-limpo .cena {
+        --glow: rgba(148,163,184,0.18); filter: none;
+        background: radial-gradient(circle at 80% 15%, rgba(148,163,184,0.16), transparent 40%), linear-gradient(160deg, #020617, #0f172a 60%, #1e1b4b);
+      }
+
+      /* Chuva animada para chuva/tempestade */
+      .clima-chuva .cena::after, .clima-tempestade .cena::after {
+        content: ''; position: absolute; inset: 0; pointer-events: none;
+        background-image: repeating-linear-gradient(102deg, transparent 0 16px, rgba(186,210,255,0.10) 16px 17px);
+        animation: chuva 0.8s linear infinite;
+      }
+      @keyframes chuva { to { background-position: -36px 130px; } }
+
       .telao {
+        position: relative; z-index: 1;
         height: 100dvh;
         display: flex;
         flex-direction: column;
@@ -95,8 +150,9 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
         align-items: center;
         text-align: center;
         gap: calc(var(--gap) * 0.4);
-        border-bottom: 2px solid #1e293b;
+        border-bottom: 1px solid rgba(148,163,184,0.22);
         padding-bottom: var(--gap);
+        text-shadow: 0 2px 16px rgba(0,0,0,0.45);
       }
       .topo-linha {
         display: flex;
@@ -105,52 +161,57 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
         flex-wrap: wrap;
         gap: var(--gap);
       }
-      .cidade-nome { font-size: clamp(1.8rem, 5.5vmin, 6rem); font-weight: 800; line-height: 1; }
-      .cidade-uf { color: #64748b; font-weight: 400; font-size: 0.5em; }
-      .temp-atual { font-size: clamp(1.5rem, 5vmin, 5.5rem); font-weight: 800; color: #38bdf8; line-height: 1; }
-      .relogio { font-size: clamp(1rem, 2.5vmin, 2.5rem); font-weight: 700; color: #cbd5e1; font-variant-numeric: tabular-nums; }
-      .data-hoje { font-size: clamp(0.7rem, 1.4vmin, 1.3rem); color: #64748b; }
+      .cidade-nome { font-size: clamp(2.2rem, 6vmin, 7rem); font-weight: 800; line-height: 1; letter-spacing: -0.01em; }
+      .cidade-uf { color: #cbd5e1; font-weight: 400; font-size: 0.5em; opacity: 0.7; }
+      .temp-atual { font-size: clamp(2rem, 5.5vmin, 6.5rem); font-weight: 800; color: #7dd3fc; line-height: 1; }
+      .relogio { font-size: clamp(1.2rem, 2.8vmin, 3rem); font-weight: 700; color: #f1f5f9; font-variant-numeric: tabular-nums; }
+      .data-hoje { font-size: clamp(0.85rem, 1.7vmin, 1.7rem); color: #cbd5e1; }
 
       .grid {
         flex: 1;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 24vmin, 460px), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(clamp(240px, 28vmin, 540px), 1fr));
         grid-auto-rows: minmax(0, 1fr);
         gap: var(--gap);
         min-height: 0;
         align-content: stretch;
       }
       .card {
-        background: linear-gradient(145deg, #0f172a, #1e293b);
-        border: 1px solid #1e293b;
-        border-radius: clamp(0.5rem, 1.2vmin, 1.5rem);
-        padding: clamp(0.6rem, 1.6vmin, 1.8rem);
+        position: relative;
+        background: rgba(15, 23, 42, 0.55);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(148, 163, 184, 0.16);
+        border-radius: clamp(0.75rem, 1.6vmin, 1.8rem);
+        box-shadow: 0 10px 34px rgba(0, 0, 0, 0.35);
+        padding: clamp(0.9rem, 2vmin, 2.2rem);
         display: flex;
         flex-direction: column;
         justify-content: center;       /* agrupa o conteúdo no centro vertical */
-        gap: clamp(0.15rem, 0.5vmin, 0.6rem);
+        gap: clamp(0.25rem, 0.7vmin, 0.8rem);
         overflow: hidden;
         min-height: 0;
       }
       .card-wide { grid-column: span 2; }
       .card-titulo {
-        font-size: clamp(0.6rem, 1.3vmin, 1.3rem);
-        color: #94a3b8;
+        font-size: clamp(0.85rem, 1.9vmin, 2rem);
+        color: #cbd5e1;
+        font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.06em;
         display: flex; align-items: center; gap: 0.4em;
       }
-      .card-valor { font-size: clamp(1.3rem, 4vmin, 4.5rem); font-weight: 800; line-height: 1; }
-      .card-sub { font-size: clamp(0.6rem, 1.3vmin, 1.3rem); color: #64748b; }
-      .card-ico { font-size: clamp(1rem, 2.2vmin, 2.5rem); }
+      .card-valor { font-size: clamp(2.4rem, 6.2vmin, 7.5rem); font-weight: 800; line-height: 1; }
+      .card-sub { font-size: clamp(0.9rem, 1.9vmin, 2rem); color: #94a3b8; }
+      .card-ico { font-size: clamp(1.4rem, 3vmin, 3.2rem); }
 
       .prev-dias { display: flex; gap: clamp(0.3rem, 0.8vmin, 1rem); justify-content: space-between; }
       .prev-dia { text-align: center; flex: 1; }
-      .prev-dia .d { font-size: clamp(0.55rem, 1.1vmin, 1.1rem); color: #64748b; text-transform: capitalize; }
-      .prev-dia .e { font-size: clamp(1rem, 2.4vmin, 2.6rem); }
-      .prev-dia .t { font-size: clamp(0.6rem, 1.3vmin, 1.4rem); font-weight: 700; }
+      .prev-dia .d { font-size: clamp(0.75rem, 1.6vmin, 1.7rem); color: #94a3b8; text-transform: capitalize; }
+      .prev-dia .e { font-size: clamp(1.5rem, 3.4vmin, 3.6rem); }
+      .prev-dia .t { font-size: clamp(0.9rem, 1.9vmin, 2.1rem); font-weight: 700; }
 
-      .barra { height: clamp(0.3rem, 0.8vmin, 0.8rem); background: #334155; border-radius: 99px; overflow: hidden; }
+      .barra { height: clamp(0.4rem, 1vmin, 1rem); background: rgba(148,163,184,0.25); border-radius: 99px; overflow: hidden; }
       .barra > div { height: 100%; border-radius: 99px; }
 
       .canto {
@@ -162,17 +223,24 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       .canto.esq { left: var(--gap); }
       .canto:hover { opacity: 1; }
       .canto button, .canto a {
-        background: #1e293b; color: #cbd5e1; border: 1px solid #334155;
-        border-radius: 0.5rem; padding: 0.4rem 0.7rem; font-size: 0.85rem;
+        background: rgba(30,41,59,0.7); color: #e2e8f0; border: 1px solid rgba(148,163,184,0.3);
+        backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+        border-radius: 0.6rem; padding: 0.45rem 0.75rem; font-size: 0.95rem;
         cursor: pointer; text-decoration: none; font-family: inherit;
       }
-      .canto button:hover, .canto a:hover { background: #334155; }
+      .canto button:hover, .canto a:hover { background: rgba(51,65,85,0.9); }
 
       .duo { display: flex; gap: 1em; align-items: baseline; }
-      .duo .lbl { font-size: clamp(0.55rem, 1.1vmin, 1.1rem); color: #64748b; }
+      .duo .lbl { font-size: clamp(0.75rem, 1.5vmin, 1.6rem); color: #94a3b8; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cena::before, .cena::after { animation: none; }
+      }
     </style>
   </head>
-  <body>
+  <body class={tema} data-nascer={nascer} data-por={por}>
+    <div class="cena"></div>
+
     <div class="canto esq">
       <button id="fs-btn" title="Tela cheia">⛶ Tela cheia</button>
     </div>
@@ -334,6 +402,17 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
     </div>
 
     <script>
+      // Plano de fundo dia/noite: compara o horário local com nascer/pôr do sol
+      const nascer = document.body.dataset.nascer || '';
+      const por = document.body.dataset.por || '';
+      function aplicarNoite() {
+        if (!nascer || !por) return;
+        const agora = new Date().toLocaleTimeString('pt-BR', {
+          timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', hour12: false,
+        });
+        document.body.classList.toggle('noite', agora < nascer || agora >= por);
+      }
+
       // Relógio em tempo real
       function tick() {
         const agora = new Date();
@@ -343,6 +422,7 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
         if (dh) dh.textContent = agora.toLocaleDateString('pt-BR', {
           timeZone: 'America/Sao_Paulo', weekday: 'long', day: '2-digit', month: 'long',
         });
+        aplicarNoite();
       }
       tick();
       setInterval(tick, 1000);
