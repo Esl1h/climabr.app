@@ -78,5 +78,5 @@ export function descricaoTextual(municipio: Municipio, dados: DadosCidade | null
   // Junta com vírgulas e "e" no final, capitaliza a primeira letra
   const texto = f.join('; ') + '.';
   return texto.charAt(0).toUpperCase() + texto.slice(1) +
-    ` Dados de fontes públicas, atualizados automaticamente. Acesse também via curl, JSON ou modo telão.`;
+    ` Dados de fontes públicas, atualizados automaticamente. Acesse também via curl, JSON ou modo painel.`;
 }
