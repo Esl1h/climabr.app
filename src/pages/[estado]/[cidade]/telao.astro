@@ -210,6 +210,12 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       .card-sub { font-size: clamp(0.8rem, 1.6vmin, 1.7rem); color: #94a3b8; }
       .card-ico { font-size: clamp(1.2rem, 2.5vmin, 2.8rem); }
 
+      /* Centraliza o conteúdo dos cards, exceto o de previsão (card-wide).
+         Mantém align-items: stretch para as barras de progresso ocuparem a largura. */
+      .card:not(.card-wide) { text-align: center; }
+      .card:not(.card-wide) .card-titulo { justify-content: center; }
+      .card:not(.card-wide) .duo { justify-content: center; }
+
       .prev-dias { display: flex; gap: clamp(0.3rem, 0.8vmin, 1rem); justify-content: space-between; }
       .prev-dia { text-align: center; flex: 1; }
       .prev-dia .d { font-size: clamp(0.75rem, 1.6vmin, 1.7rem); color: #94a3b8; text-transform: capitalize; }
