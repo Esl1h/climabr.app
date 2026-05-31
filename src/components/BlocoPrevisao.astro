@@ -13,23 +13,21 @@ function diaSemana(dataStr: string): string {
 ---
 
 {previsao && previsao.length > 0 && (
-  <section aria-label="Previsão do tempo">
+  <section id="bloco-previsao" aria-label="Previsão do tempo">
     <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-slate-200">
       <span aria-hidden="true">🌤</span> Previsão 7 dias
     </h2>
     <p class="sr-only">
       Previsão para os próximos dias: {previsao.map(d => `${d.data}: mínima ${d.min}°C, máxima ${d.max}°C, ${d.condicao}`).join('; ')}
     </p>
-    <div class="grid grid-cols-4 gap-2 sm:grid-cols-7">
+    <div class="grid grid-cols-4 gap-2 sm:grid-cols-7" data-previsao-grid>
       {previsao.slice(0, 7).map((dia) => (
-        <div class="flex flex-col items-center rounded-lg border border-slate-800 bg-slate-900 px-2 py-3 text-center">
-          <span class="text-xs text-slate-400 capitalize">{diaSemana(dia.data)}</span>
-          <span class="mt-1 text-lg font-bold text-white">{dia.max}°</span>
-          <span class="text-xs text-slate-400">{dia.min}°</span>
-          {dia.chuva_mm > 0 && (
-            <span class="mt-1 text-xs text-blue-400">{dia.chuva_mm}mm</span>
-          )}
-          <span class="mt-1 text-xs text-slate-500 leading-tight">{dia.condicao}</span>
+        <div class="flex flex-col items-center rounded-lg border border-slate-800 bg-slate-900 px-2 py-3 text-center" data-dia>
+          <span class="text-xs text-slate-400 capitalize" data-f="dow">{diaSemana(dia.data)}</span>
+          <span class="mt-1 text-lg font-bold text-white" data-f="max">{dia.max}°</span>
+          <span class="text-xs text-slate-400" data-f="min">{dia.min}°</span>
+          <span class="mt-1 text-xs text-blue-400" data-f="chuva" hidden={!(dia.chuva_mm > 0)}>{dia.chuva_mm > 0 ? `${dia.chuva_mm}mm` : ''}</span>
+          <span class="mt-1 text-xs text-slate-500 leading-tight" data-f="cond">{dia.condicao}</span>
         </div>
       ))}
     </div>
