@@ -110,7 +110,8 @@ def fetch_batch(lats: list[float], lons: list[float]) -> tuple[list[dict], list[
               "&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,"
               "uv_index_max,weathercode,sunrise,sunset,daylight_duration,"
               "windspeed_10m_max,winddirection_10m_dominant,windgusts_10m_max"
-              "&current_weather=true"
+              "&current=temperature_2m,weather_code,wind_speed_10m,wind_direction_10m,"
+              "relative_humidity_2m,pressure_msl,dew_point_2m"
               "&timezone=America%2FSao_Paulo&forecast_days=7")
 
     req = urllib.request.Request(url_fc, headers={"User-Agent": "climabr.app/1.0"})
@@ -134,7 +135,7 @@ def fetch_batch(lats: list[float], lons: list[float]) -> tuple[list[dict], list[
 def processar_cidade(fc: dict, aq: dict, municipio: dict, agora: str, hoje: date) -> dict:
     """Monta o dict de dados para uma cidade a partir do resultado Open-Meteo."""
     daily = fc.get("daily", {})
-    current = fc.get("current_weather", {})
+    current = fc.get("current", {})
     aq_current = aq.get("current", {})
     lat = municipio.get("lat") or fc.get("latitude", 0)
 
@@ -209,8 +210,8 @@ def processar_cidade(fc: dict, aq: dict, municipio: dict, agora: str, hoje: date
     vento_max = daily.get("windspeed_10m_max", [None])[0]
     vento_rajada = daily.get("windgusts_10m_max", [None])[0]
     vento_direcao_dom = daily.get("winddirection_10m_dominant", [None])[0]
-    vento_atual_kmh = current.get("windspeed") if current else None
-    vento_atual_dir = current.get("winddirection") if current else None
+    vento_atual_kmh = current.get("wind_speed_10m") if current else None
+    vento_atual_dir = current.get("wind_direction_10m") if current else None
 
     def graus_para_cardinal(g: float) -> str:
         dirs = ["N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSO","SO","OSO","O","ONO","NO","NNO"]
@@ -233,7 +234,10 @@ def processar_cidade(fc: dict, aq: dict, municipio: dict, agora: str, hoje: date
         "sol": sol_dict,
         "lua": lua_dict,
         "vento": vento_dict,
-        "temperatura_atual": round(float(current.get("temperature", 0) or 0), 1) if current else None,
+        "temperatura_atual": round(float(current.get("temperature_2m", 0) or 0), 1) if current else None,
+        "umidade_pct": int(current.get("relative_humidity_2m")) if current and current.get("relative_humidity_2m") is not None else None,
+        "pressao_hpa": round(float(current.get("pressure_msl"))) if current and current.get("pressure_msl") is not None else None,
+        "ponto_orvalho_c": round(float(current.get("dew_point_2m")), 1) if current and current.get("dew_point_2m") is not None else None,
     }
 
 def main():
