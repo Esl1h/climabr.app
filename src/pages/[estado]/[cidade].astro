@@ -89,14 +89,14 @@ const temDados = dados && (
     <span class="text-white">{municipio.nome}</span>
   </nav>
 
-  <div class="mb-8">
+  <div class="mb-8" id="clima-root" data-lat={municipio.lat ?? ''} data-lon={municipio.lon ?? ''}>
     <h1 class="text-2xl font-bold text-white">
       {municipio.nome}
       <span class="text-slate-400 text-lg">/{municipio.estado.toUpperCase()}</span>
     </h1>
-    {dados?.temperatura_atual != null && (
-      <p class="mt-1 text-slate-300 text-sm">{dados.temperatura_atual}°C agora</p>
-    )}
+    <p id="clima-agora" class="mt-1 text-slate-300 text-sm" hidden={dados?.temperatura_atual == null}>
+      {dados?.temperatura_atual != null ? `${dados.temperatura_atual}°C agora` : ''}
+    </p>
     {dados?.atualizado_em ? (
       <p class="mt-1 text-xs text-slate-500">
         Atualizado em {formatarDataHora(dados.atualizado_em)}
@@ -191,4 +191,9 @@ const temDados = dados && (
       },
     ],
   })} />
+
+  <script>
+    import { hidratarClima } from '../../scripts/previsao-cliente';
+    hidratarClima();
+  </script>
 </PainelLayout>
