@@ -3,8 +3,11 @@ import type { DadosCidade } from '../lib/types';
 
 interface Props {
   qualidade_ar: DadosCidade['qualidade_ar'];
+  umidade_pct?: number | null;
+  pressao_hpa?: number | null;
+  ponto_orvalho_c?: number | null;
 }
-const { qualidade_ar } = Astro.props;
+const { qualidade_ar, umidade_pct, pressao_hpa, ponto_orvalho_c } = Astro.props;
 
 function corAqi(indice: number): string {
   if (indice <= 50) return 'text-emerald-400';
@@ -60,6 +63,21 @@ const pct = qualidade_ar ? Math.min(100, Math.round((qualidade_ar.indice / 300) 
       </div>
       <div class="mt-2 flex justify-between text-xs text-slate-600">
         <span>Boa</span><span>Moderada</span><span>Ruim</span><span>Péssima</span>
+      </div>
+
+      <div class="mt-3 grid grid-cols-3 gap-2 border-t border-slate-800 pt-3 text-center" data-condicoes>
+        <div>
+          <p class="text-xs text-slate-500">Umidade</p>
+          <p class="text-sm font-semibold text-slate-200" data-cond="umidade">{umidade_pct != null ? `${umidade_pct}%` : '—'}</p>
+        </div>
+        <div>
+          <p class="text-xs text-slate-500">Pressão</p>
+          <p class="text-sm font-semibold text-slate-200" data-cond="pressao">{pressao_hpa != null ? `${pressao_hpa} hPa` : '—'}</p>
+        </div>
+        <div>
+          <p class="text-xs text-slate-500">Ponto de orvalho</p>
+          <p class="text-sm font-semibold text-slate-200" data-cond="orvalho">{ponto_orvalho_c != null ? `${ponto_orvalho_c}°C` : '—'}</p>
+        </div>
       </div>
     </div>
   </section>

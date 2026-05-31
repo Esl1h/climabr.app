@@ -42,7 +42,7 @@ function diaSemana(dataStr: string): string {
 
 async function buscarOpenMeteo(lat: number, lon: number): Promise<any> {
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}`
-    + `&current=temperature_2m,weather_code`
+    + `&current=temperature_2m,weather_code,relative_humidity_2m,pressure_msl,dew_point_2m`
     + `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_sum`
     + `&timezone=America%2FSao_Paulo&forecast_days=7`;
 
@@ -77,6 +77,18 @@ export async function hidratarClima(): Promise<void> {
     data = await buscarOpenMeteo(lat, lon);
   } catch {
     return; // mantém o snapshot do build
+  }
+
+  // Condições atuais (umidade, pressão, ponto de orvalho)
+  const cur = data?.current;
+  if (cur) {
+    const setCond = (campo: string, v: string) => {
+      const el = document.querySelector<HTMLElement>(`[data-cond="${campo}"]`);
+      if (el) el.textContent = v;
+    };
+    if (typeof cur.relative_humidity_2m === 'number') setCond('umidade', `${Math.round(cur.relative_humidity_2m)}%`);
+    if (typeof cur.pressure_msl === 'number') setCond('pressao', `${Math.round(cur.pressure_msl)} hPa`);
+    if (typeof cur.dew_point_2m === 'number') setCond('orvalho', `${arred(cur.dew_point_2m)}°C`);
   }
 
   // Temperatura atual

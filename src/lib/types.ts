@@ -6,6 +6,9 @@ export interface DadosCidade {
   longitude: number | null;
   atualizado_em: string;
   temperatura_atual?: number | null;
+  umidade_pct?: number | null;
+  pressao_hpa?: number | null;
+  ponto_orvalho_c?: number | null;
 
   qualidade_ar?: {
     indice: number;

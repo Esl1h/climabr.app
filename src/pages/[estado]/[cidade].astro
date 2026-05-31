@@ -114,7 +114,12 @@ const temDados = dados && (
   {temDados ? (
     <div class="space-y-8">
       <BlocoPrevisao previsao={dados!.previsao} />
-      <BlocoAr qualidade_ar={dados!.qualidade_ar} />
+      <BlocoAr
+        qualidade_ar={dados!.qualidade_ar}
+        umidade_pct={dados!.umidade_pct}
+        pressao_hpa={dados!.pressao_hpa}
+        ponto_orvalho_c={dados!.ponto_orvalho_c}
+      />
       <BlocoUV uv={dados!.uv} />
       <BlocoReservatorio reservatorio={dados!.reservatorio} />
       <BlocoVento vento={dados!.vento} />
