@@ -58,6 +58,13 @@ const dengue = dados?.dengue;
 const sol = dados?.sol;
 const lua = dados?.lua;
 
+// Condições atuais do ar (umidade, pressão, ponto de orvalho) — vão no card de Ar
+const condParts: string[] = [];
+if (dados?.umidade_pct != null) condParts.push(`💧${dados.umidade_pct}%`);
+if (dados?.pressao_hpa != null) condParts.push(`${dados.pressao_hpa}hPa`);
+if (dados?.ponto_orvalho_c != null) condParts.push(`🌡${Math.round(dados.ponto_orvalho_c)}°`);
+const arCond = condParts.length ? ' · ' + condParts.join(' · ') : '';
+
 const SURF_COR: Record<string, string> = {
   bom: '#34d399', razoavel: '#fbbf24', ruim: '#f87171', perigoso: '#ef4444', desconhecido: '#94a3b8',
 };
@@ -357,7 +364,7 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
           <div class="card">
             <div class="card-titulo"><span class="card-ico">💨</span> Ar</div>
             <div class="card-valor" style={`color:${corAqi(ar.indice)}`}>{ar.indice}</div>
-            <div class="card-sub">AQI · {ar.categoria}</div>
+            <div class="card-sub">{ar.categoria}<span id="ar-cond">{arCond}</span></div>
             <div class="barra"><div style={`width:${Math.min(100, ar.indice / 3)}%; background:${corAqi(ar.indice)}`}></div></div>
           </div>
         )}
@@ -517,7 +524,7 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       async function hidratarClima() {
         if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
         const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}`
-          + `&current=temperature_2m,weather_code`
+          + `&current=temperature_2m,weather_code,relative_humidity_2m,pressure_msl,dew_point_2m`
           + `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_sum`
           + `&timezone=America%2FSao_Paulo&forecast_days=7`;
         const chave = `om:${lat},${lon}`;
@@ -538,6 +545,17 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
 
         // Temperatura atual + tema de fundo + condição (ao vivo)
         const cur = data?.current;
+
+        // Condições do ar: umidade, pressão, ponto de orvalho
+        const arCondEl = document.getElementById('ar-cond');
+        if (arCondEl && cur) {
+          const partes: string[] = [];
+          if (typeof cur.relative_humidity_2m === 'number') partes.push(`💧${Math.round(cur.relative_humidity_2m)}%`);
+          if (typeof cur.pressure_msl === 'number') partes.push(`${Math.round(cur.pressure_msl)}hPa`);
+          if (typeof cur.dew_point_2m === 'number') partes.push(`🌡${Math.round(cur.dew_point_2m)}°`);
+          if (partes.length) arCondEl.textContent = ' · ' + partes.join(' · ');
+        }
+
         if (cur && typeof cur.temperature_2m === 'number') {
           const tEl = document.getElementById('temp-atual');
           if (tEl) { tEl.textContent = `${arred(cur.temperature_2m)}°`; tEl.hidden = false; }
