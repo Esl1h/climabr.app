@@ -23,6 +23,57 @@ Cloudflare (tudo no free tier)
 
 ---
 
+## Configuração atual na Cloudflare (free tier)
+
+Estado dos recursos habilitados na conta `Eslih` (Account ID `792641d0336168a822d3127305c9b683`).
+
+**Rede / performance (habilitados):**
+- HTTP/3 (QUIC), 0-RTT, Early Hints, Speed Brain, Brotli
+- Tiered Cache, Crawler Hints, Always Online
+- Cloudflare Fonts (sem efeito prático: fontes são self-hosted via `@fontsource`)
+
+**TLS / DNS (habilitados):**
+- SSL/TLS Full (strict), Always Use HTTPS, TLS mínimo definido, HSTS
+- DNSSEC (DS publicado automaticamente por estar no Cloudflare Registrar)
+
+**Segurança (habilitados):**
+- WAF Free Managed Ruleset + DDoS (sempre ativo)
+- Rate Limiting: 1 regra grátis, por IP, ~50 req/10s, ação Block curto
+- Page Shield: Script Monitoring (free, só inventário; detecção maliciosa é Enterprise).
+  Baseline esperada de script externo: apenas `static.cloudflareinsights.com/beacon.min.js`.
+
+**Redirect (Page Rule):**
+- `www.climabr.app/*` → `https://climabr.app/$1` (301), com DNS `www` proxied.
+  O Worker roda só no apex, então o redirect www vive na Page Rule, não no Worker.
+
+**Analytics:**
+- Web Analytics (RUM). A injeção automática NÃO é confiável atrás do Worker, então o
+  beacon é injetado **manualmente** no `src/layouts/PainelLayout.astro` com o token do site.
+
+**Cache no Worker:**
+- `caches.default` cacheia as respostas `.svg`/`.png` (UA-independentes; o PNG via resvg
+  é o ponto caro de CPU). Confirma com `cf-cache-status: HIT`.
+
+**Desativado de propósito:**
+- Hotlink Protection: quebraria os cards `.png`/`.svg` compartilháveis (og:image). E não há
+  ganho de custo, pois bandwidth é grátis e o PNG é cacheado no edge.
+- gRPC: não há backend gRPC no projeto.
+- Bot Fight Mode: bloquearia `curl`/`wget`, que é a interface diferencial do projeto.
+- R2: ativado mas dormente (dados embutidos no build).
+- Recursos pagos: Priorização HTTP/2, Argo, Load Balancing, Health Checks standalone,
+  Images, Stream, Logpush, detecção maliciosa do Page Shield.
+
+### CSP — allowlist e motivo
+
+A CSP fica em `public/_headers`. Cada origem externa liberada tem um motivo; ao adicionar
+uma feature que carregue script ou faça fetch externo, atualize a CSP ou ela quebra silenciosamente:
+- `script-src ... https://static.cloudflareinsights.com` — beacon do Web Analytics
+- `connect-src ... https://api.open-meteo.com` — hidratação client-side (tempo/previsão ao vivo)
+- `connect-src ... https://cloudflareinsights.com` — envio de dados do beacon
+- `connect-src ... https://*.r2.dev` — reservado para uso futuro do R2
+
+---
+
 ## Parte 1 — GitHub
 
 ### 1.1 Repositório (já feito)
