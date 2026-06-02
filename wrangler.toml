@@ -10,6 +10,11 @@ SITE_URL = "https://climabr.app"
 pattern = "climabr.app/*"
 zone_name = "climabr.app"
 
+# Importa a fonte do card PNG como binário (resvg precisa de TTF para renderizar texto)
+[[rules]]
+type = "Data"
+globs = ["**/*.ttf"]
+
 # Desenvolvimento local (o Worker importa .wasm, então usar wrangler dev):
 #   npm run dev   (Astro :4321)
 #   npx wrangler dev --port 8788 --var SITE_URL:http://localhost:4321

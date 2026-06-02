@@ -17,6 +17,12 @@
 import { Resvg, initWasm } from '@resvg/resvg-wasm';
 // @ts-ignore — o wrangler empacota o .wasm como WebAssembly.Module
 import resvgWasm from './resvg.wasm';
+// @ts-ignore — o wrangler empacota o .ttf como ArrayBuffer (rule type = Data)
+import cardFontTtf from './card-font.ttf';
+
+// Fonte (subset Inter Medium) para o resvg renderizar texto no PNG.
+// Sem fonte carregada o resvg não desenha texto algum (só as formas).
+const CARD_FONT = new Uint8Array(cardFontTtf as ArrayBuffer);
 
 // ---------------------------------------------------------------------------
 // Tipos e constantes
@@ -35,7 +41,16 @@ function initResvg(): Promise<unknown> {
 
 async function svgParaPng(svg: string): Promise<Uint8Array> {
   await initResvg();
-  const resvg = new Resvg(svg, { fitTo: { mode: 'width', value: 1200 } });
+  const resvg = new Resvg(svg, {
+    fitTo: { mode: 'width', value: 1200 },
+    font: {
+      fontBuffers: [CARD_FONT],
+      loadSystemFonts: false,
+      defaultFontFamily: 'Inter Medium',
+      sansSerifFamily: 'Inter Medium',
+      monospaceFamily: 'Inter Medium',
+    },
+  });
   return resvg.render().asPng();
 }
 
@@ -511,7 +526,7 @@ function xmlEsc(s: unknown): string {
     .replace(/'/g, '&apos;');
 }
 
-function formatarSvg(dados: Dados): string {
+function formatarSvg(dados: Dados, paraPng = false): string {
   const cidade = xmlEsc(dados.cidade as string || '');
   const uf = xmlEsc((dados.estado as string || '').toUpperCase());
   const agora = dados.atualizado_em
@@ -539,7 +554,13 @@ function formatarSvg(dados: Dados): string {
   const rows: string[] = [];
   let y = 110;
   const addRow = (icon: string, label: string, valor: string, cor: string, sub = '') => {
-    rows.push(`<text x="24" y="${y}" font-size="16">${xmlEsc(icon)}</text>`);
+    // No PNG o resvg não renderiza emoji; usa um ícone vetorial (dot por severidade).
+    // No SVG (browser) mantém o emoji, que renderiza bem.
+    if (paraPng) {
+      rows.push(`<circle cx="30" cy="${y - 5}" r="5" fill="${cor}"/>`);
+    } else {
+      rows.push(`<text x="24" y="${y}" font-size="16">${xmlEsc(icon)}</text>`);
+    }
     rows.push(`<text x="48" y="${y}" fill="#94a3b8" font-size="12" font-family="monospace">${xmlEsc(label)}</text>`);
     rows.push(`<text x="180" y="${y}" fill="${cor}" font-size="14" font-weight="bold" font-family="monospace">${xmlEsc(valor)}</text>`);
     if (sub) rows.push(`<text x="180" y="${y + 14}" fill="#64748b" font-size="11" font-family="monospace">${xmlEsc(sub)}</text>`);
@@ -550,8 +571,8 @@ function formatarSvg(dados: Dados): string {
     const cond = (previsao.condicao as string || '').substring(0, 28);
     addRow(tempoEmoji, 'Previsão', `↓${previsao.min}° ↑${previsao.max}°C`, '#e2e8f0', cond);
   }
-  if (ar) addRow('💨', 'Ar (AQI)', `${ar.indice} — ${ar.categoria}`, aqiCor, ar.pm25 ? `PM2.5: ${ar.pm25} µg/m³` : '');
-  if (uv && Number(uv.indice) > 0) addRow('☀️', 'UV', `${uv.indice} — ${uv.categoria}`, uvCor);
+  if (ar) addRow('💨', 'Ar (AQI)', `${ar.indice} · ${ar.categoria}`, aqiCor, ar.pm25 ? `PM2.5: ${ar.pm25} µg/m³` : '');
+  if (uv && Number(uv.indice) > 0) addRow('☀️', 'UV', `${uv.indice} · ${uv.categoria}`, uvCor);
   if (res?.nivel_pct != null) {
     const resBarra = Math.round(Number(res.nivel_pct));
     addRow('🌊', 'Represa', `${res.nivel_pct}%`, resCor, `${res.nome}${res.aproximado ? ' (aprox.)' : ''}`);
@@ -677,12 +698,12 @@ export default {
         const dados = await buscarDados(siteUrl, estado, cidade);
         if (dados && !dados._status) {
           await hidratarTempo(dados, siteUrl, ctx);
-          const svg = formatarSvg(dados);
 
           if (querPng) {
-            // PNG real para og:image (Twitter/X, Facebook, WhatsApp exigem raster)
+            // PNG real para og:image (Twitter/X, Facebook, WhatsApp exigem raster).
+            // Variante com ícones vetoriais (resvg não renderiza emoji) + fonte embutida.
             try {
-              const png = await svgParaPng(svg);
+              const png = await svgParaPng(formatarSvg(dados, true));
               const resp = new Response(png, {
                 headers: {
                   'Content-Type': 'image/png',
@@ -698,6 +719,7 @@ export default {
             }
           }
 
+          const svg = formatarSvg(dados);
           const resp = new Response(svg, {
             headers: {
               'Content-Type': 'image/svg+xml; charset=utf-8',
