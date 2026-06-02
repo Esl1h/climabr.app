@@ -51,7 +51,7 @@ function agoraFormatado(): string {
 async function buscarOpenMeteo(lat: number, lon: number): Promise<any> {
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}`
     + `&current=temperature_2m,weather_code,relative_humidity_2m,pressure_msl,dew_point_2m`
-    + `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_sum`
+    + `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_sum,uv_index_max`
     + `&timezone=America%2FSao_Paulo&forecast_days=7`;
 
   const chave = `om:${lat},${lon}`;
@@ -70,6 +70,48 @@ async function buscarOpenMeteo(lat: number, lon: number): Promise<any> {
     sessionStorage.setItem(chave, JSON.stringify({ t: Date.now(), d }));
   } catch { /* cota cheia/privado: ignora */ }
   return d;
+}
+
+// Qualidade do ar é um endpoint separado do Open-Meteo (CSP libera o subdomínio)
+async function buscarAr(lat: number, lon: number): Promise<any | null> {
+  const url = `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${lat}&longitude=${lon}`
+    + `&current=us_aqi,pm2_5,pm10&timezone=America%2FSao_Paulo`;
+  const chave = `om-aq:${lat},${lon}`;
+  try {
+    const raw = sessionStorage.getItem(chave);
+    if (raw) {
+      const { t, d } = JSON.parse(raw);
+      if (Date.now() - t < TTL_MS) return d;
+    }
+  } catch { /* segue para a rede */ }
+  try {
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    const d = await res.json();
+    try { sessionStorage.setItem(chave, JSON.stringify({ t: Date.now(), d })); } catch { /* ignora */ }
+    return d;
+  } catch {
+    return null;
+  }
+}
+
+// Cores (hex, espelham as classes Tailwind dos blocos) e categorias (espelham o scraper)
+function corUv(uv: number): string {
+  return uv < 3 ? '#34d399' : uv < 6 ? '#facc15' : uv < 8 ? '#fb923c' : uv < 11 ? '#f87171' : '#c084fc';
+}
+function catUv(uv: number): string {
+  return uv < 3 ? 'Baixo' : uv < 6 ? 'Moderado' : uv < 8 ? 'Alto' : uv < 11 ? 'Muito Alto' : 'Extremo';
+}
+function corAqi(a: number): string {
+  return a <= 50 ? '#34d399' : a <= 100 ? '#facc15' : a <= 150 ? '#fb923c' : a <= 200 ? '#f87171' : '#dc2626';
+}
+function catAqi(a: number): string {
+  if (a <= 50) return 'Boa';
+  if (a <= 100) return 'Moderada';
+  if (a <= 150) return 'Ruim para grupos sensíveis';
+  if (a <= 200) return 'Ruim';
+  if (a <= 300) return 'Muito Ruim';
+  return 'Perigosa';
 }
 
 export async function hidratarClima(): Promise<void> {
@@ -107,8 +149,7 @@ export async function hidratarClima(): Promise<void> {
     tempEl.hidden = false;
   }
 
-  // Timestamp: o tempo/previsão acabou de vir do Open-Meteo ao vivo.
-  // Atualiza o rótulo (os demais blocos seguem do build até a coleta diária).
+  // Timestamp: tempo, previsão, UV e ar acabaram de vir do Open-Meteo ao vivo.
   const atualizadoEl = document.getElementById('clima-atualizado');
   if (atualizadoEl) atualizadoEl.textContent = `Tempo atualizado em ${agoraFormatado()}`;
 
@@ -154,5 +195,35 @@ export async function hidratarClima(): Promise<void> {
         }
       }
     });
+  }
+
+  // Índice UV (uv_index_max de hoje, do mesmo fetch)
+  const uvMax = daily?.uv_index_max?.[0];
+  if (typeof uvMax === 'number') {
+    const v = arred(uvMax);
+    const cor = corUv(v);
+    const elV = document.querySelector<HTMLElement>('[data-uv-indice]');
+    const elC = document.querySelector<HTMLElement>('[data-uv-categoria]');
+    const elB = document.querySelector<HTMLElement>('[data-uv-barra]');
+    if (elV) { elV.textContent = v.toFixed(1); elV.style.color = cor; }
+    if (elC) elC.textContent = catUv(v);
+    if (elB) { elB.style.width = `${Math.min(100, Math.round((v / 12) * 100))}%`; elB.style.backgroundColor = cor; }
+  }
+
+  // Qualidade do ar (endpoint separado)
+  const ar = await buscarAr(lat, lon).catch(() => null);
+  const aqi = ar?.current?.us_aqi;
+  if (typeof aqi === 'number') {
+    const a = Math.round(aqi);
+    const cor = corAqi(a);
+    const elV = document.querySelector<HTMLElement>('[data-ar-indice]');
+    const elC = document.querySelector<HTMLElement>('[data-ar-categoria]');
+    const elB = document.querySelector<HTMLElement>('[data-ar-barra]');
+    const elPm = document.querySelector<HTMLElement>('[data-ar-pm25]');
+    if (elV) { elV.textContent = `AQI ${a}`; elV.style.color = cor; }
+    if (elC) elC.textContent = catAqi(a);
+    if (elB) { elB.style.width = `${Math.min(100, Math.round((a / 300) * 100))}%`; elB.style.backgroundColor = cor; }
+    const pm25 = ar?.current?.pm2_5;
+    if (elPm && typeof pm25 === 'number') elPm.textContent = ` · PM2.5: ${arred(pm25)} µg/m³`;
   }
 }
