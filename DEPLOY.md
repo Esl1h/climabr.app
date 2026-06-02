@@ -1,8 +1,10 @@
 # Deploy — ClimaBR.app
 
-> Guia passo a passo para colocar o site no ar de graça (GitHub + Cloudflare),
-> usar o R2 para os dados, e alternativas gratuitas. Inclui também o caminho
-> para a versão futura com login e APIs privadas em tempo real.
+> **Status: no ar em https://climabr.app (desde 2026-06).** Pages projeto
+> `climabr-app`, Worker `climabr-worker` na rota `climabr.app/*`, domínio como
+> custom domain do Pages, secrets configurados e deploy automático funcionando.
+> R2 ativado na conta mas dormente (dados embutidos no build). Este guia descreve
+> o passo a passo original e segue válido para refazer/entender a infra.
 
 ## Visão Geral da Arquitetura
 
@@ -346,16 +348,16 @@ Assim o núcleo gratuito nunca gera custo, e o premium escala sob demanda paga.
 ## Checklist de Primeiro Deploy
 
 ```
-[ ] npm install
-[ ] Gerar dados base: gerar-municipios.py, enriquecer-coords.py, gerar-mapa-cptec.py
-[ ] Primeira coleta: scrape-openmeteo.py + demais scrapers
-[ ] wrangler login
-[ ] wrangler pages project create climabr-app
-[ ] wrangler r2 bucket create climabr-dados
-[ ] Criar CLOUDFLARE_API_TOKEN e CLOUDFLARE_ACCOUNT_ID
-[ ] Adicionar os 2 secrets no GitHub
-[ ] npm run build && wrangler pages deploy dist/ --project-name=climabr-app
-[ ] wrangler deploy worker/index.ts
-[ ] Configurar domínio climabr.app em Pages → Custom domains
-[ ] Testar: curl climabr.app/sp/sao-paulo
+[x] npm install
+[x] Gerar dados base: gerar-municipios.py, enriquecer-coords.py, gerar-mapa-cptec.py
+[x] Primeira coleta: scrape-openmeteo.py + demais scrapers
+[x] wrangler login
+[x] wrangler pages project create climabr-app
+[ ] wrangler r2 bucket create climabr-dados   (dormente: R2 não está em uso)
+[x] Criar CLOUDFLARE_API_TOKEN e CLOUDFLARE_ACCOUNT_ID
+[x] Adicionar os 2 secrets no GitHub
+[x] npm run build && wrangler pages deploy dist/ --project-name=climabr-app
+[x] wrangler deploy worker/index.ts
+[x] Configurar domínio climabr.app em Pages → Custom domains
+[x] Testar: curl climabr.app/sp/sao-paulo
 ```
