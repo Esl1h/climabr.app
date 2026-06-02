@@ -565,7 +565,7 @@ function extrairPathInfo(pathname: string): { estado: string; cidade: string; ex
 }
 
 export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
+  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
     const siteUrl = env.SITE_URL ?? 'https://climabr.app';
     const ua = request.headers.get('User-Agent') ?? '';
@@ -608,6 +608,12 @@ export default {
       const querPng = ext === '.png' || format === 'png';
       const querSvg = ext === '.svg' || format === 'svg';
       if (querPng || querSvg) {
+        // Cache no edge: SVG/PNG não dependem do user-agent e o PNG (resvg)
+        // é o ponto mais caro de CPU. Evita recomputar em hits repetidos.
+        const cache = caches.default;
+        const hit = await cache.match(request);
+        if (hit) return hit;
+
         const dados = await buscarDados(siteUrl, estado, cidade);
         if (dados && !dados._status) {
           const svg = formatarSvg(dados);
@@ -616,7 +622,7 @@ export default {
             // PNG real para og:image (Twitter/X, Facebook, WhatsApp exigem raster)
             try {
               const png = await svgParaPng(svg);
-              return new Response(png, {
+              const resp = new Response(png, {
                 headers: {
                   'Content-Type': 'image/png',
                   'Cache-Control': 'public, max-age=1800',
@@ -624,12 +630,14 @@ export default {
                   ...SECURITY_HEADERS,
                 },
               });
+              ctx.waitUntil(cache.put(request, resp.clone()));
+              return resp;
             } catch {
               // Degradação graciosa: se o wasm falhar, devolve o SVG
             }
           }
 
-          return new Response(svg, {
+          const resp = new Response(svg, {
             headers: {
               'Content-Type': 'image/svg+xml; charset=utf-8',
               'Cache-Control': 'public, max-age=1800',
@@ -637,6 +645,8 @@ export default {
               ...SECURITY_HEADERS,
             },
           });
+          ctx.waitUntil(cache.put(request, resp.clone()));
+          return resp;
         }
       }
 
