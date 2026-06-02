@@ -19,6 +19,10 @@ MUNICIPIOS = Path(__file__).parent.parent / "data" / "municipios.json"
 
 INFODENGUE_URL = "https://info.dengue.mat.br/api/alertcity"
 
+# InfoDengue consolida com ~2-3 semanas de atraso; busca uma janela ampla
+# para trás e usa sempre a semana epidemiológica mais recente disponível.
+LOOKBACK_SEMANAS = 6
+
 # nivel: 0=verde, 1=amarelo, 2=laranja, 3=vermelho, 4=alerta máximo
 NIVEL_LABEL = {0: "Normal", 1: "Atenção", 2: "Alerta", 3: "Alerta Alto", 4: "Emergência"}
 NIVEL_INC_LABEL = {0: "Baixa", 1: "Média", 2: "Alta", 3: "Muito Alta"}
@@ -31,15 +35,27 @@ def semana_epidemiologica(d: date) -> tuple[int, int]:
 
 
 def fetch_doenca(geocode: int, doenca: str, semana: int, ano: int) -> dict | None:
-    """Busca dados de uma doença para um município na semana epidemiológica."""
+    """Busca dados de uma doença num município, retornando a semana mais recente.
+
+    Consulta uma janela de LOOKBACK_SEMANAS semanas para trás (atravessando o
+    ano se necessário) e devolve o registro com maior semana epidemiológica que
+    tenha nível definido, absorvendo o atraso de consolidação do InfoDengue.
+    """
+    ini = semana - LOOKBACK_SEMANAS
+    if ini >= 1:
+        ew_start, ey_start = ini, ano
+    else:
+        # janela cruza a virada de ano: completa com as últimas semanas anteriores
+        ew_start, ey_start = 52 + ini, ano - 1
     url = (f"{INFODENGUE_URL}?geocode={geocode}&disease={doenca}&format=json"
-           f"&ew_start={semana - 1}&ew_end={semana}&ey_start={ano}&ey_end={ano}")
+           f"&ew_start={ew_start}&ew_end={semana}&ey_start={ey_start}&ey_end={ano}")
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "climabr.app/1.0"})
         with urllib.request.urlopen(req, timeout=15) as r:
             dados = json.loads(r.read())
-        if dados:
-            return dados[-1]
+        validos = [d for d in dados if d.get("nivel") is not None and d.get("SE")]
+        if validos:
+            return max(validos, key=lambda d: d["SE"])
         return None
     except Exception:
         return None
@@ -84,10 +100,6 @@ def main():
 
         for doenca in ["dengue", "chikungunya", "zika"]:
             d = fetch_doenca(geocode, doenca, semana, ano)
-
-            # Fallback: tenta semana anterior se não houver dados nesta
-            if not d:
-                d = fetch_doenca(geocode, doenca, semana - 1, ano)
 
             if d and d.get("nivel") is not None:
                 nivel = int(d["nivel"])
