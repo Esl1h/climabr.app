@@ -1,8 +1,8 @@
-name: Coleta ANA + INPE (a cada 6h)
+name: Coleta ANA + INPE (diário)
 
 on:
   schedule:
-    - cron: '30 */6 * * *'
+    - cron: '30 6 * * *'   # 1x/dia (reservatórios/queimadas não mudam de hora em hora)
   workflow_dispatch:
 
 permissions:

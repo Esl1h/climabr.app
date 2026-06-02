@@ -1,8 +1,8 @@
-name: Coleta CPTEC/INMET (a cada 3h)
+name: Coleta CPTEC/INMET (diário)
 
 on:
   schedule:
-    - cron: '0 */3 * * *'
+    - cron: '0 5 * * *'   # 1x/dia (fallback CPTEC; Open-Meteo é a fonte principal)
   workflow_dispatch:
     inputs:
       estado:

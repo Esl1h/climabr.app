@@ -106,8 +106,8 @@ Em `.github/workflows/`:
 
 | Arquivo | Cron | O que faz |
 |---|---|---|
-| `dados-inmet.yml` | a cada 3h | Previsão CPTEC (fallback) |
-| `dados-ana.yml` | a cada 6h | Reservatórios ONS + queimadas NASA FIRMS |
+| `dados-inmet.yml` | 1x/dia (05h) | Previsão CPTEC (fallback) |
+| `dados-ana.yml` | 1x/dia (06h30) | Reservatórios ONS + queimadas NASA FIRMS |
 | `dados-diarios.yml` | 08h diário | Open-Meteo (previsão/UV/ar/sol/lua/vento), SABESP, COPASA, dengue |
 | `deploy.yml` | 09h + 21h + push na main | Build Astro + deploy Cloudflare Pages |
 
