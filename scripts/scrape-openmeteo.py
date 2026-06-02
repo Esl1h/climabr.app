@@ -27,8 +27,9 @@ MUNICIPIOS = Path(__file__).parent.parent / "data" / "municipios.json"
 FORECAST_URL = "https://api.open-meteo.com/v1/forecast"
 AQ_URL = "https://air-quality-api.open-meteo.com/v1/air-quality"
 
-BATCH_SIZE = 100   # Open-Meteo aceita até ~100 coordenadas por requisição
-DELAY_BATCH = 2.0  # segundos entre lotes (gentil; ~56 lotes na coleta nacional)
+BATCH_SIZE = 25    # coords por requisição; com DELAY_BATCH fica ~500/min (< limite de 600/min)
+DELAY_BATCH = 3.0  # segundos entre lotes (respeita o rate limit do Open-Meteo)
+FRESCO_HORAS = 20  # não recoleta cidade já atualizada nas últimas N horas
 
 # WMO Weather Codes → descrição PT-BR
 WMO_DESCRICAO: dict[int, str] = {
@@ -249,10 +250,28 @@ def main():
 
     municipios_com_coord = [m for m in municipios if m.get("lat") and m.get("lon")]
 
-    # Coleta sempre todos (refresh diário). Antes havia um "skip já processado"
-    # baseado na presença de umidade_pct, mas como esse campo é permanente ele
-    # congelava os dados após a primeira coleta (o tempo nunca mais atualizava).
-    # Com lotes grandes (BATCH_SIZE), a rodada completa termina em poucos minutos.
+    # Coleta incremental por data. O free tier do Open-Meteo (~10k chamadas/dia,
+    # 600/min) não cobre uma passada completa diária nas 5.571 cidades, então cada
+    # rodada processa as MAIS DESATUALIZADAS primeiro e pula as já coletadas nas
+    # últimas FRESCO_HORAS. Assim a frescura cicla por todas em ~1-2 dias, sem o
+    # congelamento do marcador permanente antigo (que checava só a presença do campo).
+    def clima_ts(m: dict) -> float:
+        f = DATA_DIR / m["estado"] / f"{m['slug']}.json"
+        if not f.exists():
+            return 0.0
+        try:
+            ts = json.loads(f.read_text(encoding="utf-8")).get("_clima_em")
+            return datetime.fromisoformat(ts).timestamp() if ts else 0.0
+        except Exception:
+            return 0.0
+
+    agora_ts = datetime.now(timezone.utc).timestamp()
+    limite = agora_ts - FRESCO_HORAS * 3600
+    municipios_com_coord.sort(key=clima_ts)  # mais velhos (ou sem marca) primeiro
+    pendentes = [m for m in municipios_com_coord if clima_ts(m) < limite]
+    if len(pendentes) < len(municipios_com_coord):
+        print(f"  {len(municipios_com_coord) - len(pendentes)} já frescos (<{FRESCO_HORAS}h), pulando.")
+    municipios_com_coord = pendentes
     total = len(municipios_com_coord)
     print(f"Coletando Open-Meteo para {total} municípios em lotes de {BATCH_SIZE}...")
 
@@ -303,6 +322,7 @@ def main():
                 "latitude": m.get("lat"),
                 "longitude": m.get("lon"),
                 "atualizado_em": agora,
+                "_clima_em": agora,  # marca de frescura própria do Open-Meteo (skip incremental)
             })
             existente.update({k: v for k, v in novos.items() if v is not None})
             arquivo.write_text(json.dumps(existente, ensure_ascii=False, indent=2), encoding="utf-8")
