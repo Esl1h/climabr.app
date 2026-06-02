@@ -27,8 +27,8 @@ MUNICIPIOS = Path(__file__).parent.parent / "data" / "municipios.json"
 FORECAST_URL = "https://api.open-meteo.com/v1/forecast"
 AQ_URL = "https://air-quality-api.open-meteo.com/v1/air-quality"
 
-BATCH_SIZE = 20   # Open-Meteo aceita até ~100 por requisição
-DELAY_BATCH = 5.0  # segundos entre lotes (evita rate limit 429)
+BATCH_SIZE = 100   # Open-Meteo aceita até ~100 coordenadas por requisição
+DELAY_BATCH = 2.0  # segundos entre lotes (gentil; ~56 lotes na coleta nacional)
 
 # WMO Weather Codes → descrição PT-BR
 WMO_DESCRICAO: dict[int, str] = {
@@ -249,22 +249,10 @@ def main():
 
     municipios_com_coord = [m for m in municipios if m.get("lat") and m.get("lon")]
 
-    # Pula cidades já processadas nesta rodada (tem campo uv preenchido)
-    def ja_tem_dados(m: dict) -> bool:
-        f = DATA_DIR / m["estado"] / f"{m['slug']}.json"
-        if not f.exists():
-            return False
-        try:
-            d = json.loads(f.read_text(encoding="utf-8"))
-            # Pula só se já tiver umidade (campo novo desta versão)
-            return d.get("umidade_pct") is not None
-        except Exception:
-            return False
-
-    municipios_pendentes = [m for m in municipios_com_coord if not ja_tem_dados(m)]
-    if len(municipios_pendentes) < len(municipios_com_coord):
-        print(f"  {len(municipios_com_coord) - len(municipios_pendentes)} já processados, pulando.")
-    municipios_com_coord = municipios_pendentes
+    # Coleta sempre todos (refresh diário). Antes havia um "skip já processado"
+    # baseado na presença de umidade_pct, mas como esse campo é permanente ele
+    # congelava os dados após a primeira coleta (o tempo nunca mais atualizava).
+    # Com lotes grandes (BATCH_SIZE), a rodada completa termina em poucos minutos.
     total = len(municipios_com_coord)
     print(f"Coletando Open-Meteo para {total} municípios em lotes de {BATCH_SIZE}...")
 
