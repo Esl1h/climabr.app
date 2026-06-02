@@ -106,6 +106,15 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
               Modo Painel
             </a>
             <a
+              id="menu-mobile"
+              href="#"
+              class="hidden items-center gap-2 px-4 py-2.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
+              role="menuitem"
+            >
+              <span class="text-emerald-400 text-xs">📱</span>
+              Modo Mobile
+            </a>
+            <a
               href="/curl"
               class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
               role="menuitem"
@@ -183,13 +192,21 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
         }
       });
 
-      // Modo Telão: só aparece em páginas de cidade (/uf/slug)
+      // Modo Painel e Modo Mobile: só aparecem em páginas de cidade (/uf/slug)
       const telaoLink = document.getElementById('menu-telao');
+      const mobileLink = document.getElementById('menu-mobile');
       const m = location.pathname.match(/^\/([a-z]{2})\/([a-z0-9-]+)\/?$/);
-      if (telaoLink && m) {
-        telaoLink.setAttribute('href', `/${m[1]}/${m[2]}/telao`);
-        telaoLink.classList.remove('hidden');
-        telaoLink.classList.add('flex');
+      if (m) {
+        if (telaoLink) {
+          telaoLink.setAttribute('href', `/${m[1]}/${m[2]}/telao`);
+          telaoLink.classList.remove('hidden');
+          telaoLink.classList.add('flex');
+        }
+        if (mobileLink) {
+          mobileLink.setAttribute('href', `/mobile?c=${m[1]}/${m[2]}`);
+          mobileLink.classList.remove('hidden');
+          mobileLink.classList.add('flex');
+        }
       }
     </script>
   </body>
