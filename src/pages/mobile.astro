@@ -15,7 +15,9 @@ const titulo = 'Modo Mobile — climabr.app';
     <meta name="robots" content="noindex" />
     <meta name="theme-color" content="#020617" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <style>
+    <!-- is:global porque os tiles .card são injetados via innerHTML no cliente
+         e não recebem o atributo de escopo do Astro -->
+    <style is:global>
       :root { --gap: clamp(0.5rem, 1.4vmin, 1.4rem); }
       * { box-sizing: border-box; }
       html, body { margin: 0; padding: 0; height: 100%; background: #020617; }
