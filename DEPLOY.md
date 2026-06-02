@@ -25,7 +25,7 @@ Cloudflare (tudo no free tier)
 
 ## Configuração atual na Cloudflare (free tier)
 
-Estado dos recursos habilitados na conta `Eslih` (Account ID `792641d0336168a822d3127305c9b683`).
+Estado dos recursos habilitados na conta Cloudflare do projeto (Account ID no dashboard / GitHub Secrets).
 
 **Rede / performance (habilitados):**
 - HTTP/3 (QUIC), 0-RTT, Early Hints, Speed Brain, Brotli
@@ -332,67 +332,6 @@ https://cdn.jsdelivr.net/gh/Esl1h/climabr.app/data/cidades/sp/cotia.json
 
 > Recomendação: manter Cloudflare. O free tier é generoso e o Worker é o que
 > diferencia o projeto (curl, SVG, geolocalização). GitHub Pages é o plano B.
-
----
-
-## Parte 7 — Versão Futura: Login + APIs Privadas + Tempo Real
-
-> Planejamento para quando o projeto evoluir além do estático gratuito.
-
-### 7.1 O que muda
-
-A versão atual é **estática + dados públicos**. A versão premium teria:
-
-- **Login de usuários** (contas, cidades favoritas, alertas personalizados)
-- **APIs privadas pagas** com dados mais granulares (radar meteorológico,
-  qualidade do ar por estação em tempo real, previsão hiperlocal)
-- **Monitoramento em tempo real** (WebSocket/SSE para alertas push)
-- **Notificações** (geada, IQAr crítico, dengue nível 3+, ressaca)
-
-### 7.2 Stack sugerida (mantendo custo baixo)
-
-| Recurso | Opção grátis/barata | Observação |
-|---|---|---|
-| **Auth** | Cloudflare Access, Supabase Auth, Clerk (free tier) | Supabase: 50k usuários grátis |
-| **Banco de dados** | Cloudflare D1 (SQLite), Supabase Postgres, Turso | D1 free: 5 GB |
-| **Tempo real** | Cloudflare Durable Objects, Supabase Realtime | DO para WebSocket no edge |
-| **Filas/jobs** | Cloudflare Queues, Workers Cron | coleta de APIs privadas |
-| **Cache quente** | Cloudflare KV, Workers Cache API | dados de tempo real com TTL curto |
-| **Push** | Web Push API, OneSignal (free 10k) | notificações de alerta |
-| **Pagamentos** | Stripe, Mercado Pago | assinatura premium |
-
-### 7.3 Arquitetura proposta
-
-```
-Usuário logado
-  ├── Cloudflare Access/Supabase → autenticação
-  ├── D1/Supabase → preferências, cidades favoritas, histórico
-  ├── Durable Object → conexão WebSocket por usuário (alertas em tempo real)
-  └── Worker + Queue → consome APIs privadas (radar, estações) sob demanda
-
-APIs privadas (pagas) candidatas:
-  ├── Tomorrow.io / Weatherbit → previsão hiperlocal e radar
-  ├── IQAir API → qualidade do ar por estação (10k req/mês grátis)
-  ├── Windy API → radar de vento e ondas
-  └── Estações meteorológicas privadas (PWS) → dados locais em tempo real
-```
-
-### 7.4 Modelo de monetização da versão premium
-
-- **Free:** o que existe hoje (dados públicos, 1 cidade salva localmente)
-- **Premium (assinatura):** múltiplas cidades, alertas push, radar em tempo real,
-  histórico, sem anúncios, API key para uso programático
-- **B2B:** dashboard para produtores rurais, gestores prediais, prefeituras
-  (DEC/FEC de energia, monitoramento de bacias, alertas de defesa civil)
-
-### 7.5 Princípio de design
-
-Manter a **camada gratuita estática separada** da camada premium dinâmica:
-- O site público continua estático no Pages (custo zero, SEO máximo)
-- A área logada vive em rotas `/app/*` servidas por Workers + D1/Supabase
-- APIs privadas nunca expõem chaves no client — sempre via Worker como proxy
-
-Assim o núcleo gratuito nunca gera custo, e o premium escala sob demanda paga.
 
 ---
 
