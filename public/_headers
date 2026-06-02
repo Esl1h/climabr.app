@@ -15,4 +15,4 @@
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.r2.dev https://api.open-meteo.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.r2.dev https://api.open-meteo.com https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests

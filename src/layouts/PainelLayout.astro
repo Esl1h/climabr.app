@@ -65,6 +65,10 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
     <!-- PWA / theme -->
     <meta name="theme-color" content="#0f172a" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Cloudflare Web Analytics (RUM) — injeção manual: a automática não é
+         confiável atrás do Worker. CSP libera static.cloudflareinsights.com -->
+    <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a4a1961d5b3e41ef9e82244c25e866a3"}'></script>
   </head>
   <body class="min-h-screen bg-slate-950 text-slate-100 antialiased">
     <header class="border-b border-slate-800 px-4 py-3">
