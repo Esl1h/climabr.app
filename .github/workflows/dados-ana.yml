@@ -5,6 +5,9 @@ on:
     - cron: '30 */6 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   coletar:
     runs-on: ubuntu-latest
@@ -23,14 +26,6 @@ jobs:
 
       - name: Coleta queimadas INPE
         run: python3 scripts/scrape-inpe.py
-
-      - name: Upload para R2
-        uses: cloudflare/wrangler-action@v4
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: r2 object put climabr-dados --recursive --local-path=data/cidades/
-        continue-on-error: true
 
       - name: Commit dados locais (fallback)
         if: always()
