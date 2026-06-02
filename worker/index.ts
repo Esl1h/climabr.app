@@ -367,9 +367,14 @@ function gerarBarra(pct: number, largura: number, color: boolean): string {
 // Formato Prometheus
 // ---------------------------------------------------------------------------
 
+// Escapa valores de label Prometheus (\, " e quebras de linha) — defesa em profundidade
+function promEsc(s: unknown): string {
+  return String(s ?? '').replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n');
+}
+
 function formatarPrometheus(dados: Dados): string {
   const cidade = (dados.cidade as string || '').replace(/[^a-z0-9_]/gi, '_');
-  const estado = (dados.estado as string || '').toLowerCase();
+  const estado = promEsc((dados.estado as string || '').toLowerCase());
   const labels = `cidade="${cidade}",estado="${estado}"`;
   const linhas: string[] = [
     `# HELP climabr_atualizado_timestamp Timestamp da última coleta de dados`,
@@ -396,7 +401,7 @@ function formatarPrometheus(dados: Dados): string {
   const res = dados.reservatorio as Dados | undefined;
   if (res?.nivel_pct != null) {
     linhas.push(`# HELP climabr_reservatorio_pct Nível do reservatório (%)`, `# TYPE climabr_reservatorio_pct gauge`);
-    linhas.push(`climabr_reservatorio_pct{${labels},nome="${res.nome}",aproximado="${res.aproximado ?? false}"} ${res.nivel_pct}`);
+    linhas.push(`climabr_reservatorio_pct{${labels},nome="${promEsc(res.nome)}",aproximado="${res.aproximado ?? false}"} ${res.nivel_pct}`);
   }
 
   const dengue = dados.dengue as Dados | undefined;
