@@ -133,6 +133,17 @@ const LUA_EMOJI: Record<string, string> = {
   'Quarto Minguante': '🌗', 'Minguante': '🌘',
 };
 
+// WMO Weather Codes → descrição PT-BR (espelha scripts/scrape-openmeteo.py e o cliente)
+const WMO_DESCRICAO: Record<number, string> = {
+  0: 'Céu limpo', 1: 'Principalmente limpo', 2: 'Parcialmente nublado', 3: 'Encoberto',
+  45: 'Névoa', 48: 'Névoa com gelo',
+  51: 'Chuvisco leve', 53: 'Chuvisco moderado', 55: 'Chuvisco denso',
+  61: 'Chuva leve', 63: 'Chuva moderada', 65: 'Chuva forte',
+  71: 'Neve leve', 73: 'Neve moderada', 75: 'Neve forte', 77: 'Granizo',
+  80: 'Chuva isolada leve', 81: 'Chuva isolada moderada', 82: 'Chuva isolada forte',
+  95: 'Tempestade', 96: 'Tempestade com granizo leve', 99: 'Tempestade com granizo forte',
+};
+
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
@@ -197,6 +208,58 @@ async function buscarDados(siteUrl: string, estado: string, cidade: string): Pro
   } catch {
     return null;
   }
+}
+
+// Hidrata o tempo atual e a previsão ao vivo do Open-Meteo (como o cliente faz no
+// HTML). O JSON estático só atualiza na coleta diária; isto deixa o card em dia.
+// AQI/UV/dengue/reservatório seguem do JSON (não são "ao vivo" em fonte nenhuma).
+async function hidratarTempo(dados: Dados, siteUrl: string, ctx: ExecutionContext): Promise<void> {
+  const lat = Number(dados.latitude);
+  const lon = Number(dados.longitude);
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
+
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}`
+    + `&current=temperature_2m,weather_code`
+    + `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_sum`
+    + `&timezone=America%2FSao_Paulo&forecast_days=7`;
+
+  // Cache da resposta do Open-Meteo (chave na zona do Worker; TTL curto)
+  const cache = caches.default;
+  const cacheKey = new Request(`${siteUrl}/__om/${lat},${lon}`);
+  let om: any = null;
+  try {
+    const hit = await cache.match(cacheKey);
+    if (hit) {
+      om = await hit.json();
+    } else {
+      const res = await fetch(url);
+      if (!res.ok) return;
+      om = await res.json();
+      const toCache = new Response(JSON.stringify(om), { headers: { 'Cache-Control': 'public, max-age=900' } });
+      ctx.waitUntil(cache.put(cacheKey, toCache));
+    }
+  } catch {
+    return; // mantém o snapshot do JSON em caso de falha
+  }
+  if (!om) return;
+
+  const arred = (n: number) => Math.round(n * 10) / 10;
+  if (typeof om.current?.temperature_2m === 'number') {
+    dados.temperatura_atual = arred(om.current.temperature_2m);
+  }
+  const d = om.daily;
+  if (d && Array.isArray(d.time) && d.time.length) {
+    dados.previsao = d.time.slice(0, 7).map((t: string, i: number) => ({
+      data: t,
+      min: arred(d.temperature_2m_min[i]),
+      max: arred(d.temperature_2m_max[i]),
+      chuva_mm: arred(d.precipitation_sum?.[i] ?? 0),
+      condicao: WMO_DESCRICAO[d.weather_code[i]] ?? `Código ${d.weather_code[i]}`,
+      condicao_codigo: d.weather_code[i],
+    }));
+  }
+  // o tempo agora é ao vivo: marca o horário da atualização
+  dados.atualizado_em = new Date().toISOString();
 }
 
 // ---------------------------------------------------------------------------
@@ -613,6 +676,7 @@ export default {
 
         const dados = await buscarDados(siteUrl, estado, cidade);
         if (dados && !dados._status) {
+          await hidratarTempo(dados, siteUrl, ctx);
           const svg = formatarSvg(dados);
 
           if (querPng) {
@@ -651,6 +715,7 @@ export default {
       if (curl || format) {
         const dados = await buscarDados(siteUrl, estado, cidade);
         if (dados && !dados._status) {
+          await hidratarTempo(dados, siteUrl, ctx);
           const cor = !noColor && curl;
 
           if (format === 'prometheus') {
