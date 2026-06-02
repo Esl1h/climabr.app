@@ -40,6 +40,14 @@ function diaSemana(dataStr: string): string {
   return d.toLocaleDateString('pt-BR', { weekday: 'short' }).replace('.', '');
 }
 
+// Espelha o formatarDataHora do servidor (DD/MM/AAAA, HH:MM em America/Sao_Paulo)
+function agoraFormatado(): string {
+  return new Date().toLocaleString('pt-BR', {
+    day: '2-digit', month: '2-digit', year: 'numeric',
+    hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo',
+  });
+}
+
 async function buscarOpenMeteo(lat: number, lon: number): Promise<any> {
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}`
     + `&current=temperature_2m,weather_code,relative_humidity_2m,pressure_msl,dew_point_2m`
@@ -98,6 +106,11 @@ export async function hidratarClima(): Promise<void> {
     tempEl.textContent = `${arred(tAtual)}°C agora`;
     tempEl.hidden = false;
   }
+
+  // Timestamp: o tempo/previsão acabou de vir do Open-Meteo ao vivo.
+  // Atualiza o rótulo (os demais blocos seguem do build até a coleta diária).
+  const atualizadoEl = document.getElementById('clima-atualizado');
+  if (atualizadoEl) atualizadoEl.textContent = `Tempo atualizado em ${agoraFormatado()}`;
 
   // Previsão 7 dias (atualiza os cards já renderizados no servidor)
   const grid = document.querySelector<HTMLElement>('[data-previsao-grid]');

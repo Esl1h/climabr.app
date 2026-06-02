@@ -98,11 +98,11 @@ const temDados = dados && (
       {dados?.temperatura_atual != null ? `${dados.temperatura_atual}°C agora` : ''}
     </p>
     {dados?.atualizado_em ? (
-      <p class="mt-1 text-xs text-slate-500">
+      <p id="clima-atualizado" class="mt-1 text-xs text-slate-500">
         Atualizado em {formatarDataHora(dados.atualizado_em)}
       </p>
     ) : (
-      <p class="mt-1 text-xs text-slate-500">Dados ainda não coletados para esta cidade.</p>
+      <p id="clima-atualizado" class="mt-1 text-xs text-slate-500">Dados ainda não coletados para esta cidade.</p>
     )}
 
     <!-- Resumo textual (SEO + acessibilidade): prosa indexável antes dos blocos visuais -->
