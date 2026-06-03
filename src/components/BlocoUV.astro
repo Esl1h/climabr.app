@@ -51,6 +51,7 @@ const pct = uv ? Math.min(100, Math.round((uv.indice / 12) * 100)) : 0;
           style={`width: ${pct}%`}
           data-uv-barra
           role="progressbar"
+          aria-label="Índice UV"
           aria-valuenow={uv.indice}
           aria-valuemin={0}
           aria-valuemax={12}

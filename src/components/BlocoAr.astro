@@ -56,6 +56,7 @@ const pct = qualidade_ar ? Math.min(100, Math.round((qualidade_ar.indice / 300) 
           style={`width: ${pct}%`}
           data-ar-barra
           role="progressbar"
+          aria-label="Qualidade do ar (AQI)"
           aria-valuenow={qualidade_ar.indice}
           aria-valuemin={0}
           aria-valuemax={300}

@@ -58,6 +58,7 @@ const titulo = aproximado ? 'Reservatório próximo' : 'Reservatório';
           }`}
           style={`width: ${Math.min(100, reservatorio.nivel_pct)}%`}
           role="progressbar"
+          aria-label="Nível do reservatório"
           aria-valuenow={reservatorio.nivel_pct}
           aria-valuemin={0}
           aria-valuemax={100}
