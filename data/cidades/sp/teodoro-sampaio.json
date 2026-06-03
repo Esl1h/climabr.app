@@ -4,47 +4,84 @@
   "slug": "teodoro-sampaio",
   "latitude": -22.4166,
   "longitude": -52.374,
-  "atualizado_em": "2026-05-28T11:47:58.100679-03:00",
+  "atualizado_em": "2026-06-03T12:39:59.933921+00:00",
   "previsao": [
     {
-      "data": "2026-05-28",
-      "min": 18,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "data": "2026-06-03",
+      "min": 12.4,
+      "max": 21.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.2,
+      "nascer_sol": "07:02",
+      "por_sol": "17:52"
     },
     {
-      "data": "2026-05-29",
-      "min": 16,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "data": "2026-06-04",
+      "min": 14.3,
+      "max": 23.6,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.2,
+      "nascer_sol": "07:03",
+      "por_sol": "17:52"
     },
     {
-      "data": "2026-05-30",
-      "min": 16,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "data": "2026-06-05",
+      "min": 14.5,
+      "max": 24.1,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.2,
+      "nascer_sol": "07:03",
+      "por_sol": "17:52"
     },
     {
-      "data": "2026-05-31",
-      "min": 16,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "data": "2026-06-06",
+      "min": 13.7,
+      "max": 24.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.2,
+      "nascer_sol": "07:03",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-06-07",
+      "min": 13.2,
+      "max": 24.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 4.7,
+      "nascer_sol": "07:04",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-06-08",
+      "min": 13.2,
+      "max": 25.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 3.1,
+      "nascer_sol": "07:04",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-06-09",
+      "min": 11.9,
+      "max": 20.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 4.2,
+      "nascer_sol": "07:05",
+      "por_sol": "17:52"
     }
   ],
   "queimadas": {
@@ -84,5 +121,51 @@
     "semana_epidemiologica": 202620,
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
-  }
+  },
+  "_clima_em": "2026-06-03T12:39:59.933921+00:00",
+  "uv": {
+    "indice": 5.2,
+    "categoria": "Moderado",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 20,
+    "categoria": "Boa",
+    "principal_poluente": "PM2.5",
+    "pm25": 3.6,
+    "pm10": 4.1,
+    "no2": 1.8,
+    "o3": 54.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-06-03T12:39:59.933921+00:00"
+  },
+  "sol": {
+    "nascer": "07:02",
+    "por": "17:52",
+    "duracao_h": 10.8,
+    "estacao": "Inverno",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Cheia",
+    "iluminacao_pct": 54.0,
+    "fase_pct": 59.0,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "vento": {
+    "velocidade_kmh": 15.0,
+    "direcao_graus": 107,
+    "direcao": "ESE",
+    "max_kmh": 17.0,
+    "rajada_kmh": 36.7,
+    "direcao_dominante": "ESE",
+    "fonte": "Open-Meteo"
+  },
+  "temperatura_atual": 17.8,
+  "umidade_pct": 74,
+  "pressao_hpa": 1025,
+  "ponto_orvalho_c": 13.2
 }

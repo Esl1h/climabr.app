@@ -4,47 +4,84 @@
   "slug": "serra-do-navio",
   "latitude": 1.6517,
   "longitude": -52.2681,
-  "atualizado_em": "2026-06-03T09:21:00.560563+00:00",
+  "atualizado_em": "2026-06-03T12:39:59.933921+00:00",
   "previsao": [
     {
       "data": "2026-06-03",
-      "min": 23,
-      "max": 32,
-      "condicao": "Chuvas Isoladas",
-      "condicao_codigo": "ci",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 21.7,
+      "max": 32.2,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 2.9,
+      "uv": 6.0,
+      "nascer_sol": "06:20",
+      "por_sol": "18:33"
     },
     {
       "data": "2026-06-04",
-      "min": 23,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 21.9,
+      "max": 31.5,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 7.6,
+      "uv": 7.3,
+      "nascer_sol": "06:21",
+      "por_sol": "18:33"
     },
     {
       "data": "2026-06-05",
-      "min": 22,
-      "max": 30,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.5,
+      "max": 28.9,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 11.2,
+      "uv": 8.2,
+      "nascer_sol": "06:21",
+      "por_sol": "18:33"
     },
     {
       "data": "2026-06-06",
-      "min": 23,
-      "max": 29,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.2,
+      "max": 28.1,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 9.6,
+      "uv": 7.0,
+      "nascer_sol": "06:21",
+      "por_sol": "18:34"
+    },
+    {
+      "data": "2026-06-07",
+      "min": 22.1,
+      "max": 26.4,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 8.7,
+      "uv": 8.2,
+      "nascer_sol": "06:21",
+      "por_sol": "18:34"
+    },
+    {
+      "data": "2026-06-08",
+      "min": 22.5,
+      "max": 26.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 9.0,
+      "uv": 6.8,
+      "nascer_sol": "06:21",
+      "por_sol": "18:34"
+    },
+    {
+      "data": "2026-06-09",
+      "min": 22.5,
+      "max": 25.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 7.8,
+      "uv": 6.2,
+      "nascer_sol": "06:21",
+      "por_sol": "18:34"
     }
   ],
   "reservatorio": {
@@ -64,44 +101,44 @@
     "atualizado_em": "2026-06-02T17:04:47.775034+00:00"
   },
   "uv": {
-    "indice": 6.5,
+    "indice": 6.0,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 18,
+    "indice": 10,
     "categoria": "Boa",
-    "principal_poluente": "PM2.5",
-    "pm25": 2.2,
-    "pm10": 2.6,
-    "no2": 0.0,
-    "o3": 29.0,
+    "principal_poluente": "PM10",
+    "pm25": 2.7,
+    "pm10": 4.1,
+    "no2": 0.1,
+    "o3": 26.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-05-28T18:06:33.098878-03:00"
+    "atualizado_em": "2026-06-03T12:39:59.933921+00:00"
   },
   "sol": {
     "nascer": "06:20",
-    "por": "18:32",
+    "por": "18:33",
     "duracao_h": 12.2,
-    "estacao": "Primavera",
+    "estacao": "Verão",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 65.0,
-    "fase_pct": 38.7,
+    "nome": "Cheia",
+    "iluminacao_pct": 54.0,
+    "fase_pct": 59.0,
     "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.9,
+  "temperatura_atual": 27.6,
   "vento": {
-    "velocidade_kmh": 8.1,
-    "direcao_graus": 90,
+    "velocidade_kmh": 9.4,
+    "direcao_graus": 88,
     "direcao": "E",
-    "max_kmh": 10.2,
-    "rajada_kmh": 28.8,
+    "max_kmh": 14.1,
+    "rajada_kmh": 33.5,
     "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
@@ -126,5 +163,9 @@
     "semana_epidemiologica": 202620,
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
-  }
+  },
+  "_clima_em": "2026-06-03T12:39:59.933921+00:00",
+  "umidade_pct": 72,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 22.2
 }
