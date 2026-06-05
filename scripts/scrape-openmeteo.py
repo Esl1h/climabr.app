@@ -87,19 +87,28 @@ def fase_lua(d: date) -> dict:
     }
 
 def estacao_ano(d: date, lat: float) -> str:
-    """Estação do ano baseada na latitude (Hemisfério Sul invertido)."""
-    mes = d.month
-    sul = lat < 0
-    if sul:
-        if mes in (12, 1, 2): return "Verão"
-        if mes in (3, 4, 5): return "Outono"
-        if mes in (6, 7, 8): return "Inverno"
-        return "Primavera"
+    """Estação do ano com base nas datas de equinócio/solstício (~dia 20).
+
+    O cálculo por mês cheio erra nas três semanas iniciais de cada estação
+    (ex.: começo de junho ainda é outono, não inverno). Usa o dia contra as
+    viradas aproximadas e inverte para o Hemisfério Sul.
+    """
+    md = (d.month, d.day)
+    # Estação do Hemisfério Norte segundo as viradas (~20/21)
+    if md >= (12, 21) or md < (3, 20):
+        norte = "Inverno"
+    elif md < (6, 21):
+        norte = "Primavera"
+    elif md < (9, 23):
+        norte = "Verão"
     else:
-        if mes in (12, 1, 2): return "Inverno"
-        if mes in (3, 4, 5): return "Primavera"
-        if mes in (6, 7, 8): return "Verão"
-        return "Outono"
+        norte = "Outono"
+
+    if lat >= 0:
+        return norte
+    oposto = {"Inverno": "Verão", "Verão": "Inverno",
+              "Primavera": "Outono", "Outono": "Primavera"}
+    return oposto[norte]
 
 def fetch_batch(lats: list[float], lons: list[float]) -> tuple[list[dict], list[dict]]:
     """Busca previsão + qualidade do ar para um lote de cidades."""
