@@ -4,47 +4,84 @@
   "slug": "apucarana",
   "latitude": -23.572,
   "longitude": -51.446,
-  "atualizado_em": "2026-06-05T09:06:59.042549+00:00",
+  "atualizado_em": "2026-06-05T11:26:10.933122+00:00",
   "previsao": [
     {
       "data": "2026-06-05",
-      "min": 13,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 12.4,
+      "max": 20.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.1,
+      "nascer_sol": "07:02",
+      "por_sol": "17:46"
     },
     {
       "data": "2026-06-06",
-      "min": 11,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 11.6,
+      "max": 21.5,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.1,
+      "nascer_sol": "07:02",
+      "por_sol": "17:46"
     },
     {
       "data": "2026-06-07",
-      "min": 12,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 11.6,
+      "max": 21.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.5,
+      "nascer_sol": "07:02",
+      "por_sol": "17:46"
     },
     {
       "data": "2026-06-08",
-      "min": 11,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 11.8,
+      "max": 21.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.4,
+      "nascer_sol": "07:03",
+      "por_sol": "17:46"
+    },
+    {
+      "data": "2026-06-09",
+      "min": 14.5,
+      "max": 21.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.8,
+      "nascer_sol": "07:03",
+      "por_sol": "17:46"
+    },
+    {
+      "data": "2026-06-10",
+      "min": 15.1,
+      "max": 17.0,
+      "condicao": "Chuva moderada",
+      "condicao_codigo": 63,
+      "chuva_mm": 27.8,
+      "uv": 0.6,
+      "nascer_sol": "07:03",
+      "por_sol": "17:46"
+    },
+    {
+      "data": "2026-06-11",
+      "min": 15.7,
+      "max": 17.4,
+      "condicao": "Chuva moderada",
+      "condicao_codigo": 63,
+      "chuva_mm": 31.2,
+      "uv": 0.3,
+      "nascer_sol": "07:04",
+      "por_sol": "17:46"
     }
   ],
   "reservatorio": {
@@ -64,38 +101,38 @@
     "atualizado_em": "2026-06-05T10:29:27.670806+00:00"
   },
   "uv": {
-    "indice": 5.3,
+    "indice": 5.1,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 53,
-    "categoria": "Moderada",
+    "indice": 22,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.3,
-    "pm10": 4.4,
-    "no2": 0.6,
-    "o3": 74.0,
+    "pm25": 3.5,
+    "pm10": 3.9,
+    "no2": 2.6,
+    "o3": 49.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-05-28T13:36:28.572076-03:00"
+    "atualizado_em": "2026-06-05T11:26:10.933122+00:00"
   },
   "sol": {
-    "nascer": "06:58",
-    "por": "17:47",
-    "duracao_h": 10.8,
-    "estacao": "Outono",
+    "nascer": "07:02",
+    "por": "17:46",
+    "duracao_h": 10.7,
+    "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 65.0,
-    "fase_pct": 38.7,
-    "dias_proxima_cheia": 3,
+    "nome": "Gibosa Minguante",
+    "iluminacao_pct": 84.0,
+    "fase_pct": 65.8,
+    "dias_proxima_cheia": 5,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 21.5,
+  "temperatura_atual": 13.8,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -117,5 +154,18 @@
     "semana_epidemiologica": 202620,
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
-  }
+  },
+  "_clima_em": "2026-06-05T11:26:10.933122+00:00",
+  "vento": {
+    "velocidade_kmh": 19.2,
+    "direcao_graus": 71,
+    "direcao": "ENE",
+    "max_kmh": 20.2,
+    "rajada_kmh": 40.3,
+    "direcao_dominante": "ENE",
+    "fonte": "Open-Meteo"
+  },
+  "umidade_pct": 92,
+  "pressao_hpa": 1025,
+  "ponto_orvalho_c": 12.4
 }

@@ -4,59 +4,94 @@
   "slug": "igarape",
   "latitude": -20.0593,
   "longitude": -44.322,
-  "atualizado_em": "2026-06-05T08:57:42.295947+00:00",
+  "atualizado_em": "2026-06-05T11:26:10.933122+00:00",
   "previsao": [
     {
       "data": "2026-06-05",
-      "min": 12,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 12.3,
+      "max": 21.6,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:26",
+      "por_sol": "17:24"
     },
     {
       "data": "2026-06-06",
-      "min": 10,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 9.1,
+      "max": 20.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:27",
+      "por_sol": "17:24"
     },
     {
       "data": "2026-06-07",
-      "min": 9,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 9.8,
+      "max": 22.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:27",
+      "por_sol": "17:24"
     },
     {
       "data": "2026-06-08",
-      "min": 10,
-      "max": 24,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 9.5,
+      "max": 23.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.5,
+      "nascer_sol": "06:28",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-06-09",
+      "min": 11.7,
+      "max": 25.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:28",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-06-10",
+      "min": 14.4,
+      "max": 26.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 5.0,
+      "nascer_sol": "06:28",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-06-11",
+      "min": 16.8,
+      "max": 23.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 7.4,
+      "uv": 0.5,
+      "nascer_sol": "06:28",
+      "por_sol": "17:24"
     }
   ],
   "reservatorio": {
-    "nome": "Retiro Baixo",
-    "nivel_pct": 89.9,
-    "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-06-03",
-    "distancia_km": 138.2,
-    "aproximado": true,
-    "nota": "Reservatório hidrelétrico mais próximo (138km). Pode não ser o sistema de abastecimento desta cidade.",
-    "fonte": "ONS / ANA",
-    "atualizado_em": "2026-06-05T10:29:24.962481+00:00"
+    "nome": "Serra Azul",
+    "nivel_pct": 57.5,
+    "variacao_semana_pct": null,
+    "data_medicao": "2026-06-05",
+    "aproximado": false,
+    "fonte": "COPASA",
+    "atualizado_em": "2026-06-05T12:05:57.527149+00:00"
   },
   "queimadas": {
     "focos_100km": 3,
@@ -71,15 +106,15 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 42,
+    "indice": 20,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 5.8,
-    "pm10": 6.2,
-    "no2": 5.9,
-    "o3": 65.0,
+    "pm25": 3.8,
+    "pm10": 4.7,
+    "no2": 5.2,
+    "o3": 50.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-03T12:39:59.933921+00:00"
+    "atualizado_em": "2026-06-05T11:26:10.933122+00:00"
   },
   "sol": {
     "nascer": "06:26",
@@ -89,25 +124,25 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 54.0,
-    "fase_pct": 59.0,
-    "dias_proxima_cheia": 3,
+    "nome": "Gibosa Minguante",
+    "iluminacao_pct": 84.0,
+    "fase_pct": 65.8,
+    "dias_proxima_cheia": 5,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 19.0,
+  "temperatura_atual": 16.0,
   "vento": {
-    "velocidade_kmh": 8.9,
-    "direcao_graus": 81,
-    "direcao": "E",
-    "max_kmh": 12.8,
-    "rajada_kmh": 23.8,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 11.2,
+    "direcao_graus": 139,
+    "direcao": "SE",
+    "max_kmh": 15.3,
+    "rajada_kmh": 29.5,
+    "direcao_dominante": "SSE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 75,
-  "pressao_hpa": 1025,
-  "ponto_orvalho_c": 14.5,
+  "umidade_pct": 73,
+  "pressao_hpa": 1026,
+  "ponto_orvalho_c": 11.2,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -130,5 +165,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-03T12:39:59.933921+00:00"
+  "_clima_em": "2026-06-05T11:26:10.933122+00:00"
 }
