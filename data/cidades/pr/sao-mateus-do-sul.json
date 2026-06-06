@@ -4,47 +4,84 @@
   "slug": "sao-mateus-do-sul",
   "latitude": -25.9082,
   "longitude": -50.442,
-  "atualizado_em": "2026-06-06T08:05:43.944427+00:00",
+  "atualizado_em": "2026-06-06T10:01:22.845096+00:00",
   "previsao": [
     {
       "data": "2026-06-06",
-      "min": 9,
-      "max": 20,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 7.6,
+      "max": 21.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.9,
+      "nascer_sol": "07:03",
+      "por_sol": "17:37"
     },
     {
       "data": "2026-06-07",
-      "min": 10,
-      "max": 20,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 7.8,
+      "max": 21.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.3,
+      "nascer_sol": "07:03",
+      "por_sol": "17:37"
     },
     {
       "data": "2026-06-08",
-      "min": 10,
-      "max": 20,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 7.6,
+      "max": 20.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.2,
+      "nascer_sol": "07:03",
+      "por_sol": "17:37"
     },
     {
       "data": "2026-06-09",
-      "min": 12,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 10.7,
+      "max": 21.4,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 3.5,
+      "uv": 4.4,
+      "nascer_sol": "07:04",
+      "por_sol": "17:37"
+    },
+    {
+      "data": "2026-06-10",
+      "min": 10.5,
+      "max": 17.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 1.4,
+      "nascer_sol": "07:04",
+      "por_sol": "17:37"
+    },
+    {
+      "data": "2026-06-11",
+      "min": 13.1,
+      "max": 17.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 12.5,
+      "uv": 3.7,
+      "nascer_sol": "07:05",
+      "por_sol": "17:37"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 10.1,
+      "max": 19.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 1.2,
+      "nascer_sol": "07:05",
+      "por_sol": "17:37"
     }
   ],
   "reservatorio": {
@@ -64,38 +101,38 @@
     "atualizado_em": "2026-06-06T09:06:08.644870+00:00"
   },
   "uv": {
-    "indice": 5.0,
+    "indice": 4.9,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 28,
+    "indice": 20,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 2.8,
-    "pm10": 2.9,
-    "no2": 0.3,
-    "o3": 81.0,
+    "pm25": 10.2,
+    "pm10": 10.8,
+    "no2": 8.5,
+    "o3": 20.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+    "atualizado_em": "2026-06-06T10:01:22.845096+00:00"
   },
   "sol": {
-    "nascer": "06:59",
-    "por": "17:38",
-    "duracao_h": 10.7,
+    "nascer": "07:03",
+    "por": "17:37",
+    "duracao_h": 10.6,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 65.0,
-    "fase_pct": 38.7,
-    "dias_proxima_cheia": 3,
+    "nome": "Gibosa Minguante",
+    "iluminacao_pct": 93.0,
+    "fase_pct": 69.2,
+    "dias_proxima_cheia": 6,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 20.0,
+  "temperatura_atual": 7.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -117,5 +154,18 @@
     "semana_epidemiologica": 202620,
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
-  }
+  },
+  "_clima_em": "2026-06-06T10:01:22.845096+00:00",
+  "vento": {
+    "velocidade_kmh": 0.6,
+    "direcao_graus": 162,
+    "direcao": "SSE",
+    "max_kmh": 9.7,
+    "rajada_kmh": 17.6,
+    "direcao_dominante": "NO",
+    "fonte": "Open-Meteo"
+  },
+  "umidade_pct": 100,
+  "pressao_hpa": 1022,
+  "ponto_orvalho_c": 7.5
 }

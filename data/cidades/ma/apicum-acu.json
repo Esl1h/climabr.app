@@ -4,58 +4,136 @@
   "slug": "apicum-acu",
   "latitude": -1.5473,
   "longitude": -45.0856,
-  "atualizado_em": "2026-06-06T07:48:46.920677+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-06T10:01:22.845096+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-06",
+      "min": 24.5,
+      "max": 29.7,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 5.9,
+      "uv": 7.0,
+      "nascer_sol": "05:58",
+      "por_sol": "18:00"
+    },
+    {
+      "data": "2026-06-07",
+      "min": 22.9,
+      "max": 30.3,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 2.0,
+      "uv": 7.8,
+      "nascer_sol": "05:58",
+      "por_sol": "18:00"
+    },
+    {
+      "data": "2026-06-08",
+      "min": 23.5,
+      "max": 29.9,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 4.9,
+      "uv": 7.8,
+      "nascer_sol": "05:58",
+      "por_sol": "18:00"
+    },
+    {
+      "data": "2026-06-09",
+      "min": 23.1,
+      "max": 28.9,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 16.7,
+      "uv": 7.8,
+      "nascer_sol": "05:58",
+      "por_sol": "18:00"
+    },
+    {
+      "data": "2026-06-10",
+      "min": 23.5,
+      "max": 26.6,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 24.2,
+      "uv": 7.5,
+      "nascer_sol": "05:58",
+      "por_sol": "18:00"
+    },
+    {
+      "data": "2026-06-11",
+      "min": 22.4,
+      "max": 27.1,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 26.3,
+      "uv": 4.8,
+      "nascer_sol": "05:59",
+      "por_sol": "18:00"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 23.5,
+      "max": 29.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 7.0,
+      "nascer_sol": "05:59",
+      "por_sol": "18:01"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-06-06T09:06:08.644870+00:00"
   },
   "uv": {
-    "indice": 7.2,
+    "indice": 7.0,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 24,
+    "indice": 22,
     "categoria": "Boa",
-    "principal_poluente": "PM10",
-    "pm25": 3.8,
-    "pm10": 5.8,
-    "no2": 0.3,
-    "o3": 49.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 4.1,
+    "pm10": 6.0,
+    "no2": 1.2,
+    "o3": 52.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-05-31T16:29:25.755784-03:00"
+    "atualizado_em": "2026-06-06T10:01:22.845096+00:00"
   },
   "sol": {
-    "nascer": "05:56",
-    "por": "17:59",
+    "nascer": "05:58",
+    "por": "18:00",
     "duracao_h": 12.0,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 7.0,
-    "fase_pct": 48.9,
-    "dias_proxima_cheia": 0,
+    "nome": "Gibosa Minguante",
+    "iluminacao_pct": 93.0,
+    "fase_pct": 69.2,
+    "dias_proxima_cheia": 6,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 28.2,
+  "temperatura_atual": 25.4,
   "vento": {
-    "velocidade_kmh": 12.7,
-    "direcao_graus": 84,
-    "direcao": "E",
-    "max_kmh": 14.8,
-    "rajada_kmh": 34.6,
+    "velocidade_kmh": 10.7,
+    "direcao_graus": 115,
+    "direcao": "ESE",
+    "max_kmh": 12.1,
+    "rajada_kmh": 31.0,
     "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 76,
-  "pressao_hpa": 1011,
-  "ponto_orvalho_c": 23.6,
+  "umidade_pct": 93,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 24.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -77,5 +155,6 @@
     "semana_epidemiologica": 202620,
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
-  }
+  },
+  "_clima_em": "2026-06-06T10:01:22.845096+00:00"
 }

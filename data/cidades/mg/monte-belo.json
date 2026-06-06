@@ -4,47 +4,84 @@
   "slug": "monte-belo",
   "latitude": -21.3148,
   "longitude": -46.3264,
-  "atualizado_em": "2026-06-06T07:56:38.240243+00:00",
+  "atualizado_em": "2026-06-06T10:01:22.845096+00:00",
   "previsao": [
     {
       "data": "2026-06-06",
-      "min": 8,
-      "max": 20,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 9.3,
+      "max": 21.7,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.6,
+      "nascer_sol": "06:37",
+      "por_sol": "17:30"
     },
     {
       "data": "2026-06-07",
-      "min": 7,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 9.7,
+      "max": 23.1,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.5,
+      "nascer_sol": "06:38",
+      "por_sol": "17:30"
     },
     {
       "data": "2026-06-08",
-      "min": 8,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 10.0,
+      "max": 23.0,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.2,
+      "nascer_sol": "06:38",
+      "por_sol": "17:30"
     },
     {
       "data": "2026-06-09",
-      "min": 9,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 11.0,
+      "max": 25.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.0,
+      "nascer_sol": "06:38",
+      "por_sol": "17:30"
+    },
+    {
+      "data": "2026-06-10",
+      "min": 13.8,
+      "max": 25.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.3,
+      "uv": 4.9,
+      "nascer_sol": "06:39",
+      "por_sol": "17:30"
+    },
+    {
+      "data": "2026-06-11",
+      "min": 15.6,
+      "max": 22.9,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 15.5,
+      "uv": 2.8,
+      "nascer_sol": "06:39",
+      "por_sol": "17:30"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 15.6,
+      "max": 21.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 8.0,
+      "uv": 3.8,
+      "nascer_sol": "06:39",
+      "por_sol": "17:30"
     }
   ],
   "reservatorio": {
@@ -74,12 +111,12 @@
     "indice": 25,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 2.8,
-    "pm10": 3.5,
-    "no2": 2.7,
-    "o3": 51.0,
+    "pm25": 9.3,
+    "pm10": 10.8,
+    "no2": 8.7,
+    "o3": 42.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-05T11:26:10.933122+00:00"
+    "atualizado_em": "2026-06-06T10:01:22.845096+00:00"
   },
   "sol": {
     "nascer": "06:37",
@@ -90,24 +127,24 @@
   },
   "lua": {
     "nome": "Gibosa Minguante",
-    "iluminacao_pct": 84.0,
-    "fase_pct": 65.8,
-    "dias_proxima_cheia": 5,
+    "iluminacao_pct": 93.0,
+    "fase_pct": 69.2,
+    "dias_proxima_cheia": 6,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 14.8,
+  "temperatura_atual": 9.8,
   "vento": {
-    "velocidade_kmh": 10.1,
-    "direcao_graus": 91,
-    "direcao": "E",
-    "max_kmh": 14.6,
-    "rajada_kmh": 32.8,
+    "velocidade_kmh": 4.2,
+    "direcao_graus": 187,
+    "direcao": "S",
+    "max_kmh": 9.4,
+    "rajada_kmh": 18.7,
     "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 79,
-  "pressao_hpa": 1027,
-  "ponto_orvalho_c": 11.2,
+  "umidade_pct": 90,
+  "pressao_hpa": 1022,
+  "ponto_orvalho_c": 8.3,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -130,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-05T11:26:10.933122+00:00"
+  "_clima_em": "2026-06-06T10:01:22.845096+00:00"
 }

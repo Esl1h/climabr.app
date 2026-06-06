@@ -4,47 +4,84 @@
   "slug": "sao-pedro-do-iguacu",
   "latitude": -24.9065,
   "longitude": -53.8907,
-  "atualizado_em": "2026-06-06T08:05:44.946311+00:00",
+  "atualizado_em": "2026-06-06T10:01:22.845096+00:00",
   "previsao": [
     {
       "data": "2026-06-06",
-      "min": 13,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 12.7,
+      "max": 22.7,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.9,
+      "nascer_sol": "07:15",
+      "por_sol": "17:53"
     },
     {
       "data": "2026-06-07",
-      "min": 13,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 12.5,
+      "max": 22.2,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.5,
+      "nascer_sol": "07:15",
+      "por_sol": "17:53"
     },
     {
       "data": "2026-06-08",
-      "min": 13,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 13.7,
+      "max": 22.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 4.3,
+      "nascer_sol": "07:15",
+      "por_sol": "17:53"
     },
     {
       "data": "2026-06-09",
-      "min": 13,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 15.2,
+      "max": 20.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.0,
+      "uv": 3.4,
+      "nascer_sol": "07:16",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-06-10",
+      "min": 15.0,
+      "max": 19.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.2,
+      "uv": 1.9,
+      "nascer_sol": "07:16",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-06-11",
+      "min": 15.2,
+      "max": 20.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 6.9,
+      "uv": 0.8,
+      "nascer_sol": "07:16",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 10.8,
+      "max": 18.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.1,
+      "nascer_sol": "07:17",
+      "por_sol": "17:53"
     }
   ],
   "reservatorio": {
@@ -64,38 +101,38 @@
     "atualizado_em": "2026-06-06T09:06:08.644870+00:00"
   },
   "uv": {
-    "indice": 5.1,
+    "indice": 4.9,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 51,
-    "categoria": "Moderada",
+    "indice": 25,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 5.0,
-    "pm10": 5.2,
-    "no2": 0.2,
-    "o3": 76.0,
+    "pm25": 13.3,
+    "pm10": 13.4,
+    "no2": 5.7,
+    "o3": 39.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-05-28T14:13:27.739579-03:00"
+    "atualizado_em": "2026-06-06T10:01:22.845096+00:00"
   },
   "sol": {
-    "nascer": "07:11",
-    "por": "17:54",
-    "duracao_h": 10.7,
+    "nascer": "07:15",
+    "por": "17:53",
+    "duracao_h": 10.6,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 65.0,
-    "fase_pct": 38.7,
-    "dias_proxima_cheia": 3,
+    "nome": "Gibosa Minguante",
+    "iluminacao_pct": 93.0,
+    "fase_pct": 69.2,
+    "dias_proxima_cheia": 6,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 25.1,
+  "temperatura_atual": 12.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -117,5 +154,18 @@
     "semana_epidemiologica": 202620,
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
-  }
+  },
+  "_clima_em": "2026-06-06T10:01:22.845096+00:00",
+  "vento": {
+    "velocidade_kmh": 7.9,
+    "direcao_graus": 91,
+    "direcao": "E",
+    "max_kmh": 12.0,
+    "rajada_kmh": 24.1,
+    "direcao_dominante": "NE",
+    "fonte": "Open-Meteo"
+  },
+  "umidade_pct": 91,
+  "pressao_hpa": 1020,
+  "ponto_orvalho_c": 11.4
 }

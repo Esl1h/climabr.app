@@ -4,47 +4,84 @@
   "slug": "itanhomi",
   "latitude": -19.161,
   "longitude": -41.8203,
-  "atualizado_em": "2026-06-06T07:55:37.192275+00:00",
+  "atualizado_em": "2026-06-06T10:01:22.845096+00:00",
   "previsao": [
     {
       "data": "2026-06-06",
-      "min": 13,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 14.6,
+      "max": 23.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:15",
+      "por_sol": "17:16"
     },
     {
       "data": "2026-06-07",
-      "min": 8,
-      "max": 26,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 14.6,
+      "max": 25.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.9,
+      "nascer_sol": "06:15",
+      "por_sol": "17:16"
     },
     {
       "data": "2026-06-08",
-      "min": 14,
-      "max": 27,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 15.5,
+      "max": 26.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:16",
+      "por_sol": "17:16"
     },
     {
       "data": "2026-06-09",
-      "min": 15,
-      "max": 27,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 16.0,
+      "max": 26.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 5.7,
+      "nascer_sol": "06:16",
+      "por_sol": "17:16"
+    },
+    {
+      "data": "2026-06-10",
+      "min": 17.0,
+      "max": 29.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.7,
+      "nascer_sol": "06:16",
+      "por_sol": "17:16"
+    },
+    {
+      "data": "2026-06-11",
+      "min": 19.0,
+      "max": 28.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 2.9,
+      "nascer_sol": "06:17",
+      "por_sol": "17:16"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 20.2,
+      "max": 29.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 1.7,
+      "nascer_sol": "06:17",
+      "por_sol": "17:16"
     }
   ],
   "reservatorio": {
@@ -74,12 +111,12 @@
     "indice": 17,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 3.0,
-    "pm10": 4.4,
-    "no2": 3.6,
-    "o3": 48.0,
+    "pm25": 4.6,
+    "pm10": 5.8,
+    "no2": 7.8,
+    "o3": 36.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-05T11:26:10.933122+00:00"
+    "atualizado_em": "2026-06-06T10:01:22.845096+00:00"
   },
   "sol": {
     "nascer": "06:15",
@@ -90,24 +127,24 @@
   },
   "lua": {
     "nome": "Gibosa Minguante",
-    "iluminacao_pct": 84.0,
-    "fase_pct": 65.8,
-    "dias_proxima_cheia": 5,
+    "iluminacao_pct": 93.0,
+    "fase_pct": 69.2,
+    "dias_proxima_cheia": 6,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 20.0,
+  "temperatura_atual": 15.8,
   "vento": {
-    "velocidade_kmh": 2.8,
-    "direcao_graus": 198,
+    "velocidade_kmh": 5.9,
+    "direcao_graus": 211,
     "direcao": "SSO",
-    "max_kmh": 14.0,
-    "rajada_kmh": 28.4,
-    "direcao_dominante": "SSE",
+    "max_kmh": 7.5,
+    "rajada_kmh": 19.8,
+    "direcao_dominante": "ONO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 61,
-  "pressao_hpa": 1025,
-  "ponto_orvalho_c": 12.3,
+  "umidade_pct": 86,
+  "pressao_hpa": 1022,
+  "ponto_orvalho_c": 13.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -130,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-05T11:26:10.933122+00:00"
+  "_clima_em": "2026-06-06T10:01:22.845096+00:00"
 }
