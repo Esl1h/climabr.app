@@ -4,47 +4,84 @@
   "slug": "guapirama",
   "latitude": -23.468,
   "longitude": -50.0769,
-  "atualizado_em": "2026-06-08T09:41:09.162284+00:00",
+  "atualizado_em": "2026-06-08T12:26:19.076711+00:00",
   "previsao": [
     {
       "data": "2026-06-08",
-      "min": 9,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 10.1,
+      "max": 23.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.0,
+      "nascer_sol": "06:57",
+      "por_sol": "17:41"
     },
     {
       "data": "2026-06-09",
-      "min": 9,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 11.4,
+      "max": 23.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 3.6,
+      "nascer_sol": "06:57",
+      "por_sol": "17:41"
     },
     {
       "data": "2026-06-10",
-      "min": 11,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 13.5,
+      "max": 19.6,
+      "condicao": "Chuva moderada",
+      "condicao_codigo": 63,
+      "chuva_mm": 15.1,
+      "uv": 1.8,
+      "nascer_sol": "06:58",
+      "por_sol": "17:41"
     },
     {
       "data": "2026-06-11",
-      "min": 14,
-      "max": 21,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 15.7,
+      "max": 20.0,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 17.7,
+      "uv": 2.8,
+      "nascer_sol": "06:58",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 15.3,
+      "max": 22.7,
+      "condicao": "Chuva moderada",
+      "condicao_codigo": 63,
+      "chuva_mm": 29.6,
+      "uv": 1.1,
+      "nascer_sol": "06:58",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-06-13",
+      "min": 13.9,
+      "max": 20.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 4.5,
+      "nascer_sol": "06:59",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 16.9,
+      "max": 22.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 5.0,
+      "uv": 4.5,
+      "nascer_sol": "06:59",
+      "por_sol": "17:41"
     }
   ],
   "reservatorio": {
@@ -71,15 +108,15 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 45,
+    "indice": 25,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 19.3,
-    "pm10": 19.4,
-    "no2": 10.5,
-    "o3": 20.0,
+    "pm25": 8.4,
+    "pm10": 8.6,
+    "no2": 5.3,
+    "o3": 25.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-07T10:26:33.424181+00:00"
+    "atualizado_em": "2026-06-08T12:26:19.076711+00:00"
   },
   "sol": {
     "nascer": "06:57",
@@ -89,13 +126,13 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 99.0,
-    "fase_pct": 72.6,
-    "dias_proxima_cheia": 7,
+    "nome": "Quarto Minguante",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 75.9,
+    "dias_proxima_cheia": 8,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 10.6,
+  "temperatura_atual": 17.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -118,17 +155,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-07T10:26:33.424181+00:00",
+  "_clima_em": "2026-06-08T12:26:19.076711+00:00",
   "vento": {
     "velocidade_kmh": 2.0,
     "direcao_graus": 175,
     "direcao": "S",
-    "max_kmh": 3.9,
-    "rajada_kmh": 14.4,
-    "direcao_dominante": "SSE",
+    "max_kmh": 7.2,
+    "rajada_kmh": 19.4,
+    "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 99,
-  "pressao_hpa": 1019,
-  "ponto_orvalho_c": 10.4
+  "umidade_pct": 74,
+  "pressao_hpa": 1021,
+  "ponto_orvalho_c": 12.5
 }

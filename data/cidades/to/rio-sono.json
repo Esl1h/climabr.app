@@ -4,23 +4,12 @@
   "slug": "rio-sono",
   "latitude": -9.6474,
   "longitude": -47.496,
-  "atualizado_em": "2026-06-07T10:26:33.424181+00:00",
+  "atualizado_em": "2026-06-08T12:26:19.076711+00:00",
   "previsao": [
     {
-      "data": "2026-06-07",
-      "min": 20.3,
-      "max": 33.3,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 6.9,
-      "nascer_sol": "06:21",
-      "por_sol": "17:56"
-    },
-    {
       "data": "2026-06-08",
-      "min": 22.4,
-      "max": 34.5,
+      "min": 21.7,
+      "max": 34.7,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
@@ -30,10 +19,10 @@
     },
     {
       "data": "2026-06-09",
-      "min": 23.4,
+      "min": 22.0,
       "max": 34.9,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
       "uv": 6.9,
       "nascer_sol": "06:22",
@@ -41,10 +30,10 @@
     },
     {
       "data": "2026-06-10",
-      "min": 23.9,
-      "max": 35.2,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
+      "min": 23.7,
+      "max": 35.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
       "uv": 6.9,
       "nascer_sol": "06:22",
@@ -52,36 +41,47 @@
     },
     {
       "data": "2026-06-11",
-      "min": 23.7,
-      "max": 35.5,
+      "min": 23.1,
+      "max": 35.1,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 6.3,
+      "uv": 6.5,
       "nascer_sol": "06:22",
       "por_sol": "17:56"
     },
     {
       "data": "2026-06-12",
-      "min": 23.6,
-      "max": 35.9,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "min": 22.7,
+      "max": 35.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "uv": 5.2,
+      "uv": 6.8,
       "nascer_sol": "06:22",
       "por_sol": "17:56"
     },
     {
       "data": "2026-06-13",
-      "min": 25.5,
-      "max": 35.6,
+      "min": 24.1,
+      "max": 35.4,
       "condicao": "Principalmente limpo",
       "condicao_codigo": 1,
       "chuva_mm": 0,
-      "uv": 6.3,
+      "uv": 6.1,
       "nascer_sol": "06:23",
       "por_sol": "17:56"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 26.1,
+      "max": 36.1,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "06:23",
+      "por_sol": "17:57"
     }
   ],
   "reservatorio": {
@@ -108,15 +108,15 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 15,
+    "indice": 16,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 1.9,
-    "pm10": 2.1,
-    "no2": 2.5,
-    "o3": 35.0,
+    "pm25": 3.0,
+    "pm10": 3.9,
+    "no2": 0.6,
+    "o3": 53.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-07T10:26:33.424181+00:00"
+    "atualizado_em": "2026-06-08T12:26:19.076711+00:00"
   },
   "sol": {
     "nascer": "06:21",
@@ -126,13 +126,13 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 99.0,
-    "fase_pct": 72.6,
-    "dias_proxima_cheia": 7,
+    "nome": "Quarto Minguante",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 75.9,
+    "dias_proxima_cheia": 8,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.6,
+  "temperatura_atual": 29.9,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -155,17 +155,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-07T10:26:33.424181+00:00",
+  "_clima_em": "2026-06-08T12:26:19.076711+00:00",
   "vento": {
-    "velocidade_kmh": 7.4,
-    "direcao_graus": 133,
-    "direcao": "SE",
+    "velocidade_kmh": 17.0,
+    "direcao_graus": 105,
+    "direcao": "ESE",
     "max_kmh": 18.7,
-    "rajada_kmh": 35.3,
+    "rajada_kmh": 34.9,
     "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 62,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 15.8
+  "umidade_pct": 43,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 15.9
 }

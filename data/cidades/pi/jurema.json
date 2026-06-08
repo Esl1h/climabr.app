@@ -4,47 +4,84 @@
   "slug": "jurema",
   "latitude": -9.0145,
   "longitude": -43.1656,
-  "atualizado_em": "2026-06-08T09:45:58.295399+00:00",
+  "atualizado_em": "2026-06-08T12:26:19.076711+00:00",
   "previsao": [
     {
       "data": "2026-06-08",
-      "min": 19,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 19.6,
+      "max": 31.0,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.0,
+      "nascer_sol": "06:03",
+      "por_sol": "17:39"
     },
     {
       "data": "2026-06-09",
-      "min": 17,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 20.1,
+      "max": 30.5,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.0,
+      "nascer_sol": "06:03",
+      "por_sol": "17:40"
     },
     {
       "data": "2026-06-10",
-      "min": 19,
-      "max": 34,
-      "condicao": "Chuvas Isoladas",
-      "condicao_codigo": "ci",
+      "min": 19.7,
+      "max": 31.6,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.0,
+      "nascer_sol": "06:03",
+      "por_sol": "17:40"
     },
     {
       "data": "2026-06-11",
-      "min": 20,
-      "max": 32,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 20.4,
+      "max": 32.0,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.0,
+      "nascer_sol": "06:04",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 21.2,
+      "max": 32.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.9,
+      "nascer_sol": "06:04",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-06-13",
+      "min": 21.4,
+      "max": 32.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.0,
+      "nascer_sol": "06:04",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 23.5,
+      "max": 32.7,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "06:04",
+      "por_sol": "17:40"
     }
   ],
   "queimadas": {
@@ -60,31 +97,31 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 20,
+    "indice": 21,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 3.7,
-    "pm10": 4.9,
-    "no2": 0.4,
-    "o3": 57.0,
+    "pm25": 6.4,
+    "pm10": 9.0,
+    "no2": 0.6,
+    "o3": 56.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-03T12:39:59.933921+00:00"
+    "atualizado_em": "2026-06-08T12:26:19.076711+00:00"
   },
   "sol": {
-    "nascer": "06:02",
+    "nascer": "06:03",
     "por": "17:39",
     "duracao_h": 11.6,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 54.0,
-    "fase_pct": 59.0,
-    "dias_proxima_cheia": 3,
+    "nome": "Quarto Minguante",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 75.9,
+    "dias_proxima_cheia": 8,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 25.9,
+  "temperatura_atual": 25.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -107,17 +144,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-03T12:39:59.933921+00:00",
+  "_clima_em": "2026-06-08T12:26:19.076711+00:00",
   "vento": {
-    "velocidade_kmh": 19.9,
-    "direcao_graus": 111,
+    "velocidade_kmh": 16.4,
+    "direcao_graus": 117,
     "direcao": "ESE",
-    "max_kmh": 21.5,
-    "rajada_kmh": 43.6,
+    "max_kmh": 16.8,
+    "rajada_kmh": 37.4,
     "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 57,
-  "pressao_hpa": 1019,
-  "ponto_orvalho_c": 16.8
+  "umidade_pct": 58,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 16.3
 }
