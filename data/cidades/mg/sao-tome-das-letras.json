@@ -4,8 +4,86 @@
   "slug": "sao-tome-das-letras",
   "latitude": -21.7333,
   "longitude": -44.9638,
-  "atualizado_em": "2026-06-09T08:49:26.285157+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-09T10:58:12.262238+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-09",
+      "min": 9.5,
+      "max": 21.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.2,
+      "nascer_sol": "06:34",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-06-10",
+      "min": 12.9,
+      "max": 22.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:34",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-06-11",
+      "min": 11.8,
+      "max": 16.3,
+      "condicao": "Chuva moderada",
+      "condicao_codigo": 63,
+      "chuva_mm": 8.9,
+      "uv": 1.1,
+      "nascer_sol": "06:34",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 12.0,
+      "max": 19.9,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 6.3,
+      "uv": 2.2,
+      "nascer_sol": "06:35",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-06-13",
+      "min": 13.8,
+      "max": 19.8,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 18.8,
+      "uv": 2.3,
+      "nascer_sol": "06:35",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 13.7,
+      "max": 18.3,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 8.9,
+      "uv": 4.9,
+      "nascer_sol": "06:35",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-06-15",
+      "min": 13.7,
+      "max": 19.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 4.4,
+      "uv": 5.2,
+      "nascer_sol": "06:35",
+      "por_sol": "17:24"
+    }
+  ],
   "reservatorio": {
     "nome": "Camargos",
     "nivel_pct": 99.7,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-06-09T10:07:02.942918+00:00"
   },
   "uv": {
-    "indice": 5.5,
+    "indice": 5.2,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 24,
+    "indice": 28,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 14.4,
-    "pm10": 15.4,
-    "no2": 5.4,
-    "o3": 45.0,
+    "pm25": 11.1,
+    "pm10": 11.2,
+    "no2": 6.7,
+    "o3": 67.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-06T10:01:22.845096+00:00"
+    "atualizado_em": "2026-06-09T10:58:12.262238+00:00"
   },
   "sol": {
-    "nascer": "06:33",
+    "nascer": "06:34",
     "por": "17:24",
-    "duracao_h": 10.9,
+    "duracao_h": 10.8,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 93.0,
-    "fase_pct": 69.2,
-    "dias_proxima_cheia": 6,
+    "nome": "Quarto Minguante",
+    "iluminacao_pct": 96.0,
+    "fase_pct": 79.3,
+    "dias_proxima_cheia": 9,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 8.8,
+  "temperatura_atual": 12.5,
   "vento": {
-    "velocidade_kmh": 6.1,
-    "direcao_graus": 102,
-    "direcao": "ESE",
-    "max_kmh": 11.3,
-    "rajada_kmh": 19.1,
-    "direcao_dominante": "NE",
+    "velocidade_kmh": 6.0,
+    "direcao_graus": 37,
+    "direcao": "NE",
+    "max_kmh": 17.0,
+    "rajada_kmh": 30.6,
+    "direcao_dominante": "NO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 99,
-  "pressao_hpa": 1022,
-  "ponto_orvalho_c": 8.7,
+  "umidade_pct": 79,
+  "pressao_hpa": 1021,
+  "ponto_orvalho_c": 9.0,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-06T10:01:22.845096+00:00"
+  "_clima_em": "2026-06-09T10:58:12.262238+00:00"
 }

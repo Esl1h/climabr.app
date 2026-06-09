@@ -4,8 +4,86 @@
   "slug": "dias-d-avila",
   "latitude": -12.6013,
   "longitude": -38.2824,
-  "atualizado_em": "2026-06-09T08:28:55.380582+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-09T10:58:12.262238+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-09",
+      "min": 21.2,
+      "max": 28.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "05:50",
+      "por_sol": "17:14"
+    },
+    {
+      "data": "2026-06-10",
+      "min": 19.6,
+      "max": 28.3,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "05:50",
+      "por_sol": "17:14"
+    },
+    {
+      "data": "2026-06-11",
+      "min": 19.6,
+      "max": 28.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "05:50",
+      "por_sol": "17:14"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 20.2,
+      "max": 29.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.8,
+      "nascer_sol": "05:51",
+      "por_sol": "17:14"
+    },
+    {
+      "data": "2026-06-13",
+      "min": 20.1,
+      "max": 29.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 6.5,
+      "nascer_sol": "05:51",
+      "por_sol": "17:14"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 21.1,
+      "max": 29.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 5.5,
+      "nascer_sol": "05:51",
+      "por_sol": "17:15"
+    },
+    {
+      "data": "2026-06-15",
+      "min": 20.9,
+      "max": 27.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 6.2,
+      "nascer_sol": "05:52",
+      "por_sol": "17:15"
+    }
+  ],
   "reservatorio": {
     "nome": "Pedra Do Cavalo",
     "nivel_pct": 125.8,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-06-09T10:07:02.942918+00:00"
   },
   "uv": {
-    "indice": 6.2,
+    "indice": 6.5,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 31,
+    "indice": 45,
     "categoria": "Boa",
-    "principal_poluente": "PM10",
-    "pm25": 11.8,
-    "pm10": 19.2,
-    "no2": 2.4,
-    "o3": 61.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 15.0,
+    "pm10": 18.8,
+    "no2": 7.8,
+    "o3": 46.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-05T11:26:10.933122+00:00"
+    "atualizado_em": "2026-06-09T10:58:12.262238+00:00"
   },
   "sol": {
-    "nascer": "05:49",
+    "nascer": "05:50",
     "por": "17:14",
     "duracao_h": 11.4,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 84.0,
-    "fase_pct": 65.8,
-    "dias_proxima_cheia": 5,
+    "nome": "Quarto Minguante",
+    "iluminacao_pct": 96.0,
+    "fase_pct": 79.3,
+    "dias_proxima_cheia": 9,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.9,
+  "temperatura_atual": 24.9,
   "vento": {
-    "velocidade_kmh": 18.2,
-    "direcao_graus": 168,
+    "velocidade_kmh": 3.2,
+    "direcao_graus": 161,
     "direcao": "SSE",
-    "max_kmh": 23.2,
-    "rajada_kmh": 48.2,
-    "direcao_dominante": "S",
+    "max_kmh": 12.2,
+    "rajada_kmh": 28.8,
+    "direcao_dominante": "SSE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 87,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 21.6,
+  "umidade_pct": 73,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 19.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-05T11:26:10.933122+00:00"
+  "_clima_em": "2026-06-09T10:58:12.262238+00:00"
 }
