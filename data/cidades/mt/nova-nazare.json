@@ -4,58 +4,136 @@
   "slug": "nova-nazare",
   "latitude": -14.1562,
   "longitude": -51.8899,
-  "atualizado_em": "2026-06-10T08:56:46.550048+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-10T11:37:09.052739+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-10",
+      "min": 21.2,
+      "max": 34.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "06:47",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-06-11",
+      "min": 22.4,
+      "max": 30.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 4.7,
+      "nascer_sol": "06:48",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 20.8,
+      "max": 34.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 2.2,
+      "nascer_sol": "06:48",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-06-13",
+      "min": 20.8,
+      "max": 34.7,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "06:48",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 22.8,
+      "max": 35.9,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "06:48",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-06-15",
+      "min": 22.2,
+      "max": 35.2,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.0,
+      "nascer_sol": "06:49",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-06-16",
+      "min": 24.9,
+      "max": 35.5,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.0,
+      "nascer_sol": "06:49",
+      "por_sol": "18:06"
+    }
+  ],
   "queimadas": {
     "focos_100km": 4,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-06-10T10:37:48.438185+00:00"
   },
   "uv": {
-    "indice": 6.4,
+    "indice": 6.3,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 18,
+    "indice": 22,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 2.3,
-    "pm10": 2.4,
-    "no2": 5.2,
-    "o3": 38.0,
+    "pm25": 3.8,
+    "pm10": 3.8,
+    "no2": 6.6,
+    "o3": 49.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-06T10:01:22.845096+00:00"
+    "atualizado_em": "2026-06-10T11:37:09.052739+00:00"
   },
   "sol": {
-    "nascer": "06:46",
-    "por": "18:05",
+    "nascer": "06:47",
+    "por": "18:06",
     "duracao_h": 11.3,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 93.0,
-    "fase_pct": 69.2,
-    "dias_proxima_cheia": 6,
+    "nome": "Quarto Minguante",
+    "iluminacao_pct": 88.0,
+    "fase_pct": 82.7,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 19.2,
+  "temperatura_atual": 23.9,
   "vento": {
-    "velocidade_kmh": 8.3,
-    "direcao_graus": 139,
-    "direcao": "SE",
-    "max_kmh": 12.4,
-    "rajada_kmh": 27.7,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 4.2,
+    "direcao_graus": 198,
+    "direcao": "SSO",
+    "max_kmh": 11.9,
+    "rajada_kmh": 22.7,
+    "direcao_dominante": "SSE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 59,
-  "pressao_hpa": 1016,
-  "ponto_orvalho_c": 11.0,
+  "umidade_pct": 52,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 13.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-06T10:01:22.845096+00:00"
+  "_clima_em": "2026-06-10T11:37:09.052739+00:00"
 }

@@ -4,8 +4,86 @@
   "slug": "mirassol-d-oeste",
   "latitude": -15.6542,
   "longitude": -58.055,
-  "atualizado_em": "2026-06-10T08:56:43.989946+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-10T11:37:09.052739+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-10",
+      "min": 19.8,
+      "max": 22.9,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 3.9,
+      "uv": 0.5,
+      "nascer_sol": "07:15",
+      "por_sol": "18:28"
+    },
+    {
+      "data": "2026-06-11",
+      "min": 19.1,
+      "max": 27.7,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 9.6,
+      "uv": 5.5,
+      "nascer_sol": "07:15",
+      "por_sol": "18:28"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 18.7,
+      "max": 26.2,
+      "condicao": "Chuva moderada",
+      "condicao_codigo": 63,
+      "chuva_mm": 5.6,
+      "uv": 4.6,
+      "nascer_sol": "07:15",
+      "por_sol": "18:28"
+    },
+    {
+      "data": "2026-06-13",
+      "min": 20.3,
+      "max": 29.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 2.7,
+      "uv": 6.0,
+      "nascer_sol": "07:16",
+      "por_sol": "18:28"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 20.7,
+      "max": 26.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.9,
+      "uv": 6.0,
+      "nascer_sol": "07:16",
+      "por_sol": "18:28"
+    },
+    {
+      "data": "2026-06-15",
+      "min": 20.8,
+      "max": 24.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 5.5,
+      "nascer_sol": "07:16",
+      "por_sol": "18:28"
+    },
+    {
+      "data": "2026-06-16",
+      "min": 20.1,
+      "max": 26.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "07:16",
+      "por_sol": "18:28"
+    }
+  ],
   "reservatorio": {
     "nome": "Jauru",
     "nivel_pct": 0.0,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-06-10T10:37:48.438185+00:00"
   },
   "uv": {
-    "indice": 6.2,
-    "categoria": "Alto",
+    "indice": 0.5,
+    "categoria": "Baixo",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 28,
+    "indice": 44,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 3.9,
-    "pm10": 4.4,
-    "no2": 10.2,
-    "o3": 54.0,
+    "pm25": 13.3,
+    "pm10": 13.5,
+    "no2": 10.8,
+    "o3": 29.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-06T10:01:22.845096+00:00"
+    "atualizado_em": "2026-06-10T11:37:09.052739+00:00"
   },
   "sol": {
-    "nascer": "07:14",
-    "por": "18:27",
+    "nascer": "07:15",
+    "por": "18:28",
     "duracao_h": 11.2,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 93.0,
-    "fase_pct": 69.2,
-    "dias_proxima_cheia": 6,
+    "nome": "Quarto Minguante",
+    "iluminacao_pct": 88.0,
+    "fase_pct": 82.7,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 18.8,
+  "temperatura_atual": 20.6,
   "vento": {
-    "velocidade_kmh": 0.7,
-    "direcao_graus": 256,
-    "direcao": "OSO",
-    "max_kmh": 8.0,
-    "rajada_kmh": 16.6,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 8.6,
+    "direcao_graus": 37,
+    "direcao": "NE",
+    "max_kmh": 8.8,
+    "rajada_kmh": 17.3,
+    "direcao_dominante": "N",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 74,
-  "pressao_hpa": 1016,
-  "ponto_orvalho_c": 14.0,
+  "umidade_pct": 93,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 19.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-06T10:01:22.845096+00:00"
+  "_clima_em": "2026-06-10T11:37:09.052739+00:00"
 }
