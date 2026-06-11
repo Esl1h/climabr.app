@@ -4,8 +4,86 @@
   "slug": "diamante-d-oeste",
   "latitude": -24.9542,
   "longitude": -54.1003,
-  "atualizado_em": "2026-06-11T09:32:16.008059+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-11T12:07:57.965533+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-11",
+      "min": 16.3,
+      "max": 21.1,
+      "condicao": "Chuva moderada",
+      "condicao_codigo": 63,
+      "chuva_mm": 17.5,
+      "uv": 1.2,
+      "nascer_sol": "07:17",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 12.9,
+      "max": 18.2,
+      "condicao": "Chuva forte",
+      "condicao_codigo": 65,
+      "chuva_mm": 25.3,
+      "uv": 2.0,
+      "nascer_sol": "07:18",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-06-13",
+      "min": 10.0,
+      "max": 20.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.8,
+      "nascer_sol": "07:18",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 12.4,
+      "max": 21.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.1,
+      "uv": 1.6,
+      "nascer_sol": "07:18",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-06-15",
+      "min": 10.4,
+      "max": 20.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.4,
+      "nascer_sol": "07:19",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-06-16",
+      "min": 8.9,
+      "max": 21.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.5,
+      "nascer_sol": "07:19",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-06-17",
+      "min": 13.0,
+      "max": 22.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.5,
+      "nascer_sol": "07:19",
+      "por_sol": "17:55"
+    }
+  ],
   "reservatorio": {
     "nome": "Itaipu",
     "nivel_pct": 92.0,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-06-11T11:04:55.601799+00:00"
   },
   "uv": {
-    "indice": 1.0,
+    "indice": 1.2,
     "categoria": "Baixo",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 43,
+    "indice": 24,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 5.4,
-    "pm10": 5.7,
-    "no2": 3.6,
-    "o3": 57.0,
+    "pm25": 10.4,
+    "pm10": 10.7,
+    "no2": 3.2,
+    "o3": 48.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-10T11:37:09.052739+00:00"
+    "atualizado_em": "2026-06-11T12:07:57.965533+00:00"
   },
   "sol": {
     "nascer": "07:17",
@@ -49,12 +127,12 @@
   },
   "lua": {
     "nome": "Quarto Minguante",
-    "iluminacao_pct": 88.0,
-    "fase_pct": 82.7,
-    "dias_proxima_cheia": 10,
+    "iluminacao_pct": 77.0,
+    "fase_pct": 86.1,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 17.1,
+  "temperatura_atual": 17.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -77,17 +155,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-10T11:37:09.052739+00:00",
+  "_clima_em": "2026-06-11T12:07:57.965533+00:00",
   "vento": {
-    "velocidade_kmh": 15.2,
-    "direcao_graus": 22,
-    "direcao": "NNE",
-    "max_kmh": 16.0,
-    "rajada_kmh": 33.1,
-    "direcao_dominante": "NE",
+    "velocidade_kmh": 12.9,
+    "direcao_graus": 6,
+    "direcao": "N",
+    "max_kmh": 15.3,
+    "rajada_kmh": 36.4,
+    "direcao_dominante": "NNE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 96,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 16.4
+  "umidade_pct": 97,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 17.0
 }

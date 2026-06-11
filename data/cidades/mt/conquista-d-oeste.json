@@ -4,8 +4,86 @@
   "slug": "conquista-d-oeste",
   "latitude": -14.6347,
   "longitude": -59.3322,
-  "atualizado_em": "2026-06-11T09:19:05.308114+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-11T12:07:57.965533+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-11",
+      "min": 18.3,
+      "max": 25.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.9,
+      "nascer_sol": "07:18",
+      "por_sol": "18:35"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 18.7,
+      "max": 27.3,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.1,
+      "uv": 6.2,
+      "nascer_sol": "07:19",
+      "por_sol": "18:35"
+    },
+    {
+      "data": "2026-06-13",
+      "min": 19.9,
+      "max": 28.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 1.6,
+      "uv": 6.2,
+      "nascer_sol": "07:19",
+      "por_sol": "18:35"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 20.2,
+      "max": 26.4,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 5.7,
+      "uv": 6.2,
+      "nascer_sol": "07:19",
+      "por_sol": "18:35"
+    },
+    {
+      "data": "2026-06-15",
+      "min": 19.6,
+      "max": 24.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 6.1,
+      "nascer_sol": "07:19",
+      "por_sol": "18:35"
+    },
+    {
+      "data": "2026-06-16",
+      "min": 18.8,
+      "max": 26.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 6.0,
+      "nascer_sol": "07:20",
+      "por_sol": "18:35"
+    },
+    {
+      "data": "2026-06-17",
+      "min": 19.2,
+      "max": 28.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 6.0,
+      "nascer_sol": "07:20",
+      "por_sol": "18:35"
+    }
+  ],
   "reservatorio": {
     "nome": "Guapore",
     "nivel_pct": 91.7,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-06-11T11:04:55.601799+00:00"
   },
   "uv": {
-    "indice": 6.0,
+    "indice": 4.9,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 16,
+    "indice": 34,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 8.5,
-    "pm10": 8.9,
-    "no2": 9.5,
-    "o3": 47.0,
+    "pm25": 10.4,
+    "pm10": 10.5,
+    "no2": 2.3,
+    "o3": 33.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-09T10:58:12.262238+00:00"
+    "atualizado_em": "2026-06-11T12:07:57.965533+00:00"
   },
   "sol": {
     "nascer": "07:18",
-    "por": "18:34",
+    "por": "18:35",
     "duracao_h": 11.3,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Quarto Minguante",
-    "iluminacao_pct": 96.0,
-    "fase_pct": 79.3,
-    "dias_proxima_cheia": 9,
+    "iluminacao_pct": 77.0,
+    "fase_pct": 86.1,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 19.9,
+  "temperatura_atual": 22.1,
   "vento": {
-    "velocidade_kmh": 4.7,
-    "direcao_graus": 140,
-    "direcao": "SE",
-    "max_kmh": 8.8,
-    "rajada_kmh": 23.4,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 7.9,
+    "direcao_graus": 321,
+    "direcao": "NO",
+    "max_kmh": 10.2,
+    "rajada_kmh": 26.3,
+    "direcao_dominante": "NO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 81,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 16.6,
+  "umidade_pct": 75,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 17.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-09T10:58:12.262238+00:00"
+  "_clima_em": "2026-06-11T12:07:57.965533+00:00"
 }

@@ -4,8 +4,86 @@
   "slug": "barao-do-monte-alto",
   "latitude": -21.2648,
   "longitude": -42.2784,
-  "atualizado_em": "2026-06-11T09:21:02.471283+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-11T12:07:57.965533+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-11",
+      "min": 16.8,
+      "max": 25.7,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 1.9,
+      "uv": 3.1,
+      "nascer_sol": "06:22",
+      "por_sol": "17:14"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 17.8,
+      "max": 28.6,
+      "condicao": "Chuva moderada",
+      "condicao_codigo": 63,
+      "chuva_mm": 5.1,
+      "uv": 4.7,
+      "nascer_sol": "06:23",
+      "por_sol": "17:14"
+    },
+    {
+      "data": "2026-06-13",
+      "min": 18.9,
+      "max": 28.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.1,
+      "uv": 5.4,
+      "nascer_sol": "06:23",
+      "por_sol": "17:14"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 17.9,
+      "max": 25.3,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 6.1,
+      "uv": 3.2,
+      "nascer_sol": "06:23",
+      "por_sol": "17:14"
+    },
+    {
+      "data": "2026-06-15",
+      "min": 19.2,
+      "max": 24.4,
+      "condicao": "Chuva moderada",
+      "condicao_codigo": 63,
+      "chuva_mm": 19.5,
+      "uv": 3.8,
+      "nascer_sol": "06:24",
+      "por_sol": "17:14"
+    },
+    {
+      "data": "2026-06-16",
+      "min": 17.6,
+      "max": 22.9,
+      "condicao": "Chuva moderada",
+      "condicao_codigo": 63,
+      "chuva_mm": 12.2,
+      "uv": 3.7,
+      "nascer_sol": "06:24",
+      "por_sol": "17:14"
+    },
+    {
+      "data": "2026-06-17",
+      "min": 17.1,
+      "max": 22.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 4.5,
+      "nascer_sol": "06:24",
+      "por_sol": "17:15"
+    }
+  ],
   "reservatorio": {
     "nome": "Barra Brauna",
     "nivel_pct": 26.2,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-06-11T11:04:55.601799+00:00"
   },
   "uv": {
-    "indice": 5.2,
+    "indice": 3.1,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 45,
+    "indice": 39,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 14.6,
-    "pm10": 14.8,
-    "no2": 12.6,
-    "o3": 32.0,
+    "pm25": 17.8,
+    "pm10": 22.4,
+    "no2": 10.1,
+    "o3": 55.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-09T10:58:12.262238+00:00"
+    "atualizado_em": "2026-06-11T12:07:57.965533+00:00"
   },
   "sol": {
     "nascer": "06:22",
@@ -49,24 +127,24 @@
   },
   "lua": {
     "nome": "Quarto Minguante",
-    "iluminacao_pct": 96.0,
-    "fase_pct": 79.3,
-    "dias_proxima_cheia": 9,
+    "iluminacao_pct": 77.0,
+    "fase_pct": 86.1,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 19.1,
+  "temperatura_atual": 21.8,
   "vento": {
-    "velocidade_kmh": 3.1,
-    "direcao_graus": 301,
-    "direcao": "ONO",
-    "max_kmh": 9.4,
-    "rajada_kmh": 24.8,
-    "direcao_dominante": "NO",
+    "velocidade_kmh": 1.1,
+    "direcao_graus": 81,
+    "direcao": "E",
+    "max_kmh": 12.4,
+    "rajada_kmh": 21.2,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 70,
-  "pressao_hpa": 1021,
-  "ponto_orvalho_c": 13.5,
+  "umidade_pct": 77,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 17.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-09T10:58:12.262238+00:00"
+  "_clima_em": "2026-06-11T12:07:57.965533+00:00"
 }

@@ -4,8 +4,86 @@
   "slug": "lambari-d-oeste",
   "latitude": -15.3771,
   "longitude": -57.7792,
-  "atualizado_em": "2026-06-11T09:19:16.995749+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-11T12:07:57.965533+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-11",
+      "min": 19.1,
+      "max": 30.3,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 5.3,
+      "uv": 5.0,
+      "nascer_sol": "07:13",
+      "por_sol": "18:27"
+    },
+    {
+      "data": "2026-06-12",
+      "min": 20.9,
+      "max": 29.6,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 1.9,
+      "uv": 5.8,
+      "nascer_sol": "07:14",
+      "por_sol": "18:27"
+    },
+    {
+      "data": "2026-06-13",
+      "min": 21.1,
+      "max": 31.5,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 0.9,
+      "uv": 6.0,
+      "nascer_sol": "07:14",
+      "por_sol": "18:27"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 22.2,
+      "max": 29.8,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 4.8,
+      "uv": 6.0,
+      "nascer_sol": "07:14",
+      "por_sol": "18:27"
+    },
+    {
+      "data": "2026-06-15",
+      "min": 21.7,
+      "max": 25.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 5.8,
+      "nascer_sol": "07:14",
+      "por_sol": "18:28"
+    },
+    {
+      "data": "2026-06-16",
+      "min": 19.9,
+      "max": 28.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "07:15",
+      "por_sol": "18:28"
+    },
+    {
+      "data": "2026-06-17",
+      "min": 20.1,
+      "max": 30.4,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "07:15",
+      "por_sol": "18:28"
+    }
+  ],
   "reservatorio": {
     "nome": "Jauru",
     "nivel_pct": 0.0,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-06-11T11:04:55.601799+00:00"
   },
   "uv": {
-    "indice": 0.8,
-    "categoria": "Baixo",
+    "indice": 5.0,
+    "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 40,
-    "categoria": "Boa",
+    "indice": 60,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 17.6,
-    "pm10": 17.8,
-    "no2": 11.2,
-    "o3": 28.0,
+    "pm25": 21.5,
+    "pm10": 21.8,
+    "no2": 8.3,
+    "o3": 58.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-10T11:37:09.052739+00:00"
+    "atualizado_em": "2026-06-11T12:07:57.965533+00:00"
   },
   "sol": {
     "nascer": "07:13",
@@ -49,24 +127,24 @@
   },
   "lua": {
     "nome": "Quarto Minguante",
-    "iluminacao_pct": 88.0,
-    "fase_pct": 82.7,
-    "dias_proxima_cheia": 10,
+    "iluminacao_pct": 77.0,
+    "fase_pct": 86.1,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 21.4,
+  "temperatura_atual": 24.4,
   "vento": {
-    "velocidade_kmh": 3.9,
-    "direcao_graus": 24,
+    "velocidade_kmh": 1.7,
+    "direcao_graus": 13,
     "direcao": "NNE",
-    "max_kmh": 11.2,
-    "rajada_kmh": 24.5,
-    "direcao_dominante": "NNO",
+    "max_kmh": 16.9,
+    "rajada_kmh": 34.6,
+    "direcao_dominante": "N",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 93,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 20.3,
+  "umidade_pct": 79,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 20.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-10T11:37:09.052739+00:00"
+  "_clima_em": "2026-06-11T12:07:57.965533+00:00"
 }
