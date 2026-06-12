@@ -4,58 +4,136 @@
   "slug": "itanhanga",
   "latitude": -12.1404,
   "longitude": -56.7549,
-  "atualizado_em": "2026-06-12T09:07:29.844192+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-12T11:41:57.440030+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-12",
+      "min": 20.6,
+      "max": 31.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "07:04",
+      "por_sol": "18:29"
+    },
+    {
+      "data": "2026-06-13",
+      "min": 21.9,
+      "max": 32.1,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 1.1,
+      "uv": 6.5,
+      "nascer_sol": "07:04",
+      "por_sol": "18:29"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 21.7,
+      "max": 32.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "07:04",
+      "por_sol": "18:29"
+    },
+    {
+      "data": "2026-06-15",
+      "min": 22.1,
+      "max": 32.7,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "07:04",
+      "por_sol": "18:29"
+    },
+    {
+      "data": "2026-06-16",
+      "min": 22.2,
+      "max": 31.9,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "07:05",
+      "por_sol": "18:30"
+    },
+    {
+      "data": "2026-06-17",
+      "min": 21.3,
+      "max": 32.6,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "07:05",
+      "por_sol": "18:30"
+    },
+    {
+      "data": "2026-06-18",
+      "min": 22.5,
+      "max": 32.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.1,
+      "nascer_sol": "07:05",
+      "por_sol": "18:30"
+    }
+  ],
   "queimadas": {
     "focos_100km": 3,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-06-12T10:45:47.677142+00:00"
   },
   "uv": {
-    "indice": 6.3,
+    "indice": 6.5,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 12,
-    "categoria": "Boa",
+    "indice": 62,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 3.0,
-    "pm10": 3.2,
-    "no2": 3.2,
-    "o3": 29.0,
+    "pm25": 4.8,
+    "pm10": 4.9,
+    "no2": 1.6,
+    "o3": 34.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-09T10:58:12.262238+00:00"
+    "atualizado_em": "2026-06-12T11:41:57.440030+00:00"
   },
   "sol": {
-    "nascer": "07:03",
+    "nascer": "07:04",
     "por": "18:29",
     "duracao_h": 11.4,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 96.0,
-    "fase_pct": 79.3,
-    "dias_proxima_cheia": 9,
+    "nome": "Minguante",
+    "iluminacao_pct": 61.0,
+    "fase_pct": 89.5,
+    "dias_proxima_cheia": 12,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 21.2,
+  "temperatura_atual": 23.3,
   "vento": {
-    "velocidade_kmh": 5.8,
-    "direcao_graus": 97,
-    "direcao": "E",
-    "max_kmh": 9.0,
-    "rajada_kmh": 18.0,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 4.3,
+    "direcao_graus": 114,
+    "direcao": "ESE",
+    "max_kmh": 9.2,
+    "rajada_kmh": 26.3,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 84,
+  "umidade_pct": 88,
   "pressao_hpa": 1016,
-  "ponto_orvalho_c": 18.3,
+  "ponto_orvalho_c": 21.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-09T10:58:12.262238+00:00"
+  "_clima_em": "2026-06-12T11:41:57.440030+00:00"
 }

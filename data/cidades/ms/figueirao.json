@@ -4,58 +4,136 @@
   "slug": "figueirao",
   "latitude": -18.7444,
   "longitude": -53.8624,
-  "atualizado_em": "2026-06-12T09:08:50.463743+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-12T11:41:57.440030+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-12",
+      "min": 17.7,
+      "max": 24.3,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 8.1,
+      "uv": 5.7,
+      "nascer_sol": "07:04",
+      "por_sol": "18:05"
+    },
+    {
+      "data": "2026-06-13",
+      "min": 18.2,
+      "max": 27.1,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 5.1,
+      "uv": 5.7,
+      "nascer_sol": "07:05",
+      "por_sol": "18:05"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 18.3,
+      "max": 27.7,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 7.6,
+      "uv": 5.4,
+      "nascer_sol": "07:05",
+      "por_sol": "18:05"
+    },
+    {
+      "data": "2026-06-15",
+      "min": 19.1,
+      "max": 25.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 5.7,
+      "nascer_sol": "07:05",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-06-16",
+      "min": 17.6,
+      "max": 26.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "07:05",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-06-17",
+      "min": 18.3,
+      "max": 28.6,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 5.4,
+      "nascer_sol": "07:06",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-06-18",
+      "min": 20.1,
+      "max": 30.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "07:06",
+      "por_sol": "18:06"
+    }
+  ],
   "queimadas": {
     "focos_100km": 3,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-06-12T10:45:47.677142+00:00"
   },
   "uv": {
-    "indice": 5.2,
+    "indice": 5.7,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 9,
+    "indice": 17,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 0.8,
-    "pm10": 0.8,
-    "no2": 13.2,
-    "o3": 20.0,
+    "pm25": 3.9,
+    "pm10": 4.5,
+    "no2": 2.9,
+    "o3": 38.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-09T10:58:12.262238+00:00"
+    "atualizado_em": "2026-06-12T11:41:57.440030+00:00"
   },
   "sol": {
-    "nascer": "07:03",
+    "nascer": "07:04",
     "por": "18:05",
     "duracao_h": 11.0,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 96.0,
-    "fase_pct": 79.3,
-    "dias_proxima_cheia": 9,
+    "nome": "Minguante",
+    "iluminacao_pct": 61.0,
+    "fase_pct": 89.5,
+    "dias_proxima_cheia": 12,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 18.4,
+  "temperatura_atual": 19.1,
   "vento": {
-    "velocidade_kmh": 5.9,
-    "direcao_graus": 108,
-    "direcao": "ESE",
-    "max_kmh": 11.7,
-    "rajada_kmh": 19.8,
-    "direcao_dominante": "ESE",
+    "velocidade_kmh": 6.5,
+    "direcao_graus": 6,
+    "direcao": "N",
+    "max_kmh": 15.4,
+    "rajada_kmh": 38.9,
+    "direcao_dominante": "NO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 57,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 9.8,
+  "umidade_pct": 97,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 18.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-09T10:58:12.262238+00:00"
+  "_clima_em": "2026-06-12T11:41:57.440030+00:00"
 }
