@@ -4,47 +4,84 @@
   "slug": "brasilia",
   "latitude": -15.7812,
   "longitude": -47.7969,
-  "atualizado_em": "2026-06-13T08:22:05.896467+00:00",
+  "atualizado_em": "2026-06-13T10:26:02.639374+00:00",
   "previsao": [
     {
       "data": "2026-06-13",
-      "min": 17,
-      "max": 24,
-      "condicao": "Chuvas Isoladas",
-      "condicao_codigo": "ci",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 17.1,
+      "max": 25.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 8.1,
+      "uv": 6.2,
+      "nascer_sol": "06:35",
+      "por_sol": "17:47"
     },
     {
       "data": "2026-06-14",
-      "min": 18,
-      "max": 26,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 16.0,
+      "max": 25.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 0.9,
+      "uv": 6.3,
+      "nascer_sol": "06:35",
+      "por_sol": "17:47"
     },
     {
       "data": "2026-06-15",
-      "min": 18,
-      "max": 27,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 17.7,
+      "max": 26.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 6.3,
+      "nascer_sol": "06:35",
+      "por_sol": "17:47"
     },
     {
       "data": "2026-06-16",
-      "min": 18,
-      "max": 26,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 16.9,
+      "max": 25.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 6.3,
+      "nascer_sol": "06:36",
+      "por_sol": "17:47"
+    },
+    {
+      "data": "2026-06-17",
+      "min": 17.1,
+      "max": 25.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.2,
+      "nascer_sol": "06:36",
+      "por_sol": "17:47"
+    },
+    {
+      "data": "2026-06-18",
+      "min": 17.2,
+      "max": 25.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.1,
+      "nascer_sol": "06:36",
+      "por_sol": "17:48"
+    },
+    {
+      "data": "2026-06-19",
+      "min": 17.6,
+      "max": 24.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "06:36",
+      "por_sol": "17:48"
     }
   ],
   "reservatorio": {
@@ -64,8 +101,8 @@
     "atualizado_em": "2026-06-13T09:41:22.926869+00:00"
   },
   "uv": {
-    "indice": 2.9,
-    "categoria": "Baixo",
+    "indice": 6.2,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
@@ -74,12 +111,12 @@
     "indice": 24,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 7.7,
-    "pm10": 7.9,
-    "no2": 13.7,
-    "o3": 47.0,
+    "pm25": 6.2,
+    "pm10": 6.4,
+    "no2": 12.8,
+    "o3": 38.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-12T11:41:57.440030+00:00"
+    "atualizado_em": "2026-06-13T10:26:02.639374+00:00"
   },
   "sol": {
     "nascer": "06:35",
@@ -90,12 +127,12 @@
   },
   "lua": {
     "nome": "Minguante",
-    "iluminacao_pct": 61.0,
-    "fase_pct": 89.5,
-    "dias_proxima_cheia": 12,
+    "iluminacao_pct": 43.0,
+    "fase_pct": 92.9,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 18.4,
+  "temperatura_atual": 17.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -119,16 +156,16 @@
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
   "vento": {
-    "velocidade_kmh": 4.0,
-    "direcao_graus": 21,
-    "direcao": "NNE",
-    "max_kmh": 10.0,
-    "rajada_kmh": 25.6,
-    "direcao_dominante": "NNO",
+    "velocidade_kmh": 6.6,
+    "direcao_graus": 57,
+    "direcao": "ENE",
+    "max_kmh": 12.3,
+    "rajada_kmh": 31.7,
+    "direcao_dominante": "NNE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 95,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 17.6,
-  "_clima_em": "2026-06-12T11:41:57.440030+00:00"
+  "umidade_pct": 98,
+  "pressao_hpa": 1021,
+  "ponto_orvalho_c": 17.2,
+  "_clima_em": "2026-06-13T10:26:02.639374+00:00"
 }

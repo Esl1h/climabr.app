@@ -4,25 +4,14 @@
   "slug": "picos",
   "latitude": -7.0589,
   "longitude": -41.5223,
-  "atualizado_em": "2026-06-12T11:41:57.440030+00:00",
+  "atualizado_em": "2026-06-13T10:26:02.639374+00:00",
   "previsao": [
     {
-      "data": "2026-06-12",
-      "min": 22.5,
-      "max": 36.0,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
-      "chuva_mm": 0,
-      "uv": 7.2,
-      "nascer_sol": "05:54",
-      "por_sol": "17:37"
-    },
-    {
       "data": "2026-06-13",
-      "min": 24.7,
-      "max": 35.0,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "min": 23.6,
+      "max": 35.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
       "uv": 7.2,
       "nascer_sol": "05:54",
@@ -31,9 +20,9 @@
     {
       "data": "2026-06-14",
       "min": 23.8,
-      "max": 35.7,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "max": 36.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
       "uv": 7.2,
       "nascer_sol": "05:54",
@@ -41,8 +30,8 @@
     },
     {
       "data": "2026-06-15",
-      "min": 24.3,
-      "max": 35.7,
+      "min": 24.0,
+      "max": 35.1,
       "condicao": "Principalmente limpo",
       "condicao_codigo": 1,
       "chuva_mm": 0,
@@ -52,8 +41,8 @@
     },
     {
       "data": "2026-06-16",
-      "min": 24.0,
-      "max": 35.5,
+      "min": 24.5,
+      "max": 35.2,
       "condicao": "Principalmente limpo",
       "condicao_codigo": 1,
       "chuva_mm": 0,
@@ -63,24 +52,35 @@
     },
     {
       "data": "2026-06-17",
-      "min": 24.4,
-      "max": 35.7,
+      "min": 24.8,
+      "max": 36.0,
       "condicao": "Principalmente limpo",
       "condicao_codigo": 1,
       "chuva_mm": 0,
-      "uv": 7.0,
+      "uv": 7.2,
       "nascer_sol": "05:55",
       "por_sol": "17:38"
     },
     {
       "data": "2026-06-18",
-      "min": 26.7,
-      "max": 33.0,
+      "min": 24.9,
+      "max": 34.6,
       "condicao": "Chuvisco leve",
       "condicao_codigo": 51,
-      "chuva_mm": 1.2,
-      "uv": 6.9,
+      "chuva_mm": 0.3,
+      "uv": 7.0,
       "nascer_sol": "05:55",
+      "por_sol": "17:38"
+    },
+    {
+      "data": "2026-06-19",
+      "min": 25.5,
+      "max": 34.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 6.8,
+      "nascer_sol": "05:56",
       "por_sol": "17:38"
     }
   ],
@@ -97,15 +97,15 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 21,
+    "indice": 17,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 2.7,
-    "pm10": 3.7,
-    "no2": 0.8,
-    "o3": 59.0,
+    "pm25": 0.5,
+    "pm10": 0.5,
+    "no2": 1.5,
+    "o3": 43.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-12T11:41:57.440030+00:00"
+    "atualizado_em": "2026-06-13T10:26:02.639374+00:00"
   },
   "sol": {
     "nascer": "05:54",
@@ -116,12 +116,12 @@
   },
   "lua": {
     "nome": "Minguante",
-    "iluminacao_pct": 61.0,
-    "fase_pct": 89.5,
-    "dias_proxima_cheia": 12,
+    "iluminacao_pct": 43.0,
+    "fase_pct": 92.9,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 28.4,
+  "temperatura_atual": 27.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -144,17 +144,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-12T11:41:57.440030+00:00",
+  "_clima_em": "2026-06-13T10:26:02.639374+00:00",
   "vento": {
-    "velocidade_kmh": 9.7,
-    "direcao_graus": 118,
-    "direcao": "ESE",
-    "max_kmh": 14.9,
-    "rajada_kmh": 34.2,
-    "direcao_dominante": "ESE",
+    "velocidade_kmh": 10.5,
+    "direcao_graus": 84,
+    "direcao": "E",
+    "max_kmh": 15.8,
+    "rajada_kmh": 37.1,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 46,
+  "umidade_pct": 54,
   "pressao_hpa": 1017,
-  "ponto_orvalho_c": 15.8
+  "ponto_orvalho_c": 17.1
 }

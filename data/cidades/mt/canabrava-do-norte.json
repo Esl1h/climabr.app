@@ -4,58 +4,136 @@
   "slug": "canabrava-do-norte",
   "latitude": -11.2016,
   "longitude": -51.8236,
-  "atualizado_em": "2026-06-13T08:26:58.645559+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-13T10:26:02.639374+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-13",
+      "min": 22.1,
+      "max": 33.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 6.7,
+      "nascer_sol": "06:43",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 21.8,
+      "max": 35.1,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.7,
+      "nascer_sol": "06:43",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-06-15",
+      "min": 22.5,
+      "max": 35.3,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.7,
+      "nascer_sol": "06:43",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-06-16",
+      "min": 24.0,
+      "max": 34.7,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.7,
+      "nascer_sol": "06:43",
+      "por_sol": "18:12"
+    },
+    {
+      "data": "2026-06-17",
+      "min": 24.4,
+      "max": 35.1,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.7,
+      "nascer_sol": "06:44",
+      "por_sol": "18:12"
+    },
+    {
+      "data": "2026-06-18",
+      "min": 23.8,
+      "max": 34.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 6.4,
+      "nascer_sol": "06:44",
+      "por_sol": "18:12"
+    },
+    {
+      "data": "2026-06-19",
+      "min": 24.3,
+      "max": 34.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "06:44",
+      "por_sol": "18:12"
+    }
+  ],
   "queimadas": {
     "focos_100km": 9,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-06-13T09:41:22.926869+00:00"
   },
   "uv": {
-    "indice": 5.8,
-    "categoria": "Moderado",
+    "indice": 6.7,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 21,
+    "indice": 17,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 9.5,
-    "pm10": 9.7,
-    "no2": 2.4,
-    "o3": 41.0,
+    "pm25": 5.1,
+    "pm10": 5.4,
+    "no2": 5.9,
+    "o3": 37.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-11T12:07:57.965533+00:00"
+    "atualizado_em": "2026-06-13T10:26:02.639374+00:00"
   },
   "sol": {
-    "nascer": "06:42",
+    "nascer": "06:43",
     "por": "18:11",
     "duracao_h": 11.5,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 77.0,
-    "fase_pct": 86.1,
-    "dias_proxima_cheia": 11,
+    "nome": "Minguante",
+    "iluminacao_pct": 43.0,
+    "fase_pct": 92.9,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 26.2,
+  "temperatura_atual": 23.3,
   "vento": {
-    "velocidade_kmh": 1.8,
-    "direcao_graus": 323,
-    "direcao": "NO",
-    "max_kmh": 8.6,
-    "rajada_kmh": 20.9,
-    "direcao_dominante": "SSO",
+    "velocidade_kmh": 4.8,
+    "direcao_graus": 211,
+    "direcao": "SSO",
+    "max_kmh": 11.7,
+    "rajada_kmh": 25.2,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 75,
+  "umidade_pct": 89,
   "pressao_hpa": 1015,
-  "ponto_orvalho_c": 21.3,
+  "ponto_orvalho_c": 21.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-11T12:07:57.965533+00:00"
+  "_clima_em": "2026-06-13T10:26:02.639374+00:00"
 }

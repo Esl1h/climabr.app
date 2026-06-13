@@ -4,8 +4,86 @@
   "slug": "perola-d-oeste",
   "latitude": -25.8499,
   "longitude": -53.7589,
-  "atualizado_em": "2026-06-13T08:41:27.498525+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-13T10:26:02.639374+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-13",
+      "min": 9.0,
+      "max": 19.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.8,
+      "nascer_sol": "07:19",
+      "por_sol": "17:51"
+    },
+    {
+      "data": "2026-06-14",
+      "min": 10.7,
+      "max": 20.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 3.2,
+      "nascer_sol": "07:19",
+      "por_sol": "17:51"
+    },
+    {
+      "data": "2026-06-15",
+      "min": 9.7,
+      "max": 21.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.5,
+      "nascer_sol": "07:19",
+      "por_sol": "17:51"
+    },
+    {
+      "data": "2026-06-16",
+      "min": 7.6,
+      "max": 21.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.7,
+      "nascer_sol": "07:19",
+      "por_sol": "17:51"
+    },
+    {
+      "data": "2026-06-17",
+      "min": 8.1,
+      "max": 22.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.8,
+      "nascer_sol": "07:20",
+      "por_sol": "17:51"
+    },
+    {
+      "data": "2026-06-18",
+      "min": 11.6,
+      "max": 21.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.0,
+      "nascer_sol": "07:20",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-06-19",
+      "min": 15.0,
+      "max": 20.0,
+      "condicao": "Chuva leve",
+      "condicao_codigo": 61,
+      "chuva_mm": 16.8,
+      "uv": 2.6,
+      "nascer_sol": "07:20",
+      "por_sol": "17:52"
+    }
+  ],
   "reservatorio": {
     "nome": "Baixo Iguacu",
     "nivel_pct": 59.0,
@@ -23,25 +101,25 @@
     "atualizado_em": "2026-06-13T09:41:22.926869+00:00"
   },
   "uv": {
-    "indice": 2.5,
-    "categoria": "Baixo",
+    "indice": 4.8,
+    "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 21,
+    "indice": 40,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 2.1,
-    "pm10": 2.2,
-    "no2": 2.7,
-    "o3": 37.0,
+    "pm25": 22.9,
+    "pm10": 23.4,
+    "no2": 6.8,
+    "o3": 22.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-12T11:41:57.440030+00:00"
+    "atualizado_em": "2026-06-13T10:26:02.639374+00:00"
   },
   "sol": {
-    "nascer": "07:18",
+    "nascer": "07:19",
     "por": "17:51",
     "duracao_h": 10.5,
     "estacao": "Outono",
@@ -49,12 +127,12 @@
   },
   "lua": {
     "nome": "Minguante",
-    "iluminacao_pct": 61.0,
-    "fase_pct": 89.5,
-    "dias_proxima_cheia": 12,
+    "iluminacao_pct": 43.0,
+    "fase_pct": 92.9,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 14.4,
+  "temperatura_atual": 9.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -77,17 +155,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-12T11:41:57.440030+00:00",
+  "_clima_em": "2026-06-13T10:26:02.639374+00:00",
   "vento": {
-    "velocidade_kmh": 16.0,
-    "direcao_graus": 271,
-    "direcao": "O",
-    "max_kmh": 17.7,
-    "rajada_kmh": 37.4,
-    "direcao_dominante": "O",
+    "velocidade_kmh": 9.1,
+    "direcao_graus": 146,
+    "direcao": "SE",
+    "max_kmh": 9.0,
+    "rajada_kmh": 22.0,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
   "umidade_pct": 98,
-  "pressao_hpa": 1013,
-  "ponto_orvalho_c": 14.1
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 8.8
 }
