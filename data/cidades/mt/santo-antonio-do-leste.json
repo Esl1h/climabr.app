@@ -4,33 +4,111 @@
   "slug": "santo-antonio-do-leste",
   "latitude": -14.8052,
   "longitude": -53.6699,
-  "atualizado_em": "2026-06-14T08:50:11.479871+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-14T10:47:12.005686+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-14",
+      "min": 22.6,
+      "max": 31.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 6.3,
+      "nascer_sol": "06:57",
+      "por_sol": "18:12"
+    },
+    {
+      "data": "2026-06-15",
+      "min": 20.9,
+      "max": 31.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 6.3,
+      "nascer_sol": "06:57",
+      "por_sol": "18:12"
+    },
+    {
+      "data": "2026-06-16",
+      "min": 20.4,
+      "max": 31.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.5,
+      "uv": 6.3,
+      "nascer_sol": "06:57",
+      "por_sol": "18:12"
+    },
+    {
+      "data": "2026-06-17",
+      "min": 20.2,
+      "max": 31.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "06:57",
+      "por_sol": "18:12"
+    },
+    {
+      "data": "2026-06-18",
+      "min": 21.0,
+      "max": 31.3,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "06:58",
+      "por_sol": "18:13"
+    },
+    {
+      "data": "2026-06-19",
+      "min": 22.1,
+      "max": 32.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 6.0,
+      "nascer_sol": "06:58",
+      "por_sol": "18:13"
+    },
+    {
+      "data": "2026-06-20",
+      "min": 21.4,
+      "max": 32.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:58",
+      "por_sol": "18:13"
+    }
+  ],
   "queimadas": {
     "focos_100km": 3,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-06-14T10:01:26.418647+00:00"
   },
   "uv": {
-    "indice": 6.2,
+    "indice": 6.3,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 53,
-    "categoria": "Moderada",
+    "indice": 20,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 15.8,
-    "pm10": 16.4,
-    "no2": 6.7,
-    "o3": 45.0,
+    "pm25": 10.5,
+    "pm10": 11.0,
+    "no2": 12.4,
+    "o3": 27.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-12T11:41:57.440030+00:00"
+    "atualizado_em": "2026-06-14T10:47:12.005686+00:00"
   },
   "sol": {
-    "nascer": "06:56",
+    "nascer": "06:57",
     "por": "18:12",
     "duracao_h": 11.3,
     "estacao": "Outono",
@@ -38,24 +116,24 @@
   },
   "lua": {
     "nome": "Minguante",
-    "iluminacao_pct": 61.0,
-    "fase_pct": 89.5,
-    "dias_proxima_cheia": 12,
+    "iluminacao_pct": 23.0,
+    "fase_pct": 96.3,
+    "dias_proxima_cheia": 14,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.7,
+  "temperatura_atual": 24.3,
   "vento": {
-    "velocidade_kmh": 7.2,
-    "direcao_graus": 77,
-    "direcao": "ENE",
-    "max_kmh": 14.2,
-    "rajada_kmh": 31.0,
+    "velocidade_kmh": 3.9,
+    "direcao_graus": 137,
+    "direcao": "SE",
+    "max_kmh": 10.3,
+    "rajada_kmh": 27.0,
     "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 73,
+  "umidade_pct": 64,
   "pressao_hpa": 1017,
-  "ponto_orvalho_c": 17.7,
+  "ponto_orvalho_c": 17.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-12T11:41:57.440030+00:00"
+  "_clima_em": "2026-06-14T10:47:12.005686+00:00"
 }

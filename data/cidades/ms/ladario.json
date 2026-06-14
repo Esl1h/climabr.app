@@ -4,47 +4,84 @@
   "slug": "ladario",
   "latitude": -19.1031,
   "longitude": -57.5688,
-  "atualizado_em": "2026-06-14T08:50:54.554186+00:00",
+  "atualizado_em": "2026-06-14T10:47:12.005686+00:00",
   "previsao": [
     {
       "data": "2026-06-14",
-      "min": 20,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 20.0,
+      "max": 25.7,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 6.6,
+      "uv": 5.0,
+      "nascer_sol": "07:20",
+      "por_sol": "18:20"
     },
     {
       "data": "2026-06-15",
-      "min": 17,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 17.6,
+      "max": 24.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.1,
+      "nascer_sol": "07:21",
+      "por_sol": "18:20"
     },
     {
       "data": "2026-06-16",
-      "min": 16,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 17.9,
+      "max": 26.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.5,
+      "nascer_sol": "07:21",
+      "por_sol": "18:20"
     },
     {
       "data": "2026-06-17",
-      "min": 17,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 18.9,
+      "max": 28.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.5,
+      "nascer_sol": "07:21",
+      "por_sol": "18:20"
+    },
+    {
+      "data": "2026-06-18",
+      "min": 21.0,
+      "max": 30.5,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "07:22",
+      "por_sol": "18:20"
+    },
+    {
+      "data": "2026-06-19",
+      "min": 19.7,
+      "max": 25.7,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 6.9,
+      "uv": 3.7,
+      "nascer_sol": "07:22",
+      "por_sol": "18:21"
+    },
+    {
+      "data": "2026-06-20",
+      "min": 18.3,
+      "max": 27.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.8,
+      "nascer_sol": "07:22",
+      "por_sol": "18:21"
     }
   ],
   "queimadas": {
@@ -53,22 +90,22 @@
     "atualizado_em": "2026-06-14T10:01:26.418647+00:00"
   },
   "uv": {
-    "indice": 5.2,
+    "indice": 5.0,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 32,
+    "indice": 20,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 1.2,
-    "pm10": 1.2,
-    "no2": 4.2,
-    "o3": 26.0,
+    "pm25": 3.6,
+    "pm10": 3.7,
+    "no2": 4.7,
+    "o3": 30.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-13T10:26:02.639374+00:00"
+    "atualizado_em": "2026-06-14T10:47:12.005686+00:00"
   },
   "sol": {
     "nascer": "07:20",
@@ -79,24 +116,24 @@
   },
   "lua": {
     "nome": "Minguante",
-    "iluminacao_pct": 43.0,
-    "fase_pct": 92.9,
-    "dias_proxima_cheia": 13,
+    "iluminacao_pct": 23.0,
+    "fase_pct": 96.3,
+    "dias_proxima_cheia": 14,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 19.5,
+  "temperatura_atual": 21.9,
   "vento": {
-    "velocidade_kmh": 9.9,
-    "direcao_graus": 90,
-    "direcao": "E",
-    "max_kmh": 10.6,
-    "rajada_kmh": 35.6,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 9.4,
+    "direcao_graus": 253,
+    "direcao": "OSO",
+    "max_kmh": 13.9,
+    "rajada_kmh": 33.1,
+    "direcao_dominante": "SO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 99,
-  "pressao_hpa": 1015,
-  "ponto_orvalho_c": 19.4,
+  "umidade_pct": 97,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 21.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -119,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-13T10:26:02.639374+00:00"
+  "_clima_em": "2026-06-14T10:47:12.005686+00:00"
 }

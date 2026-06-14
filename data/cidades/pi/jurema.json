@@ -4,23 +4,12 @@
   "slug": "jurema",
   "latitude": -9.0145,
   "longitude": -43.1656,
-  "atualizado_em": "2026-06-13T10:26:02.639374+00:00",
+  "atualizado_em": "2026-06-14T10:47:12.005686+00:00",
   "previsao": [
     {
-      "data": "2026-06-13",
-      "min": 20.7,
-      "max": 32.6,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
-      "uv": 7.0,
-      "nascer_sol": "06:04",
-      "por_sol": "17:40"
-    },
-    {
       "data": "2026-06-14",
-      "min": 21.0,
-      "max": 32.9,
+      "min": 20.6,
+      "max": 32.7,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
       "chuva_mm": 0,
@@ -30,7 +19,7 @@
     },
     {
       "data": "2026-06-15",
-      "min": 21.4,
+      "min": 20.5,
       "max": 32.3,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
@@ -41,8 +30,8 @@
     },
     {
       "data": "2026-06-16",
-      "min": 21.1,
-      "max": 32.4,
+      "min": 20.3,
+      "max": 32.5,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
       "chuva_mm": 0,
@@ -52,8 +41,8 @@
     },
     {
       "data": "2026-06-17",
-      "min": 22.2,
-      "max": 32.7,
+      "min": 21.5,
+      "max": 32.6,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
       "chuva_mm": 0,
@@ -63,25 +52,36 @@
     },
     {
       "data": "2026-06-18",
-      "min": 22.0,
-      "max": 31.7,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
-      "uv": 6.8,
+      "min": 21.6,
+      "max": 31.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 7.0,
       "nascer_sol": "06:05",
       "por_sol": "17:41"
     },
     {
       "data": "2026-06-19",
-      "min": 22.8,
-      "max": 30.6,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
+      "min": 21.3,
+      "max": 30.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
       "uv": 6.8,
       "nascer_sol": "06:06",
       "por_sol": "17:41"
+    },
+    {
+      "data": "2026-06-20",
+      "min": 22.2,
+      "max": 29.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 6.8,
+      "nascer_sol": "06:06",
+      "por_sol": "17:42"
     }
   ],
   "queimadas": {
@@ -97,15 +97,15 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 21,
+    "indice": 22,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 1.8,
-    "pm10": 2.2,
-    "no2": 1.5,
-    "o3": 47.0,
+    "pm25": 2.9,
+    "pm10": 3.7,
+    "no2": 1.1,
+    "o3": 54.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-13T10:26:02.639374+00:00"
+    "atualizado_em": "2026-06-14T10:47:12.005686+00:00"
   },
   "sol": {
     "nascer": "06:04",
@@ -116,12 +116,12 @@
   },
   "lua": {
     "nome": "Minguante",
-    "iluminacao_pct": 43.0,
-    "fase_pct": 92.9,
-    "dias_proxima_cheia": 13,
+    "iluminacao_pct": 23.0,
+    "fase_pct": 96.3,
+    "dias_proxima_cheia": 14,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.7,
+  "temperatura_atual": 24.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -144,17 +144,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-13T10:26:02.639374+00:00",
+  "_clima_em": "2026-06-14T10:47:12.005686+00:00",
   "vento": {
-    "velocidade_kmh": 12.5,
-    "direcao_graus": 106,
+    "velocidade_kmh": 15.6,
+    "direcao_graus": 107,
     "direcao": "ESE",
-    "max_kmh": 13.4,
-    "rajada_kmh": 30.2,
+    "max_kmh": 16.5,
+    "rajada_kmh": 35.6,
     "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 60,
-  "pressao_hpa": 1019,
-  "ponto_orvalho_c": 15.5
+  "umidade_pct": 55,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 14.9
 }
