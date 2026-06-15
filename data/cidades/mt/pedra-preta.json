@@ -4,47 +4,84 @@
   "slug": "pedra-preta",
   "latitude": -16.7952,
   "longitude": -54.2492,
-  "atualizado_em": "2026-06-15T11:01:24.745927+00:00",
+  "atualizado_em": "2026-06-15T13:52:37.842366+00:00",
   "previsao": [
     {
       "data": "2026-06-15",
-      "min": 19,
-      "max": 29,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 21.6,
+      "max": 30.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.0,
+      "nascer_sol": "07:03",
+      "por_sol": "18:11"
     },
     {
       "data": "2026-06-16",
-      "min": 19,
-      "max": 31,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 18.4,
+      "max": 31.0,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.0,
+      "nascer_sol": "07:03",
+      "por_sol": "18:11"
     },
     {
       "data": "2026-06-17",
-      "min": 19,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 19.2,
+      "max": 31.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.0,
+      "nascer_sol": "07:04",
+      "por_sol": "18:11"
     },
     {
       "data": "2026-06-18",
-      "min": 19,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 19.7,
+      "max": 33.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.0,
+      "nascer_sol": "07:04",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-06-19",
+      "min": 22.4,
+      "max": 32.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 6.0,
+      "nascer_sol": "07:04",
+      "por_sol": "18:12"
+    },
+    {
+      "data": "2026-06-20",
+      "min": 20.3,
+      "max": 29.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.2,
+      "nascer_sol": "07:04",
+      "por_sol": "18:12"
+    },
+    {
+      "data": "2026-06-21",
+      "min": 20.3,
+      "max": 33.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "07:05",
+      "por_sol": "18:12"
     }
   ],
   "reservatorio": {
@@ -74,12 +111,12 @@
     "indice": 15,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.7,
-    "pm10": 4.9,
-    "no2": 5.0,
-    "o3": 34.0,
+    "pm25": 1.8,
+    "pm10": 1.8,
+    "no2": 1.6,
+    "o3": 53.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-14T10:47:12.005686+00:00"
+    "atualizado_em": "2026-06-15T13:52:37.842366+00:00"
   },
   "sol": {
     "nascer": "07:03",
@@ -90,24 +127,24 @@
   },
   "lua": {
     "nome": "Minguante",
-    "iluminacao_pct": 23.0,
-    "fase_pct": 96.3,
-    "dias_proxima_cheia": 14,
+    "iluminacao_pct": 2.0,
+    "fase_pct": 99.7,
+    "dias_proxima_cheia": 15,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.6,
+  "temperatura_atual": 27.0,
   "vento": {
     "velocidade_kmh": 4.0,
-    "direcao_graus": 87,
-    "direcao": "E",
-    "max_kmh": 16.9,
-    "rajada_kmh": 34.2,
-    "direcao_dominante": "OSO",
+    "direcao_graus": 243,
+    "direcao": "OSO",
+    "max_kmh": 14.1,
+    "rajada_kmh": 27.4,
+    "direcao_dominante": "SO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 72,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 18.2,
+  "umidade_pct": 66,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 20.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -130,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-14T10:47:12.005686+00:00"
+  "_clima_em": "2026-06-15T13:52:37.842366+00:00"
 }

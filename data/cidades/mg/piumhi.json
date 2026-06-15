@@ -4,8 +4,86 @@
   "slug": "piumhi",
   "latitude": -20.4414,
   "longitude": -46.0504,
-  "atualizado_em": "2026-06-15T11:08:30.819549+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-15T13:52:37.842366+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-15",
+      "min": 14.9,
+      "max": 24.9,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 0.7,
+      "uv": 5.4,
+      "nascer_sol": "06:37",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-06-16",
+      "min": 14.9,
+      "max": 24.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 5.7,
+      "nascer_sol": "06:38",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-06-17",
+      "min": 12.8,
+      "max": 21.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "06:38",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-06-18",
+      "min": 12.3,
+      "max": 22.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "06:38",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-06-19",
+      "min": 13.7,
+      "max": 21.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 5.7,
+      "nascer_sol": "06:38",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-06-20",
+      "min": 13.4,
+      "max": 25.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 5.5,
+      "nascer_sol": "06:39",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-06-21",
+      "min": 14.7,
+      "max": 25.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 5.2,
+      "nascer_sol": "06:39",
+      "por_sol": "17:32"
+    }
+  ],
   "reservatorio": {
     "nome": "Furnas",
     "nivel_pct": 65.8,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-06-15T12:47:06.654686+00:00"
   },
   "uv": {
-    "indice": 5.6,
+    "indice": 5.4,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 18,
+    "indice": 19,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 7.1,
-    "pm10": 7.3,
-    "no2": 5.0,
-    "o3": 32.0,
+    "pm25": 2.8,
+    "pm10": 3.1,
+    "no2": 1.8,
+    "o3": 52.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-14T10:47:12.005686+00:00"
+    "atualizado_em": "2026-06-15T13:52:37.842366+00:00"
   },
   "sol": {
     "nascer": "06:37",
@@ -49,24 +127,24 @@
   },
   "lua": {
     "nome": "Minguante",
-    "iluminacao_pct": 23.0,
-    "fase_pct": 96.3,
-    "dias_proxima_cheia": 14,
+    "iluminacao_pct": 2.0,
+    "fase_pct": 99.7,
+    "dias_proxima_cheia": 15,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 16.3,
+  "temperatura_atual": 23.3,
   "vento": {
-    "velocidade_kmh": 1.6,
-    "direcao_graus": 96,
-    "direcao": "E",
-    "max_kmh": 9.6,
-    "rajada_kmh": 20.9,
-    "direcao_dominante": "NNE",
+    "velocidade_kmh": 2.1,
+    "direcao_graus": 128,
+    "direcao": "SE",
+    "max_kmh": 6.9,
+    "rajada_kmh": 24.8,
+    "direcao_dominante": "ONO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 96,
-  "pressao_hpa": 1021,
-  "ponto_orvalho_c": 15.7,
+  "umidade_pct": 68,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 17.1,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-14T10:47:12.005686+00:00"
+  "_clima_em": "2026-06-15T13:52:37.842366+00:00"
 }

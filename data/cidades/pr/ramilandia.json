@@ -4,47 +4,84 @@
   "slug": "ramilandia",
   "latitude": -25.0944,
   "longitude": -54.0761,
-  "atualizado_em": "2026-06-15T11:17:46.277498+00:00",
+  "atualizado_em": "2026-06-15T13:52:37.842366+00:00",
   "previsao": [
     {
       "data": "2026-06-15",
-      "min": 7,
-      "max": 19,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 10.0,
+      "max": 18.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.5,
+      "nascer_sol": "07:19",
+      "por_sol": "17:54"
     },
     {
       "data": "2026-06-16",
-      "min": 6,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 7.2,
+      "max": 19.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.8,
+      "nascer_sol": "07:19",
+      "por_sol": "17:54"
     },
     {
       "data": "2026-06-17",
-      "min": 10,
-      "max": 21,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 10.4,
+      "max": 21.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.9,
+      "nascer_sol": "07:19",
+      "por_sol": "17:54"
     },
     {
       "data": "2026-06-18",
-      "min": 12,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 13.4,
+      "max": 19.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.3,
+      "nascer_sol": "07:20",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-06-19",
+      "min": 14.0,
+      "max": 16.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 21.5,
+      "uv": 2.5,
+      "nascer_sol": "07:20",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-06-20",
+      "min": 11.1,
+      "max": 18.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 1.0,
+      "nascer_sol": "07:20",
+      "por_sol": "17:55"
+    },
+    {
+      "data": "2026-06-21",
+      "min": 10.7,
+      "max": 22.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.0,
+      "nascer_sol": "07:20",
+      "por_sol": "17:55"
     }
   ],
   "reservatorio": {
@@ -64,22 +101,22 @@
     "atualizado_em": "2026-06-15T12:47:06.654686+00:00"
   },
   "uv": {
-    "indice": 1.2,
-    "categoria": "Baixo",
+    "indice": 4.5,
+    "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 57,
-    "categoria": "Moderada",
+    "indice": 18,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 25.1,
-    "pm10": 25.7,
-    "no2": 11.1,
-    "o3": 11.0,
+    "pm25": 3.8,
+    "pm10": 4.0,
+    "no2": 1.9,
+    "o3": 44.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-14T10:47:12.005686+00:00"
+    "atualizado_em": "2026-06-15T13:52:37.842366+00:00"
   },
   "sol": {
     "nascer": "07:19",
@@ -90,12 +127,12 @@
   },
   "lua": {
     "nome": "Minguante",
-    "iluminacao_pct": 23.0,
-    "fase_pct": 96.3,
-    "dias_proxima_cheia": 14,
+    "iluminacao_pct": 2.0,
+    "fase_pct": 99.7,
+    "dias_proxima_cheia": 15,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 15.7,
+  "temperatura_atual": 16.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -118,17 +155,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-14T10:47:12.005686+00:00",
+  "_clima_em": "2026-06-15T13:52:37.842366+00:00",
   "vento": {
-    "velocidade_kmh": 9.8,
-    "direcao_graus": 144,
-    "direcao": "SE",
-    "max_kmh": 12.3,
-    "rajada_kmh": 25.2,
+    "velocidade_kmh": 7.7,
+    "direcao_graus": 191,
+    "direcao": "S",
+    "max_kmh": 11.6,
+    "rajada_kmh": 23.8,
     "direcao_dominante": "S",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 97,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 15.2
+  "umidade_pct": 74,
+  "pressao_hpa": 1021,
+  "ponto_orvalho_c": 12.0
 }

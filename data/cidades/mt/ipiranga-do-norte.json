@@ -4,8 +4,86 @@
   "slug": "ipiranga-do-norte",
   "latitude": -12.017,
   "longitude": -56.0587,
-  "atualizado_em": "2026-06-15T11:01:07.133309+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-15T13:52:37.842366+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-15",
+      "min": 22.1,
+      "max": 32.6,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "07:02",
+      "por_sol": "18:27"
+    },
+    {
+      "data": "2026-06-16",
+      "min": 21.5,
+      "max": 32.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.1,
+      "uv": 6.5,
+      "nascer_sol": "07:02",
+      "por_sol": "18:27"
+    },
+    {
+      "data": "2026-06-17",
+      "min": 21.7,
+      "max": 32.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 6.5,
+      "nascer_sol": "07:02",
+      "por_sol": "18:27"
+    },
+    {
+      "data": "2026-06-18",
+      "min": 21.3,
+      "max": 32.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 6.5,
+      "nascer_sol": "07:02",
+      "por_sol": "18:28"
+    },
+    {
+      "data": "2026-06-19",
+      "min": 21.2,
+      "max": 32.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "07:03",
+      "por_sol": "18:28"
+    },
+    {
+      "data": "2026-06-20",
+      "min": 21.4,
+      "max": 32.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "07:03",
+      "por_sol": "18:28"
+    },
+    {
+      "data": "2026-06-21",
+      "min": 23.0,
+      "max": 32.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "07:03",
+      "por_sol": "18:28"
+    }
+  ],
   "reservatorio": {
     "nome": "Sinop",
     "nivel_pct": 78.2,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-06-15T12:47:06.654686+00:00"
   },
   "uv": {
-    "indice": 6.3,
+    "indice": 6.5,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 53,
-    "categoria": "Moderada",
+    "indice": 34,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 1.6,
-    "pm10": 1.7,
-    "no2": 2.6,
-    "o3": 36.0,
+    "pm25": 6.6,
+    "pm10": 7.0,
+    "no2": 1.8,
+    "o3": 61.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-12T11:41:57.440030+00:00"
+    "atualizado_em": "2026-06-15T13:52:37.842366+00:00"
   },
   "sol": {
-    "nascer": "07:01",
-    "por": "18:26",
+    "nascer": "07:02",
+    "por": "18:27",
     "duracao_h": 11.4,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Minguante",
-    "iluminacao_pct": 61.0,
-    "fase_pct": 89.5,
-    "dias_proxima_cheia": 12,
+    "iluminacao_pct": 2.0,
+    "fase_pct": 99.7,
+    "dias_proxima_cheia": 15,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.9,
+  "temperatura_atual": 29.6,
   "vento": {
-    "velocidade_kmh": 3.1,
-    "direcao_graus": 103,
-    "direcao": "ESE",
-    "max_kmh": 9.4,
-    "rajada_kmh": 27.4,
-    "direcao_dominante": "NE",
+    "velocidade_kmh": 7.8,
+    "direcao_graus": 167,
+    "direcao": "SSE",
+    "max_kmh": 10.4,
+    "rajada_kmh": 21.6,
+    "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 96,
-  "pressao_hpa": 1016,
-  "ponto_orvalho_c": 22.2,
+  "umidade_pct": 58,
+  "pressao_hpa": 1017,
+  "ponto_orvalho_c": 20.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-12T11:41:57.440030+00:00"
+  "_clima_em": "2026-06-15T13:52:37.842366+00:00"
 }

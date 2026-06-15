@@ -4,47 +4,84 @@
   "slug": "rio-de-contas",
   "latitude": -13.5816,
   "longitude": -41.7466,
-  "atualizado_em": "2026-06-15T10:52:55.974303+00:00",
+  "atualizado_em": "2026-06-15T13:52:37.842366+00:00",
   "previsao": [
     {
       "data": "2026-06-15",
-      "min": 17,
-      "max": 30,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 16.1,
+      "max": 29.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.5,
+      "nascer_sol": "06:07",
+      "por_sol": "17:27"
     },
     {
       "data": "2026-06-16",
-      "min": 18,
-      "max": 29,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 16.4,
+      "max": 29.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 6.5,
+      "nascer_sol": "06:07",
+      "por_sol": "17:27"
     },
     {
       "data": "2026-06-17",
-      "min": 17,
-      "max": 29,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 16.1,
+      "max": 29.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.5,
+      "nascer_sol": "06:08",
+      "por_sol": "17:27"
     },
     {
       "data": "2026-06-18",
-      "min": 18,
-      "max": 27,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 16.7,
+      "max": 27.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.5,
+      "uv": 6.5,
+      "nascer_sol": "06:08",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-06-19",
+      "min": 18.9,
+      "max": 24.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.9,
+      "uv": 4.3,
+      "nascer_sol": "06:08",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-06-20",
+      "min": 16.8,
+      "max": 27.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.2,
+      "nascer_sol": "06:08",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-06-21",
+      "min": 15.3,
+      "max": 27.6,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "06:09",
+      "por_sol": "17:28"
     }
   ],
   "queimadas": {
@@ -60,15 +97,15 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 12,
+    "indice": 17,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.8,
-    "pm10": 5.9,
-    "no2": 4.8,
-    "o3": 57.0,
+    "pm25": 2.3,
+    "pm10": 3.0,
+    "no2": 0.2,
+    "o3": 75.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-14T10:47:12.005686+00:00"
+    "atualizado_em": "2026-06-15T13:52:37.842366+00:00"
   },
   "sol": {
     "nascer": "06:07",
@@ -79,24 +116,24 @@
   },
   "lua": {
     "nome": "Minguante",
-    "iluminacao_pct": 23.0,
-    "fase_pct": 96.3,
-    "dias_proxima_cheia": 14,
+    "iluminacao_pct": 2.0,
+    "fase_pct": 99.7,
+    "dias_proxima_cheia": 15,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 20.6,
+  "temperatura_atual": 26.9,
   "vento": {
-    "velocidade_kmh": 3.2,
-    "direcao_graus": 56,
+    "velocidade_kmh": 6.8,
+    "direcao_graus": 40,
     "direcao": "NE",
-    "max_kmh": 10.9,
-    "rajada_kmh": 26.6,
-    "direcao_dominante": "ENE",
+    "max_kmh": 11.4,
+    "rajada_kmh": 29.2,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 68,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 14.6,
+  "umidade_pct": 48,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 15.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -119,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-10T12:04:25.677877+00:00"
   },
-  "_clima_em": "2026-06-14T10:47:12.005686+00:00"
+  "_clima_em": "2026-06-15T13:52:37.842366+00:00"
 }
