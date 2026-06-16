@@ -4,8 +4,86 @@
   "slug": "bataypora",
   "latitude": -22.3908,
   "longitude": -53.1776,
-  "atualizado_em": "2026-06-16T10:16:24.479026+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-16T12:51:18.294053+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-16",
+      "min": 12.4,
+      "max": 19.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.1,
+      "nascer_sol": "07:10",
+      "por_sol": "17:56"
+    },
+    {
+      "data": "2026-06-17",
+      "min": 13.5,
+      "max": 23.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.2,
+      "nascer_sol": "07:10",
+      "por_sol": "17:56"
+    },
+    {
+      "data": "2026-06-18",
+      "min": 14.6,
+      "max": 21.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.1,
+      "nascer_sol": "07:11",
+      "por_sol": "17:56"
+    },
+    {
+      "data": "2026-06-19",
+      "min": 15.6,
+      "max": 23.9,
+      "condicao": "Tempestade com granizo leve",
+      "condicao_codigo": 96,
+      "chuva_mm": 11.5,
+      "uv": 4.8,
+      "nascer_sol": "07:11",
+      "por_sol": "17:57"
+    },
+    {
+      "data": "2026-06-20",
+      "min": 10.8,
+      "max": 16.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 4.0,
+      "nascer_sol": "07:11",
+      "por_sol": "17:57"
+    },
+    {
+      "data": "2026-06-21",
+      "min": 8.6,
+      "max": 22.0,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 4.8,
+      "nascer_sol": "07:11",
+      "por_sol": "17:57"
+    },
+    {
+      "data": "2026-06-22",
+      "min": 17.0,
+      "max": 23.9,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 7.2,
+      "uv": 4.5,
+      "nascer_sol": "07:11",
+      "por_sol": "17:57"
+    }
+  ],
   "reservatorio": {
     "nome": "Porto Primavera",
     "nivel_pct": 124.2,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-06-16T11:39:09.266078+00:00"
   },
   "uv": {
-    "indice": 4.7,
+    "indice": 5.1,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 25,
+    "indice": 14,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 11.8,
-    "pm10": 12.5,
+    "pm25": 6.0,
+    "pm10": 6.2,
     "no2": 5.4,
     "o3": 30.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-13T10:26:02.639374+00:00"
+    "atualizado_em": "2026-06-16T12:51:18.294053+00:00"
   },
   "sol": {
-    "nascer": "07:09",
+    "nascer": "07:10",
     "por": "17:56",
     "duracao_h": 10.8,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Minguante",
-    "iluminacao_pct": 43.0,
-    "fase_pct": 92.9,
-    "dias_proxima_cheia": 13,
+    "nome": "Nova",
+    "iluminacao_pct": 19.0,
+    "fase_pct": 3.0,
+    "dias_proxima_cheia": 14,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 16.2,
+  "temperatura_atual": 14.8,
   "vento": {
-    "velocidade_kmh": 4.2,
-    "direcao_graus": 43,
-    "direcao": "NE",
-    "max_kmh": 7.6,
-    "rajada_kmh": 17.6,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 6.8,
+    "direcao_graus": 205,
+    "direcao": "SSO",
+    "max_kmh": 9.4,
+    "rajada_kmh": 18.7,
+    "direcao_dominante": "OSO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 96,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 15.6,
+  "umidade_pct": 86,
+  "pressao_hpa": 1022,
+  "ponto_orvalho_c": 12.5,
   "dengue": {
     "nivel_alerta": 4,
     "nivel_label": "Emergência",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-13T10:26:02.639374+00:00"
+  "_clima_em": "2026-06-16T12:51:18.294053+00:00"
 }
