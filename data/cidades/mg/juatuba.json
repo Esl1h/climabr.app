@@ -4,59 +4,94 @@
   "slug": "juatuba",
   "latitude": -19.9563,
   "longitude": -44.3543,
-  "atualizado_em": "2026-06-17T09:44:53.821502+00:00",
+  "atualizado_em": "2026-06-17T12:14:23.962406+00:00",
   "previsao": [
     {
       "data": "2026-06-17",
-      "min": 14,
-      "max": 26,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 13.0,
+      "max": 23.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.5,
+      "nascer_sol": "06:30",
+      "por_sol": "17:26"
     },
     {
       "data": "2026-06-18",
-      "min": 10,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 11.4,
+      "max": 23.3,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.7,
+      "nascer_sol": "06:30",
+      "por_sol": "17:26"
     },
     {
       "data": "2026-06-19",
-      "min": 9,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 11.2,
+      "max": 22.8,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.7,
+      "nascer_sol": "06:30",
+      "por_sol": "17:26"
     },
     {
       "data": "2026-06-20",
-      "min": 10,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 11.4,
+      "max": 23.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.7,
+      "nascer_sol": "06:31",
+      "por_sol": "17:26"
+    },
+    {
+      "data": "2026-06-21",
+      "min": 14.4,
+      "max": 25.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.3,
+      "nascer_sol": "06:31",
+      "por_sol": "17:26"
+    },
+    {
+      "data": "2026-06-22",
+      "min": 13.7,
+      "max": 27.2,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:31",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-06-23",
+      "min": 16.3,
+      "max": 27.1,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:31",
+      "por_sol": "17:27"
     }
   ],
   "reservatorio": {
-    "nome": "Retiro Baixo",
-    "nivel_pct": 90.5,
-    "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-06-15",
-    "distancia_km": 126.3,
-    "aproximado": true,
-    "nota": "Reservatório hidrelétrico mais próximo (126km). Pode não ser o sistema de abastecimento desta cidade.",
-    "fonte": "ONS / ANA",
-    "atualizado_em": "2026-06-17T11:20:09.798108+00:00"
+    "nome": "Sistema Paraopeba",
+    "nivel_pct": 82.2,
+    "variacao_semana_pct": null,
+    "data_medicao": "2026-06-17",
+    "aproximado": false,
+    "fonte": "COPASA",
+    "atualizado_em": "2026-06-17T12:50:54.645898+00:00"
   },
   "queimadas": {
     "focos_100km": 13,
@@ -64,50 +99,50 @@
     "atualizado_em": "2026-06-17T11:20:13.734389+00:00"
   },
   "uv": {
-    "indice": 5.6,
+    "indice": 5.5,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 60,
-    "categoria": "Moderada",
+    "indice": 24,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 14.4,
-    "pm10": 14.8,
-    "no2": 8.9,
-    "o3": 38.0,
+    "pm25": 5.0,
+    "pm10": 5.0,
+    "no2": 6.4,
+    "o3": 61.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-13T10:26:02.639374+00:00"
+    "atualizado_em": "2026-06-17T12:14:23.962406+00:00"
   },
   "sol": {
-    "nascer": "06:29",
-    "por": "17:25",
+    "nascer": "06:30",
+    "por": "17:26",
     "duracao_h": 10.9,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Minguante",
-    "iluminacao_pct": 43.0,
-    "fase_pct": 92.9,
+    "nome": "Nova",
+    "iluminacao_pct": 39.0,
+    "fase_pct": 6.4,
     "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 15.2,
+  "temperatura_atual": 17.2,
   "vento": {
-    "velocidade_kmh": 2.2,
-    "direcao_graus": 42,
-    "direcao": "NE",
-    "max_kmh": 12.1,
-    "rajada_kmh": 27.0,
-    "direcao_dominante": "NO",
+    "velocidade_kmh": 6.8,
+    "direcao_graus": 145,
+    "direcao": "SE",
+    "max_kmh": 9.4,
+    "rajada_kmh": 18.4,
+    "direcao_dominante": "S",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 100,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 15.3,
+  "umidade_pct": 86,
+  "pressao_hpa": 1022,
+  "ponto_orvalho_c": 14.7,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -130,5 +165,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-13T10:26:02.639374+00:00"
+  "_clima_em": "2026-06-17T12:14:23.962406+00:00"
 }

@@ -4,47 +4,84 @@
   "slug": "candeias",
   "latitude": -20.7485,
   "longitude": -45.2796,
-  "atualizado_em": "2026-06-17T09:41:58.244168+00:00",
+  "atualizado_em": "2026-06-17T12:14:23.962406+00:00",
   "previsao": [
     {
       "data": "2026-06-17",
-      "min": 13,
-      "max": 24,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 12.4,
+      "max": 21.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.5,
+      "nascer_sol": "06:35",
+      "por_sol": "17:28"
     },
     {
       "data": "2026-06-18",
-      "min": 9,
-      "max": 24,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 11.2,
+      "max": 21.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.6,
+      "nascer_sol": "06:35",
+      "por_sol": "17:28"
     },
     {
       "data": "2026-06-19",
-      "min": 10,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 11.2,
+      "max": 21.9,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.6,
+      "nascer_sol": "06:36",
+      "por_sol": "17:28"
     },
     {
       "data": "2026-06-20",
-      "min": 12,
-      "max": 24,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 12.4,
+      "max": 23.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.5,
+      "nascer_sol": "06:36",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-06-21",
+      "min": 15.2,
+      "max": 23.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.8,
+      "uv": 5.5,
+      "nascer_sol": "06:36",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-06-22",
+      "min": 16.0,
+      "max": 25.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 5.5,
+      "nascer_sol": "06:36",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-06-23",
+      "min": 15.6,
+      "max": 24.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 7.6,
+      "uv": 5.5,
+      "nascer_sol": "06:37",
+      "por_sol": "17:29"
     }
   ],
   "reservatorio": {
@@ -74,12 +111,12 @@
     "indice": 16,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.5,
-    "pm10": 4.7,
-    "no2": 2.9,
+    "pm25": 2.9,
+    "pm10": 2.9,
+    "no2": 5.2,
     "o3": 43.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-16T12:51:18.294053+00:00"
+    "atualizado_em": "2026-06-17T12:14:23.962406+00:00"
   },
   "sol": {
     "nascer": "06:35",
@@ -90,24 +127,24 @@
   },
   "lua": {
     "nome": "Nova",
-    "iluminacao_pct": 19.0,
-    "fase_pct": 3.0,
-    "dias_proxima_cheia": 14,
+    "iluminacao_pct": 39.0,
+    "fase_pct": 6.4,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 19.7,
+  "temperatura_atual": 16.9,
   "vento": {
-    "velocidade_kmh": 8.3,
-    "direcao_graus": 237,
-    "direcao": "OSO",
-    "max_kmh": 10.6,
-    "rajada_kmh": 24.5,
-    "direcao_dominante": "SO",
+    "velocidade_kmh": 7.1,
+    "direcao_graus": 144,
+    "direcao": "SE",
+    "max_kmh": 11.2,
+    "rajada_kmh": 21.2,
+    "direcao_dominante": "SSE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 79,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 16.1,
+  "umidade_pct": 76,
+  "pressao_hpa": 1023,
+  "ponto_orvalho_c": 12.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -130,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-16T12:51:18.294053+00:00"
+  "_clima_em": "2026-06-17T12:14:23.962406+00:00"
 }
