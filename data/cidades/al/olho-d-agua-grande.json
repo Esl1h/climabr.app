@@ -4,8 +4,86 @@
   "slug": "olho-d-agua-grande",
   "latitude": -10.0562,
   "longitude": -36.7934,
-  "atualizado_em": "2026-06-18T09:08:47.651256+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-18T11:51:47.315497+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-18",
+      "min": 21.7,
+      "max": 27.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.2,
+      "uv": 6.8,
+      "nascer_sol": "05:42",
+      "por_sol": "17:14"
+    },
+    {
+      "data": "2026-06-19",
+      "min": 21.3,
+      "max": 24.5,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 10.1,
+      "uv": 6.0,
+      "nascer_sol": "05:42",
+      "por_sol": "17:14"
+    },
+    {
+      "data": "2026-06-20",
+      "min": 20.0,
+      "max": 26.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.1,
+      "uv": 6.2,
+      "nascer_sol": "05:42",
+      "por_sol": "17:14"
+    },
+    {
+      "data": "2026-06-21",
+      "min": 21.1,
+      "max": 26.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.9,
+      "uv": 5.8,
+      "nascer_sol": "05:42",
+      "por_sol": "17:15"
+    },
+    {
+      "data": "2026-06-22",
+      "min": 21.6,
+      "max": 25.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.7,
+      "uv": 5.3,
+      "nascer_sol": "05:43",
+      "por_sol": "17:15"
+    },
+    {
+      "data": "2026-06-23",
+      "min": 21.8,
+      "max": 26.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.1,
+      "uv": 5.0,
+      "nascer_sol": "05:43",
+      "por_sol": "17:15"
+    },
+    {
+      "data": "2026-06-24",
+      "min": 20.7,
+      "max": 26.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 5.8,
+      "nascer_sol": "05:43",
+      "por_sol": "17:15"
+    }
+  ],
   "reservatorio": {
     "nome": "Xingo",
     "nivel_pct": 46.3,
@@ -23,25 +101,25 @@
     "atualizado_em": "2026-06-18T10:51:31.706286+00:00"
   },
   "uv": {
-    "indice": 6.6,
+    "indice": 6.8,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 28,
+    "indice": 45,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 5.8,
-    "pm10": 7.7,
-    "no2": 1.3,
-    "o3": 51.0,
+    "pm25": 5.6,
+    "pm10": 7.9,
+    "no2": 3.7,
+    "o3": 39.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-16T12:51:18.294053+00:00"
+    "atualizado_em": "2026-06-18T11:51:47.315497+00:00"
   },
   "sol": {
-    "nascer": "05:41",
+    "nascer": "05:42",
     "por": "17:14",
     "duracao_h": 11.5,
     "estacao": "Outono",
@@ -49,24 +127,24 @@
   },
   "lua": {
     "nome": "Nova",
-    "iluminacao_pct": 19.0,
-    "fase_pct": 3.0,
-    "dias_proxima_cheia": 14,
+    "iluminacao_pct": 58.0,
+    "fase_pct": 9.8,
+    "dias_proxima_cheia": 12,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 26.0,
+  "temperatura_atual": 25.0,
   "vento": {
-    "velocidade_kmh": 11.0,
-    "direcao_graus": 116,
-    "direcao": "ESE",
-    "max_kmh": 17.3,
-    "rajada_kmh": 30.6,
-    "direcao_dominante": "ESE",
+    "velocidade_kmh": 6.7,
+    "direcao_graus": 164,
+    "direcao": "SSE",
+    "max_kmh": 17.7,
+    "rajada_kmh": 32.4,
+    "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 82,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 22.7,
+  "umidade_pct": 88,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 22.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-17T12:50:54.759127+00:00"
   },
-  "_clima_em": "2026-06-16T12:51:18.294053+00:00"
+  "_clima_em": "2026-06-18T11:51:47.315497+00:00"
 }

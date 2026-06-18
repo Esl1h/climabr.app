@@ -4,8 +4,86 @@
   "slug": "sao-joao-d-alianca",
   "latitude": -14.4858,
   "longitude": -47.4229,
-  "atualizado_em": "2026-06-18T09:18:21.501541+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-18T11:51:47.315497+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-18",
+      "min": 18.1,
+      "max": 25.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "06:32",
+      "por_sol": "17:48"
+    },
+    {
+      "data": "2026-06-19",
+      "min": 17.4,
+      "max": 24.8,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "06:33",
+      "por_sol": "17:49"
+    },
+    {
+      "data": "2026-06-20",
+      "min": 16.4,
+      "max": 25.7,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "06:33",
+      "por_sol": "17:49"
+    },
+    {
+      "data": "2026-06-21",
+      "min": 17.1,
+      "max": 27.2,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "06:33",
+      "por_sol": "17:49"
+    },
+    {
+      "data": "2026-06-22",
+      "min": 18.3,
+      "max": 28.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.1,
+      "nascer_sol": "06:33",
+      "por_sol": "17:49"
+    },
+    {
+      "data": "2026-06-23",
+      "min": 19.4,
+      "max": 28.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "06:33",
+      "por_sol": "17:50"
+    },
+    {
+      "data": "2026-06-24",
+      "min": 18.5,
+      "max": 28.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "06:34",
+      "por_sol": "17:50"
+    }
+  ],
   "reservatorio": {
     "nome": "Serra Da Mesa",
     "nivel_pct": 61.2,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-06-18T10:51:31.706286+00:00"
   },
   "uv": {
-    "indice": 6.4,
+    "indice": 6.5,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 25,
+    "indice": 21,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 2.0,
-    "pm10": 2.0,
-    "no2": 0.7,
-    "o3": 78.0,
+    "pm25": 0.8,
+    "pm10": 0.8,
+    "no2": 3.5,
+    "o3": 60.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-16T12:51:18.294053+00:00"
+    "atualizado_em": "2026-06-18T11:51:47.315497+00:00"
   },
   "sol": {
     "nascer": "06:32",
@@ -49,24 +127,24 @@
   },
   "lua": {
     "nome": "Nova",
-    "iluminacao_pct": 19.0,
-    "fase_pct": 3.0,
-    "dias_proxima_cheia": 14,
+    "iluminacao_pct": 58.0,
+    "fase_pct": 9.8,
+    "dias_proxima_cheia": 12,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 24.6,
+  "temperatura_atual": 21.4,
   "vento": {
-    "velocidade_kmh": 11.0,
-    "direcao_graus": 124,
-    "direcao": "SE",
-    "max_kmh": 12.2,
-    "rajada_kmh": 29.2,
+    "velocidade_kmh": 11.6,
+    "direcao_graus": 114,
+    "direcao": "ESE",
+    "max_kmh": 13.6,
+    "rajada_kmh": 31.3,
     "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 62,
-  "pressao_hpa": 1019,
-  "ponto_orvalho_c": 16.9,
+  "umidade_pct": 54,
+  "pressao_hpa": 1020,
+  "ponto_orvalho_c": 11.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-16T12:51:18.294053+00:00"
+  "_clima_em": "2026-06-18T11:51:47.315497+00:00"
 }

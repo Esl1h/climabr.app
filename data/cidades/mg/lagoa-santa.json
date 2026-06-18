@@ -4,59 +4,94 @@
   "slug": "lagoa-santa",
   "latitude": -19.6284,
   "longitude": -43.8858,
-  "atualizado_em": "2026-06-18T09:26:41.117378+00:00",
+  "atualizado_em": "2026-06-18T11:51:47.315497+00:00",
   "previsao": [
     {
       "data": "2026-06-18",
-      "min": 13,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 13.6,
+      "max": 22.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:28",
+      "por_sol": "17:25"
     },
     {
       "data": "2026-06-19",
-      "min": 10,
-      "max": 22,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 13.2,
+      "max": 22.4,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:28",
+      "por_sol": "17:25"
     },
     {
       "data": "2026-06-20",
-      "min": 10,
-      "max": 24,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 10.1,
+      "max": 23.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.7,
+      "nascer_sol": "06:28",
+      "por_sol": "17:25"
     },
     {
       "data": "2026-06-21",
-      "min": 13,
-      "max": 26,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 11.8,
+      "max": 25.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.0,
+      "nascer_sol": "06:29",
+      "por_sol": "17:25"
+    },
+    {
+      "data": "2026-06-22",
+      "min": 14.0,
+      "max": 27.6,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "06:29",
+      "por_sol": "17:25"
+    },
+    {
+      "data": "2026-06-23",
+      "min": 14.5,
+      "max": 28.8,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 4.7,
+      "nascer_sol": "06:29",
+      "por_sol": "17:26"
+    },
+    {
+      "data": "2026-06-24",
+      "min": 17.6,
+      "max": 27.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 2.9,
+      "nascer_sol": "06:29",
+      "por_sol": "17:26"
     }
   ],
   "reservatorio": {
-    "nome": "Guilm. Amorim",
-    "nivel_pct": 83.2,
-    "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-06-16",
-    "distancia_km": 97.2,
-    "aproximado": true,
-    "nota": "Reservatório hidrelétrico mais próximo (97km). Pode não ser o sistema de abastecimento desta cidade.",
-    "fonte": "ONS / ANA",
-    "atualizado_em": "2026-06-18T10:51:29.451719+00:00"
+    "nome": "Vargem das Flores",
+    "nivel_pct": 90.3,
+    "variacao_semana_pct": null,
+    "data_medicao": "2026-06-18",
+    "aproximado": false,
+    "fonte": "COPASA",
+    "atualizado_em": "2026-06-18T12:31:42.890352+00:00"
   },
   "queimadas": {
     "focos_100km": 16,
@@ -64,50 +99,50 @@
     "atualizado_em": "2026-06-18T10:51:31.706286+00:00"
   },
   "uv": {
-    "indice": 5.5,
+    "indice": 5.8,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 35,
+    "indice": 42,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 5.0,
-    "pm10": 5.0,
-    "no2": 7.2,
-    "o3": 60.0,
+    "pm25": 5.1,
+    "pm10": 5.8,
+    "no2": 6.1,
+    "o3": 62.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-17T12:14:23.962406+00:00"
+    "atualizado_em": "2026-06-18T11:51:47.315497+00:00"
   },
   "sol": {
     "nascer": "06:28",
-    "por": "17:24",
+    "por": "17:25",
     "duracao_h": 10.9,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Nova",
-    "iluminacao_pct": 39.0,
-    "fase_pct": 6.4,
-    "dias_proxima_cheia": 13,
+    "iluminacao_pct": 58.0,
+    "fase_pct": 9.8,
+    "dias_proxima_cheia": 12,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 19.4,
+  "temperatura_atual": 17.8,
   "vento": {
-    "velocidade_kmh": 11.1,
-    "direcao_graus": 120,
+    "velocidade_kmh": 13.4,
+    "direcao_graus": 116,
     "direcao": "ESE",
-    "max_kmh": 11.4,
-    "rajada_kmh": 24.5,
-    "direcao_dominante": "SE",
+    "max_kmh": 17.3,
+    "rajada_kmh": 33.8,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 77,
-  "pressao_hpa": 1022,
-  "ponto_orvalho_c": 15.2,
+  "umidade_pct": 75,
+  "pressao_hpa": 1024,
+  "ponto_orvalho_c": 13.3,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -130,5 +165,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-17T12:14:23.962406+00:00"
+  "_clima_em": "2026-06-18T11:51:47.315497+00:00"
 }
