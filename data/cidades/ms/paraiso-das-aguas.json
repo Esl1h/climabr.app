@@ -4,8 +4,86 @@
   "slug": "paraiso-das-aguas",
   "latitude": -19.2282,
   "longitude": -53.1303,
-  "atualizado_em": "2026-06-19T09:38:03.863699+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-19T12:03:42.990053+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-19",
+      "min": 17.0,
+      "max": 30.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "07:04",
+      "por_sol": "18:03"
+    },
+    {
+      "data": "2026-06-20",
+      "min": 14.9,
+      "max": 21.4,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.8,
+      "uv": 2.1,
+      "nascer_sol": "07:05",
+      "por_sol": "18:03"
+    },
+    {
+      "data": "2026-06-21",
+      "min": 12.6,
+      "max": 28.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "07:05",
+      "por_sol": "18:03"
+    },
+    {
+      "data": "2026-06-22",
+      "min": 18.5,
+      "max": 27.3,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 2.9,
+      "uv": 5.7,
+      "nascer_sol": "07:05",
+      "por_sol": "18:03"
+    },
+    {
+      "data": "2026-06-23",
+      "min": 12.3,
+      "max": 18.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 5.2,
+      "nascer_sol": "07:05",
+      "por_sol": "18:04"
+    },
+    {
+      "data": "2026-06-24",
+      "min": 9.2,
+      "max": 16.1,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 3.2,
+      "uv": 5.3,
+      "nascer_sol": "07:05",
+      "por_sol": "18:04"
+    },
+    {
+      "data": "2026-06-25",
+      "min": 10.1,
+      "max": 14.7,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 11.2,
+      "uv": 5.2,
+      "nascer_sol": "07:06",
+      "por_sol": "18:04"
+    }
+  ],
   "reservatorio": {
     "nome": "Sao Domingos",
     "nivel_pct": 40.3,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-06-18T10:51:31.706286+00:00"
   },
   "uv": {
-    "indice": 5.7,
+    "indice": 5.8,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 27,
+    "indice": 25,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 9.5,
-    "pm10": 10.4,
-    "no2": 3.5,
-    "o3": 42.0,
+    "pm25": 1.7,
+    "pm10": 1.8,
+    "no2": 4.4,
+    "o3": 47.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-17T12:14:23.962406+00:00"
+    "atualizado_em": "2026-06-19T12:03:42.990053+00:00"
   },
   "sol": {
     "nascer": "07:04",
-    "por": "18:02",
+    "por": "18:03",
     "duracao_h": 11.0,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 39.0,
-    "fase_pct": 6.4,
-    "dias_proxima_cheia": 13,
+    "nome": "Crescente",
+    "iluminacao_pct": 74.0,
+    "fase_pct": 13.2,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 17.3,
+  "temperatura_atual": 21.8,
   "vento": {
-    "velocidade_kmh": 10.3,
-    "direcao_graus": 112,
-    "direcao": "ESE",
-    "max_kmh": 12.9,
-    "rajada_kmh": 25.9,
-    "direcao_dominante": "ESE",
+    "velocidade_kmh": 11.9,
+    "direcao_graus": 22,
+    "direcao": "NNE",
+    "max_kmh": 24.0,
+    "rajada_kmh": 48.2,
+    "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 94,
-  "pressao_hpa": 1022,
-  "ponto_orvalho_c": 16.3,
+  "umidade_pct": 52,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 11.6,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-17T12:14:23.962406+00:00"
+  "_clima_em": "2026-06-19T12:03:42.990053+00:00"
 }
