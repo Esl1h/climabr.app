@@ -4,47 +4,84 @@
   "slug": "boa-nova",
   "latitude": -14.3602,
   "longitude": -40.23,
-  "atualizado_em": "2026-06-20T08:18:42.159803+00:00",
+  "atualizado_em": "2026-06-20T10:30:41.373674+00:00",
   "previsao": [
     {
       "data": "2026-06-20",
-      "min": 13,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 12.0,
+      "max": 21.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.4,
+      "nascer_sol": "06:04",
+      "por_sol": "17:20"
     },
     {
       "data": "2026-06-21",
-      "min": 12,
-      "max": 24,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 11.0,
+      "max": 22.1,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.3,
+      "nascer_sol": "06:04",
+      "por_sol": "17:21"
     },
     {
       "data": "2026-06-22",
-      "min": 14,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 12.4,
+      "max": 22.5,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.3,
+      "nascer_sol": "06:04",
+      "por_sol": "17:21"
     },
     {
       "data": "2026-06-23",
-      "min": 13,
-      "max": 24,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 12.4,
+      "max": 24.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.4,
+      "nascer_sol": "06:05",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-06-24",
+      "min": 17.3,
+      "max": 22.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.6,
+      "uv": 6.4,
+      "nascer_sol": "06:05",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-06-25",
+      "min": 16.0,
+      "max": 22.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.1,
+      "nascer_sol": "06:05",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-06-26",
+      "min": 16.2,
+      "max": 21.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.0,
+      "nascer_sol": "06:05",
+      "por_sol": "17:22"
     }
   ],
   "queimadas": {
@@ -60,15 +97,15 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 26,
+    "indice": 24,
     "categoria": "Boa",
     "principal_poluente": "PM10",
     "pm25": 4.9,
-    "pm10": 7.8,
-    "no2": 0.7,
-    "o3": 63.0,
+    "pm10": 7.7,
+    "no2": 2.1,
+    "o3": 52.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-19T12:03:42.990053+00:00"
+    "atualizado_em": "2026-06-20T10:30:41.373674+00:00"
   },
   "sol": {
     "nascer": "06:04",
@@ -79,24 +116,24 @@
   },
   "lua": {
     "nome": "Crescente",
-    "iluminacao_pct": 74.0,
-    "fase_pct": 13.2,
-    "dias_proxima_cheia": 11,
+    "iluminacao_pct": 86.0,
+    "fase_pct": 16.6,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 17.8,
+  "temperatura_atual": 15.3,
   "vento": {
-    "velocidade_kmh": 26.2,
-    "direcao_graus": 143,
+    "velocidade_kmh": 9.2,
+    "direcao_graus": 137,
     "direcao": "SE",
-    "max_kmh": 26.2,
-    "rajada_kmh": 49.7,
+    "max_kmh": 13.2,
+    "rajada_kmh": 25.2,
     "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 77,
-  "pressao_hpa": 1023,
-  "ponto_orvalho_c": 13.7,
+  "umidade_pct": 86,
+  "pressao_hpa": 1021,
+  "ponto_orvalho_c": 12.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -119,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-19T12:34:51.582605+00:00"
   },
-  "_clima_em": "2026-06-19T12:03:42.990053+00:00"
+  "_clima_em": "2026-06-20T10:30:41.373674+00:00"
 }

@@ -4,58 +4,47 @@
   "slug": "selbach",
   "latitude": -28.6686,
   "longitude": -52.9786,
-  "atualizado_em": "2026-06-19T12:03:42.990053+00:00",
+  "atualizado_em": "2026-06-20T10:30:41.373674+00:00",
   "previsao": [
     {
-      "data": "2026-06-19",
-      "min": 11.7,
-      "max": 14.9,
-      "condicao": "Chuva isolada moderada",
-      "condicao_codigo": 81,
-      "chuva_mm": 11.1,
-      "uv": 1.4,
-      "nascer_sol": "07:23",
-      "por_sol": "17:42"
-    },
-    {
       "data": "2026-06-20",
-      "min": 10.0,
-      "max": 14.6,
+      "min": 9.0,
+      "max": 13.0,
       "condicao": "Chuvisco leve",
       "condicao_codigo": 51,
-      "chuva_mm": 0.3,
-      "uv": 2.9,
+      "chuva_mm": 0.1,
+      "uv": 4.1,
       "nascer_sol": "07:23",
       "por_sol": "17:42"
     },
     {
       "data": "2026-06-21",
-      "min": 8.1,
-      "max": 17.1,
+      "min": 6.8,
+      "max": 17.2,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 4.3,
+      "uv": 4.2,
       "nascer_sol": "07:24",
       "por_sol": "17:43"
     },
     {
       "data": "2026-06-22",
-      "min": 7.0,
-      "max": 14.7,
-      "condicao": "Chuva isolada moderada",
-      "condicao_codigo": 81,
-      "chuva_mm": 13.0,
-      "uv": 2.9,
+      "min": 6.6,
+      "max": 13.9,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 16.2,
+      "uv": 1.7,
       "nascer_sol": "07:24",
       "por_sol": "17:43"
     },
     {
       "data": "2026-06-23",
-      "min": 3.7,
-      "max": 11.2,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
+      "min": 4.0,
+      "max": 11.7,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
       "uv": 4.2,
       "nascer_sol": "07:24",
@@ -63,24 +52,35 @@
     },
     {
       "data": "2026-06-24",
-      "min": 2.1,
-      "max": 10.3,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "min": 1.6,
+      "max": 11.2,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "uv": 4.0,
+      "uv": 4.2,
       "nascer_sol": "07:24",
       "por_sol": "17:43"
     },
     {
       "data": "2026-06-25",
-      "min": 0.3,
-      "max": 13.6,
+      "min": -0.2,
+      "max": 12.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.0,
+      "nascer_sol": "07:24",
+      "por_sol": "17:44"
+    },
+    {
+      "data": "2026-06-26",
+      "min": 2.5,
+      "max": 14.2,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
       "chuva_mm": 0,
       "uv": 4.1,
-      "nascer_sol": "07:24",
+      "nascer_sol": "07:25",
       "por_sol": "17:44"
     }
   ],
@@ -101,8 +101,8 @@
     "atualizado_em": "2026-06-20T09:47:27.412526+00:00"
   },
   "uv": {
-    "indice": 1.4,
-    "categoria": "Baixo",
+    "indice": 4.1,
+    "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
@@ -111,12 +111,12 @@
     "indice": 22,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.5,
-    "pm10": 4.9,
-    "no2": 5.7,
-    "o3": 39.0,
+    "pm25": 9.2,
+    "pm10": 9.3,
+    "no2": 2.6,
+    "o3": 25.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-19T12:03:42.990053+00:00"
+    "atualizado_em": "2026-06-20T10:30:41.373674+00:00"
   },
   "sol": {
     "nascer": "07:23",
@@ -127,12 +127,12 @@
   },
   "lua": {
     "nome": "Crescente",
-    "iluminacao_pct": 74.0,
-    "fase_pct": 13.2,
-    "dias_proxima_cheia": 11,
+    "iluminacao_pct": 86.0,
+    "fase_pct": 16.6,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 12.1,
+  "temperatura_atual": 9.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -155,17 +155,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-19T12:03:42.990053+00:00",
+  "_clima_em": "2026-06-20T10:30:41.373674+00:00",
   "vento": {
-    "velocidade_kmh": 2.9,
-    "direcao_graus": 43,
-    "direcao": "NE",
-    "max_kmh": 22.7,
-    "rajada_kmh": 43.9,
-    "direcao_dominante": "NNO",
+    "velocidade_kmh": 5.7,
+    "direcao_graus": 204,
+    "direcao": "SSO",
+    "max_kmh": 14.0,
+    "rajada_kmh": 24.5,
+    "direcao_dominante": "S",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 85,
+  "umidade_pct": 89,
   "pressao_hpa": 1018,
-  "ponto_orvalho_c": 9.7
+  "ponto_orvalho_c": 7.8
 }
