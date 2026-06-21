@@ -4,8 +4,86 @@
   "slug": "colniza",
   "latitude": -9.2924,
   "longitude": -60.3042,
-  "atualizado_em": "2026-06-21T09:06:56.386986+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-21T11:13:36.805311+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-21",
+      "min": 21.7,
+      "max": 32.4,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.1,
+      "uv": 6.8,
+      "nascer_sol": "07:15",
+      "por_sol": "18:50"
+    },
+    {
+      "data": "2026-06-22",
+      "min": 22.6,
+      "max": 32.4,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.2,
+      "uv": 6.7,
+      "nascer_sol": "07:15",
+      "por_sol": "18:50"
+    },
+    {
+      "data": "2026-06-23",
+      "min": 22.7,
+      "max": 28.5,
+      "condicao": "Tempestade com granizo leve",
+      "condicao_codigo": 96,
+      "chuva_mm": 10.7,
+      "uv": 6.8,
+      "nascer_sol": "07:16",
+      "por_sol": "18:50"
+    },
+    {
+      "data": "2026-06-24",
+      "min": 22.6,
+      "max": 28.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.7,
+      "uv": 6.8,
+      "nascer_sol": "07:16",
+      "por_sol": "18:51"
+    },
+    {
+      "data": "2026-06-25",
+      "min": 21.0,
+      "max": 30.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.7,
+      "nascer_sol": "07:16",
+      "por_sol": "18:51"
+    },
+    {
+      "data": "2026-06-26",
+      "min": 21.0,
+      "max": 31.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "07:16",
+      "por_sol": "18:51"
+    },
+    {
+      "data": "2026-06-27",
+      "min": 21.5,
+      "max": 33.3,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "07:16",
+      "por_sol": "18:51"
+    }
+  ],
   "reservatorio": {
     "nome": "Dardanelos",
     "nivel_pct": 0.0,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-06-21T10:08:30.761308+00:00"
   },
   "uv": {
-    "indice": 6.6,
+    "indice": 6.8,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 34,
+    "indice": 22,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 8.2,
-    "pm10": 8.2,
-    "no2": 1.0,
-    "o3": 24.0,
+    "pm25": 10.4,
+    "pm10": 10.5,
+    "no2": 2.6,
+    "o3": 25.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-19T12:03:42.990053+00:00"
+    "atualizado_em": "2026-06-21T11:13:36.805311+00:00"
   },
   "sol": {
     "nascer": "07:15",
     "por": "18:50",
     "duracao_h": 11.6,
-    "estacao": "Outono",
+    "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Crescente",
-    "iluminacao_pct": 74.0,
-    "fase_pct": 13.2,
-    "dias_proxima_cheia": 11,
+    "iluminacao_pct": 95.0,
+    "fase_pct": 20.0,
+    "dias_proxima_cheia": 9,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 25.9,
+  "temperatura_atual": 23.2,
   "vento": {
-    "velocidade_kmh": 1.2,
-    "direcao_graus": 219,
-    "direcao": "SO",
-    "max_kmh": 7.8,
-    "rajada_kmh": 17.3,
-    "direcao_dominante": "SO",
+    "velocidade_kmh": 5.3,
+    "direcao_graus": 98,
+    "direcao": "E",
+    "max_kmh": 7.9,
+    "rajada_kmh": 25.2,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 84,
-  "pressao_hpa": 1016,
-  "ponto_orvalho_c": 23.0,
+  "umidade_pct": 93,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 22.0,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-19T12:03:42.990053+00:00"
+  "_clima_em": "2026-06-21T11:13:36.805311+00:00"
 }
