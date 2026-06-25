@@ -4,47 +4,84 @@
   "slug": "altamira-do-parana",
   "latitude": -24.8134,
   "longitude": -52.6923,
-  "atualizado_em": "2026-06-25T08:44:39.141677+00:00",
+  "atualizado_em": "2026-06-25T10:39:16.144871+00:00",
   "previsao": [
     {
       "data": "2026-06-25",
-      "min": 3,
-      "max": 18,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 2.5,
+      "max": 16.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.8,
+      "nascer_sol": "07:15",
+      "por_sol": "17:51"
     },
     {
       "data": "2026-06-26",
-      "min": 7,
-      "max": 19,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 3.7,
+      "max": 19.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 4.7,
+      "nascer_sol": "07:15",
+      "por_sol": "17:51"
     },
     {
       "data": "2026-06-27",
-      "min": 14,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 12.1,
+      "max": 18.8,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 21.5,
+      "uv": 3.4,
+      "nascer_sol": "07:15",
+      "por_sol": "17:51"
     },
     {
       "data": "2026-06-28",
-      "min": 16,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 13.8,
+      "max": 23.7,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 4.8,
+      "uv": 4.4,
+      "nascer_sol": "07:15",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-06-29",
+      "min": 15.1,
+      "max": 18.8,
+      "condicao": "Tempestade com granizo leve",
+      "condicao_codigo": 96,
+      "chuva_mm": 22.4,
+      "uv": 4.2,
+      "nascer_sol": "07:16",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-06-30",
+      "min": 15.5,
+      "max": 20.4,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 13.4,
+      "uv": 4.0,
+      "nascer_sol": "07:16",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-07-01",
+      "min": 15.4,
+      "max": 25.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 4.5,
+      "nascer_sol": "07:16",
+      "por_sol": "17:53"
     }
   ],
   "reservatorio": {
@@ -71,31 +108,31 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 45,
+    "indice": 32,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 17.3,
-    "pm10": 17.6,
-    "no2": 3.8,
-    "o3": 19.0,
+    "pm25": 8.4,
+    "pm10": 8.7,
+    "no2": 6.0,
+    "o3": 14.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-21T11:13:36.805311+00:00"
+    "atualizado_em": "2026-06-25T10:39:16.144871+00:00"
   },
   "sol": {
-    "nascer": "07:14",
-    "por": "17:50",
+    "nascer": "07:15",
+    "por": "17:51",
     "duracao_h": 10.6,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 95.0,
-    "fase_pct": 20.0,
-    "dias_proxima_cheia": 9,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 86.0,
+    "fase_pct": 33.5,
+    "dias_proxima_cheia": 5,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 9.7,
+  "temperatura_atual": 3.0,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -118,17 +155,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-21T11:13:36.805311+00:00",
+  "_clima_em": "2026-06-25T10:39:16.144871+00:00",
   "vento": {
-    "velocidade_kmh": 7.5,
-    "direcao_graus": 50,
-    "direcao": "NE",
-    "max_kmh": 11.3,
-    "rajada_kmh": 19.4,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 8.1,
+    "direcao_graus": 133,
+    "direcao": "SE",
+    "max_kmh": 9.0,
+    "rajada_kmh": 17.3,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 96,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 9.1
+  "umidade_pct": 80,
+  "pressao_hpa": 1025,
+  "ponto_orvalho_c": -0.1
 }

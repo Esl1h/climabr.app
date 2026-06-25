@@ -4,47 +4,36 @@
   "slug": "hortolandia",
   "latitude": -22.8784,
   "longitude": -47.2077,
-  "atualizado_em": "2026-06-24T10:46:22.537836+00:00",
+  "atualizado_em": "2026-06-25T10:39:16.144871+00:00",
   "previsao": [
     {
-      "data": "2026-06-24",
-      "min": 13.9,
-      "max": 17.6,
-      "condicao": "Chuva isolada leve",
-      "condicao_codigo": 80,
-      "chuva_mm": 10.9,
-      "uv": 1.6,
-      "nascer_sol": "06:49",
-      "por_sol": "17:33"
-    },
-    {
       "data": "2026-06-25",
-      "min": 13.3,
-      "max": 18.3,
-      "condicao": "Tempestade",
-      "condicao_codigo": 95,
-      "chuva_mm": 14.0,
-      "uv": 3.5,
+      "min": 12.6,
+      "max": 16.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.1,
+      "uv": 4.0,
       "nascer_sol": "06:49",
       "por_sol": "17:33"
     },
     {
       "data": "2026-06-26",
-      "min": 14.9,
-      "max": 23.1,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 2.9,
-      "uv": 4.6,
+      "min": 13.7,
+      "max": 23.6,
+      "condicao": "Tempestade com granizo leve",
+      "condicao_codigo": 96,
+      "chuva_mm": 5.1,
+      "uv": 3.8,
       "nascer_sol": "06:49",
       "por_sol": "17:33"
     },
     {
       "data": "2026-06-27",
-      "min": 15.3,
-      "max": 24.7,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "min": 14.7,
+      "max": 25.3,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
       "uv": 5.2,
       "nascer_sol": "06:49",
@@ -52,8 +41,8 @@
     },
     {
       "data": "2026-06-28",
-      "min": 15.7,
-      "max": 25.2,
+      "min": 16.2,
+      "max": 25.7,
       "condicao": "Principalmente limpo",
       "condicao_codigo": 1,
       "chuva_mm": 0,
@@ -63,25 +52,36 @@
     },
     {
       "data": "2026-06-29",
-      "min": 16.1,
-      "max": 25.2,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "min": 15.4,
+      "max": 25.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 4.7,
+      "uv": 5.2,
       "nascer_sol": "06:50",
       "por_sol": "17:34"
     },
     {
       "data": "2026-06-30",
-      "min": 16.8,
-      "max": 23.8,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.8,
+      "min": 15.5,
+      "max": 25.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
       "uv": 5.0,
       "nascer_sol": "06:50",
       "por_sol": "17:34"
+    },
+    {
+      "data": "2026-07-01",
+      "min": 16.2,
+      "max": 26.1,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.0,
+      "nascer_sol": "06:50",
+      "por_sol": "17:35"
     }
   ],
   "queimadas": {
@@ -101,22 +101,22 @@
     "atualizado_em": "2026-06-25T09:49:14.378725+00:00"
   },
   "uv": {
-    "indice": 1.6,
-    "categoria": "Baixo",
+    "indice": 4.0,
+    "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 52,
+    "indice": 57,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 10.5,
-    "pm10": 10.9,
-    "no2": 23.0,
-    "o3": 16.0,
+    "pm25": 7.0,
+    "pm10": 7.4,
+    "no2": 24.7,
+    "o3": 17.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-24T10:46:22.537836+00:00"
+    "atualizado_em": "2026-06-25T10:39:16.144871+00:00"
   },
   "sol": {
     "nascer": "06:49",
@@ -127,12 +127,12 @@
   },
   "lua": {
     "nome": "Quarto Crescente",
-    "iluminacao_pct": 95.0,
-    "fase_pct": 30.1,
-    "dias_proxima_cheia": 6,
+    "iluminacao_pct": 86.0,
+    "fase_pct": 33.5,
+    "dias_proxima_cheia": 5,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 14.6,
+  "temperatura_atual": 13.7,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -155,17 +155,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-24T10:46:22.537836+00:00",
+  "_clima_em": "2026-06-25T10:39:16.144871+00:00",
   "vento": {
-    "velocidade_kmh": 7.5,
-    "direcao_graus": 169,
-    "direcao": "S",
-    "max_kmh": 9.3,
-    "rajada_kmh": 24.8,
-    "direcao_dominante": "SSE",
+    "velocidade_kmh": 9.9,
+    "direcao_graus": 135,
+    "direcao": "SE",
+    "max_kmh": 13.2,
+    "rajada_kmh": 32.0,
+    "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 96,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 13.9
+  "umidade_pct": 87,
+  "pressao_hpa": 1023,
+  "ponto_orvalho_c": 11.6
 }

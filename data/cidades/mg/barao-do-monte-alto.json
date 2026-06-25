@@ -4,8 +4,86 @@
   "slug": "barao-do-monte-alto",
   "latitude": -21.2648,
   "longitude": -42.2784,
-  "atualizado_em": "2026-06-25T08:32:38.461582+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-25T10:39:16.144871+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-25",
+      "min": 18.1,
+      "max": 24.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 3.8,
+      "nascer_sol": "06:26",
+      "por_sol": "17:16"
+    },
+    {
+      "data": "2026-06-26",
+      "min": 19.0,
+      "max": 27.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 5.3,
+      "nascer_sol": "06:26",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-06-27",
+      "min": 20.0,
+      "max": 27.7,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.6,
+      "uv": 5.3,
+      "nascer_sol": "06:26",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-06-28",
+      "min": 19.0,
+      "max": 26.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.4,
+      "uv": 5.3,
+      "nascer_sol": "06:26",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-06-29",
+      "min": 18.0,
+      "max": 28.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.3,
+      "nascer_sol": "06:27",
+      "por_sol": "17:18"
+    },
+    {
+      "data": "2026-06-30",
+      "min": 16.7,
+      "max": 28.6,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.2,
+      "nascer_sol": "06:27",
+      "por_sol": "17:18"
+    },
+    {
+      "data": "2026-07-01",
+      "min": 19.2,
+      "max": 29.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.0,
+      "nascer_sol": "06:27",
+      "por_sol": "17:18"
+    }
+  ],
   "reservatorio": {
     "nome": "Barra Brauna",
     "nivel_pct": 46.4,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-06-25T09:49:17.998496+00:00"
   },
   "uv": {
-    "indice": 5.5,
+    "indice": 3.8,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 30,
+    "indice": 47,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 6.2,
-    "pm10": 6.3,
-    "no2": 10.1,
-    "o3": 17.0,
+    "pm25": 14.2,
+    "pm10": 16.6,
+    "no2": 10.6,
+    "o3": 49.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-23T11:13:45.052106+00:00"
+    "atualizado_em": "2026-06-25T10:39:16.144871+00:00"
   },
   "sol": {
     "nascer": "06:26",
@@ -49,24 +127,24 @@
   },
   "lua": {
     "nome": "Quarto Crescente",
-    "iluminacao_pct": 99.0,
-    "fase_pct": 26.7,
-    "dias_proxima_cheia": 7,
+    "iluminacao_pct": 86.0,
+    "fase_pct": 33.5,
+    "dias_proxima_cheia": 5,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 19.3,
+  "temperatura_atual": 19.6,
   "vento": {
-    "velocidade_kmh": 2.8,
-    "direcao_graus": 259,
-    "direcao": "O",
-    "max_kmh": 10.6,
-    "rajada_kmh": 26.6,
-    "direcao_dominante": "NO",
+    "velocidade_kmh": 5.2,
+    "direcao_graus": 56,
+    "direcao": "NE",
+    "max_kmh": 18.0,
+    "rajada_kmh": 36.4,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 81,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 15.9,
+  "umidade_pct": 92,
+  "pressao_hpa": 1022,
+  "ponto_orvalho_c": 18.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-23T11:13:45.052106+00:00"
+  "_clima_em": "2026-06-25T10:39:16.144871+00:00"
 }
