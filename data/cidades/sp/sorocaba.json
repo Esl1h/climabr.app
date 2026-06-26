@@ -4,47 +4,36 @@
   "slug": "sorocaba",
   "latitude": -23.4646,
   "longitude": -47.4468,
-  "atualizado_em": "2026-06-25T10:39:16.144871+00:00",
+  "atualizado_em": "2026-06-26T10:48:23.909923+00:00",
   "previsao": [
     {
-      "data": "2026-06-25",
-      "min": 12.3,
-      "max": 15.9,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.6,
-      "uv": 3.5,
-      "nascer_sol": "06:51",
-      "por_sol": "17:33"
-    },
-    {
       "data": "2026-06-26",
-      "min": 13.3,
-      "max": 22.4,
-      "condicao": "Tempestade",
-      "condicao_codigo": 95,
-      "chuva_mm": 3.6,
-      "uv": 3.5,
+      "min": 12.5,
+      "max": 22.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.0,
       "nascer_sol": "06:51",
       "por_sol": "17:33"
     },
     {
       "data": "2026-06-27",
-      "min": 14.8,
-      "max": 24.5,
+      "min": 14.6,
+      "max": 24.1,
       "condicao": "Parcialmente nublado",
       "condicao_codigo": 2,
       "chuva_mm": 0,
-      "uv": 5.1,
+      "uv": 5.2,
       "nascer_sol": "06:51",
       "por_sol": "17:33"
     },
     {
       "data": "2026-06-28",
-      "min": 15.7,
-      "max": 25.2,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
+      "min": 15.3,
+      "max": 24.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
       "uv": 5.2,
       "nascer_sol": "06:51",
@@ -52,47 +41,58 @@
     },
     {
       "data": "2026-06-29",
-      "min": 15.5,
-      "max": 25.0,
+      "min": 15.6,
+      "max": 24.8,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 5.0,
+      "uv": 5.2,
       "nascer_sol": "06:52",
       "por_sol": "17:34"
     },
     {
       "data": "2026-06-30",
-      "min": 16.3,
-      "max": 24.3,
+      "min": 14.9,
+      "max": 24.6,
       "condicao": "Parcialmente nublado",
       "condicao_codigo": 2,
       "chuva_mm": 0,
-      "uv": 5.0,
+      "uv": 5.2,
       "nascer_sol": "06:52",
       "por_sol": "17:34"
     },
     {
       "data": "2026-07-01",
-      "min": 16.0,
-      "max": 24.9,
+      "min": 15.4,
+      "max": 25.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.7,
+      "nascer_sol": "06:52",
+      "por_sol": "17:34"
+    },
+    {
+      "data": "2026-07-02",
+      "min": 16.6,
+      "max": 25.2,
       "condicao": "Principalmente limpo",
       "condicao_codigo": 1,
       "chuva_mm": 0,
-      "uv": 4.8,
+      "uv": 5.0,
       "nascer_sol": "06:52",
-      "por_sol": "17:34"
+      "por_sol": "17:35"
     }
   ],
   "reservatorio": {
     "nome": "Rio Claro",
-    "nivel_pct": 64.5,
-    "variacao_semana_pct": 8.3,
-    "variacao_diaria_pct": 1.183,
-    "data_medicao": "2026-06-24",
+    "nivel_pct": 65.6,
+    "variacao_semana_pct": -0.1,
+    "variacao_diaria_pct": -0.021,
+    "data_medicao": "2026-06-26",
     "sistema_id": 69,
     "fonte": "SABESP",
-    "atualizado_em": "2026-06-24T11:25:51.466659+00:00"
+    "atualizado_em": "2026-06-26T11:27:46.756519+00:00"
   },
   "queimadas": {
     "focos_100km": 0,
@@ -100,22 +100,22 @@
     "atualizado_em": "2026-06-26T09:56:19.475157+00:00"
   },
   "uv": {
-    "indice": 3.5,
+    "indice": 5.0,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 17,
+    "indice": 19,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 2.8,
-    "pm10": 3.4,
-    "no2": 7.2,
-    "o3": 38.0,
+    "pm25": 8.3,
+    "pm10": 9.6,
+    "no2": 16.0,
+    "o3": 22.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-25T10:39:16.144871+00:00"
+    "atualizado_em": "2026-06-26T10:48:23.909923+00:00"
   },
   "sol": {
     "nascer": "06:51",
@@ -126,12 +126,12 @@
   },
   "lua": {
     "nome": "Quarto Crescente",
-    "iluminacao_pct": 86.0,
-    "fase_pct": 33.5,
-    "dias_proxima_cheia": 5,
+    "iluminacao_pct": 73.0,
+    "fase_pct": 36.9,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 12.9,
+  "temperatura_atual": 14.3,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -154,17 +154,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-25T10:39:16.144871+00:00",
+  "_clima_em": "2026-06-26T10:48:23.909923+00:00",
   "vento": {
-    "velocidade_kmh": 13.1,
-    "direcao_graus": 124,
-    "direcao": "SE",
-    "max_kmh": 17.2,
-    "rajada_kmh": 37.8,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 12.2,
+    "direcao_graus": 109,
+    "direcao": "ESE",
+    "max_kmh": 14.8,
+    "rajada_kmh": 30.2,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 86,
-  "pressao_hpa": 1024,
-  "ponto_orvalho_c": 10.6
+  "umidade_pct": 90,
+  "pressao_hpa": 1025,
+  "ponto_orvalho_c": 12.6
 }

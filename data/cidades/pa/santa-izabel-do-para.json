@@ -4,33 +4,111 @@
   "slug": "santa-izabel-do-para",
   "latitude": -1.3652,
   "longitude": -48.1293,
-  "atualizado_em": "2026-06-26T08:51:40.047695+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-26T10:48:23.909923+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-26",
+      "min": 23.0,
+      "max": 31.2,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 5.6,
+      "uv": 7.8,
+      "nascer_sol": "06:14",
+      "por_sol": "18:16"
+    },
+    {
+      "data": "2026-06-27",
+      "min": 22.9,
+      "max": 30.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.3,
+      "uv": 7.8,
+      "nascer_sol": "06:14",
+      "por_sol": "18:16"
+    },
+    {
+      "data": "2026-06-28",
+      "min": 22.8,
+      "max": 29.6,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 9.3,
+      "uv": 7.2,
+      "nascer_sol": "06:14",
+      "por_sol": "18:17"
+    },
+    {
+      "data": "2026-06-29",
+      "min": 22.7,
+      "max": 30.0,
+      "condicao": "Tempestade com granizo leve",
+      "condicao_codigo": 96,
+      "chuva_mm": 7.3,
+      "uv": 7.2,
+      "nascer_sol": "06:14",
+      "por_sol": "18:17"
+    },
+    {
+      "data": "2026-06-30",
+      "min": 22.2,
+      "max": 30.9,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 4.5,
+      "uv": 7.8,
+      "nascer_sol": "06:14",
+      "por_sol": "18:17"
+    },
+    {
+      "data": "2026-07-01",
+      "min": 22.4,
+      "max": 30.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.5,
+      "uv": 7.7,
+      "nascer_sol": "06:14",
+      "por_sol": "18:17"
+    },
+    {
+      "data": "2026-07-02",
+      "min": 23.1,
+      "max": 27.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.2,
+      "uv": 7.6,
+      "nascer_sol": "06:15",
+      "por_sol": "18:17"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-06-26T09:56:19.475157+00:00"
   },
   "uv": {
-    "indice": 7.7,
+    "indice": 7.8,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 16,
+    "indice": 20,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 3.9,
-    "pm10": 5.1,
-    "no2": 3.7,
-    "o3": 38.0,
+    "pm25": 5.0,
+    "pm10": 6.5,
+    "no2": 2.3,
+    "o3": 47.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-25T10:39:16.144871+00:00"
+    "atualizado_em": "2026-06-26T10:48:23.909923+00:00"
   },
   "sol": {
-    "nascer": "06:13",
+    "nascer": "06:14",
     "por": "18:16",
     "duracao_h": 12.0,
     "estacao": "Inverno",
@@ -38,24 +116,24 @@
   },
   "lua": {
     "nome": "Quarto Crescente",
-    "iluminacao_pct": 86.0,
-    "fase_pct": 33.5,
-    "dias_proxima_cheia": 5,
+    "iluminacao_pct": 73.0,
+    "fase_pct": 36.9,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 24.9,
+  "temperatura_atual": 25.6,
   "vento": {
-    "velocidade_kmh": 3.3,
-    "direcao_graus": 9,
-    "direcao": "N",
-    "max_kmh": 14.3,
-    "rajada_kmh": 30.6,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 8.6,
+    "direcao_graus": 79,
+    "direcao": "E",
+    "max_kmh": 14.7,
+    "rajada_kmh": 33.8,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 97,
-  "pressao_hpa": 1013,
-  "ponto_orvalho_c": 24.4,
+  "umidade_pct": 91,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 24.1,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-25T10:39:16.144871+00:00"
+  "_clima_em": "2026-06-26T10:48:23.909923+00:00"
 }
