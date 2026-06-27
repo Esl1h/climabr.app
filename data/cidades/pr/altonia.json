@@ -4,46 +4,124 @@
   "slug": "altonia",
   "latitude": -23.9026,
   "longitude": -53.9488,
-  "atualizado_em": "2026-06-27T08:11:25.228999+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-27T10:04:31.375182+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-27",
+      "min": 14.4,
+      "max": 24.4,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 4.8,
+      "uv": 4.0,
+      "nascer_sol": "07:19",
+      "por_sol": "17:58"
+    },
+    {
+      "data": "2026-06-28",
+      "min": 18.1,
+      "max": 25.0,
+      "condicao": "Tempestade com granizo leve",
+      "condicao_codigo": 96,
+      "chuva_mm": 9.8,
+      "uv": 4.5,
+      "nascer_sol": "07:19",
+      "por_sol": "17:59"
+    },
+    {
+      "data": "2026-06-29",
+      "min": 17.2,
+      "max": 23.2,
+      "condicao": "Tempestade com granizo leve",
+      "condicao_codigo": 96,
+      "chuva_mm": 40.2,
+      "uv": 4.8,
+      "nascer_sol": "07:19",
+      "por_sol": "17:59"
+    },
+    {
+      "data": "2026-06-30",
+      "min": 17.4,
+      "max": 23.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.1,
+      "uv": 4.5,
+      "nascer_sol": "07:19",
+      "por_sol": "17:59"
+    },
+    {
+      "data": "2026-07-01",
+      "min": 17.6,
+      "max": 27.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 5.0,
+      "nascer_sol": "07:19",
+      "por_sol": "18:00"
+    },
+    {
+      "data": "2026-07-02",
+      "min": 16.6,
+      "max": 22.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.9,
+      "uv": 3.6,
+      "nascer_sol": "07:19",
+      "por_sol": "18:00"
+    },
+    {
+      "data": "2026-07-03",
+      "min": 15.5,
+      "max": 19.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.1,
+      "nascer_sol": "07:19",
+      "por_sol": "18:00"
+    }
+  ],
   "queimadas": {
     "focos_100km": 7,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-06-27T09:08:55.876779+00:00"
   },
   "uv": {
-    "indice": 5.0,
+    "indice": 4.0,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 55,
-    "categoria": "Moderada",
+    "indice": 40,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 13.3,
-    "pm10": 13.8,
-    "no2": 9.6,
-    "o3": 22.0,
+    "pm25": 11.8,
+    "pm10": 11.9,
+    "no2": 6.3,
+    "o3": 26.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-25T10:39:16.144871+00:00"
+    "atualizado_em": "2026-06-27T10:04:31.375182+00:00"
   },
   "sol": {
-    "nascer": "07:18",
+    "nascer": "07:19",
     "por": "17:58",
     "duracao_h": 10.7,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 86.0,
-    "fase_pct": 33.5,
-    "dias_proxima_cheia": 5,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 57.0,
+    "fase_pct": 40.3,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 5.0,
+  "temperatura_atual": 14.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -66,17 +144,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-25T10:39:16.144871+00:00",
+  "_clima_em": "2026-06-27T10:04:31.375182+00:00",
   "vento": {
-    "velocidade_kmh": 10.1,
-    "direcao_graus": 115,
-    "direcao": "ESE",
-    "max_kmh": 11.6,
-    "rajada_kmh": 22.7,
-    "direcao_dominante": "ESE",
+    "velocidade_kmh": 8.9,
+    "direcao_graus": 98,
+    "direcao": "E",
+    "max_kmh": 19.4,
+    "rajada_kmh": 38.2,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 83,
-  "pressao_hpa": 1024,
-  "ponto_orvalho_c": 2.3
+  "umidade_pct": 96,
+  "pressao_hpa": 1021,
+  "ponto_orvalho_c": 14.2
 }
