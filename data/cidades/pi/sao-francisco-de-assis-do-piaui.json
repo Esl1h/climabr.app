@@ -4,34 +4,23 @@
   "slug": "sao-francisco-de-assis-do-piaui",
   "latitude": -8.1934,
   "longitude": -41.5835,
-  "atualizado_em": "2026-06-27T10:04:31.375182+00:00",
+  "atualizado_em": "2026-06-28T10:25:14.331910+00:00",
   "previsao": [
-    {
-      "data": "2026-06-27",
-      "min": 22.8,
-      "max": 30.3,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.4,
-      "uv": 2.9,
-      "nascer_sol": "06:00",
-      "por_sol": "17:39"
-    },
     {
       "data": "2026-06-28",
       "min": 20.9,
       "max": 32.7,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "uv": 6.9,
+      "uv": 7.0,
       "nascer_sol": "06:00",
       "por_sol": "17:39"
     },
     {
       "data": "2026-06-29",
-      "min": 22.0,
-      "max": 33.1,
+      "min": 22.5,
+      "max": 31.7,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
@@ -41,7 +30,7 @@
     },
     {
       "data": "2026-06-30",
-      "min": 22.9,
+      "min": 22.0,
       "max": 31.1,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
@@ -52,35 +41,46 @@
     },
     {
       "data": "2026-07-01",
-      "min": 21.7,
-      "max": 32.4,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "min": 21.1,
+      "max": 32.0,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "uv": 6.9,
+      "uv": 7.0,
       "nascer_sol": "06:00",
       "por_sol": "17:39"
     },
     {
       "data": "2026-07-02",
-      "min": 21.9,
-      "max": 32.7,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
+      "min": 21.1,
+      "max": 32.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 6.9,
+      "uv": 7.0,
       "nascer_sol": "06:00",
       "por_sol": "17:40"
     },
     {
       "data": "2026-07-03",
-      "min": 23.3,
+      "min": 22.0,
       "max": 33.0,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
       "chuva_mm": 0,
-      "uv": 6.7,
+      "uv": 6.8,
       "nascer_sol": "06:00",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-07-04",
+      "min": 23.0,
+      "max": 33.7,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.8,
+      "nascer_sol": "06:01",
       "por_sol": "17:40"
     }
   ],
@@ -90,22 +90,22 @@
     "atualizado_em": "2026-06-28T09:39:12.501847+00:00"
   },
   "uv": {
-    "indice": 2.9,
-    "categoria": "Baixo",
+    "indice": 7.0,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 20,
+    "indice": 23,
     "categoria": "Boa",
     "principal_poluente": "PM10",
-    "pm25": 0.5,
-    "pm10": 0.8,
-    "no2": 0.9,
-    "o3": 44.0,
+    "pm25": 5.2,
+    "pm10": 8.2,
+    "no2": 0.5,
+    "o3": 53.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-27T10:04:31.375182+00:00"
+    "atualizado_em": "2026-06-28T10:25:14.331910+00:00"
   },
   "sol": {
     "nascer": "06:00",
@@ -116,12 +116,12 @@
   },
   "lua": {
     "nome": "Gibosa Crescente",
-    "iluminacao_pct": 57.0,
-    "fase_pct": 40.3,
-    "dias_proxima_cheia": 3,
+    "iluminacao_pct": 39.0,
+    "fase_pct": 43.7,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.3,
+  "temperatura_atual": 23.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -144,17 +144,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-27T10:04:31.375182+00:00",
+  "_clima_em": "2026-06-28T10:25:14.331910+00:00",
   "vento": {
-    "velocidade_kmh": 17.3,
-    "direcao_graus": 133,
+    "velocidade_kmh": 24.5,
+    "direcao_graus": 126,
     "direcao": "SE",
-    "max_kmh": 28.2,
-    "rajada_kmh": 50.0,
-    "direcao_dominante": "SE",
+    "max_kmh": 27.0,
+    "rajada_kmh": 49.0,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 80,
+  "umidade_pct": 68,
   "pressao_hpa": 1018,
-  "ponto_orvalho_c": 19.7
+  "ponto_orvalho_c": 17.0
 }
