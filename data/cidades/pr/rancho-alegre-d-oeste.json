@@ -4,8 +4,86 @@
   "slug": "rancho-alegre-d-oeste",
   "latitude": -24.2905,
   "longitude": -52.9608,
-  "atualizado_em": "2026-06-29T09:48:36.488306+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-30T10:54:28.208115+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-30",
+      "min": 15.4,
+      "max": 24.4,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 1.2,
+      "uv": 3.8,
+      "nascer_sol": "07:16",
+      "por_sol": "17:55"
+    },
+    {
+      "data": "2026-07-01",
+      "min": 18.0,
+      "max": 26.0,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 5.0,
+      "nascer_sol": "07:16",
+      "por_sol": "17:55"
+    },
+    {
+      "data": "2026-07-02",
+      "min": 15.5,
+      "max": 24.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 0.8,
+      "uv": 5.0,
+      "nascer_sol": "07:16",
+      "por_sol": "17:55"
+    },
+    {
+      "data": "2026-07-03",
+      "min": 10.7,
+      "max": 18.2,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 3.0,
+      "nascer_sol": "07:16",
+      "por_sol": "17:56"
+    },
+    {
+      "data": "2026-07-04",
+      "min": 11.0,
+      "max": 21.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.0,
+      "nascer_sol": "07:16",
+      "por_sol": "17:56"
+    },
+    {
+      "data": "2026-07-05",
+      "min": 14.1,
+      "max": 23.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 4.8,
+      "nascer_sol": "07:16",
+      "por_sol": "17:57"
+    },
+    {
+      "data": "2026-07-06",
+      "min": 15.9,
+      "max": 19.4,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 10.2,
+      "uv": 4.5,
+      "nascer_sol": "07:16",
+      "por_sol": "17:57"
+    }
+  ],
   "reservatorio": {
     "nome": "Salto Osorio",
     "nivel_pct": 97.1,
@@ -23,38 +101,38 @@
     "atualizado_em": "2026-06-30T10:05:19.824756+00:00"
   },
   "uv": {
-    "indice": 4.6,
+    "indice": 3.8,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 24,
+    "indice": 34,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 5.3,
-    "pm10": 5.3,
-    "no2": 3.4,
-    "o3": 55.0,
+    "pm25": 11.1,
+    "pm10": 11.6,
+    "no2": 5.3,
+    "o3": 26.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-28T10:25:14.331910+00:00"
+    "atualizado_em": "2026-06-30T10:54:28.208115+00:00"
   },
   "sol": {
     "nascer": "07:16",
-    "por": "17:54",
-    "duracao_h": 10.6,
+    "por": "17:55",
+    "duracao_h": 10.7,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 39.0,
-    "fase_pct": 43.7,
-    "dias_proxima_cheia": 2,
+    "nome": "Cheia",
+    "iluminacao_pct": 3.0,
+    "fase_pct": 50.4,
+    "dias_proxima_cheia": 0,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 17.8,
+  "temperatura_atual": 16.0,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -77,17 +155,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-28T10:25:14.331910+00:00",
+  "_clima_em": "2026-06-30T10:54:28.208115+00:00",
   "vento": {
-    "velocidade_kmh": 14.4,
-    "direcao_graus": 50,
-    "direcao": "NE",
-    "max_kmh": 21.0,
-    "rajada_kmh": 36.4,
+    "velocidade_kmh": 5.2,
+    "direcao_graus": 94,
+    "direcao": "E",
+    "max_kmh": 14.3,
+    "rajada_kmh": 32.0,
     "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 89,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 16.0
+  "umidade_pct": 98,
+  "pressao_hpa": 1017,
+  "ponto_orvalho_c": 15.7
 }

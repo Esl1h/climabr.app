@@ -4,8 +4,86 @@
   "slug": "governador-lindenberg",
   "latitude": -19.2054,
   "longitude": -40.5,
-  "atualizado_em": "2026-06-30T08:32:20.151740+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-06-30T10:54:28.208115+00:00",
+  "previsao": [
+    {
+      "data": "2026-06-30",
+      "min": 20.1,
+      "max": 26.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.2,
+      "uv": 5.1,
+      "nascer_sol": "06:16",
+      "por_sol": "17:15"
+    },
+    {
+      "data": "2026-07-01",
+      "min": 19.0,
+      "max": 26.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.3,
+      "uv": 5.7,
+      "nascer_sol": "06:16",
+      "por_sol": "17:15"
+    },
+    {
+      "data": "2026-07-02",
+      "min": 18.9,
+      "max": 27.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "06:16",
+      "por_sol": "17:15"
+    },
+    {
+      "data": "2026-07-03",
+      "min": 18.1,
+      "max": 28.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "06:16",
+      "por_sol": "17:16"
+    },
+    {
+      "data": "2026-07-04",
+      "min": 18.5,
+      "max": 26.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.5,
+      "nascer_sol": "06:16",
+      "por_sol": "17:16"
+    },
+    {
+      "data": "2026-07-05",
+      "min": 16.8,
+      "max": 25.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 4.2,
+      "nascer_sol": "06:16",
+      "por_sol": "17:16"
+    },
+    {
+      "data": "2026-07-06",
+      "min": 17.8,
+      "max": 24.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 3.5,
+      "nascer_sol": "06:16",
+      "por_sol": "17:17"
+    }
+  ],
   "reservatorio": {
     "nome": "Mascarenhas",
     "nivel_pct": 67.1,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-06-30T10:05:19.824756+00:00"
   },
   "uv": {
-    "indice": 5.8,
+    "indice": 5.1,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 21,
+    "indice": 20,
     "categoria": "Boa",
-    "principal_poluente": "PM10",
-    "pm25": 4.3,
-    "pm10": 7.0,
-    "no2": 1.4,
-    "o3": 55.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 4.4,
+    "pm10": 6.5,
+    "no2": 4.7,
+    "o3": 41.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-29T12:28:49.357668+00:00"
+    "atualizado_em": "2026-06-30T10:54:28.208115+00:00"
   },
   "sol": {
     "nascer": "06:16",
@@ -48,25 +126,25 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 18.0,
-    "fase_pct": 47.1,
-    "dias_proxima_cheia": 1,
+    "nome": "Cheia",
+    "iluminacao_pct": 3.0,
+    "fase_pct": 50.4,
+    "dias_proxima_cheia": 0,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.9,
+  "temperatura_atual": 21.8,
   "vento": {
-    "velocidade_kmh": 3.3,
-    "direcao_graus": 351,
-    "direcao": "N",
-    "max_kmh": 10.5,
-    "rajada_kmh": 23.0,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 6.1,
+    "direcao_graus": 122,
+    "direcao": "ESE",
+    "max_kmh": 13.7,
+    "rajada_kmh": 30.2,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 73,
-  "pressao_hpa": 1023,
-  "ponto_orvalho_c": 18.7,
+  "umidade_pct": 98,
+  "pressao_hpa": 1022,
+  "ponto_orvalho_c": 21.4,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-29T12:28:49.357668+00:00"
+  "_clima_em": "2026-06-30T10:54:28.208115+00:00"
 }

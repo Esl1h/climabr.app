@@ -4,34 +4,12 @@
   "slug": "joanopolis",
   "latitude": -22.9388,
   "longitude": -46.2092,
-  "atualizado_em": "2026-06-28T10:25:14.331910+00:00",
+  "atualizado_em": "2026-06-30T10:54:28.208115+00:00",
   "previsao": [
     {
-      "data": "2026-06-28",
-      "min": 12.2,
-      "max": 23.2,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
-      "chuva_mm": 0,
-      "uv": 5.3,
-      "nascer_sol": "06:46",
-      "por_sol": "17:30"
-    },
-    {
-      "data": "2026-06-29",
-      "min": 13.7,
-      "max": 23.5,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 5.2,
-      "nascer_sol": "06:46",
-      "por_sol": "17:30"
-    },
-    {
       "data": "2026-06-30",
-      "min": 13.4,
-      "max": 23.8,
+      "min": 14.2,
+      "max": 23.6,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
@@ -42,9 +20,9 @@
     {
       "data": "2026-07-01",
       "min": 15.6,
-      "max": 24.4,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "max": 24.5,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
       "uv": 5.3,
       "nascer_sol": "06:46",
@@ -52,10 +30,10 @@
     },
     {
       "data": "2026-07-02",
-      "min": 14.6,
-      "max": 24.4,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "min": 13.6,
+      "max": 23.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
       "uv": 5.4,
       "nascer_sol": "06:46",
@@ -63,23 +41,45 @@
     },
     {
       "data": "2026-07-03",
-      "min": 7.8,
-      "max": 15.2,
+      "min": 9.0,
+      "max": 18.3,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 1.6,
+      "uv": 1.2,
       "nascer_sol": "06:46",
       "por_sol": "17:31"
     },
     {
       "data": "2026-07-04",
-      "min": 7.8,
-      "max": 14.1,
+      "min": 8.5,
+      "max": 16.2,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 2.5,
+      "uv": 4.5,
+      "nascer_sol": "06:46",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-07-05",
+      "min": 10.5,
+      "max": 20.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.2,
+      "nascer_sol": "06:46",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-07-06",
+      "min": 10.7,
+      "max": 21.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.2,
       "nascer_sol": "06:46",
       "por_sol": "17:32"
     }
@@ -87,12 +87,12 @@
   "reservatorio": {
     "nome": "Cantareira",
     "nivel_pct": 39.9,
-    "variacao_semana_pct": 0.0,
-    "variacao_diaria_pct": 0.002,
-    "data_medicao": "2026-06-29",
+    "variacao_semana_pct": -0.1,
+    "variacao_diaria_pct": -0.015,
+    "data_medicao": "2026-06-30",
     "sistema_id": 64,
     "fonte": "SABESP",
-    "atualizado_em": "2026-06-29T12:59:26.366412+00:00"
+    "atualizado_em": "2026-06-30T11:26:15.908606+00:00"
   },
   "queimadas": {
     "focos_100km": 4,
@@ -107,15 +107,15 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 20,
+    "indice": 18,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 3.3,
-    "pm10": 4.0,
-    "no2": 2.2,
-    "o3": 41.0,
+    "pm25": 1.7,
+    "pm10": 1.7,
+    "no2": 4.4,
+    "o3": 53.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-28T10:25:14.331910+00:00"
+    "atualizado_em": "2026-06-30T10:54:28.208115+00:00"
   },
   "sol": {
     "nascer": "06:46",
@@ -125,13 +125,13 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 39.0,
-    "fase_pct": 43.7,
-    "dias_proxima_cheia": 2,
+    "nome": "Cheia",
+    "iluminacao_pct": 3.0,
+    "fase_pct": 50.4,
+    "dias_proxima_cheia": 0,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 15.5,
+  "temperatura_atual": 17.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -154,17 +154,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-28T10:25:14.331910+00:00",
+  "_clima_em": "2026-06-30T10:54:28.208115+00:00",
   "vento": {
-    "velocidade_kmh": 13.9,
-    "direcao_graus": 17,
+    "velocidade_kmh": 16.0,
+    "direcao_graus": 12,
     "direcao": "NNE",
-    "max_kmh": 15.8,
-    "rajada_kmh": 37.1,
+    "max_kmh": 16.8,
+    "rajada_kmh": 40.0,
     "direcao_dominante": "NNE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 88,
-  "pressao_hpa": 1023,
-  "ponto_orvalho_c": 13.5
+  "umidade_pct": 75,
+  "pressao_hpa": 1021,
+  "ponto_orvalho_c": 13.1
 }
