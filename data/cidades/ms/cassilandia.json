@@ -4,47 +4,84 @@
   "slug": "cassilandia",
   "latitude": -19.0953,
   "longitude": -52.1799,
-  "atualizado_em": "2026-07-01T08:59:18.019796+00:00",
+  "atualizado_em": "2026-07-01T11:21:11.112319+00:00",
   "previsao": [
     {
       "data": "2026-07-01",
-      "min": 15,
-      "max": 30,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 16.2,
+      "max": 28.7,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "07:02",
+      "por_sol": "18:02"
     },
     {
       "data": "2026-07-02",
-      "min": 15,
-      "max": 28,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 16.0,
+      "max": 28.0,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "07:02",
+      "por_sol": "18:02"
     },
     {
       "data": "2026-07-03",
-      "min": 14,
-      "max": 27,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 14.6,
+      "max": 25.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "07:02",
+      "por_sol": "18:03"
     },
     {
       "data": "2026-07-04",
-      "min": 14,
-      "max": 28,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 14.3,
+      "max": 25.3,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "07:02",
+      "por_sol": "18:03"
+    },
+    {
+      "data": "2026-07-05",
+      "min": 15.3,
+      "max": 26.2,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "07:02",
+      "por_sol": "18:03"
+    },
+    {
+      "data": "2026-07-06",
+      "min": 15.2,
+      "max": 26.6,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "07:02",
+      "por_sol": "18:04"
+    },
+    {
+      "data": "2026-07-07",
+      "min": 16.2,
+      "max": 25.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "07:02",
+      "por_sol": "18:04"
     }
   ],
   "reservatorio": {
@@ -74,12 +111,12 @@
     "indice": 19,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 0.6,
+    "pm25": 0.5,
     "pm10": 0.6,
-    "no2": 6.5,
-    "o3": 41.0,
+    "no2": 7.8,
+    "o3": 38.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-30T10:54:28.208115+00:00"
+    "atualizado_em": "2026-07-01T11:21:11.112319+00:00"
   },
   "sol": {
     "nascer": "07:02",
@@ -90,24 +127,24 @@
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 3.0,
-    "fase_pct": 50.4,
-    "dias_proxima_cheia": 0,
+    "iluminacao_pct": 24.0,
+    "fase_pct": 53.8,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 19.0,
+  "temperatura_atual": 19.9,
   "vento": {
-    "velocidade_kmh": 13.6,
-    "direcao_graus": 48,
+    "velocidade_kmh": 10.5,
+    "direcao_graus": 55,
     "direcao": "NE",
-    "max_kmh": 13.6,
-    "rajada_kmh": 28.4,
-    "direcao_dominante": "NE",
+    "max_kmh": 12.3,
+    "rajada_kmh": 27.0,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 80,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 15.5,
+  "umidade_pct": 74,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 15.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -130,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-30T10:54:28.208115+00:00"
+  "_clima_em": "2026-07-01T11:21:11.112319+00:00"
 }

@@ -4,47 +4,84 @@
   "slug": "cipotanea",
   "latitude": -20.924,
   "longitude": -43.3582,
-  "atualizado_em": "2026-07-01T09:02:03.109458+00:00",
+  "atualizado_em": "2026-07-01T11:21:11.112319+00:00",
   "previsao": [
     {
       "data": "2026-07-01",
-      "min": 15,
-      "max": 24,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 15.1,
+      "max": 25.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.5,
+      "nascer_sol": "06:30",
+      "por_sol": "17:23"
     },
     {
       "data": "2026-07-02",
-      "min": 12,
-      "max": 26,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 13.8,
+      "max": 24.3,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.5,
+      "nascer_sol": "06:30",
+      "por_sol": "17:23"
     },
     {
       "data": "2026-07-03",
-      "min": 13,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 12.5,
+      "max": 25.3,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.6,
+      "nascer_sol": "06:30",
+      "por_sol": "17:24"
     },
     {
       "data": "2026-07-04",
-      "min": 13,
-      "max": 20,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 13.6,
+      "max": 22.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 5.3,
+      "nascer_sol": "06:30",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-07-05",
+      "min": 12.0,
+      "max": 19.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 2.5,
+      "nascer_sol": "06:30",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-07-06",
+      "min": 10.8,
+      "max": 20.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 3.0,
+      "nascer_sol": "06:30",
+      "por_sol": "17:25"
+    },
+    {
+      "data": "2026-07-07",
+      "min": 11.7,
+      "max": 22.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 5.3,
+      "nascer_sol": "06:30",
+      "por_sol": "17:25"
     }
   ],
   "reservatorio": {
@@ -71,15 +108,15 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 27,
+    "indice": 33,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 10.2,
-    "pm10": 12.0,
-    "no2": 7.4,
-    "o3": 41.0,
+    "pm25": 8.7,
+    "pm10": 10.3,
+    "no2": 3.7,
+    "o3": 36.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-30T10:54:28.208115+00:00"
+    "atualizado_em": "2026-07-01T11:21:11.112319+00:00"
   },
   "sol": {
     "nascer": "06:30",
@@ -90,24 +127,24 @@
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 3.0,
-    "fase_pct": 50.4,
-    "dias_proxima_cheia": 0,
+    "iluminacao_pct": 24.0,
+    "fase_pct": 53.8,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 16.0,
+  "temperatura_atual": 19.5,
   "vento": {
-    "velocidade_kmh": 4.2,
-    "direcao_graus": 36,
-    "direcao": "NE",
-    "max_kmh": 16.4,
-    "rajada_kmh": 32.8,
+    "velocidade_kmh": 16.1,
+    "direcao_graus": 6,
+    "direcao": "N",
+    "max_kmh": 15.9,
+    "rajada_kmh": 32.4,
     "direcao_dominante": "NNE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 85,
-  "pressao_hpa": 1022,
-  "ponto_orvalho_c": 13.5,
+  "umidade_pct": 83,
+  "pressao_hpa": 1023,
+  "ponto_orvalho_c": 16.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -130,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-30T10:54:28.208115+00:00"
+  "_clima_em": "2026-07-01T11:21:11.112319+00:00"
 }

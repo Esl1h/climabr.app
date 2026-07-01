@@ -4,47 +4,84 @@
   "slug": "rio-de-contas",
   "latitude": -13.5816,
   "longitude": -41.7466,
-  "atualizado_em": "2026-07-01T08:49:23.542020+00:00",
+  "atualizado_em": "2026-07-01T11:21:11.112319+00:00",
   "previsao": [
     {
       "data": "2026-07-01",
-      "min": 14,
-      "max": 23,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 12.6,
+      "max": 25.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 1.7,
+      "nascer_sol": "06:10",
+      "por_sol": "17:30"
     },
     {
       "data": "2026-07-02",
-      "min": 15,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 16.7,
+      "max": 25.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 6.1,
+      "nascer_sol": "06:10",
+      "por_sol": "17:31"
     },
     {
       "data": "2026-07-03",
-      "min": 16,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 14.2,
+      "max": 27.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.5,
+      "nascer_sol": "06:10",
+      "por_sol": "17:31"
     },
     {
       "data": "2026-07-04",
-      "min": 16,
-      "max": 24,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 15.6,
+      "max": 27.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 6.5,
+      "nascer_sol": "06:11",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-07-05",
+      "min": 15.4,
+      "max": 28.3,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 6.6,
+      "nascer_sol": "06:11",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-07-06",
+      "min": 15.7,
+      "max": 26.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "06:11",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-07-07",
+      "min": 15.4,
+      "max": 27.9,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "06:11",
+      "por_sol": "17:32"
     }
   ],
   "queimadas": {
@@ -53,8 +90,8 @@
     "atualizado_em": "2026-07-01T10:27:09.663474+00:00"
   },
   "uv": {
-    "indice": 6.5,
-    "categoria": "Alto",
+    "indice": 1.7,
+    "categoria": "Baixo",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
@@ -63,12 +100,12 @@
     "indice": 16,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 3.5,
-    "pm10": 4.5,
-    "no2": 4.1,
-    "o3": 44.0,
+    "pm25": 3.3,
+    "pm10": 4.3,
+    "no2": 6.3,
+    "o3": 34.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-30T10:54:28.208115+00:00"
+    "atualizado_em": "2026-07-01T11:21:11.112319+00:00"
   },
   "sol": {
     "nascer": "06:10",
@@ -79,23 +116,23 @@
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 3.0,
-    "fase_pct": 50.4,
-    "dias_proxima_cheia": 0,
+    "iluminacao_pct": 24.0,
+    "fase_pct": 53.8,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 17.5,
+  "temperatura_atual": 17.7,
   "vento": {
-    "velocidade_kmh": 5.3,
-    "direcao_graus": 24,
+    "velocidade_kmh": 3.4,
+    "direcao_graus": 16,
     "direcao": "NNE",
-    "max_kmh": 13.6,
-    "rajada_kmh": 34.2,
-    "direcao_dominante": "ENE",
+    "max_kmh": 14.5,
+    "rajada_kmh": 37.4,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 81,
-  "pressao_hpa": 1022,
+  "umidade_pct": 79,
+  "pressao_hpa": 1021,
   "ponto_orvalho_c": 14.1,
   "dengue": {
     "nivel_alerta": 1,
@@ -119,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-10T12:04:25.677877+00:00"
   },
-  "_clima_em": "2026-06-30T10:54:28.208115+00:00"
+  "_clima_em": "2026-07-01T11:21:11.112319+00:00"
 }

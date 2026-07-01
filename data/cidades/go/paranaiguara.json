@@ -4,47 +4,84 @@
   "slug": "paranaiguara",
   "latitude": -18.8086,
   "longitude": -50.6241,
-  "atualizado_em": "2026-07-01T08:55:01.264361+00:00",
+  "atualizado_em": "2026-07-01T11:21:11.112319+00:00",
   "previsao": [
     {
       "data": "2026-07-01",
-      "min": 16,
-      "max": 29,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 16.8,
+      "max": 28.7,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:55",
+      "por_sol": "17:56"
     },
     {
       "data": "2026-07-02",
-      "min": 15,
-      "max": 27,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 15.1,
+      "max": 28.5,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:55",
+      "por_sol": "17:57"
     },
     {
       "data": "2026-07-03",
-      "min": 16,
-      "max": 28,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 16.8,
+      "max": 28.2,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:55",
+      "por_sol": "17:57"
     },
     {
       "data": "2026-07-04",
-      "min": 15,
-      "max": 28,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 15.6,
+      "max": 27.6,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 5.8,
+      "nascer_sol": "06:56",
+      "por_sol": "17:57"
+    },
+    {
+      "data": "2026-07-05",
+      "min": 16.5,
+      "max": 28.1,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "06:56",
+      "por_sol": "17:58"
+    },
+    {
+      "data": "2026-07-06",
+      "min": 16.6,
+      "max": 28.0,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "06:56",
+      "por_sol": "17:58"
+    },
+    {
+      "data": "2026-07-07",
+      "min": 16.9,
+      "max": 26.7,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:56",
+      "por_sol": "17:58"
     }
   ],
   "reservatorio": {
@@ -74,12 +111,12 @@
     "indice": 20,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 2.6,
-    "pm10": 2.8,
-    "no2": 6.0,
-    "o3": 39.0,
+    "pm25": 2.5,
+    "pm10": 2.6,
+    "no2": 5.6,
+    "o3": 40.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-30T10:54:28.208115+00:00"
+    "atualizado_em": "2026-07-01T11:21:11.112319+00:00"
   },
   "sol": {
     "nascer": "06:55",
@@ -90,24 +127,24 @@
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 3.0,
-    "fase_pct": 50.4,
-    "dias_proxima_cheia": 0,
+    "iluminacao_pct": 24.0,
+    "fase_pct": 53.8,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 20.0,
+  "temperatura_atual": 20.9,
   "vento": {
-    "velocidade_kmh": 8.5,
-    "direcao_graus": 24,
+    "velocidade_kmh": 6.5,
+    "direcao_graus": 13,
     "direcao": "NNE",
-    "max_kmh": 14.4,
-    "rajada_kmh": 30.6,
+    "max_kmh": 12.4,
+    "rajada_kmh": 27.0,
     "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 71,
+  "umidade_pct": 67,
   "pressao_hpa": 1018,
-  "ponto_orvalho_c": 14.6,
+  "ponto_orvalho_c": 14.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -130,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-30T10:54:28.208115+00:00"
+  "_clima_em": "2026-07-01T11:21:11.112319+00:00"
 }

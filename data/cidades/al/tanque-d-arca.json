@@ -4,30 +4,108 @@
   "slug": "tanque-d-arca",
   "latitude": -9.5577,
   "longitude": -36.4229,
-  "atualizado_em": "2026-07-01T08:44:23.571565+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-01T11:21:11.112319+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-01",
+      "min": 19.8,
+      "max": 25.8,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 3.1,
+      "uv": 6.8,
+      "nascer_sol": "05:42",
+      "por_sol": "17:16"
+    },
+    {
+      "data": "2026-07-02",
+      "min": 19.5,
+      "max": 26.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.6,
+      "uv": 6.6,
+      "nascer_sol": "05:42",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-07-03",
+      "min": 19.8,
+      "max": 26.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 7.0,
+      "nascer_sol": "05:42",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-07-04",
+      "min": 19.6,
+      "max": 26.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 6.3,
+      "nascer_sol": "05:42",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-07-05",
+      "min": 18.2,
+      "max": 26.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.0,
+      "nascer_sol": "05:42",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-07-06",
+      "min": 16.9,
+      "max": 26.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 6.7,
+      "nascer_sol": "05:43",
+      "por_sol": "17:18"
+    },
+    {
+      "data": "2026-07-07",
+      "min": 19.5,
+      "max": 24.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.6,
+      "uv": 3.1,
+      "nascer_sol": "05:43",
+      "por_sol": "17:18"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-01T10:27:09.663474+00:00"
   },
   "uv": {
-    "indice": 7.0,
+    "indice": 6.8,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 51,
-    "categoria": "Moderada",
+    "indice": 46,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 8.5,
-    "pm10": 10.8,
-    "no2": 6.8,
-    "o3": 42.0,
+    "pm25": 13.5,
+    "pm10": 19.0,
+    "no2": 4.9,
+    "o3": 53.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-30T10:54:28.208115+00:00"
+    "atualizado_em": "2026-07-01T11:21:11.112319+00:00"
   },
   "sol": {
     "nascer": "05:42",
@@ -38,24 +116,24 @@
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 3.0,
-    "fase_pct": 50.4,
-    "dias_proxima_cheia": 0,
+    "iluminacao_pct": 24.0,
+    "fase_pct": 53.8,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.2,
+  "temperatura_atual": 22.8,
   "vento": {
-    "velocidade_kmh": 14.0,
-    "direcao_graus": 125,
-    "direcao": "SE",
-    "max_kmh": 20.1,
-    "rajada_kmh": 38.2,
+    "velocidade_kmh": 14.3,
+    "direcao_graus": 105,
+    "direcao": "ESE",
+    "max_kmh": 23.5,
+    "rajada_kmh": 43.9,
     "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 94,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 21.2,
+  "umidade_pct": 87,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 20.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -65,7 +143,7 @@
     "casos_estimados": 0,
     "semana_epidemiologica": 202624,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-06-30T11:26:17.915135+00:00"
+    "atualizado_em": "2026-07-01T11:56:40.427918+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -76,7 +154,7 @@
     "casos_estimados": 0,
     "semana_epidemiologica": 202624,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-06-30T11:26:17.915135+00:00"
+    "atualizado_em": "2026-07-01T11:56:40.427918+00:00"
   },
-  "_clima_em": "2026-06-30T10:54:28.208115+00:00"
+  "_clima_em": "2026-07-01T11:21:11.112319+00:00"
 }

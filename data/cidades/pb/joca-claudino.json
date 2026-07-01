@@ -4,58 +4,136 @@
   "slug": "joca-claudino",
   "latitude": -6.4771,
   "longitude": -38.4809,
-  "atualizado_em": "2026-07-01T09:11:40.411374+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-01T11:21:11.112319+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-01",
+      "min": 20.0,
+      "max": 29.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.4,
+      "nascer_sol": "05:45",
+      "por_sol": "17:30"
+    },
+    {
+      "data": "2026-07-02",
+      "min": 18.4,
+      "max": 30.8,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.4,
+      "nascer_sol": "05:45",
+      "por_sol": "17:30"
+    },
+    {
+      "data": "2026-07-03",
+      "min": 19.3,
+      "max": 31.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 7.5,
+      "nascer_sol": "05:45",
+      "por_sol": "17:30"
+    },
+    {
+      "data": "2026-07-04",
+      "min": 21.3,
+      "max": 30.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.5,
+      "uv": 7.5,
+      "nascer_sol": "05:45",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-07-05",
+      "min": 21.5,
+      "max": 31.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 7.5,
+      "nascer_sol": "05:45",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-07-06",
+      "min": 20.5,
+      "max": 32.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 7.2,
+      "nascer_sol": "05:46",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-07-07",
+      "min": 21.3,
+      "max": 31.3,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "05:46",
+      "por_sol": "17:31"
+    }
+  ],
   "queimadas": {
     "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-01T10:27:09.663474+00:00"
   },
   "uv": {
-    "indice": 7.5,
+    "indice": 7.4,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 17,
+    "indice": 21,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 1.4,
-    "pm10": 1.8,
-    "no2": 1.6,
-    "o3": 39.0,
+    "pm25": 3.2,
+    "pm10": 4.6,
+    "no2": 1.1,
+    "o3": 53.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-06-28T10:25:14.331910+00:00"
+    "atualizado_em": "2026-07-01T11:21:11.112319+00:00"
   },
   "sol": {
-    "nascer": "05:44",
-    "por": "17:29",
-    "duracao_h": 11.7,
+    "nascer": "05:45",
+    "por": "17:30",
+    "duracao_h": 11.8,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 39.0,
-    "fase_pct": 43.7,
-    "dias_proxima_cheia": 2,
+    "nome": "Cheia",
+    "iluminacao_pct": 24.0,
+    "fase_pct": 53.8,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.6,
+  "temperatura_atual": 24.0,
   "vento": {
-    "velocidade_kmh": 13.7,
-    "direcao_graus": 134,
+    "velocidade_kmh": 18.5,
+    "direcao_graus": 139,
     "direcao": "SE",
-    "max_kmh": 18.2,
-    "rajada_kmh": 38.2,
+    "max_kmh": 21.6,
+    "rajada_kmh": 44.6,
     "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 85,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 20.0,
+  "umidade_pct": 66,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 17.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-06-28T10:25:14.331910+00:00"
+  "_clima_em": "2026-07-01T11:21:11.112319+00:00"
 }
