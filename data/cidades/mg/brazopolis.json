@@ -4,8 +4,86 @@
   "slug": "brazopolis",
   "latitude": -22.4912,
   "longitude": -45.6279,
-  "atualizado_em": "2026-07-03T08:11:16.092736+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-03T10:32:37.670857+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-03",
+      "min": 12.0,
+      "max": 23.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:42",
+      "por_sol": "17:30"
+    },
+    {
+      "data": "2026-07-04",
+      "min": 12.7,
+      "max": 23.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.3,
+      "nascer_sol": "06:42",
+      "por_sol": "17:30"
+    },
+    {
+      "data": "2026-07-05",
+      "min": 11.2,
+      "max": 21.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:42",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-07-06",
+      "min": 12.0,
+      "max": 22.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 5.5,
+      "nascer_sol": "06:42",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-07-07",
+      "min": 11.1,
+      "max": 22.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 5.4,
+      "nascer_sol": "06:42",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-07-08",
+      "min": 8.8,
+      "max": 21.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.3,
+      "nascer_sol": "06:42",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-07-09",
+      "min": 10.2,
+      "max": 22.6,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.3,
+      "nascer_sol": "06:42",
+      "por_sol": "17:32"
+    }
+  ],
   "reservatorio": {
     "nome": "Jaguari",
     "nivel_pct": 64.0,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-07-03T09:39:08.356589+00:00"
   },
   "uv": {
-    "indice": 5.4,
+    "indice": 5.5,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 24,
+    "indice": 23,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.3,
-    "pm10": 4.5,
-    "no2": 5.9,
-    "o3": 60.0,
+    "pm25": 10.7,
+    "pm10": 10.8,
+    "no2": 12.3,
+    "o3": 24.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-01T11:21:11.112319+00:00"
+    "atualizado_em": "2026-07-03T10:32:37.670857+00:00"
   },
   "sol": {
     "nascer": "06:42",
-    "por": "17:29",
+    "por": "17:30",
     "duracao_h": 10.8,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 24.0,
-    "fase_pct": 53.8,
-    "dias_proxima_cheia": 1,
+    "iluminacao_pct": 62.0,
+    "fase_pct": 60.6,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 16.5,
+  "temperatura_atual": 13.3,
   "vento": {
-    "velocidade_kmh": 4.4,
-    "direcao_graus": 150,
-    "direcao": "SSE",
-    "max_kmh": 4.9,
-    "rajada_kmh": 15.8,
-    "direcao_dominante": "SSE",
+    "velocidade_kmh": 3.3,
+    "direcao_graus": 189,
+    "direcao": "S",
+    "max_kmh": 4.4,
+    "rajada_kmh": 11.9,
+    "direcao_dominante": "S",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 77,
+  "umidade_pct": 63,
   "pressao_hpa": 1022,
-  "ponto_orvalho_c": 12.4,
+  "ponto_orvalho_c": 6.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-07-01T11:21:11.112319+00:00"
+  "_clima_em": "2026-07-03T10:32:37.670857+00:00"
 }

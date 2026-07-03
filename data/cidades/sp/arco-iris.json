@@ -4,23 +4,12 @@
   "slug": "arco-iris",
   "latitude": -21.7663,
   "longitude": -50.4309,
-  "atualizado_em": "2026-07-02T10:34:57.499705+00:00",
+  "atualizado_em": "2026-07-03T10:32:37.670857+00:00",
   "previsao": [
     {
-      "data": "2026-07-02",
-      "min": 16.1,
-      "max": 28.1,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
-      "chuva_mm": 0,
-      "uv": 5.3,
-      "nascer_sol": "07:00",
-      "por_sol": "17:50"
-    },
-    {
       "data": "2026-07-03",
-      "min": 14.8,
-      "max": 26.3,
+      "min": 15.0,
+      "max": 26.5,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
@@ -30,8 +19,8 @@
     },
     {
       "data": "2026-07-04",
-      "min": 16.6,
-      "max": 26.2,
+      "min": 16.0,
+      "max": 27.1,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
@@ -41,10 +30,10 @@
     },
     {
       "data": "2026-07-05",
-      "min": 15.2,
-      "max": 25.6,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "min": 15.0,
+      "max": 26.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
       "uv": 5.4,
       "nascer_sol": "07:00",
@@ -52,8 +41,8 @@
     },
     {
       "data": "2026-07-06",
-      "min": 13.7,
-      "max": 25.7,
+      "min": 13.8,
+      "max": 27.2,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
@@ -63,25 +52,36 @@
     },
     {
       "data": "2026-07-07",
-      "min": 13.5,
-      "max": 25.9,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
+      "min": 14.5,
+      "max": 26.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
       "uv": 5.2,
       "nascer_sol": "07:00",
       "por_sol": "17:52"
     },
     {
       "data": "2026-07-08",
-      "min": 16.4,
-      "max": 27.0,
+      "min": 13.1,
+      "max": 26.1,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 5.0,
+      "uv": 5.1,
       "nascer_sol": "07:00",
       "por_sol": "17:52"
+    },
+    {
+      "data": "2026-07-09",
+      "min": 13.7,
+      "max": 26.3,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.0,
+      "nascer_sol": "07:00",
+      "por_sol": "17:53"
     }
   ],
   "queimadas": {
@@ -123,22 +123,22 @@
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
   "uv": {
-    "indice": 5.3,
+    "indice": 5.2,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 31,
+    "indice": 47,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 17.6,
-    "pm10": 18.2,
-    "no2": 15.8,
-    "o3": 24.0,
+    "pm25": 28.5,
+    "pm10": 29.7,
+    "no2": 22.5,
+    "o3": 26.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-02T10:34:57.499705+00:00"
+    "atualizado_em": "2026-07-03T10:32:37.670857+00:00"
   },
   "sol": {
     "nascer": "07:00",
@@ -149,23 +149,23 @@
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 44.0,
-    "fase_pct": 57.2,
-    "dias_proxima_cheia": 2,
+    "iluminacao_pct": 62.0,
+    "fase_pct": 60.6,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 17.4,
-  "_clima_em": "2026-07-02T10:34:57.499705+00:00",
+  "temperatura_atual": 16.9,
+  "_clima_em": "2026-07-03T10:32:37.670857+00:00",
   "vento": {
-    "velocidade_kmh": 8.9,
-    "direcao_graus": 104,
+    "velocidade_kmh": 3.5,
+    "direcao_graus": 114,
     "direcao": "ESE",
-    "max_kmh": 8.9,
-    "rajada_kmh": 19.1,
-    "direcao_dominante": "E",
+    "max_kmh": 8.7,
+    "rajada_kmh": 18.0,
+    "direcao_dominante": "SSO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 89,
-  "pressao_hpa": 1021,
-  "ponto_orvalho_c": 15.5
+  "umidade_pct": 82,
+  "pressao_hpa": 1020,
+  "ponto_orvalho_c": 13.7
 }
