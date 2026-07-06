@@ -105,10 +105,21 @@ const temDados = dados && (
       <p id="clima-atualizado" class="mt-1 text-xs text-slate-500">Dados ainda não coletados para esta cidade.</p>
     )}
 
-    <!-- Resumo textual (SEO + acessibilidade): prosa indexável antes dos blocos visuais -->
-    <p class="mt-4 text-sm leading-relaxed text-slate-400">
-      {descricaoTextual(municipio, dados)}
-    </p>
+    <!-- Resumo textual (SEO + acessibilidade): prosa indexável antes dos blocos visuais.
+         <details> mantém o texto no DOM mesmo fechado, então segue indexável;
+         <summary> já expõe o estado expandido/recolhido para leitores de tela. -->
+    <details class="group mt-4">
+      <summary class="flex w-fit cursor-pointer list-none items-center gap-2 text-sm text-slate-300 hover:text-emerald-400 [&::-webkit-details-marker]:hidden">
+        <span aria-hidden="true">✨</span>
+        <span class="font-medium">Resumo de hoje em {municipio.nome}</span>
+        <svg class="h-4 w-4 text-slate-500 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.23 8.27a.75.75 0 0 1 .02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </summary>
+      <p class="mt-2 text-sm leading-relaxed text-slate-400">
+        {descricaoTextual(municipio, dados)}
+      </p>
+    </details>
   </div>
 
   {temDados ? (
