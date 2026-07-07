@@ -89,16 +89,44 @@ const temDados = dados && (
     <span class="text-foreground">{municipio.nome}</span>
   </nav>
 
-  <div class="mb-8" id="clima-root" data-lat={municipio.lat ?? ''} data-lon={municipio.lon ?? ''}>
-    <h1 class="text-2xl font-bold text-foreground">
-      {municipio.nome}
-      <span class="text-muted-foreground text-lg">/{municipio.estado.toUpperCase()}</span>
-    </h1>
-    <p id="clima-agora" class="mt-1 text-foreground/80 text-sm" hidden={dados?.temperatura_atual == null}>
-      {dados?.temperatura_atual != null ? `${dados.temperatura_atual}°C agora` : ''}
-    </p>
+  <div
+    class="mb-8"
+    id="clima-root"
+    data-lat={municipio.lat ?? ''}
+    data-lon={municipio.lon ?? ''}
+    data-uf={municipio.estado}
+    data-slug={municipio.slug}
+    data-nome={municipio.nome}
+  >
+    <div class="flex items-start justify-between gap-3">
+      <h1 class="text-2xl font-bold text-foreground">
+        {municipio.nome}
+        <span class="text-muted-foreground text-lg">/{municipio.estado.toUpperCase()}</span>
+      </h1>
+      <button
+        id="btn-compartilhar"
+        class="shrink-0 rounded-md border border-input bg-card px-3 py-1.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
+      >
+        Compartilhar
+      </button>
+    </div>
+    {dados?.temperatura_atual != null ? (
+      <p id="clima-agora" class="mt-1 text-foreground/80 text-sm" aria-live="polite">{dados.temperatura_atual}°C agora</p>
+    ) : municipio.lat != null && municipio.lon != null ? (
+      <p id="clima-agora" class="mt-1 text-foreground/80 text-sm" aria-live="polite" data-skeleton>
+        <span class="inline-block h-4 w-28 animate-pulse rounded bg-muted align-middle" aria-hidden="true"></span>
+        <span class="sr-only">Carregando temperatura atual…</span>
+      </p>
+    ) : (
+      <p id="clima-agora" class="mt-1 text-foreground/80 text-sm" aria-live="polite" hidden></p>
+    )}
     {dados?.atualizado_em ? (
-      <p id="clima-atualizado" class="mt-1 text-xs text-muted-foreground">
+      <p
+        id="clima-atualizado"
+        class="mt-1 text-xs text-muted-foreground"
+        data-ts={dados.atualizado_em}
+        title={formatarDataHora(dados.atualizado_em)}
+      >
         Atualizado em {formatarDataHora(dados.atualizado_em)}
       </p>
     ) : (
@@ -123,7 +151,7 @@ const temDados = dados && (
   </div>
 
   {temDados ? (
-    <div class="space-y-8">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 items-start">
       <BlocoPrevisao previsao={dados!.previsao} />
       <BlocoAr
         qualidade_ar={dados!.qualidade_ar}
@@ -210,6 +238,35 @@ const temDados = dados && (
 
   <script>
     import { hidratarClima } from '../../scripts/previsao-cliente';
-    hidratarClima();
+    import { salvarRecente } from '../../scripts/recentes';
+
+    function initCidade(): void {
+      const root = document.getElementById('clima-root');
+      if (!root || root.dataset.init) return; // evita rodar 2x na carga inicial
+      root.dataset.init = '1';
+      salvarRecente();
+      hidratarClima();
+    }
+
+    initCidade();
+    // Re-executa ao navegar entre cidades via ClientRouter
+    document.addEventListener('astro:page-load', initCidade);
+
+    // Compartilhar: Web Share API com fallback de copiar o link
+    document.addEventListener('click', async (e) => {
+      const btn = e.target instanceof Element ? e.target.closest<HTMLButtonElement>('#btn-compartilhar') : null;
+      if (!btn) return;
+      const compartilhavel = { title: document.title, url: window.location.href };
+      if (navigator.share) {
+        try { await navigator.share(compartilhavel); } catch { /* usuário cancelou */ }
+        return;
+      }
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        const original = btn.textContent;
+        btn.textContent = 'Link copiado!';
+        setTimeout(() => { btn.textContent = original; }, 2000);
+      } catch { /* clipboard indisponível */ }
+    });
   </script>
 </PainelLayout>
