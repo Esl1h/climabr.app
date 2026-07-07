@@ -4,30 +4,108 @@
   "slug": "peixe-boi",
   "latitude": -1.1307,
   "longitude": -47.272,
-  "atualizado_em": "2026-07-07T08:40:15.338445+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-07T10:52:16.596749+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-07",
+      "min": 22.9,
+      "max": 32.1,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 1.9,
+      "uv": 7.9,
+      "nascer_sol": "06:12",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-07-08",
+      "min": 22.6,
+      "max": 31.1,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 4.6,
+      "uv": 7.9,
+      "nascer_sol": "06:12",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-07-09",
+      "min": 23.1,
+      "max": 31.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.3,
+      "uv": 4.1,
+      "nascer_sol": "06:12",
+      "por_sol": "18:16"
+    },
+    {
+      "data": "2026-07-10",
+      "min": 23.2,
+      "max": 30.6,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 2.5,
+      "uv": 7.8,
+      "nascer_sol": "06:12",
+      "por_sol": "18:16"
+    },
+    {
+      "data": "2026-07-11",
+      "min": 22.5,
+      "max": 31.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 7.1,
+      "nascer_sol": "06:12",
+      "por_sol": "18:16"
+    },
+    {
+      "data": "2026-07-12",
+      "min": 22.8,
+      "max": 30.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.7,
+      "uv": 7.5,
+      "nascer_sol": "06:13",
+      "por_sol": "18:16"
+    },
+    {
+      "data": "2026-07-13",
+      "min": 23.3,
+      "max": 31.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 6.8,
+      "nascer_sol": "06:13",
+      "por_sol": "18:16"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-07T10:04:37.032932+00:00"
   },
   "uv": {
-    "indice": 7.4,
+    "indice": 7.9,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 14,
+    "indice": 26,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 2.9,
-    "pm10": 3.6,
-    "no2": 2.7,
-    "o3": 32.0,
+    "pm25": 6.9,
+    "pm10": 9.8,
+    "no2": 4.1,
+    "o3": 43.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-05T10:09:04.364089+00:00"
+    "atualizado_em": "2026-07-07T10:52:16.596749+00:00"
   },
   "sol": {
     "nascer": "06:12",
@@ -38,24 +116,24 @@
   },
   "lua": {
     "nome": "Gibosa Minguante",
-    "iluminacao_pct": 89.0,
-    "fase_pct": 67.4,
-    "dias_proxima_cheia": 5,
+    "iluminacao_pct": 100.0,
+    "fase_pct": 74.2,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.9,
+  "temperatura_atual": 25.8,
   "vento": {
-    "velocidade_kmh": 6.9,
-    "direcao_graus": 110,
-    "direcao": "ESE",
-    "max_kmh": 16.3,
-    "rajada_kmh": 40.3,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 4.0,
+    "direcao_graus": 93,
+    "direcao": "E",
+    "max_kmh": 14.5,
+    "rajada_kmh": 28.1,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 95,
-  "pressao_hpa": 1013,
-  "ponto_orvalho_c": 23.1,
+  "umidade_pct": 94,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 24.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-07-05T10:09:04.364089+00:00"
+  "_clima_em": "2026-07-07T10:52:16.596749+00:00"
 }
