@@ -1,0 +1,139 @@
+---
+import PainelLayout from '../layouts/PainelLayout.astro';
+import {
+  lerTodas,
+  corAqiTexto,
+  corReservatorioTexto,
+  corFocosTexto,
+  corDengueTexto,
+} from '../lib/destaques';
+
+const todas = await lerTodas();
+
+const pioresAr = todas
+  .filter((c) => c.aqi != null)
+  .sort((a, b) => (b.aqi ?? 0) - (a.aqi ?? 0))
+  .slice(0, 15);
+
+const reservatoriosBaixos = todas
+  .filter((c) => c.reservatorioPct != null && !c.reservatorioAproximado)
+  .sort((a, b) => (a.reservatorioPct ?? 0) - (b.reservatorioPct ?? 0))
+  .slice(0, 15);
+
+const maisFocos = todas
+  .filter((c) => (c.focos ?? 0) > 0)
+  .sort((a, b) => (b.focos ?? 0) - (a.focos ?? 0))
+  .slice(0, 15);
+
+const dengueAlerta = todas
+  .filter((c) => (c.dengueNivel ?? 0) >= 2)
+  .sort((a, b) => (b.dengueCasos ?? 0) - (a.dengueCasos ?? 0))
+  .slice(0, 15);
+
+const totalDengueAlerta = todas.filter((c) => (c.dengueNivel ?? 0) >= 2).length;
+const totalFocos = todas.reduce((soma, c) => soma + (c.focos ?? 0), 0);
+
+const geradoEm = new Date().toLocaleString('pt-BR', {
+  day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit',
+  timeZone: 'America/Sao_Paulo',
+});
+
+const descricao = 'Rankings ambientais do Brasil: pior qualidade do ar, reservatórios mais baixos, ' +
+  'focos de queimada e alertas de dengue por município, atualizados 2x ao dia.';
+---
+
+<PainelLayout title="Rankings ambientais do Brasil — ClimaBR.app" description={descricao}>
+  <nav class="mb-6 text-sm text-muted-foreground" aria-label="Navegação">
+    <a href="/" class="hover:text-foreground/80">ClimaBR.app</a>
+    <span class="mx-2">/</span>
+    <span class="text-foreground">Rankings</span>
+  </nav>
+
+  <div class="mb-8">
+    <h1 class="text-2xl font-bold text-foreground">Rankings ambientais</h1>
+    <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+      Os municípios em situação mais crítica em cada indicador, calculados sobre os
+      {todas.length.toLocaleString('pt-BR')} municípios monitorados. Gerado em {geradoEm}, atualiza 2x ao dia.
+    </p>
+  </div>
+
+  <div class="space-y-8">
+    <section aria-label="Pior qualidade do ar">
+      <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
+        <span aria-hidden="true">💨</span> Pior qualidade do ar
+      </h2>
+      <ol class="rounded-lg border border-border bg-card divide-y divide-border">
+        {pioresAr.map((c, i) => (
+          <li>
+            <a href={`/${c.uf}/${c.slug}`} class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-accent transition-colors">
+              <span class="w-6 shrink-0 text-right tabular-nums text-muted-foreground">{i + 1}.</span>
+              <span class="flex-1 truncate text-foreground/80">{c.nome}/{c.uf.toUpperCase()}</span>
+              <span class="shrink-0 text-xs text-muted-foreground">{c.aqiCategoria}</span>
+              <span class={`w-20 shrink-0 text-right font-semibold tabular-nums ${corAqiTexto(c.aqi!)}`}>AQI {c.aqi}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section aria-label="Reservatórios mais baixos">
+      <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
+        <span aria-hidden="true">🌊</span> Reservatórios mais baixos
+      </h2>
+      <ol class="rounded-lg border border-border bg-card divide-y divide-border">
+        {reservatoriosBaixos.map((c, i) => (
+          <li>
+            <a href={`/${c.uf}/${c.slug}`} class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-accent transition-colors">
+              <span class="w-6 shrink-0 text-right tabular-nums text-muted-foreground">{i + 1}.</span>
+              <span class="flex-1 truncate text-foreground/80">{c.nome}/{c.uf.toUpperCase()}</span>
+              <span class="shrink-0 truncate max-w-40 text-xs text-muted-foreground">{c.reservatorioNome}</span>
+              <span class={`w-16 shrink-0 text-right font-semibold tabular-nums ${corReservatorioTexto(c.reservatorioPct!)}`}>{c.reservatorioPct!.toFixed(1)}%</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section aria-label="Mais focos de queimada">
+      <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
+        <span aria-hidden="true">🔥</span> Mais focos de queimada
+        <span class="text-xs font-normal text-muted-foreground">({totalFocos.toLocaleString('pt-BR')} focos no país, raio de 100km por cidade)</span>
+      </h2>
+      <ol class="rounded-lg border border-border bg-card divide-y divide-border">
+        {maisFocos.map((c, i) => (
+          <li>
+            <a href={`/${c.uf}/${c.slug}`} class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-accent transition-colors">
+              <span class="w-6 shrink-0 text-right tabular-nums text-muted-foreground">{i + 1}.</span>
+              <span class="flex-1 truncate text-foreground/80">{c.nome}/{c.uf.toUpperCase()}</span>
+              <span class={`w-24 shrink-0 text-right font-semibold tabular-nums ${corFocosTexto(c.focos!)}`}>{c.focos} focos</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section aria-label="Dengue em alerta">
+      <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
+        <span aria-hidden="true">🦟</span> Dengue em alerta
+        <span class="text-xs font-normal text-muted-foreground">({totalDengueAlerta.toLocaleString('pt-BR')} municípios em nível de alerta ou acima)</span>
+      </h2>
+      <ol class="rounded-lg border border-border bg-card divide-y divide-border">
+        {dengueAlerta.map((c, i) => (
+          <li>
+            <a href={`/${c.uf}/${c.slug}`} class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-accent transition-colors">
+              <span class="w-6 shrink-0 text-right tabular-nums text-muted-foreground">{i + 1}.</span>
+              <span class="flex-1 truncate text-foreground/80">{c.nome}/{c.uf.toUpperCase()}</span>
+              <span class="shrink-0 text-xs text-muted-foreground tabular-nums">{(c.dengueCasos ?? 0).toLocaleString('pt-BR')} casos/sem</span>
+              <span class={`w-24 shrink-0 text-right font-semibold ${corDengueTexto(c.dengueNivel!)}`}>{c.dengueLabel ?? `Nível ${c.dengueNivel}`}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+  </div>
+
+  <p class="mt-8 text-xs text-muted-foreground">
+    Fontes: Open-Meteo/Copernicus (ar), SABESP/COPASA/ANA (reservatórios), NASA FIRMS (queimadas),
+    InfoDengue/Fiocruz (dengue). Reservatórios aproximados (bacias distantes) ficam fora do ranking.
+  </p>
+</PainelLayout>
