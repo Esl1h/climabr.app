@@ -1,0 +1,42 @@
+---
+import PainelLayout from '../layouts/PainelLayout.astro';
+---
+
+<PainelLayout title="Página não encontrada — ClimaBR.app" description="Página não encontrada. Busque sua cidade no ClimaBR.app.">
+  <div class="mx-auto max-w-xl space-y-8 text-center">
+    <div class="space-y-2">
+      <p class="text-6xl" aria-hidden="true">🛰️</p>
+      <h1 class="text-2xl font-bold text-foreground">Página não encontrada</h1>
+      <p class="text-sm text-muted-foreground">
+        O endereço pode ter mudado ou o nome da cidade está com outra grafia.
+        Busque abaixo pelos 5.571 municípios monitorados.
+      </p>
+    </div>
+
+    <div class="relative text-left">
+      <label for="busca-404" class="sr-only">Buscar cidade</label>
+      <input
+        id="busca-404"
+        data-busca-cidade
+        type="search"
+        placeholder="Digite sua cidade..."
+        autocomplete="off"
+        role="combobox"
+        aria-expanded="false"
+        aria-controls="busca-404-lista"
+        aria-autocomplete="list"
+        class="w-full rounded-lg border border-input bg-card px-4 py-3 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+      />
+      <ul
+        id="busca-404-lista"
+        role="listbox"
+        aria-label="Resultados da busca"
+        class="hidden absolute left-0 right-0 top-14 max-h-80 overflow-y-auto bg-popover border border-border rounded-lg shadow-xl z-50 py-1"
+      ></ul>
+    </div>
+
+    <p class="text-sm">
+      <a href="/" class="text-primary hover:underline">← Voltar ao início</a>
+    </p>
+  </div>
+</PainelLayout>
