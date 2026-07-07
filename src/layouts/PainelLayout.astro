@@ -8,6 +8,8 @@ interface Props {
   estado?: string;
   slug?: string;
   ogImage?: string;
+  /** Páginas com estética própria sempre escura (ex.: /curl) ignoram o toggle de tema */
+  forceDark?: boolean;
 }
 
 const {
@@ -17,6 +19,7 @@ const {
   estado,
   slug,
   ogImage,
+  forceDark = false,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, 'https://climabr.app').href;
@@ -29,7 +32,7 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
 ---
 
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class={forceDark ? 'dark' : undefined}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -66,82 +69,110 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
     <meta name="theme-color" content="#040f0d" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
+    <!-- Tema claro/escuro: precisa rodar antes do primeiro paint (anti-flash).
+         localStorage vence; sem preferência salva, segue o sistema. -->
+    {!forceDark && (
+      <script is:inline>
+        (() => {
+          let salvo = null;
+          try { salvo = localStorage.getItem('climabr_tema'); } catch { /* ignora */ }
+          const escuro = salvo ? salvo === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.classList.toggle('dark', escuro);
+          document.querySelector('meta[name="theme-color"]')?.setAttribute('content', escuro ? '#040f0d' : '#f6f9f8');
+        })();
+      </script>
+    )}
+
     <!-- Cloudflare Web Analytics (RUM) — injeção manual: a automática não é
          confiável atrás do Worker. CSP libera static.cloudflareinsights.com -->
     <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a4a1961d5b3e41ef9e82244c25e866a3"}'></script>
   </head>
-  <body class="min-h-screen bg-[#040f0d] text-slate-100 antialiased">
-    <header class="border-b border-slate-800 px-4 py-3">
+  <body class="min-h-screen bg-background text-foreground antialiased">
+    <header class="border-b border-border px-4 py-3">
       <div class="flex items-center justify-between max-w-3xl mx-auto">
         <!-- Logo -->
         <a href="/" class="text-lg font-bold tracking-tight hover:opacity-80 transition-opacity">
           <span aria-hidden="true" class="not-italic mr-1">🛰️</span><span class="italic text-emerald-700">Clima</span><span class="italic text-blue-600">BR</span><span class="text-yellow-500">.app</span>
         </a>
 
-        <!-- Menu hamburguer -->
-        <div class="relative" id="menu-wrapper">
-          <button
-            id="menu-btn"
-            aria-label="Menu"
-            aria-expanded="false"
-            class="flex flex-col justify-center gap-1.5 w-8 h-8 p-1 rounded hover:bg-slate-800 transition-colors"
-          >
-            <span class="block h-0.5 w-full bg-slate-400 transition-all" id="bar1"></span>
-            <span class="block h-0.5 w-full bg-slate-400 transition-all" id="bar2"></span>
-            <span class="block h-0.5 w-full bg-slate-400 transition-all" id="bar3"></span>
-          </button>
+        <div class="flex items-center gap-1">
+          <!-- Toggle claro/escuro -->
+          {!forceDark && (
+            <button
+              id="tema-btn"
+              aria-label="Alternar tema claro/escuro"
+              class="w-8 h-8 rounded hover:bg-accent transition-colors text-base leading-none"
+            >
+              <span class="dark:hidden" aria-hidden="true">🌙</span>
+              <span class="hidden dark:inline" aria-hidden="true">☀️</span>
+            </button>
+          )}
 
-          <nav
-            id="menu-dropdown"
-            class="hidden absolute right-0 top-10 w-48 bg-slate-900 border border-slate-700 rounded-lg shadow-xl z-50 py-1"
-            role="menu"
-          >
-            <a
-              id="menu-telao"
-              href="#"
-              class="hidden items-center gap-2 px-4 py-2.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
-              role="menuitem"
+          <!-- Menu hamburguer -->
+          <div class="relative" id="menu-wrapper">
+            <button
+              id="menu-btn"
+              aria-label="Menu"
+              aria-expanded="false"
+              class="flex flex-col justify-center gap-1.5 w-8 h-8 p-1 rounded hover:bg-accent transition-colors"
             >
-              <span class="text-emerald-400 text-xs">📺</span>
-              Modo Painel
-            </a>
-            <a
-              id="menu-mobile"
-              href="#"
-              class="hidden items-center gap-2 px-4 py-2.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
-              role="menuitem"
+              <span class="block h-0.5 w-full bg-muted-foreground transition-all" id="bar1"></span>
+              <span class="block h-0.5 w-full bg-muted-foreground transition-all" id="bar2"></span>
+              <span class="block h-0.5 w-full bg-muted-foreground transition-all" id="bar3"></span>
+            </button>
+
+            <nav
+              id="menu-dropdown"
+              class="hidden absolute right-0 top-10 w-48 bg-popover border border-border rounded-lg shadow-xl z-50 py-1"
+              role="menu"
             >
-              <span class="text-emerald-400 text-xs">📱</span>
-              Modo Mobile
-            </a>
-            <a
-              href="/curl"
-              class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
-              role="menuitem"
-            >
-              <span class="font-mono text-emerald-400 text-xs bg-slate-800 px-1.5 py-0.5 rounded">$</span>
-              cUrl
-            </a>
-            <div class="border-t border-slate-800 my-1"></div>
-            <a
-              href="/llms.txt"
-              class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
-              role="menuitem"
-              target="_blank"
-            >
-              <span class="text-slate-500 text-xs">AI</span>
-              llms.txt
-            </a>
-            <a
-              href="/.well-known/mcp.json"
-              class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
-              role="menuitem"
-              target="_blank"
-            >
-              <span class="text-slate-500 text-xs">MCP</span>
-              mcp.json
-            </a>
-          </nav>
+              <a
+                id="menu-telao"
+                href="#"
+                class="hidden items-center gap-2 px-4 py-2.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
+                role="menuitem"
+              >
+                <span class="text-primary text-xs">📺</span>
+                Modo Painel
+              </a>
+              <a
+                id="menu-mobile"
+                href="#"
+                class="hidden items-center gap-2 px-4 py-2.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
+                role="menuitem"
+              >
+                <span class="text-primary text-xs">📱</span>
+                Modo Mobile
+              </a>
+              <a
+                href="/curl"
+                class="flex items-center gap-2 px-4 py-2.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
+                role="menuitem"
+              >
+                <span class="font-mono text-primary text-xs bg-muted px-1.5 py-0.5 rounded">$</span>
+                cUrl
+              </a>
+              <div class="border-t border-border my-1"></div>
+              <a
+                href="/llms.txt"
+                class="flex items-center gap-2 px-4 py-2.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
+                role="menuitem"
+                target="_blank"
+              >
+                <span class="text-muted-foreground text-xs">AI</span>
+                llms.txt
+              </a>
+              <a
+                href="/.well-known/mcp.json"
+                class="flex items-center gap-2 px-4 py-2.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
+                role="menuitem"
+                target="_blank"
+              >
+                <span class="text-muted-foreground text-xs">MCP</span>
+                mcp.json
+              </a>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
@@ -150,12 +181,19 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
       <slot />
     </main>
 
-    <footer class="mt-16 border-t border-slate-800 px-4 py-6 text-center text-xs text-slate-400">
+    <footer class="mt-16 border-t border-border px-4 py-6 text-center text-xs text-muted-foreground">
       Dados de fontes públicas: INMET, ANA, INPE, CETESB, SVS/MS, ANEEL &nbsp;·&nbsp;
-      <a href="/llms.txt" class="underline hover:text-slate-300">llms.txt</a>
+      <a href="/llms.txt" class="underline hover:text-foreground">llms.txt</a>
     </footer>
 
     <script>
+      // Toggle de tema: persiste em localStorage e sincroniza o meta theme-color
+      document.getElementById('tema-btn')?.addEventListener('click', () => {
+        const escuro = document.documentElement.classList.toggle('dark');
+        try { localStorage.setItem('climabr_tema', escuro ? 'dark' : 'light'); } catch { /* ignora */ }
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', escuro ? '#040f0d' : '#f6f9f8');
+      });
+
       const btn = document.getElementById('menu-btn');
       const dropdown = document.getElementById('menu-dropdown');
       const bar1 = document.getElementById('bar1');
