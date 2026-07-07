@@ -63,7 +63,7 @@ const altura = ondas?.altura_m ?? ondas?.altura_max_m;
         <div>
           <p class="text-xs text-muted-foreground mb-1">Altura atual</p>
           {altura != null ? (
-            <p class={`text-2xl font-bold ${corAltura(altura)}`}>
+            <p class={`text-2xl font-bold tabular-nums ${corAltura(altura)}`}>
               {altura.toFixed(1)}<span class="text-sm font-normal"> m</span>
             </p>
           ) : (
@@ -78,7 +78,7 @@ const altura = ondas?.altura_m ?? ondas?.altura_max_m;
         <div>
           <p class="text-xs text-muted-foreground mb-1">Período</p>
           {ondas.periodo_s != null ? (
-            <p class="text-2xl font-bold text-foreground">
+            <p class="text-2xl font-bold tabular-nums text-foreground">
               {ondas.periodo_s.toFixed(0)}<span class="text-sm font-normal"> s</span>
             </p>
           ) : (

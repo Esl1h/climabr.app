@@ -25,7 +25,7 @@ const titulo = aproximado ? 'Reservatório próximo' : 'Reservatório';
       <div class="flex items-center justify-between">
         <div>
           <p class="text-sm text-muted-foreground">{reservatorio.nome}</p>
-          <p class={`text-3xl font-bold ${corNivel(reservatorio.nivel_pct)}`}>
+          <p class={`text-3xl font-bold tabular-nums ${corNivel(reservatorio.nivel_pct)}`}>
             {reservatorio.nivel_pct.toFixed(1)}%
           </p>
           {reservatorio.distancia_km && (
@@ -51,10 +51,10 @@ const titulo = aproximado ? 'Reservatório próximo' : 'Reservatório';
         <div
           class={`h-full rounded-full transition-all ${
             reservatorio.nivel_pct >= 70
-              ? 'bg-status-bom'
+              ? 'bg-status-bom dark:bg-status-bom/80'
               : reservatorio.nivel_pct >= 40
-              ? 'bg-status-moderado'
-              : 'bg-status-pessimo'
+              ? 'bg-status-moderado dark:bg-status-moderado/80'
+              : 'bg-status-pessimo dark:bg-status-pessimo/80'
           }`}
           style={`width: ${Math.min(100, reservatorio.nivel_pct)}%`}
           role="progressbar"

@@ -38,7 +38,7 @@ const temAlerta = nivelMax >= 1;
         <div class="flex items-center justify-between">
           <div>
             <p class="text-sm font-medium text-foreground/80">{label}</p>
-            <p class={`text-lg font-bold ${CORES[dados.nivel_alerta ?? 0]}`}>
+            <p class={`text-lg font-bold tabular-nums ${CORES[dados.nivel_alerta ?? 0]}`}>
               {ICONS[dados.nivel_alerta ?? 0]} {LABELS[dados.nivel_alerta ?? 0]}
             </p>
           </div>

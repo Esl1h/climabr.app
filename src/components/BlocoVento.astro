@@ -46,7 +46,7 @@ const vel = vento?.velocidade_kmh ?? vento?.max_kmh;
       <div class="flex items-center justify-between">
         <div>
           <p class="text-sm text-muted-foreground">{labelVento(vel)}</p>
-          <p class={`text-3xl font-bold ${corVento(vel)}`}>
+          <p class={`text-3xl font-bold tabular-nums ${corVento(vel)}`}>
             {vel} <span class="text-lg">km/h</span>
           </p>
           {vento.direcao && vento.direcao_graus != null && (

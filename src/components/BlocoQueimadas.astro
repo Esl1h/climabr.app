@@ -22,7 +22,7 @@ function nivelRisco(focos: number): { label: string; cor: string } {
     <div class="rounded-lg border border-border bg-card p-4">
       <div class="flex items-center justify-between">
         <div>
-          <p class={`text-3xl font-bold ${nivelRisco(queimadas.focos_100km).cor}`}>
+          <p class={`text-3xl font-bold tabular-nums ${nivelRisco(queimadas.focos_100km).cor}`}>
             {queimadas.focos_100km}
           </p>
           <p class="text-sm text-muted-foreground">focos num raio de 100km</p>

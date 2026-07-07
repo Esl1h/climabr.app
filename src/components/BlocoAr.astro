@@ -18,18 +18,18 @@ function corAqi(indice: number): string {
 }
 
 function barraAqi(indice: number): string {
-  if (indice <= 50) return 'bg-status-bom';
-  if (indice <= 100) return 'bg-status-moderado';
-  if (indice <= 150) return 'bg-status-ruim';
-  if (indice <= 200) return 'bg-status-pessimo';
-  return 'bg-status-critico';
+  if (indice <= 50) return 'bg-status-bom dark:bg-status-bom/80';
+  if (indice <= 100) return 'bg-status-moderado dark:bg-status-moderado/80';
+  if (indice <= 150) return 'bg-status-ruim dark:bg-status-ruim/80';
+  if (indice <= 200) return 'bg-status-pessimo dark:bg-status-pessimo/80';
+  return 'bg-status-critico dark:bg-status-critico/80';
 }
 
 const pct = qualidade_ar ? Math.min(100, Math.round((qualidade_ar.indice / 300) * 100)) : 0;
 ---
 
 {qualidade_ar && (
-  <section aria-label="Qualidade do ar">
+  <section aria-label="Qualidade do ar" class="sm:col-span-2">
     <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
       <span aria-hidden="true">💨</span> Qualidade do Ar
     </h2>
@@ -37,7 +37,7 @@ const pct = qualidade_ar ? Math.min(100, Math.round((qualidade_ar.indice / 300) 
       <div class="flex items-center justify-between">
         <div>
           <p class="text-sm text-muted-foreground" data-ar-categoria>{qualidade_ar.categoria}</p>
-          <p class={`text-3xl font-bold ${corAqi(qualidade_ar.indice)}`} data-ar-indice>
+          <p class={`text-3xl font-bold tabular-nums ${corAqi(qualidade_ar.indice)}`} data-ar-indice>
             AQI {qualidade_ar.indice}
           </p>
           <p class="text-xs text-muted-foreground mt-1">
