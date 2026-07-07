@@ -1,134 +1,254 @@
 ---
 import PainelLayout from '../layouts/PainelLayout.astro';
-import municipiosRaw from '../../data/municipios.json';
+import {
+  lerTodas,
+  capitaisAgora,
+  corAqiTexto,
+  corReservatorioTexto,
+  corFocosTexto,
+  corDengueTexto,
+} from '../lib/destaques';
 
-type Municipio = { id: number; nome: string; slug: string; estado: string; estado_nome: string };
-const municipios = municipiosRaw as Municipio[];
+const capitais = await capitaisAgora();
+const todas = await lerTodas();
 
-const porEstado = municipios.reduce<Record<string, { nome: string; cidades: Municipio[] }>>(
-  (acc, m) => {
-    if (!acc[m.estado]) acc[m.estado] = { nome: m.estado_nome, cidades: [] };
-    acc[m.estado].cidades.push(m);
-    return acc;
-  },
-  {}
-);
+// Destaques nacionais (gerados no build, 2x/dia)
+const reservatoriosBaixos = todas
+  .filter((c) => c.reservatorioPct != null && c.reservatorioPct < 50 && !c.reservatorioAproximado)
+  .sort((a, b) => (a.reservatorioPct ?? 0) - (b.reservatorioPct ?? 0))
+  .slice(0, 5);
 
-const estados = Object.entries(porEstado).sort((a, b) => a[1].nome.localeCompare(b[1].nome));
+const maisFocos = todas
+  .filter((c) => (c.focos ?? 0) > 0)
+  .sort((a, b) => (b.focos ?? 0) - (a.focos ?? 0))
+  .slice(0, 5);
+
+const dengueAlerta = todas
+  .filter((c) => (c.dengueNivel ?? 0) >= 2)
+  .sort((a, b) => (b.dengueCasos ?? 0) - (a.dengueCasos ?? 0))
+  .slice(0, 5);
+
+const totalDengueAlerta = todas.filter((c) => (c.dengueNivel ?? 0) >= 2).length;
+
+const geradoEm = new Date().toLocaleString('pt-BR', {
+  day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit',
+  timeZone: 'America/Sao_Paulo',
+});
 ---
 
 <PainelLayout title="climabr.app — Painel Ambiental Brasileiro">
-  <div class="space-y-8">
-    <div class="text-center space-y-2">
-      <h1 class="text-3xl font-bold">
-        <span class="italic text-emerald-700">Clima</span><span class="italic text-blue-600">BR</span><span class="text-yellow-500">.app</span>
-      </h1>
-      <p class="text-muted-foreground">Painel ambiental por cidade — qualidade do ar, água, clima e alertas</p>
-    </div>
-
-    <form id="seletor" class="space-y-4" action="" method="get">
-      <div class="space-y-2">
-        <label for="estado" class="block text-sm font-medium text-foreground/80">Estado</label>
-        <select
-          id="estado"
-          name="estado"
-          class="w-full rounded-md border border-input bg-card px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-        >
-          <option value="">Selecione o estado...</option>
-          {estados.map(([uf, { nome }]) => (
-            <option value={uf}>{nome} ({uf.toUpperCase()})</option>
-          ))}
-        </select>
+  <div class="space-y-10">
+    <div class="mx-auto max-w-xl space-y-8">
+      <div class="text-center space-y-2">
+        <h1 class="text-3xl font-bold">
+          <span class="italic text-emerald-700 dark:text-emerald-500">Clima</span><span class="italic text-blue-600 dark:text-blue-500">BR</span><span class="text-yellow-600 dark:text-yellow-500">.app</span>
+        </h1>
+        <p class="text-muted-foreground">Painel ambiental por cidade — qualidade do ar, água, clima e alertas</p>
       </div>
 
-      <div class="space-y-2">
-        <label for="cidade" class="block text-sm font-medium text-foreground/80">Cidade</label>
-        <select
-          id="cidade"
-          name="cidade"
-          disabled
-          class="w-full rounded-md border border-input bg-card px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-40"
-        >
-          <option value="">Selecione a cidade...</option>
-        </select>
+      <div class="relative">
+        <label for="busca-home" class="sr-only">Buscar cidade</label>
+        <input
+          id="busca-home"
+          data-busca-cidade
+          type="search"
+          placeholder="Digite sua cidade..."
+          autocomplete="off"
+          role="combobox"
+          aria-expanded="false"
+          aria-controls="busca-home-lista"
+          aria-autocomplete="list"
+          class="w-full rounded-lg border border-input bg-card px-4 py-3 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+        />
+        <ul
+          id="busca-home-lista"
+          role="listbox"
+          aria-label="Resultados da busca"
+          class="hidden absolute left-0 right-0 top-14 max-h-80 overflow-y-auto bg-popover border border-border rounded-lg shadow-xl z-50 py-1"
+        ></ul>
       </div>
 
       <button
-        type="submit"
-        id="btn-ir"
-        disabled
-        class="w-full rounded-md bg-primary px-4 py-2 font-semibold text-primary-foreground hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+        id="btn-geo"
+        class="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
       >
-        Ver painel
+        📍 Usar minha localização
       </button>
-    </form>
+
+      <div id="recentes" class="hidden space-y-2">
+        <p class="text-xs text-muted-foreground uppercase tracking-wide">Recentes</p>
+        <div id="recentes-chips" class="flex flex-wrap gap-2"></div>
+      </div>
+    </div>
+
+    <!-- Capitais agora: gerado no build a partir dos dados coletados -->
+    <section aria-label="Capitais agora">
+      <h2 class="mb-3 text-base font-semibold text-foreground">Capitais agora</h2>
+      <div class="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5">
+        {capitais.map((c) => (
+          <a
+            href={`/${c.uf}/${c.slug}`}
+            class="rounded-lg border border-border bg-card px-2.5 py-2 hover:bg-accent transition-colors"
+          >
+            <p class="truncate text-xs font-medium text-foreground/80">{c.nome}</p>
+            <p class="mt-0.5 flex items-baseline gap-2">
+              <span class="text-sm font-bold tabular-nums text-foreground">{c.temperatura != null ? `${Math.round(c.temperatura)}°` : '—'}</span>
+              {c.aqi != null && (
+                <span class={`text-xs font-semibold tabular-nums ${corAqiTexto(c.aqi)}`} title={`Qualidade do ar: ${c.aqiCategoria ?? ''}`}>
+                  AQI {c.aqi}
+                </span>
+              )}
+            </p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Destaques nacionais -->
+    <section aria-label="Destaques nacionais">
+      <div class="mb-3 flex items-baseline justify-between">
+        <h2 class="text-base font-semibold text-foreground">Brasil agora</h2>
+        <a href="/rankings" class="text-sm text-primary hover:underline">Rankings completos →</a>
+      </div>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {reservatoriosBaixos.length > 0 && (
+          <div class="rounded-lg border border-border bg-card p-4">
+            <h3 class="mb-2 text-sm font-semibold text-foreground"><span aria-hidden="true">🌊</span> Reservatórios em atenção</h3>
+            <ul class="space-y-1.5">
+              {reservatoriosBaixos.map((c) => (
+                <li>
+                  <a href={`/${c.uf}/${c.slug}`} class="flex items-center justify-between gap-2 text-sm hover:text-primary transition-colors">
+                    <span class="truncate text-foreground/80">{c.nome}/{c.uf.toUpperCase()}</span>
+                    <span class={`shrink-0 font-semibold tabular-nums ${corReservatorioTexto(c.reservatorioPct!)}`}>{c.reservatorioPct!.toFixed(1)}%</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {maisFocos.length > 0 && (
+          <div class="rounded-lg border border-border bg-card p-4">
+            <h3 class="mb-2 text-sm font-semibold text-foreground"><span aria-hidden="true">🔥</span> Mais focos de queimada</h3>
+            <ul class="space-y-1.5">
+              {maisFocos.map((c) => (
+                <li>
+                  <a href={`/${c.uf}/${c.slug}`} class="flex items-center justify-between gap-2 text-sm hover:text-primary transition-colors">
+                    <span class="truncate text-foreground/80">{c.nome}/{c.uf.toUpperCase()}</span>
+                    <span class={`shrink-0 font-semibold tabular-nums ${corFocosTexto(c.focos!)}`}>{c.focos} focos</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {dengueAlerta.length > 0 && (
+          <div class="rounded-lg border border-border bg-card p-4">
+            <h3 class="mb-2 text-sm font-semibold text-foreground"><span aria-hidden="true">🦟</span> Dengue em alerta</h3>
+            <ul class="space-y-1.5">
+              {dengueAlerta.map((c) => (
+                <li>
+                  <a href={`/${c.uf}/${c.slug}`} class="flex items-center justify-between gap-2 text-sm hover:text-primary transition-colors">
+                    <span class="truncate text-foreground/80">{c.nome}/{c.uf.toUpperCase()}</span>
+                    <span class={`shrink-0 font-semibold ${corDengueTexto(c.dengueNivel!)}`}>{c.dengueLabel ?? `Nível ${c.dengueNivel}`}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            {totalDengueAlerta > 5 && (
+              <p class="mt-2 text-xs text-muted-foreground">e mais {totalDengueAlerta - 5} municípios em alerta</p>
+            )}
+          </div>
+        )}
+      </div>
+      <p class="mt-2 text-xs text-muted-foreground">Gerado em {geradoEm} · atualiza 2x ao dia</p>
+    </section>
 
     <p class="text-center text-xs text-muted-foreground">
-      Sua cidade é salva localmente — sem conta, sem rastreamento.
+      Sua cidade fica salva localmente, sem conta e sem rastreamento.
     </p>
   </div>
 </PainelLayout>
 
-<script define:vars={{ estados }}>
-  const municipiosPorEstado = Object.fromEntries(
-    estados.map(([uf, { cidades }]) => [uf, cidades])
-  );
+<script>
+  import { carregarIndice, maisProxima } from '../scripts/busca-cidades';
 
-  const selectEstado = document.getElementById('estado');
-  const selectCidade = document.getElementById('cidade');
-  const btnIr = document.getElementById('btn-ir');
-  const form = document.getElementById('seletor');
+  // Chips de cidades visitadas recentemente (gravadas pela página de cidade)
+  function renderizarRecentes(): void {
+    const wrap = document.getElementById('recentes');
+    const chips = document.getElementById('recentes-chips');
+    if (!wrap || !chips) return;
+    let recentes: { uf: string; slug: string; nome: string }[] = [];
+    try { recentes = JSON.parse(localStorage.getItem('climabr_recentes') ?? '[]'); } catch { /* ignora */ }
+    if (!Array.isArray(recentes) || recentes.length === 0) return;
+    chips.innerHTML = '';
+    for (const r of recentes.slice(0, 5)) {
+      if (!r?.uf || !r?.slug || !r?.nome) continue;
+      const a = document.createElement('a');
+      a.href = `/${r.uf}/${r.slug}`;
+      a.className = 'rounded-full border border-input bg-card px-3 py-1.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors';
+      a.textContent = `${r.nome}/${r.uf.toUpperCase()}`;
+      chips.appendChild(a);
+    }
+    wrap.classList.toggle('hidden', chips.children.length === 0);
+  }
 
-  function popularCidades(uf) {
-    selectCidade.innerHTML = '<option value="">Selecione a cidade...</option>';
-    if (!uf) {
-      selectCidade.disabled = true;
-      btnIr.disabled = true;
+  // Placeholder com exemplos rotativos; para na primeira interação
+  const EXEMPLOS = ['Cotia', 'Manaus', 'Pelotas', 'Petrolina', 'Sinop', 'Ilhéus'];
+  let rotacao: ReturnType<typeof setInterval> | null = null;
+
+  function initBuscaHome(): void {
+    const input = document.getElementById('busca-home') as HTMLInputElement | null;
+    if (!input || input.dataset.init) return;
+    input.dataset.init = '1';
+
+    // Autofoco só em telas largas (no celular abriria o teclado sem pedir)
+    if (matchMedia('(min-width: 640px)').matches) input.focus();
+
+    let i = 0;
+    if (rotacao) clearInterval(rotacao);
+    rotacao = setInterval(() => {
+      if (input.value || document.activeElement === input) return;
+      i = (i + 1) % EXEMPLOS.length;
+      input.placeholder = `Digite sua cidade... ex.: ${EXEMPLOS[i]}`;
+    }, 3000);
+  }
+
+  function initHome(): void {
+    renderizarRecentes();
+    initBuscaHome();
+  }
+
+  initHome();
+  document.addEventListener('astro:page-load', initHome);
+
+  // Geolocalização: acha o município mais próximo no índice, tudo no cliente;
+  // a permissão é pedida pelo próprio navegador e nada sai do dispositivo
+  document.addEventListener('click', (e) => {
+    const btn = e.target instanceof Element ? e.target.closest<HTMLButtonElement>('#btn-geo') : null;
+    if (!btn) return;
+    if (!('geolocation' in navigator)) {
+      btn.textContent = 'Geolocalização indisponível neste navegador';
+      btn.disabled = true;
       return;
     }
-    const cidades = municipiosPorEstado[uf] || [];
-    cidades
-      .sort((a, b) => a.nome.localeCompare(b.nome))
-      .forEach(({ slug, nome }) => {
-        const opt = document.createElement('option');
-        opt.value = slug;
-        opt.textContent = nome;
-        selectCidade.appendChild(opt);
-      });
-    selectCidade.disabled = false;
-  }
-
-  selectEstado.addEventListener('change', () => {
-    popularCidades(selectEstado.value);
-    btnIr.disabled = true;
-    localStorage.setItem('climabr_estado', selectEstado.value);
+    btn.disabled = true;
+    btn.textContent = '📍 Localizando…';
+    navigator.geolocation.getCurrentPosition(
+      async (pos) => {
+        await carregarIndice();
+        const cidade = maisProxima(pos.coords.latitude, pos.coords.longitude);
+        if (cidade) {
+          window.location.href = `/${cidade.uf}/${cidade.slug}`;
+        } else {
+          btn.textContent = 'Não foi possível localizar; use a busca';
+          btn.disabled = false;
+        }
+      },
+      () => {
+        btn.textContent = 'Permissão negada; use a busca acima';
+        btn.disabled = false;
+      },
+      { timeout: 10000, maximumAge: 300000 }
+    );
   });
-
-  selectCidade.addEventListener('change', () => {
-    btnIr.disabled = !selectCidade.value;
-    if (selectCidade.value) {
-      localStorage.setItem('climabr_cidade', selectCidade.value);
-    }
-  });
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const uf = selectEstado.value;
-    const cidade = selectCidade.value;
-    if (uf && cidade) {
-      window.location.href = `/${uf}/${cidade}`;
-    }
-  });
-
-  // Restaura seleção anterior
-  const ufSalvo = localStorage.getItem('climabr_estado');
-  const cidadeSalva = localStorage.getItem('climabr_cidade');
-  if (ufSalvo) {
-    selectEstado.value = ufSalvo;
-    popularCidades(ufSalvo);
-    if (cidadeSalva) {
-      selectCidade.value = cidadeSalva;
-      btnIr.disabled = false;
-    }
-  }
 </script>
