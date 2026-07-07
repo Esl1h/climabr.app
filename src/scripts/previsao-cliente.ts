@@ -95,15 +95,15 @@ async function buscarAr(lat: number, lon: number): Promise<any | null> {
   }
 }
 
-// Cores (hex, espelham as classes Tailwind dos blocos) e categorias (espelham o scraper)
+// Cores via tokens de status (global.css), para acompanhar o tema claro/escuro
 function corUv(uv: number): string {
-  return uv < 3 ? '#34d399' : uv < 6 ? '#facc15' : uv < 8 ? '#fb923c' : uv < 11 ? '#f87171' : '#c084fc';
+  return uv < 3 ? 'var(--status-bom)' : uv < 6 ? 'var(--status-moderado)' : uv < 8 ? 'var(--status-ruim)' : uv < 11 ? 'var(--status-pessimo)' : 'var(--status-extremo)';
 }
 function catUv(uv: number): string {
   return uv < 3 ? 'Baixo' : uv < 6 ? 'Moderado' : uv < 8 ? 'Alto' : uv < 11 ? 'Muito Alto' : 'Extremo';
 }
 function corAqi(a: number): string {
-  return a <= 50 ? '#34d399' : a <= 100 ? '#facc15' : a <= 150 ? '#fb923c' : a <= 200 ? '#f87171' : '#dc2626';
+  return a <= 50 ? 'var(--status-bom)' : a <= 100 ? 'var(--status-moderado)' : a <= 150 ? 'var(--status-ruim)' : a <= 200 ? 'var(--status-pessimo)' : 'var(--status-critico)';
 }
 function catAqi(a: number): string {
   if (a <= 50) return 'Boa';
