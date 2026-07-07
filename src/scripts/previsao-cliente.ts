@@ -114,18 +114,51 @@ function catAqi(a: number): string {
   return 'Perigosa';
 }
 
+// Esconde skeletons que a hidratação não conseguiu preencher
+function limparSkeletons(): void {
+  document.querySelectorAll<HTMLElement>('[data-skeleton]').forEach((el) => {
+    if (el.querySelector('.animate-pulse')) el.hidden = true;
+  });
+}
+
+// "há 2 h", "há 3 dias": comunica frescor melhor que a data completa
+// (que fica no atributo title do elemento)
+function tempoRelativo(iso: string): string | null {
+  const t = new Date(iso).getTime();
+  if (!Number.isFinite(t)) return null;
+  const seg = Math.round((t - Date.now()) / 1000);
+  const fmt = new Intl.RelativeTimeFormat('pt-BR', { numeric: 'auto' });
+  const abs = Math.abs(seg);
+  if (abs < 60) return fmt.format(Math.trunc(seg), 'second');
+  if (abs < 3600) return fmt.format(Math.trunc(seg / 60), 'minute');
+  if (abs < 86400) return fmt.format(Math.trunc(seg / 3600), 'hour');
+  return fmt.format(Math.trunc(seg / 86400), 'day');
+}
+
 export async function hidratarClima(): Promise<void> {
   const root = document.getElementById('clima-root');
   if (!root) return;
 
+  // Timestamp do snapshot em forma relativa (antes do fetch, para valer mesmo offline)
+  const atualizadoEl = document.getElementById('clima-atualizado');
+  const ts = atualizadoEl?.dataset.ts;
+  if (atualizadoEl && ts) {
+    const rel = tempoRelativo(ts);
+    if (rel) atualizadoEl.textContent = `Atualizado ${rel}`;
+  }
+
   const lat = parseFloat(root.dataset.lat ?? '');
   const lon = parseFloat(root.dataset.lon ?? '');
-  if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) {
+    limparSkeletons();
+    return;
+  }
 
   let data: any;
   try {
     data = await buscarOpenMeteo(lat, lon);
   } catch {
+    limparSkeletons();
     return; // mantém o snapshot do build
   }
 
@@ -150,8 +183,10 @@ export async function hidratarClima(): Promise<void> {
   }
 
   // Timestamp: tempo, previsão, UV e ar acabaram de vir do Open-Meteo ao vivo.
-  const atualizadoEl = document.getElementById('clima-atualizado');
-  if (atualizadoEl) atualizadoEl.textContent = `Tempo atualizado em ${agoraFormatado()}`;
+  if (atualizadoEl) {
+    atualizadoEl.textContent = 'Tempo atualizado agora';
+    atualizadoEl.title = `Tempo atualizado em ${agoraFormatado()}`;
+  }
 
   // Previsão 7 dias (atualiza os cards já renderizados no servidor)
   const grid = document.querySelector<HTMLElement>('[data-previsao-grid]');
@@ -226,4 +261,6 @@ export async function hidratarClima(): Promise<void> {
     const pm25 = ar?.current?.pm2_5;
     if (elPm && typeof pm25 === 'number') elPm.textContent = ` · PM2.5: ${arred(pm25)} µg/m³`;
   }
+
+  limparSkeletons();
 }
