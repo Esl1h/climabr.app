@@ -37,6 +37,9 @@ const porLetra = cidades.reduce<Record<string, Municipio[]>>((acc, c) => {
   return acc;
 }, {});
 const letras = Object.keys(porLetra).sort((a, b) => a.localeCompare(b, 'pt-BR'));
+
+// Nome sem acentos/minúsculo pré-computado para o filtro client-side
+const normalizar = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 ---
 
 <PainelLayout title={titulo} description={descricao}>
@@ -58,13 +61,23 @@ const letras = Object.keys(porLetra).sort((a, b) => a.localeCompare(b, 'pt-BR'))
     </p>
   </div>
 
+  <label for="filtro-municipios" class="sr-only">Filtrar municípios</label>
+  <input
+    id="filtro-municipios"
+    type="search"
+    placeholder={`Filtrar ${cidades.length} municípios...`}
+    autocomplete="off"
+    class="mb-6 w-full rounded-md border border-input bg-card px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+  />
+
   {letras.map((letra) => (
-    <section class="mb-6">
-      <h2 class="mb-2 text-sm font-bold text-primary">{letra}</h2>
+    <section class="mb-6" data-letra>
+      <h2 class="sticky top-14 z-10 mb-2 bg-background/95 backdrop-blur py-1 text-sm font-bold text-primary">{letra}</h2>
       <div class="grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-3">
         {porLetra[letra].map((c) => (
           <a
             href={`/${c.estado}/${c.slug}`}
+            data-nome={normalizar(c.nome)}
             class="truncate py-1 text-sm text-foreground/80 hover:text-primary transition-colors"
           >
             {c.nome}
@@ -73,6 +86,37 @@ const letras = Object.keys(porLetra).sort((a, b) => a.localeCompare(b, 'pt-BR'))
       </div>
     </section>
   ))}
+
+  <p id="filtro-vazio" class="hidden text-sm text-muted-foreground">Nenhum município corresponde ao filtro.</p>
+
+  <script>
+    // Filtro da lista: esconde links e seções sem correspondência
+    const norm = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+    function initFiltro(): void {
+      const input = document.getElementById('filtro-municipios') as HTMLInputElement | null;
+      if (!input || input.dataset.init) return;
+      input.dataset.init = '1';
+      input.addEventListener('input', () => {
+        const termo = norm(input.value.trim());
+        let total = 0;
+        document.querySelectorAll<HTMLElement>('[data-letra]').forEach((sec) => {
+          let visiveis = 0;
+          sec.querySelectorAll<HTMLElement>('a[data-nome]').forEach((a) => {
+            const mostra = !termo || (a.dataset.nome ?? '').includes(termo);
+            a.style.display = mostra ? '' : 'none';
+            if (mostra) visiveis++;
+          });
+          sec.style.display = visiveis ? '' : 'none';
+          total += visiveis;
+        });
+        document.getElementById('filtro-vazio')?.classList.toggle('hidden', total > 0);
+      });
+    }
+
+    initFiltro();
+    document.addEventListener('astro:page-load', initFiltro);
+  </script>
 
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
