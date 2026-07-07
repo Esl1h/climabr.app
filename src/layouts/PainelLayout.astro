@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -68,6 +69,8 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
     <!-- PWA / theme -->
     <meta name="theme-color" content="#040f0d" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
 
     <!-- Tema claro/escuro: precisa rodar antes do primeiro paint (anti-flash).
          localStorage vence; sem preferência salva, segue o sistema. -->
@@ -86,14 +89,46 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
     <!-- Cloudflare Web Analytics (RUM) — injeção manual: a automática não é
          confiável atrás do Worker. CSP libera static.cloudflareinsights.com -->
     <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a4a1961d5b3e41ef9e82244c25e866a3"}'></script>
+
+    <!-- Navegação suave entre páginas (View Transitions) -->
+    <ClientRouter />
   </head>
   <body class="min-h-screen bg-background text-foreground antialiased">
-    <header class="border-b border-border px-4 py-3">
+    <a
+      href="#conteudo"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded-md focus:bg-primary focus:px-3 focus:py-2 focus:text-sm focus:text-primary-foreground"
+    >
+      Pular para o conteúdo
+    </a>
+    <header class="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur px-4 py-3">
       <div class="flex items-center justify-between max-w-3xl mx-auto">
         <!-- Logo -->
         <a href="/" class="text-lg font-bold tracking-tight hover:opacity-80 transition-opacity">
-          <span aria-hidden="true" class="not-italic mr-1">🛰️</span><span class="italic text-emerald-700">Clima</span><span class="italic text-blue-600">BR</span><span class="text-yellow-500">.app</span>
+          <span aria-hidden="true" class="not-italic mr-1">🛰️</span><span class="italic text-emerald-700 dark:text-emerald-500">Clima</span><span class="italic text-blue-600 dark:text-blue-500">BR</span><span class="text-yellow-600 dark:text-yellow-500">.app</span>
         </a>
+
+        <!-- Busca de cidade: índice carregado sob demanda no primeiro foco -->
+        <div class="relative flex-1 max-w-48 sm:max-w-64 mx-3" id="busca-wrapper">
+          <label for="busca-input" class="sr-only">Buscar cidade</label>
+          <input
+            id="busca-input"
+            data-busca-cidade
+            type="search"
+            placeholder="Buscar cidade... ( / )"
+            autocomplete="off"
+            role="combobox"
+            aria-expanded="false"
+            aria-controls="busca-lista"
+            aria-autocomplete="list"
+            class="w-full rounded-md border border-input bg-card px-3 py-1.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+          />
+          <ul
+            id="busca-lista"
+            role="listbox"
+            aria-label="Resultados da busca"
+            class="hidden absolute left-0 right-0 top-10 max-h-80 overflow-y-auto bg-popover border border-border rounded-lg shadow-xl z-50 py-1"
+          ></ul>
+        </div>
 
         <div class="flex items-center gap-1">
           <!-- Toggle claro/escuro -->
@@ -150,7 +185,7 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
                 role="menuitem"
               >
                 <span class="font-mono text-primary text-xs bg-muted px-1.5 py-0.5 rounded">$</span>
-                cUrl
+                API/JSON/CURL
               </a>
               <div class="border-t border-border my-1"></div>
               <a
@@ -177,64 +212,72 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
       </div>
     </header>
 
-    <main class="mx-auto max-w-3xl px-4 py-8">
+    <main id="conteudo" tabindex="-1" class="mx-auto max-w-3xl px-4 py-8 focus:outline-none">
       <slot />
     </main>
 
     <footer class="mt-16 border-t border-border px-4 py-6 text-center text-xs text-muted-foreground">
-      Dados de fontes públicas: INMET, ANA, INPE, CETESB, SVS/MS, ANEEL &nbsp;·&nbsp;
+      Dados de fontes públicas: INMET, ANA, INPE, CETESB, SVS/MS, ANEEL e outros, atualizados automaticamente.
+      Acesse também via <a href="/curl" class="underline hover:text-foreground">curl, JSON</a> ou modo painel. &nbsp;·&nbsp;
       <a href="/llms.txt" class="underline hover:text-foreground">llms.txt</a>
     </footer>
 
     <script>
-      // Toggle de tema: persiste em localStorage e sincroniza o meta theme-color
-      document.getElementById('tema-btn')?.addEventListener('click', () => {
+      // Tudo via delegação no document ou eventos do ClientRouter: os nós do
+      // body são trocados a cada navegação, mas estes listeners persistem.
+      import { instalarBuscaGlobal } from '../scripts/busca-cidades';
+
+      instalarBuscaGlobal();
+
+      // Tema claro/escuro
+      function aplicarTema(): void {
+        let salvo: string | null = null;
+        try { salvo = localStorage.getItem('climabr_tema'); } catch { /* ignora */ }
+        const escuro = salvo ? salvo === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', escuro);
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', escuro ? '#040f0d' : '#f6f9f8');
+      }
+
+      function alternarTema(): void {
         const escuro = document.documentElement.classList.toggle('dark');
         try { localStorage.setItem('climabr_tema', escuro ? 'dark' : 'light'); } catch { /* ignora */ }
         document.querySelector('meta[name="theme-color"]')?.setAttribute('content', escuro ? '#040f0d' : '#f6f9f8');
-      });
-
-      const btn = document.getElementById('menu-btn');
-      const dropdown = document.getElementById('menu-dropdown');
-      const bar1 = document.getElementById('bar1');
-      const bar2 = document.getElementById('bar2');
-      const bar3 = document.getElementById('bar3');
-
-      function toggleMenu() {
-        const open = dropdown?.classList.toggle('hidden') === false;
-        btn?.setAttribute('aria-expanded', String(open));
-        if (open) {
-          bar1?.classList.add('rotate-45', 'translate-y-2');
-          bar2?.classList.add('opacity-0');
-          bar3?.classList.add('-rotate-45', '-translate-y-2');
-        } else {
-          bar1?.classList.remove('rotate-45', 'translate-y-2');
-          bar2?.classList.remove('opacity-0');
-          bar3?.classList.remove('-rotate-45', '-translate-y-2');
-        }
       }
 
-      btn?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        toggleMenu();
-      });
+      // Menu hamburguer
+      function definirMenu(aberto: boolean): void {
+        const dropdown = document.getElementById('menu-dropdown');
+        const btn = document.getElementById('menu-btn');
+        if (!dropdown || !btn) return;
+        dropdown.classList.toggle('hidden', !aberto);
+        btn.setAttribute('aria-expanded', String(aberto));
+        document.getElementById('bar1')?.classList.toggle('rotate-45', aberto);
+        document.getElementById('bar1')?.classList.toggle('translate-y-2', aberto);
+        document.getElementById('bar2')?.classList.toggle('opacity-0', aberto);
+        document.getElementById('bar3')?.classList.toggle('-rotate-45', aberto);
+        document.getElementById('bar3')?.classList.toggle('-translate-y-2', aberto);
+      }
 
-      // Fecha ao clicar fora
-      document.addEventListener('click', () => {
-        if (!dropdown?.classList.contains('hidden')) {
-          dropdown?.classList.add('hidden');
-          btn?.setAttribute('aria-expanded', 'false');
-          bar1?.classList.remove('rotate-45', 'translate-y-2');
-          bar2?.classList.remove('opacity-0');
-          bar3?.classList.remove('-rotate-45', '-translate-y-2');
+      document.addEventListener('click', (e) => {
+        const alvo = e.target instanceof Element ? e.target : null;
+        if (alvo?.closest('#tema-btn')) {
+          alternarTema();
+          return;
         }
+        if (alvo?.closest('#menu-btn')) {
+          const fechado = document.getElementById('menu-dropdown')?.classList.contains('hidden');
+          definirMenu(Boolean(fechado));
+          return;
+        }
+        if (!alvo?.closest('#menu-dropdown')) definirMenu(false);
       });
 
       // Modo Painel e Modo Mobile: só aparecem em páginas de cidade (/uf/slug)
-      const telaoLink = document.getElementById('menu-telao');
-      const mobileLink = document.getElementById('menu-mobile');
-      const m = location.pathname.match(/^\/([a-z]{2})\/([a-z0-9-]+)\/?$/);
-      if (m) {
+      function atualizarLinksCidade(): void {
+        const telaoLink = document.getElementById('menu-telao');
+        const mobileLink = document.getElementById('menu-mobile');
+        const m = location.pathname.match(/^\/([a-z]{2})\/([a-z0-9-]+)\/?$/);
+        if (!m) return;
         if (telaoLink) {
           telaoLink.setAttribute('href', `/${m[1]}/${m[2]}/telao`);
           telaoLink.classList.remove('hidden');
@@ -245,6 +288,16 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
           mobileLink.classList.remove('hidden');
           mobileLink.classList.add('flex');
         }
+      }
+
+      atualizarLinksCidade();
+      document.addEventListener('astro:page-load', atualizarLinksCidade);
+      // O swap do ClientRouter repõe os atributos estáticos do <html>; reaplica o tema
+      document.addEventListener('astro:after-swap', aplicarTema);
+
+      // PWA: service worker só em produção (no dev atrapalharia o HMR)
+      if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch(() => { /* sem suporte */ });
       }
     </script>
   </body>
