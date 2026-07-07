@@ -14,7 +14,7 @@ function diaSemana(dataStr: string): string {
 
 {previsao && previsao.length > 0 && (
   <section id="bloco-previsao" aria-label="Previsão do tempo">
-    <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-slate-200">
+    <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
       <span aria-hidden="true">🌤</span> Previsão 7 dias
     </h2>
     <p class="sr-only">
@@ -22,12 +22,12 @@ function diaSemana(dataStr: string): string {
     </p>
     <div class="grid grid-cols-4 gap-2 sm:grid-cols-7" data-previsao-grid>
       {previsao.slice(0, 7).map((dia) => (
-        <div class="flex flex-col items-center rounded-lg border border-slate-800 bg-slate-900 px-2 py-3 text-center" data-dia>
-          <span class="text-xs text-slate-400 capitalize" data-f="dow">{diaSemana(dia.data)}</span>
-          <span class="mt-1 text-lg font-bold text-white" data-f="max">{dia.max}°</span>
-          <span class="text-xs text-slate-400" data-f="min">{dia.min}°</span>
-          <span class="mt-1 text-xs text-blue-400" data-f="chuva" hidden={!(dia.chuva_mm > 0)}>{dia.chuva_mm > 0 ? `${dia.chuva_mm}mm` : ''}</span>
-          <span class="mt-1 text-xs text-slate-500 leading-tight" data-f="cond">{dia.condicao}</span>
+        <div class="flex flex-col items-center rounded-lg border border-border bg-card px-2 py-3 text-center" data-dia>
+          <span class="text-xs text-muted-foreground capitalize" data-f="dow">{diaSemana(dia.data)}</span>
+          <span class="mt-1 text-lg font-bold text-foreground" data-f="max">{dia.max}°</span>
+          <span class="text-xs text-muted-foreground" data-f="min">{dia.min}°</span>
+          <span class="mt-1 text-xs text-status-info" data-f="chuva" hidden={!(dia.chuva_mm > 0)}>{dia.chuva_mm > 0 ? `${dia.chuva_mm}mm` : ''}</span>
+          <span class="mt-1 text-xs text-muted-foreground leading-tight" data-f="cond">{dia.condicao}</span>
         </div>
       ))}
     </div>

@@ -10,19 +10,19 @@ interface Props {
 const { qualidade_ar, umidade_pct, pressao_hpa, ponto_orvalho_c } = Astro.props;
 
 function corAqi(indice: number): string {
-  if (indice <= 50) return 'text-emerald-400';
-  if (indice <= 100) return 'text-yellow-400';
-  if (indice <= 150) return 'text-orange-400';
-  if (indice <= 200) return 'text-red-400';
-  return 'text-red-600';
+  if (indice <= 50) return 'text-status-bom';
+  if (indice <= 100) return 'text-status-moderado';
+  if (indice <= 150) return 'text-status-ruim';
+  if (indice <= 200) return 'text-status-pessimo';
+  return 'text-status-critico';
 }
 
 function barraAqi(indice: number): string {
-  if (indice <= 50) return 'bg-emerald-500';
-  if (indice <= 100) return 'bg-yellow-500';
-  if (indice <= 150) return 'bg-orange-500';
-  if (indice <= 200) return 'bg-red-500';
-  return 'bg-red-700';
+  if (indice <= 50) return 'bg-status-bom';
+  if (indice <= 100) return 'bg-status-moderado';
+  if (indice <= 150) return 'bg-status-ruim';
+  if (indice <= 200) return 'bg-status-pessimo';
+  return 'bg-status-critico';
 }
 
 const pct = qualidade_ar ? Math.min(100, Math.round((qualidade_ar.indice / 300) * 100)) : 0;
@@ -30,27 +30,27 @@ const pct = qualidade_ar ? Math.min(100, Math.round((qualidade_ar.indice / 300) 
 
 {qualidade_ar && (
   <section aria-label="Qualidade do ar">
-    <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-slate-200">
+    <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
       <span aria-hidden="true">💨</span> Qualidade do Ar
     </h2>
-    <div class="rounded-lg border border-slate-800 bg-slate-900 p-4">
+    <div class="rounded-lg border border-border bg-card p-4">
       <div class="flex items-center justify-between">
         <div>
-          <p class="text-sm text-slate-400" data-ar-categoria>{qualidade_ar.categoria}</p>
+          <p class="text-sm text-muted-foreground" data-ar-categoria>{qualidade_ar.categoria}</p>
           <p class={`text-3xl font-bold ${corAqi(qualidade_ar.indice)}`} data-ar-indice>
             AQI {qualidade_ar.indice}
           </p>
-          <p class="text-xs text-slate-500 mt-1">
+          <p class="text-xs text-muted-foreground mt-1">
             Principal: {qualidade_ar.principal_poluente}<span data-ar-pm25>{qualidade_ar.pm25 != null ? ` · PM2.5: ${qualidade_ar.pm25} µg/m³` : ''}</span>
           </p>
         </div>
-        <div class="text-right text-xs text-slate-500">
+        <div class="text-right text-xs text-muted-foreground">
           {qualidade_ar.pm10 != null && <p>PM10: {qualidade_ar.pm10} µg/m³</p>}
           {qualidade_ar.no2 != null && <p>NO₂: {qualidade_ar.no2} µg/m³</p>}
           <p class="mt-1">Fonte: {qualidade_ar.fonte}</p>
         </div>
       </div>
-      <div class="mt-3 h-2 w-full overflow-hidden rounded-full bg-slate-700">
+      <div class="mt-3 h-2 w-full overflow-hidden rounded-full bg-muted">
         <div
           class={`h-full rounded-full transition-all ${barraAqi(qualidade_ar.indice)}`}
           style={`width: ${pct}%`}
@@ -62,22 +62,22 @@ const pct = qualidade_ar ? Math.min(100, Math.round((qualidade_ar.indice / 300) 
           aria-valuemax={300}
         />
       </div>
-      <div class="mt-2 flex justify-between text-xs text-slate-600">
+      <div class="mt-2 flex justify-between text-xs text-muted-foreground">
         <span>Boa</span><span>Moderada</span><span>Ruim</span><span>Péssima</span>
       </div>
 
-      <div class="mt-3 grid grid-cols-3 gap-2 border-t border-slate-800 pt-3 text-center" data-condicoes>
+      <div class="mt-3 grid grid-cols-3 gap-2 border-t border-border pt-3 text-center" data-condicoes>
         <div>
-          <p class="text-xs text-slate-500">Umidade</p>
-          <p class="text-sm font-semibold text-slate-200" data-cond="umidade">{umidade_pct != null ? `${umidade_pct}%` : '—'}</p>
+          <p class="text-xs text-muted-foreground">Umidade</p>
+          <p class="text-sm font-semibold text-foreground" data-cond="umidade">{umidade_pct != null ? `${umidade_pct}%` : '—'}</p>
         </div>
         <div>
-          <p class="text-xs text-slate-500">Pressão</p>
-          <p class="text-sm font-semibold text-slate-200" data-cond="pressao">{pressao_hpa != null ? `${pressao_hpa} hPa` : '—'}</p>
+          <p class="text-xs text-muted-foreground">Pressão</p>
+          <p class="text-sm font-semibold text-foreground" data-cond="pressao">{pressao_hpa != null ? `${pressao_hpa} hPa` : '—'}</p>
         </div>
         <div>
-          <p class="text-xs text-slate-500">Ponto de orvalho</p>
-          <p class="text-sm font-semibold text-slate-200" data-cond="orvalho">{ponto_orvalho_c != null ? `${ponto_orvalho_c}°C` : '—'}</p>
+          <p class="text-xs text-muted-foreground">Ponto de orvalho</p>
+          <p class="text-sm font-semibold text-foreground" data-cond="orvalho">{ponto_orvalho_c != null ? `${ponto_orvalho_c}°C` : '—'}</p>
         </div>
       </div>
     </div>
