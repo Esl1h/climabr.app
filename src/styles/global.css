@@ -99,23 +99,26 @@
     --sidebar-ring: oklch(0.708 0 0);
 }
 
-/* Tema escuro: verde-petróleo (o #040f0d histórico do site) com emerald claro.
-   Tokens de status: tons -400 (como o design original dark). */
+/* Tema escuro: verde-petróleo profundo (o #040f0d histórico) com emerald claro.
+   Elevação por camadas: background 0.13 < card 0.19 < popover 0.23 < accent/hover 0.28.
+   Hierarquia de texto: foreground 0.92 (primário, evita halation de branco puro),
+   foreground/80 (secundário), muted-foreground 0.68 (terciário: labels, fontes, timestamps).
+   Tokens de status: tons -400 (texto); barras usam dark:/80 para suavizar fills grandes. */
 .dark {
-    --background: oklch(0.15 0.017 185);
-    --foreground: oklch(0.97 0.003 180);
-    --card: oklch(0.21 0.015 190);
-    --card-foreground: oklch(0.97 0.003 180);
-    --popover: oklch(0.21 0.015 190);
-    --popover-foreground: oklch(0.97 0.003 180);
+    --background: oklch(0.13 0.015 185);
+    --foreground: oklch(0.92 0.005 180);
+    --card: oklch(0.19 0.014 190);
+    --card-foreground: oklch(0.92 0.005 180);
+    --popover: oklch(0.23 0.014 190);
+    --popover-foreground: oklch(0.92 0.005 180);
     --primary: oklch(0.765 0.177 163);
-    --primary-foreground: oklch(0.15 0.017 185);
-    --secondary: oklch(0.27 0.015 190);
-    --secondary-foreground: oklch(0.97 0.003 180);
-    --muted: oklch(0.3 0.012 190);
-    --muted-foreground: oklch(0.71 0.01 190);
-    --accent: oklch(0.27 0.015 190);
-    --accent-foreground: oklch(0.97 0.003 180);
+    --primary-foreground: oklch(0.13 0.015 185);
+    --secondary: oklch(0.26 0.014 190);
+    --secondary-foreground: oklch(0.92 0.005 180);
+    --muted: oklch(0.29 0.012 190);
+    --muted-foreground: oklch(0.68 0.012 190);
+    --accent: oklch(0.28 0.014 190);
+    --accent-foreground: oklch(0.92 0.005 180);
     --destructive: oklch(0.704 0.191 22.216);
     --border: oklch(1 0 0 / 12%);
     --input: oklch(1 0 0 / 15%);
@@ -152,4 +155,17 @@
   html {
     @apply font-sans;
     }
+  /* Foco visível consistente para navegação por teclado */
+  a, button, summary, [role='menuitem'] {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+    }
+}
+
+/* Respeita a preferência do usuário por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
