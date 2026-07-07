@@ -81,42 +81,42 @@ const temDados = dados && (
   estado={municipio.estado}
   slug={municipio.slug}
 >
-  <nav class="mb-6 text-sm text-slate-500" aria-label="Navegação">
-    <a href="/" class="hover:text-slate-300">ClimaBR.app</a>
+  <nav class="mb-6 text-sm text-muted-foreground" aria-label="Navegação">
+    <a href="/" class="hover:text-foreground/80">ClimaBR.app</a>
     <span class="mx-2">/</span>
-    <a href={`/${municipio.estado}`} class="text-slate-300 hover:text-emerald-400">{municipio.estado.toUpperCase()}</a>
+    <a href={`/${municipio.estado}`} class="text-foreground/80 hover:text-primary">{municipio.estado.toUpperCase()}</a>
     <span class="mx-2">/</span>
-    <span class="text-white">{municipio.nome}</span>
+    <span class="text-foreground">{municipio.nome}</span>
   </nav>
 
   <div class="mb-8" id="clima-root" data-lat={municipio.lat ?? ''} data-lon={municipio.lon ?? ''}>
-    <h1 class="text-2xl font-bold text-white">
+    <h1 class="text-2xl font-bold text-foreground">
       {municipio.nome}
-      <span class="text-slate-400 text-lg">/{municipio.estado.toUpperCase()}</span>
+      <span class="text-muted-foreground text-lg">/{municipio.estado.toUpperCase()}</span>
     </h1>
-    <p id="clima-agora" class="mt-1 text-slate-300 text-sm" hidden={dados?.temperatura_atual == null}>
+    <p id="clima-agora" class="mt-1 text-foreground/80 text-sm" hidden={dados?.temperatura_atual == null}>
       {dados?.temperatura_atual != null ? `${dados.temperatura_atual}°C agora` : ''}
     </p>
     {dados?.atualizado_em ? (
-      <p id="clima-atualizado" class="mt-1 text-xs text-slate-500">
+      <p id="clima-atualizado" class="mt-1 text-xs text-muted-foreground">
         Atualizado em {formatarDataHora(dados.atualizado_em)}
       </p>
     ) : (
-      <p id="clima-atualizado" class="mt-1 text-xs text-slate-500">Dados ainda não coletados para esta cidade.</p>
+      <p id="clima-atualizado" class="mt-1 text-xs text-muted-foreground">Dados ainda não coletados para esta cidade.</p>
     )}
 
     <!-- Resumo textual (SEO + acessibilidade): prosa indexável antes dos blocos visuais.
          <details> mantém o texto no DOM mesmo fechado, então segue indexável;
          <summary> já expõe o estado expandido/recolhido para leitores de tela. -->
     <details class="group mt-4">
-      <summary class="flex w-fit cursor-pointer list-none items-center gap-2 text-sm text-slate-300 hover:text-emerald-400 [&::-webkit-details-marker]:hidden">
+      <summary class="flex w-fit cursor-pointer list-none items-center gap-2 text-sm text-foreground/80 hover:text-primary [&::-webkit-details-marker]:hidden">
         <span aria-hidden="true">✨</span>
         <span class="font-medium">Resumo de hoje em {municipio.nome}</span>
-        <svg class="h-4 w-4 text-slate-500 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <svg class="h-4 w-4 text-muted-foreground transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
           <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.23 8.27a.75.75 0 0 1 .02-1.06z" clip-rule="evenodd" />
         </svg>
       </summary>
-      <p class="mt-2 text-sm leading-relaxed text-slate-400">
+      <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
         {descricaoTextual(municipio, dados)}
       </p>
     </details>
@@ -144,18 +144,18 @@ const temDados = dados && (
       <BlocoSol sol={dados!.sol} lua={dados!.lua} />
     </div>
   ) : (
-    <div class="rounded-lg border border-slate-800 bg-slate-900 p-8 text-center">
-      <p class="text-slate-400">
-        Os dados de <strong class="text-white">{municipio.nome}</strong> ainda estão sendo coletados.
+    <div class="rounded-lg border border-border bg-card p-8 text-center">
+      <p class="text-muted-foreground">
+        Os dados de <strong class="text-foreground">{municipio.nome}</strong> ainda estão sendo coletados.
       </p>
-      <p class="mt-2 text-sm text-slate-500">
+      <p class="mt-2 text-sm text-muted-foreground">
         As coletas acontecem automaticamente a cada 3-6 horas via GitHub Actions.
       </p>
       <div class="mt-4 flex justify-center gap-4 text-sm">
-        <a href={`/api/${estado}/${cidade}.json`} class="text-emerald-400 hover:underline">
+        <a href={`/api/${estado}/${cidade}.json`} class="text-primary hover:underline">
           Ver JSON
         </a>
-        <a href="/" class="text-slate-400 hover:text-slate-200 hover:underline">
+        <a href="/" class="text-muted-foreground hover:text-foreground hover:underline">
           Voltar ao início
         </a>
       </div>

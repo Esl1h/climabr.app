@@ -23,16 +23,16 @@ const estados = Object.entries(porEstado).sort((a, b) => a[1].nome.localeCompare
       <h1 class="text-3xl font-bold">
         <span class="italic text-emerald-700">Clima</span><span class="italic text-blue-600">BR</span><span class="text-yellow-500">.app</span>
       </h1>
-      <p class="text-slate-400">Painel ambiental por cidade — qualidade do ar, água, clima e alertas</p>
+      <p class="text-muted-foreground">Painel ambiental por cidade — qualidade do ar, água, clima e alertas</p>
     </div>
 
     <form id="seletor" class="space-y-4" action="" method="get">
       <div class="space-y-2">
-        <label for="estado" class="block text-sm font-medium text-slate-300">Estado</label>
+        <label for="estado" class="block text-sm font-medium text-foreground/80">Estado</label>
         <select
           id="estado"
           name="estado"
-          class="w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          class="w-full rounded-md border border-input bg-card px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
         >
           <option value="">Selecione o estado...</option>
           {estados.map(([uf, { nome }]) => (
@@ -42,12 +42,12 @@ const estados = Object.entries(porEstado).sort((a, b) => a[1].nome.localeCompare
       </div>
 
       <div class="space-y-2">
-        <label for="cidade" class="block text-sm font-medium text-slate-300">Cidade</label>
+        <label for="cidade" class="block text-sm font-medium text-foreground/80">Cidade</label>
         <select
           id="cidade"
           name="cidade"
           disabled
-          class="w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-40"
+          class="w-full rounded-md border border-input bg-card px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-40"
         >
           <option value="">Selecione a cidade...</option>
         </select>
@@ -57,13 +57,13 @@ const estados = Object.entries(porEstado).sort((a, b) => a[1].nome.localeCompare
         type="submit"
         id="btn-ir"
         disabled
-        class="w-full rounded-md bg-emerald-600 px-4 py-2 font-semibold text-white hover:bg-emerald-500 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+        class="w-full rounded-md bg-primary px-4 py-2 font-semibold text-primary-foreground hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
       >
         Ver painel
       </button>
     </form>
 
-    <p class="text-center text-xs text-slate-400">
+    <p class="text-center text-xs text-muted-foreground">
       Sua cidade é salva localmente — sem conta, sem rastreamento.
     </p>
   </div>
