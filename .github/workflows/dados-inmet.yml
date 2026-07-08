@@ -29,6 +29,7 @@ jobs:
       - name: Coleta previsão CPTEC
         env:
           ESTADO: ${{ github.event.inputs.estado }}
+          LIMITE_MINUTOS: '25'
         run: |
           if [ -n "$ESTADO" ]; then
             if ! printf '%s' "$ESTADO" | grep -qE '^[a-z]{2}$'; then
