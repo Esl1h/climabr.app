@@ -7,6 +7,7 @@ Rodar a cada 3h via GitHub Actions.
 """
 
 import json
+import os
 import sys
 import time
 import urllib.request
@@ -19,6 +20,11 @@ MUNICIPIOS = Path(__file__).parent.parent / "data" / "municipios.json"
 CPTEC_IDS = Path(__file__).parent.parent / "data" / "cptec_ids.json"
 
 CPTEC_PREVISAO = "https://servicos.cptec.inpe.br/XML/cidade/{id}/previsao.xml"
+
+# Orçamento de tempo da rodada: encerra limpo antes do timeout do job para o
+# commit parcial rodar. CPTEC é fallback do Open-Meteo, então perder a cauda
+# de uma rodada lenta é aceitável.
+LIMITE_MINUTOS = float(os.environ.get("LIMITE_MINUTOS", "25"))
 
 CONDICAO_MAP = {
     "ec": "Encoberto com Chuvas Contínuas",
@@ -116,7 +122,13 @@ def main():
     print(f"Coletando CPTEC para {total} municípios...")
 
     ok = erros = sem_id = 0
+    inicio_exec = time.monotonic()
     for i, m in enumerate(municipios, 1):
+        if time.monotonic() - inicio_exec > LIMITE_MINUTOS * 60:
+            print(f"  Limite de {LIMITE_MINUTOS:.0f} min atingido; encerrando com "
+                  f"{total - i + 1} municípios pendentes.", file=sys.stderr)
+            break
+
         chave = f"{m['estado']}_{m['slug']}"
         cptec_id = cptec_ids.get(chave)
 
