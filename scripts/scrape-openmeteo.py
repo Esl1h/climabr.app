@@ -15,8 +15,10 @@ Rodar a cada 3h via GitHub Actions.
 
 import json
 import math
+import os
 import sys
 import time
+import urllib.error
 import urllib.request
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -30,6 +32,9 @@ AQ_URL = "https://air-quality-api.open-meteo.com/v1/air-quality"
 BATCH_SIZE = 25    # coords por requisição; com DELAY_BATCH fica ~500/min (< limite de 600/min)
 DELAY_BATCH = 3.0  # segundos entre lotes (respeita o rate limit do Open-Meteo)
 FRESCO_HORAS = 20  # não recoleta cidade já atualizada nas últimas N horas
+PAUSA_429 = 60.0   # pausa antes de repetir um lote que tomou 429
+MAX_429_SEGUIDOS = 3  # lotes seguidos com 429 = cota esgotada, encerra a rodada
+LIMITE_MINUTOS = float(os.environ.get("LIMITE_MINUTOS", "25"))  # orçamento de tempo da rodada
 
 # WMO Weather Codes → descrição PT-BR
 WMO_DESCRICAO: dict[int, str] = {
@@ -288,16 +293,45 @@ def main():
     agora = datetime.now(timezone.utc).astimezone().isoformat()
     ok = erros = 0
 
-    for inicio in range(0, total, BATCH_SIZE):
+    # A coleta é incremental (FRESCO_HORAS), então encerrar cedo é seguro:
+    # a próxima rodada retoma pelas cidades mais desatualizadas.
+    inicio_exec = time.monotonic()
+    seguidos_429 = 0
+    inicio = 0
+    while inicio < total:
+        if time.monotonic() - inicio_exec > LIMITE_MINUTOS * 60:
+            print(f"  Limite de {LIMITE_MINUTOS:.0f} min atingido; encerrando com "
+                  f"{total - inicio} municípios pendentes.", file=sys.stderr)
+            break
+
         lote = municipios_com_coord[inicio: inicio + BATCH_SIZE]
         lats = [float(m["lat"]) for m in lote]
         lons = [float(m["lon"]) for m in lote]
 
         try:
             fc_list, aq_list = fetch_batch(lats, lons)
+            seguidos_429 = 0
+        except urllib.error.HTTPError as e:
+            if e.code == 429:
+                seguidos_429 += 1
+                if seguidos_429 >= MAX_429_SEGUIDOS:
+                    print(f"  429 persistente ({MAX_429_SEGUIDOS} lotes seguidos); cota do "
+                          f"Open-Meteo esgotada. Encerrando com {total - inicio} municípios "
+                          "pendentes.", file=sys.stderr)
+                    break
+                print(f"  429 no lote {inicio}-{inicio+len(lote)}; aguardando "
+                      f"{PAUSA_429:.0f}s para repetir.", file=sys.stderr)
+                time.sleep(PAUSA_429)
+                continue  # repete o mesmo lote
+            print(f"  ERRO lote {inicio}-{inicio+len(lote)}: {e}", file=sys.stderr)
+            erros += len(lote)
+            inicio += BATCH_SIZE
+            time.sleep(3)
+            continue
         except Exception as e:
             print(f"  ERRO lote {inicio}-{inicio+len(lote)}: {e}", file=sys.stderr)
             erros += len(lote)
+            inicio += BATCH_SIZE
             time.sleep(3)
             continue
 
@@ -339,6 +373,7 @@ def main():
 
         if (inicio // BATCH_SIZE + 1) % 10 == 0:
             print(f"  {inicio + len(lote)}/{total} — ok={ok} erros={erros}")
+        inicio += BATCH_SIZE
         time.sleep(DELAY_BATCH)
 
     print(f"Concluído: {ok} ok, {erros} erros de {total}")
