@@ -8,6 +8,7 @@ Rodar 1x/dia via GitHub Actions.
 """
 
 import json
+import os
 import sys
 import time
 import urllib.request
@@ -18,6 +19,11 @@ DATA_DIR = Path(__file__).parent.parent / "data" / "cidades"
 MUNICIPIOS = Path(__file__).parent.parent / "data" / "municipios.json"
 
 INFODENGUE_URL = "https://info.dengue.mat.br/api/alertcity"
+
+# Orçamento de tempo da rodada. Os 5.571 municípios x 3 doenças não cabem no
+# job quando a API está lenta; a coleta é incremental (ordenada por frescor),
+# então encerrar cedo é seguro e a próxima rodada continua das mais antigas.
+LIMITE_MINUTOS = float(os.environ.get("LIMITE_MINUTOS", "20"))
 
 # InfoDengue consolida com ~2-3 semanas de atraso; busca uma janela ampla
 # para trás e usa sempre a semana epidemiológica mais recente disponível.
@@ -75,9 +81,29 @@ def main():
 
     print(f"Coletando InfoDengue — semana {semana}/{ano} ({len(municipios)} municípios)...")
 
+    # Mais desatualizados primeiro, para que rodadas encerradas pelo limite de
+    # tempo ciclem por todos os municípios ao longo dos dias.
+    def dengue_ts(m: dict) -> float:
+        f = DATA_DIR / m["estado"] / f"{m['slug']}.json"
+        if not f.exists():
+            return 0.0
+        try:
+            ts = json.loads(f.read_text(encoding="utf-8")).get("dengue", {}).get("atualizado_em")
+            return datetime.fromisoformat(ts).timestamp() if ts else 0.0
+        except Exception:
+            return 0.0
+
+    municipios.sort(key=dengue_ts)
+
     ok = sem_dados = erros = 0
+    inicio_exec = time.monotonic()
 
     for i, m in enumerate(municipios):
+        if time.monotonic() - inicio_exec > LIMITE_MINUTOS * 60:
+            print(f"  Limite de {LIMITE_MINUTOS:.0f} min atingido; encerrando com "
+                  f"{len(municipios) - i} municípios pendentes.", file=sys.stderr)
+            break
+
         geocode = m.get("id")
         if not geocode:
             sem_dados += 1
