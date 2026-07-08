@@ -22,6 +22,8 @@ jobs:
           python-version: '3.12'
 
       - name: Open-Meteo — previsão, UV, qualidade do ar, sol/lua
+        env:
+          LIMITE_MINUTOS: '20'
         run: python3 scripts/scrape-openmeteo.py
 
       - name: SABESP — reservatórios SP
@@ -31,6 +33,8 @@ jobs:
         run: python3 scripts/scrape-copasa.py
 
       - name: Dengue / Chikungunya / Zika (InfoDengue)
+        env:
+          LIMITE_MINUTOS: '12'
         run: python3 scripts/scrape-dengue.py
         continue-on-error: true
 
