@@ -4,8 +4,86 @@
   "slug": "bataypora",
   "latitude": -22.3908,
   "longitude": -53.1776,
-  "atualizado_em": "2026-07-08T07:35:06.851620+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-08T10:13:25.833908+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-08",
+      "min": 10.6,
+      "max": 23.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.2,
+      "nascer_sol": "07:13",
+      "por_sol": "18:02"
+    },
+    {
+      "data": "2026-07-09",
+      "min": 14.6,
+      "max": 25.6,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.2,
+      "nascer_sol": "07:12",
+      "por_sol": "18:03"
+    },
+    {
+      "data": "2026-07-10",
+      "min": 15.3,
+      "max": 28.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.3,
+      "nascer_sol": "07:12",
+      "por_sol": "18:03"
+    },
+    {
+      "data": "2026-07-11",
+      "min": 17.4,
+      "max": 30.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 5.3,
+      "nascer_sol": "07:12",
+      "por_sol": "18:03"
+    },
+    {
+      "data": "2026-07-12",
+      "min": 17.0,
+      "max": 23.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.5,
+      "uv": 4.7,
+      "nascer_sol": "07:12",
+      "por_sol": "18:04"
+    },
+    {
+      "data": "2026-07-13",
+      "min": 16.0,
+      "max": 23.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 3.3,
+      "nascer_sol": "07:12",
+      "por_sol": "18:04"
+    },
+    {
+      "data": "2026-07-14",
+      "min": 15.0,
+      "max": 25.6,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 5.0,
+      "nascer_sol": "07:12",
+      "por_sol": "18:05"
+    }
+  ],
   "reservatorio": {
     "nome": "Porto Primavera",
     "nivel_pct": 19.9,
@@ -33,12 +111,12 @@
     "indice": 24,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.5,
-    "pm10": 4.8,
-    "no2": 3.1,
-    "o3": 30.0,
+    "pm25": 12.7,
+    "pm10": 13.3,
+    "no2": 17.2,
+    "o3": 21.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-07T10:52:16.596749+00:00"
+    "atualizado_em": "2026-07-08T10:13:25.833908+00:00"
   },
   "sol": {
     "nascer": "07:13",
@@ -48,25 +126,25 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 74.2,
-    "dias_proxima_cheia": 7,
+    "nome": "Quarto Minguante",
+    "iluminacao_pct": 99.0,
+    "fase_pct": 77.5,
+    "dias_proxima_cheia": 8,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 13.6,
+  "temperatura_atual": 11.0,
   "vento": {
-    "velocidade_kmh": 9.8,
-    "direcao_graus": 218,
-    "direcao": "SO",
-    "max_kmh": 13.6,
-    "rajada_kmh": 26.6,
-    "direcao_dominante": "SO",
+    "velocidade_kmh": 3.5,
+    "direcao_graus": 204,
+    "direcao": "SSO",
+    "max_kmh": 8.4,
+    "rajada_kmh": 16.2,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 84,
-  "pressao_hpa": 1022,
-  "ponto_orvalho_c": 11.0,
+  "umidade_pct": 98,
+  "pressao_hpa": 1020,
+  "ponto_orvalho_c": 10.8,
   "dengue": {
     "nivel_alerta": 4,
     "nivel_label": "Emergência",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-07-07T10:52:16.596749+00:00"
+  "_clima_em": "2026-07-08T10:13:25.833908+00:00"
 }
