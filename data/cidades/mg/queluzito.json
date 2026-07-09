@@ -4,8 +4,86 @@
   "slug": "queluzito",
   "latitude": -20.7321,
   "longitude": -43.8908,
-  "atualizado_em": "2026-07-09T08:41:04.027193+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-09T10:51:25.209344+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-09",
+      "min": 10.4,
+      "max": 22.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "06:32",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-07-10",
+      "min": 10.7,
+      "max": 24.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "06:32",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-07-11",
+      "min": 12.0,
+      "max": 25.5,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "06:32",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-07-12",
+      "min": 13.4,
+      "max": 26.8,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 5.4,
+      "nascer_sol": "06:32",
+      "por_sol": "17:30"
+    },
+    {
+      "data": "2026-07-13",
+      "min": 13.2,
+      "max": 21.1,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 14.1,
+      "uv": 2.2,
+      "nascer_sol": "06:32",
+      "por_sol": "17:30"
+    },
+    {
+      "data": "2026-07-14",
+      "min": 11.7,
+      "max": 18.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 5.0,
+      "nascer_sol": "06:32",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-07-15",
+      "min": 11.3,
+      "max": 19.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "06:31",
+      "por_sol": "17:31"
+    }
+  ],
   "reservatorio": {
     "nome": "Itutinga",
     "nivel_pct": 94.0,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-07-09T10:01:59.889058+00:00"
   },
   "uv": {
-    "indice": 5.7,
+    "indice": 5.8,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 40,
-    "categoria": "Boa",
+    "indice": 53,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 16.1,
-    "pm10": 16.3,
-    "no2": 8.7,
+    "pm25": 20.4,
+    "pm10": 21.0,
+    "no2": 7.5,
     "o3": 56.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-07T10:52:16.596749+00:00"
+    "atualizado_em": "2026-07-09T10:51:25.209344+00:00"
   },
   "sol": {
     "nascer": "06:32",
-    "por": "17:28",
+    "por": "17:29",
     "duracao_h": 10.9,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 74.2,
-    "dias_proxima_cheia": 7,
+    "nome": "Quarto Minguante",
+    "iluminacao_pct": 93.0,
+    "fase_pct": 80.9,
+    "dias_proxima_cheia": 9,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 15.5,
+  "temperatura_atual": 13.0,
   "vento": {
-    "velocidade_kmh": 2.7,
-    "direcao_graus": 318,
-    "direcao": "NO",
-    "max_kmh": 20.7,
-    "rajada_kmh": 40.7,
-    "direcao_dominante": "O",
+    "velocidade_kmh": 8.9,
+    "direcao_graus": 111,
+    "direcao": "ESE",
+    "max_kmh": 14.9,
+    "rajada_kmh": 26.6,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 92,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 14.2,
+  "umidade_pct": 95,
+  "pressao_hpa": 1022,
+  "ponto_orvalho_c": 12.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
   },
-  "_clima_em": "2026-07-07T10:52:16.596749+00:00"
+  "_clima_em": "2026-07-09T10:51:25.209344+00:00"
 }
