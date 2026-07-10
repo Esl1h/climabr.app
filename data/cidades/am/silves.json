@@ -4,8 +4,86 @@
   "slug": "silves",
   "latitude": -2.8205,
   "longitude": -58.5371,
-  "atualizado_em": "2026-07-10T08:28:25.403806+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-10T10:50:22.620884+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-10",
+      "min": 23.6,
+      "max": 29.7,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 4.0,
+      "uv": 7.6,
+      "nascer_sol": "07:00",
+      "por_sol": "18:58"
+    },
+    {
+      "data": "2026-07-11",
+      "min": 22.5,
+      "max": 30.3,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 12.3,
+      "uv": 7.6,
+      "nascer_sol": "07:00",
+      "por_sol": "18:58"
+    },
+    {
+      "data": "2026-07-12",
+      "min": 22.5,
+      "max": 31.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.4,
+      "uv": 7.7,
+      "nascer_sol": "07:00",
+      "por_sol": "18:58"
+    },
+    {
+      "data": "2026-07-13",
+      "min": 22.9,
+      "max": 32.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 7.3,
+      "nascer_sol": "07:00",
+      "por_sol": "18:58"
+    },
+    {
+      "data": "2026-07-14",
+      "min": 23.1,
+      "max": 31.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.4,
+      "uv": 7.6,
+      "nascer_sol": "07:00",
+      "por_sol": "18:59"
+    },
+    {
+      "data": "2026-07-15",
+      "min": 22.7,
+      "max": 30.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.3,
+      "uv": 7.3,
+      "nascer_sol": "07:01",
+      "por_sol": "18:59"
+    },
+    {
+      "data": "2026-07-16",
+      "min": 24.3,
+      "max": 31.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 7.0,
+      "nascer_sol": "07:01",
+      "por_sol": "18:59"
+    }
+  ],
   "reservatorio": {
     "nome": "Balbina",
     "nivel_pct": 93.4,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-07-10T09:57:11.701865+00:00"
   },
   "uv": {
-    "indice": 7.5,
+    "indice": 7.6,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 28,
+    "indice": 18,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 11.9,
-    "pm10": 12.9,
-    "no2": 1.5,
-    "o3": 37.0,
+    "pm25": 5.7,
+    "pm10": 6.9,
+    "no2": 1.7,
+    "o3": 36.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-07T10:52:16.596749+00:00"
+    "atualizado_em": "2026-07-10T10:50:22.620884+00:00"
   },
   "sol": {
     "nascer": "07:00",
-    "por": "18:57",
+    "por": "18:58",
     "duracao_h": 12.0,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 74.2,
-    "dias_proxima_cheia": 7,
+    "nome": "Quarto Minguante",
+    "iluminacao_pct": 83.0,
+    "fase_pct": 84.3,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 24.2,
+  "temperatura_atual": 25.0,
   "vento": {
-    "velocidade_kmh": 6.5,
-    "direcao_graus": 44,
+    "velocidade_kmh": 6.6,
+    "direcao_graus": 43,
     "direcao": "NE",
-    "max_kmh": 10.2,
-    "rajada_kmh": 30.6,
+    "max_kmh": 11.9,
+    "rajada_kmh": 33.1,
     "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 97,
-  "pressao_hpa": 1015,
-  "ponto_orvalho_c": 23.7,
+  "umidade_pct": 91,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 23.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
   },
-  "_clima_em": "2026-07-07T10:52:16.596749+00:00"
+  "_clima_em": "2026-07-10T10:50:22.620884+00:00"
 }

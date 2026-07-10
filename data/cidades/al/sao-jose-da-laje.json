@@ -4,58 +4,136 @@
   "slug": "sao-jose-da-laje",
   "latitude": -8.9875,
   "longitude": -36.04,
-  "atualizado_em": "2026-07-10T08:22:04.056316+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-10T10:50:22.620884+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-10",
+      "min": 20.5,
+      "max": 25.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 5.3,
+      "uv": 6.8,
+      "nascer_sol": "05:40",
+      "por_sol": "17:18"
+    },
+    {
+      "data": "2026-07-11",
+      "min": 20.3,
+      "max": 26.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 5.7,
+      "nascer_sol": "05:40",
+      "por_sol": "17:18"
+    },
+    {
+      "data": "2026-07-12",
+      "min": 19.6,
+      "max": 27.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 7.3,
+      "nascer_sol": "05:40",
+      "por_sol": "17:18"
+    },
+    {
+      "data": "2026-07-13",
+      "min": 19.8,
+      "max": 28.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.0,
+      "nascer_sol": "05:40",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-07-14",
+      "min": 20.7,
+      "max": 28.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.3,
+      "nascer_sol": "05:40",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-07-15",
+      "min": 20.1,
+      "max": 26.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.8,
+      "uv": 5.3,
+      "nascer_sol": "05:40",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-07-16",
+      "min": 20.1,
+      "max": 22.1,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 16.6,
+      "uv": 0.3,
+      "nascer_sol": "05:40",
+      "por_sol": "17:19"
+    }
+  ],
   "queimadas": {
     "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-10T09:57:11.701865+00:00"
   },
   "uv": {
-    "indice": 7.2,
+    "indice": 6.8,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 40,
+    "indice": 28,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 7.2,
-    "pm10": 9.1,
-    "no2": 4.8,
-    "o3": 36.0,
+    "pm25": 9.2,
+    "pm10": 11.1,
+    "no2": 6.3,
+    "o3": 33.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-08T10:13:25.833908+00:00"
+    "atualizado_em": "2026-07-10T10:50:22.620884+00:00"
   },
   "sol": {
     "nascer": "05:40",
-    "por": "17:17",
+    "por": "17:18",
     "duracao_h": 11.6,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Quarto Minguante",
-    "iluminacao_pct": 99.0,
-    "fase_pct": 77.5,
-    "dias_proxima_cheia": 8,
+    "iluminacao_pct": 83.0,
+    "fase_pct": 84.3,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 20.0,
+  "temperatura_atual": 22.2,
   "vento": {
-    "velocidade_kmh": 2.5,
-    "direcao_graus": 360,
-    "direcao": "N",
-    "max_kmh": 11.5,
-    "rajada_kmh": 19.8,
+    "velocidade_kmh": 7.0,
+    "direcao_graus": 177,
+    "direcao": "S",
+    "max_kmh": 12.7,
+    "rajada_kmh": 24.8,
     "direcao_dominante": "SSE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 94,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 19.0,
+  "umidade_pct": 90,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 20.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
   },
-  "_clima_em": "2026-07-08T10:13:25.833908+00:00"
+  "_clima_em": "2026-07-10T10:50:22.620884+00:00"
 }

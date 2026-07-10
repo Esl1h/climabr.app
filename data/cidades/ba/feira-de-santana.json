@@ -4,8 +4,86 @@
   "slug": "feira-de-santana",
   "latitude": -12.1931,
   "longitude": -39.034,
-  "atualizado_em": "2026-07-10T08:38:55.281227+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-10T10:50:22.620884+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-10",
+      "min": 18.3,
+      "max": 27.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 6.2,
+      "nascer_sol": "05:58",
+      "por_sol": "17:25"
+    },
+    {
+      "data": "2026-07-11",
+      "min": 18.7,
+      "max": 28.6,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "05:58",
+      "por_sol": "17:25"
+    },
+    {
+      "data": "2026-07-12",
+      "min": 18.9,
+      "max": 30.0,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 6.8,
+      "nascer_sol": "05:58",
+      "por_sol": "17:25"
+    },
+    {
+      "data": "2026-07-13",
+      "min": 19.4,
+      "max": 32.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.8,
+      "nascer_sol": "05:58",
+      "por_sol": "17:25"
+    },
+    {
+      "data": "2026-07-14",
+      "min": 21.2,
+      "max": 28.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 6.1,
+      "nascer_sol": "05:58",
+      "por_sol": "17:26"
+    },
+    {
+      "data": "2026-07-15",
+      "min": 20.6,
+      "max": 24.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.7,
+      "uv": 2.4,
+      "nascer_sol": "05:58",
+      "por_sol": "17:26"
+    },
+    {
+      "data": "2026-07-16",
+      "min": 19.8,
+      "max": 25.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 4.7,
+      "nascer_sol": "05:57",
+      "por_sol": "17:26"
+    }
+  ],
   "reservatorio": {
     "nome": "Pedra Do Cavalo",
     "nivel_pct": 117.0,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-07-10T09:57:11.701865+00:00"
   },
   "uv": {
-    "indice": 6.8,
+    "indice": 6.2,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 29,
+    "indice": 40,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 13.7,
-    "pm10": 16.5,
-    "no2": 15.3,
-    "o3": 22.0,
+    "pm25": 12.2,
+    "pm10": 14.6,
+    "no2": 10.6,
+    "o3": 41.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-08T10:13:25.833908+00:00"
+    "atualizado_em": "2026-07-10T10:50:22.620884+00:00"
   },
   "sol": {
     "nascer": "05:58",
-    "por": "17:24",
+    "por": "17:25",
     "duracao_h": 11.4,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Quarto Minguante",
-    "iluminacao_pct": 99.0,
-    "fase_pct": 77.5,
-    "dias_proxima_cheia": 8,
+    "iluminacao_pct": 83.0,
+    "fase_pct": 84.3,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 19.5,
+  "temperatura_atual": 22.7,
   "vento": {
-    "velocidade_kmh": 4.1,
-    "direcao_graus": 221,
-    "direcao": "SO",
-    "max_kmh": 9.6,
-    "rajada_kmh": 19.8,
-    "direcao_dominante": "SSE",
+    "velocidade_kmh": 5.2,
+    "direcao_graus": 149,
+    "direcao": "SSE",
+    "max_kmh": 13.4,
+    "rajada_kmh": 25.9,
+    "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 100,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 19.4,
+  "umidade_pct": 80,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 19.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-30T11:26:17.915135+00:00"
   },
-  "_clima_em": "2026-07-08T10:13:25.833908+00:00"
+  "_clima_em": "2026-07-10T10:50:22.620884+00:00"
 }
