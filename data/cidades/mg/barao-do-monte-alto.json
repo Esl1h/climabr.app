@@ -4,8 +4,86 @@
   "slug": "barao-do-monte-alto",
   "latitude": -21.2648,
   "longitude": -42.2784,
-  "atualizado_em": "2026-07-09T08:34:57.769229+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-11T09:25:14.504455+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-11",
+      "min": 16.5,
+      "max": 30.9,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.6,
+      "nascer_sol": "06:26",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-07-12",
+      "min": 17.9,
+      "max": 33.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 5.2,
+      "nascer_sol": "06:26",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-07-13",
+      "min": 17.9,
+      "max": 25.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 1.2,
+      "nascer_sol": "06:26",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-07-14",
+      "min": 14.5,
+      "max": 24.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.2,
+      "nascer_sol": "06:26",
+      "por_sol": "17:23"
+    },
+    {
+      "data": "2026-07-15",
+      "min": 13.4,
+      "max": 23.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.6,
+      "nascer_sol": "06:26",
+      "por_sol": "17:23"
+    },
+    {
+      "data": "2026-07-16",
+      "min": 13.1,
+      "max": 24.8,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:26",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-07-17",
+      "min": 14.3,
+      "max": 26.4,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "06:25",
+      "por_sol": "17:24"
+    }
+  ],
   "reservatorio": {
     "nome": "Barra Brauna",
     "nivel_pct": 29.6,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-07-11T08:17:44.038010+00:00"
   },
   "uv": {
-    "indice": 5.4,
+    "indice": 5.6,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 56,
+    "indice": 57,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 22.6,
-    "pm10": 23.1,
-    "no2": 22.9,
-    "o3": 31.0,
+    "pm25": 11.7,
+    "pm10": 11.8,
+    "no2": 14.6,
+    "o3": 12.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-08T10:13:25.833908+00:00"
+    "atualizado_em": "2026-07-11T09:25:14.504455+00:00"
   },
   "sol": {
-    "nascer": "06:27",
-    "por": "17:21",
+    "nascer": "06:26",
+    "por": "17:22",
     "duracao_h": 10.9,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 99.0,
-    "fase_pct": 77.5,
-    "dias_proxima_cheia": 8,
+    "nome": "Minguante",
+    "iluminacao_pct": 70.0,
+    "fase_pct": 87.7,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 18.2,
+  "temperatura_atual": 16.5,
   "vento": {
-    "velocidade_kmh": 1.2,
-    "direcao_graus": 39,
-    "direcao": "NE",
-    "max_kmh": 15.9,
-    "rajada_kmh": 33.1,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 3.4,
+    "direcao_graus": 245,
+    "direcao": "OSO",
+    "max_kmh": 7.5,
+    "rajada_kmh": 23.0,
+    "direcao_dominante": "ONO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 98,
-  "pressao_hpa": 1021,
-  "ponto_orvalho_c": 17.8,
+  "umidade_pct": 91,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 15.0,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -74,9 +152,9 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202620,
+    "semana_epidemiologica": 202626,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
+    "atualizado_em": "2026-07-11T09:45:31.369928+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -85,9 +163,9 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202620,
+    "semana_epidemiologica": 202626,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
+    "atualizado_em": "2026-07-11T09:45:31.369928+00:00"
   },
-  "_clima_em": "2026-07-08T10:13:25.833908+00:00"
+  "_clima_em": "2026-07-11T09:25:14.504455+00:00"
 }
