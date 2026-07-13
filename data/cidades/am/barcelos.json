@@ -4,58 +4,136 @@
   "slug": "barcelos",
   "latitude": -0.4651,
   "longitude": -63.4347,
-  "atualizado_em": "2026-07-13T08:11:19.592364+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-13T10:57:23.922787+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-13",
+      "min": 24.8,
+      "max": 29.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.7,
+      "uv": 7.9,
+      "nascer_sol": "07:16",
+      "por_sol": "19:22"
+    },
+    {
+      "data": "2026-07-14",
+      "min": 23.0,
+      "max": 29.0,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 4.9,
+      "uv": 7.7,
+      "nascer_sol": "07:16",
+      "por_sol": "19:22"
+    },
+    {
+      "data": "2026-07-15",
+      "min": 23.2,
+      "max": 29.5,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 5.5,
+      "uv": 7.8,
+      "nascer_sol": "07:16",
+      "por_sol": "19:22"
+    },
+    {
+      "data": "2026-07-16",
+      "min": 23.6,
+      "max": 30.2,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.9,
+      "uv": 8.0,
+      "nascer_sol": "07:17",
+      "por_sol": "19:22"
+    },
+    {
+      "data": "2026-07-17",
+      "min": 23.8,
+      "max": 30.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 4.2,
+      "uv": 7.5,
+      "nascer_sol": "07:17",
+      "por_sol": "19:22"
+    },
+    {
+      "data": "2026-07-18",
+      "min": 25.1,
+      "max": 29.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 7.9,
+      "uv": 8.0,
+      "nascer_sol": "07:17",
+      "por_sol": "19:22"
+    },
+    {
+      "data": "2026-07-19",
+      "min": 25.0,
+      "max": 30.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 5.6,
+      "uv": 7.7,
+      "nascer_sol": "07:17",
+      "por_sol": "19:23"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-13T09:51:41.648213+00:00"
   },
   "uv": {
-    "indice": 7.8,
+    "indice": 7.9,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 15,
+    "indice": 26,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 3.0,
-    "pm10": 3.5,
+    "pm25": 7.9,
+    "pm10": 9.3,
     "no2": 0.2,
-    "o3": 25.0,
+    "o3": 20.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-08T10:13:25.833908+00:00"
+    "atualizado_em": "2026-07-13T10:57:23.922787+00:00"
   },
   "sol": {
     "nascer": "07:16",
-    "por": "19:21",
+    "por": "19:22",
     "duracao_h": 12.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 99.0,
-    "fase_pct": 77.5,
-    "dias_proxima_cheia": 8,
+    "nome": "Minguante",
+    "iluminacao_pct": 34.0,
+    "fase_pct": 94.5,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 24.7,
+  "temperatura_atual": 25.1,
   "vento": {
-    "velocidade_kmh": 1.3,
-    "direcao_graus": 172,
-    "direcao": "S",
-    "max_kmh": 7.4,
-    "rajada_kmh": 25.2,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 5.5,
+    "direcao_graus": 163,
+    "direcao": "SSE",
+    "max_kmh": 8.7,
+    "rajada_kmh": 26.6,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 96,
+  "umidade_pct": 91,
   "pressao_hpa": 1014,
-  "ponto_orvalho_c": 23.9,
+  "ponto_orvalho_c": 23.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
   },
-  "_clima_em": "2026-07-08T10:13:25.833908+00:00"
+  "_clima_em": "2026-07-13T10:57:23.922787+00:00"
 }

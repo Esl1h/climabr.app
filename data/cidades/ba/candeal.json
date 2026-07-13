@@ -4,8 +4,86 @@
   "slug": "candeal",
   "latitude": -11.8711,
   "longitude": -39.1908,
-  "atualizado_em": "2026-07-13T08:22:02.572462+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-13T10:57:23.922787+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-13",
+      "min": 19.8,
+      "max": 32.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 6.9,
+      "nascer_sol": "05:58",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-07-14",
+      "min": 20.5,
+      "max": 31.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 6.0,
+      "nascer_sol": "05:58",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-07-15",
+      "min": 20.2,
+      "max": 25.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.3,
+      "uv": 4.0,
+      "nascer_sol": "05:58",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-07-16",
+      "min": 18.5,
+      "max": 25.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 5.8,
+      "nascer_sol": "05:57",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-07-17",
+      "min": 17.5,
+      "max": 27.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 4.5,
+      "nascer_sol": "05:57",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-07-18",
+      "min": 18.2,
+      "max": 27.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.7,
+      "nascer_sol": "05:57",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-07-19",
+      "min": 17.3,
+      "max": 29.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "05:57",
+      "por_sol": "17:28"
+    }
+  ],
   "reservatorio": {
     "nome": "Pedra Do Cavalo",
     "nivel_pct": 116.5,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-07-13T09:51:41.648213+00:00"
   },
   "uv": {
-    "indice": 6.7,
+    "indice": 6.9,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 41,
+    "indice": 28,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 13.2,
-    "pm10": 15.7,
-    "no2": 15.2,
-    "o3": 20.0,
+    "pm25": 5.3,
+    "pm10": 6.7,
+    "no2": 5.6,
+    "o3": 43.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-11T09:25:14.504455+00:00"
+    "atualizado_em": "2026-07-13T10:57:23.922787+00:00"
   },
   "sol": {
     "nascer": "05:58",
-    "por": "17:26",
+    "por": "17:27",
     "duracao_h": 11.5,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Minguante",
-    "iluminacao_pct": 70.0,
-    "fase_pct": 87.7,
-    "dias_proxima_cheia": 11,
+    "iluminacao_pct": 34.0,
+    "fase_pct": 94.5,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 18.8,
+  "temperatura_atual": 24.3,
   "vento": {
-    "velocidade_kmh": 1.6,
-    "direcao_graus": 117,
-    "direcao": "ESE",
-    "max_kmh": 17.9,
-    "rajada_kmh": 33.5,
-    "direcao_dominante": "ESE",
+    "velocidade_kmh": 4.4,
+    "direcao_graus": 348,
+    "direcao": "NNO",
+    "max_kmh": 13.3,
+    "rajada_kmh": 23.4,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 94,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 17.7,
+  "umidade_pct": 68,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 18.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-30T11:26:17.915135+00:00"
   },
-  "_clima_em": "2026-07-11T09:25:14.504455+00:00"
+  "_clima_em": "2026-07-13T10:57:23.922787+00:00"
 }
