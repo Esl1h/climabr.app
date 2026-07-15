@@ -4,8 +4,86 @@
   "slug": "santana-do-ipanema",
   "latitude": -9.3581,
   "longitude": -37.2105,
-  "atualizado_em": "2026-07-15T07:11:47.174033+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-15T09:59:10.094104+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-15",
+      "min": 20.4,
+      "max": 29.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 7.1,
+      "uv": 7.0,
+      "nascer_sol": "05:46",
+      "por_sol": "17:23"
+    },
+    {
+      "data": "2026-07-16",
+      "min": 19.7,
+      "max": 23.2,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 5.3,
+      "uv": 3.0,
+      "nascer_sol": "05:46",
+      "por_sol": "17:23"
+    },
+    {
+      "data": "2026-07-17",
+      "min": 20.5,
+      "max": 25.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 1.8,
+      "nascer_sol": "05:46",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-07-18",
+      "min": 20.1,
+      "max": 22.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 5.4,
+      "uv": 5.6,
+      "nascer_sol": "05:46",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-07-19",
+      "min": 19.1,
+      "max": 26.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "05:45",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-07-20",
+      "min": 17.7,
+      "max": 27.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "05:45",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-07-21",
+      "min": 19.3,
+      "max": 27.7,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "05:45",
+      "por_sol": "17:24"
+    }
+  ],
   "reservatorio": {
     "nome": "Xingo",
     "nivel_pct": 61.0,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-07-15T08:39:47.430461+00:00"
   },
   "uv": {
-    "indice": 7.3,
+    "indice": 7.0,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 17,
+    "indice": 29,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 5.0,
-    "pm10": 6.0,
-    "no2": 3.0,
-    "o3": 47.0,
+    "pm25": 3.8,
+    "pm10": 5.5,
+    "no2": 2.0,
+    "o3": 45.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-13T10:57:23.922787+00:00"
+    "atualizado_em": "2026-07-15T09:59:10.094104+00:00"
   },
   "sol": {
     "nascer": "05:46",
@@ -48,25 +126,25 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Minguante",
-    "iluminacao_pct": 34.0,
-    "fase_pct": 94.5,
-    "dias_proxima_cheia": 13,
+    "nome": "Nova",
+    "iluminacao_pct": 8.0,
+    "fase_pct": 1.2,
+    "dias_proxima_cheia": 14,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.9,
+  "temperatura_atual": 22.1,
   "vento": {
-    "velocidade_kmh": 2.3,
-    "direcao_graus": 360,
-    "direcao": "N",
-    "max_kmh": 14.7,
-    "rajada_kmh": 26.6,
-    "direcao_dominante": "ESE",
+    "velocidade_kmh": 9.7,
+    "direcao_graus": 145,
+    "direcao": "SE",
+    "max_kmh": 25.4,
+    "rajada_kmh": 47.5,
+    "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 78,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 18.9,
+  "umidade_pct": 89,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 20.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
   },
-  "_clima_em": "2026-07-13T10:57:23.922787+00:00"
+  "_clima_em": "2026-07-15T09:59:10.094104+00:00"
 }

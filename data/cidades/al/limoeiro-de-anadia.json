@@ -4,8 +4,86 @@
   "slug": "limoeiro-de-anadia",
   "latitude": -9.7324,
   "longitude": -36.4677,
-  "atualizado_em": "2026-07-15T07:09:01.668115+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-15T09:59:10.094104+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-15",
+      "min": 21.1,
+      "max": 27.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 5.8,
+      "uv": 6.7,
+      "nascer_sol": "05:43",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-07-16",
+      "min": 20.6,
+      "max": 23.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 5.5,
+      "nascer_sol": "05:43",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-17",
+      "min": 21.2,
+      "max": 24.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.1,
+      "uv": 6.5,
+      "nascer_sol": "05:43",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-18",
+      "min": 20.9,
+      "max": 24.2,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 7.4,
+      "uv": 5.8,
+      "nascer_sol": "05:43",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-19",
+      "min": 19.6,
+      "max": 26.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 5.2,
+      "nascer_sol": "05:43",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-20",
+      "min": 18.8,
+      "max": 26.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "05:43",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-21",
+      "min": 19.8,
+      "max": 26.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "05:43",
+      "por_sol": "17:21"
+    }
+  ],
   "reservatorio": {
     "nome": "Xingo",
     "nivel_pct": 61.0,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-07-15T08:39:47.430461+00:00"
   },
   "uv": {
-    "indice": 7.2,
+    "indice": 6.7,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 41,
-    "categoria": "Boa",
+    "indice": 52,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 13.6,
-    "pm10": 15.6,
-    "no2": 8.7,
-    "o3": 37.0,
+    "pm25": 13.1,
+    "pm10": 16.4,
+    "no2": 8.5,
+    "o3": 33.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-12T09:48:10.576788+00:00"
+    "atualizado_em": "2026-07-15T09:59:10.094104+00:00"
   },
   "sol": {
     "nascer": "05:43",
@@ -48,25 +126,25 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Minguante",
-    "iluminacao_pct": 53.0,
-    "fase_pct": 91.1,
-    "dias_proxima_cheia": 12,
+    "nome": "Nova",
+    "iluminacao_pct": 8.0,
+    "fase_pct": 1.2,
+    "dias_proxima_cheia": 14,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.1,
+  "temperatura_atual": 23.0,
   "vento": {
-    "velocidade_kmh": 7.4,
-    "direcao_graus": 45,
-    "direcao": "NE",
-    "max_kmh": 13.5,
-    "rajada_kmh": 27.0,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 5.6,
+    "direcao_graus": 151,
+    "direcao": "SSE",
+    "max_kmh": 23.2,
+    "rajada_kmh": 41.8,
+    "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 88,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 19.9,
+  "umidade_pct": 87,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 20.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
   },
-  "_clima_em": "2026-07-12T09:48:10.576788+00:00"
+  "_clima_em": "2026-07-15T09:59:10.094104+00:00"
 }

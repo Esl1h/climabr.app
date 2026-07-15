@@ -4,8 +4,86 @@
   "slug": "itaubal",
   "latitude": 0.5384,
   "longitude": -50.6403,
-  "atualizado_em": "2026-07-15T07:13:26.173190+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-15T09:59:10.094104+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-15",
+      "min": 22.8,
+      "max": 31.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 8.1,
+      "nascer_sol": "06:24",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-07-16",
+      "min": 24.3,
+      "max": 31.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.9,
+      "uv": 8.1,
+      "nascer_sol": "06:24",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-07-17",
+      "min": 22.6,
+      "max": 30.3,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 7.9,
+      "uv": 8.1,
+      "nascer_sol": "06:24",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-07-18",
+      "min": 23.8,
+      "max": 31.7,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.6,
+      "uv": 8.2,
+      "nascer_sol": "06:24",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-07-19",
+      "min": 23.3,
+      "max": 28.0,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 8.0,
+      "uv": 8.2,
+      "nascer_sol": "06:24",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-07-20",
+      "min": 22.6,
+      "max": 28.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 14.5,
+      "uv": 7.5,
+      "nascer_sol": "06:24",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-07-21",
+      "min": 22.4,
+      "max": 28.4,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 17.6,
+      "uv": 7.8,
+      "nascer_sol": "06:24",
+      "por_sol": "18:33"
+    }
+  ],
   "reservatorio": {
     "nome": "Ferreira Gomes",
     "nivel_pct": 1.0,
@@ -23,38 +101,38 @@
     "atualizado_em": "2026-07-15T08:39:47.430461+00:00"
   },
   "uv": {
-    "indice": 7.8,
-    "categoria": "Alto",
+    "indice": 8.1,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 45,
+    "indice": 29,
     "categoria": "Boa",
     "principal_poluente": "PM10",
-    "pm25": 8.6,
-    "pm10": 13.0,
-    "no2": 1.6,
+    "pm25": 4.6,
+    "pm10": 7.3,
+    "no2": 1.4,
     "o3": 38.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-12T09:48:10.576788+00:00"
+    "atualizado_em": "2026-07-15T09:59:10.094104+00:00"
   },
   "sol": {
-    "nascer": "06:23",
-    "por": "18:32",
+    "nascer": "06:24",
+    "por": "18:33",
     "duracao_h": 12.1,
     "estacao": "Verão",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Minguante",
-    "iluminacao_pct": 53.0,
-    "fase_pct": 91.1,
-    "dias_proxima_cheia": 12,
+    "nome": "Nova",
+    "iluminacao_pct": 8.0,
+    "fase_pct": 1.2,
+    "dias_proxima_cheia": 14,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 24.2,
+  "temperatura_atual": 23.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -77,17 +155,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
   },
-  "_clima_em": "2026-07-12T09:48:10.576788+00:00",
+  "_clima_em": "2026-07-15T09:59:10.094104+00:00",
   "vento": {
-    "velocidade_kmh": 7.4,
-    "direcao_graus": 96,
-    "direcao": "E",
-    "max_kmh": 12.8,
-    "rajada_kmh": 36.7,
+    "velocidade_kmh": 7.0,
+    "direcao_graus": 21,
+    "direcao": "NNE",
+    "max_kmh": 14.5,
+    "rajada_kmh": 33.5,
     "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 97,
-  "pressao_hpa": 1013,
-  "ponto_orvalho_c": 23.7
+  "umidade_pct": 95,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 22.7
 }

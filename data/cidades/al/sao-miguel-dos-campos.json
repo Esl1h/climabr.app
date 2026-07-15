@@ -4,58 +4,136 @@
   "slug": "sao-miguel-dos-campos",
   "latitude": -9.7728,
   "longitude": -36.1008,
-  "atualizado_em": "2026-07-15T07:12:14.457560+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-15T09:59:10.094104+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-15",
+      "min": 21.8,
+      "max": 26.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 6.6,
+      "uv": 7.0,
+      "nascer_sol": "05:42",
+      "por_sol": "17:18"
+    },
+    {
+      "data": "2026-07-16",
+      "min": 21.0,
+      "max": 24.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 5.2,
+      "uv": 6.0,
+      "nascer_sol": "05:42",
+      "por_sol": "17:18"
+    },
+    {
+      "data": "2026-07-17",
+      "min": 21.4,
+      "max": 25.3,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 4.0,
+      "uv": 7.0,
+      "nascer_sol": "05:42",
+      "por_sol": "17:18"
+    },
+    {
+      "data": "2026-07-18",
+      "min": 21.3,
+      "max": 24.3,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 8.6,
+      "uv": 6.5,
+      "nascer_sol": "05:42",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-07-19",
+      "min": 20.6,
+      "max": 26.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "05:42",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-07-20",
+      "min": 20.4,
+      "max": 27.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 6.5,
+      "nascer_sol": "05:41",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-07-21",
+      "min": 20.9,
+      "max": 26.5,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "05:41",
+      "por_sol": "17:19"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-15T08:39:47.430461+00:00"
   },
   "uv": {
-    "indice": 7.1,
+    "indice": 7.0,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 52,
+    "indice": 56,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 16.3,
-    "pm10": 18.0,
-    "no2": 6.7,
-    "o3": 47.0,
+    "pm25": 13.8,
+    "pm10": 17.1,
+    "no2": 8.7,
+    "o3": 35.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-13T10:57:23.922787+00:00"
+    "atualizado_em": "2026-07-15T09:59:10.094104+00:00"
   },
   "sol": {
     "nascer": "05:42",
-    "por": "17:17",
+    "por": "17:18",
     "duracao_h": 11.6,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Minguante",
-    "iluminacao_pct": 34.0,
-    "fase_pct": 94.5,
-    "dias_proxima_cheia": 13,
+    "nome": "Nova",
+    "iluminacao_pct": 8.0,
+    "fase_pct": 1.2,
+    "dias_proxima_cheia": 14,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 24.5,
+  "temperatura_atual": 24.3,
   "vento": {
-    "velocidade_kmh": 8.8,
-    "direcao_graus": 15,
-    "direcao": "NNE",
-    "max_kmh": 13.9,
-    "rajada_kmh": 27.7,
-    "direcao_dominante": "NE",
+    "velocidade_kmh": 7.5,
+    "direcao_graus": 172,
+    "direcao": "S",
+    "max_kmh": 21.0,
+    "rajada_kmh": 38.9,
+    "direcao_dominante": "SSE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 78,
-  "pressao_hpa": 1016,
-  "ponto_orvalho_c": 20.5,
+  "umidade_pct": 83,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 21.2,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
   },
-  "_clima_em": "2026-07-13T10:57:23.922787+00:00"
+  "_clima_em": "2026-07-15T09:59:10.094104+00:00"
 }

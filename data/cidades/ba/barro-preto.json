@@ -4,8 +4,86 @@
   "slug": "barro-preto",
   "latitude": -14.7759,
   "longitude": -39.4447,
-  "atualizado_em": "2026-07-15T07:22:21.167188+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-15T09:59:10.094104+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-15",
+      "min": 15.7,
+      "max": 24.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 3.0,
+      "nascer_sol": "06:04",
+      "por_sol": "17:23"
+    },
+    {
+      "data": "2026-07-16",
+      "min": 14.4,
+      "max": 23.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 4.2,
+      "nascer_sol": "06:03",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-07-17",
+      "min": 16.0,
+      "max": 22.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.0,
+      "uv": 6.3,
+      "nascer_sol": "06:03",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-07-18",
+      "min": 15.8,
+      "max": 24.4,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.6,
+      "uv": 4.4,
+      "nascer_sol": "06:03",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-07-19",
+      "min": 16.3,
+      "max": 25.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 3.0,
+      "nascer_sol": "06:03",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-07-20",
+      "min": 17.0,
+      "max": 24.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.5,
+      "uv": 5.2,
+      "nascer_sol": "06:03",
+      "por_sol": "17:25"
+    },
+    {
+      "data": "2026-07-21",
+      "min": 17.7,
+      "max": 24.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 6.0,
+      "nascer_sol": "06:03",
+      "por_sol": "17:25"
+    }
+  ],
   "reservatorio": {
     "nome": "Itapebi",
     "nivel_pct": 43.0,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-07-15T08:39:47.430461+00:00"
   },
   "uv": {
-    "indice": 5.0,
+    "indice": 3.0,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 22,
+    "indice": 27,
     "categoria": "Boa",
-    "principal_poluente": "PM2.5",
-    "pm25": 4.3,
-    "pm10": 6.1,
-    "no2": 2.1,
-    "o3": 61.0,
+    "principal_poluente": "PM10",
+    "pm25": 3.6,
+    "pm10": 5.5,
+    "no2": 1.6,
+    "o3": 48.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-10T10:50:22.620884+00:00"
+    "atualizado_em": "2026-07-15T09:59:10.094104+00:00"
   },
   "sol": {
     "nascer": "06:04",
-    "por": "17:22",
+    "por": "17:23",
     "duracao_h": 11.3,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 83.0,
-    "fase_pct": 84.3,
-    "dias_proxima_cheia": 10,
+    "nome": "Nova",
+    "iluminacao_pct": 8.0,
+    "fase_pct": 1.2,
+    "dias_proxima_cheia": 14,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 20.7,
+  "temperatura_atual": 17.9,
   "vento": {
-    "velocidade_kmh": 4.0,
-    "direcao_graus": 216,
+    "velocidade_kmh": 11.4,
+    "direcao_graus": 215,
     "direcao": "SO",
-    "max_kmh": 7.2,
-    "rajada_kmh": 20.2,
-    "direcao_dominante": "NE",
+    "max_kmh": 16.6,
+    "rajada_kmh": 38.2,
+    "direcao_dominante": "S",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 94,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 19.7,
+  "umidade_pct": 92,
+  "pressao_hpa": 1022,
+  "ponto_orvalho_c": 16.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
   },
-  "_clima_em": "2026-07-10T10:50:22.620884+00:00"
+  "_clima_em": "2026-07-15T09:59:10.094104+00:00"
 }

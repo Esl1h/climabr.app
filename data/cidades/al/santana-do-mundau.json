@@ -4,30 +4,108 @@
   "slug": "santana-do-mundau",
   "latitude": -9.131,
   "longitude": -36.1913,
-  "atualizado_em": "2026-07-15T07:11:52.151645+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-15T09:59:10.094104+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-15",
+      "min": 20.5,
+      "max": 25.1,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 12.1,
+      "uv": 6.7,
+      "nascer_sol": "05:41",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-07-16",
+      "min": 20.2,
+      "max": 21.7,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 12.3,
+      "uv": 5.0,
+      "nascer_sol": "05:41",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-17",
+      "min": 19.7,
+      "max": 22.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 7.9,
+      "uv": 5.7,
+      "nascer_sol": "05:41",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-18",
+      "min": 20.2,
+      "max": 23.0,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 17.3,
+      "uv": 3.8,
+      "nascer_sol": "05:41",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-19",
+      "min": 18.8,
+      "max": 25.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 7.0,
+      "nascer_sol": "05:41",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-20",
+      "min": 18.7,
+      "max": 23.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.6,
+      "uv": 6.5,
+      "nascer_sol": "05:41",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-21",
+      "min": 19.3,
+      "max": 23.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.8,
+      "uv": 4.8,
+      "nascer_sol": "05:41",
+      "por_sol": "17:21"
+    }
+  ],
   "queimadas": {
     "focos_100km": 2,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-15T08:39:47.430461+00:00"
   },
   "uv": {
-    "indice": 7.3,
+    "indice": 6.7,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 47,
-    "categoria": "Boa",
+    "indice": 51,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 9.7,
-    "pm10": 11.2,
-    "no2": 4.5,
-    "o3": 41.0,
+    "pm25": 9.1,
+    "pm10": 11.5,
+    "no2": 5.5,
+    "o3": 39.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-13T10:57:23.922787+00:00"
+    "atualizado_em": "2026-07-15T09:59:10.094104+00:00"
   },
   "sol": {
     "nascer": "05:41",
@@ -37,25 +115,25 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Minguante",
-    "iluminacao_pct": 34.0,
-    "fase_pct": 94.5,
-    "dias_proxima_cheia": 13,
+    "nome": "Nova",
+    "iluminacao_pct": 8.0,
+    "fase_pct": 1.2,
+    "dias_proxima_cheia": 14,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 21.8,
+  "temperatura_atual": 21.9,
   "vento": {
-    "velocidade_kmh": 9.6,
-    "direcao_graus": 346,
-    "direcao": "NNO",
-    "max_kmh": 10.7,
-    "rajada_kmh": 22.7,
-    "direcao_dominante": "N",
+    "velocidade_kmh": 3.7,
+    "direcao_graus": 223,
+    "direcao": "SO",
+    "max_kmh": 21.3,
+    "rajada_kmh": 40.3,
+    "direcao_dominante": "SSE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 87,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 19.5,
+  "umidade_pct": 93,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 20.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
   },
-  "_clima_em": "2026-07-13T10:57:23.922787+00:00"
+  "_clima_em": "2026-07-15T09:59:10.094104+00:00"
 }
