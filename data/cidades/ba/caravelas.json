@@ -4,8 +4,86 @@
   "slug": "caravelas",
   "latitude": -17.6574,
   "longitude": -39.6893,
-  "atualizado_em": "2026-07-16T07:35:31.455433+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-16T10:05:02.813573+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-16",
+      "min": 15.1,
+      "max": 24.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 3.0,
+      "nascer_sol": "06:09",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-17",
+      "min": 16.6,
+      "max": 26.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 6.0,
+      "nascer_sol": "06:09",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-18",
+      "min": 16.0,
+      "max": 27.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 5.6,
+      "nascer_sol": "06:09",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-19",
+      "min": 17.1,
+      "max": 27.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 5.0,
+      "nascer_sol": "06:09",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-20",
+      "min": 16.9,
+      "max": 28.5,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "06:09",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-21",
+      "min": 16.0,
+      "max": 27.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 6.0,
+      "nascer_sol": "06:08",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-22",
+      "min": 18.7,
+      "max": 28.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.0,
+      "nascer_sol": "06:08",
+      "por_sol": "17:22"
+    }
+  ],
   "reservatorio": {
     "nome": "Sta.Clara-Mg",
     "nivel_pct": 102.4,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-07-16T08:38:12.057050+00:00"
   },
   "uv": {
-    "indice": 4.0,
+    "indice": 3.0,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 18,
+    "indice": 35,
     "categoria": "Boa",
-    "principal_poluente": "PM2.5",
-    "pm25": 5.4,
-    "pm10": 6.8,
-    "no2": 2.4,
-    "o3": 54.0,
+    "principal_poluente": "PM10",
+    "pm25": 8.9,
+    "pm10": 14.2,
+    "no2": 3.9,
+    "o3": 46.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-13T10:57:23.922787+00:00"
+    "atualizado_em": "2026-07-16T10:05:02.813573+00:00"
   },
   "sol": {
-    "nascer": "06:10",
-    "por": "17:19",
+    "nascer": "06:09",
+    "por": "17:20",
     "duracao_h": 11.2,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Minguante",
-    "iluminacao_pct": 34.0,
-    "fase_pct": 94.5,
+    "nome": "Nova",
+    "iluminacao_pct": 29.0,
+    "fase_pct": 4.6,
     "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 24.4,
+  "temperatura_atual": 16.6,
   "vento": {
-    "velocidade_kmh": 18.3,
-    "direcao_graus": 162,
-    "direcao": "SSE",
-    "max_kmh": 18.3,
-    "rajada_kmh": 38.5,
+    "velocidade_kmh": 8.1,
+    "direcao_graus": 204,
+    "direcao": "SSO",
+    "max_kmh": 14.1,
+    "rajada_kmh": 31.3,
     "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 80,
-  "pressao_hpa": 1015,
-  "ponto_orvalho_c": 20.8,
+  "umidade_pct": 84,
+  "pressao_hpa": 1025,
+  "ponto_orvalho_c": 13.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-06-30T11:26:17.915135+00:00"
   },
-  "_clima_em": "2026-07-13T10:57:23.922787+00:00"
+  "_clima_em": "2026-07-16T10:05:02.813573+00:00"
 }

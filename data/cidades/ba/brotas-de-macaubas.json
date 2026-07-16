@@ -4,58 +4,136 @@
   "slug": "brotas-de-macaubas",
   "latitude": -12.0893,
   "longitude": -42.447,
-  "atualizado_em": "2026-07-16T07:33:03.767713+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-16T10:05:02.813573+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-16",
+      "min": 15.6,
+      "max": 24.9,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 7.0,
+      "nascer_sol": "06:11",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-07-17",
+      "min": 14.6,
+      "max": 24.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.0,
+      "nascer_sol": "06:11",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-07-18",
+      "min": 16.4,
+      "max": 25.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.0,
+      "nascer_sol": "06:11",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-07-19",
+      "min": 16.2,
+      "max": 26.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.0,
+      "nascer_sol": "06:11",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-07-20",
+      "min": 16.2,
+      "max": 27.0,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 7.0,
+      "nascer_sol": "06:10",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-07-21",
+      "min": 18.0,
+      "max": 28.6,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 6.8,
+      "nascer_sol": "06:10",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-07-22",
+      "min": 18.8,
+      "max": 29.6,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 7.0,
+      "nascer_sol": "06:10",
+      "por_sol": "17:41"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-16T08:38:12.057050+00:00"
   },
   "uv": {
-    "indice": 6.5,
+    "indice": 7.0,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 11,
+    "indice": 24,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 0.9,
-    "pm10": 0.9,
-    "no2": 3.7,
-    "o3": 36.0,
+    "pm25": 2.6,
+    "pm10": 3.6,
+    "no2": 1.1,
+    "o3": 53.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-12T09:48:10.576788+00:00"
+    "atualizado_em": "2026-07-16T10:05:02.813573+00:00"
   },
   "sol": {
     "nascer": "06:11",
-    "por": "17:39",
+    "por": "17:40",
     "duracao_h": 11.5,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Minguante",
-    "iluminacao_pct": 53.0,
-    "fase_pct": 91.1,
-    "dias_proxima_cheia": 12,
+    "nome": "Nova",
+    "iluminacao_pct": 29.0,
+    "fase_pct": 4.6,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 18.0,
+  "temperatura_atual": 15.6,
   "vento": {
-    "velocidade_kmh": 5.3,
-    "direcao_graus": 33,
-    "direcao": "NNE",
-    "max_kmh": 14.0,
-    "rajada_kmh": 34.6,
-    "direcao_dominante": "S",
+    "velocidade_kmh": 10.8,
+    "direcao_graus": 95,
+    "direcao": "E",
+    "max_kmh": 24.5,
+    "rajada_kmh": 56.2,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 77,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 13.8,
+  "umidade_pct": 76,
+  "pressao_hpa": 1022,
+  "ponto_orvalho_c": 11.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
   },
-  "_clima_em": "2026-07-12T09:48:10.576788+00:00"
+  "_clima_em": "2026-07-16T10:05:02.813573+00:00"
 }

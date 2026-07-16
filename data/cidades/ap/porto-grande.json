@@ -4,8 +4,86 @@
   "slug": "porto-grande",
   "latitude": 0.5856,
   "longitude": -51.67,
-  "atualizado_em": "2026-07-16T07:23:04.596046+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-16T10:05:02.813573+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-16",
+      "min": 22.4,
+      "max": 31.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 7.5,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-17",
+      "min": 23.0,
+      "max": 29.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.1,
+      "uv": 7.5,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-18",
+      "min": 22.7,
+      "max": 29.4,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 4.2,
+      "uv": 7.9,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-19",
+      "min": 22.7,
+      "max": 29.5,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 3.0,
+      "uv": 8.2,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-20",
+      "min": 21.8,
+      "max": 27.9,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 16.4,
+      "uv": 7.8,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-21",
+      "min": 22.0,
+      "max": 28.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 12.0,
+      "uv": 6.2,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-22",
+      "min": 22.2,
+      "max": 29.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 6.0,
+      "uv": 7.3,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
+    }
+  ],
   "reservatorio": {
     "nome": "Cachoeira Caldeirao",
     "nivel_pct": 91.2,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-07-16T08:38:12.057050+00:00"
   },
   "uv": {
-    "indice": 8.1,
-    "categoria": "Muito Alto",
+    "indice": 7.5,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 29,
+    "indice": 22,
     "categoria": "Boa",
-    "principal_poluente": "PM2.5",
+    "principal_poluente": "PM10",
     "pm25": 4.1,
-    "pm10": 5.8,
-    "no2": 1.1,
-    "o3": 23.0,
+    "pm10": 6.9,
+    "no2": 1.0,
+    "o3": 33.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-14T09:55:07.048424+00:00"
+    "atualizado_em": "2026-07-16T10:05:02.813573+00:00"
   },
   "sol": {
     "nascer": "06:28",
@@ -48,13 +126,13 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Minguante",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 97.9,
-    "dias_proxima_cheia": 14,
+    "nome": "Nova",
+    "iluminacao_pct": 29.0,
+    "fase_pct": 4.6,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.1,
+  "temperatura_atual": 23.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -77,17 +155,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
   },
-  "_clima_em": "2026-07-14T09:55:07.048424+00:00",
+  "_clima_em": "2026-07-16T10:05:02.813573+00:00",
   "vento": {
-    "velocidade_kmh": 7.3,
-    "direcao_graus": 28,
-    "direcao": "NNE",
-    "max_kmh": 14.5,
-    "rajada_kmh": 33.1,
-    "direcao_dominante": "NE",
+    "velocidade_kmh": 7.0,
+    "direcao_graus": 78,
+    "direcao": "ENE",
+    "max_kmh": 14.8,
+    "rajada_kmh": 36.0,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 98,
+  "umidade_pct": 96,
   "pressao_hpa": 1015,
-  "ponto_orvalho_c": 22.7
+  "ponto_orvalho_c": 22.6
 }
