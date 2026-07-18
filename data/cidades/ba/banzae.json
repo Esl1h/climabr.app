@@ -4,8 +4,86 @@
   "slug": "banzae",
   "latitude": -10.6165,
   "longitude": -38.6543,
-  "atualizado_em": "2026-07-18T07:09:50.692066+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-18T09:21:17.618439+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-18",
+      "min": 17.3,
+      "max": 25.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 6.8,
+      "nascer_sol": "05:53",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-07-19",
+      "min": 17.6,
+      "max": 25.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 5.0,
+      "uv": 5.1,
+      "nascer_sol": "05:53",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-07-20",
+      "min": 19.0,
+      "max": 25.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.7,
+      "uv": 6.8,
+      "nascer_sol": "05:53",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-07-21",
+      "min": 18.0,
+      "max": 26.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 5.8,
+      "nascer_sol": "05:53",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-07-22",
+      "min": 18.7,
+      "max": 27.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.4,
+      "uv": 6.3,
+      "nascer_sol": "05:53",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-07-23",
+      "min": 19.3,
+      "max": 27.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 7.0,
+      "nascer_sol": "05:53",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-07-24",
+      "min": 18.9,
+      "max": 27.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "05:52",
+      "por_sol": "17:29"
+    }
+  ],
   "reservatorio": {
     "nome": "P. Afonso 4",
     "nivel_pct": 64.6,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-07-18T08:14:28.830853+00:00"
   },
   "uv": {
-    "indice": 6.1,
+    "indice": 6.8,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 30,
+    "indice": 32,
     "categoria": "Boa",
-    "principal_poluente": "PM2.5",
-    "pm25": 1.7,
-    "pm10": 2.3,
-    "no2": 2.0,
-    "o3": 51.0,
+    "principal_poluente": "PM10",
+    "pm25": 5.1,
+    "pm10": 8.2,
+    "no2": 1.9,
+    "o3": 45.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-15T09:59:10.094104+00:00"
+    "atualizado_em": "2026-07-18T09:21:17.618439+00:00"
   },
   "sol": {
     "nascer": "05:53",
-    "por": "17:27",
+    "por": "17:28",
     "duracao_h": 11.6,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Nova",
-    "iluminacao_pct": 8.0,
-    "fase_pct": 1.2,
-    "dias_proxima_cheia": 14,
+    "iluminacao_pct": 66.0,
+    "fase_pct": 11.4,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 20.2,
+  "temperatura_atual": 17.5,
   "vento": {
-    "velocidade_kmh": 12.1,
-    "direcao_graus": 145,
-    "direcao": "SE",
-    "max_kmh": 25.1,
-    "rajada_kmh": 54.4,
+    "velocidade_kmh": 4.9,
+    "direcao_graus": 147,
+    "direcao": "SSE",
+    "max_kmh": 21.3,
+    "rajada_kmh": 42.5,
     "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 100,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 20.1,
+  "umidade_pct": 99,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 17.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
   },
-  "_clima_em": "2026-07-15T09:59:10.094104+00:00"
+  "_clima_em": "2026-07-18T09:21:17.618439+00:00"
 }
