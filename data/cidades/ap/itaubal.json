@@ -4,8 +4,86 @@
   "slug": "itaubal",
   "latitude": 0.5384,
   "longitude": -50.6403,
-  "atualizado_em": "2026-07-19T07:29:18.143938+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-19T09:48:57.817195+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-19",
+      "min": 22.7,
+      "max": 27.8,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 23.3,
+      "uv": 8.2,
+      "nascer_sol": "06:24",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-07-20",
+      "min": 22.6,
+      "max": 29.2,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 13.7,
+      "uv": 8.2,
+      "nascer_sol": "06:24",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-07-21",
+      "min": 22.6,
+      "max": 28.4,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 13.0,
+      "uv": 8.1,
+      "nascer_sol": "06:24",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-07-22",
+      "min": 23.0,
+      "max": 31.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.1,
+      "uv": 8.2,
+      "nascer_sol": "06:24",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-07-23",
+      "min": 22.5,
+      "max": 31.9,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.2,
+      "nascer_sol": "06:24",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-07-24",
+      "min": 22.6,
+      "max": 29.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 8.7,
+      "uv": 8.0,
+      "nascer_sol": "06:24",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-07-25",
+      "min": 22.6,
+      "max": 31.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.1,
+      "nascer_sol": "06:24",
+      "por_sol": "18:33"
+    }
+  ],
   "reservatorio": {
     "nome": "Ferreira Gomes",
     "nivel_pct": 7.7,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-07-19T08:39:51.886090+00:00"
   },
   "uv": {
-    "indice": 8.1,
+    "indice": 8.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 41,
+    "indice": 23,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 5.1,
-    "pm10": 7.6,
-    "no2": 1.0,
-    "o3": 43.0,
+    "pm25": 2.0,
+    "pm10": 3.0,
+    "no2": 0.7,
+    "o3": 47.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-17T09:53:43.571036+00:00"
+    "atualizado_em": "2026-07-19T09:48:57.817195+00:00"
   },
   "sol": {
     "nascer": "06:24",
@@ -48,13 +126,13 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 48.0,
-    "fase_pct": 8.0,
-    "dias_proxima_cheia": 12,
+    "nome": "Crescente",
+    "iluminacao_pct": 80.0,
+    "fase_pct": 14.8,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.9,
+  "temperatura_atual": 22.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -62,9 +140,9 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202625,
+    "semana_epidemiologica": 202627,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
+    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -73,21 +151,21 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202625,
+    "semana_epidemiologica": 202627,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
+    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-17T09:53:43.571036+00:00",
+  "_clima_em": "2026-07-19T09:48:57.817195+00:00",
   "vento": {
-    "velocidade_kmh": 6.1,
-    "direcao_graus": 88,
-    "direcao": "E",
-    "max_kmh": 18.0,
-    "rajada_kmh": 39.6,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 8.8,
+    "direcao_graus": 46,
+    "direcao": "NE",
+    "max_kmh": 14.6,
+    "rajada_kmh": 40.3,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 96,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 23.2
+  "umidade_pct": 100,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 22.9
 }

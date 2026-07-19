@@ -4,58 +4,136 @@
   "slug": "canutama",
   "latitude": -7.3008,
   "longitude": -64.0619,
-  "atualizado_em": "2026-07-19T07:31:17.692752+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-19T09:48:57.817195+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-19",
+      "min": 22.4,
+      "max": 33.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 7.4,
+      "nascer_sol": "07:30",
+      "por_sol": "19:15"
+    },
+    {
+      "data": "2026-07-20",
+      "min": 22.6,
+      "max": 32.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 7.5,
+      "nascer_sol": "07:30",
+      "por_sol": "19:15"
+    },
+    {
+      "data": "2026-07-21",
+      "min": 21.8,
+      "max": 32.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.5,
+      "nascer_sol": "07:30",
+      "por_sol": "19:15"
+    },
+    {
+      "data": "2026-07-22",
+      "min": 22.6,
+      "max": 33.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 7.5,
+      "nascer_sol": "07:30",
+      "por_sol": "19:15"
+    },
+    {
+      "data": "2026-07-23",
+      "min": 22.4,
+      "max": 32.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 7.5,
+      "nascer_sol": "07:29",
+      "por_sol": "19:15"
+    },
+    {
+      "data": "2026-07-24",
+      "min": 22.7,
+      "max": 33.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 7.2,
+      "nascer_sol": "07:29",
+      "por_sol": "19:15"
+    },
+    {
+      "data": "2026-07-25",
+      "min": 23.5,
+      "max": 32.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "07:29",
+      "por_sol": "19:16"
+    }
+  ],
   "queimadas": {
     "focos_100km": 22,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-19T08:39:51.886090+00:00"
   },
   "uv": {
-    "indice": 7.0,
+    "indice": 7.4,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 40,
+    "indice": 26,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 12.8,
-    "pm10": 13.7,
-    "no2": 1.9,
+    "pm25": 8.8,
+    "pm10": 8.9,
+    "no2": 2.7,
     "o3": 13.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-17T09:53:43.571036+00:00"
+    "atualizado_em": "2026-07-19T09:48:57.817195+00:00"
   },
   "sol": {
     "nascer": "07:30",
-    "por": "19:14",
-    "duracao_h": 11.7,
+    "por": "19:15",
+    "duracao_h": 11.8,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 48.0,
-    "fase_pct": 8.0,
-    "dias_proxima_cheia": 12,
+    "nome": "Crescente",
+    "iluminacao_pct": 80.0,
+    "fase_pct": 14.8,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.9,
+  "temperatura_atual": 22.4,
   "vento": {
-    "velocidade_kmh": 6.6,
-    "direcao_graus": 55,
+    "velocidade_kmh": 4.4,
+    "direcao_graus": 38,
     "direcao": "NE",
-    "max_kmh": 9.1,
-    "rajada_kmh": 24.5,
-    "direcao_dominante": "E",
+    "max_kmh": 9.4,
+    "rajada_kmh": 24.8,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 99,
-  "pressao_hpa": 1013,
-  "ponto_orvalho_c": 22.8,
+  "umidade_pct": 96,
+  "pressao_hpa": 1010,
+  "ponto_orvalho_c": 21.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -63,9 +141,9 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202625,
+    "semana_epidemiologica": 202627,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
+    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -74,9 +152,9 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202625,
+    "semana_epidemiologica": 202627,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
+    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-17T09:53:43.571036+00:00"
+  "_clima_em": "2026-07-19T09:48:57.817195+00:00"
 }

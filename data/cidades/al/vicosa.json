@@ -4,30 +4,108 @@
   "slug": "vicosa",
   "latitude": -9.3592,
   "longitude": -36.2651,
-  "atualizado_em": "2026-07-19T07:28:46.603305+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-19T09:48:57.817195+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-19",
+      "min": 18.8,
+      "max": 25.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.7,
+      "uv": 7.3,
+      "nascer_sol": "05:42",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-20",
+      "min": 19.0,
+      "max": 25.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.2,
+      "uv": 7.0,
+      "nascer_sol": "05:42",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-21",
+      "min": 19.9,
+      "max": 25.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.4,
+      "uv": 6.0,
+      "nascer_sol": "05:42",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-22",
+      "min": 19.5,
+      "max": 26.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.6,
+      "uv": 7.0,
+      "nascer_sol": "05:41",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-23",
+      "min": 20.7,
+      "max": 24.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 5.9,
+      "uv": 7.5,
+      "nascer_sol": "05:41",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-24",
+      "min": 19.5,
+      "max": 25.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.2,
+      "uv": 4.5,
+      "nascer_sol": "05:41",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-25",
+      "min": 18.6,
+      "max": 26.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "05:41",
+      "por_sol": "17:21"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-19T08:39:51.886090+00:00"
   },
   "uv": {
-    "indice": 5.0,
-    "categoria": "Moderado",
+    "indice": 7.3,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 46,
+    "indice": 50,
     "categoria": "Boa",
-    "principal_poluente": "PM2.5",
-    "pm25": 5.7,
-    "pm10": 7.9,
-    "no2": 4.0,
-    "o3": 47.0,
+    "principal_poluente": "PM10",
+    "pm25": 12.5,
+    "pm10": 19.5,
+    "no2": 4.5,
+    "o3": 48.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-17T09:53:43.571036+00:00"
+    "atualizado_em": "2026-07-19T09:48:57.817195+00:00"
   },
   "sol": {
     "nascer": "05:42",
@@ -37,32 +115,32 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 48.0,
-    "fase_pct": 8.0,
-    "dias_proxima_cheia": 12,
+    "nome": "Crescente",
+    "iluminacao_pct": 80.0,
+    "fase_pct": 14.8,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 20.4,
+  "temperatura_atual": 20.6,
   "vento": {
-    "velocidade_kmh": 15.5,
-    "direcao_graus": 155,
-    "direcao": "SSE",
-    "max_kmh": 23.8,
-    "rajada_kmh": 42.1,
-    "direcao_dominante": "SSE",
+    "velocidade_kmh": 10.6,
+    "direcao_graus": 116,
+    "direcao": "ESE",
+    "max_kmh": 22.0,
+    "rajada_kmh": 39.6,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
-    "nivel_incidencia": 1,
-    "nivel_incidencia_label": "Média",
-    "casos_semana": 0,
-    "casos_estimados": 10,
-    "semana_epidemiologica": 202625,
+    "nivel_incidencia": 2,
+    "nivel_incidencia_label": "Alta",
+    "casos_semana": 9,
+    "casos_estimados": 23,
+    "semana_epidemiologica": 202627,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
+    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -71,12 +149,12 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202625,
+    "semana_epidemiologica": 202627,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-08T10:47:21.316945+00:00"
+    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-17T09:53:43.571036+00:00",
-  "umidade_pct": 91,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 18.9
+  "_clima_em": "2026-07-19T09:48:57.817195+00:00",
+  "umidade_pct": 85,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 17.9
 }
