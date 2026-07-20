@@ -4,8 +4,86 @@
   "slug": "casa-nova",
   "latitude": -9.2403,
   "longitude": -41.3365,
-  "atualizado_em": "2026-07-20T08:11:37.705109+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-20T10:48:29.860843+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-20",
+      "min": 20.0,
+      "max": 28.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 5.8,
+      "nascer_sol": "06:02",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-07-21",
+      "min": 20.4,
+      "max": 30.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 7.3,
+      "nascer_sol": "06:02",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-07-22",
+      "min": 20.4,
+      "max": 30.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 7.3,
+      "nascer_sol": "06:02",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-07-23",
+      "min": 20.8,
+      "max": 31.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.3,
+      "nascer_sol": "06:01",
+      "por_sol": "17:42"
+    },
+    {
+      "data": "2026-07-24",
+      "min": 20.0,
+      "max": 31.3,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 7.3,
+      "nascer_sol": "06:01",
+      "por_sol": "17:42"
+    },
+    {
+      "data": "2026-07-25",
+      "min": 20.6,
+      "max": 30.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "06:01",
+      "por_sol": "17:42"
+    },
+    {
+      "data": "2026-07-26",
+      "min": 22.1,
+      "max": 31.4,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "06:01",
+      "por_sol": "17:42"
+    }
+  ],
   "reservatorio": {
     "nome": "Sobradinho",
     "nivel_pct": 87.2,
@@ -23,50 +101,50 @@
     "atualizado_em": "2026-07-20T09:39:41.257896+00:00"
   },
   "uv": {
-    "indice": 7.2,
-    "categoria": "Alto",
+    "indice": 5.8,
+    "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 27,
+    "indice": 23,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 3.0,
-    "pm10": 4.2,
-    "no2": 1.6,
-    "o3": 56.0,
+    "pm25": 1.6,
+    "pm10": 2.4,
+    "no2": 1.1,
+    "o3": 51.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-17T09:53:43.571036+00:00"
+    "atualizado_em": "2026-07-20T10:48:29.860843+00:00"
   },
   "sol": {
     "nascer": "06:02",
-    "por": "17:40",
-    "duracao_h": 11.6,
+    "por": "17:41",
+    "duracao_h": 11.7,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 48.0,
-    "fase_pct": 8.0,
-    "dias_proxima_cheia": 12,
+    "nome": "Crescente",
+    "iluminacao_pct": 91.0,
+    "fase_pct": 18.2,
+    "dias_proxima_cheia": 9,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 19.7,
+  "temperatura_atual": 22.2,
   "vento": {
-    "velocidade_kmh": 17.1,
-    "direcao_graus": 125,
-    "direcao": "SE",
-    "max_kmh": 28.5,
-    "rajada_kmh": 58.0,
+    "velocidade_kmh": 18.7,
+    "direcao_graus": 114,
+    "direcao": "ESE",
+    "max_kmh": 27.5,
+    "rajada_kmh": 55.1,
     "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 76,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 15.3,
+  "umidade_pct": 73,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 17.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-18T09:41:25.306440+00:00"
   },
-  "_clima_em": "2026-07-17T09:53:43.571036+00:00"
+  "_clima_em": "2026-07-20T10:48:29.860843+00:00"
 }
