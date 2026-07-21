@@ -4,30 +4,108 @@
   "slug": "sao-jose-da-laje",
   "latitude": -8.9875,
   "longitude": -36.04,
-  "atualizado_em": "2026-07-21T07:33:43.273189+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-21T10:22:44.189167+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-21",
+      "min": 20.2,
+      "max": 25.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.8,
+      "uv": 4.9,
+      "nascer_sol": "05:40",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-22",
+      "min": 20.1,
+      "max": 25.0,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 5.6,
+      "uv": 6.8,
+      "nascer_sol": "05:40",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-07-23",
+      "min": 21.0,
+      "max": 24.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 12.6,
+      "uv": 7.5,
+      "nascer_sol": "05:40",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-24",
+      "min": 19.8,
+      "max": 24.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.8,
+      "uv": 7.5,
+      "nascer_sol": "05:40",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-25",
+      "min": 19.4,
+      "max": 25.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 4.2,
+      "nascer_sol": "05:40",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-26",
+      "min": 19.5,
+      "max": 25.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 5.9,
+      "uv": 5.7,
+      "nascer_sol": "05:39",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-27",
+      "min": 19.9,
+      "max": 23.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 4.6,
+      "uv": 7.2,
+      "nascer_sol": "05:39",
+      "por_sol": "17:21"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-20T09:39:41.257896+00:00"
   },
   "uv": {
-    "indice": 7.5,
-    "categoria": "Alto",
+    "indice": 4.9,
+    "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 46,
-    "categoria": "Boa",
-    "principal_poluente": "PM10",
-    "pm25": 11.9,
-    "pm10": 18.2,
-    "no2": 3.7,
-    "o3": 49.0,
+    "indice": 54,
+    "categoria": "Moderada",
+    "principal_poluente": "PM2.5",
+    "pm25": 7.6,
+    "pm10": 9.5,
+    "no2": 5.2,
+    "o3": 35.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-19T09:48:57.817195+00:00"
+    "atualizado_em": "2026-07-21T10:22:44.189167+00:00"
   },
   "sol": {
     "nascer": "05:40",
@@ -38,24 +116,24 @@
   },
   "lua": {
     "nome": "Crescente",
-    "iluminacao_pct": 80.0,
-    "fase_pct": 14.8,
-    "dias_proxima_cheia": 10,
+    "iluminacao_pct": 98.0,
+    "fase_pct": 21.6,
+    "dias_proxima_cheia": 8,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 20.5,
+  "temperatura_atual": 21.5,
   "vento": {
-    "velocidade_kmh": 4.5,
-    "direcao_graus": 180,
-    "direcao": "S",
-    "max_kmh": 17.9,
-    "rajada_kmh": 32.0,
+    "velocidade_kmh": 8.3,
+    "direcao_graus": 153,
+    "direcao": "SSE",
+    "max_kmh": 14.6,
+    "rajada_kmh": 28.1,
     "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 87,
-  "pressao_hpa": 1016,
-  "ponto_orvalho_c": 18.3,
+  "umidade_pct": 94,
+  "pressao_hpa": 1017,
+  "ponto_orvalho_c": 20.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-19T09:48:57.817195+00:00"
+  "_clima_em": "2026-07-21T10:22:44.189167+00:00"
 }
