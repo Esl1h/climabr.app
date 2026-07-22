@@ -4,8 +4,86 @@
   "slug": "guajara",
   "latitude": -7.2298,
   "longitude": -72.8446,
-  "atualizado_em": "2026-07-22T07:40:17.668123+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-22T10:22:28.456305+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-22",
+      "min": 22.0,
+      "max": 29.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 8.5,
+      "uv": 7.5,
+      "nascer_sol": "08:05",
+      "por_sol": "19:50"
+    },
+    {
+      "data": "2026-07-23",
+      "min": 23.1,
+      "max": 29.3,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 5.8,
+      "uv": 7.5,
+      "nascer_sol": "08:04",
+      "por_sol": "19:51"
+    },
+    {
+      "data": "2026-07-24",
+      "min": 22.9,
+      "max": 30.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 7.5,
+      "nascer_sol": "08:04",
+      "por_sol": "19:51"
+    },
+    {
+      "data": "2026-07-25",
+      "min": 22.2,
+      "max": 29.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 7.5,
+      "nascer_sol": "08:04",
+      "por_sol": "19:51"
+    },
+    {
+      "data": "2026-07-26",
+      "min": 23.4,
+      "max": 30.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 7.5,
+      "nascer_sol": "08:04",
+      "por_sol": "19:51"
+    },
+    {
+      "data": "2026-07-27",
+      "min": 22.2,
+      "max": 30.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 7.5,
+      "nascer_sol": "08:04",
+      "por_sol": "19:51"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 22.3,
+      "max": 31.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 7.5,
+      "nascer_sol": "08:04",
+      "por_sol": "19:51"
+    }
+  ],
   "queimadas": {
     "focos_100km": 7,
     "fonte": "NASA FIRMS / INPE",
@@ -19,15 +97,15 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 47,
+    "indice": 33,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 15.1,
-    "pm10": 15.9,
-    "no2": 3.0,
-    "o3": 5.0,
+    "pm25": 6.9,
+    "pm10": 7.2,
+    "no2": 2.6,
+    "o3": 9.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-20T10:48:29.860843+00:00"
+    "atualizado_em": "2026-07-22T10:22:28.456305+00:00"
   },
   "sol": {
     "nascer": "08:05",
@@ -38,24 +116,24 @@
   },
   "lua": {
     "nome": "Crescente",
-    "iluminacao_pct": 91.0,
-    "fase_pct": 18.2,
-    "dias_proxima_cheia": 9,
+    "iluminacao_pct": 100.0,
+    "fase_pct": 24.9,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.6,
+  "temperatura_atual": 22.1,
   "vento": {
-    "velocidade_kmh": 3.6,
-    "direcao_graus": 323,
-    "direcao": "NO",
-    "max_kmh": 8.8,
-    "rajada_kmh": 26.3,
-    "direcao_dominante": "N",
+    "velocidade_kmh": 2.3,
+    "direcao_graus": 241,
+    "direcao": "OSO",
+    "max_kmh": 8.6,
+    "rajada_kmh": 22.0,
+    "direcao_dominante": "ONO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 100,
-  "pressao_hpa": 1010,
-  "ponto_orvalho_c": 22.5,
+  "umidade_pct": 99,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 21.9,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-20T10:48:29.860843+00:00"
+  "_clima_em": "2026-07-22T10:22:28.456305+00:00"
 }

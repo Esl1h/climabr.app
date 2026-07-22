@@ -4,23 +4,12 @@
   "slug": "vespasiano",
   "latitude": -19.7309,
   "longitude": -43.9448,
-  "atualizado_em": "2026-07-20T10:48:29.860843+00:00",
+  "atualizado_em": "2026-07-22T10:22:28.456305+00:00",
   "previsao": [
     {
-      "data": "2026-07-20",
-      "min": 12.5,
-      "max": 24.8,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
-      "uv": 6.1,
-      "nascer_sol": "06:29",
-      "por_sol": "17:34"
-    },
-    {
-      "data": "2026-07-21",
-      "min": 13.4,
-      "max": 26.7,
+      "data": "2026-07-22",
+      "min": 14.3,
+      "max": 27.7,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
@@ -29,22 +18,11 @@
       "por_sol": "17:35"
     },
     {
-      "data": "2026-07-22",
-      "min": 14.8,
-      "max": 27.4,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
-      "chuva_mm": 0,
-      "uv": 6.2,
-      "nascer_sol": "06:28",
-      "por_sol": "17:35"
-    },
-    {
       "data": "2026-07-23",
-      "min": 13.9,
-      "max": 29.2,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "min": 14.1,
+      "max": 29.1,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
       "uv": 6.2,
       "nascer_sol": "06:28",
@@ -53,9 +31,9 @@
     {
       "data": "2026-07-24",
       "min": 17.2,
-      "max": 28.2,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
+      "max": 29.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
       "uv": 6.2,
       "nascer_sol": "06:28",
@@ -63,37 +41,57 @@
     },
     {
       "data": "2026-07-25",
-      "min": 17.1,
-      "max": 28.9,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
-      "chuva_mm": 0,
-      "uv": 6.0,
+      "min": 17.8,
+      "max": 29.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 6.2,
       "nascer_sol": "06:27",
       "por_sol": "17:36"
     },
     {
       "data": "2026-07-26",
-      "min": 18.3,
-      "max": 27.9,
+      "min": 16.6,
+      "max": 28.2,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "06:27",
+      "por_sol": "17:37"
+    },
+    {
+      "data": "2026-07-27",
+      "min": 16.5,
+      "max": 28.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 6.2,
+      "nascer_sol": "06:26",
+      "por_sol": "17:37"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 17.7,
+      "max": 28.9,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
       "chuva_mm": 0,
-      "uv": 6.0,
-      "nascer_sol": "06:27",
+      "uv": 6.2,
+      "nascer_sol": "06:26",
       "por_sol": "17:37"
     }
   ],
   "reservatorio": {
-    "nome": "Guilm. Amorim",
-    "nivel_pct": 78.0,
-    "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-20",
-    "distancia_km": 103.0,
-    "aproximado": true,
-    "nota": "Reservatório hidrelétrico mais próximo (103km). Pode não ser o sistema de abastecimento desta cidade.",
-    "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-22T09:05:49.182241+00:00"
+    "nome": "Vargem das Flores",
+    "nivel_pct": 84.0,
+    "variacao_semana_pct": null,
+    "data_medicao": "2026-07-22",
+    "aproximado": false,
+    "fonte": "COPASA",
+    "atualizado_em": "2026-07-22T10:42:35.498298+00:00"
   },
   "queimadas": {
     "focos_100km": 18,
@@ -101,50 +99,50 @@
     "atualizado_em": "2026-07-22T09:05:53.342088+00:00"
   },
   "uv": {
-    "indice": 6.1,
+    "indice": 6.2,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 22,
+    "indice": 24,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 6.0,
-    "pm10": 7.4,
-    "no2": 8.0,
-    "o3": 37.0,
+    "pm25": 4.0,
+    "pm10": 4.2,
+    "no2": 9.3,
+    "o3": 30.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-20T10:48:29.860843+00:00"
+    "atualizado_em": "2026-07-22T10:22:28.456305+00:00"
   },
   "sol": {
-    "nascer": "06:29",
-    "por": "17:34",
+    "nascer": "06:28",
+    "por": "17:35",
     "duracao_h": 11.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Crescente",
-    "iluminacao_pct": 91.0,
-    "fase_pct": 18.2,
-    "dias_proxima_cheia": 9,
+    "iluminacao_pct": 100.0,
+    "fase_pct": 24.9,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 15.3,
+  "temperatura_atual": 15.9,
   "vento": {
-    "velocidade_kmh": 5.9,
-    "direcao_graus": 110,
-    "direcao": "ESE",
-    "max_kmh": 8.1,
-    "rajada_kmh": 20.5,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 5.0,
+    "direcao_graus": 128,
+    "direcao": "SE",
+    "max_kmh": 10.5,
+    "rajada_kmh": 25.6,
+    "direcao_dominante": "NNE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 81,
-  "pressao_hpa": 1021,
-  "ponto_orvalho_c": 12.2,
+  "umidade_pct": 90,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 14.2,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -167,5 +165,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-12T10:08:34.655895+00:00"
   },
-  "_clima_em": "2026-07-20T10:48:29.860843+00:00"
+  "_clima_em": "2026-07-22T10:22:28.456305+00:00"
 }

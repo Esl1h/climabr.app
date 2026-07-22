@@ -4,8 +4,86 @@
   "slug": "pariconha",
   "latitude": -9.2405,
   "longitude": -38.0475,
-  "atualizado_em": "2026-07-22T07:34:26.218797+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-22T10:22:28.456305+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-22",
+      "min": 19.2,
+      "max": 28.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 7.5,
+      "nascer_sol": "05:48",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-07-23",
+      "min": 20.9,
+      "max": 29.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.3,
+      "uv": 7.5,
+      "nascer_sol": "05:48",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-07-24",
+      "min": 21.1,
+      "max": 27.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.5,
+      "nascer_sol": "05:48",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-07-25",
+      "min": 20.7,
+      "max": 26.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.6,
+      "nascer_sol": "05:48",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-07-26",
+      "min": 21.0,
+      "max": 29.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 7.6,
+      "nascer_sol": "05:48",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-07-27",
+      "min": 19.8,
+      "max": 29.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.3,
+      "nascer_sol": "05:47",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 20.3,
+      "max": 28.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 6.2,
+      "nascer_sol": "05:47",
+      "por_sol": "17:29"
+    }
+  ],
   "reservatorio": {
     "nome": "Apolonio Sales",
     "nivel_pct": 74.6,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-07-22T09:05:53.342088+00:00"
   },
   "uv": {
-    "indice": 6.1,
+    "indice": 7.5,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 31,
+    "indice": 33,
     "categoria": "Boa",
-    "principal_poluente": "PM2.5",
-    "pm25": 1.4,
-    "pm10": 1.9,
-    "no2": 1.5,
-    "o3": 47.0,
+    "principal_poluente": "PM10",
+    "pm25": 7.7,
+    "pm10": 11.8,
+    "no2": 2.5,
+    "o3": 42.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-20T10:48:29.860843+00:00"
+    "atualizado_em": "2026-07-22T10:22:28.456305+00:00"
   },
   "sol": {
     "nascer": "05:48",
@@ -49,24 +127,24 @@
   },
   "lua": {
     "nome": "Crescente",
-    "iluminacao_pct": 91.0,
-    "fase_pct": 18.2,
-    "dias_proxima_cheia": 9,
+    "iluminacao_pct": 100.0,
+    "fase_pct": 24.9,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 21.9,
+  "temperatura_atual": 22.2,
   "vento": {
-    "velocidade_kmh": 16.3,
-    "direcao_graus": 125,
+    "velocidade_kmh": 13.2,
+    "direcao_graus": 129,
     "direcao": "SE",
-    "max_kmh": 18.5,
-    "rajada_kmh": 39.2,
+    "max_kmh": 18.7,
+    "rajada_kmh": 36.0,
     "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 86,
+  "umidade_pct": 81,
   "pressao_hpa": 1017,
-  "ponto_orvalho_c": 19.4,
+  "ponto_orvalho_c": 18.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-20T10:48:29.860843+00:00"
+  "_clima_em": "2026-07-22T10:22:28.456305+00:00"
 }

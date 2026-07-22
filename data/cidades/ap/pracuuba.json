@@ -4,8 +4,86 @@
   "slug": "pracuuba",
   "latitude": 1.6258,
   "longitude": -51.2785,
-  "atualizado_em": "2026-07-22T07:38:02.450340+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-22T10:22:28.456305+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-22",
+      "min": 21.2,
+      "max": 31.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.3,
+      "nascer_sol": "06:25",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-23",
+      "min": 20.2,
+      "max": 31.9,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.4,
+      "nascer_sol": "06:25",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-24",
+      "min": 21.8,
+      "max": 29.7,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.0,
+      "uv": 6.8,
+      "nascer_sol": "06:25",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-25",
+      "min": 21.9,
+      "max": 30.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.2,
+      "uv": 7.8,
+      "nascer_sol": "06:25",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-26",
+      "min": 21.3,
+      "max": 31.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.4,
+      "nascer_sol": "06:25",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-27",
+      "min": 20.7,
+      "max": 30.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.9,
+      "uv": 8.2,
+      "nascer_sol": "06:25",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 22.4,
+      "max": 26.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 9.6,
+      "uv": 8.2,
+      "nascer_sol": "06:25",
+      "por_sol": "18:37"
+    }
+  ],
   "reservatorio": {
     "nome": "Coaracy Nunes",
     "nivel_pct": 96.6,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-07-22T09:05:53.342088+00:00"
   },
   "uv": {
-    "indice": 8.2,
+    "indice": 8.3,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 13,
+    "indice": 17,
     "categoria": "Boa",
     "principal_poluente": "PM10",
-    "pm25": 2.5,
-    "pm10": 3.9,
-    "no2": 0.6,
-    "o3": 34.0,
+    "pm25": 4.5,
+    "pm10": 7.1,
+    "no2": 1.6,
+    "o3": 29.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-20T10:48:29.860843+00:00"
+    "atualizado_em": "2026-07-22T10:22:28.456305+00:00"
   },
   "sol": {
     "nascer": "06:25",
@@ -49,12 +127,12 @@
   },
   "lua": {
     "nome": "Crescente",
-    "iluminacao_pct": 91.0,
-    "fase_pct": 18.2,
-    "dias_proxima_cheia": 9,
+    "iluminacao_pct": 100.0,
+    "fase_pct": 24.9,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.2,
+  "temperatura_atual": 22.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -77,17 +155,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-20T10:48:29.860843+00:00",
+  "_clima_em": "2026-07-22T10:22:28.456305+00:00",
   "vento": {
-    "velocidade_kmh": 7.1,
-    "direcao_graus": 109,
+    "velocidade_kmh": 3.8,
+    "direcao_graus": 107,
     "direcao": "ESE",
-    "max_kmh": 14.4,
-    "rajada_kmh": 40.0,
-    "direcao_dominante": "ESE",
+    "max_kmh": 11.7,
+    "rajada_kmh": 30.6,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 96,
+  "umidade_pct": 94,
   "pressao_hpa": 1012,
-  "ponto_orvalho_c": 22.6
+  "ponto_orvalho_c": 21.9
 }
