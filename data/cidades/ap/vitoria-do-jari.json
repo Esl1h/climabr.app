@@ -4,8 +4,86 @@
   "slug": "vitoria-do-jari",
   "latitude": -0.9964,
   "longitude": -52.0612,
-  "atualizado_em": "2026-07-24T07:34:07.654304+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-24T10:13:10.566945+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-24",
+      "min": 23.1,
+      "max": 31.8,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 3.5,
+      "uv": 8.2,
+      "nascer_sol": "06:32",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-07-25",
+      "min": 23.4,
+      "max": 31.5,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 2.0,
+      "uv": 8.2,
+      "nascer_sol": "06:32",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-07-26",
+      "min": 21.7,
+      "max": 32.1,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.2,
+      "nascer_sol": "06:32",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-07-27",
+      "min": 22.9,
+      "max": 32.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.5,
+      "uv": 8.2,
+      "nascer_sol": "06:32",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 22.8,
+      "max": 29.5,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 4.9,
+      "uv": 8.2,
+      "nascer_sol": "06:32",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 22.5,
+      "max": 30.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.0,
+      "uv": 7.5,
+      "nascer_sol": "06:32",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 23.1,
+      "max": 31.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 7.9,
+      "nascer_sol": "06:32",
+      "por_sol": "18:36"
+    }
+  ],
   "reservatorio": {
     "nome": "Sto Antonio Do Jari",
     "nivel_pct": 139.0,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-07-24T09:01:18.368481+00:00"
   },
   "uv": {
-    "indice": 7.6,
-    "categoria": "Alto",
+    "indice": 8.2,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 27,
+    "indice": 21,
     "categoria": "Boa",
-    "principal_poluente": "PM10",
-    "pm25": 1.7,
-    "pm10": 2.6,
-    "no2": 0.9,
-    "o3": 27.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 3.9,
+    "pm10": 5.7,
+    "no2": 1.1,
+    "o3": 28.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-22T10:22:28.456305+00:00"
+    "atualizado_em": "2026-07-24T10:13:10.566945+00:00"
   },
   "sol": {
     "nascer": "06:32",
@@ -48,13 +126,13 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 24.9,
-    "dias_proxima_cheia": 7,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 91.0,
+    "fase_pct": 31.7,
+    "dias_proxima_cheia": 5,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.5,
+  "temperatura_atual": 23.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -77,17 +155,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-22T10:22:28.456305+00:00",
+  "_clima_em": "2026-07-24T10:13:10.566945+00:00",
   "vento": {
-    "velocidade_kmh": 8.2,
-    "direcao_graus": 50,
-    "direcao": "NE",
-    "max_kmh": 14.7,
-    "rajada_kmh": 36.4,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 7.7,
+    "direcao_graus": 30,
+    "direcao": "NNE",
+    "max_kmh": 13.5,
+    "rajada_kmh": 32.4,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
   "umidade_pct": 98,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 23.1
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 23.3
 }
