@@ -4,8 +4,86 @@
   "slug": "catu",
   "latitude": -12.3306,
   "longitude": -38.4129,
-  "atualizado_em": "2026-07-26T07:52:24.243992+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-26T09:56:08.227146+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-26",
+      "min": 20.0,
+      "max": 27.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.4,
+      "uv": 6.8,
+      "nascer_sol": "05:54",
+      "por_sol": "17:26"
+    },
+    {
+      "data": "2026-07-27",
+      "min": 19.8,
+      "max": 27.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.1,
+      "nascer_sol": "05:53",
+      "por_sol": "17:26"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 19.4,
+      "max": 26.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.7,
+      "uv": 5.0,
+      "nascer_sol": "05:53",
+      "por_sol": "17:26"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 18.8,
+      "max": 26.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.1,
+      "uv": 7.2,
+      "nascer_sol": "05:53",
+      "por_sol": "17:26"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 17.0,
+      "max": 28.3,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "05:53",
+      "por_sol": "17:26"
+    },
+    {
+      "data": "2026-07-31",
+      "min": 19.0,
+      "max": 28.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.4,
+      "uv": 6.5,
+      "nascer_sol": "05:52",
+      "por_sol": "17:27"
+    },
+    {
+      "data": "2026-08-01",
+      "min": 18.8,
+      "max": 25.7,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.6,
+      "uv": 5.1,
+      "nascer_sol": "05:52",
+      "por_sol": "17:27"
+    }
+  ],
   "reservatorio": {
     "nome": "Pedra Do Cavalo",
     "nivel_pct": 114.3,
@@ -23,7 +101,7 @@
     "atualizado_em": "2026-07-26T08:42:38.241781+00:00"
   },
   "uv": {
-    "indice": 7.0,
+    "indice": 6.8,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
@@ -33,40 +111,40 @@
     "indice": 61,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 29.8,
-    "pm10": 31.2,
-    "no2": 9.9,
-    "o3": 22.0,
+    "pm25": 33.5,
+    "pm10": 35.0,
+    "no2": 9.0,
+    "o3": 25.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-24T10:13:10.566945+00:00"
+    "atualizado_em": "2026-07-26T09:56:08.227146+00:00"
   },
   "sol": {
     "nascer": "05:54",
-    "por": "17:25",
+    "por": "17:26",
     "duracao_h": 11.5,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 91.0,
-    "fase_pct": 31.7,
-    "dias_proxima_cheia": 5,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 66.0,
+    "fase_pct": 38.5,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 21.6,
+  "temperatura_atual": 22.0,
   "vento": {
-    "velocidade_kmh": 5.6,
-    "direcao_graus": 354,
-    "direcao": "N",
-    "max_kmh": 12.2,
-    "rajada_kmh": 25.2,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 1.3,
+    "direcao_graus": 262,
+    "direcao": "O",
+    "max_kmh": 13.1,
+    "rajada_kmh": 26.3,
+    "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 89,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 19.7,
+  "umidade_pct": 90,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 20.3,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -89,5 +167,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-18T09:41:25.306440+00:00"
   },
-  "_clima_em": "2026-07-24T10:13:10.566945+00:00"
+  "_clima_em": "2026-07-26T09:56:08.227146+00:00"
 }

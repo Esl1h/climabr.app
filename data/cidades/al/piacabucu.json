@@ -4,58 +4,136 @@
   "slug": "piacabucu",
   "latitude": -10.3869,
   "longitude": -36.4017,
-  "atualizado_em": "2026-07-26T07:36:20.702338+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-26T09:56:08.227146+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-26",
+      "min": 22.4,
+      "max": 27.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.1,
+      "uv": 6.3,
+      "nascer_sol": "05:43",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-27",
+      "min": 21.3,
+      "max": 27.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 7.3,
+      "nascer_sol": "05:43",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 22.0,
+      "max": 27.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.7,
+      "uv": 6.6,
+      "nascer_sol": "05:42",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 21.2,
+      "max": 27.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.9,
+      "uv": 6.9,
+      "nascer_sol": "05:42",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 19.0,
+      "max": 28.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 7.3,
+      "nascer_sol": "05:42",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-07-31",
+      "min": 21.0,
+      "max": 27.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 6.0,
+      "uv": 7.0,
+      "nascer_sol": "05:42",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-08-01",
+      "min": 21.8,
+      "max": 26.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.4,
+      "uv": 5.6,
+      "nascer_sol": "05:41",
+      "por_sol": "17:21"
+    }
+  ],
   "queimadas": {
     "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-26T08:42:38.241781+00:00"
   },
   "uv": {
-    "indice": 6.8,
+    "indice": 6.3,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 50,
+    "indice": 49,
     "categoria": "Boa",
-    "principal_poluente": "PM10",
-    "pm25": 8.9,
-    "pm10": 13.4,
-    "no2": 2.2,
-    "o3": 49.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 9.5,
+    "pm10": 14.0,
+    "no2": 2.8,
+    "o3": 43.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-24T10:13:10.566945+00:00"
+    "atualizado_em": "2026-07-26T09:56:08.227146+00:00"
   },
   "sol": {
     "nascer": "05:43",
-    "por": "17:20",
+    "por": "17:21",
     "duracao_h": 11.6,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 91.0,
-    "fase_pct": 31.7,
-    "dias_proxima_cheia": 5,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 66.0,
+    "fase_pct": 38.5,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 25.1,
+  "temperatura_atual": 24.9,
   "vento": {
-    "velocidade_kmh": 9.3,
-    "direcao_graus": 122,
+    "velocidade_kmh": 9.0,
+    "direcao_graus": 112,
     "direcao": "ESE",
-    "max_kmh": 12.9,
-    "rajada_kmh": 28.4,
-    "direcao_dominante": "SE",
+    "max_kmh": 15.2,
+    "rajada_kmh": 33.1,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 78,
-  "pressao_hpa": 1016,
-  "ponto_orvalho_c": 20.9,
+  "umidade_pct": 81,
+  "pressao_hpa": 1017,
+  "ponto_orvalho_c": 21.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-24T10:13:10.566945+00:00"
+  "_clima_em": "2026-07-26T09:56:08.227146+00:00"
 }
