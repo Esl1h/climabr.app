@@ -4,58 +4,136 @@
   "slug": "xapuri",
   "latitude": -10.5756,
   "longitude": -68.5047,
-  "atualizado_em": "2026-07-27T08:20:39.352046+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-27T11:16:55.780085+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-27",
+      "min": 21.7,
+      "max": 31.4,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 1.8,
+      "uv": 7.3,
+      "nascer_sol": "07:51",
+      "por_sol": "19:29"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 22.3,
+      "max": 32.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 7.3,
+      "nascer_sol": "07:51",
+      "por_sol": "19:29"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 22.5,
+      "max": 33.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 0.9,
+      "uv": 7.3,
+      "nascer_sol": "07:51",
+      "por_sol": "19:29"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 22.7,
+      "max": 33.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 7.3,
+      "nascer_sol": "07:51",
+      "por_sol": "19:29"
+    },
+    {
+      "data": "2026-07-31",
+      "min": 22.7,
+      "max": 33.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 7.4,
+      "nascer_sol": "07:50",
+      "por_sol": "19:29"
+    },
+    {
+      "data": "2026-08-01",
+      "min": 22.3,
+      "max": 30.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 6.0,
+      "uv": 6.5,
+      "nascer_sol": "07:50",
+      "por_sol": "19:30"
+    },
+    {
+      "data": "2026-08-02",
+      "min": 22.7,
+      "max": 31.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 6.2,
+      "nascer_sol": "07:50",
+      "por_sol": "19:30"
+    }
+  ],
   "queimadas": {
     "focos_100km": 9,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-27T10:13:11.301451+00:00"
   },
   "uv": {
-    "indice": 5.5,
-    "categoria": "Moderado",
+    "indice": 7.3,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 25,
+    "indice": 39,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 6.7,
-    "pm10": 6.8,
-    "no2": 5.4,
-    "o3": 8.0,
+    "pm25": 9.2,
+    "pm10": 9.4,
+    "no2": 2.9,
+    "o3": 12.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-25T09:42:50.384970+00:00"
+    "atualizado_em": "2026-07-27T11:16:55.780085+00:00"
   },
   "sol": {
-    "nascer": "07:52",
-    "por": "19:28",
+    "nascer": "07:51",
+    "por": "19:29",
     "duracao_h": 11.6,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 81.0,
-    "fase_pct": 35.1,
-    "dias_proxima_cheia": 4,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 49.0,
+    "fase_pct": 41.9,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.3,
+  "temperatura_atual": 22.0,
   "vento": {
-    "velocidade_kmh": 6.2,
-    "direcao_graus": 216,
-    "direcao": "SO",
-    "max_kmh": 9.0,
-    "rajada_kmh": 18.4,
-    "direcao_dominante": "O",
+    "velocidade_kmh": 1.8,
+    "direcao_graus": 336,
+    "direcao": "NNO",
+    "max_kmh": 10.5,
+    "rajada_kmh": 25.9,
+    "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
   "umidade_pct": 98,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 21.9,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 21.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-25T09:42:50.384970+00:00"
+  "_clima_em": "2026-07-27T11:16:55.780085+00:00"
 }

@@ -4,56 +4,134 @@
   "slug": "placido-de-castro",
   "latitude": -10.2491,
   "longitude": -67.3403,
-  "atualizado_em": "2026-07-27T08:20:02.953491+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-27T11:16:55.780085+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-27",
+      "min": 22.1,
+      "max": 33.4,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.0,
+      "uv": 7.4,
+      "nascer_sol": "07:46",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 22.5,
+      "max": 33.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 7.3,
+      "nascer_sol": "07:46",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 22.5,
+      "max": 33.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 7.4,
+      "nascer_sol": "07:46",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 23.3,
+      "max": 33.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 7.4,
+      "nascer_sol": "07:45",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-07-31",
+      "min": 23.4,
+      "max": 34.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 7.5,
+      "nascer_sol": "07:45",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-08-01",
+      "min": 23.4,
+      "max": 31.1,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 10.8,
+      "uv": 7.2,
+      "nascer_sol": "07:45",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-08-02",
+      "min": 22.6,
+      "max": 32.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 4.2,
+      "nascer_sol": "07:45",
+      "por_sol": "19:25"
+    }
+  ],
   "queimadas": {
     "focos_100km": 19,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-27T10:13:11.301451+00:00"
   },
   "uv": {
-    "indice": 7.3,
+    "indice": 7.4,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 32,
-    "categoria": "Boa",
+    "indice": 51,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 7.4,
-    "pm10": 7.4,
-    "no2": 5.4,
-    "o3": 7.0,
+    "pm25": 12.7,
+    "pm10": 13.0,
+    "no2": 7.2,
+    "o3": 26.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-25T09:42:50.384970+00:00"
+    "atualizado_em": "2026-07-27T11:16:55.780085+00:00"
   },
   "sol": {
     "nascer": "07:46",
-    "por": "19:24",
+    "por": "19:25",
     "duracao_h": 11.6,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 81.0,
-    "fase_pct": 35.1,
-    "dias_proxima_cheia": 4,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 49.0,
+    "fase_pct": 41.9,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.1,
+  "temperatura_atual": 22.6,
   "vento": {
-    "velocidade_kmh": 1.4,
-    "direcao_graus": 113,
-    "direcao": "ESE",
-    "max_kmh": 5.9,
-    "rajada_kmh": 14.0,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 3.4,
+    "direcao_graus": 328,
+    "direcao": "NNO",
+    "max_kmh": 14.4,
+    "rajada_kmh": 28.4,
+    "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 99,
+  "umidade_pct": 96,
   "pressao_hpa": 1014,
   "ponto_orvalho_c": 22.0,
   "dengue": {
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-25T09:42:50.384970+00:00"
+  "_clima_em": "2026-07-27T11:16:55.780085+00:00"
 }

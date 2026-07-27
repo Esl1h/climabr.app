@@ -4,58 +4,136 @@
   "slug": "acrelandia",
   "latitude": -9.9339,
   "longitude": -66.9502,
-  "atualizado_em": "2026-07-27T08:19:02.891489+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-27T11:16:55.780085+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-27",
+      "min": 22.3,
+      "max": 33.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 7.4,
+      "nascer_sol": "07:44",
+      "por_sol": "19:23"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 22.9,
+      "max": 33.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 7.3,
+      "nascer_sol": "07:44",
+      "por_sol": "19:24"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 22.9,
+      "max": 33.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 7.4,
+      "nascer_sol": "07:44",
+      "por_sol": "19:24"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 23.4,
+      "max": 34.2,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 3.6,
+      "uv": 7.5,
+      "nascer_sol": "07:43",
+      "por_sol": "19:24"
+    },
+    {
+      "data": "2026-07-31",
+      "min": 23.3,
+      "max": 33.2,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 3.3,
+      "uv": 7.5,
+      "nascer_sol": "07:43",
+      "por_sol": "19:24"
+    },
+    {
+      "data": "2026-08-01",
+      "min": 23.4,
+      "max": 32.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.5,
+      "uv": 6.8,
+      "nascer_sol": "07:43",
+      "por_sol": "19:24"
+    },
+    {
+      "data": "2026-08-02",
+      "min": 23.1,
+      "max": 27.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.6,
+      "uv": 7.0,
+      "nascer_sol": "07:43",
+      "por_sol": "19:24"
+    }
+  ],
   "queimadas": {
     "focos_100km": 11,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-27T10:13:11.301451+00:00"
   },
   "uv": {
-    "indice": 7.3,
+    "indice": 7.4,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 45,
-    "categoria": "Boa",
+    "indice": 58,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 10.4,
-    "pm10": 10.4,
-    "no2": 2.6,
-    "o3": 9.0,
+    "pm25": 24.3,
+    "pm10": 25.0,
+    "no2": 7.2,
+    "o3": 27.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-24T10:13:10.566945+00:00"
+    "atualizado_em": "2026-07-27T11:16:55.780085+00:00"
   },
   "sol": {
-    "nascer": "07:45",
+    "nascer": "07:44",
     "por": "19:23",
-    "duracao_h": 11.6,
+    "duracao_h": 11.7,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 91.0,
-    "fase_pct": 31.7,
-    "dias_proxima_cheia": 5,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 49.0,
+    "fase_pct": 41.9,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 21.9,
+  "temperatura_atual": 22.8,
   "vento": {
-    "velocidade_kmh": 7.5,
-    "direcao_graus": 197,
-    "direcao": "SSO",
-    "max_kmh": 7.4,
-    "rajada_kmh": 18.4,
-    "direcao_dominante": "SSE",
+    "velocidade_kmh": 4.7,
+    "direcao_graus": 337,
+    "direcao": "NNO",
+    "max_kmh": 9.2,
+    "rajada_kmh": 23.0,
+    "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 98,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 21.6,
+  "umidade_pct": 94,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 21.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-24T10:13:10.566945+00:00"
+  "_clima_em": "2026-07-27T11:16:55.780085+00:00"
 }
