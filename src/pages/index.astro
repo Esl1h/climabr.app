@@ -30,6 +30,32 @@ const dengueAlerta = todas
 
 const totalDengueAlerta = todas.filter((c) => (c.dengueNivel ?? 0) >= 2).length;
 
+// Avisos meteorológicos ativos por UF (INMET, gerados por scripts/scrape-alertas.py)
+interface AvisoResumo { evento: string; nivel: number; fim: string | null }
+const alertaModulos = import.meta.glob<{ default: AvisoResumo[] }>(
+  '../../data/alertas/*.json',
+  { eager: true }
+);
+const agoraTs = Date.now();
+const ufsAlerta = Object.entries(alertaModulos)
+  .flatMap(([caminho, mod]) => {
+    const uf = caminho.split('/').pop()!.replace('.json', '');
+    const ativos = mod.default.filter((a) => !a.fim || Date.parse(a.fim) > agoraTs);
+    if (ativos.length === 0) return [];
+    const pior = ativos.reduce((m, a) => (a.nivel > m.nivel ? a : m));
+    const fimMax = ativos.reduce<string | null>(
+      (m, a) => (a.fim && (!m || a.fim > m) ? a.fim : m), null);
+    return [{ uf, total: ativos.length, pior, fimMax }];
+  })
+  .sort((a, b) => b.pior.nivel - a.pior.nivel || b.total - a.total);
+
+// 1=Perigo Potencial, 2=Perigo, 3=Grande Perigo
+const ALERTA_CHIP: Record<number, string> = {
+  1: 'text-status-moderado border-status-moderado/40 bg-status-moderado/10',
+  2: 'text-status-ruim border-status-ruim/40 bg-status-ruim/10',
+  3: 'text-status-critico border-status-critico/40 bg-status-critico/10',
+};
+
 const geradoEm = new Date().toLocaleString('pt-BR', {
   day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit',
   timeZone: 'America/Sao_Paulo',
@@ -80,6 +106,28 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
         <div id="recentes-chips" class="flex flex-wrap gap-2"></div>
       </div>
     </div>
+
+    <!-- Alertas meteorológicos ativos por estado (INMET) -->
+    {ufsAlerta.length > 0 && (
+      <section aria-label="Alertas meteorológicos" data-alertas-home>
+        <h2 class="mb-3 text-base font-semibold text-foreground">
+          <span aria-hidden="true">⚠️</span> Alertas meteorológicos ativos
+        </h2>
+        <div class="flex flex-wrap gap-2">
+          {ufsAlerta.map((u) => (
+            <a
+              href={`/${u.uf}`}
+              data-alerta-uf
+              data-fim={u.fimMax}
+              class={`rounded-full border px-3 py-1.5 text-sm transition-colors hover:opacity-80 ${ALERTA_CHIP[u.pior.nivel] ?? ALERTA_CHIP[1]}`}
+            >
+              <strong>{u.uf.toUpperCase()}</strong> · {u.pior.evento}{u.total > 1 ? ` +${u.total - 1}` : ''}
+            </a>
+          ))}
+        </div>
+        <p class="mt-2 text-xs text-muted-foreground">Avisos oficiais do INMET · clique na UF para detalhes</p>
+      </section>
+    )}
 
     <!-- Capitais agora: gerado no build a partir dos dados coletados -->
     <section aria-label="Capitais agora">
@@ -213,9 +261,21 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
     }, 3000);
   }
 
+  // Home é estática (build 2x/dia): remove chips de alerta já vencidos
+  function limparAlertasVencidos(): void {
+    const secao = document.querySelector<HTMLElement>('[data-alertas-home]');
+    if (!secao) return;
+    secao.querySelectorAll<HTMLElement>('[data-alerta-uf]').forEach((el) => {
+      const fim = el.dataset.fim;
+      if (fim && Date.parse(fim) < Date.now()) el.remove();
+    });
+    if (!secao.querySelector('[data-alerta-uf]')) secao.remove();
+  }
+
   function initHome(): void {
     renderizarRecentes();
     initBuscaHome();
+    limparAlertasVencidos();
   }
 
   initHome();
