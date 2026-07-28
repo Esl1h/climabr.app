@@ -1,0 +1,41 @@
+name: Coleta SISAGUA (semanal)
+
+on:
+  schedule:
+    - cron: '0 7 * * 0'   # domingo; qualidade da água muda devagar e o volume é alto
+  workflow_dispatch:
+    inputs:
+      estado:
+        description: 'Estado para coletar (ex: sp). Deixe vazio para rodízio.'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: SISAGUA — vigilância da qualidade da água
+        env:
+          LIMITE_MINUTOS: '25'
+        run: python3 scripts/scrape-sisagua.py ${{ inputs.estado }}
+
+      - name: Commit dados locais (fallback)
+        if: always()
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'dados: coleta SISAGUA (qualidade da água)'
+          file_pattern: 'data/cidades/**/*.json'
+          push_options: '--force-with-lease'
+        continue-on-error: true
