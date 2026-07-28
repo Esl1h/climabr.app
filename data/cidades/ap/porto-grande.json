@@ -4,8 +4,86 @@
   "slug": "porto-grande",
   "latitude": 0.5856,
   "longitude": -51.67,
-  "atualizado_em": "2026-07-28T07:39:05.787057+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-28T10:30:45.354029+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-28",
+      "min": 22.1,
+      "max": 31.2,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 5.1,
+      "uv": 8.3,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 22.5,
+      "max": 31.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 2.8,
+      "uv": 8.3,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 22.6,
+      "max": 29.9,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 2.9,
+      "uv": 8.3,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-07-31",
+      "min": 22.0,
+      "max": 30.4,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.5,
+      "uv": 8.3,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-08-01",
+      "min": 22.1,
+      "max": 31.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 8.4,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-08-02",
+      "min": 22.0,
+      "max": 28.7,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.7,
+      "uv": 8.1,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-08-03",
+      "min": 22.4,
+      "max": 28.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 7.2,
+      "uv": 7.8,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
+    }
+  ],
   "reservatorio": {
     "nome": "Cachoeira Caldeirao",
     "nivel_pct": 111.1,
@@ -23,22 +101,22 @@
     "atualizado_em": "2026-07-28T09:13:33.299179+00:00"
   },
   "uv": {
-    "indice": 8.2,
+    "indice": 8.3,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 29,
+    "indice": 22,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.5,
-    "pm10": 6.4,
-    "no2": 1.8,
-    "o3": 24.0,
+    "pm25": 2.4,
+    "pm10": 3.3,
+    "no2": 1.2,
+    "o3": 31.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-26T09:56:08.227146+00:00"
+    "atualizado_em": "2026-07-28T10:30:45.354029+00:00"
   },
   "sol": {
     "nascer": "06:28",
@@ -49,12 +127,12 @@
   },
   "lua": {
     "nome": "Gibosa Crescente",
-    "iluminacao_pct": 66.0,
-    "fase_pct": 38.5,
-    "dias_proxima_cheia": 3,
+    "iluminacao_pct": 29.0,
+    "fase_pct": 45.3,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 21.8,
+  "temperatura_atual": 23.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -77,17 +155,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-26T09:56:08.227146+00:00",
+  "_clima_em": "2026-07-28T10:30:45.354029+00:00",
   "vento": {
-    "velocidade_kmh": 6.0,
-    "direcao_graus": 351,
-    "direcao": "N",
-    "max_kmh": 10.3,
-    "rajada_kmh": 21.6,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 6.4,
+    "direcao_graus": 68,
+    "direcao": "ENE",
+    "max_kmh": 12.3,
+    "rajada_kmh": 39.6,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 99,
+  "umidade_pct": 95,
   "pressao_hpa": 1014,
-  "ponto_orvalho_c": 21.6
+  "ponto_orvalho_c": 22.3
 }
