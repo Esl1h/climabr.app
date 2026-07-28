@@ -5,6 +5,20 @@ cada entrada marca um conjunto de mudanças já no ar em <https://climabr.app>.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [Não publicado]
+
+### Modificado
+
+- Astro atualizado para 7.1.5, com `@astrojs/react` 6 e Vite 8. O compilador
+  Rust passou a ser o único, e `compressHTML` foi fixado em `true` para manter
+  a compressão por regra de HTML: o novo padrão do Astro 7 usa regra de JSX e
+  removeria o espaço entre elementos inline vizinhos.
+
+### Segurança
+
+- Sem vulnerabilidades conhecidas nas dependências. O upgrade resolveu os
+  últimos alertas herdados do `sharp`, do `esbuild` e do próprio Astro.
+
 ## [0.3.0] - 2026-07-28
 
 ### Adicionado
