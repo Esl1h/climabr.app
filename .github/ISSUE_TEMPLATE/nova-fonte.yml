@@ -1,0 +1,62 @@
+name: Nova fonte de dados
+description: Sugerir uma fonte pública para incluir no painel
+title: "[fonte] "
+labels: ["fonte de dados"]
+body:
+  - type: input
+    id: orgao
+    attributes:
+      label: Órgão responsável
+      placeholder: ANA, INMET, Ministério da Saúde, Defesa Civil estadual
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL da fonte
+      description: Página de dados abertos, documentação da API ou endpoint
+    validations:
+      required: true
+
+  - type: textarea
+    id: dado
+    attributes:
+      label: Que informação ela traz
+      description: E por que ela é útil para quem consulta a página de uma cidade
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cobertura
+    attributes:
+      label: Cobertura geográfica
+      options:
+        - Nacional
+        - Um estado
+        - Uma região metropolitana
+        - Alguns municípios
+    validations:
+      required: true
+
+  - type: dropdown
+    id: formato
+    attributes:
+      label: Formato disponível
+      options:
+        - API oficial (JSON ou XML)
+        - Dados abertos (CSV, CKAN)
+        - Somente HTML (exige raspagem)
+        - PDF ou boletim
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: requisitos
+    attributes:
+      label: Requisitos
+      options:
+        - label: A fonte é pública e oficial
+          required: true
+        - label: O uso dos dados é permitido, com atribuição à fonte
+          required: true
