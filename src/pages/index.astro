@@ -62,14 +62,14 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
 });
 ---
 
-<PainelLayout title="climabr.app — Painel Ambiental Brasileiro">
+<PainelLayout title="Previsão do Tempo e Qualidade do Ar por Cidade | ClimaBR.app">
   <div class="space-y-10">
     <div class="mx-auto max-w-xl space-y-8">
       <div class="text-center space-y-2">
         <h1 class="text-3xl font-bold">
           <span class="italic text-emerald-700 dark:text-emerald-500">Clima</span><span class="italic text-blue-600 dark:text-blue-500">BR</span><span class="text-yellow-600 dark:text-yellow-500">.app</span>
         </h1>
-        <p class="text-muted-foreground">Previsão do tempo e painel ambiental por cidade — qualidade do ar, água, clima e alertas</p>
+        <p class="text-muted-foreground">Previsão do tempo e painel ambiental para todas as 5.571 cidades brasileiras: qualidade do ar, água, clima e alertas</p>
       </div>
 
       <div class="relative">
@@ -215,6 +215,20 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
       Sua cidade fica salva localmente, sem conta e sem rastreamento.
     </p>
   </div>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ClimaBR.app",
+    "url": "https://climabr.app",
+    "description": "Previsão do tempo e painel ambiental para todas as 5.571 cidades brasileiras: qualidade do ar, água, clima e alertas.",
+    "inLanguage": "pt-BR",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": { "@type": "EntryPoint", "urlTemplate": "https://climabr.app/?q={termo}" },
+      "query-input": "required name=termo",
+    },
+  })} />
 </PainelLayout>
 
 <script>
@@ -251,6 +265,13 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
 
     // Autofoco só em telas largas (no celular abriria o teclado sem pedir)
     if (matchMedia('(min-width: 640px)').matches) input.focus();
+
+    // Busca via URL (?q=cidade), usada pela SearchAction do JSON-LD
+    const q = new URLSearchParams(location.search).get('q');
+    if (q && !input.value) {
+      input.value = q;
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+    }
 
     let i = 0;
     if (rotacao) clearInterval(rotacao);
