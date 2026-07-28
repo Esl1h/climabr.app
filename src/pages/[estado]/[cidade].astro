@@ -42,17 +42,19 @@ try {
 
 // Monta description dinâmica com os dados disponíveis
 function montarDescricao(): string {
-  if (!dados) return `Painel ambiental de ${municipio.nome}, ${municipio.estado_nome}.`;
+  if (!dados) return `Previsão do tempo e painel ambiental de ${municipio.nome}, ${municipio.estado_nome}.`;
   const partes: string[] = [];
+  const hoje = dados.previsao?.[0];
+  if (hoje) partes.push(`${Math.round(hoje.min)}° a ${Math.round(hoje.max)}°, ${hoje.condicao}`);
   if (dados.qualidade_ar?.categoria) partes.push(`Ar: ${dados.qualidade_ar.categoria}`);
   if (dados.reservatorio?.nivel_pct != null) partes.push(`Reservatório: ${dados.reservatorio.nivel_pct}%`);
   if (dados.dengue?.nivel_label) partes.push(`Dengue: ${dados.dengue.nivel_label}`);
   if (dados.queimadas?.focos_100km != null) partes.push(`Queimadas: ${dados.queimadas.focos_100km} focos`);
-  const base = `Painel ambiental de ${municipio.nome}/${municipio.estado.toUpperCase()}`;
-  return partes.length ? `${base} — ${partes.join(', ')}.` : `${base}.`;
+  const base = `Previsão do tempo em ${municipio.nome}/${municipio.estado.toUpperCase()} hoje`;
+  return partes.length ? `${base}: ${partes.join(', ')}.` : `${base} e painel ambiental completo.`;
 }
 
-const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — climabr.app`;
+const titulo = `Previsão do Tempo em ${municipio.nome} (${municipio.estado.toUpperCase()}): clima, qualidade do ar e alertas | ClimaBR`;
 const descricao = montarDescricao();
 
 function formatarDataHora(iso: string): string {
