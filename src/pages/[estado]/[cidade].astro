@@ -9,6 +9,8 @@ import BlocoDengue from '../../components/BlocoDengue.astro';
 import BlocoSol from '../../components/BlocoSol.astro';
 import BlocoVento from '../../components/BlocoVento.astro';
 import BlocoOndas from '../../components/BlocoOndas.astro';
+import BlocoBandeira from '../../components/BlocoBandeira.astro';
+import BlocoAgua from '../../components/BlocoAgua.astro';
 import { descricaoTextual } from '../../lib/descricao';
 import municipiosRaw from '../../../data/municipios.json';
 import type { Municipio, DadosCidade } from '../../lib/types';
@@ -40,19 +42,96 @@ try {
   // Dados ainda não coletados
 }
 
+// Cidades mais próximas (haversine), para navegação e interlinking
+function cidadesProximas(qtd = 6): { m: Municipio; km: number }[] {
+  if (municipio.lat == null || municipio.lon == null) return [];
+  const rad = (g: number) => (g * Math.PI) / 180;
+  const lat1 = rad(municipio.lat);
+  const melhores: { m: Municipio; km: number }[] = [];
+  for (const m of municipiosRaw as Municipio[]) {
+    if (m.id === municipio.id || m.lat == null || m.lon == null) continue;
+    const dLat = rad(m.lat - municipio.lat!);
+    const dLon = rad(m.lon - municipio.lon!);
+    const a = Math.sin(dLat / 2) ** 2 +
+      Math.cos(lat1) * Math.cos(rad(m.lat)) * Math.sin(dLon / 2) ** 2;
+    const km = 12742 * Math.asin(Math.sqrt(a));
+    if (melhores.length < qtd) {
+      melhores.push({ m, km });
+      melhores.sort((x, y) => x.km - y.km);
+    } else if (km < melhores[qtd - 1].km) {
+      melhores[qtd - 1] = { m, km };
+      melhores.sort((x, y) => x.km - y.km);
+    }
+  }
+  return melhores;
+}
+const vizinhas = cidadesProximas();
+
+// Bandeira tarifária vigente (nacional), gerada por scripts/scrape-bandeira.py
+let bandeira = null;
+try {
+  const fs = await import('node:fs/promises');
+  const path = await import('node:path');
+  bandeira = JSON.parse(
+    await fs.readFile(path.join(process.cwd(), 'data', 'bandeira.json'), 'utf-8')
+  );
+} catch {
+  // Arquivo ainda não gerado
+}
+
+// Avisos meteorológicos do INMET que atingem este município (por geocode)
+interface AvisoCidade {
+  evento: string;
+  severidade: string;
+  nivel: number;
+  fim: string | null;
+  geocodes: number[];
+}
+
+let avisosCidade: AvisoCidade[] = [];
+try {
+  const fs = await import('node:fs/promises');
+  const path = await import('node:path');
+  const raw = await fs.readFile(path.join(process.cwd(), 'data', 'alertas', `${municipio.estado}.json`), 'utf-8');
+  const todos: AvisoCidade[] = JSON.parse(raw);
+  const agoraTs = Date.now();
+  avisosCidade = todos.filter(
+    (a) => a.geocodes.includes(municipio.id) && (!a.fim || Date.parse(a.fim) > agoraTs)
+  );
+} catch {
+  // Sem avisos ativos para a UF
+}
+
+// 1=Perigo Potencial, 2=Perigo, 3=Grande Perigo
+const AVISO_CLS: Record<number, { card: string; texto: string }> = {
+  1: { card: 'border-status-moderado/40 bg-status-moderado/10', texto: 'text-status-moderado' },
+  2: { card: 'border-status-ruim/40 bg-status-ruim/10', texto: 'text-status-ruim' },
+  3: { card: 'border-status-critico/40 bg-status-critico/10', texto: 'text-status-critico' },
+};
+
+const fmtVigencia = (iso: string | null): string =>
+  iso
+    ? new Date(iso).toLocaleString('pt-BR', {
+        day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit',
+        timeZone: 'America/Sao_Paulo',
+      })
+    : '';
+
 // Monta description dinâmica com os dados disponíveis
 function montarDescricao(): string {
-  if (!dados) return `Painel ambiental de ${municipio.nome}, ${municipio.estado_nome}.`;
+  if (!dados) return `Previsão do tempo e painel ambiental de ${municipio.nome}, ${municipio.estado_nome}.`;
   const partes: string[] = [];
+  const hoje = dados.previsao?.[0];
+  if (hoje) partes.push(`${Math.round(hoje.min)}° a ${Math.round(hoje.max)}°, ${hoje.condicao}`);
   if (dados.qualidade_ar?.categoria) partes.push(`Ar: ${dados.qualidade_ar.categoria}`);
   if (dados.reservatorio?.nivel_pct != null) partes.push(`Reservatório: ${dados.reservatorio.nivel_pct}%`);
   if (dados.dengue?.nivel_label) partes.push(`Dengue: ${dados.dengue.nivel_label}`);
   if (dados.queimadas?.focos_100km != null) partes.push(`Queimadas: ${dados.queimadas.focos_100km} focos`);
-  const base = `Painel ambiental de ${municipio.nome}/${municipio.estado.toUpperCase()}`;
-  return partes.length ? `${base} — ${partes.join(', ')}.` : `${base}.`;
+  const base = `Previsão do tempo em ${municipio.nome}/${municipio.estado.toUpperCase()} hoje`;
+  return partes.length ? `${base}: ${partes.join(', ')}.` : `${base} e painel ambiental completo.`;
 }
 
-const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — climabr.app`;
+const titulo = `Previsão do Tempo em ${municipio.nome} (${municipio.estado.toUpperCase()}): clima, qualidade do ar e alertas | ClimaBR`;
 const descricao = montarDescricao();
 
 function formatarDataHora(iso: string): string {
@@ -68,6 +147,7 @@ const temDados = dados && (
   dados.qualidade_ar ||
   dados.uv ||
   dados.reservatorio ||
+  dados.agua ||
   dados.dengue ||
   dados.queimadas ||
   dados.sol
@@ -105,9 +185,14 @@ const temDados = dados && (
       </h1>
       <button
         id="btn-compartilhar"
-        class="shrink-0 rounded-md border border-input bg-card px-3 py-1.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
+        aria-label="Compartilhar"
+        title="Compartilhar"
+        class="inline-flex shrink-0 items-center gap-1.5 rounded-md border border-input bg-card px-3 py-1.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
       >
-        Compartilhar
+        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M13 4.5a2.5 2.5 0 1 1 .702 1.737L6.97 9.604a2.518 2.518 0 0 1 0 .792l6.733 3.367a2.5 2.5 0 1 1-.671 1.341l-6.733-3.367a2.5 2.5 0 1 1 0-3.475l6.733-3.366A2.52 2.52 0 0 1 13 4.5Z" />
+        </svg>
+        <span class="hidden sm:inline">Compartilhar</span>
       </button>
     </div>
     {dados?.temperatura_atual != null ? (
@@ -146,9 +231,39 @@ const temDados = dados && (
       </summary>
       <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
         {descricaoTextual(municipio, dados)}
+        {avisosCidade.length > 0 && (
+          <span data-alerta data-fim={avisosCidade[0].fim}>
+            {' '}Atenção: a cidade está sob aviso de {avisosCidade[0].evento} ({avisosCidade[0].severidade}) do
+            INMET até {fmtVigencia(avisosCidade[0].fim)}.
+          </span>
+        )}
       </p>
     </details>
   </div>
+
+  {avisosCidade.length > 0 && (
+    <div class="mb-6 space-y-2" data-alertas>
+      {avisosCidade.map((a) => {
+        const cls = AVISO_CLS[a.nivel] ?? AVISO_CLS[1];
+        return (
+          <div
+            class={`flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-lg border px-4 py-3 text-sm ${cls.card}`}
+            data-alerta
+            data-fim={a.fim}
+            role="status"
+          >
+            <span aria-hidden="true">⚠️</span>
+            <strong class={`font-bold ${cls.texto}`}>{a.evento}</strong>
+            <span class={`text-xs font-semibold uppercase tracking-wide ${cls.texto}`}>{a.severidade}</span>
+            <span class="text-xs text-muted-foreground">aviso INMET até {fmtVigencia(a.fim)}</span>
+            <a href={`/${municipio.estado}`} class="ml-auto text-xs text-primary hover:underline">
+              ver detalhes e instruções
+            </a>
+          </div>
+        );
+      })}
+    </div>
+  )}
 
   {temDados ? (
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 items-start">
@@ -161,6 +276,7 @@ const temDados = dados && (
       />
       <BlocoUV uv={dados!.uv} />
       <BlocoReservatorio reservatorio={dados!.reservatorio} />
+      <BlocoAgua agua={dados!.agua} />
       <BlocoVento vento={dados!.vento} />
       <BlocoOndas ondas={dados!.ondas} />
       <BlocoQueimadas queimadas={dados!.queimadas} />
@@ -170,6 +286,7 @@ const temDados = dados && (
         zika={dados!.zika}
       />
       <BlocoSol sol={dados!.sol} lua={dados!.lua} />
+      <BlocoBandeira bandeira={bandeira} />
     </div>
   ) : (
     <div class="rounded-lg border border-border bg-card p-8 text-center">
@@ -188,6 +305,24 @@ const temDados = dados && (
         </a>
       </div>
     </div>
+  )}
+
+  {vizinhas.length > 0 && (
+    <section aria-label="Cidades próximas" class="mt-8">
+      <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
+        <span aria-hidden="true">📍</span> Cidades próximas
+      </h2>
+      <div class="grid grid-cols-2 gap-2 sm:grid-cols-3">
+        {vizinhas.map(({ m, km }) => (
+          <a href={`/${m.estado}/${m.slug}`} class="rounded-lg border border-border bg-card px-3 py-2 hover:bg-accent transition-colors">
+            <p class="truncate text-sm text-foreground/80">
+              {m.nome}{m.estado !== municipio.estado ? ` /${m.estado.toUpperCase()}` : ''}
+            </p>
+            <p class="text-xs text-muted-foreground tabular-nums">{Math.round(km)} km</p>
+          </a>
+        ))}
+      </div>
+    </section>
   )}
 
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
@@ -246,6 +381,17 @@ const temDados = dados && (
       root.dataset.init = '1';
       salvarRecente();
       hidratarClima();
+      limparAvisosVencidos();
+    }
+
+    // Página é estática (build 2x/dia): remove avisos já vencidos no cliente
+    function limparAvisosVencidos(): void {
+      document.querySelectorAll<HTMLElement>('[data-alerta]').forEach((el) => {
+        const fim = el.dataset.fim;
+        if (fim && Date.parse(fim) < Date.now()) el.remove();
+      });
+      const banner = document.querySelector<HTMLElement>('[data-alertas]');
+      if (banner && !banner.querySelector('[data-alerta]')) banner.remove();
     }
 
     initCidade();
@@ -263,9 +409,10 @@ const temDados = dados && (
       }
       try {
         await navigator.clipboard.writeText(window.location.href);
-        const original = btn.textContent;
+        // Feedback substitui ícone+rótulo e restaura depois (rótulo some no mobile)
+        const original = btn.innerHTML;
         btn.textContent = 'Link copiado!';
-        setTimeout(() => { btn.textContent = original; }, 2000);
+        setTimeout(() => { btn.innerHTML = original; }, 2000);
       } catch { /* clipboard indisponível */ }
     });
   </script>

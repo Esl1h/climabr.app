@@ -145,6 +145,17 @@ export async function hidratarClima(): Promise<void> {
   if (atualizadoEl && ts) {
     const rel = tempoRelativo(ts);
     if (rel) atualizadoEl.textContent = `Atualizado ${rel}`;
+
+    // Coleta parada há mais de 48h: sinaliza em vez de exibir número velho como atual
+    // (a previsão e o "agora" são hidratados ao vivo; o selo cobre os blocos do snapshot)
+    const idadeMs = Date.now() - Date.parse(ts);
+    if (Number.isFinite(idadeMs) && idadeMs > 48 * 3600 * 1000 && !document.getElementById('aviso-dado-velho')) {
+      const aviso = document.createElement('p');
+      aviso.id = 'aviso-dado-velho';
+      aviso.className = 'mt-1 text-xs text-status-moderado';
+      aviso.textContent = '⚠️ Coleta automática atrasada: reservatório, dengue e queimadas podem estar desatualizados.';
+      atualizadoEl.after(aviso);
+    }
   }
 
   const lat = parseFloat(root.dataset.lat ?? '');
