@@ -83,7 +83,6 @@ def fase_lua(d: date) -> dict:
              "Cheia", "Gibosa Minguante", "Quarto Minguante", "Minguante"]
     idx = int(fase * 8) % 8
     iluminacao = round(abs(math.sin(fase * math.pi * 2)) * 100, 0)
-    dias_proxima = round((1.0 - fase) * ciclo, 0) if fase < 1 else 0
     return {
         "nome": nomes[idx],
         "iluminacao_pct": iluminacao,
@@ -341,7 +340,7 @@ def main():
 
             try:
                 novos = processar_cidade(fc, aq, m, agora, hoje)
-            except Exception as e:
+            except Exception:
                 erros += 1
                 continue
 

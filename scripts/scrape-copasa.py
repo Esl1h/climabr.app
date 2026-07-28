@@ -9,7 +9,6 @@ Rodar 1x/dia via GitHub Actions.
 
 import json
 import re
-import time
 import unicodedata
 import urllib.request
 from datetime import date, datetime, timezone

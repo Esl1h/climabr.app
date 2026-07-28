@@ -14,7 +14,6 @@ import io
 import json
 import math
 import sys
-import time
 import urllib.request
 from datetime import date, timezone, datetime
 from pathlib import Path
@@ -74,7 +73,7 @@ def main():
     print(f"Baixando dados hidrológicos {ano}...")
     try:
         hidro_rows = fetch_csv(url_hidro)
-    except Exception as e:
+    except Exception:
         # Tenta ano anterior como fallback
         ano -= 1
         url_hidro = ONS_HIDRO_CSV.format(ano=ano)
