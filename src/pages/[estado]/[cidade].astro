@@ -10,6 +10,7 @@ import BlocoSol from '../../components/BlocoSol.astro';
 import BlocoVento from '../../components/BlocoVento.astro';
 import BlocoOndas from '../../components/BlocoOndas.astro';
 import BlocoBandeira from '../../components/BlocoBandeira.astro';
+import BlocoAgua from '../../components/BlocoAgua.astro';
 import { descricaoTextual } from '../../lib/descricao';
 import municipiosRaw from '../../../data/municipios.json';
 import type { Municipio, DadosCidade } from '../../lib/types';
@@ -146,6 +147,7 @@ const temDados = dados && (
   dados.qualidade_ar ||
   dados.uv ||
   dados.reservatorio ||
+  dados.agua ||
   dados.dengue ||
   dados.queimadas ||
   dados.sol
@@ -274,6 +276,7 @@ const temDados = dados && (
       />
       <BlocoUV uv={dados!.uv} />
       <BlocoReservatorio reservatorio={dados!.reservatorio} />
+      <BlocoAgua agua={dados!.agua} />
       <BlocoVento vento={dados!.vento} />
       <BlocoOndas ondas={dados!.ondas} />
       <BlocoQueimadas queimadas={dados!.queimadas} />
