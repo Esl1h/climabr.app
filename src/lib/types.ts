@@ -34,6 +34,16 @@ export interface DadosCidade {
     por_sol?: string | null;
   }>;
 
+  agua?: {
+    parametro: string;
+    amostras: number;
+    com_presenca: number;
+    pct_conformes: number | null;
+    periodo: string;
+    fonte: string;
+    atualizado_em?: string;
+  } | null;
+
   uv?: {
     indice: number;
     categoria: string;
