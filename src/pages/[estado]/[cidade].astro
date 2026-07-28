@@ -40,6 +40,44 @@ try {
   // Dados ainda não coletados
 }
 
+// Avisos meteorológicos do INMET que atingem este município (por geocode)
+interface AvisoCidade {
+  evento: string;
+  severidade: string;
+  nivel: number;
+  fim: string | null;
+  geocodes: number[];
+}
+
+let avisosCidade: AvisoCidade[] = [];
+try {
+  const fs = await import('node:fs/promises');
+  const path = await import('node:path');
+  const raw = await fs.readFile(path.join(process.cwd(), 'data', 'alertas', `${municipio.estado}.json`), 'utf-8');
+  const todos: AvisoCidade[] = JSON.parse(raw);
+  const agoraTs = Date.now();
+  avisosCidade = todos.filter(
+    (a) => a.geocodes.includes(municipio.id) && (!a.fim || Date.parse(a.fim) > agoraTs)
+  );
+} catch {
+  // Sem avisos ativos para a UF
+}
+
+// 1=Perigo Potencial, 2=Perigo, 3=Grande Perigo
+const AVISO_CLS: Record<number, { card: string; texto: string }> = {
+  1: { card: 'border-status-moderado/40 bg-status-moderado/10', texto: 'text-status-moderado' },
+  2: { card: 'border-status-ruim/40 bg-status-ruim/10', texto: 'text-status-ruim' },
+  3: { card: 'border-status-critico/40 bg-status-critico/10', texto: 'text-status-critico' },
+};
+
+const fmtVigencia = (iso: string | null): string =>
+  iso
+    ? new Date(iso).toLocaleString('pt-BR', {
+        day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit',
+        timeZone: 'America/Sao_Paulo',
+      })
+    : '';
+
 // Monta description dinâmica com os dados disponíveis
 function montarDescricao(): string {
   if (!dados) return `Previsão do tempo e painel ambiental de ${municipio.nome}, ${municipio.estado_nome}.`;
@@ -148,9 +186,39 @@ const temDados = dados && (
       </summary>
       <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
         {descricaoTextual(municipio, dados)}
+        {avisosCidade.length > 0 && (
+          <span data-alerta data-fim={avisosCidade[0].fim}>
+            {' '}Atenção: a cidade está sob aviso de {avisosCidade[0].evento} ({avisosCidade[0].severidade}) do
+            INMET até {fmtVigencia(avisosCidade[0].fim)}.
+          </span>
+        )}
       </p>
     </details>
   </div>
+
+  {avisosCidade.length > 0 && (
+    <div class="mb-6 space-y-2" data-alertas>
+      {avisosCidade.map((a) => {
+        const cls = AVISO_CLS[a.nivel] ?? AVISO_CLS[1];
+        return (
+          <div
+            class={`flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-lg border px-4 py-3 text-sm ${cls.card}`}
+            data-alerta
+            data-fim={a.fim}
+            role="status"
+          >
+            <span aria-hidden="true">⚠️</span>
+            <strong class={`font-bold ${cls.texto}`}>{a.evento}</strong>
+            <span class={`text-xs font-semibold uppercase tracking-wide ${cls.texto}`}>{a.severidade}</span>
+            <span class="text-xs text-muted-foreground">aviso INMET até {fmtVigencia(a.fim)}</span>
+            <a href={`/${municipio.estado}`} class="ml-auto text-xs text-primary hover:underline">
+              ver detalhes e instruções
+            </a>
+          </div>
+        );
+      })}
+    </div>
+  )}
 
   {temDados ? (
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 items-start">
@@ -248,6 +316,17 @@ const temDados = dados && (
       root.dataset.init = '1';
       salvarRecente();
       hidratarClima();
+      limparAvisosVencidos();
+    }
+
+    // Página é estática (build 2x/dia): remove avisos já vencidos no cliente
+    function limparAvisosVencidos(): void {
+      document.querySelectorAll<HTMLElement>('[data-alerta]').forEach((el) => {
+        const fim = el.dataset.fim;
+        if (fim && Date.parse(fim) < Date.now()) el.remove();
+      });
+      const banner = document.querySelector<HTMLElement>('[data-alertas]');
+      if (banner && !banner.querySelector('[data-alerta]')) banner.remove();
     }
 
     initCidade();
