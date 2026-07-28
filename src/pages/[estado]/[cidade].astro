@@ -9,6 +9,7 @@ import BlocoDengue from '../../components/BlocoDengue.astro';
 import BlocoSol from '../../components/BlocoSol.astro';
 import BlocoVento from '../../components/BlocoVento.astro';
 import BlocoOndas from '../../components/BlocoOndas.astro';
+import BlocoBandeira from '../../components/BlocoBandeira.astro';
 import { descricaoTextual } from '../../lib/descricao';
 import municipiosRaw from '../../../data/municipios.json';
 import type { Municipio, DadosCidade } from '../../lib/types';
@@ -38,6 +39,43 @@ try {
   dados = JSON.parse(raw) as DadosCidade;
 } catch {
   // Dados ainda não coletados
+}
+
+// Cidades mais próximas (haversine), para navegação e interlinking
+function cidadesProximas(qtd = 6): { m: Municipio; km: number }[] {
+  if (municipio.lat == null || municipio.lon == null) return [];
+  const rad = (g: number) => (g * Math.PI) / 180;
+  const lat1 = rad(municipio.lat);
+  const melhores: { m: Municipio; km: number }[] = [];
+  for (const m of municipiosRaw as Municipio[]) {
+    if (m.id === municipio.id || m.lat == null || m.lon == null) continue;
+    const dLat = rad(m.lat - municipio.lat!);
+    const dLon = rad(m.lon - municipio.lon!);
+    const a = Math.sin(dLat / 2) ** 2 +
+      Math.cos(lat1) * Math.cos(rad(m.lat)) * Math.sin(dLon / 2) ** 2;
+    const km = 12742 * Math.asin(Math.sqrt(a));
+    if (melhores.length < qtd) {
+      melhores.push({ m, km });
+      melhores.sort((x, y) => x.km - y.km);
+    } else if (km < melhores[qtd - 1].km) {
+      melhores[qtd - 1] = { m, km };
+      melhores.sort((x, y) => x.km - y.km);
+    }
+  }
+  return melhores;
+}
+const vizinhas = cidadesProximas();
+
+// Bandeira tarifária vigente (nacional), gerada por scripts/scrape-bandeira.py
+let bandeira = null;
+try {
+  const fs = await import('node:fs/promises');
+  const path = await import('node:path');
+  bandeira = JSON.parse(
+    await fs.readFile(path.join(process.cwd(), 'data', 'bandeira.json'), 'utf-8')
+  );
+} catch {
+  // Arquivo ainda não gerado
 }
 
 // Avisos meteorológicos do INMET que atingem este município (por geocode)
@@ -245,6 +283,7 @@ const temDados = dados && (
         zika={dados!.zika}
       />
       <BlocoSol sol={dados!.sol} lua={dados!.lua} />
+      <BlocoBandeira bandeira={bandeira} />
     </div>
   ) : (
     <div class="rounded-lg border border-border bg-card p-8 text-center">
@@ -263,6 +302,24 @@ const temDados = dados && (
         </a>
       </div>
     </div>
+  )}
+
+  {vizinhas.length > 0 && (
+    <section aria-label="Cidades próximas" class="mt-8">
+      <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
+        <span aria-hidden="true">📍</span> Cidades próximas
+      </h2>
+      <div class="grid grid-cols-2 gap-2 sm:grid-cols-3">
+        {vizinhas.map(({ m, km }) => (
+          <a href={`/${m.estado}/${m.slug}`} class="rounded-lg border border-border bg-card px-3 py-2 hover:bg-accent transition-colors">
+            <p class="truncate text-sm text-foreground/80">
+              {m.nome}{m.estado !== municipio.estado ? ` /${m.estado.toUpperCase()}` : ''}
+            </p>
+            <p class="text-xs text-muted-foreground tabular-nums">{Math.round(km)} km</p>
+          </a>
+        ))}
+      </div>
+    </section>
   )}
 
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
