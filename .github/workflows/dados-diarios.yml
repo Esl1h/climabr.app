@@ -38,11 +38,15 @@ jobs:
         run: python3 scripts/scrape-dengue.py
         continue-on-error: true
 
+      - name: Alertas meteorológicos (INMET)
+        run: python3 scripts/scrape-alertas.py
+        continue-on-error: true
+
       - name: Commit dados locais (fallback)
         if: always()
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'dados: coleta diária (Open-Meteo, SABESP, COPASA, dengue)'
-          file_pattern: 'data/cidades/**/*.json'
+          commit_message: 'dados: coleta diária (Open-Meteo, SABESP, COPASA, dengue, alertas)'
+          file_pattern: 'data/cidades/**/*.json data/alertas/*.json'
           push_options: '--force-with-lease'
         continue-on-error: true
