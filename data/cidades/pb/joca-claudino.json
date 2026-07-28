@@ -4,58 +4,136 @@
   "slug": "joca-claudino",
   "latitude": -6.4771,
   "longitude": -38.4809,
-  "atualizado_em": "2026-07-08T07:47:35.672199+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-28T10:30:45.354029+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-28",
+      "min": 20.7,
+      "max": 31.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 7.3,
+      "nascer_sol": "05:45",
+      "por_sol": "17:35"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 20.4,
+      "max": 31.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 7.9,
+      "nascer_sol": "05:45",
+      "por_sol": "17:35"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 20.0,
+      "max": 32.2,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 7.9,
+      "nascer_sol": "05:45",
+      "por_sol": "17:35"
+    },
+    {
+      "data": "2026-07-31",
+      "min": 20.5,
+      "max": 32.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.0,
+      "nascer_sol": "05:45",
+      "por_sol": "17:35"
+    },
+    {
+      "data": "2026-08-01",
+      "min": 20.8,
+      "max": 32.7,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.0,
+      "nascer_sol": "05:45",
+      "por_sol": "17:35"
+    },
+    {
+      "data": "2026-08-02",
+      "min": 20.5,
+      "max": 32.0,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.8,
+      "nascer_sol": "05:45",
+      "por_sol": "17:35"
+    },
+    {
+      "data": "2026-08-03",
+      "min": 21.1,
+      "max": 32.3,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.8,
+      "nascer_sol": "05:44",
+      "por_sol": "17:35"
+    }
+  ],
   "queimadas": {
-    "focos_100km": 4,
+    "focos_100km": 6,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-08T09:04:08.565650+00:00"
+    "atualizado_em": "2026-07-28T09:13:33.299179+00:00"
   },
   "uv": {
-    "indice": 7.5,
+    "indice": 7.3,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 21,
+    "indice": 22,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 2.4,
-    "pm10": 3.3,
-    "no2": 1.2,
-    "o3": 53.0,
+    "pm25": 3.9,
+    "pm10": 4.9,
+    "no2": 2.6,
+    "o3": 44.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-07T10:52:16.596749+00:00"
+    "atualizado_em": "2026-07-28T10:30:45.354029+00:00"
   },
   "sol": {
-    "nascer": "05:46",
-    "por": "17:31",
+    "nascer": "05:45",
+    "por": "17:35",
     "duracao_h": 11.8,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 74.2,
-    "dias_proxima_cheia": 7,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 29.0,
+    "fase_pct": 45.3,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.3,
+  "temperatura_atual": 23.7,
   "vento": {
-    "velocidade_kmh": 8.1,
-    "direcao_graus": 155,
-    "direcao": "SSE",
-    "max_kmh": 10.4,
-    "rajada_kmh": 25.9,
-    "direcao_dominante": "SSE",
+    "velocidade_kmh": 9.4,
+    "direcao_graus": 91,
+    "direcao": "E",
+    "max_kmh": 15.5,
+    "rajada_kmh": 37.8,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 66,
+  "umidade_pct": 74,
   "pressao_hpa": 1018,
-  "ponto_orvalho_c": 16.6,
+  "ponto_orvalho_c": 18.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -63,9 +141,9 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202620,
+    "semana_epidemiologica": 202628,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
+    "atualizado_em": "2026-07-24T10:33:17.738168+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -74,9 +152,9 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202620,
+    "semana_epidemiologica": 202628,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-06-01T22:07:55.191770-03:00"
+    "atualizado_em": "2026-07-24T10:33:17.738168+00:00"
   },
-  "_clima_em": "2026-07-07T10:52:16.596749+00:00"
+  "_clima_em": "2026-07-28T10:30:45.354029+00:00"
 }
