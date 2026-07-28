@@ -1,7 +1,22 @@
 ---
+import { readFile } from 'node:fs/promises';
+import path from 'node:path';
 import PainelLayout from '../../layouts/PainelLayout.astro';
 import municipiosRaw from '../../../data/municipios.json';
 import type { Municipio } from '../../lib/types';
+
+interface Aviso {
+  id: number;
+  evento: string;
+  severidade: string;
+  nivel: number;
+  cor: string;
+  inicio: string | null;
+  fim: string | null;
+  riscos: string[];
+  instrucoes: string[];
+  geocodes: number[];
+}
 
 export async function getStaticPaths() {
   const municipios = municipiosRaw as Municipio[];
@@ -29,6 +44,36 @@ const { uf, nome, cidades } = Astro.props;
 const titulo = `${nome} (${uf.toUpperCase()}) — ${cidades.length} municípios — ClimaBR.app`;
 const descricao = `Dados ambientais dos ${cidades.length} municípios de ${nome}: previsão do tempo, ` +
   `qualidade do ar, índice UV, vento, reservatórios, queimadas e alertas de dengue por cidade.`;
+
+// Avisos meteorológicos ativos (INMET), gerados por scripts/scrape-alertas.py
+let avisos: Aviso[] = [];
+try {
+  const raw = await readFile(path.join(process.cwd(), 'data', 'alertas', `${uf}.json`), 'utf-8');
+  avisos = JSON.parse(raw);
+} catch {
+  // Sem avisos ativos ou arquivo ainda não gerado
+}
+const agoraTs = Date.now();
+avisos = avisos.filter((a) => !a.fim || Date.parse(a.fim) > agoraTs);
+
+const porGeocode = new Map(cidades.map((c) => [c.id, c]));
+const cidadesDoAviso = (a: Aviso): Municipio[] =>
+  a.geocodes.map((g) => porGeocode.get(g)).filter((c): c is Municipio => Boolean(c));
+
+// 1=Perigo Potencial, 2=Perigo, 3=Grande Perigo
+const AVISO_CLS: Record<number, { card: string; texto: string }> = {
+  1: { card: 'border-status-moderado/40 bg-status-moderado/10', texto: 'text-status-moderado' },
+  2: { card: 'border-status-ruim/40 bg-status-ruim/10', texto: 'text-status-ruim' },
+  3: { card: 'border-status-critico/40 bg-status-critico/10', texto: 'text-status-critico' },
+};
+
+const fmtVigencia = (iso: string | null): string =>
+  iso
+    ? new Date(iso).toLocaleString('pt-BR', {
+        day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit',
+        timeZone: 'America/Sao_Paulo',
+      })
+    : '';
 
 // Agrupa por letra inicial para navegação
 const porLetra = cidades.reduce<Record<string, Municipio[]>>((acc, c) => {
@@ -60,6 +105,60 @@ const normalizar = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g,
       vento, nível de reservatórios, focos de queimada e alertas de dengue.
     </p>
   </div>
+
+  {avisos.length > 0 && (
+    <section aria-label="Alertas meteorológicos" class="mb-8" data-alertas>
+      <h2 class="mb-3 text-base font-semibold text-foreground">
+        <span aria-hidden="true">⚠️</span> Alertas meteorológicos ativos
+      </h2>
+      <div class="space-y-3">
+        {avisos.map((a) => {
+          const cls = AVISO_CLS[a.nivel] ?? AVISO_CLS[1];
+          const afetadas = cidadesDoAviso(a);
+          return (
+            <details class={`rounded-lg border ${cls.card}`} data-alerta data-fim={a.fim}>
+              <summary class="cursor-pointer list-none p-4 [&::-webkit-details-marker]:hidden">
+                <span class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <strong class={`text-sm font-bold ${cls.texto}`}>{a.evento}</strong>
+                  <span class={`text-xs font-semibold uppercase tracking-wide ${cls.texto}`}>{a.severidade}</span>
+                  <span class="text-xs text-muted-foreground">até {fmtVigencia(a.fim)}</span>
+                  <span class="text-xs text-muted-foreground">
+                    {afetadas.length === cidades.length
+                      ? 'todo o estado'
+                      : `${afetadas.length} de ${cidades.length} municípios`}
+                  </span>
+                  <span class="ml-auto text-xs text-muted-foreground">detalhes ▾</span>
+                </span>
+              </summary>
+              <div class="space-y-3 px-4 pb-4 text-sm text-foreground/80">
+                {a.riscos.length > 0 && <p>{a.riscos.join(' ')}</p>}
+                {a.instrucoes.length > 0 && (
+                  <ul class="list-disc space-y-0.5 pl-5 text-foreground/70">
+                    {a.instrucoes.map((inst) => <li>{inst.trim()}</li>)}
+                  </ul>
+                )}
+                {afetadas.length < cidades.length && (
+                  <details class="pt-1">
+                    <summary class="cursor-pointer text-xs text-muted-foreground hover:text-foreground/80">
+                      Ver municípios afetados
+                    </summary>
+                    <div class="mt-2 grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-3">
+                      {afetadas.map((c) => (
+                        <a href={`/${c.estado}/${c.slug}`} class="truncate text-xs text-foreground/70 hover:text-primary transition-colors">
+                          {c.nome}
+                        </a>
+                      ))}
+                    </div>
+                  </details>
+                )}
+                <p class="text-xs text-muted-foreground">Fonte: INMET · avisos oficiais Alert-AS</p>
+              </div>
+            </details>
+          );
+        })}
+      </div>
+    </section>
+  )}
 
   <label for="filtro-municipios" class="sr-only">Filtrar municípios</label>
   <input
@@ -114,8 +213,23 @@ const normalizar = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g,
       });
     }
 
+    // Página é estática (build 2x/dia): remove avisos já vencidos no cliente
+    function limparAvisosVencidos(): void {
+      const secao = document.querySelector<HTMLElement>('[data-alertas]');
+      if (!secao) return;
+      secao.querySelectorAll<HTMLElement>('[data-alerta]').forEach((el) => {
+        const fim = el.dataset.fim;
+        if (fim && Date.parse(fim) < Date.now()) el.remove();
+      });
+      if (!secao.querySelector('[data-alerta]')) secao.remove();
+    }
+
     initFiltro();
-    document.addEventListener('astro:page-load', initFiltro);
+    limparAvisosVencidos();
+    document.addEventListener('astro:page-load', () => {
+      initFiltro();
+      limparAvisosVencidos();
+    });
   </script>
 
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
