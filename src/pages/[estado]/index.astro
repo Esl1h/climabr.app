@@ -3,7 +3,9 @@ import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import PainelLayout from '../../layouts/PainelLayout.astro';
 import municipiosRaw from '../../../data/municipios.json';
+import defesaCivilRaw from '../../../data/defesa-civil.json';
 import type { Municipio } from '../../lib/types';
+import { lerTodas, CAPITAIS, corAqiTexto, corDengueTexto, corFocosTexto } from '../../lib/destaques';
 
 interface Aviso {
   id: number;
@@ -75,6 +77,21 @@ const fmtVigencia = (iso: string | null): string =>
       })
     : '';
 
+const defesaCivil = (defesaCivilRaw as Record<string, { url: string }>)[uf] ?? null;
+
+// Panorama da UF gerado no build a partir dos dados coletados
+const resumoUf = (await lerTodas()).filter((c) => c.uf === uf);
+const capitalSlug = CAPITAIS.find((c) => c.uf === uf)?.slug;
+const capital = resumoUf.find((c) => c.slug === capitalSlug) ?? null;
+const dengueAlertaUf = resumoUf
+  .filter((c) => (c.dengueNivel ?? 0) >= 2)
+  .sort((a, b) => (b.dengueCasos ?? 0) - (a.dengueCasos ?? 0));
+const comFocos = resumoUf
+  .filter((c) => (c.focos ?? 0) > 0)
+  .sort((a, b) => (b.focos ?? 0) - (a.focos ?? 0));
+const totalFocosUf = comFocos.reduce((s, c) => s + (c.focos ?? 0), 0);
+const temPanorama = capital || dengueAlertaUf.length > 0 || totalFocosUf > 0;
+
 // Agrupa por letra inicial para navegação
 const porLetra = cidades.reduce<Record<string, Municipio[]>>((acc, c) => {
   const letra = c.nome[0].toUpperCase();
@@ -103,6 +120,11 @@ const normalizar = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g,
       Dados ambientais dos <strong class="text-foreground">{cidades.length}</strong> municípios
       de {nome}. Selecione uma cidade para ver previsão do tempo, qualidade do ar, índice UV,
       vento, nível de reservatórios, focos de queimada e alertas de dengue.
+    </p>
+    <p class="mt-2 text-sm text-muted-foreground">
+      <span aria-hidden="true">🚨</span> Emergências: ligue <strong class="text-foreground">199</strong> (Defesa Civil) ou <strong class="text-foreground">193</strong> (Bombeiros){defesaCivil && (
+        <> · <a href={defesaCivil.url} rel="noopener" target="_blank" class="text-primary hover:underline">site da Defesa Civil estadual</a></>
+      )}
     </p>
   </div>
 
@@ -156,6 +178,51 @@ const normalizar = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g,
             </details>
           );
         })}
+      </div>
+    </section>
+  )}
+
+  {temPanorama && (
+    <section aria-label="Panorama do estado" class="mb-8">
+      <h2 class="mb-3 text-base font-semibold text-foreground">{nome} agora</h2>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {capital && (
+          <a href={`/${capital.uf}/${capital.slug}`} class="rounded-lg border border-border bg-card p-4 hover:bg-accent transition-colors">
+            <h3 class="mb-1 text-sm font-semibold text-foreground"><span aria-hidden="true">🏛️</span> Capital · {capital.nome}</h3>
+            <p class="flex items-baseline gap-3">
+              <span class="text-2xl font-bold tabular-nums text-foreground">{capital.temperatura != null ? `${Math.round(capital.temperatura)}°` : '—'}</span>
+              {capital.aqi != null && (
+                <span class={`text-sm font-semibold tabular-nums ${corAqiTexto(capital.aqi)}`}>AQI {capital.aqi}</span>
+              )}
+            </p>
+          </a>
+        )}
+        {dengueAlertaUf.length > 0 && (
+          <div class="rounded-lg border border-border bg-card p-4">
+            <h3 class="mb-1 text-sm font-semibold text-foreground"><span aria-hidden="true">🦟</span> Dengue em alerta</h3>
+            <p class="text-2xl font-bold tabular-nums text-foreground">{dengueAlertaUf.length}
+              <span class="text-sm font-normal text-muted-foreground"> municípios</span>
+            </p>
+            <p class="mt-1 truncate text-xs text-muted-foreground">
+              {dengueAlertaUf.slice(0, 3).map((c, i) => (
+                <>{i > 0 && ', '}<a href={`/${c.uf}/${c.slug}`} class={`hover:underline ${corDengueTexto(c.dengueNivel!)}`}>{c.nome}</a></>
+              ))}
+            </p>
+          </div>
+        )}
+        {totalFocosUf > 0 && (
+          <div class="rounded-lg border border-border bg-card p-4">
+            <h3 class="mb-1 text-sm font-semibold text-foreground"><span aria-hidden="true">🔥</span> Focos de queimada</h3>
+            <p class="text-2xl font-bold tabular-nums text-foreground">{totalFocosUf}
+              <span class="text-sm font-normal text-muted-foreground"> no estado</span>
+            </p>
+            <p class="mt-1 truncate text-xs text-muted-foreground">
+              {comFocos.slice(0, 3).map((c, i) => (
+                <>{i > 0 && ', '}<a href={`/${c.uf}/${c.slug}`} class={`hover:underline ${corFocosTexto(c.focos!)}`}>{c.nome} ({c.focos})</a></>
+              ))}
+            </p>
+          </div>
+        )}
       </div>
     </section>
   )}
