@@ -4,30 +4,108 @@
   "slug": "sao-gabriel-da-cachoeira",
   "latitude": 0.3745,
   "longitude": -67.9971,
-  "atualizado_em": "2026-07-29T07:50:12.561283+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-29T10:35:24.248814+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-29",
+      "min": 22.9,
+      "max": 32.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 8.2,
+      "nascer_sol": "07:34",
+      "por_sol": "19:42"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 23.1,
+      "max": 30.5,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 8.8,
+      "uv": 8.2,
+      "nascer_sol": "07:34",
+      "por_sol": "19:42"
+    },
+    {
+      "data": "2026-07-31",
+      "min": 22.0,
+      "max": 28.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 11.1,
+      "uv": 8.3,
+      "nascer_sol": "07:34",
+      "por_sol": "19:42"
+    },
+    {
+      "data": "2026-08-01",
+      "min": 22.9,
+      "max": 31.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.3,
+      "uv": 8.3,
+      "nascer_sol": "07:34",
+      "por_sol": "19:42"
+    },
+    {
+      "data": "2026-08-02",
+      "min": 21.5,
+      "max": 30.2,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 12.0,
+      "uv": 8.3,
+      "nascer_sol": "07:34",
+      "por_sol": "19:42"
+    },
+    {
+      "data": "2026-08-03",
+      "min": 22.4,
+      "max": 27.7,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 9.9,
+      "uv": 8.4,
+      "nascer_sol": "07:34",
+      "por_sol": "19:42"
+    },
+    {
+      "data": "2026-08-04",
+      "min": 22.5,
+      "max": 31.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 10.2,
+      "uv": 8.4,
+      "nascer_sol": "07:34",
+      "por_sol": "19:41"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "uv": {
-    "indice": 8.0,
-    "categoria": "Alto",
+    "indice": 8.2,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 23,
+    "indice": 29,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 2.3,
-    "pm10": 2.4,
-    "no2": 0.5,
-    "o3": 9.0,
+    "pm25": 2.5,
+    "pm10": 2.6,
+    "no2": 0.3,
+    "o3": 13.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-26T09:56:08.227146+00:00"
+    "atualizado_em": "2026-07-29T10:35:24.248814+00:00"
   },
   "sol": {
     "nascer": "07:34",
@@ -38,24 +116,24 @@
   },
   "lua": {
     "nome": "Gibosa Crescente",
-    "iluminacao_pct": 66.0,
-    "fase_pct": 38.5,
-    "dias_proxima_cheia": 3,
+    "iluminacao_pct": 8.0,
+    "fase_pct": 48.7,
+    "dias_proxima_cheia": 0,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.7,
+  "temperatura_atual": 22.9,
   "vento": {
-    "velocidade_kmh": 0.7,
-    "direcao_graus": 90,
-    "direcao": "E",
-    "max_kmh": 7.9,
-    "rajada_kmh": 23.8,
-    "direcao_dominante": "SSO",
+    "velocidade_kmh": 5.0,
+    "direcao_graus": 46,
+    "direcao": "NE",
+    "max_kmh": 8.6,
+    "rajada_kmh": 22.7,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 100,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 22.7,
+  "umidade_pct": 99,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 22.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,5 +156,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-26T09:56:08.227146+00:00"
+  "_clima_em": "2026-07-29T10:35:24.248814+00:00"
 }
