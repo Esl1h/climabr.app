@@ -12,6 +12,7 @@ import BlocoOndas from '../../components/BlocoOndas.astro';
 import BlocoBandeira from '../../components/BlocoBandeira.astro';
 import BlocoAgua from '../../components/BlocoAgua.astro';
 import { descricaoTextual } from '../../lib/descricao';
+import { corTemperaturaTexto, catTemperatura } from '../../lib/temperatura';
 import municipiosRaw from '../../../data/municipios.json';
 import type { Municipio, DadosCidade } from '../../lib/types';
 
@@ -66,6 +67,12 @@ function cidadesProximas(qtd = 6): { m: Municipio; km: number }[] {
   return melhores;
 }
 const vizinhas = cidadesProximas();
+
+// Temperatura atual: mesmo peso e tamanho do h1, antes do nome da cidade
+// (espelha o arranjo dos modos painel e mobile). A cor sai da faixa de calor
+// e é reaplicada pela hidratação client-side, que traz o valor ao vivo.
+const tAtual = dados?.temperatura_atual ?? null;
+const CLS_TEMP = 'shrink-0 text-2xl font-bold tabular-nums';
 
 // Bandeira tarifária vigente (nacional), gerada por scripts/scrape-bandeira.py
 let bandeira = null;
@@ -179,10 +186,29 @@ const temDados = dados && (
     data-nome={municipio.nome}
   >
     <div class="flex items-start justify-between gap-3">
-      <h1 class="text-2xl font-bold text-foreground">
-        {municipio.nome}
-        <span class="text-muted-foreground text-lg">/{municipio.estado.toUpperCase()}</span>
-      </h1>
+      <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        <p
+          id="clima-agora"
+          class={`${CLS_TEMP} ${tAtual != null ? corTemperaturaTexto(tAtual) : 'text-foreground'}`}
+          aria-live="polite"
+          title={tAtual != null ? `${tAtual}°C agora · ${catTemperatura(tAtual)}` : undefined}
+          hidden={tAtual == null && (municipio.lat == null || municipio.lon == null)}
+          data-skeleton={tAtual == null ? true : undefined}
+        >
+          <span data-temp-valor>
+            {tAtual != null ? `${Math.round(tAtual)}°` : (
+              <span class="inline-block h-7 w-16 animate-pulse rounded bg-muted align-middle" aria-hidden="true"></span>
+            )}
+          </span>
+          <span class="sr-only" data-temp-sr>
+            {tAtual != null ? ' agora' : 'Carregando temperatura atual…'}
+          </span>
+        </p>
+        <h1 class="text-2xl font-bold text-foreground">
+          {municipio.nome}
+          <span class="text-muted-foreground text-lg">/{municipio.estado.toUpperCase()}</span>
+        </h1>
+      </div>
       <button
         id="btn-compartilhar"
         aria-label="Compartilhar"
@@ -195,16 +221,6 @@ const temDados = dados && (
         <span class="hidden sm:inline">Compartilhar</span>
       </button>
     </div>
-    {dados?.temperatura_atual != null ? (
-      <p id="clima-agora" class="mt-1 text-foreground/80 text-sm" aria-live="polite">{dados.temperatura_atual}°C agora</p>
-    ) : municipio.lat != null && municipio.lon != null ? (
-      <p id="clima-agora" class="mt-1 text-foreground/80 text-sm" aria-live="polite" data-skeleton>
-        <span class="inline-block h-4 w-28 animate-pulse rounded bg-muted align-middle" aria-hidden="true"></span>
-        <span class="sr-only">Carregando temperatura atual…</span>
-      </p>
-    ) : (
-      <p id="clima-agora" class="mt-1 text-foreground/80 text-sm" aria-live="polite" hidden></p>
-    )}
     {dados?.atualizado_em ? (
       <p
         id="clima-atualizado"
