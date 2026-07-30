@@ -9,6 +9,17 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 
 ### Corrigido
 
+- O modo curl na rota raiz servia o snapshot da coleta diária em vez do tempo
+  ao vivo. A rota geolocalizada por IP ia de `buscarDados` direto para o
+  formatador, sem o `hidratarTempo` que os outros dois pontos de chamada do
+  Worker já tinham: `curl climabr.app` mostrava 12.6°C de três dias antes
+  enquanto `curl climabr.app/sp/sao-paulo` mostrava o valor do momento.
+
+- A previsão de 7 dias misturava formatos, com a casa decimal aparecendo só nos
+  dias em que era significativa (30° ao lado de 20.2°). Min e max passaram a ser
+  arredondados; a decimal fica reservada à temperatura atual, que é medição e
+  não estimativa.
+
 - As capitais na home e a capital no panorama da página do estado mostravam
   temperatura e qualidade do ar do snapshot do build, sob o título "agora". Como
   a coleta é incremental e roda de madrugada em UTC, esse valor tinha de 1 a 3
@@ -19,10 +30,13 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 
 ### Modificado
 
-- A temperatura atual na página da cidade passou para antes do nome, no mesmo
-  tamanho e peso do título e alinhada pela baseline, espelhando os modos painel
-  e mobile. A cor vem de uma escala por faixa de calor sobre os tokens de
+- A temperatura atual na página da cidade passou para antes do nome, no tamanho
+  dos números dos boxes de dados, virando o elemento mais destacado do
+  cabeçalho. A cor vem de uma escala por faixa de calor sobre os tokens de
   status, calibrada para o clima brasileiro, e acompanha o tema claro/escuro.
+  O valor mantém a casa decimal, para não parecer divergente de outros serviços
+  nem do resumo textual — que também passou a ser hidratado, já que citava a
+  mesma temperatura a partir do snapshot do build.
 
 - Astro atualizado para 7.1.5, com `@astrojs/react` 6 e Vite 8. O compilador
   Rust passou a ser o único, e `compressHTML` foi fixado em `true` para manter
