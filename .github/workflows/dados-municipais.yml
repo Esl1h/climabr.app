@@ -1,12 +1,16 @@
-name: Coleta alagamentos CGE-SP
+name: Coleta de fontes municipais
 
+# Fontes das prefeituras que não têm equivalente nacional: alagamentos do CGE em
+# São Paulo e pluviômetros do Alerta Rio. As duas são leves (uma requisição
+# cada), então ficam no mesmo job.
+#
 # O site é estático e publica às 9h e 21h UTC (deploy.yml). A coleta roda 10 min
-# antes de cada publicação para que a página de São Paulo saia com os pontos do
-# dia. Rodar mais vezes não adiantaria: commits em data/cidades/** não disparam
-# deploy (paths-ignore em deploy.yml), então só o build seguinte leria o arquivo.
+# antes de cada publicação para que as páginas saiam com o dado do dia. Rodar
+# mais vezes não adiantaria: commits em data/cidades/** não disparam deploy
+# (paths-ignore em deploy.yml), então só o build seguinte leria o arquivo.
 #
 # Às 8h50 UTC a coleta diária (dados-diarios.yml, que começa às 8h com timeout
-# de 40 min) já terminou, evitando dois commits concorrentes no mesmo arquivo.
+# de 40 min) já terminou, evitando dois commits concorrentes nos mesmos arquivos.
 
 on:
   schedule:
@@ -15,7 +19,7 @@ on:
   workflow_dispatch:
     inputs:
       data:
-        description: 'Data a coletar (DD/MM/AAAA). Vazio = hoje.'
+        description: 'Data dos alagamentos do CGE-SP (DD/MM/AAAA). Vazio = hoje.'
         required: false
         type: string
 
@@ -41,12 +45,17 @@ jobs:
         env:
           DATA_BUSCA: ${{ inputs.data }}
         run: python3 scripts/scrape-cgesp.py "$DATA_BUSCA"
+        continue-on-error: true
+
+      - name: Alerta Rio, chuva por bairro
+        run: python3 scripts/scrape-alertario.py
+        continue-on-error: true
 
       - name: Commit dados
         if: always()
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'dados: alagamentos CGE-SP'
-          file_pattern: 'data/cidades/sp/sao-paulo.json'
+          commit_message: 'dados: fontes municipais (CGE-SP, Alerta Rio)'
+          file_pattern: 'data/cidades/sp/sao-paulo.json data/cidades/rj/rio-de-janeiro.json'
           push_options: '--force-with-lease'
         continue-on-error: true
