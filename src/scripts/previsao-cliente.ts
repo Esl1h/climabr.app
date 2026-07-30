@@ -214,10 +214,13 @@ export async function hidratarClima(): Promise<void> {
   const grid = document.querySelector<HTMLElement>('[data-previsao-grid]');
   const daily = data?.daily;
   if (grid && Array.isArray(daily?.time) && daily.time.length) {
+    // Min/max arredondados: previsão é estimativa, e a casa decimal só aparecia
+    // em parte dos dias, deixando a linha com formatos misturados. A decimal
+    // fica reservada à temperatura atual, que é medição.
     const dias: DiaPrevisao[] = daily.time.slice(0, 7).map((t: string, i: number) => ({
       data: t,
-      min: arred(daily.temperature_2m_min[i]),
-      max: arred(daily.temperature_2m_max[i]),
+      min: Math.round(daily.temperature_2m_min[i]),
+      max: Math.round(daily.temperature_2m_max[i]),
       chuva: arred(daily.precipitation_sum?.[i] ?? 0),
       cond: WMO_DESCRICAO[daily.weather_code[i]] ?? `Código ${daily.weather_code[i]}`,
     }));
