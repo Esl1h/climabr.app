@@ -1,0 +1,105 @@
+---
+import type { DadosCidade } from '../lib/types';
+
+interface Props {
+  alagamentos: DadosCidade['alagamentos'];
+}
+const { alagamentos } = Astro.props;
+
+// O CGE registra o ponto do momento em que alaga até o momento em que escoa, e
+// o bloco precisa dizer as duas coisas: o que está acontecendo agora (ativo) e
+// o que já aconteceu hoje. Um ponto intransitável é o caso grave (a via está
+// fechada), então ele manda na cor do destaque.
+const ativos = alagamentos?.ativos ?? 0;
+const intransitaveis = alagamentos?.ativos_intransitaveis ?? 0;
+
+const cor = ativos === 0
+  ? 'text-status-bom'
+  : intransitaveis > 0
+    ? 'text-status-pessimo'
+    : 'text-status-moderado';
+
+const titulo = ativos === 0
+  ? 'Nenhum ponto ativo'
+  : `${ativos} ${ativos === 1 ? 'ponto ativo' : 'pontos ativos'}`;
+
+// Ativos primeiro; entre iguais, os intransitáveis antes. A lista fica curta de
+// propósito: em dia de temporal o CGE passa de 50 pontos e o card viraria uma
+// tabela; quem precisa da lista inteira segue o link da fonte.
+const MAX_LISTA = 6;
+const pontos = [...(alagamentos?.pontos ?? [])]
+  .sort((a, b) =>
+    Number(b.ativo) - Number(a.ativo) ||
+    Number(a.transitavel) - Number(b.transitavel) ||
+    (b.inicio ?? '').localeCompare(a.inicio ?? '')
+  )
+  .slice(0, MAX_LISTA);
+
+const ocultos = (alagamentos?.pontos_total ?? 0) - pontos.length;
+
+// "transitável" → "transitáveis": o plural troca -l por -is, não é sufixo
+const plural = (n: number, palavra: string): string =>
+  n === 1 ? palavra : `${palavra.slice(0, -2)}eis`;
+
+function dataCurta(iso: string): string {
+  const [ano, mes, dia] = iso.split('-');
+  return ano && mes && dia ? `${dia}/${mes}` : iso;
+}
+---
+
+{alagamentos && (
+  <section aria-label="Pontos de alagamento" class="sm:col-span-2">
+    <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
+      <span aria-hidden="true">🌊</span> Alagamentos
+    </h2>
+    <div class="rounded-lg border border-border bg-card p-4">
+      <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+        <div>
+          <p class={`text-3xl font-bold tabular-nums ${cor}`}>{titulo}</p>
+          <p class="mt-1 text-sm text-muted-foreground">
+            {alagamentos.pontos_total === 0
+              ? `Nenhum alagamento registrado em ${dataCurta(alagamentos.data)}`
+              : `${alagamentos.pontos_total} ${alagamentos.pontos_total === 1 ? 'ponto registrado' : 'pontos registrados'} em ${dataCurta(alagamentos.data)}`}
+          </p>
+        </div>
+        {ativos > 0 && (
+          <p class="text-right text-xs text-muted-foreground">
+            <span class="tabular-nums font-semibold text-status-pessimo">{intransitaveis}</span> {plural(intransitaveis, 'intransitável')}
+            <span class="mx-1">·</span>
+            <span class="tabular-nums font-semibold text-status-moderado">{ativos - intransitaveis}</span> {plural(ativos - intransitaveis, 'transitável')}
+          </p>
+        )}
+      </div>
+
+      {pontos.length > 0 && (
+        <ul class="mt-3 space-y-2 border-t border-border pt-3">
+          {pontos.map((p) => (
+            <li class="flex items-baseline gap-2 text-xs">
+              <span
+                class={`mt-1 inline-block h-2 w-2 shrink-0 rounded-full ${p.transitavel ? 'bg-status-moderado' : 'bg-status-pessimo'} ${p.ativo ? '' : 'opacity-40'}`}
+                aria-hidden="true"
+              ></span>
+              <span class="min-w-0 flex-1">
+                <span class="font-medium text-foreground/80">{p.local}</span>
+                {p.referencia && <span class="text-muted-foreground"> ({p.referencia})</span>}
+                <span class="block text-muted-foreground">
+                  {p.subprefeitura}
+                  {p.inicio && (
+                    <span class="tabular-nums"> · {p.ativo ? `desde ${p.inicio}` : `${p.inicio}-${p.fim ?? ''}`}</span>
+                  )}
+                  <span> · {p.ativo ? 'ativo' : 'escoado'}, {p.transitavel ? 'transitável' : 'intransitável'}</span>
+                </span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <p class="mt-3 border-t border-border pt-3 text-xs leading-relaxed text-muted-foreground">
+        {ocultos > 0 && <span>Mais {ocultos} {ocultos === 1 ? 'ponto' : 'pontos'} no dia. </span>}
+        Fonte: <a href={alagamentos.url} rel="noopener external" class="text-primary hover:underline">{alagamentos.fonte}</a>.
+        Registro do dia inteiro, atualizado a cada nova publicação do site; em chuva forte, confira a fonte ao vivo.
+      </p>
+    </div>
+  </section>
+)}

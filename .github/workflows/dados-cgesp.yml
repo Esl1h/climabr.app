@@ -1,0 +1,52 @@
+name: Coleta alagamentos CGE-SP
+
+# O site é estático e publica às 9h e 21h UTC (deploy.yml). A coleta roda 10 min
+# antes de cada publicação para que a página de São Paulo saia com os pontos do
+# dia. Rodar mais vezes não adiantaria: commits em data/cidades/** não disparam
+# deploy (paths-ignore em deploy.yml), então só o build seguinte leria o arquivo.
+#
+# Às 8h50 UTC a coleta diária (dados-diarios.yml, que começa às 8h com timeout
+# de 40 min) já terminou, evitando dois commits concorrentes no mesmo arquivo.
+
+on:
+  schedule:
+    - cron: '50 8 * * *'
+    - cron: '50 20 * * *'
+  workflow_dispatch:
+    inputs:
+      data:
+        description: 'Data a coletar (DD/MM/AAAA). Vazio = hoje.'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      # A data vai por env, não interpolada no run: entrada de workflow_dispatch
+      # é texto livre e interpolar direto no shell abriria injeção de comando.
+      - name: CGE-SP, pontos de alagamento da capital
+        env:
+          DATA_BUSCA: ${{ inputs.data }}
+        run: python3 scripts/scrape-cgesp.py "$DATA_BUSCA"
+
+      - name: Commit dados
+        if: always()
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'dados: alagamentos CGE-SP'
+          file_pattern: 'data/cidades/sp/sao-paulo.json'
+          push_options: '--force-with-lease'
+        continue-on-error: true
