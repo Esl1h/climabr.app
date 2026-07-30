@@ -129,27 +129,36 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
       </section>
     )}
 
-    <!-- Capitais agora: gerado no build a partir dos dados coletados -->
+    <!-- Capitais agora: snapshot do build, hidratado ao vivo por agora-cliente.ts -->
     <section aria-label="Capitais agora">
       <h2 class="mb-3 text-base font-semibold text-foreground">Capitais agora</h2>
       <div class="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5">
         {capitais.map((c) => (
           <a
             href={`/${c.uf}/${c.slug}`}
+            data-agora
+            data-lat={c.latitude}
+            data-lon={c.longitude}
             class="rounded-lg border border-border bg-card px-2.5 py-2 hover:bg-accent transition-colors"
           >
             <p class="truncate text-xs font-medium text-foreground/80">{c.nome}</p>
             <p class="mt-0.5 flex items-baseline gap-2">
-              <span class="text-sm font-bold tabular-nums text-foreground">{c.temperatura != null ? `${Math.round(c.temperatura)}°` : '—'}</span>
-              {c.aqi != null && (
-                <span class={`text-xs font-semibold tabular-nums ${corAqiTexto(c.aqi)}`} title={`Qualidade do ar: ${c.aqiCategoria ?? ''}`}>
-                  AQI {c.aqi}
-                </span>
-              )}
+              <span data-agora-temp class="text-sm font-bold tabular-nums text-foreground">{c.temperatura != null ? `${Math.round(c.temperatura)}°` : '—'}</span>
+              <span
+                data-agora-aqi
+                hidden={c.aqi == null}
+                class={`text-xs font-semibold tabular-nums ${c.aqi != null ? corAqiTexto(c.aqi) : ''}`}
+                title={c.aqi != null ? `Qualidade do ar: ${c.aqiCategoria ?? ''}` : undefined}
+              >
+                {c.aqi != null ? `AQI ${c.aqi}` : ''}
+              </span>
             </p>
           </a>
         ))}
       </div>
+      <p data-agora-selo class="mt-2 text-xs text-muted-foreground">
+        Último levantamento; a temperatura e o ar são atualizados ao abrir a página.
+      </p>
     </section>
 
     <!-- Destaques nacionais -->
@@ -233,6 +242,7 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
 
 <script>
   import { carregarIndice, maisProxima } from '../scripts/busca-cidades';
+  import { hidratarAgora } from '../scripts/agora-cliente';
 
   // Chips de cidades visitadas recentemente (gravadas pela página de cidade)
   function renderizarRecentes(): void {
@@ -297,6 +307,7 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
     renderizarRecentes();
     initBuscaHome();
     limparAlertasVencidos();
+    hidratarAgora();
   }
 
   initHome();

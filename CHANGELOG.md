@@ -7,7 +7,22 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 
 ## [Não publicado]
 
+### Corrigido
+
+- As capitais na home e a capital no panorama da página do estado mostravam
+  temperatura e qualidade do ar do snapshot do build, sob o título "agora". Como
+  a coleta é incremental e roda de madrugada em UTC, esse valor tinha de 1 a 3
+  dias e costumava ser a mínima do dia, divergindo da página da cidade, que já
+  buscava o Open-Meteo ao vivo. Os dois blocos agora hidratam no cliente, em uma
+  requisição por endpoint para todos os pontos da página; o snapshot segue no
+  HTML como conteúdo indexável e fallback sem JS.
+
 ### Modificado
+
+- A temperatura atual na página da cidade passou para antes do nome, no mesmo
+  tamanho e peso do título e alinhada pela baseline, espelhando os modos painel
+  e mobile. A cor vem de uma escala por faixa de calor sobre os tokens de
+  status, calibrada para o clima brasileiro, e acompanha o tema claro/escuro.
 
 - Astro atualizado para 7.1.5, com `@astrojs/react` 6 e Vite 8. O compilador
   Rust passou a ser o único, e `compressHTML` foi fixado em `true` para manter

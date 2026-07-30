@@ -9,6 +9,9 @@
  * Não toca a Cloudflare: os bytes vão direto do Open-Meteo ao cliente.
  */
 
+import { corAqi, catAqi } from './cores-status';
+import { corTemperatura, catTemperatura } from '../lib/temperatura';
+
 // WMO Weather Codes → descrição PT-BR (espelha scripts/scrape-openmeteo.py)
 const WMO_DESCRICAO: Record<number, string> = {
   0: 'Céu limpo', 1: 'Principalmente limpo', 2: 'Parcialmente nublado', 3: 'Encoberto',
@@ -96,22 +99,12 @@ async function buscarAr(lat: number, lon: number): Promise<any | null> {
 }
 
 // Cores via tokens de status (global.css), para acompanhar o tema claro/escuro
+// (AQI vive em cores-status.ts, compartilhado com a hidratação da home)
 function corUv(uv: number): string {
   return uv < 3 ? 'var(--status-bom)' : uv < 6 ? 'var(--status-moderado)' : uv < 8 ? 'var(--status-ruim)' : uv < 11 ? 'var(--status-pessimo)' : 'var(--status-extremo)';
 }
 function catUv(uv: number): string {
   return uv < 3 ? 'Baixo' : uv < 6 ? 'Moderado' : uv < 8 ? 'Alto' : uv < 11 ? 'Muito Alto' : 'Extremo';
-}
-function corAqi(a: number): string {
-  return a <= 50 ? 'var(--status-bom)' : a <= 100 ? 'var(--status-moderado)' : a <= 150 ? 'var(--status-ruim)' : a <= 200 ? 'var(--status-pessimo)' : 'var(--status-critico)';
-}
-function catAqi(a: number): string {
-  if (a <= 50) return 'Boa';
-  if (a <= 100) return 'Moderada';
-  if (a <= 150) return 'Ruim para grupos sensíveis';
-  if (a <= 200) return 'Ruim';
-  if (a <= 300) return 'Muito Ruim';
-  return 'Perigosa';
 }
 
 // Esconde skeletons que a hidratação não conseguiu preencher
@@ -185,11 +178,22 @@ export async function hidratarClima(): Promise<void> {
     if (typeof cur.dew_point_2m === 'number') setCond('orvalho', `${arred(cur.dew_point_2m)}°C`);
   }
 
-  // Temperatura atual
+  // Temperatura atual: destaque ao lado do nome da cidade. A cor vem da faixa
+  // de calor e sobrepõe (via style) a classe text-status-* posta no build.
   const tempEl = document.getElementById('clima-agora');
   const tAtual = data?.current?.temperature_2m;
   if (tempEl && typeof tAtual === 'number') {
-    tempEl.textContent = `${arred(tAtual)}°C agora`;
+    const valorEl = tempEl.querySelector<HTMLElement>('[data-temp-valor]');
+    if (valorEl) {
+      valorEl.textContent = `${Math.round(tAtual)}°`;
+    } else {
+      tempEl.textContent = `${Math.round(tAtual)}°`; // defensivo: markup sem o span
+    }
+    const srEl = tempEl.querySelector<HTMLElement>('[data-temp-sr]');
+    if (srEl) srEl.textContent = ' agora';
+    tempEl.style.color = corTemperatura(tAtual);
+    tempEl.title = `${arred(tAtual)}°C agora · ${catTemperatura(tAtual)}`;
+    tempEl.removeAttribute('data-skeleton');
     tempEl.hidden = false;
   }
 
