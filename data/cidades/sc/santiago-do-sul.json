@@ -4,23 +4,56 @@
   "slug": "santiago-do-sul",
   "latitude": -26.6309,
   "longitude": -52.6973,
-  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
+  "atualizado_em": "2026-07-27T11:16:55.780085+00:00",
   "previsao": [
     {
-      "data": "2026-07-30",
-      "min": 14.0,
-      "max": 27.6,
+      "data": "2026-07-27",
+      "min": 17.8,
+      "max": 26.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.3,
+      "nascer_sol": "07:13",
+      "por_sol": "18:01"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 18.7,
+      "max": 28.1,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
       "uv": 5.2,
+      "nascer_sol": "07:12",
+      "por_sol": "18:01"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 17.1,
+      "max": 24.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 14.1,
+      "uv": 5.3,
+      "nascer_sol": "07:12",
+      "por_sol": "18:02"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 14.5,
+      "max": 26.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.1,
       "nascer_sol": "07:11",
       "por_sol": "18:02"
     },
     {
       "data": "2026-07-31",
-      "min": 15.4,
-      "max": 28.0,
+      "min": 16.1,
+      "max": 27.6,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
       "chuva_mm": 0,
@@ -30,109 +63,78 @@
     },
     {
       "data": "2026-08-01",
-      "min": 17.5,
-      "max": 27.4,
-      "condicao": "Chuva isolada moderada",
-      "condicao_codigo": 81,
-      "chuva_mm": 6.1,
-      "uv": 5.5,
+      "min": 17.2,
+      "max": 28.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.8,
+      "uv": 4.7,
       "nascer_sol": "07:10",
       "por_sol": "18:03"
     },
     {
       "data": "2026-08-02",
-      "min": 16.1,
-      "max": 27.0,
+      "min": 17.4,
+      "max": 26.2,
       "condicao": "Chuvisco moderado",
       "condicao_codigo": 53,
-      "chuva_mm": 0.5,
-      "uv": 4.8,
+      "chuva_mm": 4.2,
+      "uv": 3.5,
       "nascer_sol": "07:09",
       "por_sol": "18:04"
-    },
-    {
-      "data": "2026-08-03",
-      "min": 17.9,
-      "max": 26.1,
-      "condicao": "Chuvisco moderado",
-      "condicao_codigo": 53,
-      "chuva_mm": 3.6,
-      "uv": 2.9,
-      "nascer_sol": "07:09",
-      "por_sol": "18:04"
-    },
-    {
-      "data": "2026-08-04",
-      "min": 16.4,
-      "max": 24.4,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.6,
-      "uv": 4.5,
-      "nascer_sol": "07:08",
-      "por_sol": "18:05"
-    },
-    {
-      "data": "2026-08-05",
-      "min": 16.6,
-      "max": 22.8,
-      "condicao": "Tempestade com granizo leve",
-      "condicao_codigo": 96,
-      "chuva_mm": 17.8,
-      "uv": 5.1,
-      "nascer_sol": "07:07",
-      "por_sol": "18:05"
     }
   ],
   "reservatorio": {
     "nome": "Quebra Queixo",
-    "nivel_pct": 106.0,
+    "nivel_pct": 107.5,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 14.8,
     "aproximado": true,
+    "tipo": "RCU",
+    "acumula": true,
     "nota": "Reservatório hidrelétrico mais próximo (15km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "queimadas": {
-    "focos_100km": 3,
+    "focos_100km": 15,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "uv": {
-    "indice": 5.2,
+    "indice": 5.3,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 64,
+    "indice": 58,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 19.7,
-    "pm10": 20.0,
-    "no2": 7.2,
-    "o3": 19.0,
+    "pm25": 13.0,
+    "pm10": 13.1,
+    "no2": 3.5,
+    "o3": 49.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
+    "atualizado_em": "2026-07-27T11:16:55.780085+00:00"
   },
   "sol": {
-    "nascer": "07:11",
-    "por": "18:02",
+    "nascer": "07:13",
+    "por": "18:01",
     "duracao_h": 10.8,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 52.0,
-    "dias_proxima_cheia": 1,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 49.0,
+    "fase_pct": 41.9,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 14.3,
+  "temperatura_atual": 18.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -142,7 +144,9 @@
     "casos_estimados": 0,
     "semana_epidemiologica": 202628,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-28T10:50:50.621348+00:00"
+    "atualizado_em": "2026-07-28T10:50:50.621348+00:00",
+    "incidencia_100k": 0.0,
+    "populacao": 1642
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -155,17 +159,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-28T10:50:50.621348+00:00"
   },
-  "_clima_em": "2026-07-30T10:21:49.345121+00:00",
+  "_clima_em": "2026-07-27T11:16:55.780085+00:00",
   "vento": {
-    "velocidade_kmh": 4.3,
-    "direcao_graus": 112,
-    "direcao": "ESE",
-    "max_kmh": 15.7,
-    "rajada_kmh": 33.1,
-    "direcao_dominante": "NNE",
+    "velocidade_kmh": 13.0,
+    "direcao_graus": 6,
+    "direcao": "N",
+    "max_kmh": 17.9,
+    "rajada_kmh": 37.1,
+    "direcao_dominante": "N",
     "fonte": "Open-Meteo"
   },
   "umidade_pct": 88,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 12.3
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 16.8
 }

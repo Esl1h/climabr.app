@@ -4,119 +4,43 @@
   "slug": "macapa",
   "latitude": 0.5628,
   "longitude": -50.6918,
-  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
-  "previsao": [
-    {
-      "data": "2026-07-30",
-      "min": 23.0,
-      "max": 31.5,
-      "condicao": "Chuvisco denso",
-      "condicao_codigo": 55,
-      "chuva_mm": 2.4,
-      "uv": 7.7,
-      "nascer_sol": "06:24",
-      "por_sol": "18:33"
-    },
-    {
-      "data": "2026-07-31",
-      "min": 23.0,
-      "max": 30.2,
-      "condicao": "Chuvisco moderado",
-      "condicao_codigo": 53,
-      "chuva_mm": 2.9,
-      "uv": 8.3,
-      "nascer_sol": "06:24",
-      "por_sol": "18:33"
-    },
-    {
-      "data": "2026-08-01",
-      "min": 22.9,
-      "max": 32.0,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.5,
-      "uv": 8.3,
-      "nascer_sol": "06:24",
-      "por_sol": "18:33"
-    },
-    {
-      "data": "2026-08-02",
-      "min": 23.5,
-      "max": 30.6,
-      "condicao": "Chuva isolada moderada",
-      "condicao_codigo": 81,
-      "chuva_mm": 7.0,
-      "uv": 8.4,
-      "nascer_sol": "06:24",
-      "por_sol": "18:33"
-    },
-    {
-      "data": "2026-08-03",
-      "min": 22.6,
-      "max": 29.3,
-      "condicao": "Chuva isolada leve",
-      "condicao_codigo": 80,
-      "chuva_mm": 11.4,
-      "uv": 8.4,
-      "nascer_sol": "06:24",
-      "por_sol": "18:33"
-    },
-    {
-      "data": "2026-08-04",
-      "min": 22.7,
-      "max": 32.0,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.6,
-      "uv": 8.2,
-      "nascer_sol": "06:24",
-      "por_sol": "18:32"
-    },
-    {
-      "data": "2026-08-05",
-      "min": 24.2,
-      "max": 31.4,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 2.4,
-      "uv": 8.2,
-      "nascer_sol": "06:24",
-      "por_sol": "18:32"
-    }
-  ],
+  "atualizado_em": "2026-07-29T07:45:31.072840+00:00",
+  "previsao": [],
   "reservatorio": {
     "nome": "Ferreira Gomes",
     "nivel_pct": 0.0,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 64.9,
     "aproximado": true,
+    "tipo": "FIO",
+    "acumula": false,
     "nota": "Reservatório hidrelétrico mais próximo (65km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "queimadas": {
-    "focos_100km": 2,
+    "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "uv": {
-    "indice": 7.7,
-    "categoria": "Alto",
+    "indice": 8.2,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 27,
+    "indice": 36,
     "categoria": "Boa",
     "principal_poluente": "PM10",
-    "pm25": 3.8,
-    "pm10": 6.0,
-    "no2": 1.0,
-    "o3": 34.0,
+    "pm25": 5.4,
+    "pm10": 8.4,
+    "no2": 0.9,
+    "o3": 41.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
+    "atualizado_em": "2026-07-27T11:16:55.780085+00:00"
   },
   "sol": {
     "nascer": "06:24",
@@ -126,23 +50,25 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 52.0,
-    "dias_proxima_cheia": 1,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 49.0,
+    "fase_pct": 41.9,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.7,
+  "temperatura_atual": 26.8,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
     "nivel_incidencia": 2,
     "nivel_incidencia_label": "Alta",
     "casos_semana": 0,
-    "casos_estimados": 74,
-    "semana_epidemiologica": 202627,
+    "casos_estimados": 65,
+    "incidencia_100k": 13.6,
+    "populacao": 478448,
+    "semana_epidemiologica": 202629,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-07-30T14:27:41.477525-03:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -155,17 +81,33 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-30T10:21:49.345121+00:00",
+  "_clima_em": "2026-07-27T11:16:55.780085+00:00",
   "vento": {
-    "velocidade_kmh": 6.9,
-    "direcao_graus": 105,
-    "direcao": "ESE",
-    "max_kmh": 17.2,
-    "rajada_kmh": 38.9,
-    "direcao_dominante": "E",
-    "fonte": "Open-Meteo"
+    "velocidade_kmh": 16.4,
+    "direcao_graus": 81,
+    "direcao": "E",
+    "max_kmh": 16.7,
+    "rajada_kmh": 38.2,
+    "direcao_dominante": "ENE",
+    "fonte": "Open-Meteo",
+    "atualizado_em": "2026-07-30T15:00:18.547077-03:00"
   },
-  "umidade_pct": 99,
+  "umidade_pct": 81,
   "pressao_hpa": 1014,
-  "ponto_orvalho_c": 23.4
+  "ponto_orvalho_c": 23.3,
+  "ondas": {
+    "altura_m": 0.26,
+    "altura_max_m": 0.26,
+    "periodo_s": 2.4,
+    "direcao_graus": 76,
+    "direcao": "ENE",
+    "swell_altura_m": 0.1,
+    "swell_periodo_s": 2.8,
+    "swell_direcao": "ENE",
+    "surf_nivel": "ruim",
+    "surf_emoji": "🔴",
+    "surf_descricao": "Mar muito calmo",
+    "fonte": "Open-Meteo Marine",
+    "atualizado_em": "2026-07-30T15:00:18.547077-03:00"
+  }
 }

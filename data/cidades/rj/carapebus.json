@@ -4,12 +4,45 @@
   "slug": "carapebus",
   "latitude": -22.196,
   "longitude": -41.6509,
-  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
+  "atualizado_em": "2026-07-27T11:16:55.780085+00:00",
   "previsao": [
     {
+      "data": "2026-07-27",
+      "min": 14.6,
+      "max": 28.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "06:21",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 18.9,
+      "max": 30.3,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "06:21",
+      "por_sol": "17:24"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 17.9,
+      "max": 32.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.9,
+      "nascer_sol": "06:20",
+      "por_sol": "17:25"
+    },
+    {
       "data": "2026-07-30",
-      "min": 19.6,
-      "max": 25.9,
+      "min": 20.9,
+      "max": 27.7,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
@@ -19,120 +52,89 @@
     },
     {
       "data": "2026-07-31",
-      "min": 18.3,
-      "max": 23.5,
+      "min": 19.4,
+      "max": 24.5,
       "condicao": "Chuvisco leve",
       "condicao_codigo": 51,
-      "chuva_mm": 1.3,
-      "uv": 5.8,
+      "chuva_mm": 0.5,
+      "uv": 5.3,
       "nascer_sol": "06:19",
       "por_sol": "17:25"
     },
     {
       "data": "2026-08-01",
-      "min": 16.3,
-      "max": 25.8,
+      "min": 17.3,
+      "max": 26.8,
       "condicao": "Chuvisco leve",
       "condicao_codigo": 51,
-      "chuva_mm": 0.2,
-      "uv": 6.0,
+      "chuva_mm": 1.0,
+      "uv": 5.8,
       "nascer_sol": "06:19",
       "por_sol": "17:26"
     },
     {
       "data": "2026-08-02",
-      "min": 17.6,
-      "max": 28.3,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
+      "min": 18.3,
+      "max": 30.5,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "uv": 6.0,
+      "uv": 5.8,
       "nascer_sol": "06:18",
       "por_sol": "17:26"
-    },
-    {
-      "data": "2026-08-03",
-      "min": 17.7,
-      "max": 30.5,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 6.1,
-      "nascer_sol": "06:18",
-      "por_sol": "17:27"
-    },
-    {
-      "data": "2026-08-04",
-      "min": 19.4,
-      "max": 28.9,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 5.2,
-      "nascer_sol": "06:17",
-      "por_sol": "17:27"
-    },
-    {
-      "data": "2026-08-05",
-      "min": 20.7,
-      "max": 29.7,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 1.2,
-      "uv": 5.8,
-      "nascer_sol": "06:16",
-      "por_sol": "17:27"
     }
   ],
   "reservatorio": {
     "nome": "Ilha Pombos",
-    "nivel_pct": 64.0,
+    "nivel_pct": 81.3,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 103.4,
     "aproximado": true,
+    "tipo": "FIO",
+    "acumula": false,
     "nota": "Reservatório hidrelétrico mais próximo (103km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "queimadas": {
-    "focos_100km": 10,
+    "focos_100km": 21,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "uv": {
-    "indice": 5.9,
+    "indice": 5.8,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 63,
+    "indice": 51,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 28.2,
-    "pm10": 31.0,
-    "no2": 14.0,
-    "o3": 51.0,
+    "pm25": 11.8,
+    "pm10": 13.0,
+    "no2": 5.0,
+    "o3": 53.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
+    "atualizado_em": "2026-07-27T11:16:55.780085+00:00"
   },
   "sol": {
-    "nascer": "06:20",
-    "por": "17:25",
-    "duracao_h": 11.1,
+    "nascer": "06:21",
+    "por": "17:24",
+    "duracao_h": 11.0,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 52.0,
-    "dias_proxima_cheia": 1,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 49.0,
+    "fase_pct": 41.9,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 20.4,
+  "temperatura_atual": 19.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -142,7 +144,9 @@
     "casos_estimados": 0,
     "semana_epidemiologica": 202628,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-26T10:16:28.176483+00:00"
+    "atualizado_em": "2026-07-26T10:16:28.176483+00:00",
+    "incidencia_100k": 0.0,
+    "populacao": 13360
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -155,17 +159,33 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-26T10:16:28.176483+00:00"
   },
-  "_clima_em": "2026-07-30T10:21:49.345121+00:00",
+  "_clima_em": "2026-07-27T11:16:55.780085+00:00",
   "vento": {
-    "velocidade_kmh": 12.6,
-    "direcao_graus": 222,
-    "direcao": "SO",
-    "max_kmh": 25.3,
-    "rajada_kmh": 45.7,
+    "velocidade_kmh": 28.2,
+    "direcao_graus": 175,
+    "direcao": "S",
+    "max_kmh": 28.2,
+    "rajada_kmh": 50.4,
     "direcao_dominante": "SSO",
-    "fonte": "Open-Meteo"
+    "fonte": "Open-Meteo",
+    "atualizado_em": "2026-07-30T15:00:18.547077-03:00"
   },
-  "umidade_pct": 77,
+  "umidade_pct": 79,
   "pressao_hpa": 1020,
-  "ponto_orvalho_c": 16.3
+  "ponto_orvalho_c": 16.2,
+  "ondas": {
+    "altura_m": 0.8,
+    "altura_max_m": 0.84,
+    "periodo_s": 5.5,
+    "direcao_graus": 179,
+    "direcao": "S",
+    "swell_altura_m": 0.52,
+    "swell_periodo_s": 9.8,
+    "swell_direcao": "S",
+    "surf_nivel": "razoavel",
+    "surf_emoji": "🟡",
+    "surf_descricao": "Surf razoável",
+    "fonte": "Open-Meteo Marine",
+    "atualizado_em": "2026-07-30T15:00:18.547077-03:00"
+  }
 }

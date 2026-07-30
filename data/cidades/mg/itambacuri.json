@@ -4,14 +4,36 @@
   "slug": "itambacuri",
   "latitude": -18.1591,
   "longitude": -41.8462,
-  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
+  "atualizado_em": "2026-07-28T10:30:45.354029+00:00",
   "previsao": [
     {
+      "data": "2026-07-28",
+      "min": 17.2,
+      "max": 27.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "06:15",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 16.9,
+      "max": 29.4,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "06:15",
+      "por_sol": "17:32"
+    },
+    {
       "data": "2026-07-30",
-      "min": 17.6,
-      "max": 30.6,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "min": 17.8,
+      "max": 29.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
       "uv": 6.2,
       "nascer_sol": "06:15",
@@ -19,132 +41,112 @@
     },
     {
       "data": "2026-07-31",
-      "min": 17.3,
-      "max": 28.0,
+      "min": 17.5,
+      "max": 27.6,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 6.5,
+      "uv": 4.2,
       "nascer_sol": "06:14",
       "por_sol": "17:32"
     },
     {
       "data": "2026-08-01",
-      "min": 15.1,
-      "max": 25.2,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.4,
-      "uv": 6.6,
+      "min": 14.8,
+      "max": 25.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.5,
       "nascer_sol": "06:14",
       "por_sol": "17:33"
     },
     {
       "data": "2026-08-02",
-      "min": 15.3,
-      "max": 25.3,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.1,
-      "uv": 6.7,
+      "min": 14.9,
+      "max": 27.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.5,
       "nascer_sol": "06:13",
       "por_sol": "17:33"
     },
     {
       "data": "2026-08-03",
-      "min": 14.3,
-      "max": 27.5,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 5.8,
+      "min": 17.8,
+      "max": 26.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 6.3,
       "nascer_sol": "06:13",
       "por_sol": "17:33"
-    },
-    {
-      "data": "2026-08-04",
-      "min": 18.0,
-      "max": 26.6,
-      "condicao": "Chuvisco denso",
-      "condicao_codigo": 55,
-      "chuva_mm": 3.9,
-      "uv": 6.2,
-      "nascer_sol": "06:12",
-      "por_sol": "17:33"
-    },
-    {
-      "data": "2026-08-05",
-      "min": 16.6,
-      "max": 28.2,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
-      "uv": 6.6,
-      "nascer_sol": "06:12",
-      "por_sol": "17:34"
     }
   ],
   "reservatorio": {
     "nome": "Baguari",
-    "nivel_pct": 50.2,
+    "nivel_pct": 56.2,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 101.3,
     "aproximado": true,
+    "tipo": "FIO",
+    "acumula": false,
     "nota": "Reservatório hidrelétrico mais próximo (101km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "queimadas": {
-    "focos_100km": 25,
+    "focos_100km": 10,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "uv": {
-    "indice": 6.2,
+    "indice": 6.5,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 21,
+    "indice": 31,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.3,
-    "pm10": 4.4,
-    "no2": 11.1,
-    "o3": 27.0,
+    "pm25": 4.9,
+    "pm10": 5.7,
+    "no2": 6.1,
+    "o3": 39.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
+    "atualizado_em": "2026-07-28T10:30:45.354029+00:00"
   },
   "sol": {
     "nascer": "06:15",
-    "por": "17:32",
+    "por": "17:31",
     "duracao_h": 11.3,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 52.0,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 29.0,
+    "fase_pct": 45.3,
     "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 21.0,
+  "temperatura_atual": 19.0,
   "vento": {
-    "velocidade_kmh": 6.9,
-    "direcao_graus": 351,
-    "direcao": "N",
-    "max_kmh": 18.6,
-    "rajada_kmh": 34.9,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 5.8,
+    "direcao_graus": 36,
+    "direcao": "NE",
+    "max_kmh": 11.7,
+    "rajada_kmh": 24.1,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 58,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 12.6,
+  "umidade_pct": 84,
+  "pressao_hpa": 1021,
+  "ponto_orvalho_c": 16.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -154,7 +156,9 @@
     "casos_estimados": 0,
     "semana_epidemiologica": 202628,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-22T10:42:35.605158+00:00"
+    "atualizado_em": "2026-07-22T10:42:35.605158+00:00",
+    "incidencia_100k": 0.0,
+    "populacao": 21080
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -167,5 +171,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-22T10:42:35.605158+00:00"
   },
-  "_clima_em": "2026-07-30T10:21:49.345121+00:00"
+  "_clima_em": "2026-07-28T10:30:45.354029+00:00"
 }

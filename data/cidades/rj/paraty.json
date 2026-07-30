@@ -86,19 +86,21 @@
   ],
   "reservatorio": {
     "nome": "Funil",
-    "nivel_pct": 34.1,
+    "nivel_pct": 33.4,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 70.4,
     "aproximado": true,
+    "tipo": "RCU",
+    "acumula": true,
     "nota": "Reservatório hidrelétrico mais próximo (70km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "queimadas": {
-    "focos_100km": 27,
+    "focos_100km": 10,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "uv": {
     "indice": 5.7,
@@ -139,10 +141,12 @@
     "nivel_incidencia": 1,
     "nivel_incidencia_label": "Média",
     "casos_semana": 0,
-    "casos_estimados": 25,
-    "semana_epidemiologica": 202628,
+    "casos_estimados": 23,
+    "incidencia_100k": 45.5,
+    "populacao": 50592,
+    "semana_epidemiologica": 202629,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-26T10:16:28.176483+00:00"
+    "atualizado_em": "2026-07-30T14:27:41.477525-03:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -157,15 +161,31 @@
   },
   "_clima_em": "2026-07-28T10:30:45.354029+00:00",
   "vento": {
-    "velocidade_kmh": 0.8,
-    "direcao_graus": 315,
-    "direcao": "NO",
-    "max_kmh": 5.4,
-    "rajada_kmh": 18.4,
-    "direcao_dominante": "NE",
-    "fonte": "Open-Meteo"
+    "velocidade_kmh": 7.0,
+    "direcao_graus": 134,
+    "direcao": "SE",
+    "max_kmh": 13.2,
+    "rajada_kmh": 36.0,
+    "direcao_dominante": "SSE",
+    "fonte": "Open-Meteo",
+    "atualizado_em": "2026-07-30T15:00:18.547077-03:00"
   },
   "umidade_pct": 68,
   "pressao_hpa": 1016,
-  "ponto_orvalho_c": 14.7
+  "ponto_orvalho_c": 14.7,
+  "ondas": {
+    "altura_m": 0.22,
+    "altura_max_m": 0.26,
+    "periodo_s": 6.0,
+    "direcao_graus": 134,
+    "direcao": "SE",
+    "swell_altura_m": 0.2,
+    "swell_periodo_s": 6.0,
+    "swell_direcao": "ESE",
+    "surf_nivel": "ruim",
+    "surf_emoji": "🔴",
+    "surf_descricao": "Mar muito calmo",
+    "fonte": "Open-Meteo Marine",
+    "atualizado_em": "2026-07-30T15:00:18.547077-03:00"
+  }
 }

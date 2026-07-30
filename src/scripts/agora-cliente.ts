@@ -67,7 +67,33 @@ function buscarLote(url: string, chave: string): Promise<any[] | null> {
 
 function preencherTemperatura(el: HTMLElement, temp: unknown): void {
   const alvo = el.querySelector<HTMLElement>('[data-agora-temp]');
-  if (alvo && typeof temp === 'number') alvo.textContent = `${Math.round(temp)}°`;
+  if (alvo && typeof temp === 'number') {
+    alvo.textContent = `${Math.round(temp)}°`;
+    el.dataset.temp = String(temp); // guardado para a reordenação do ranking
+  }
+}
+
+/**
+ * Reordena listas marcadas com `data-agora-ordenar` pela temperatura ao vivo.
+ *
+ * Um ranking de temperatura não pode sair do snapshot: `data/cidades/` é
+ * coletado de forma incremental e hoje tem leituras de 1 a 6 dias diferentes,
+ * então a ordem do build compara cidades em dias distintos. O HTML sai ordenado
+ * pelo snapshot só para ter algo coerente sem JS; aqui a ordem vira real.
+ */
+function ordenarRankings(): void {
+  for (const lista of document.querySelectorAll<HTMLElement>('[data-agora-ordenar]')) {
+    const itens = [...lista.querySelectorAll<HTMLElement>('[data-agora]')];
+    // Ordem parcial seria pior que a do snapshot: só reordena com todos os valores
+    if (itens.length === 0 || itens.some((i) => i.dataset.temp == null)) continue;
+    itens.sort((a, b) => Number(b.dataset.temp) - Number(a.dataset.temp));
+    for (const [i, item] of itens.entries()) {
+      const pos = item.querySelector<HTMLElement>('[data-agora-pos]');
+      if (pos) pos.textContent = `${i + 1}.`;
+      lista.appendChild(item);
+    }
+    lista.dataset.agoraOrdenado = '1';
+  }
 }
 
 function preencherAqi(el: HTMLElement, aqi: unknown): void {
@@ -113,6 +139,7 @@ export async function hidratarAgora(): Promise<void> {
 
   // Só afirma "ao vivo" quando a temperatura realmente chegou
   if (clima) {
+    ordenarRankings();
     for (const el of document.querySelectorAll<HTMLElement>('[data-agora-selo]')) {
       el.textContent = 'Temperatura e qualidade do ar medidas agora · Open-Meteo';
     }

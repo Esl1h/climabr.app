@@ -4,23 +4,45 @@
   "slug": "abre-campo",
   "latitude": -20.2732,
   "longitude": -42.4426,
-  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
+  "atualizado_em": "2026-07-28T10:30:45.354029+00:00",
   "previsao": [
     {
+      "data": "2026-07-28",
+      "min": 13.3,
+      "max": 23.7,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "06:21",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 13.8,
+      "max": 25.6,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "06:21",
+      "por_sol": "17:31"
+    },
+    {
       "data": "2026-07-30",
-      "min": 13.7,
-      "max": 26.5,
+      "min": 15.6,
+      "max": 27.3,
       "condicao": "Chuvisco leve",
       "condicao_codigo": 51,
-      "chuva_mm": 0.4,
+      "chuva_mm": 0.1,
       "uv": 6.3,
       "nascer_sol": "06:20",
       "por_sol": "17:31"
     },
     {
       "data": "2026-07-31",
-      "min": 14.6,
-      "max": 23.7,
+      "min": 14.7,
+      "max": 23.9,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
@@ -30,121 +52,101 @@
     },
     {
       "data": "2026-08-01",
-      "min": 11.9,
-      "max": 22.2,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.1,
+      "min": 10.0,
+      "max": 22.0,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
       "uv": 6.4,
       "nascer_sol": "06:19",
       "por_sol": "17:32"
     },
     {
       "data": "2026-08-02",
-      "min": 10.7,
-      "max": 21.9,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "min": 10.5,
+      "max": 23.1,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "uv": 6.5,
+      "uv": 6.2,
       "nascer_sol": "06:19",
       "por_sol": "17:32"
     },
     {
       "data": "2026-08-03",
-      "min": 11.0,
-      "max": 23.6,
+      "min": 12.9,
+      "max": 23.7,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 6.5,
-      "nascer_sol": "06:18",
-      "por_sol": "17:33"
-    },
-    {
-      "data": "2026-08-04",
-      "min": 13.6,
-      "max": 23.0,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.3,
-      "uv": 5.7,
-      "nascer_sol": "06:18",
-      "por_sol": "17:33"
-    },
-    {
-      "data": "2026-08-05",
-      "min": 14.8,
-      "max": 25.3,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
       "uv": 6.3,
-      "nascer_sol": "06:17",
+      "nascer_sol": "06:18",
       "por_sol": "17:33"
     }
   ],
   "reservatorio": {
     "nome": "Candonga",
-    "nivel_pct": 46.1,
+    "nivel_pct": 17.5,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 43.7,
     "aproximado": true,
+    "tipo": "FIO",
+    "acumula": false,
     "nota": "Reservatório hidrelétrico mais próximo (44km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "queimadas": {
-    "focos_100km": 32,
+    "focos_100km": 20,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "uv": {
-    "indice": 6.3,
+    "indice": 6.2,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 33,
+    "indice": 46,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 6.2,
-    "pm10": 6.4,
-    "no2": 6.6,
-    "o3": 62.0,
+    "pm25": 8.0,
+    "pm10": 9.5,
+    "no2": 4.7,
+    "o3": 61.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
+    "atualizado_em": "2026-07-28T10:30:45.354029+00:00"
   },
   "sol": {
-    "nascer": "06:20",
+    "nascer": "06:21",
     "por": "17:31",
     "duracao_h": 11.2,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 52.0,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 29.0,
+    "fase_pct": 45.3,
     "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 18.0,
+  "temperatura_atual": 15.0,
   "vento": {
-    "velocidade_kmh": 5.5,
-    "direcao_graus": 167,
-    "direcao": "SSE",
-    "max_kmh": 23.1,
-    "rajada_kmh": 43.2,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 4.7,
+    "direcao_graus": 40,
+    "direcao": "NE",
+    "max_kmh": 11.2,
+    "rajada_kmh": 27.4,
+    "direcao_dominante": "NNE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 69,
-  "pressao_hpa": 1019,
-  "ponto_orvalho_c": 12.3,
+  "umidade_pct": 76,
+  "pressao_hpa": 1021,
+  "ponto_orvalho_c": 10.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -154,7 +156,9 @@
     "casos_estimados": 0,
     "semana_epidemiologica": 202628,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-21T10:42:52.223788+00:00"
+    "atualizado_em": "2026-07-21T10:42:52.223788+00:00",
+    "incidencia_100k": 0.0,
+    "populacao": 13882
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -167,5 +171,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-21T10:42:52.223788+00:00"
   },
-  "_clima_em": "2026-07-30T10:21:49.345121+00:00"
+  "_clima_em": "2026-07-28T10:30:45.354029+00:00"
 }

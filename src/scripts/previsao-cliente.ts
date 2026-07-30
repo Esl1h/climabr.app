@@ -139,15 +139,20 @@ export async function hidratarClima(): Promise<void> {
     const rel = tempoRelativo(ts);
     if (rel) atualizadoEl.textContent = `Atualizado ${rel}`;
 
-    // Coleta parada há mais de 48h: sinaliza em vez de exibir número velho como atual
-    // (a previsão e o "agora" são hidratados ao vivo; o selo cobre os blocos do snapshot)
+    // Coleta parada há mais de 48h: sinaliza em vez de exibir número velho como
+    // atual. Só vale para os blocos do snapshot (reservatório, dengue,
+    // queimadas); a previsão e o "agora" são hidratados ao vivo logo abaixo.
+    // Por isso o aviso é ancorado DEPOIS dos painéis, e não no cabeçalho, onde
+    // contradizia o "Tempo atualizado agora" impresso na linha de cima.
     const idadeMs = Date.now() - Date.parse(ts);
-    if (Number.isFinite(idadeMs) && idadeMs > 48 * 3600 * 1000 && !document.getElementById('aviso-dado-velho')) {
+    const ancora = document.querySelector<HTMLElement>('[data-aviso-coleta]');
+    if (ancora && Number.isFinite(idadeMs) && idadeMs > 48 * 3600 * 1000 && !document.getElementById('aviso-dado-velho')) {
       const aviso = document.createElement('p');
       aviso.id = 'aviso-dado-velho';
-      aviso.className = 'mt-1 text-xs text-status-moderado';
+      aviso.className = 'rounded-lg border border-status-moderado/40 bg-status-moderado/10 px-4 py-3 text-xs text-status-moderado';
+      aviso.setAttribute('role', 'status');
       aviso.textContent = '⚠️ Coleta automática atrasada: reservatório, dengue e queimadas podem estar desatualizados.';
-      atualizadoEl.after(aviso);
+      ancora.appendChild(aviso);
     }
   }
 
@@ -210,21 +215,37 @@ export async function hidratarClima(): Promise<void> {
     atualizadoEl.title = `Tempo atualizado em ${agoraFormatado()}`;
   }
 
+  // Min/max arredondados: previsão é estimativa, e a casa decimal só aparecia
+  // em parte dos dias, deixando a linha com formatos misturados. A decimal
+  // fica reservada à temperatura atual, que é medição.
+  const daily = data?.daily;
+  const dias: DiaPrevisao[] = Array.isArray(daily?.time)
+    ? daily.time.slice(0, 7).map((t: string, i: number) => ({
+        data: t,
+        min: Math.round(daily.temperature_2m_min[i]),
+        max: Math.round(daily.temperature_2m_max[i]),
+        chuva: arred(daily.precipitation_sum?.[i] ?? 0),
+        cond: WMO_DESCRICAO[daily.weather_code[i]] ?? `Código ${daily.weather_code[i]}`,
+      }))
+    : [];
+
+  // Máx/mín de hoje no cabeçalho. Fica fora do bloco da grade porque a cidade
+  // pode não ter o bloco de previsão renderizado (snapshot vazio no build) e
+  // ainda assim receber os dados ao vivo aqui.
+  if (dias[0]) {
+    const setHoje = (f: string, v: string) => {
+      const el = document.querySelector<HTMLElement>(`[data-f="${f}"]`);
+      if (el) el.textContent = v;
+    };
+    setHoje('hoje-max', `${dias[0].max}°`);
+    setHoje('hoje-min', `${dias[0].min}°`);
+    const linhaMinMax = document.querySelector<HTMLElement>('[data-hoje-minmax]');
+    if (linhaMinMax) linhaMinMax.hidden = false;
+  }
+
   // Previsão 7 dias (atualiza os cards já renderizados no servidor)
   const grid = document.querySelector<HTMLElement>('[data-previsao-grid]');
-  const daily = data?.daily;
-  if (grid && Array.isArray(daily?.time) && daily.time.length) {
-    // Min/max arredondados: previsão é estimativa, e a casa decimal só aparecia
-    // em parte dos dias, deixando a linha com formatos misturados. A decimal
-    // fica reservada à temperatura atual, que é medição.
-    const dias: DiaPrevisao[] = daily.time.slice(0, 7).map((t: string, i: number) => ({
-      data: t,
-      min: Math.round(daily.temperature_2m_min[i]),
-      max: Math.round(daily.temperature_2m_max[i]),
-      chuva: arred(daily.precipitation_sum?.[i] ?? 0),
-      cond: WMO_DESCRICAO[daily.weather_code[i]] ?? `Código ${daily.weather_code[i]}`,
-    }));
-
+  if (grid && dias.length) {
     const cards = Array.from(grid.querySelectorAll<HTMLElement>('[data-dia]'));
     const template = cards[0];
 

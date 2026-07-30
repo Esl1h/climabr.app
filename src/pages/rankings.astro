@@ -2,6 +2,10 @@
 import PainelLayout from '../layouts/PainelLayout.astro';
 import {
   lerTodas,
+  capitaisAgora,
+  agruparPorProximidade,
+  agruparReservatorios,
+  maisRecente,
   corAqiTexto,
   corReservatorioTexto,
   corFocosTexto,
@@ -9,40 +13,82 @@ import {
 } from '../lib/destaques';
 
 const todas = await lerTodas();
+const capitais = await capitaisAgora();
 
-const pioresAr = todas
-  .filter((c) => c.aqi != null)
-  .sort((a, b) => (b.aqi ?? 0) - (a.aqi ?? 0))
-  .slice(0, 15);
+// Cidades vizinhas medem o mesmo fenômeno: o Copernicus entrega uma célula de
+// grade para várias delas (seis municípios com AQI 154 idêntico em sequência) e
+// `focos_100km` conta focos num raio de 100 km, o que fazia quatro cidades ao
+// redor do mesmo incêndio no Pantanal ocuparem quatro linhas. Cada raio é o do
+// próprio indicador: 100 km para queimadas, ~50 km para a grade do ar.
+const RAIO_AR_KM = 50;
+const RAIO_FOGO_KM = 100;
 
-const reservatoriosBaixos = todas
-  .filter((c) => c.reservatorioPct != null && !c.reservatorioAproximado)
-  .sort((a, b) => (a.reservatorioPct ?? 0) - (b.reservatorioPct ?? 0))
-  .slice(0, 15);
+const pioresAr = agruparPorProximidade(
+  todas.filter((c) => c.aqi != null).sort((a, b) => (b.aqi ?? 0) - (a.aqi ?? 0)),
+  RAIO_AR_KM
+).slice(0, 15);
 
-const maisFocos = todas
-  .filter((c) => (c.focos ?? 0) > 0)
-  .sort((a, b) => (b.focos ?? 0) - (a.focos ?? 0))
-  .slice(0, 15);
+const maisFocos = agruparPorProximidade(
+  todas.filter((c) => (c.focos ?? 0) > 0).sort((a, b) => (b.focos ?? 0) - (a.focos ?? 0)),
+  RAIO_FOGO_KM
+).slice(0, 15);
 
-const dengueAlerta = todas
-  .filter((c) => (c.dengueNivel ?? 0) >= 2)
-  .sort((a, b) => (b.dengueCasos ?? 0) - (a.dengueCasos ?? 0))
+// Um reservatório abastece dezenas de municípios: ranquear cidades punha o
+// Cantareira em 14 das 15 linhas. As duas listas são separadas porque
+// `aproximado` marca a associação cidade↔reservatório como incerta (é o
+// hidrelétrico mais próximo, não necessariamente quem abastece), enquanto o
+// nível medido é igualmente confiável nos dois casos.
+const sistemasAbastecimento = agruparReservatorios(todas, false).slice(0, 15);
+const hidreletricos = agruparReservatorios(todas, true).slice(0, 15);
+
+// Casos absolutos rankeiam população, não epidemia. A incidência corrige isso,
+// mas em município pequeno ela fica instável (o nowcasting do InfoDengue
+// extrapola de poucas notificações), então exige um piso de casos estimados.
+const MIN_CASOS_EST = 10;
+const dengueIncidencia = todas
+  .filter(
+    (c) =>
+      (c.dengueNivel ?? 0) >= 2 &&
+      c.dengueIncidencia != null &&
+      (c.dengueCasos ?? 0) >= 0 &&
+      (c.denguePopulacao ?? 0) > 0
+  )
+  .filter((c) => (c.dengueIncidencia! * (c.denguePopulacao ?? 0)) / 100000 >= MIN_CASOS_EST)
+  .sort((a, b) => (b.dengueIncidencia ?? 0) - (a.dengueIncidencia ?? 0))
   .slice(0, 15);
 
 const totalDengueAlerta = todas.filter((c) => (c.dengueNivel ?? 0) >= 2).length;
 const totalFocos = todas.reduce((soma, c) => soma + (c.focos ?? 0), 0);
+
+// Cada fonte tem seu próprio ciclo: o InfoDengue consolida com semanas de
+// atraso e a ANA publica a medição do reservatório dias depois. Um único
+// "gerado em" sugeria que tudo era da hora do build.
+const dataAr = maisRecente(todas.map((c) => c.aqiAtualizadoEm));
+const dataFogo = maisRecente(todas.map((c) => c.focosAtualizadoEm));
+const semanaDengue = dengueIncidencia[0]?.dengueSemana ?? null;
 
 const geradoEm = new Date().toLocaleString('pt-BR', {
   day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit',
   timeZone: 'America/Sao_Paulo',
 });
 
-const descricao = 'Rankings ambientais do Brasil: pior qualidade do ar, reservatórios mais baixos, ' +
-  'focos de queimada e alertas de dengue por município, atualizados 2x ao dia.';
+function dataCurta(iso: string | null): string | null {
+  if (!iso) return null;
+  const t = Date.parse(iso);
+  if (!Number.isFinite(t)) return null;
+  return new Date(t).toLocaleDateString('pt-BR', {
+    day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'America/Sao_Paulo',
+  });
+}
+
+const semanaLegivel = (se: number | null): string | null =>
+  se ? `semana ${String(se).slice(4)}/${String(se).slice(0, 4)}` : null;
+
+const descricao = 'Rankings ambientais do Brasil: capitais mais quentes agora, pior qualidade do ar, ' +
+  'reservatórios mais baixos, focos de queimada e incidência de dengue por município.';
 ---
 
-<PainelLayout title="Rankings ambientais do Brasil — ClimaBR.app" description={descricao}>
+<PainelLayout title="Rankings ambientais do Brasil | ClimaBR.app" description={descricao}>
   <nav class="mb-6 text-sm text-muted-foreground" aria-label="Navegação">
     <a href="/" class="hover:text-foreground/80">ClimaBR.app</a>
     <span class="mx-2">/</span>
@@ -53,22 +99,55 @@ const descricao = 'Rankings ambientais do Brasil: pior qualidade do ar, reservat
     <h1 class="text-2xl font-bold text-foreground">Rankings ambientais</h1>
     <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
       Os municípios em situação mais crítica em cada indicador, calculados sobre os
-      {todas.length.toLocaleString('pt-BR')} municípios monitorados. Gerado em {geradoEm}, atualiza 2x ao dia.
+      {todas.length.toLocaleString('pt-BR')} municípios monitorados. Cada seção mostra a data
+      do próprio dado: as fontes têm ciclos diferentes. Página gerada em {geradoEm}.
     </p>
   </div>
 
   <div class="space-y-8">
+    <section aria-label="Capitais agora">
+      <h2 class="mb-1 flex items-center gap-2 text-base font-semibold text-foreground">
+        <span aria-hidden="true">🌡</span> Capitais, da mais quente à mais fria
+      </h2>
+      <p data-agora-selo class="mb-3 text-xs text-muted-foreground">
+        Ordem do último build; a temperatura ao vivo reordena a lista ao abrir a página.
+      </p>
+      <ol class="rounded-lg border border-border bg-card divide-y divide-border" data-agora-ordenar>
+        {[...capitais]
+          .sort((a, b) => (b.temperatura ?? -999) - (a.temperatura ?? -999))
+          .map((c, i) => (
+            <li data-agora data-lat={c.latitude ?? ''} data-lon={c.longitude ?? ''}>
+              <a href={`/${c.uf}/${c.slug}`} class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-accent transition-colors">
+                <span data-agora-pos class="w-6 shrink-0 text-right tabular-nums text-muted-foreground">{i + 1}.</span>
+                <span class="flex-1 truncate text-foreground/80">{c.nome}/{c.uf.toUpperCase()}</span>
+                <span data-agora-aqi hidden class="shrink-0 text-xs tabular-nums"></span>
+                <span data-agora-temp class="w-16 shrink-0 text-right font-semibold tabular-nums text-foreground">
+                  {c.temperatura != null ? `${Math.round(c.temperatura)}°` : '—'}
+                </span>
+              </a>
+            </li>
+          ))}
+      </ol>
+    </section>
+
     <section aria-label="Pior qualidade do ar">
-      <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
+      <h2 class="mb-1 flex items-center gap-2 text-base font-semibold text-foreground">
         <span aria-hidden="true">💨</span> Pior qualidade do ar
       </h2>
+      <p class="mb-3 text-xs text-muted-foreground">
+        Uma cidade por área: o modelo entrega o mesmo índice para vizinhas dentro de {RAIO_AR_KM} km.
+        {dataCurta(dataAr) && <span> Coleta de {dataCurta(dataAr)}.</span>}
+      </p>
       <ol class="rounded-lg border border-border bg-card divide-y divide-border">
-        {pioresAr.map((c, i) => (
+        {pioresAr.map(({ cidade: c, vizinhas }, i) => (
           <li>
             <a href={`/${c.uf}/${c.slug}`} class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-accent transition-colors">
               <span class="w-6 shrink-0 text-right tabular-nums text-muted-foreground">{i + 1}.</span>
-              <span class="flex-1 truncate text-foreground/80">{c.nome}/{c.uf.toUpperCase()}</span>
-              <span class="shrink-0 text-xs text-muted-foreground">{c.aqiCategoria}</span>
+              <span class="min-w-0 flex-1 truncate text-foreground/80">
+                {c.nome}/{c.uf.toUpperCase()}
+                {vizinhas > 0 && <span class="text-muted-foreground"> e mais {vizinhas} na região</span>}
+              </span>
+              <span class="hidden shrink-0 text-xs text-muted-foreground sm:inline">{c.aqiCategoria}</span>
               <span class={`w-20 shrink-0 text-right font-semibold tabular-nums ${corAqiTexto(c.aqi!)}`}>AQI {c.aqi}</span>
             </a>
           </li>
@@ -76,18 +155,51 @@ const descricao = 'Rankings ambientais do Brasil: pior qualidade do ar, reservat
       </ol>
     </section>
 
-    <section aria-label="Reservatórios mais baixos">
-      <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
-        <span aria-hidden="true">🌊</span> Reservatórios mais baixos
+    <section aria-label="Sistemas de abastecimento mais baixos">
+      <h2 class="mb-1 flex items-center gap-2 text-base font-semibold text-foreground">
+        <span aria-hidden="true">🚰</span> Sistemas de abastecimento mais baixos
       </h2>
+      <p class="mb-3 text-xs text-muted-foreground">
+        Por sistema, não por cidade: cada um abastece dezenas de municípios.
+      </p>
       <ol class="rounded-lg border border-border bg-card divide-y divide-border">
-        {reservatoriosBaixos.map((c, i) => (
+        {sistemasAbastecimento.map((r, i) => (
           <li>
-            <a href={`/${c.uf}/${c.slug}`} class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-accent transition-colors">
+            <a href={`/${r.exemplo.uf}/${r.exemplo.slug}`} class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-accent transition-colors">
               <span class="w-6 shrink-0 text-right tabular-nums text-muted-foreground">{i + 1}.</span>
-              <span class="flex-1 truncate text-foreground/80">{c.nome}/{c.uf.toUpperCase()}</span>
-              <span class="shrink-0 truncate max-w-40 text-xs text-muted-foreground">{c.reservatorioNome}</span>
-              <span class={`w-16 shrink-0 text-right font-semibold tabular-nums ${corReservatorioTexto(c.reservatorioPct!)}`}>{c.reservatorioPct!.toFixed(1)}%</span>
+              <span class="min-w-0 flex-1 truncate text-foreground/80">{r.nome}</span>
+              <span class="shrink-0 text-xs tabular-nums text-muted-foreground">
+                {r.cidades} {r.cidades === 1 ? 'cidade' : 'cidades'}
+              </span>
+              <span class={`w-16 shrink-0 text-right font-semibold tabular-nums ${corReservatorioTexto(r.pct)}`}>{r.pct.toFixed(1)}%</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section aria-label="Reservatórios hidrelétricos mais baixos">
+      <h2 class="mb-1 flex items-center gap-2 text-base font-semibold text-foreground">
+        <span aria-hidden="true">⚡</span> Reservatórios hidrelétricos mais baixos
+      </h2>
+      <p class="mb-3 text-xs text-muted-foreground">
+        Nível medido pelo ONS/ANA, só usinas de acumulação: as de fio d'água não armazenam
+        e ficariam sempre perto de 0%. Não são necessariamente a fonte de abastecimento das
+        cidades próximas, mas indicam a situação hídrica da bacia.
+        {dataCurta(hidreletricos[0]?.medicao ?? null) && (
+          <span> Medição de {dataCurta(hidreletricos[0]!.medicao)}.</span>
+        )}
+      </p>
+      <ol class="rounded-lg border border-border bg-card divide-y divide-border">
+        {hidreletricos.map((r, i) => (
+          <li>
+            <a href={`/${r.exemplo.uf}/${r.exemplo.slug}`} class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-accent transition-colors">
+              <span class="w-6 shrink-0 text-right tabular-nums text-muted-foreground">{i + 1}.</span>
+              <span class="min-w-0 flex-1 truncate text-foreground/80">{r.nome}</span>
+              <span class="hidden shrink-0 text-xs tabular-nums text-muted-foreground sm:inline">
+                {r.cidades} {r.cidades === 1 ? 'cidade próxima' : 'cidades próximas'}
+              </span>
+              <span class={`w-16 shrink-0 text-right font-semibold tabular-nums ${corReservatorioTexto(r.pct)}`}>{r.pct.toFixed(1)}%</span>
             </a>
           </li>
         ))}
@@ -95,16 +207,23 @@ const descricao = 'Rankings ambientais do Brasil: pior qualidade do ar, reservat
     </section>
 
     <section aria-label="Mais focos de queimada">
-      <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
+      <h2 class="mb-1 flex items-center gap-2 text-base font-semibold text-foreground">
         <span aria-hidden="true">🔥</span> Mais focos de queimada
-        <span class="text-xs font-normal text-muted-foreground">({totalFocos.toLocaleString('pt-BR')} focos no país, raio de 100km por cidade)</span>
       </h2>
+      <p class="mb-3 text-xs text-muted-foreground">
+        {totalFocos.toLocaleString('pt-BR')} focos no país. A contagem é por raio de {RAIO_FOGO_KM} km,
+        então cidades vizinhas veem o mesmo incêndio e entram como uma linha só.
+        {dataCurta(dataFogo) && <span> Coleta de {dataCurta(dataFogo)}.</span>}
+      </p>
       <ol class="rounded-lg border border-border bg-card divide-y divide-border">
-        {maisFocos.map((c, i) => (
+        {maisFocos.map(({ cidade: c, vizinhas }, i) => (
           <li>
             <a href={`/${c.uf}/${c.slug}`} class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-accent transition-colors">
               <span class="w-6 shrink-0 text-right tabular-nums text-muted-foreground">{i + 1}.</span>
-              <span class="flex-1 truncate text-foreground/80">{c.nome}/{c.uf.toUpperCase()}</span>
+              <span class="min-w-0 flex-1 truncate text-foreground/80">
+                {c.nome}/{c.uf.toUpperCase()}
+                {vizinhas > 0 && <span class="text-muted-foreground"> e mais {vizinhas} no mesmo raio</span>}
+              </span>
               <span class={`w-24 shrink-0 text-right font-semibold tabular-nums ${corFocosTexto(c.focos!)}`}>{c.focos} focos</span>
             </a>
           </li>
@@ -112,19 +231,28 @@ const descricao = 'Rankings ambientais do Brasil: pior qualidade do ar, reservat
       </ol>
     </section>
 
-    <section aria-label="Dengue em alerta">
-      <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
-        <span aria-hidden="true">🦟</span> Dengue em alerta
-        <span class="text-xs font-normal text-muted-foreground">({totalDengueAlerta.toLocaleString('pt-BR')} municípios em nível de alerta ou acima)</span>
+    <section aria-label="Maior incidência de dengue">
+      <h2 class="mb-1 flex items-center gap-2 text-base font-semibold text-foreground">
+        <span aria-hidden="true">🦟</span> Maior incidência de dengue
       </h2>
+      <p class="mb-3 text-xs text-muted-foreground">
+        Casos estimados por 100 mil habitantes, não em números absolutos, que só rankeariam
+        cidade grande. {totalDengueAlerta.toLocaleString('pt-BR')} municípios estão em alerta ou acima.
+        {semanaLegivel(semanaDengue) && <span> Dados da {semanaLegivel(semanaDengue)}.</span>}
+      </p>
       <ol class="rounded-lg border border-border bg-card divide-y divide-border">
-        {dengueAlerta.map((c, i) => (
+        {dengueIncidencia.map((c, i) => (
           <li>
             <a href={`/${c.uf}/${c.slug}`} class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-accent transition-colors">
               <span class="w-6 shrink-0 text-right tabular-nums text-muted-foreground">{i + 1}.</span>
-              <span class="flex-1 truncate text-foreground/80">{c.nome}/{c.uf.toUpperCase()}</span>
-              <span class="shrink-0 text-xs text-muted-foreground tabular-nums">{(c.dengueCasos ?? 0).toLocaleString('pt-BR')} casos/sem</span>
-              <span class={`w-24 shrink-0 text-right font-semibold ${corDengueTexto(c.dengueNivel!)}`}>{c.dengueLabel ?? `Nível ${c.dengueNivel}`}</span>
+              <span class="min-w-0 flex-1 truncate text-foreground/80">
+                {c.nome}/{c.uf.toUpperCase()}
+                <span class="hidden text-muted-foreground sm:inline"> · {(c.denguePopulacao ?? 0).toLocaleString('pt-BR')} hab.</span>
+              </span>
+              <span class={`hidden shrink-0 text-xs font-semibold sm:inline ${corDengueTexto(c.dengueNivel!)}`}>{c.dengueLabel}</span>
+              <span class="w-28 shrink-0 text-right font-semibold tabular-nums text-foreground/80">
+                {Math.round(c.dengueIncidencia!).toLocaleString('pt-BR')}<span class="text-xs font-normal text-muted-foreground">/100 mil</span>
+              </span>
             </a>
           </li>
         ))}
@@ -132,8 +260,17 @@ const descricao = 'Rankings ambientais do Brasil: pior qualidade do ar, reservat
     </section>
   </div>
 
-  <p class="mt-8 text-xs text-muted-foreground">
-    Fontes: Open-Meteo/Copernicus (ar), SABESP/COPASA/ANA (reservatórios), NASA FIRMS (queimadas),
-    InfoDengue/Fiocruz (dengue). Reservatórios aproximados (bacias distantes) ficam fora do ranking.
+  <p class="mt-8 text-xs leading-relaxed text-muted-foreground">
+    Fontes: Open-Meteo/Copernicus (temperatura e ar), SABESP/COPASA (sistemas de abastecimento),
+    ONS/ANA (hidrelétricos), NASA FIRMS/INPE (queimadas), InfoDengue/Fiocruz/SVS (dengue).
+    A incidência de dengue usa casos estimados por nowcasting, que é instável onde há poucas
+    notificações; por isso a lista exige pelo menos {MIN_CASOS_EST} casos estimados na semana.
   </p>
+
+  <script>
+    import { hidratarAgora } from '../scripts/agora-cliente';
+
+    hidratarAgora();
+    document.addEventListener('astro:page-load', () => { hidratarAgora(); });
+  </script>
 </PainelLayout>

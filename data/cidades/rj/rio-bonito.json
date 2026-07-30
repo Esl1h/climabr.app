@@ -86,19 +86,21 @@
   ],
   "reservatorio": {
     "nome": "Anta",
-    "nivel_pct": 80.0,
+    "nivel_pct": 76.0,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 88.8,
     "aproximado": true,
+    "tipo": "RES",
+    "acumula": true,
     "nota": "Reservatório hidrelétrico mais próximo (89km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "queimadas": {
-    "focos_100km": 21,
+    "focos_100km": 4,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "uv": {
     "indice": 5.7,
@@ -134,15 +136,17 @@
   },
   "temperatura_atual": 18.4,
   "dengue": {
-    "nivel_alerta": 3,
-    "nivel_label": "Alerta Alto",
+    "nivel_alerta": 1,
+    "nivel_label": "Atenção",
     "nivel_incidencia": 2,
     "nivel_incidencia_label": "Alta",
     "casos_semana": 0,
-    "casos_estimados": 36,
-    "semana_epidemiologica": 202628,
+    "casos_estimados": 34,
+    "incidencia_100k": 61.7,
+    "populacao": 55068,
+    "semana_epidemiologica": 202629,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-26T10:16:28.176483+00:00"
+    "atualizado_em": "2026-07-30T14:27:41.477525-03:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -157,15 +161,31 @@
   },
   "_clima_em": "2026-07-28T10:30:45.354029+00:00",
   "vento": {
-    "velocidade_kmh": 5.0,
-    "direcao_graus": 41,
-    "direcao": "NE",
-    "max_kmh": 7.5,
-    "rajada_kmh": 19.4,
-    "direcao_dominante": "NE",
-    "fonte": "Open-Meteo"
+    "velocidade_kmh": 14.8,
+    "direcao_graus": 222,
+    "direcao": "SO",
+    "max_kmh": 14.8,
+    "rajada_kmh": 34.6,
+    "direcao_dominante": "O",
+    "fonte": "Open-Meteo",
+    "atualizado_em": "2026-07-30T15:00:18.547077-03:00"
   },
   "umidade_pct": 92,
   "pressao_hpa": 1017,
-  "ponto_orvalho_c": 17.1
+  "ponto_orvalho_c": 17.1,
+  "ondas": {
+    "altura_m": 0.96,
+    "altura_max_m": 0.96,
+    "periodo_s": 8.9,
+    "direcao_graus": 189,
+    "direcao": "S",
+    "swell_altura_m": 0.94,
+    "swell_periodo_s": 10.2,
+    "swell_direcao": "S",
+    "surf_nivel": "bom",
+    "surf_emoji": "🟢",
+    "surf_descricao": "Ótimo para surf",
+    "fonte": "Open-Meteo Marine",
+    "atualizado_em": "2026-07-30T15:00:18.547077-03:00"
+  }
 }

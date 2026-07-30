@@ -4,99 +4,103 @@
   "slug": "santos",
   "latitude": -23.8689,
   "longitude": -46.2916,
-  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
+  "atualizado_em": "2026-07-27T11:16:55.780085+00:00",
   "previsao": [
     {
+      "data": "2026-07-27",
+      "min": 14.2,
+      "max": 26.5,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 5.6,
+      "nascer_sol": "06:43",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 15.9,
+      "max": 31.1,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "06:42",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 19.8,
+      "max": 34.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "06:42",
+      "por_sol": "17:41"
+    },
+    {
       "data": "2026-07-30",
-      "min": 15.0,
-      "max": 21.6,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.8,
-      "uv": 5.2,
+      "min": 18.4,
+      "max": 21.4,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.8,
+      "uv": 2.1,
       "nascer_sol": "06:41",
       "por_sol": "17:41"
     },
     {
       "data": "2026-07-31",
-      "min": 13.8,
-      "max": 22.2,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 5.7,
+      "min": 17.3,
+      "max": 22.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.0,
+      "uv": 2.9,
       "nascer_sol": "06:40",
       "por_sol": "17:42"
     },
     {
       "data": "2026-08-01",
-      "min": 13.1,
-      "max": 24.0,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "min": 15.4,
+      "max": 25.4,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "uv": 5.8,
+      "uv": 5.6,
       "nascer_sol": "06:40",
       "por_sol": "17:42"
     },
     {
       "data": "2026-08-02",
-      "min": 15.4,
-      "max": 30.1,
+      "min": 17.2,
+      "max": 28.8,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 5.8,
+      "uv": 5.7,
       "nascer_sol": "06:39",
       "por_sol": "17:42"
-    },
-    {
-      "data": "2026-08-03",
-      "min": 14.6,
-      "max": 23.4,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 4.6,
-      "nascer_sol": "06:39",
-      "por_sol": "17:43"
-    },
-    {
-      "data": "2026-08-04",
-      "min": 14.6,
-      "max": 25.2,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 5.8,
-      "nascer_sol": "06:38",
-      "por_sol": "17:43"
-    },
-    {
-      "data": "2026-08-05",
-      "min": 15.4,
-      "max": 22.0,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
-      "uv": 5.3,
-      "nascer_sol": "06:38",
-      "por_sol": "17:44"
     }
   ],
   "reservatorio": {
-    "nome": "Sistema Local SABESP",
-    "nivel_pct": null,
-    "variacao_semana_pct": null,
-    "sistema_id": null,
-    "nota": "Abastecido pela SABESP via sistema local não monitorado online.",
-    "fonte": "SABESP",
-    "atualizado_em": "2026-07-30T10:41:52.654940+00:00"
+    "nome": "Henry Borden",
+    "nivel_pct": 77.7,
+    "variacao_semana_pct": 0.0,
+    "data_medicao": "2026-07-29",
+    "distancia_km": 16.4,
+    "aproximado": true,
+    "tipo": "FIO",
+    "acumula": false,
+    "nota": "Reservatório hidrelétrico mais próximo (16km). Pode não ser o sistema de abastecimento desta cidade.",
+    "fonte": "ONS / ANA",
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "queimadas": {
-    "focos_100km": 11,
+    "focos_100km": 14,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "dengue": {
     "nivel_alerta": 1,
@@ -107,7 +111,9 @@
     "casos_estimados": 21,
     "semana_epidemiologica": 202629,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-29T10:55:29.219988+00:00"
+    "atualizado_em": "2026-07-29T10:55:29.219988+00:00",
+    "incidencia_100k": 5.2,
+    "populacao": 414029
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -121,38 +127,38 @@
     "atualizado_em": "2026-07-29T10:55:29.219988+00:00"
   },
   "uv": {
-    "indice": 5.2,
+    "indice": 5.6,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 64,
+    "indice": 89,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 14.9,
-    "pm10": 18.5,
-    "no2": 9.2,
-    "o3": 62.0,
+    "pm25": 56.1,
+    "pm10": 56.1,
+    "no2": 87.1,
+    "o3": 45.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
+    "atualizado_em": "2026-07-27T11:16:55.780085+00:00"
   },
   "sol": {
-    "nascer": "06:41",
-    "por": "17:41",
+    "nascer": "06:43",
+    "por": "17:40",
     "duracao_h": 11.0,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 52.0,
-    "dias_proxima_cheia": 1,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 49.0,
+    "fase_pct": 41.9,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 16.7,
+  "temperatura_atual": 18.9,
   "ondas": {
     "altura_m": 1.5,
     "altura_max_m": 2.06,
@@ -168,16 +174,16 @@
     "fonte": "Open-Meteo Marine"
   },
   "vento": {
-    "velocidade_kmh": 2.2,
-    "direcao_graus": 5,
-    "direcao": "N",
-    "max_kmh": 10.3,
-    "rajada_kmh": 29.2,
-    "direcao_dominante": "S",
+    "velocidade_kmh": 7.1,
+    "direcao_graus": 344,
+    "direcao": "NNO",
+    "max_kmh": 8.7,
+    "rajada_kmh": 21.6,
+    "direcao_dominante": "N",
     "fonte": "Open-Meteo"
   },
-  "_clima_em": "2026-07-30T10:21:49.345121+00:00",
-  "umidade_pct": 85,
-  "pressao_hpa": 1022,
-  "ponto_orvalho_c": 14.2
+  "_clima_em": "2026-07-27T11:16:55.780085+00:00",
+  "umidade_pct": 77,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 14.8
 }

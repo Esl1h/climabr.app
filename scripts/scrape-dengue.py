@@ -134,6 +134,13 @@ def main():
                 casos_est = d.get("casos_est")
                 casos_est = int(casos_est) if casos_est else casos
 
+                # Casos absolutos sozinhos rankeiam população, não epidemia: uma
+                # capital com 400 casos aparece na frente de uma cidade pequena
+                # em emergência. O InfoDengue já manda p_inc100k e pop na mesma
+                # resposta, então guardar não custa requisição nenhuma.
+                inc = d.get("p_inc100k")
+                pop = d.get("pop")
+
                 existente[doenca] = {
                     "nivel_alerta": nivel,
                     "nivel_label": NIVEL_LABEL.get(nivel, "Desconhecido"),
@@ -141,6 +148,8 @@ def main():
                     "nivel_incidencia_label": NIVEL_INC_LABEL.get(nivel_inc, ""),
                     "casos_semana": casos,
                     "casos_estimados": casos_est,
+                    "incidencia_100k": round(float(inc), 1) if inc is not None else None,
+                    "populacao": int(float(pop)) if pop is not None else None,
                     "semana_epidemiologica": int(d.get("SE", 0) or 0),
                     "fonte": "InfoDengue / Fiocruz / SVS",
                     "atualizado_em": agora,

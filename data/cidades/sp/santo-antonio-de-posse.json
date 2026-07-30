@@ -4,25 +4,58 @@
   "slug": "santo-antonio-de-posse",
   "latitude": -22.6033,
   "longitude": -46.9499,
-  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
+  "atualizado_em": "2026-07-27T11:16:55.780085+00:00",
   "previsao": [
     {
-      "data": "2026-07-30",
-      "min": 14.1,
-      "max": 27.8,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "data": "2026-07-27",
+      "min": 12.4,
+      "max": 26.3,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.9,
+      "nascer_sol": "06:43",
+      "por_sol": "17:44"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 15.0,
+      "max": 27.9,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
       "uv": 6.0,
+      "nascer_sol": "06:43",
+      "por_sol": "17:45"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 16.1,
+      "max": 30.0,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 6.0,
+      "nascer_sol": "06:42",
+      "por_sol": "17:45"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 16.5,
+      "max": 25.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 5.9,
       "nascer_sol": "06:42",
       "por_sol": "17:46"
     },
     {
       "data": "2026-07-31",
-      "min": 14.5,
-      "max": 28.8,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
+      "min": 15.7,
+      "max": 27.4,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
       "uv": 6.0,
       "nascer_sol": "06:41",
@@ -30,109 +63,78 @@
     },
     {
       "data": "2026-08-01",
-      "min": 15.5,
-      "max": 27.5,
+      "min": 16.3,
+      "max": 27.4,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
       "chuva_mm": 0,
-      "uv": 6.1,
+      "uv": 5.9,
       "nascer_sol": "06:41",
       "por_sol": "17:46"
     },
     {
       "data": "2026-08-02",
-      "min": 16.0,
-      "max": 27.9,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 6.2,
-      "nascer_sol": "06:40",
-      "por_sol": "17:47"
-    },
-    {
-      "data": "2026-08-03",
-      "min": 15.5,
-      "max": 27.6,
+      "min": 18.2,
+      "max": 27.2,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
       "uv": 6.0,
-      "nascer_sol": "06:39",
+      "nascer_sol": "06:40",
       "por_sol": "17:47"
-    },
-    {
-      "data": "2026-08-04",
-      "min": 16.2,
-      "max": 28.6,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 6.1,
-      "nascer_sol": "06:39",
-      "por_sol": "17:48"
-    },
-    {
-      "data": "2026-08-05",
-      "min": 16.3,
-      "max": 29.6,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
-      "uv": 5.5,
-      "nascer_sol": "06:38",
-      "por_sol": "17:48"
     }
   ],
   "queimadas": {
-    "focos_100km": 8,
+    "focos_100km": 10,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "reservatorio": {
     "nome": "Limoeiro",
-    "nivel_pct": 97.1,
+    "nivel_pct": 93.2,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 109.0,
     "aproximado": true,
+    "tipo": "FIO",
+    "acumula": false,
     "nota": "Reservatório hidrelétrico mais próximo (109km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "uv": {
-    "indice": 6.0,
-    "categoria": "Alto",
+    "indice": 5.9,
+    "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 51,
+    "indice": 79,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 18.0,
-    "pm10": 18.7,
-    "no2": 27.9,
-    "o3": 18.0,
+    "pm25": 25.2,
+    "pm10": 25.2,
+    "no2": 15.1,
+    "o3": 53.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
+    "atualizado_em": "2026-07-27T11:16:55.780085+00:00"
   },
   "sol": {
-    "nascer": "06:42",
-    "por": "17:46",
-    "duracao_h": 11.1,
+    "nascer": "06:43",
+    "por": "17:44",
+    "duracao_h": 11.0,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 52.0,
-    "dias_proxima_cheia": 1,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 49.0,
+    "fase_pct": 41.9,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 16.5,
+  "temperatura_atual": 16.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -142,7 +144,9 @@
     "casos_estimados": 0,
     "semana_epidemiologica": 202629,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-29T10:55:29.219988+00:00"
+    "atualizado_em": "2026-07-29T10:55:29.219988+00:00",
+    "incidencia_100k": 0.0,
+    "populacao": 23102
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -155,17 +159,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-29T10:55:29.219988+00:00"
   },
-  "_clima_em": "2026-07-30T10:21:49.345121+00:00",
+  "_clima_em": "2026-07-27T11:16:55.780085+00:00",
   "vento": {
-    "velocidade_kmh": 5.6,
-    "direcao_graus": 117,
-    "direcao": "ESE",
-    "max_kmh": 17.3,
-    "rajada_kmh": 32.8,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 7.6,
+    "direcao_graus": 68,
+    "direcao": "ENE",
+    "max_kmh": 8.2,
+    "rajada_kmh": 16.6,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 66,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 10.2
+  "umidade_pct": 75,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 12.3
 }

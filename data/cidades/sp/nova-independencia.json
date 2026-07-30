@@ -4,101 +4,103 @@
   "slug": "nova-independencia",
   "latitude": -21.1353,
   "longitude": -51.5052,
-  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
+  "atualizado_em": "2026-07-27T11:16:55.780085+00:00",
   "previsao": [
     {
-      "data": "2026-07-30",
-      "min": 18.0,
-      "max": 29.9,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.7,
+      "data": "2026-07-27",
+      "min": 17.9,
+      "max": 30.0,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
       "uv": 6.0,
+      "nascer_sol": "06:59",
+      "por_sol": "18:05"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 19.2,
+      "max": 30.8,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.0,
+      "nascer_sol": "06:59",
+      "por_sol": "18:05"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 19.5,
+      "max": 32.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "06:58",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 19.4,
+      "max": 30.0,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 6.8,
+      "uv": 5.5,
       "nascer_sol": "06:58",
       "por_sol": "18:06"
     },
     {
       "data": "2026-07-31",
-      "min": 18.9,
-      "max": 32.0,
+      "min": 19.2,
+      "max": 29.8,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
       "chuva_mm": 0,
-      "uv": 6.1,
+      "uv": 5.5,
       "nascer_sol": "06:57",
       "por_sol": "18:07"
     },
     {
       "data": "2026-08-01",
-      "min": 20.9,
-      "max": 32.5,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
+      "min": 20.6,
+      "max": 31.6,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "uv": 6.2,
+      "uv": 5.9,
       "nascer_sol": "06:57",
       "por_sol": "18:07"
     },
     {
       "data": "2026-08-02",
-      "min": 19.7,
-      "max": 32.9,
+      "min": 21.8,
+      "max": 32.1,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 6.2,
+      "uv": 6.0,
       "nascer_sol": "06:56",
       "por_sol": "18:07"
-    },
-    {
-      "data": "2026-08-03",
-      "min": 20.9,
-      "max": 31.8,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 6.0,
-      "nascer_sol": "06:56",
-      "por_sol": "18:08"
-    },
-    {
-      "data": "2026-08-04",
-      "min": 17.7,
-      "max": 32.6,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
-      "chuva_mm": 0,
-      "uv": 5.8,
-      "nascer_sol": "06:55",
-      "por_sol": "18:08"
-    },
-    {
-      "data": "2026-08-05",
-      "min": 18.5,
-      "max": 34.1,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
-      "uv": 6.0,
-      "nascer_sol": "06:55",
-      "por_sol": "18:08"
     }
   ],
   "queimadas": {
     "focos_100km": 2,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "reservatorio": {
     "nome": "Jupia",
-    "nivel_pct": 100.0,
+    "nivel_pct": 99.6,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 42.0,
     "aproximado": true,
+    "tipo": "FIO",
+    "acumula": false,
     "nota": "Reservatório hidrelétrico mais próximo (42km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "uv": {
     "indice": 6.0,
@@ -108,31 +110,31 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 36,
+    "indice": 49,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 8.8,
-    "pm10": 9.2,
-    "no2": 7.7,
-    "o3": 47.0,
+    "pm25": 8.3,
+    "pm10": 8.5,
+    "no2": 10.0,
+    "o3": 42.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
+    "atualizado_em": "2026-07-27T11:16:55.780085+00:00"
   },
   "sol": {
-    "nascer": "06:58",
-    "por": "18:06",
+    "nascer": "06:59",
+    "por": "18:05",
     "duracao_h": 11.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 52.0,
-    "dias_proxima_cheia": 1,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 49.0,
+    "fase_pct": 41.9,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 18.4,
+  "temperatura_atual": 19.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -142,7 +144,9 @@
     "casos_estimados": 0,
     "semana_epidemiologica": 202629,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-29T10:55:29.219988+00:00"
+    "atualizado_em": "2026-07-29T10:55:29.219988+00:00",
+    "incidencia_100k": 0.0,
+    "populacao": 4619
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -155,17 +159,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-29T10:55:29.219988+00:00"
   },
-  "_clima_em": "2026-07-30T10:21:49.345121+00:00",
+  "_clima_em": "2026-07-27T11:16:55.780085+00:00",
   "vento": {
-    "velocidade_kmh": 12.5,
-    "direcao_graus": 51,
-    "direcao": "NE",
-    "max_kmh": 18.1,
-    "rajada_kmh": 36.0,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 9.5,
+    "direcao_graus": 68,
+    "direcao": "ENE",
+    "max_kmh": 13.3,
+    "rajada_kmh": 25.2,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 88,
+  "umidade_pct": 82,
   "pressao_hpa": 1017,
-  "ponto_orvalho_c": 16.4
+  "ponto_orvalho_c": 16.6
 }

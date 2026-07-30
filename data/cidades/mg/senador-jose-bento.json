@@ -4,25 +4,47 @@
   "slug": "senador-jose-bento",
   "latitude": -22.1568,
   "longitude": -46.1411,
-  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
+  "atualizado_em": "2026-07-28T10:30:45.354029+00:00",
   "previsao": [
     {
-      "data": "2026-07-30",
-      "min": 11.9,
-      "max": 25.6,
+      "data": "2026-07-28",
+      "min": 11.5,
+      "max": 26.1,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.1,
+      "nascer_sol": "06:39",
+      "por_sol": "17:42"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 11.1,
+      "max": 27.7,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 6.0,
+      "uv": 6.2,
+      "nascer_sol": "06:38",
+      "por_sol": "17:43"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 14.5,
+      "max": 24.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.2,
       "nascer_sol": "06:38",
       "por_sol": "17:43"
     },
     {
       "data": "2026-07-31",
-      "min": 11.8,
-      "max": 25.4,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
+      "min": 13.2,
+      "max": 24.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
       "uv": 6.2,
       "nascer_sol": "06:37",
@@ -30,8 +52,8 @@
     },
     {
       "data": "2026-08-01",
-      "min": 10.3,
-      "max": 24.4,
+      "min": 10.5,
+      "max": 24.0,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
       "chuva_mm": 0,
@@ -41,110 +63,90 @@
     },
     {
       "data": "2026-08-02",
-      "min": 10.1,
-      "max": 24.6,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "min": 9.6,
+      "max": 24.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 6.3,
+      "uv": 6.2,
       "nascer_sol": "06:36",
       "por_sol": "17:44"
     },
     {
       "data": "2026-08-03",
-      "min": 12.5,
-      "max": 25.6,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 5.7,
-      "nascer_sol": "06:36",
-      "por_sol": "17:45"
-    },
-    {
-      "data": "2026-08-04",
-      "min": 12.9,
-      "max": 25.6,
+      "min": 13.4,
+      "max": 24.8,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
       "uv": 6.2,
-      "nascer_sol": "06:35",
+      "nascer_sol": "06:36",
       "por_sol": "17:45"
-    },
-    {
-      "data": "2026-08-05",
-      "min": 14.2,
-      "max": 26.6,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
-      "uv": 5.7,
-      "nascer_sol": "06:35",
-      "por_sol": "17:46"
     }
   ],
   "reservatorio": {
     "nome": "Caconde",
-    "nivel_pct": 76.4,
+    "nivel_pct": 76.0,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 81.4,
     "aproximado": true,
+    "tipo": "RCU",
+    "acumula": true,
     "nota": "Reservatório hidrelétrico mais próximo (81km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "queimadas": {
-    "focos_100km": 5,
+    "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "uv": {
-    "indice": 6.0,
+    "indice": 6.1,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 38,
+    "indice": 37,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 13.2,
-    "pm10": 13.3,
-    "no2": 11.8,
-    "o3": 48.0,
+    "pm25": 13.0,
+    "pm10": 13.2,
+    "no2": 10.7,
+    "o3": 50.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
+    "atualizado_em": "2026-07-28T10:30:45.354029+00:00"
   },
   "sol": {
-    "nascer": "06:38",
-    "por": "17:43",
+    "nascer": "06:39",
+    "por": "17:42",
     "duracao_h": 11.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 52.0,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 29.0,
+    "fase_pct": 45.3,
     "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 14.3,
+  "temperatura_atual": 13.8,
   "vento": {
-    "velocidade_kmh": 2.9,
-    "direcao_graus": 353,
-    "direcao": "N",
-    "max_kmh": 8.9,
-    "rajada_kmh": 24.1,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 3.1,
+    "direcao_graus": 13,
+    "direcao": "NNE",
+    "max_kmh": 5.6,
+    "rajada_kmh": 17.6,
+    "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 75,
-  "pressao_hpa": 1021,
-  "ponto_orvalho_c": 9.9,
+  "umidade_pct": 82,
+  "pressao_hpa": 1020,
+  "ponto_orvalho_c": 10.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -154,7 +156,9 @@
     "casos_estimados": 0,
     "semana_epidemiologica": 202628,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-23T10:38:57.715680+00:00"
+    "atualizado_em": "2026-07-23T10:38:57.715680+00:00",
+    "incidencia_100k": 0.0,
+    "populacao": 2071
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -167,5 +171,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-23T10:38:57.715680+00:00"
   },
-  "_clima_em": "2026-07-30T10:21:49.345121+00:00"
+  "_clima_em": "2026-07-28T10:30:45.354029+00:00"
 }

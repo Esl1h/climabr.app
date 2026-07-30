@@ -44,6 +44,29 @@ export interface DadosCidade {
     atualizado_em?: string;
   } | null;
 
+  /** Pontos de alagamento do CGE: só existe para o município de São Paulo */
+  alagamentos?: {
+    data: string;
+    pontos_total: number;
+    ativos: number;
+    ativos_intransitaveis: number;
+    intransitaveis_total: number;
+    pontos: Array<{
+      zona: string;
+      subprefeitura: string;
+      local: string;
+      referencia: string;
+      sentido: string;
+      inicio: string | null;
+      fim: string | null;
+      ativo: boolean;
+      transitavel: boolean;
+    }>;
+    fonte: string;
+    url: string;
+    atualizado_em: string;
+  } | null;
+
   uv?: {
     indice: number;
     categoria: string;
@@ -77,6 +100,10 @@ export interface DadosCidade {
     distancia_km?: number;
     sistema_id?: number;
     aproximado?: boolean;
+    /** Código do ONS: FIO = fio d'água, RCU/RES/RBB = acumulação */
+    tipo?: string;
+    /** false para fio d'água, que não armazena e oscila em torno de 0% */
+    acumula?: boolean;
     nota?: string;
     fonte: string;
     atualizado_em?: string;
@@ -89,6 +116,9 @@ export interface DadosCidade {
     nivel_incidencia_label?: string;
     casos_semana: number;
     casos_estimados?: number;
+    /** Casos por 100 mil habitantes na semana (p_inc100k do InfoDengue) */
+    incidencia_100k?: number | null;
+    populacao?: number | null;
     semana_epidemiologica?: number;
     fonte: string;
     atualizado_em?: string;

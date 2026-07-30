@@ -4,25 +4,58 @@
   "slug": "aracai",
   "latitude": -19.2348,
   "longitude": -44.2184,
-  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
+  "atualizado_em": "2026-07-27T11:16:55.780085+00:00",
   "previsao": [
     {
-      "data": "2026-07-30",
-      "min": 16.3,
-      "max": 29.4,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "data": "2026-07-27",
+      "min": 15.0,
+      "max": 26.6,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
       "uv": 6.4,
+      "nascer_sol": "06:27",
+      "por_sol": "17:39"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 14.4,
+      "max": 28.1,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.4,
+      "nascer_sol": "06:27",
+      "por_sol": "17:39"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 14.1,
+      "max": 30.5,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "06:26",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 16.7,
+      "max": 30.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.5,
       "nascer_sol": "06:26",
       "por_sol": "17:40"
     },
     {
       "data": "2026-07-31",
-      "min": 16.5,
-      "max": 26.3,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "min": 17.9,
+      "max": 27.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
       "uv": 6.5,
       "nascer_sol": "06:25",
@@ -30,75 +63,44 @@
     },
     {
       "data": "2026-08-01",
-      "min": 14.5,
-      "max": 25.4,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
+      "min": 15.6,
+      "max": 25.8,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "uv": 6.5,
+      "uv": 6.4,
       "nascer_sol": "06:25",
       "por_sol": "17:41"
     },
     {
       "data": "2026-08-02",
-      "min": 12.1,
-      "max": 25.9,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
-      "chuva_mm": 0,
-      "uv": 6.6,
-      "nascer_sol": "06:24",
-      "por_sol": "17:41"
-    },
-    {
-      "data": "2026-08-03",
-      "min": 12.8,
+      "min": 15.7,
       "max": 26.7,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
-      "chuva_mm": 0,
-      "uv": 6.6,
-      "nascer_sol": "06:24",
-      "por_sol": "17:41"
-    },
-    {
-      "data": "2026-08-04",
-      "min": 14.2,
-      "max": 27.4,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 6.0,
-      "nascer_sol": "06:23",
-      "por_sol": "17:42"
-    },
-    {
-      "data": "2026-08-05",
-      "min": 16.0,
-      "max": 28.4,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
-      "chuva_mm": 0,
       "uv": 6.5,
-      "nascer_sol": "06:23",
-      "por_sol": "17:42"
+      "nascer_sol": "06:24",
+      "por_sol": "17:41"
     }
   ],
   "reservatorio": {
     "nome": "Retiro Baixo",
-    "nivel_pct": 24.8,
+    "nivel_pct": 26.7,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 70.3,
     "aproximado": true,
+    "tipo": "RCU",
+    "acumula": true,
     "nota": "Reservatório hidrelétrico mais próximo (70km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "queimadas": {
-    "focos_100km": 19,
+    "focos_100km": 16,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "uv": {
     "indice": 6.4,
@@ -108,43 +110,43 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 39,
+    "indice": 32,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 14.9,
-    "pm10": 15.3,
-    "no2": 38.9,
-    "o3": 20.0,
+    "pm25": 9.2,
+    "pm10": 9.3,
+    "no2": 6.9,
+    "o3": 64.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
+    "atualizado_em": "2026-07-27T11:16:55.780085+00:00"
   },
   "sol": {
-    "nascer": "06:26",
-    "por": "17:40",
+    "nascer": "06:27",
+    "por": "17:39",
     "duracao_h": 11.2,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 52.0,
-    "dias_proxima_cheia": 1,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 49.0,
+    "fase_pct": 41.9,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 17.2,
+  "temperatura_atual": 19.1,
   "vento": {
-    "velocidade_kmh": 8.8,
-    "direcao_graus": 171,
-    "direcao": "S",
-    "max_kmh": 16.6,
-    "rajada_kmh": 29.5,
+    "velocidade_kmh": 6.0,
+    "direcao_graus": 163,
+    "direcao": "SSE",
+    "max_kmh": 11.1,
+    "rajada_kmh": 24.8,
     "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 69,
-  "pressao_hpa": 1019,
-  "ponto_orvalho_c": 11.6,
+  "umidade_pct": 72,
+  "pressao_hpa": 1020,
+  "ponto_orvalho_c": 13.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -154,7 +156,9 @@
     "casos_estimados": 0,
     "semana_epidemiologica": 202628,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-21T10:42:52.223788+00:00"
+    "atualizado_em": "2026-07-21T10:42:52.223788+00:00",
+    "incidencia_100k": 0.0,
+    "populacao": 2174
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -167,5 +171,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-21T10:42:52.223788+00:00"
   },
-  "_clima_em": "2026-07-30T10:21:49.345121+00:00"
+  "_clima_em": "2026-07-27T11:16:55.780085+00:00"
 }

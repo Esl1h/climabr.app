@@ -4,135 +4,137 @@
   "slug": "imarui",
   "latitude": -28.2315,
   "longitude": -48.8344,
-  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
+  "atualizado_em": "2026-07-27T11:16:55.780085+00:00",
   "previsao": [
     {
-      "data": "2026-07-30",
-      "min": 12.2,
-      "max": 18.9,
+      "data": "2026-07-27",
+      "min": 14.5,
+      "max": 25.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 0.7,
+      "uv": 4.9,
+      "nascer_sol": "07:00",
+      "por_sol": "17:42"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 16.1,
+      "max": 25.0,
       "condicao": "Chuvisco leve",
       "condicao_codigo": 51,
       "chuva_mm": 0.1,
-      "uv": 3.9,
+      "uv": 4.8,
+      "nascer_sol": "07:00",
+      "por_sol": "17:43"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 15.9,
+      "max": 22.0,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 7.6,
+      "uv": 4.8,
+      "nascer_sol": "06:59",
+      "por_sol": "17:44"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 14.7,
+      "max": 17.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 3.8,
       "nascer_sol": "06:58",
       "por_sol": "17:44"
     },
     {
       "data": "2026-07-31",
-      "min": 12.1,
-      "max": 21.2,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
-      "chuva_mm": 0,
-      "uv": 5.1,
+      "min": 14.4,
+      "max": 19.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 5.0,
       "nascer_sol": "06:58",
       "por_sol": "17:45"
     },
     {
       "data": "2026-08-01",
-      "min": 16.2,
-      "max": 22.5,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "min": 16.7,
+      "max": 24.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 5.2,
+      "uv": 5.0,
       "nascer_sol": "06:57",
       "por_sol": "17:45"
     },
     {
       "data": "2026-08-02",
-      "min": 14.4,
-      "max": 20.8,
+      "min": 15.0,
+      "max": 21.0,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 4.3,
+      "uv": 2.7,
       "nascer_sol": "06:56",
       "por_sol": "17:46"
-    },
-    {
-      "data": "2026-08-03",
-      "min": 13.6,
-      "max": 26.1,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.3,
-      "uv": 4.2,
-      "nascer_sol": "06:56",
-      "por_sol": "17:46"
-    },
-    {
-      "data": "2026-08-04",
-      "min": 14.6,
-      "max": 23.3,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 1.5,
-      "uv": 3.0,
-      "nascer_sol": "06:55",
-      "por_sol": "17:47"
-    },
-    {
-      "data": "2026-08-05",
-      "min": 15.9,
-      "max": 18.6,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 2.4,
-      "uv": 0.3,
-      "nascer_sol": "06:54",
-      "por_sol": "17:47"
     }
   ],
   "reservatorio": {
     "nome": "Salto Pilao",
-    "nivel_pct": 146.4,
+    "nivel_pct": 180.1,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 139.3,
     "aproximado": true,
+    "tipo": "FIO",
+    "acumula": false,
     "nota": "Reservatório hidrelétrico mais próximo (139km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "queimadas": {
-    "focos_100km": 0,
+    "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "uv": {
-    "indice": 3.9,
+    "indice": 4.9,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 48,
+    "indice": 45,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 17.9,
-    "pm10": 19.4,
+    "pm25": 12.2,
+    "pm10": 12.9,
     "no2": 4.5,
-    "o3": 49.0,
+    "o3": 21.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
+    "atualizado_em": "2026-07-27T11:16:55.780085+00:00"
   },
   "sol": {
-    "nascer": "06:58",
-    "por": "17:44",
-    "duracao_h": 10.8,
+    "nascer": "07:00",
+    "por": "17:42",
+    "duracao_h": 10.7,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 52.0,
-    "dias_proxima_cheia": 1,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 49.0,
+    "fase_pct": 41.9,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 13.0,
+  "temperatura_atual": 16.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -142,7 +144,9 @@
     "casos_estimados": 0,
     "semana_epidemiologica": 202628,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-28T10:50:50.621348+00:00"
+    "atualizado_em": "2026-07-28T10:50:50.621348+00:00",
+    "incidencia_100k": 0.0,
+    "populacao": 12331
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -155,17 +159,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-28T10:50:50.621348+00:00"
   },
-  "_clima_em": "2026-07-30T10:21:49.345121+00:00",
+  "_clima_em": "2026-07-27T11:16:55.780085+00:00",
   "vento": {
-    "velocidade_kmh": 4.6,
-    "direcao_graus": 306,
-    "direcao": "NO",
-    "max_kmh": 8.5,
-    "rajada_kmh": 21.2,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 2.5,
+    "direcao_graus": 330,
+    "direcao": "NNO",
+    "max_kmh": 6.3,
+    "rajada_kmh": 24.5,
+    "direcao_dominante": "NNE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 95,
-  "pressao_hpa": 1022,
-  "ponto_orvalho_c": 12.2
+  "umidade_pct": 98,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 15.9
 }

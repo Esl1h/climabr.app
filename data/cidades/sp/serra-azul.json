@@ -4,12 +4,56 @@
   "slug": "serra-azul",
   "latitude": -21.3161,
   "longitude": -47.5497,
-  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
+  "atualizado_em": "2026-07-26T09:56:08.227146+00:00",
   "previsao": [
     {
+      "data": "2026-07-26",
+      "min": 12.7,
+      "max": 25.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.0,
+      "nascer_sol": "06:44",
+      "por_sol": "17:48"
+    },
+    {
+      "data": "2026-07-27",
+      "min": 12.4,
+      "max": 26.7,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.1,
+      "nascer_sol": "06:43",
+      "por_sol": "17:49"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 13.3,
+      "max": 28.3,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "06:43",
+      "por_sol": "17:49"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 13.1,
+      "max": 29.8,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 6.2,
+      "nascer_sol": "06:43",
+      "por_sol": "17:50"
+    },
+    {
       "data": "2026-07-30",
-      "min": 14.0,
-      "max": 27.8,
+      "min": 16.1,
+      "max": 26.7,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
@@ -19,10 +63,10 @@
     },
     {
       "data": "2026-07-31",
-      "min": 15.2,
-      "max": 28.6,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "min": 16.5,
+      "max": 28.1,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
       "uv": 6.2,
       "nascer_sol": "06:42",
@@ -30,109 +74,67 @@
     },
     {
       "data": "2026-08-01",
-      "min": 14.1,
-      "max": 27.3,
+      "min": 16.4,
+      "max": 27.4,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
       "chuva_mm": 0,
-      "uv": 6.3,
-      "nascer_sol": "06:41",
-      "por_sol": "17:51"
-    },
-    {
-      "data": "2026-08-02",
-      "min": 13.4,
-      "max": 27.5,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
-      "chuva_mm": 0,
-      "uv": 6.3,
-      "nascer_sol": "06:41",
-      "por_sol": "17:51"
-    },
-    {
-      "data": "2026-08-03",
-      "min": 12.7,
-      "max": 27.9,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
       "uv": 6.1,
-      "nascer_sol": "06:40",
+      "nascer_sol": "06:41",
       "por_sol": "17:51"
-    },
-    {
-      "data": "2026-08-04",
-      "min": 14.4,
-      "max": 28.7,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 6.2,
-      "nascer_sol": "06:40",
-      "por_sol": "17:52"
-    },
-    {
-      "data": "2026-08-05",
-      "min": 13.8,
-      "max": 29.7,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
-      "uv": 5.2,
-      "nascer_sol": "06:39",
-      "por_sol": "17:52"
     }
   ],
   "queimadas": {
-    "focos_100km": 7,
+    "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "reservatorio": {
     "nome": "Limoeiro",
-    "nivel_pct": 97.1,
+    "nivel_pct": 93.2,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 65.5,
     "aproximado": true,
+    "tipo": "FIO",
+    "acumula": false,
     "nota": "Reservatório hidrelétrico mais próximo (65km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "uv": {
-    "indice": 6.2,
+    "indice": 6.0,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 68,
+    "indice": 71,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 40.6,
-    "pm10": 41.3,
-    "no2": 27.0,
-    "o3": 16.0,
+    "pm25": 27.2,
+    "pm10": 28.3,
+    "no2": 16.6,
+    "o3": 19.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
+    "atualizado_em": "2026-07-26T09:56:08.227146+00:00"
   },
   "sol": {
-    "nascer": "06:42",
-    "por": "17:50",
+    "nascer": "06:44",
+    "por": "17:48",
     "duracao_h": 11.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 52.0,
-    "dias_proxima_cheia": 1,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 66.0,
+    "fase_pct": 38.5,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 14.4,
+  "temperatura_atual": 13.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -142,7 +144,9 @@
     "casos_estimados": 0,
     "semana_epidemiologica": 202629,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-29T10:55:29.219988+00:00"
+    "atualizado_em": "2026-07-29T10:55:29.219988+00:00",
+    "incidencia_100k": 0.0,
+    "populacao": 10429
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -155,17 +159,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-29T10:55:29.219988+00:00"
   },
-  "_clima_em": "2026-07-30T10:21:49.345121+00:00",
+  "_clima_em": "2026-07-26T09:56:08.227146+00:00",
   "vento": {
-    "velocidade_kmh": 4.8,
-    "direcao_graus": 149,
-    "direcao": "SSE",
-    "max_kmh": 11.2,
-    "rajada_kmh": 25.2,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 4.4,
+    "direcao_graus": 142,
+    "direcao": "SE",
+    "max_kmh": 8.0,
+    "rajada_kmh": 15.5,
+    "direcao_dominante": "SSE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 86,
-  "pressao_hpa": 1019,
-  "ponto_orvalho_c": 12.2
+  "umidade_pct": 98,
+  "pressao_hpa": 1021,
+  "ponto_orvalho_c": 13.2
 }

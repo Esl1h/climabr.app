@@ -4,23 +4,56 @@
   "slug": "prado-ferreira",
   "latitude": -23.0257,
   "longitude": -51.4004,
-  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
+  "atualizado_em": "2026-07-27T11:16:55.780085+00:00",
   "previsao": [
     {
-      "data": "2026-07-30",
-      "min": 15.8,
-      "max": 25.1,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "data": "2026-07-27",
+      "min": 14.8,
+      "max": 26.1,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "07:02",
+      "por_sol": "18:02"
+    },
+    {
+      "data": "2026-07-28",
+      "min": 15.6,
+      "max": 26.9,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
       "uv": 5.8,
+      "nascer_sol": "07:01",
+      "por_sol": "18:02"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 17.3,
+      "max": 26.5,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 6.6,
+      "uv": 5.8,
+      "nascer_sol": "07:01",
+      "por_sol": "18:03"
+    },
+    {
+      "data": "2026-07-30",
+      "min": 16.9,
+      "max": 26.2,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 2.5,
+      "uv": 5.2,
       "nascer_sol": "07:00",
       "por_sol": "18:03"
     },
     {
       "data": "2026-07-31",
-      "min": 14.7,
-      "max": 25.1,
+      "min": 15.5,
+      "max": 25.0,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
       "chuva_mm": 0,
@@ -30,109 +63,78 @@
     },
     {
       "data": "2026-08-01",
-      "min": 15.5,
+      "min": 16.8,
       "max": 27.2,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
       "chuva_mm": 0,
-      "uv": 5.9,
+      "uv": 5.2,
       "nascer_sol": "06:59",
       "por_sol": "18:04"
     },
     {
       "data": "2026-08-02",
-      "min": 15.5,
-      "max": 27.2,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 5.7,
+      "min": 17.4,
+      "max": 25.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 5.0,
       "nascer_sol": "06:59",
       "por_sol": "18:04"
-    },
-    {
-      "data": "2026-08-03",
-      "min": 18.6,
-      "max": 27.2,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 6.0,
-      "nascer_sol": "06:58",
-      "por_sol": "18:05"
-    },
-    {
-      "data": "2026-08-04",
-      "min": 15.4,
-      "max": 27.5,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
-      "chuva_mm": 0,
-      "uv": 5.2,
-      "nascer_sol": "06:58",
-      "por_sol": "18:05"
-    },
-    {
-      "data": "2026-08-05",
-      "min": 16.1,
-      "max": 28.3,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
-      "uv": 5.6,
-      "nascer_sol": "06:57",
-      "por_sol": "18:06"
     }
   ],
   "reservatorio": {
     "nome": "Capivara",
-    "nivel_pct": 97.8,
+    "nivel_pct": 96.8,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 40.8,
     "aproximado": true,
+    "tipo": "RCU",
+    "acumula": true,
     "nota": "Reservatório hidrelétrico mais próximo (41km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "queimadas": {
-    "focos_100km": 1,
+    "focos_100km": 3,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "uv": {
-    "indice": 5.8,
+    "indice": 5.7,
     "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 51,
+    "indice": 60,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 12.5,
-    "pm10": 13.0,
-    "no2": 8.0,
-    "o3": 33.0,
+    "pm25": 22.3,
+    "pm10": 23.5,
+    "no2": 8.9,
+    "o3": 50.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
+    "atualizado_em": "2026-07-27T11:16:55.780085+00:00"
   },
   "sol": {
-    "nascer": "07:00",
-    "por": "18:03",
+    "nascer": "07:02",
+    "por": "18:02",
     "duracao_h": 11.0,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 52.0,
-    "dias_proxima_cheia": 1,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 49.0,
+    "fase_pct": 41.9,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 16.0,
+  "temperatura_atual": 17.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -142,7 +144,9 @@
     "casos_estimados": 0,
     "semana_epidemiologica": 202628,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-25T10:03:02.803505+00:00"
+    "atualizado_em": "2026-07-25T10:03:02.803505+00:00",
+    "incidencia_100k": 0.0,
+    "populacao": 3663
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -155,17 +159,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-25T10:03:02.803505+00:00"
   },
-  "_clima_em": "2026-07-30T10:21:49.345121+00:00",
+  "_clima_em": "2026-07-27T11:16:55.780085+00:00",
   "vento": {
-    "velocidade_kmh": 7.1,
-    "direcao_graus": 117,
+    "velocidade_kmh": 7.5,
+    "direcao_graus": 107,
     "direcao": "ESE",
-    "max_kmh": 12.0,
-    "rajada_kmh": 22.7,
-    "direcao_dominante": "ESE",
+    "max_kmh": 9.0,
+    "rajada_kmh": 21.6,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
   "umidade_pct": 92,
   "pressao_hpa": 1018,
-  "ponto_orvalho_c": 14.7
+  "ponto_orvalho_c": 16.4
 }

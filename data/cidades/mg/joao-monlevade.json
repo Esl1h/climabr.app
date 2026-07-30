@@ -4,14 +4,36 @@
   "slug": "joao-monlevade",
   "latitude": -19.8379,
   "longitude": -43.1615,
-  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
+  "atualizado_em": "2026-07-28T10:30:45.354029+00:00",
   "previsao": [
     {
+      "data": "2026-07-28",
+      "min": 11.3,
+      "max": 25.2,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "06:23",
+      "por_sol": "17:34"
+    },
+    {
+      "data": "2026-07-29",
+      "min": 12.2,
+      "max": 26.8,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.3,
+      "nascer_sol": "06:23",
+      "por_sol": "17:35"
+    },
+    {
       "data": "2026-07-30",
-      "min": 12.9,
-      "max": 25.1,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "min": 14.2,
+      "max": 25.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
       "uv": 6.3,
       "nascer_sol": "06:23",
@@ -19,21 +41,21 @@
     },
     {
       "data": "2026-07-31",
-      "min": 11.9,
-      "max": 22.8,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
+      "min": 13.5,
+      "max": 21.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
       "uv": 6.3,
       "nascer_sol": "06:22",
       "por_sol": "17:35"
     },
     {
       "data": "2026-08-01",
-      "min": 11.4,
-      "max": 21.0,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "min": 9.1,
+      "max": 21.9,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
       "uv": 6.5,
       "nascer_sol": "06:22",
@@ -41,64 +63,44 @@
     },
     {
       "data": "2026-08-02",
-      "min": 9.8,
-      "max": 22.6,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "min": 9.5,
+      "max": 23.9,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "uv": 6.5,
+      "uv": 6.3,
       "nascer_sol": "06:21",
       "por_sol": "17:36"
     },
     {
       "data": "2026-08-03",
-      "min": 10.4,
-      "max": 23.9,
+      "min": 12.6,
+      "max": 22.5,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 6.5,
+      "uv": 6.4,
       "nascer_sol": "06:21",
       "por_sol": "17:36"
-    },
-    {
-      "data": "2026-08-04",
-      "min": 12.6,
-      "max": 24.1,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.3,
-      "uv": 5.8,
-      "nascer_sol": "06:20",
-      "por_sol": "17:37"
-    },
-    {
-      "data": "2026-08-05",
-      "min": 14.0,
-      "max": 25.8,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
-      "uv": 6.5,
-      "nascer_sol": "06:20",
-      "por_sol": "17:37"
     }
   ],
   "reservatorio": {
     "nome": "Guilm. Amorim",
-    "nivel_pct": 66.3,
+    "nivel_pct": 65.9,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-28",
+    "data_medicao": "2026-07-29",
     "distancia_km": 25.5,
     "aproximado": true,
+    "tipo": "FIO",
+    "acumula": false,
     "nota": "Reservatório hidrelétrico mais próximo (25km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-30T09:09:41.782399+00:00"
+    "atualizado_em": "2026-07-30T15:07:18.410191-03:00"
   },
   "queimadas": {
-    "focos_100km": 34,
+    "focos_100km": 28,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
+    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
   },
   "uv": {
     "indice": 6.3,
@@ -108,53 +110,55 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 36,
+    "indice": 49,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 8.5,
-    "pm10": 8.6,
-    "no2": 8.8,
-    "o3": 50.0,
+    "pm25": 9.9,
+    "pm10": 10.6,
+    "no2": 6.9,
+    "o3": 55.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
+    "atualizado_em": "2026-07-28T10:30:45.354029+00:00"
   },
   "sol": {
     "nascer": "06:23",
-    "por": "17:35",
+    "por": "17:34",
     "duracao_h": 11.2,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 13.0,
-    "fase_pct": 52.0,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 29.0,
+    "fase_pct": 45.3,
     "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 15.2,
+  "temperatura_atual": 13.5,
   "vento": {
-    "velocidade_kmh": 2.6,
-    "direcao_graus": 258,
-    "direcao": "OSO",
-    "max_kmh": 10.6,
-    "rajada_kmh": 28.1,
-    "direcao_dominante": "SSE",
+    "velocidade_kmh": 3.5,
+    "direcao_graus": 39,
+    "direcao": "NE",
+    "max_kmh": 9.0,
+    "rajada_kmh": 22.0,
+    "direcao_dominante": "NNE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 82,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 12.2,
+  "umidade_pct": 87,
+  "pressao_hpa": 1021,
+  "ponto_orvalho_c": 11.4,
   "dengue": {
-    "nivel_alerta": 2,
-    "nivel_label": "Alerta",
+    "nivel_alerta": 1,
+    "nivel_label": "Atenção",
     "nivel_incidencia": 0,
     "nivel_incidencia_label": "Baixa",
-    "casos_semana": 0,
-    "casos_estimados": 3,
-    "semana_epidemiologica": 202628,
+    "casos_semana": 1,
+    "casos_estimados": 4,
+    "incidencia_100k": 5.3,
+    "populacao": 75838,
+    "semana_epidemiologica": 202629,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-22T10:42:35.605158+00:00"
+    "atualizado_em": "2026-07-30T14:27:41.477525-03:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -167,5 +171,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-22T10:42:35.605158+00:00"
   },
-  "_clima_em": "2026-07-30T10:21:49.345121+00:00"
+  "_clima_em": "2026-07-28T10:30:45.354029+00:00"
 }
