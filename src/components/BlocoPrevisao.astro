@@ -24,8 +24,14 @@ function diaSemana(dataStr: string): string {
       {previsao.slice(0, 7).map((dia) => (
         <div class="flex flex-col items-center rounded-lg border border-border bg-card px-2 py-3 text-center" data-dia>
           <span class="text-xs text-muted-foreground capitalize" data-f="dow">{diaSemana(dia.data)}</span>
-          <span class="mt-1 text-lg font-bold tabular-nums text-foreground" data-f="max">{Math.round(dia.max)}°</span>
-          <span class="text-xs text-muted-foreground" data-f="min">{Math.round(dia.min)}°</span>
+          <span class="mt-1 inline-flex items-center gap-1">
+            <span class="text-sm leading-none text-status-pessimo" aria-hidden="true">↑</span>
+            <span class="text-lg font-bold tabular-nums text-foreground" data-f="max">{Math.round(dia.max)}°</span>
+          </span>
+          <span class="inline-flex items-center gap-1">
+            <span class="text-xs leading-none text-status-info" aria-hidden="true">↓</span>
+            <span class="text-xs tabular-nums text-muted-foreground" data-f="min">{Math.round(dia.min)}°</span>
+          </span>
           <span class="mt-1 text-xs text-status-info" data-f="chuva" hidden={!(dia.chuva_mm > 0)}>{dia.chuva_mm > 0 ? `${dia.chuva_mm}mm` : ''}</span>
           <span class="mt-1 text-xs text-muted-foreground leading-tight" data-f="cond">{dia.condicao}</span>
         </div>

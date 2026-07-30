@@ -1,6 +1,7 @@
 ---
 import PainelLayout from '../../layouts/PainelLayout.astro';
 import BlocoPrevisao from '../../components/BlocoPrevisao.astro';
+import BlocoAlagamentos from '../../components/BlocoAlagamentos.astro';
 import BlocoReservatorio from '../../components/BlocoReservatorio.astro';
 import BlocoQueimadas from '../../components/BlocoQueimadas.astro';
 import BlocoAr from '../../components/BlocoAr.astro';
@@ -76,6 +77,11 @@ const vizinhas = cidadesProximas();
 const tAtual = dados?.temperatura_atual ?? null;
 const CLS_TEMP = 'shrink-0 text-3xl font-bold tabular-nums';
 
+// Máx/mín previstas para hoje, logo abaixo do destaque: sozinho, o número atual
+// não diz se a temperatura ainda vai subir ou já está caindo. Sem casa decimal
+// de propósito — previsão é estimativa, a decimal fica reservada à medição.
+const hojePrev = dados?.previsao?.[0] ?? null;
+
 // O resumo é prosa do build, mas cita a temperatura atual. Isola esse número
 // num span para a hidratação atualizá-lo junto com o cabeçalho: sem isso a
 // mesma página mostraria dois valores diferentes. O separador de unidade (U+241F)
@@ -140,6 +146,7 @@ function montarDescricao(): string {
   const partes: string[] = [];
   const hoje = dados.previsao?.[0];
   if (hoje) partes.push(`${Math.round(hoje.min)}° a ${Math.round(hoje.max)}°, ${hoje.condicao}`);
+  if (dados.alagamentos?.ativos) partes.push(`${dados.alagamentos.ativos} ponto(s) de alagamento ativo(s)`);
   if (dados.qualidade_ar?.categoria) partes.push(`Ar: ${dados.qualidade_ar.categoria}`);
   if (dados.reservatorio?.nivel_pct != null) partes.push(`Reservatório: ${dados.reservatorio.nivel_pct}%`);
   if (dados.dengue?.nivel_label) partes.push(`Dengue: ${dados.dengue.nivel_label}`);
@@ -161,6 +168,7 @@ function formatarDataHora(iso: string): string {
 
 const temDados = dados && (
   dados.previsao?.length ||
+  dados.alagamentos ||
   dados.qualidade_ar ||
   dados.uv ||
   dados.reservatorio ||
@@ -231,6 +239,20 @@ const temDados = dados && (
         <span class="hidden sm:inline">Compartilhar</span>
       </button>
     </div>
+    <p
+      class="mt-1 flex flex-wrap items-center gap-x-3 text-xs font-medium tabular-nums"
+      data-hoje-minmax
+      title="Máxima e mínima previstas para hoje"
+      hidden={hojePrev == null}
+    >
+      <span class="inline-flex items-baseline gap-1 text-status-pessimo">
+        <span aria-hidden="true">↑</span><span>Máx</span><span data-f="hoje-max">{hojePrev ? `${Math.round(hojePrev.max)}°` : ''}</span>
+      </span>
+      <span class="inline-flex items-baseline gap-1 text-status-info">
+        <span aria-hidden="true">↓</span><span>Mín</span><span data-f="hoje-min">{hojePrev ? `${Math.round(hojePrev.min)}°` : ''}</span>
+      </span>
+    </p>
+
     {dados?.atualizado_em ? (
       <p
         id="clima-atualizado"
@@ -313,6 +335,7 @@ const temDados = dados && (
       />
       <BlocoSol sol={dados!.sol} lua={dados!.lua} />
       <BlocoBandeira bandeira={bandeira} />
+      <BlocoAlagamentos alagamentos={dados!.alagamentos} />
     </div>
   ) : (
     <div class="rounded-lg border border-border bg-card p-8 text-center">
@@ -332,6 +355,13 @@ const temDados = dados && (
       </div>
     </div>
   )}
+
+  <!-- Âncora do aviso de coleta atrasada, preenchido por previsao-cliente.ts.
+       Fica depois dos painéis de propósito: o alerta é sobre os blocos do
+       snapshot (reservatório, dengue, queimadas), então só faz sentido depois
+       de o leitor ter visto os números a que ele se refere. No cabeçalho ele
+       contradizia o "Tempo atualizado agora" logo acima, que é ao vivo. -->
+  <div data-aviso-coleta class="mt-8"></div>
 
   {vizinhas.length > 0 && (
     <section aria-label="Cidades próximas" class="mt-8">
