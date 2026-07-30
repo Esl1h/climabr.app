@@ -18,14 +18,14 @@ function diaSemana(dataStr: string): string {
       <span aria-hidden="true">🌤</span> Previsão 7 dias
     </h2>
     <p class="sr-only">
-      Previsão para os próximos dias: {previsao.map(d => `${d.data}: mínima ${d.min}°C, máxima ${d.max}°C, ${d.condicao}`).join('; ')}
+      Previsão para os próximos dias: {previsao.map(d => `${d.data}: mínima ${Math.round(d.min)}°C, máxima ${Math.round(d.max)}°C, ${d.condicao}`).join('; ')}
     </p>
     <div class="grid grid-cols-4 gap-2 sm:grid-cols-7" data-previsao-grid>
       {previsao.slice(0, 7).map((dia) => (
         <div class="flex flex-col items-center rounded-lg border border-border bg-card px-2 py-3 text-center" data-dia>
           <span class="text-xs text-muted-foreground capitalize" data-f="dow">{diaSemana(dia.data)}</span>
-          <span class="mt-1 text-lg font-bold tabular-nums text-foreground" data-f="max">{dia.max}°</span>
-          <span class="text-xs text-muted-foreground" data-f="min">{dia.min}°</span>
+          <span class="mt-1 text-lg font-bold tabular-nums text-foreground" data-f="max">{Math.round(dia.max)}°</span>
+          <span class="text-xs text-muted-foreground" data-f="min">{Math.round(dia.min)}°</span>
           <span class="mt-1 text-xs text-status-info" data-f="chuva" hidden={!(dia.chuva_mm > 0)}>{dia.chuva_mm > 0 ? `${dia.chuva_mm}mm` : ''}</span>
           <span class="mt-1 text-xs text-muted-foreground leading-tight" data-f="cond">{dia.condicao}</span>
         </div>

@@ -668,6 +668,7 @@ export default {
           // Redireciona para a cidade detectada e responde inline
           const dados = await buscarDados(siteUrl, loc.uf, loc.slug);
           if (dados && !dados._status) {
+            await hidratarTempo(dados, siteUrl, ctx);
             const cor = !noColor;
             const texto = formatarTerminal(dados, cor);
             return new Response(texto, {
