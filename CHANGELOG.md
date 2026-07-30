@@ -9,6 +9,12 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 
 ### Adicionado
 
+- Bloco de chuva por bairro na página do Rio de Janeiro, com os 33 pluviômetros
+  do Alerta Rio: intensidade na última hora pela escala da própria prefeitura,
+  acumulado de 24 horas por estação e marcação de quem está sem leitura recente.
+  O estágio operacional da cidade não entra porque é carregado por JavaScript no
+  cor.rio, sem endpoint público.
+
 - Bloco de alagamentos na página de São Paulo, com os pontos registrados pelo
   CGE da prefeitura: quantos estão ativos, quantos ficaram intransitáveis, e a
   lista com logradouro, referência e horário. É a única capital com registro
