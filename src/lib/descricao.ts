@@ -5,7 +5,17 @@ import type { DadosCidade, Municipio } from './types';
  * Texto renderizado em <p> antes dos componentes visuais — forte sinal de SEO
  * (conteúdo textual indexável) e útil para leitores de tela e AI crawlers.
  */
-export function descricaoTextual(municipio: Municipio, dados: DadosCidade | null): string {
+/**
+ * Delimitador opcional em volta do valor da temperatura atual. Quem passa a
+ * marca consegue fatiar o texto e envolver só esse número num elemento próprio,
+ * para a hidratação client-side atualizá-lo — sem precisar de set:html. Sem a
+ * marca, o retorno é texto puro como antes.
+ */
+export function descricaoTextual(
+  municipio: Municipio,
+  dados: DadosCidade | null,
+  marcaTemp = '',
+): string {
   const cidadeUf = `${municipio.nome}/${municipio.estado.toUpperCase()}`;
 
   if (!dados) {
@@ -26,7 +36,8 @@ export function descricaoTextual(municipio: Municipio, dados: DadosCidade | null
   }
 
   if (dados.temperatura_atual != null) {
-    f.push(`a temperatura atual é de ${dados.temperatura_atual}°C`);
+    const valor = `${dados.temperatura_atual.toFixed(1)}°C`;
+    f.push(`a temperatura atual é de ${marcaTemp}${valor}${marcaTemp}`);
   }
 
   if (dados.qualidade_ar) {

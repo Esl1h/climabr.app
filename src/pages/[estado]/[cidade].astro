@@ -68,11 +68,21 @@ function cidadesProximas(qtd = 6): { m: Municipio; km: number }[] {
 }
 const vizinhas = cidadesProximas();
 
-// Temperatura atual: mesmo peso e tamanho do h1, antes do nome da cidade
-// (espelha o arranjo dos modos painel e mobile). A cor sai da faixa de calor
+// Temperatura atual: antes do nome da cidade, no text-3xl dos números dos boxes
+// de dados, para ficar o elemento mais destacado do cabeçalho. Mantém a casa
+// decimal de propósito: o resumo textual e outros sites citam o valor com
+// decimal, e arredondar aqui parecia divergência. A cor sai da faixa de calor
 // e é reaplicada pela hidratação client-side, que traz o valor ao vivo.
 const tAtual = dados?.temperatura_atual ?? null;
-const CLS_TEMP = 'shrink-0 text-2xl font-bold tabular-nums';
+const CLS_TEMP = 'shrink-0 text-3xl font-bold tabular-nums';
+
+// O resumo é prosa do build, mas cita a temperatura atual. Isola esse número
+// num span para a hidratação atualizá-lo junto com o cabeçalho: sem isso a
+// mesma página mostraria dois valores diferentes. O separador de unidade (U+241F)
+// não aparece em texto natural, então fatiar por ele é seguro.
+const MARCA_TEMP = '␟';
+const [resumoAntes, resumoTemp = '', resumoDepois = ''] =
+  descricaoTextual(municipio, dados, MARCA_TEMP).split(MARCA_TEMP);
 
 // Bandeira tarifária vigente (nacional), gerada por scripts/scrape-bandeira.py
 let bandeira = null;
@@ -196,8 +206,8 @@ const temDados = dados && (
           data-skeleton={tAtual == null ? true : undefined}
         >
           <span data-temp-valor>
-            {tAtual != null ? `${Math.round(tAtual)}°` : (
-              <span class="inline-block h-7 w-16 animate-pulse rounded bg-muted align-middle" aria-hidden="true"></span>
+            {tAtual != null ? `${tAtual.toFixed(1)}°` : (
+              <span class="inline-block h-8 w-24 animate-pulse rounded bg-muted align-middle" aria-hidden="true"></span>
             )}
           </span>
           <span class="sr-only" data-temp-sr>
@@ -246,7 +256,7 @@ const temDados = dados && (
         </svg>
       </summary>
       <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
-        {descricaoTextual(municipio, dados)}
+        {resumoAntes}<span data-resumo-temp>{resumoTemp}</span>{resumoDepois}
         {avisosCidade.length > 0 && (
           <span data-alerta data-fim={avisosCidade[0].fim}>
             {' '}Atenção: a cidade está sob aviso de {avisosCidade[0].evento} ({avisosCidade[0].severidade}) do

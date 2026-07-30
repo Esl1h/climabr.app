@@ -183,11 +183,14 @@ export async function hidratarClima(): Promise<void> {
   const tempEl = document.getElementById('clima-agora');
   const tAtual = data?.current?.temperature_2m;
   if (tempEl && typeof tAtual === 'number') {
+    // Uma casa decimal, igual ao resumo textual e ao que outros serviços
+    // publicam: arredondar aqui faria o número parecer divergente.
+    const rotulo = `${arred(tAtual).toFixed(1)}°`;
     const valorEl = tempEl.querySelector<HTMLElement>('[data-temp-valor]');
     if (valorEl) {
-      valorEl.textContent = `${Math.round(tAtual)}°`;
+      valorEl.textContent = rotulo;
     } else {
-      tempEl.textContent = `${Math.round(tAtual)}°`; // defensivo: markup sem o span
+      tempEl.textContent = rotulo; // defensivo: markup sem o span
     }
     const srEl = tempEl.querySelector<HTMLElement>('[data-temp-sr]');
     if (srEl) srEl.textContent = ' agora';
@@ -195,6 +198,10 @@ export async function hidratarClima(): Promise<void> {
     tempEl.title = `${arred(tAtual)}°C agora · ${catTemperatura(tAtual)}`;
     tempEl.removeAttribute('data-skeleton');
     tempEl.hidden = false;
+
+    // O resumo textual cita o mesmo valor; atualiza para não divergir
+    const resumoEl = document.querySelector<HTMLElement>('[data-resumo-temp]');
+    if (resumoEl) resumoEl.textContent = `${arred(tAtual).toFixed(1)}°C`;
   }
 
   // Timestamp: tempo, previsão, UV e ar acabaram de vir do Open-Meteo ao vivo.
