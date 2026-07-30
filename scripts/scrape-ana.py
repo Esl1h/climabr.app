@@ -86,11 +86,17 @@ def main():
     print(f"  {len(hidro_rows)} registros em {ano}")
 
     # 3. Última medição por reservatório
+    # A linha mais recente COM volume, não simplesmente a mais recente: o ONS
+    # publica o registro do dia antes de fechar o val_volumeutilcon, e pegar
+    # essa linha vazia derrubava o reservatório inteiro do resultado (o filtro
+    # do passo 4 exige volume). Foi o que congelou Sobradinho, Xingó, Luiz
+    # Gonzaga, Apolônio Sales e as duas Paulo Afonso: as cidades da bacia do São
+    # Francisco ficaram semanas exibindo uma medição velha como se fosse a atual.
     ultima_medicao: dict[str, dict] = {}
     for row in hidro_rows:
         rid = row.get("id_reservatorio", "").strip()
         data_str = row.get("din_instante", "").strip()
-        if not rid or not data_str:
+        if not rid or not data_str or not row.get("val_volumeutilcon", "").strip():
             continue
         if rid not in ultima_medicao or data_str > ultima_medicao[rid]["din_instante"]:
             ultima_medicao[rid] = row
@@ -117,6 +123,12 @@ def main():
                 "nivel_pct": max(0.0, float(vol_str.replace(",", "."))),
                 "data": med.get("din_instante", "").strip(),
                 "subsistema": med.get("nom_subsistema", "").strip(),
+                # FIO = fio d'água. Essas usinas não acumulam por projeto, e o
+                # val_volumeutilcon delas oscila em torno de zero (chega a vir
+                # NEGATIVO, virando 0,0% no clamp acima). Num ranking de
+                # "reservatórios mais baixos" elas ocupam o topo o ano inteiro
+                # sem significar escassez, então o tipo precisa ir para o JSON.
+                "tipo": med.get("tip_reservatorio", "").strip().upper(),
             })
         except (ValueError, TypeError):
             continue
@@ -142,9 +154,14 @@ def main():
             except Exception:
                 pass
 
-        # Não sobrescreve fonte primária (SABESP cobre o sistema real)
-        fonte_atual = existente.get("reservatorio", {}).get("fonte", "")
-        if "SABESP" in fonte_atual:
+        # Não sobrescreve fonte primária. O teste era `"SABESP" in fonte`, o que
+        # deixava a COPASA desprotegida: rodar este script depois do
+        # scrape-copasa.py apagava Paraopeba, Rio Manso, Serra Azul e Vargem das
+        # Flores, trocando o sistema que realmente abastece Belo Horizonte pelo
+        # hidrelétrico mais próximo. `aproximado` distingue os dois casos sem
+        # depender do nome da concessionária.
+        reserv_atual = existente.get("reservatorio") or {}
+        if reserv_atual.get("nivel_pct") is not None and not reserv_atual.get("aproximado"):
             ignorados += 1
             continue
 
@@ -171,6 +188,8 @@ def main():
             "data_medicao": mais_proximo["data"],
             "distancia_km": round(menor_dist, 1),
             "aproximado": True,
+            "tipo": mais_proximo["tipo"],
+            "acumula": mais_proximo["tipo"] != "FIO",
             "nota": f"Reservatório hidrelétrico mais próximo ({round(menor_dist)}km). Pode não ser o sistema de abastecimento desta cidade.",
             "fonte": "ONS / ANA",
             "atualizado_em": agora,
