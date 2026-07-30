@@ -1,0 +1,61 @@
+name: Deploy do Worker
+
+# Workflow separado do deploy.yml de propósito. Aquele roda 2x/dia por cron para
+# republicar o site com os dados novos, e o Worker não muda quando o dado muda:
+# juntar os dois criaria uma versão nova do Worker duas vezes por dia sem motivo.
+# Aqui o filtro `paths` do próprio GitHub resolve o gatilho, sem comparar diff.
+#
+# A falta deste workflow deixou a correção do PR #26 dois meses mesclada e fora
+# do ar. O deploy.yml publica só o site, o ci.yml só faz typecheck do Worker, e
+# a rota raiz do modo curl seguiu servindo o snapshot da coleta diária sem que
+# nada acusasse a divergência.
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'worker/**'
+      - 'wrangler.toml'
+      - '.github/workflows/deploy-worker.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Dois deploys simultâneos do mesmo Worker deixariam a versão publicada
+# dependendo de quem termina por último.
+concurrency:
+  group: deploy-worker
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      # O Worker empacota dependências do node_modules (resvg em wasm, fonte
+      # TTF), então precisa das dependências instaladas para o bundle sair certo.
+      - name: Install dependencies
+        run: npm ci
+
+      # O bundle está em ~96% do limite de 1 MiB gzip (980,75 KiB em 30/07/2026).
+      # Se estourar, o wrangler recusa a publicação e este passo falha, que é o
+      # comportamento desejado: melhor quebrar aqui, visível, do que descobrir na
+      # próxima vez que alguém for publicar à mão.
+      - name: Deploy do Worker
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: '4.108.0'
+          command: deploy
