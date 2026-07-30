@@ -32,6 +32,13 @@ jobs:
       - name: COPASA — reservatórios MG
         run: python3 scripts/scrape-copasa.py
 
+      # Etapa de coleta do scrape-ondas.py. A etapa "identificar" já rodou uma
+      # vez e deixou data/municipios-costeiros.json com 219 municípios, mas a
+      # coleta nunca chegou a ser agendada: só Santos tinha dado de ondas.
+      - name: Ondas e surf (Open-Meteo Marine)
+        run: python3 scripts/scrape-ondas.py
+        continue-on-error: true
+
       - name: Dengue / Chikungunya / Zika (InfoDengue)
         env:
           LIMITE_MINUTOS: '12'
