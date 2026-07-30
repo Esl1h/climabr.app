@@ -86,14 +86,16 @@
   ],
   "reservatorio": {
     "nome": "M. Moraes",
-    "nivel_pct": 75.1,
+    "nivel_pct": 75.7,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-27",
+    "data_medicao": "2026-07-29",
     "distancia_km": 71.1,
     "aproximado": true,
+    "tipo": "RCU",
+    "acumula": true,
     "nota": "Reservatório hidrelétrico mais próximo (71km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-29T09:18:34.525016+00:00"
+    "atualizado_em": "2026-07-30T14:43:42.204053-03:00"
   },
   "queimadas": {
     "focos_100km": 6,
@@ -146,15 +148,17 @@
   "pressao_hpa": 1018,
   "ponto_orvalho_c": 9.9,
   "dengue": {
-    "nivel_alerta": 2,
-    "nivel_label": "Alerta",
+    "nivel_alerta": 1,
+    "nivel_label": "Atenção",
     "nivel_incidencia": 0,
     "nivel_incidencia_label": "Baixa",
-    "casos_semana": 0,
-    "casos_estimados": 1,
-    "semana_epidemiologica": 202628,
+    "casos_semana": 1,
+    "casos_estimados": 2,
+    "incidencia_100k": 2.8,
+    "populacao": 70976,
+    "semana_epidemiologica": 202629,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-23T10:38:57.715680+00:00"
+    "atualizado_em": "2026-07-30T14:27:41.477525-03:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
