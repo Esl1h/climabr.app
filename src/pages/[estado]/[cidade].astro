@@ -2,6 +2,7 @@
 import PainelLayout from '../../layouts/PainelLayout.astro';
 import BlocoPrevisao from '../../components/BlocoPrevisao.astro';
 import BlocoAlagamentos from '../../components/BlocoAlagamentos.astro';
+import BlocoChuvaRio from '../../components/BlocoChuvaRio.astro';
 import BlocoReservatorio from '../../components/BlocoReservatorio.astro';
 import BlocoQueimadas from '../../components/BlocoQueimadas.astro';
 import BlocoAr from '../../components/BlocoAr.astro';
@@ -147,6 +148,7 @@ function montarDescricao(): string {
   const hoje = dados.previsao?.[0];
   if (hoje) partes.push(`${Math.round(hoje.min)}° a ${Math.round(hoje.max)}°, ${hoje.condicao}`);
   if (dados.alagamentos?.ativos) partes.push(`${dados.alagamentos.ativos} ponto(s) de alagamento ativo(s)`);
+  if (dados.chuva_estacoes?.chovendo) partes.push(`chuva em ${dados.chuva_estacoes.chovendo} de ${dados.chuva_estacoes.total} estações`);
   if (dados.qualidade_ar?.categoria) partes.push(`Ar: ${dados.qualidade_ar.categoria}`);
   if (dados.reservatorio?.nivel_pct != null) partes.push(`Reservatório: ${dados.reservatorio.nivel_pct}%`);
   if (dados.dengue?.nivel_label) partes.push(`Dengue: ${dados.dengue.nivel_label}`);
@@ -169,6 +171,7 @@ function formatarDataHora(iso: string): string {
 const temDados = dados && (
   dados.previsao?.length ||
   dados.alagamentos ||
+  dados.chuva_estacoes ||
   dados.qualidade_ar ||
   dados.uv ||
   dados.reservatorio ||
@@ -336,6 +339,7 @@ const temDados = dados && (
       <BlocoSol sol={dados!.sol} lua={dados!.lua} />
       <BlocoBandeira bandeira={bandeira} />
       <BlocoAlagamentos alagamentos={dados!.alagamentos} />
+      <BlocoChuvaRio chuva={dados!.chuva_estacoes} />
     </div>
   ) : (
     <div class="rounded-lg border border-border bg-card p-8 text-center">
