@@ -7,7 +7,61 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 
 ## [Não publicado]
 
+### Adicionado
+
+- Bloco de alagamentos na página de São Paulo, com os pontos registrados pelo
+  CGE da prefeitura: quantos estão ativos, quantos ficaram intransitáveis, e a
+  lista com logradouro, referência e horário. É a única capital com registro
+  público e estruturado de alagamento; alertas de defesa civil estadual e
+  nacional não têm API aberta, então o alerta meteorológico nacional continua
+  vindo do INMET.
+
+- Máxima e mínima do dia logo abaixo da temperatura em destaque na página da
+  cidade, em vermelho e azul, sem casa decimal. Os cards da previsão de 7 dias
+  ganharam as mesmas setas coloridas, que também esclarecem qual dos dois
+  números é a máxima.
+
+- Dois rankings novos: os 154 reservatórios hidrelétricos monitorados pelo ONS,
+  que antes eram descartados inteiros, e as capitais ordenadas por temperatura,
+  reordenadas ao vivo no cliente.
+
+- Coleta de ondas e condição de surf agendada. A etapa de identificação já havia
+  mapeado 219 municípios costeiros, mas a coleta nunca chegou a entrar em nenhum
+  workflow e só Santos tinha o dado.
+
 ### Corrigido
+
+- Seis reservatórios da bacia do São Francisco estavam congelados desde 21/06.
+  O ONS publica a linha do dia antes de preencher o volume útil, e a coleta
+  pegava essa linha vazia, o que derrubava o reservatório inteiro do resultado.
+  Sobradinho, Xingó, Luiz Gonzaga, Apolônio Sales e as duas Paulo Afonso voltaram
+  a atualizar, e as cidades da bacia deixaram de exibir medição velha como atual.
+
+- A coleta do ONS apagava os sistemas da COPASA. A guarda de fonte primária
+  testava a string SABESP, então rodar o ONS depois da COPASA trocava Paraopeba,
+  Rio Manso, Serra Azul e Vargem das Flores pelo hidrelétrico mais próximo.
+
+- Os rankings repetiam a mesma informação em várias linhas. O de reservatórios
+  listava cidades, e como um sistema abastece dezenas delas, o Cantareira ocupava
+  14 das 15 posições; passou a ser por sistema. Os de qualidade do ar e queimadas
+  agrupam cidades vizinhas, porque o modelo entrega uma célula de grade para
+  várias delas e a contagem de focos usa raio de 100 km: quatro municípios ao
+  redor do mesmo incêndio no Pantanal viravam quatro linhas do top 10.
+
+- O ranking de dengue ordenava por casos absolutos, o que classificava população
+  em vez de epidemia. Passou a usar incidência por 100 mil habitantes, com piso
+  de casos estimados para não ser dominado por município pequeno, onde o
+  nowcasting é instável.
+
+- Uma Petrolina/BA remanescente de coleta antiga liderava o ranking de
+  reservatórios com um nível zerado que não existia mais na fonte. A cidade é de
+  Pernambuco: o arquivo foi removido e os rankings passaram a ignorar qualquer
+  arquivo que não conste da lista do IBGE.
+
+- Usinas de fio d'água ocupavam o topo do ranking de reservatórios sem indicar
+  escassez. Elas não acumulam por projeto e o volume útil que o ONS publica para
+  elas oscila em torno de zero, chegando a vir negativo. São 90 dos 154
+  reservatórios, agora identificados no JSON e fora do ranking de níveis baixos.
 
 - O modo curl na rota raiz servia o snapshot da coleta diária em vez do tempo
   ao vivo. A rota geolocalizada por IP ia de `buscarDados` direto para o
@@ -29,6 +83,15 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
   HTML como conteúdo indexável e fallback sem JS.
 
 ### Modificado
+
+- O aviso de coleta atrasada saiu do cabeçalho da cidade para depois dos
+  painéis, antes de "Cidades próximas". Ele fala dos blocos do snapshot
+  (reservatório, dengue, queimadas) e contradizia o "Tempo atualizado agora"
+  impresso na linha de cima, que é ao vivo.
+
+- Cada seção dos rankings passou a mostrar a data do próprio dado, em vez de um
+  único "gerado em" que sugeria que tudo era da hora do build: o InfoDengue
+  consolida com semanas de atraso e o ONS publica a medição do dia anterior.
 
 - A temperatura atual na página da cidade passou para antes do nome, no tamanho
   dos números dos boxes de dados, virando o elemento mais destacado do
