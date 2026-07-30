@@ -7,6 +7,8 @@ export interface ResumoCidade {
   nome: string;
   uf: string;
   slug: string;
+  latitude: number | null;
+  longitude: number | null;
   temperatura: number | null;
   aqi: number | null;
   aqiCategoria: string | null;
@@ -54,6 +56,11 @@ function resumir(uf: string, slug: string, d: any): ResumoCidade {
     nome: d.cidade ?? slug,
     uf,
     slug,
+    latitude: d.latitude ?? null,
+    longitude: d.longitude ?? null,
+    // Snapshot de um instante da coleta incremental (pode ter 1-3 dias):
+    // serve de fallback sem JS, mas quem exibe como "agora" precisa hidratar
+    // no cliente via scripts/agora-cliente.ts
     temperatura: d.temperatura_atual ?? null,
     aqi: d.qualidade_ar?.indice ?? null,
     aqiCategoria: d.qualidade_ar?.categoria ?? null,
