@@ -67,6 +67,33 @@ export interface DadosCidade {
     atualizado_em: string;
   } | null;
 
+  /** Pluviômetros do Alerta Rio — só existe para o município do Rio de Janeiro */
+  chuva_estacoes?: {
+    estacoes: Array<{
+      nome: string;
+      lat: number | null;
+      lon: number | null;
+      m15: number;
+      h01: number;
+      h24: number;
+      h96: number;
+      mes: number;
+      lido_em: string | null;
+      recente: boolean;
+    }>;
+    total: number;
+    fora_do_ar: number;
+    chovendo: number;
+    com_chuva_24h: number;
+    max_h01: number;
+    max_h01_estacao: string;
+    max_h24: number;
+    max_h24_estacao: string;
+    fonte: string;
+    url: string;
+    atualizado_em: string;
+  } | null;
+
   uv?: {
     indice: number;
     categoria: string;

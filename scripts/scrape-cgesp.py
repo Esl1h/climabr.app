@@ -12,7 +12,7 @@ Fonte: https://www.cgesp.org/v3/alagamentos.jsp?dataBusca=DD/MM/AAAA
 Saída: data/cidades/sp/sao-paulo.json (campo alagamentos)
 
 Roda 2x/dia, ~10 min antes de cada deploy (o site é estático), para que a
-página construída carregue os pontos do dia. Ver .github/workflows/dados-cgesp.yml
+página construída carregue os pontos do dia. Ver .github/workflows/dados-municipais.yml
 """
 
 import json
