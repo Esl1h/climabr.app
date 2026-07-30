@@ -4,58 +4,136 @@
   "slug": "canutama",
   "latitude": -7.3008,
   "longitude": -64.0619,
-  "atualizado_em": "2026-07-29T07:47:21.080697+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-07-30T10:21:49.345121+00:00",
+  "previsao": [
+    {
+      "data": "2026-07-30",
+      "min": 23.3,
+      "max": 34.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 7.6,
+      "nascer_sol": "07:28",
+      "por_sol": "19:16"
+    },
+    {
+      "data": "2026-07-31",
+      "min": 22.9,
+      "max": 31.3,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 4.6,
+      "uv": 4.5,
+      "nascer_sol": "07:28",
+      "por_sol": "19:16"
+    },
+    {
+      "data": "2026-08-01",
+      "min": 22.0,
+      "max": 32.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.9,
+      "uv": 7.7,
+      "nascer_sol": "07:28",
+      "por_sol": "19:16"
+    },
+    {
+      "data": "2026-08-02",
+      "min": 22.6,
+      "max": 31.4,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 10.6,
+      "uv": 7.7,
+      "nascer_sol": "07:28",
+      "por_sol": "19:16"
+    },
+    {
+      "data": "2026-08-03",
+      "min": 21.8,
+      "max": 31.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.1,
+      "uv": 7.7,
+      "nascer_sol": "07:28",
+      "por_sol": "19:16"
+    },
+    {
+      "data": "2026-08-04",
+      "min": 22.1,
+      "max": 33.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.7,
+      "uv": 7.8,
+      "nascer_sol": "07:27",
+      "por_sol": "19:16"
+    },
+    {
+      "data": "2026-08-05",
+      "min": 22.5,
+      "max": 32.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 8.0,
+      "nascer_sol": "07:27",
+      "por_sol": "19:16"
+    }
+  ],
   "queimadas": {
-    "focos_100km": 5,
+    "focos_100km": 3,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-29T09:18:37.112218+00:00"
+    "atualizado_em": "2026-07-30T09:09:44.266270+00:00"
   },
   "uv": {
-    "indice": 7.4,
+    "indice": 7.6,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 31,
+    "indice": 36,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 8.1,
-    "pm10": 8.3,
-    "no2": 1.6,
-    "o3": 17.0,
+    "pm25": 11.5,
+    "pm10": 12.3,
+    "no2": 6.0,
+    "o3": 11.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-27T11:16:55.780085+00:00"
+    "atualizado_em": "2026-07-30T10:21:49.345121+00:00"
   },
   "sol": {
-    "nascer": "07:29",
+    "nascer": "07:28",
     "por": "19:16",
     "duracao_h": 11.8,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 49.0,
-    "fase_pct": 41.9,
-    "dias_proxima_cheia": 2,
+    "nome": "Cheia",
+    "iluminacao_pct": 13.0,
+    "fase_pct": 52.0,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.1,
+  "temperatura_atual": 23.3,
   "vento": {
-    "velocidade_kmh": 6.2,
-    "direcao_graus": 352,
-    "direcao": "N",
-    "max_kmh": 8.1,
-    "rajada_kmh": 18.4,
-    "direcao_dominante": "N",
+    "velocidade_kmh": 5.0,
+    "direcao_graus": 105,
+    "direcao": "ESE",
+    "max_kmh": 7.7,
+    "rajada_kmh": 24.5,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 94,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 22.1,
+  "umidade_pct": 97,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 22.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -80,5 +158,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
   },
-  "_clima_em": "2026-07-27T11:16:55.780085+00:00"
+  "_clima_em": "2026-07-30T10:21:49.345121+00:00"
 }
