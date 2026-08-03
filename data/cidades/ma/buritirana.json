@@ -4,8 +4,86 @@
   "slug": "buritirana",
   "latitude": -5.5182,
   "longitude": -47.0618,
-  "atualizado_em": "2026-08-03T08:28:14.843611+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-03T11:18:53.807803+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-03",
+      "min": 18.8,
+      "max": 32.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.0,
+      "nascer_sol": "06:17",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-08-04",
+      "min": 19.0,
+      "max": 33.4,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 8.0,
+      "nascer_sol": "06:17",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-08-05",
+      "min": 20.5,
+      "max": 32.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 7.8,
+      "nascer_sol": "06:17",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-08-06",
+      "min": 22.5,
+      "max": 33.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 8.0,
+      "nascer_sol": "06:17",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-08-07",
+      "min": 22.7,
+      "max": 34.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.1,
+      "nascer_sol": "06:17",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-08-08",
+      "min": 22.8,
+      "max": 34.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.0,
+      "nascer_sol": "06:16",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-08-09",
+      "min": 23.5,
+      "max": 35.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.8,
+      "nascer_sol": "06:16",
+      "por_sol": "18:11"
+    }
+  ],
   "reservatorio": {
     "nome": "Estreito",
     "nivel_pct": 87.3,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-08-02T08:41:25.024014+00:00"
   },
   "uv": {
-    "indice": 7.8,
+    "indice": 8.0,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 35,
-    "categoria": "Boa",
+    "indice": 52,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 5.4,
-    "pm10": 6.5,
-    "no2": 2.7,
-    "o3": 38.0,
+    "pm25": 14.9,
+    "pm10": 15.3,
+    "no2": 3.9,
+    "o3": 59.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-28T10:30:45.354029+00:00"
+    "atualizado_em": "2026-08-03T11:18:53.807803+00:00"
   },
   "sol": {
-    "nascer": "06:18",
-    "por": "18:10",
+    "nascer": "06:17",
+    "por": "18:11",
     "duracao_h": 11.9,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 29.0,
-    "fase_pct": 45.3,
-    "dias_proxima_cheia": 1,
+    "nome": "Gibosa Minguante",
+    "iluminacao_pct": 83.0,
+    "fase_pct": 65.6,
+    "dias_proxima_cheia": 5,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.1,
+  "temperatura_atual": 23.8,
   "vento": {
-    "velocidade_kmh": 11.3,
-    "direcao_graus": 37,
-    "direcao": "NE",
-    "max_kmh": 13.9,
-    "rajada_kmh": 35.6,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 12.6,
+    "direcao_graus": 94,
+    "direcao": "E",
+    "max_kmh": 21.4,
+    "rajada_kmh": 46.4,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 93,
+  "umidade_pct": 55,
   "pressao_hpa": 1015,
-  "ponto_orvalho_c": 21.9,
+  "ponto_orvalho_c": 14.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -93,5 +171,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-20T11:08:56.944028+00:00"
   },
-  "_clima_em": "2026-07-28T10:30:45.354029+00:00"
+  "_clima_em": "2026-08-03T11:18:53.807803+00:00"
 }
