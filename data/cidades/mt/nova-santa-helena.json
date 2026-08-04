@@ -4,8 +4,86 @@
   "slug": "nova-santa-helena",
   "latitude": -10.9189,
   "longitude": -54.9067,
-  "atualizado_em": "2026-08-04T07:43:14.797418+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-04T10:34:41.565489+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-04",
+      "min": 20.2,
+      "max": 32.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.5,
+      "nascer_sol": "06:55",
+      "por_sol": "18:35"
+    },
+    {
+      "data": "2026-08-05",
+      "min": 19.4,
+      "max": 32.9,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.5,
+      "nascer_sol": "06:55",
+      "por_sol": "18:35"
+    },
+    {
+      "data": "2026-08-06",
+      "min": 19.9,
+      "max": 33.6,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.5,
+      "nascer_sol": "06:55",
+      "por_sol": "18:35"
+    },
+    {
+      "data": "2026-08-07",
+      "min": 20.5,
+      "max": 33.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 7.5,
+      "nascer_sol": "06:54",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-08-08",
+      "min": 21.9,
+      "max": 34.4,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.5,
+      "nascer_sol": "06:54",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-08-09",
+      "min": 21.7,
+      "max": 34.9,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 7.1,
+      "nascer_sol": "06:54",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-08-10",
+      "min": 24.2,
+      "max": 35.7,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "06:53",
+      "por_sol": "18:36"
+    }
+  ],
   "reservatorio": {
     "nome": "Sinop",
     "nivel_pct": 67.3,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-08-04T09:17:38.355522+00:00"
   },
   "uv": {
-    "indice": 7.2,
+    "indice": 7.5,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 31,
+    "indice": 48,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 7.9,
-    "pm10": 8.5,
-    "no2": 4.4,
-    "o3": 38.0,
+    "pm25": 17.2,
+    "pm10": 17.3,
+    "no2": 5.9,
+    "o3": 39.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-31T10:35:13.750191+00:00"
+    "atualizado_em": "2026-08-04T10:34:41.565489+00:00"
   },
   "sol": {
-    "nascer": "06:57",
+    "nascer": "06:55",
     "por": "18:35",
-    "duracao_h": 11.6,
+    "duracao_h": 11.7,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 33.0,
-    "fase_pct": 55.4,
-    "dias_proxima_cheia": 2,
+    "nome": "Gibosa Minguante",
+    "iluminacao_pct": 93.0,
+    "fase_pct": 69.0,
+    "dias_proxima_cheia": 6,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.1,
+  "temperatura_atual": 21.6,
   "vento": {
-    "velocidade_kmh": 2.7,
-    "direcao_graus": 20,
-    "direcao": "NNE",
-    "max_kmh": 13.0,
-    "rajada_kmh": 31.0,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 9.0,
+    "direcao_graus": 96,
+    "direcao": "E",
+    "max_kmh": 13.2,
+    "rajada_kmh": 31.7,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 65,
+  "umidade_pct": 58,
   "pressao_hpa": 1014,
-  "ponto_orvalho_c": 16.2,
+  "ponto_orvalho_c": 12.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -76,11 +154,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202628,
-    "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-21T10:42:52.223788+00:00",
     "incidencia_100k": 0.0,
-    "populacao": 4281
+    "populacao": 4281,
+    "semana_epidemiologica": 202629,
+    "fonte": "InfoDengue / Fiocruz / SVS",
+    "atualizado_em": "2026-08-04T10:56:06.742480+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -89,9 +167,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202628,
+    "incidencia_100k": 0.0,
+    "populacao": 4281,
+    "semana_epidemiologica": 202629,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-21T10:42:52.223788+00:00"
+    "atualizado_em": "2026-08-04T10:56:06.742480+00:00"
   },
-  "_clima_em": "2026-07-31T10:35:13.750191+00:00"
+  "_clima_em": "2026-08-04T10:34:41.565489+00:00"
 }

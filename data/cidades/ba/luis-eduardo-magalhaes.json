@@ -4,58 +4,136 @@
   "slug": "luis-eduardo-magalhaes",
   "latitude": -12.1984,
   "longitude": -46.0204,
-  "atualizado_em": "2026-08-04T07:33:01.625029+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-04T10:34:41.565489+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-04",
+      "min": 17.4,
+      "max": 29.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.5,
+      "nascer_sol": "06:21",
+      "por_sol": "17:58"
+    },
+    {
+      "data": "2026-08-05",
+      "min": 16.3,
+      "max": 30.2,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.5,
+      "nascer_sol": "06:21",
+      "por_sol": "17:58"
+    },
+    {
+      "data": "2026-08-06",
+      "min": 15.9,
+      "max": 31.6,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 7.6,
+      "nascer_sol": "06:21",
+      "por_sol": "17:58"
+    },
+    {
+      "data": "2026-08-07",
+      "min": 17.4,
+      "max": 33.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 7.6,
+      "nascer_sol": "06:20",
+      "por_sol": "17:58"
+    },
+    {
+      "data": "2026-08-08",
+      "min": 19.9,
+      "max": 33.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.7,
+      "nascer_sol": "06:20",
+      "por_sol": "17:59"
+    },
+    {
+      "data": "2026-08-09",
+      "min": 22.1,
+      "max": 34.5,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "06:19",
+      "por_sol": "17:59"
+    },
+    {
+      "data": "2026-08-10",
+      "min": 23.0,
+      "max": 34.3,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.5,
+      "nascer_sol": "06:19",
+      "por_sol": "17:59"
+    }
+  ],
   "queimadas": {
     "focos_100km": 4,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-08-04T09:17:38.355522+00:00"
   },
   "uv": {
-    "indice": 7.3,
+    "indice": 7.5,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 26,
+    "indice": 18,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.3,
-    "pm10": 4.6,
-    "no2": 3.4,
-    "o3": 52.0,
+    "pm25": 3.0,
+    "pm10": 3.5,
+    "no2": 3.2,
+    "o3": 40.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-31T10:35:13.750191+00:00"
+    "atualizado_em": "2026-08-04T10:34:41.565489+00:00"
   },
   "sol": {
-    "nascer": "06:23",
-    "por": "17:57",
+    "nascer": "06:21",
+    "por": "17:58",
     "duracao_h": 11.6,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 33.0,
-    "fase_pct": 55.4,
-    "dias_proxima_cheia": 2,
+    "nome": "Gibosa Minguante",
+    "iluminacao_pct": 93.0,
+    "fase_pct": 69.0,
+    "dias_proxima_cheia": 6,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 19.9,
+  "temperatura_atual": 19.3,
   "vento": {
-    "velocidade_kmh": 13.3,
-    "direcao_graus": 132,
-    "direcao": "SE",
-    "max_kmh": 17.9,
-    "rajada_kmh": 37.8,
-    "direcao_dominante": "ESE",
+    "velocidade_kmh": 11.0,
+    "direcao_graus": 114,
+    "direcao": "ESE",
+    "max_kmh": 18.1,
+    "rajada_kmh": 37.1,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 58,
+  "umidade_pct": 57,
   "pressao_hpa": 1019,
-  "ponto_orvalho_c": 11.3,
+  "ponto_orvalho_c": 10.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -80,5 +158,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-18T09:41:25.306440+00:00"
   },
-  "_clima_em": "2026-07-31T10:35:13.750191+00:00"
+  "_clima_em": "2026-08-04T10:34:41.565489+00:00"
 }
