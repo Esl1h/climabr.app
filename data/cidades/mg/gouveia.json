@@ -4,8 +4,86 @@
   "slug": "gouveia",
   "latitude": -18.5235,
   "longitude": -43.8335,
-  "atualizado_em": "2026-08-07T06:18:47.782344+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-07T08:55:08.818943+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-07",
+      "min": 14.2,
+      "max": 27.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.0,
+      "nascer_sol": "06:19",
+      "por_sol": "17:42"
+    },
+    {
+      "data": "2026-08-08",
+      "min": 15.3,
+      "max": 29.6,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 7.0,
+      "nascer_sol": "06:19",
+      "por_sol": "17:42"
+    },
+    {
+      "data": "2026-08-09",
+      "min": 16.3,
+      "max": 30.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.0,
+      "nascer_sol": "06:18",
+      "por_sol": "17:42"
+    },
+    {
+      "data": "2026-08-10",
+      "min": 15.9,
+      "max": 29.3,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.0,
+      "nascer_sol": "06:18",
+      "por_sol": "17:43"
+    },
+    {
+      "data": "2026-08-11",
+      "min": 15.5,
+      "max": 24.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.7,
+      "nascer_sol": "06:17",
+      "por_sol": "17:43"
+    },
+    {
+      "data": "2026-08-12",
+      "min": 13.4,
+      "max": 22.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "06:17",
+      "por_sol": "17:43"
+    },
+    {
+      "data": "2026-08-13",
+      "min": 11.4,
+      "max": 24.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "06:16",
+      "por_sol": "17:43"
+    }
+  ],
   "reservatorio": {
     "nome": "Retiro Baixo",
     "nivel_pct": 33.5,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-08-07T07:49:17.542832+00:00"
   },
   "uv": {
-    "indice": 6.8,
+    "indice": 7.0,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 27,
+    "indice": 17,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.5,
-    "pm10": 5.1,
-    "no2": 3.3,
-    "o3": 49.0,
+    "pm25": 3.5,
+    "pm10": 4.2,
+    "no2": 7.0,
+    "o3": 31.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-03T11:18:53.807803+00:00"
+    "atualizado_em": "2026-08-07T08:55:08.818943+00:00"
   },
   "sol": {
-    "nascer": "06:21",
-    "por": "17:41",
-    "duracao_h": 11.3,
+    "nascer": "06:19",
+    "por": "17:42",
+    "duracao_h": 11.4,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 83.0,
-    "fase_pct": 65.6,
-    "dias_proxima_cheia": 5,
+    "nome": "Quarto Minguante",
+    "iluminacao_pct": 97.0,
+    "fase_pct": 79.1,
+    "dias_proxima_cheia": 9,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 14.7,
+  "temperatura_atual": 14.2,
   "vento": {
-    "velocidade_kmh": 5.2,
-    "direcao_graus": 88,
-    "direcao": "E",
+    "velocidade_kmh": 5.8,
+    "direcao_graus": 7,
+    "direcao": "N",
     "max_kmh": 22.0,
-    "rajada_kmh": 37.4,
-    "direcao_dominante": "E",
+    "rajada_kmh": 40.0,
+    "direcao_dominante": "NO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 73,
-  "pressao_hpa": 1023,
-  "ponto_orvalho_c": 10.0,
+  "umidade_pct": 64,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 7.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-05T10:52:41.620957+00:00"
   },
-  "_clima_em": "2026-08-03T11:18:53.807803+00:00"
+  "_clima_em": "2026-08-07T08:55:08.818943+00:00"
 }
