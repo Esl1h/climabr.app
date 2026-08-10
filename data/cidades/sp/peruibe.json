@@ -85,17 +85,13 @@
     }
   ],
   "reservatorio": {
-    "nome": "Henry Borden",
-    "nivel_pct": 76.7,
-    "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-08-08",
-    "distancia_km": 72.6,
-    "aproximado": true,
-    "tipo": "FIO",
-    "acumula": false,
-    "nota": "Reservatório hidrelétrico mais próximo (73km). Pode não ser o sistema de abastecimento desta cidade.",
-    "fonte": "ONS / ANA",
-    "atualizado_em": "2026-08-10T08:11:11.103942+00:00"
+    "nome": "Sistema Local SABESP",
+    "nivel_pct": null,
+    "variacao_semana_pct": null,
+    "sistema_id": null,
+    "nota": "Abastecido pela SABESP via sistema local não monitorado online.",
+    "fonte": "SABESP",
+    "atualizado_em": "2026-08-10T09:36:09.200786+00:00"
   },
   "queimadas": {
     "focos_100km": 2,
@@ -161,30 +157,31 @@
   },
   "_clima_em": "2026-08-07T08:55:08.818943+00:00",
   "vento": {
-    "velocidade_kmh": 4.5,
-    "direcao_graus": 263,
-    "direcao": "O",
-    "max_kmh": 20.6,
-    "rajada_kmh": 48.6,
-    "direcao_dominante": "O",
-    "fonte": "Open-Meteo"
+    "velocidade_kmh": 11.5,
+    "direcao_graus": 163,
+    "direcao": "SSE",
+    "max_kmh": 17.2,
+    "rajada_kmh": 38.9,
+    "direcao_dominante": "S",
+    "fonte": "Open-Meteo",
+    "atualizado_em": "2026-08-10T09:36:11.450839+00:00"
   },
   "umidade_pct": 97,
   "pressao_hpa": 1007,
   "ponto_orvalho_c": 17.3,
   "ondas": {
-    "altura_m": 1.32,
-    "altura_max_m": 1.7,
-    "periodo_s": 9.8,
+    "altura_m": 1.82,
+    "altura_max_m": 1.9,
+    "periodo_s": 8.4,
     "direcao_graus": 167,
     "direcao": "SSE",
-    "swell_altura_m": 1.6,
-    "swell_periodo_s": 9.8,
+    "swell_altura_m": 1.82,
+    "swell_periodo_s": 9.3,
     "swell_direcao": "S",
     "surf_nivel": "bom",
     "surf_emoji": "🟢",
     "surf_descricao": "Ótimo para surf",
     "fonte": "Open-Meteo Marine",
-    "atualizado_em": "2026-08-09T08:57:44.726528+00:00"
+    "atualizado_em": "2026-08-10T09:36:11.450839+00:00"
   }
 }
