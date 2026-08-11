@@ -4,58 +4,137 @@
   "slug": "apicum-acu",
   "latitude": -1.5473,
   "longitude": -45.0856,
-  "atualizado_em": "2026-08-11T06:02:10.626598+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-11T08:50:19.362509+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-11",
+      "min": 24.7,
+      "max": 30.3,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 3.2,
+      "uv": 8.3,
+      "nascer_sol": "06:03",
+      "por_sol": "18:07"
+    },
+    {
+      "data": "2026-08-12",
+      "min": 24.0,
+      "max": 29.9,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 6.1,
+      "uv": 7.6,
+      "nascer_sol": "06:03",
+      "por_sol": "18:07"
+    },
+    {
+      "data": "2026-08-13",
+      "min": 23.7,
+      "max": 30.9,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 2.8,
+      "uv": 8.1,
+      "nascer_sol": "06:03",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-08-14",
+      "min": 24.5,
+      "max": 31.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.6,
+      "uv": 8.2,
+      "nascer_sol": "06:03",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-08-15",
+      "min": 25.4,
+      "max": 29.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.5,
+      "uv": 8.5,
+      "nascer_sol": "06:02",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-08-16",
+      "min": 25.9,
+      "max": 30.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 8.7,
+      "nascer_sol": "06:02",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-08-17",
+      "min": 25.3,
+      "max": 30.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 5.4,
+      "uv": 8.6,
+      "nascer_sol": "06:02",
+      "por_sol": "18:06"
+    }
+  ],
   "queimadas": {
     "focos_100km": 5,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-08-11T07:43:48.582439+00:00"
   },
   "uv": {
-    "indice": 6.6,
-    "categoria": "Alto",
+    "indice": 8.3,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 40,
+    "indice": 47,
     "categoria": "Boa",
-    "principal_poluente": "PM10",
+    "principal_poluente": "PM2.5",
     "pm25": 7.2,
-    "pm10": 11.1,
-    "no2": 0.7,
-    "o3": 48.0,
+    "pm10": 10.7,
+    "no2": 1.2,
+    "o3": 43.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-09T08:37:29.012580+00:00"
+    "atualizado_em": "2026-08-11T08:50:19.362509+00:00"
   },
   "sol": {
-    "nascer": "06:04",
+    "nascer": "06:03",
     "por": "18:07",
     "duracao_h": 12.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 77.0,
-    "fase_pct": 85.9,
-    "dias_proxima_cheia": 11,
+    "nome": "Minguante",
+    "iluminacao_pct": 44.0,
+    "fase_pct": 92.7,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 25.0,
+  "temperatura_atual": 24.8,
   "vento": {
-    "velocidade_kmh": 11.0,
-    "direcao_graus": 65,
-    "direcao": "ENE",
-    "max_kmh": 17.9,
-    "rajada_kmh": 38.5,
+    "velocidade_kmh": 11.3,
+    "direcao_graus": 56,
+    "direcao": "NE",
+    "max_kmh": 16.3,
+    "rajada_kmh": 34.2,
     "direcao_dominante": "ENE",
-    "fonte": "Open-Meteo"
+    "fonte": "Open-Meteo",
+    "atualizado_em": "2026-08-11T09:10:45.959615+00:00"
   },
-  "umidade_pct": 88,
-  "pressao_hpa": 1013,
-  "ponto_orvalho_c": 22.8,
+  "umidade_pct": 90,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 23.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,20 +161,20 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-04T10:56:06.742480+00:00"
   },
-  "_clima_em": "2026-08-09T08:37:29.012580+00:00",
+  "_clima_em": "2026-08-11T08:50:19.362509+00:00",
   "ondas": {
-    "altura_m": 0.52,
-    "altura_max_m": 0.54,
-    "periodo_s": 3.8,
-    "direcao_graus": 44,
+    "altura_m": 0.38,
+    "altura_max_m": 0.42,
+    "periodo_s": 3.5,
+    "direcao_graus": 38,
     "direcao": "NE",
-    "swell_altura_m": 0.44,
-    "swell_periodo_s": 4.1,
+    "swell_altura_m": 0.32,
+    "swell_periodo_s": 3.2,
     "swell_direcao": "NE",
     "surf_nivel": "razoavel",
     "surf_emoji": "🟡",
     "surf_descricao": "Surf razoável",
     "fonte": "Open-Meteo Marine",
-    "atualizado_em": "2026-08-09T08:57:44.726528+00:00"
+    "atualizado_em": "2026-08-11T09:10:45.959615+00:00"
   }
 }

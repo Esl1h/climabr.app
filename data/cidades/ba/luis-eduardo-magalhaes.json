@@ -4,58 +4,136 @@
   "slug": "luis-eduardo-magalhaes",
   "latitude": -12.1984,
   "longitude": -46.0204,
-  "atualizado_em": "2026-08-11T05:52:55.571802+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-11T08:50:19.362509+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-11",
+      "min": 17.5,
+      "max": 31.1,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.8,
+      "nascer_sol": "06:19",
+      "por_sol": "17:59"
+    },
+    {
+      "data": "2026-08-12",
+      "min": 19.4,
+      "max": 30.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.8,
+      "nascer_sol": "06:18",
+      "por_sol": "17:59"
+    },
+    {
+      "data": "2026-08-13",
+      "min": 18.6,
+      "max": 30.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.8,
+      "nascer_sol": "06:18",
+      "por_sol": "17:59"
+    },
+    {
+      "data": "2026-08-14",
+      "min": 19.3,
+      "max": 32.4,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 7.8,
+      "nascer_sol": "06:17",
+      "por_sol": "17:59"
+    },
+    {
+      "data": "2026-08-15",
+      "min": 18.1,
+      "max": 33.1,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.9,
+      "nascer_sol": "06:17",
+      "por_sol": "17:59"
+    },
+    {
+      "data": "2026-08-16",
+      "min": 18.1,
+      "max": 32.5,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 8.1,
+      "nascer_sol": "06:16",
+      "por_sol": "17:59"
+    },
+    {
+      "data": "2026-08-17",
+      "min": 20.6,
+      "max": 31.8,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 8.1,
+      "nascer_sol": "06:16",
+      "por_sol": "17:59"
+    }
+  ],
   "queimadas": {
     "focos_100km": 78,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-08-11T07:43:48.582439+00:00"
   },
   "uv": {
-    "indice": 7.6,
+    "indice": 7.8,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 52,
-    "categoria": "Moderada",
+    "indice": 29,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 17.0,
-    "pm10": 18.6,
-    "no2": 12.8,
-    "o3": 39.0,
+    "pm25": 2.7,
+    "pm10": 3.1,
+    "no2": 3.2,
+    "o3": 50.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-07T08:55:08.818943+00:00"
+    "atualizado_em": "2026-08-11T08:50:19.362509+00:00"
   },
   "sol": {
-    "nascer": "06:20",
-    "por": "17:58",
-    "duracao_h": 11.6,
+    "nascer": "06:19",
+    "por": "17:59",
+    "duracao_h": 11.7,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 97.0,
-    "fase_pct": 79.1,
-    "dias_proxima_cheia": 9,
+    "nome": "Minguante",
+    "iluminacao_pct": 44.0,
+    "fase_pct": 92.7,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 17.2,
+  "temperatura_atual": 17.6,
   "vento": {
-    "velocidade_kmh": 1.4,
-    "direcao_graus": 203,
-    "direcao": "SSO",
-    "max_kmh": 11.0,
-    "rajada_kmh": 27.0,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 6.0,
+    "direcao_graus": 117,
+    "direcao": "ESE",
+    "max_kmh": 24.7,
+    "rajada_kmh": 48.2,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 58,
-  "pressao_hpa": 1015,
-  "ponto_orvalho_c": 8.9,
+  "umidade_pct": 45,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 5.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -80,7 +158,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-07-18T09:41:25.306440+00:00"
   },
-  "_clima_em": "2026-08-07T08:55:08.818943+00:00",
+  "_clima_em": "2026-08-11T08:50:19.362509+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 346,
