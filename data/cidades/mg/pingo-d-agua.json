@@ -4,8 +4,86 @@
   "slug": "pingo-d-agua",
   "latitude": -19.7434,
   "longitude": -42.4218,
-  "atualizado_em": "2026-08-13T06:27:55.708737+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-13T09:08:20.716467+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-13",
+      "min": 16.6,
+      "max": 30.7,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.8,
+      "nascer_sol": "06:12",
+      "por_sol": "17:36"
+    },
+    {
+      "data": "2026-08-14",
+      "min": 18.5,
+      "max": 32.9,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 6.9,
+      "nascer_sol": "06:11",
+      "por_sol": "17:37"
+    },
+    {
+      "data": "2026-08-15",
+      "min": 20.2,
+      "max": 31.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 6.8,
+      "nascer_sol": "06:10",
+      "por_sol": "17:37"
+    },
+    {
+      "data": "2026-08-16",
+      "min": 20.3,
+      "max": 28.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.4,
+      "uv": 4.4,
+      "nascer_sol": "06:10",
+      "por_sol": "17:37"
+    },
+    {
+      "data": "2026-08-17",
+      "min": 19.8,
+      "max": 29.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 5.4,
+      "nascer_sol": "06:09",
+      "por_sol": "17:37"
+    },
+    {
+      "data": "2026-08-18",
+      "min": 19.7,
+      "max": 27.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.1,
+      "uv": 6.8,
+      "nascer_sol": "06:08",
+      "por_sol": "17:38"
+    },
+    {
+      "data": "2026-08-19",
+      "min": 17.3,
+      "max": 27.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.0,
+      "nascer_sol": "06:07",
+      "por_sol": "17:38"
+    }
+  ],
   "reservatorio": {
     "nome": "Sa Carvalho",
     "nivel_pct": 39.3,
@@ -25,25 +103,25 @@
     "atualizado_em": "2026-08-13T07:59:15.526774+00:00"
   },
   "uv": {
-    "indice": 1.6,
-    "categoria": "Baixo",
+    "indice": 6.8,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 74,
+    "indice": 52,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 20.2,
-    "pm10": 21.1,
-    "no2": 16.5,
-    "o3": 32.0,
+    "pm25": 12.9,
+    "pm10": 17.1,
+    "no2": 13.6,
+    "o3": 26.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-11T08:50:19.362509+00:00"
+    "atualizado_em": "2026-08-13T09:08:20.716467+00:00"
   },
   "sol": {
-    "nascer": "06:13",
+    "nascer": "06:12",
     "por": "17:36",
     "duracao_h": 11.4,
     "estacao": "Inverno",
@@ -51,24 +129,24 @@
   },
   "lua": {
     "nome": "Minguante",
-    "iluminacao_pct": 44.0,
-    "fase_pct": 92.7,
-    "dias_proxima_cheia": 13,
+    "iluminacao_pct": 3.0,
+    "fase_pct": 99.4,
+    "dias_proxima_cheia": 15,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 20.0,
+  "temperatura_atual": 16.9,
   "vento": {
-    "velocidade_kmh": 8.0,
-    "direcao_graus": 340,
-    "direcao": "NNO",
-    "max_kmh": 9.3,
-    "rajada_kmh": 19.8,
-    "direcao_dominante": "N",
+    "velocidade_kmh": 3.4,
+    "direcao_graus": 72,
+    "direcao": "ENE",
+    "max_kmh": 8.4,
+    "rajada_kmh": 22.0,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 83,
-  "pressao_hpa": 1023,
-  "ponto_orvalho_c": 17.1,
+  "umidade_pct": 92,
+  "pressao_hpa": 1020,
+  "ponto_orvalho_c": 15.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-07T09:16:51.725643+00:00"
   },
-  "_clima_em": "2026-08-11T08:50:19.362509+00:00"
+  "_clima_em": "2026-08-13T09:08:20.716467+00:00"
 }
