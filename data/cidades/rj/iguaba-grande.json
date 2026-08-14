@@ -138,15 +138,15 @@
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
-    "nivel_incidencia": 0,
-    "nivel_incidencia_label": "Baixa",
+    "nivel_incidencia": 2,
+    "nivel_incidencia_label": "Alta",
     "casos_semana": 0,
-    "casos_estimados": 2,
-    "incidencia_100k": 7.2,
+    "casos_estimados": 81,
+    "incidencia_100k": 292.9,
     "populacao": 27651,
-    "semana_epidemiologica": 202629,
+    "semana_epidemiologica": 202631,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-30T14:27:41.477525-03:00"
+    "atualizado_em": "2026-08-14T09:25:16.693341+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -155,36 +155,39 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202628,
+    "incidencia_100k": 0.0,
+    "populacao": 27651,
+    "semana_epidemiologica": 202631,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-26T10:16:28.176483+00:00"
+    "atualizado_em": "2026-08-14T09:25:16.693341+00:00"
   },
   "_clima_em": "2026-08-12T09:07:53.497706+00:00",
   "vento": {
-    "velocidade_kmh": 6.2,
-    "direcao_graus": 26,
-    "direcao": "NNE",
-    "max_kmh": 22.5,
-    "rajada_kmh": 40.3,
-    "direcao_dominante": "NE",
-    "fonte": "Open-Meteo"
+    "velocidade_kmh": 9.4,
+    "direcao_graus": 220,
+    "direcao": "SO",
+    "max_kmh": 18.2,
+    "rajada_kmh": 37.8,
+    "direcao_dominante": "SSO",
+    "fonte": "Open-Meteo",
+    "atualizado_em": "2026-08-14T09:24:03.163445+00:00"
   },
   "umidade_pct": 81,
   "pressao_hpa": 1023,
   "ponto_orvalho_c": 15.0,
   "ondas": {
-    "altura_m": 2.86,
-    "altura_max_m": 3.08,
-    "periodo_s": 11.2,
-    "direcao_graus": 197,
-    "direcao": "SSO",
-    "swell_altura_m": 2.5,
-    "swell_periodo_s": 10.2,
+    "altura_m": 2.06,
+    "altura_max_m": 2.14,
+    "periodo_s": 12.2,
+    "direcao_graus": 185,
+    "direcao": "S",
+    "swell_altura_m": 2.12,
+    "swell_periodo_s": 10.8,
     "swell_direcao": "S",
-    "surf_nivel": "razoavel",
-    "surf_emoji": "🟡",
-    "surf_descricao": "Ondas grandes — surfistas experientes",
+    "surf_nivel": "bom",
+    "surf_emoji": "🟢",
+    "surf_descricao": "Ótimo para surf",
     "fonte": "Open-Meteo Marine",
-    "atualizado_em": "2026-08-12T09:28:00.216953+00:00"
+    "atualizado_em": "2026-08-14T09:24:03.163445+00:00"
   }
 }
