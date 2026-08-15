@@ -4,47 +4,84 @@
   "slug": "teolandia",
   "latitude": -13.5544,
   "longitude": -39.4975,
-  "atualizado_em": "2026-08-15T05:18:42.871189+00:00",
+  "atualizado_em": "2026-08-15T08:23:02.258662+00:00",
   "previsao": [
     {
       "data": "2026-08-15",
-      "min": 18,
-      "max": 29,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 18.0,
+      "max": 28.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 7.7,
+      "nascer_sol": "05:52",
+      "por_sol": "17:32"
     },
     {
       "data": "2026-08-16",
-      "min": 19,
-      "max": 27,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 19.1,
+      "max": 27.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.2,
+      "uv": 6.4,
+      "nascer_sol": "05:52",
+      "por_sol": "17:32"
     },
     {
       "data": "2026-08-17",
-      "min": 18,
-      "max": 26,
-      "condicao": "Chuvas Isoladas",
-      "condicao_codigo": "ci",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 19.1,
+      "max": 24.2,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 12.3,
+      "uv": 7.6,
+      "nascer_sol": "05:51",
+      "por_sol": "17:32"
     },
     {
       "data": "2026-08-18",
-      "min": 18,
-      "max": 26,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 17.3,
+      "max": 23.9,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 3.9,
+      "uv": 5.6,
+      "nascer_sol": "05:50",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-08-19",
+      "min": 15.2,
+      "max": 26.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.8,
+      "nascer_sol": "05:50",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-08-20",
+      "min": 17.2,
+      "max": 26.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 7.5,
+      "nascer_sol": "05:49",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-08-21",
+      "min": 16.7,
+      "max": 26.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.6,
+      "uv": 7.5,
+      "nascer_sol": "05:49",
+      "por_sol": "17:32"
     }
   ],
   "reservatorio": {
@@ -66,50 +103,50 @@
     "atualizado_em": "2026-08-15T07:04:13.890759+00:00"
   },
   "uv": {
-    "indice": 7.5,
+    "indice": 7.7,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 27,
+    "indice": 46,
     "categoria": "Boa",
-    "principal_poluente": "PM10",
-    "pm25": 6.0,
-    "pm10": 9.3,
-    "no2": 3.3,
-    "o3": 35.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 7.7,
+    "pm10": 9.6,
+    "no2": 7.6,
+    "o3": 28.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-13T09:08:20.716467+00:00"
+    "atualizado_em": "2026-08-15T08:23:02.258662+00:00"
   },
   "sol": {
-    "nascer": "05:53",
-    "por": "17:31",
-    "duracao_h": 11.6,
+    "nascer": "05:52",
+    "por": "17:32",
+    "duracao_h": 11.7,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Minguante",
-    "iluminacao_pct": 3.0,
-    "fase_pct": 99.4,
-    "dias_proxima_cheia": 15,
+    "nome": "Nova",
+    "iluminacao_pct": 38.0,
+    "fase_pct": 6.2,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 18.0,
+  "temperatura_atual": 17.9,
   "vento": {
-    "velocidade_kmh": 8.9,
-    "direcao_graus": 232,
-    "direcao": "SO",
-    "max_kmh": 9.4,
-    "rajada_kmh": 24.8,
-    "direcao_dominante": "SSO",
+    "velocidade_kmh": 2.8,
+    "direcao_graus": 259,
+    "direcao": "O",
+    "max_kmh": 14.9,
+    "rajada_kmh": 33.5,
+    "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 97,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 17.5,
+  "umidade_pct": 96,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 17.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -119,9 +156,9 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 15892,
-    "semana_epidemiologica": 202629,
+    "semana_epidemiologica": 202631,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-31T10:56:43.873645+00:00"
+    "atualizado_em": "2026-08-15T08:44:13.301264+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -132,9 +169,9 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 15892,
-    "semana_epidemiologica": 202629,
+    "semana_epidemiologica": 202631,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-31T10:56:43.873645+00:00"
+    "atualizado_em": "2026-08-15T08:44:13.301264+00:00"
   },
-  "_clima_em": "2026-08-13T09:08:20.716467+00:00"
+  "_clima_em": "2026-08-15T08:23:02.258662+00:00"
 }
