@@ -4,7 +4,7 @@
   "slug": "sao-paulo",
   "latitude": -23.6501,
   "longitude": -46.6481,
-  "atualizado_em": "2026-08-15T09:02:38.290936+00:00",
+  "atualizado_em": "2026-08-15T21:00:35.664914+00:00",
   "previsao": [
     {
       "data": "2026-08-10",
@@ -173,13 +173,58 @@
   "ponto_orvalho_c": 13.6,
   "alagamentos": {
     "data": "2026-08-15",
-    "pontos_total": 0,
-    "ativos": 0,
-    "ativos_intransitaveis": 0,
-    "intransitaveis_total": 0,
-    "pontos": [],
+    "pontos_total": 4,
+    "ativos": 2,
+    "ativos_intransitaveis": 2,
+    "intransitaveis_total": 4,
+    "pontos": [
+      {
+        "zona": "Zona Norte",
+        "subprefeitura": "Santana",
+        "local": "AV MORVAN DIAS DE FIGUEIREDO",
+        "referencia": "PTE DAS BANDEIRAS SEN ROMEU TUMA",
+        "sentido": "A SENNA/CASTELO B",
+        "inicio": "08:37",
+        "fim": "08:56",
+        "ativo": false,
+        "transitavel": false
+      },
+      {
+        "zona": "Zona Oeste",
+        "subprefeitura": "Butantã",
+        "local": "AV VITAL BRAZIL",
+        "referencia": "R CAMARGO",
+        "sentido": "BAIRRO/CENTRO",
+        "inicio": "08:19",
+        "fim": null,
+        "ativo": true,
+        "transitavel": false
+      },
+      {
+        "zona": "Zona Leste",
+        "subprefeitura": "Mooca",
+        "local": "MARGINAL TIETE CBAS EXPRESSA",
+        "referencia": "PTE PRES JANIO QUADROS",
+        "sentido": "CASTELO B/A SENNA",
+        "inicio": "08:55",
+        "fim": "13:05",
+        "ativo": false,
+        "transitavel": false
+      },
+      {
+        "zona": "Zona Sul",
+        "subprefeitura": "Santo Amaro",
+        "local": "AV STO AMARO",
+        "referencia": "AV ROQUE PETRONI JUNIOR",
+        "sentido": "CENTRO/BAIRRO",
+        "inicio": "08:10",
+        "fim": null,
+        "ativo": true,
+        "transitavel": false
+      }
+    ],
     "fonte": "CGE / Prefeitura de São Paulo",
     "url": "https://www.cgesp.org/v3/alagamentos.jsp",
-    "atualizado_em": "2026-08-15T06:02:36.885661-03:00"
+    "atualizado_em": "2026-08-15T18:00:34.516859-03:00"
   }
 }
