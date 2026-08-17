@@ -4,47 +4,84 @@
   "slug": "serra-do-navio",
   "latitude": 1.6517,
   "longitude": -52.2681,
-  "atualizado_em": "2026-08-17T05:25:26.898741+00:00",
+  "atualizado_em": "2026-08-17T08:38:13.648830+00:00",
   "previsao": [
     {
       "data": "2026-08-17",
-      "min": 22,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.0,
+      "max": 32.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.5,
+      "uv": 8.8,
+      "nascer_sol": "06:28",
+      "por_sol": "18:37"
     },
     {
       "data": "2026-08-18",
-      "min": 21,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.2,
+      "max": 32.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 8.8,
+      "nascer_sol": "06:27",
+      "por_sol": "18:37"
     },
     {
       "data": "2026-08-19",
-      "min": 22,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 21.6,
+      "max": 33.4,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 0.5,
+      "uv": 8.8,
+      "nascer_sol": "06:27",
+      "por_sol": "18:37"
     },
     {
       "data": "2026-08-20",
-      "min": 22,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.1,
+      "max": 32.5,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 8.8,
+      "uv": 8.8,
+      "nascer_sol": "06:27",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-08-21",
+      "min": 22.0,
+      "max": 33.4,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 3.9,
+      "uv": 7.0,
+      "nascer_sol": "06:27",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-08-22",
+      "min": 21.8,
+      "max": 32.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 10.3,
+      "nascer_sol": "06:27",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-08-23",
+      "min": 22.3,
+      "max": 33.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 10.1,
+      "nascer_sol": "06:26",
+      "por_sol": "18:36"
     }
   ],
   "reservatorio": {
@@ -73,38 +110,38 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 49,
+    "indice": 27,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 5.7,
-    "pm10": 6.8,
-    "no2": 1.1,
-    "o3": 21.0,
+    "pm25": 5.0,
+    "pm10": 7.0,
+    "no2": 1.2,
+    "o3": 24.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-14T09:03:54.676769+00:00"
+    "atualizado_em": "2026-08-17T08:38:13.648830+00:00"
   },
   "sol": {
     "nascer": "06:28",
-    "por": "18:38",
+    "por": "18:37",
     "duracao_h": 12.2,
     "estacao": "Verão",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 18.0,
-    "fase_pct": 2.8,
-    "dias_proxima_cheia": 14,
+    "nome": "Crescente",
+    "iluminacao_pct": 73.0,
+    "fase_pct": 13.0,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.6,
+  "temperatura_atual": 22.1,
   "vento": {
-    "velocidade_kmh": 8.5,
-    "direcao_graus": 102,
-    "direcao": "ESE",
-    "max_kmh": 14.0,
-    "rajada_kmh": 32.4,
-    "direcao_dominante": "ESE",
+    "velocidade_kmh": 7.7,
+    "direcao_graus": 93,
+    "direcao": "E",
+    "max_kmh": 17.1,
+    "rajada_kmh": 42.5,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
   "dengue": {
@@ -133,8 +170,8 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-15T08:44:13.301264+00:00"
   },
-  "_clima_em": "2026-08-14T09:03:54.676769+00:00",
-  "umidade_pct": 100,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 22.6
+  "_clima_em": "2026-08-17T08:38:13.648830+00:00",
+  "umidade_pct": 98,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 21.7
 }
