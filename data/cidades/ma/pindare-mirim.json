@@ -4,58 +4,136 @@
   "slug": "pindare-mirim",
   "latitude": -3.6933,
   "longitude": -45.4402,
-  "atualizado_em": "2026-08-18T05:32:59.083432+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-18T08:32:14.443005+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-18",
+      "min": 22.9,
+      "max": 33.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 8.4,
+      "nascer_sol": "06:05",
+      "por_sol": "18:05"
+    },
+    {
+      "data": "2026-08-19",
+      "min": 23.9,
+      "max": 33.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.5,
+      "nascer_sol": "06:05",
+      "por_sol": "18:05"
+    },
+    {
+      "data": "2026-08-20",
+      "min": 24.3,
+      "max": 34.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 8.5,
+      "nascer_sol": "06:04",
+      "por_sol": "18:05"
+    },
+    {
+      "data": "2026-08-21",
+      "min": 24.6,
+      "max": 33.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "06:04",
+      "por_sol": "18:05"
+    },
+    {
+      "data": "2026-08-22",
+      "min": 24.4,
+      "max": 34.6,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.3,
+      "nascer_sol": "06:04",
+      "por_sol": "18:04"
+    },
+    {
+      "data": "2026-08-23",
+      "min": 24.6,
+      "max": 34.9,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.7,
+      "nascer_sol": "06:03",
+      "por_sol": "18:04"
+    },
+    {
+      "data": "2026-08-24",
+      "min": 24.7,
+      "max": 34.8,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.7,
+      "nascer_sol": "06:03",
+      "por_sol": "18:04"
+    }
+  ],
   "queimadas": {
     "focos_100km": 3,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-08-18T07:12:02.117086+00:00"
   },
   "uv": {
-    "indice": 8.2,
+    "indice": 8.4,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 39,
-    "categoria": "Boa",
+    "indice": 52,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 4.5,
-    "pm10": 6.2,
-    "no2": 4.0,
-    "o3": 34.0,
+    "pm25": 6.4,
+    "pm10": 8.1,
+    "no2": 5.7,
+    "o3": 40.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-16T08:24:32.149107+00:00"
+    "atualizado_em": "2026-08-18T08:32:14.443005+00:00"
   },
   "sol": {
-    "nascer": "06:06",
+    "nascer": "06:05",
     "por": "18:05",
     "duracao_h": 12.0,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 57.0,
-    "fase_pct": 9.6,
-    "dias_proxima_cheia": 12,
+    "nome": "Crescente",
+    "iluminacao_pct": 86.0,
+    "fase_pct": 16.4,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 24.8,
+  "temperatura_atual": 22.8,
   "vento": {
-    "velocidade_kmh": 7.7,
-    "direcao_graus": 60,
-    "direcao": "ENE",
-    "max_kmh": 17.0,
-    "rajada_kmh": 38.2,
+    "velocidade_kmh": 4.6,
+    "direcao_graus": 18,
+    "direcao": "NNE",
+    "max_kmh": 17.9,
+    "rajada_kmh": 34.6,
     "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 92,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 23.4,
+  "umidade_pct": 95,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 22.0,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-17T08:59:06.400824+00:00"
   },
-  "_clima_em": "2026-08-16T08:24:32.149107+00:00"
+  "_clima_em": "2026-08-18T08:32:14.443005+00:00"
 }

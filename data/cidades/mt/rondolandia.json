@@ -4,30 +4,108 @@
   "slug": "rondolandia",
   "latitude": -10.4631,
   "longitude": -61.01,
-  "atualizado_em": "2026-08-18T05:34:57.725807+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-18T08:32:14.443005+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-18",
+      "min": 21.8,
+      "max": 33.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 6.7,
+      "nascer_sol": "07:14",
+      "por_sol": "19:01"
+    },
+    {
+      "data": "2026-08-19",
+      "min": 20.4,
+      "max": 35.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.0,
+      "nascer_sol": "07:13",
+      "por_sol": "19:01"
+    },
+    {
+      "data": "2026-08-20",
+      "min": 19.9,
+      "max": 35.5,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.0,
+      "nascer_sol": "07:13",
+      "por_sol": "19:01"
+    },
+    {
+      "data": "2026-08-21",
+      "min": 20.8,
+      "max": 35.1,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 7.8,
+      "nascer_sol": "07:12",
+      "por_sol": "19:01"
+    },
+    {
+      "data": "2026-08-22",
+      "min": 21.1,
+      "max": 34.6,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 8.1,
+      "nascer_sol": "07:12",
+      "por_sol": "19:01"
+    },
+    {
+      "data": "2026-08-23",
+      "min": 21.4,
+      "max": 36.4,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 8.1,
+      "nascer_sol": "07:11",
+      "por_sol": "19:01"
+    },
+    {
+      "data": "2026-08-24",
+      "min": 22.5,
+      "max": 32.9,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "07:10",
+      "por_sol": "19:01"
+    }
+  ],
   "queimadas": {
     "focos_100km": 25,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-08-18T07:12:02.117086+00:00"
   },
   "uv": {
-    "indice": 7.8,
+    "indice": 6.7,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 46,
-    "categoria": "Boa",
+    "indice": 56,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 7.6,
-    "pm10": 7.7,
-    "no2": 3.0,
-    "o3": 26.0,
+    "pm25": 12.6,
+    "pm10": 12.8,
+    "no2": 2.4,
+    "o3": 30.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-16T08:24:32.149107+00:00"
+    "atualizado_em": "2026-08-18T08:32:14.443005+00:00"
   },
   "sol": {
     "nascer": "07:14",
@@ -37,25 +115,25 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 57.0,
-    "fase_pct": 9.6,
-    "dias_proxima_cheia": 12,
+    "nome": "Crescente",
+    "iluminacao_pct": 86.0,
+    "fase_pct": 16.4,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 21.2,
+  "temperatura_atual": 22.6,
   "vento": {
-    "velocidade_kmh": 1.5,
-    "direcao_graus": 216,
-    "direcao": "SO",
-    "max_kmh": 11.2,
-    "rajada_kmh": 28.4,
-    "direcao_dominante": "NE",
+    "velocidade_kmh": 0.4,
+    "direcao_graus": 117,
+    "direcao": "ESE",
+    "max_kmh": 10.7,
+    "rajada_kmh": 31.0,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 82,
-  "pressao_hpa": 1011,
-  "ponto_orvalho_c": 18.1,
+  "umidade_pct": 86,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 20.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-17T08:59:06.400824+00:00"
   },
-  "_clima_em": "2026-08-16T08:24:32.149107+00:00"
+  "_clima_em": "2026-08-18T08:32:14.443005+00:00"
 }

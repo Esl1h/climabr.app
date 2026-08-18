@@ -4,47 +4,84 @@
   "slug": "aquiraz",
   "latitude": -3.9766,
   "longitude": -38.3941,
-  "atualizado_em": "2026-08-18T05:25:43.433156+00:00",
+  "atualizado_em": "2026-08-18T08:32:14.443005+00:00",
   "previsao": [
     {
       "data": "2026-08-18",
-      "min": 21,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 23.5,
+      "max": 31.3,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 8.4,
+      "nascer_sol": "05:37",
+      "por_sol": "17:37"
     },
     {
       "data": "2026-08-19",
-      "min": 22,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.9,
+      "max": 31.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 8.5,
+      "nascer_sol": "05:37",
+      "por_sol": "17:37"
     },
     {
       "data": "2026-08-20",
-      "min": 23,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 24.3,
+      "max": 30.7,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 8.2,
+      "nascer_sol": "05:37",
+      "por_sol": "17:36"
     },
     {
       "data": "2026-08-21",
-      "min": 23,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 24.1,
+      "max": 30.4,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 8.5,
+      "nascer_sol": "05:36",
+      "por_sol": "17:36"
+    },
+    {
+      "data": "2026-08-22",
+      "min": 25.0,
+      "max": 30.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.7,
+      "nascer_sol": "05:36",
+      "por_sol": "17:36"
+    },
+    {
+      "data": "2026-08-23",
+      "min": 25.3,
+      "max": 29.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.4,
+      "nascer_sol": "05:35",
+      "por_sol": "17:36"
+    },
+    {
+      "data": "2026-08-24",
+      "min": 25.1,
+      "max": 29.9,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.4,
+      "nascer_sol": "05:35",
+      "por_sol": "17:36"
     }
   ],
   "queimadas": {
@@ -53,51 +90,51 @@
     "atualizado_em": "2026-08-18T07:12:02.117086+00:00"
   },
   "uv": {
-    "indice": 8.3,
+    "indice": 8.4,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 39,
+    "indice": 42,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 6.5,
-    "pm10": 9.3,
-    "no2": 2.2,
-    "o3": 50.0,
+    "pm25": 7.2,
+    "pm10": 10.4,
+    "no2": 2.9,
+    "o3": 44.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-16T08:24:32.149107+00:00"
+    "atualizado_em": "2026-08-18T08:32:14.443005+00:00"
   },
   "sol": {
-    "nascer": "05:38",
+    "nascer": "05:37",
     "por": "17:37",
     "duracao_h": 12.0,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 57.0,
-    "fase_pct": 9.6,
-    "dias_proxima_cheia": 12,
+    "nome": "Crescente",
+    "iluminacao_pct": 86.0,
+    "fase_pct": 16.4,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 24.2,
+  "temperatura_atual": 23.4,
   "vento": {
-    "velocidade_kmh": 15.3,
-    "direcao_graus": 146,
-    "direcao": "SE",
-    "max_kmh": 23.4,
-    "rajada_kmh": 51.1,
+    "velocidade_kmh": 12.8,
+    "direcao_graus": 158,
+    "direcao": "SSE",
+    "max_kmh": 21.6,
+    "rajada_kmh": 47.9,
     "direcao_dominante": "ESE",
     "fonte": "Open-Meteo",
-    "atualizado_em": "2026-08-17T08:58:23.119297+00:00"
+    "atualizado_em": "2026-08-18T08:52:29.726554+00:00"
   },
-  "umidade_pct": 76,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 19.7,
+  "umidade_pct": 78,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 19.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -124,21 +161,21 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-16T08:46:06.223270+00:00"
   },
-  "_clima_em": "2026-08-16T08:24:32.149107+00:00",
+  "_clima_em": "2026-08-18T08:32:14.443005+00:00",
   "ondas": {
-    "altura_m": 2.06,
-    "altura_max_m": 2.12,
-    "periodo_s": 6.3,
-    "direcao_graus": 100,
+    "altura_m": 1.82,
+    "altura_max_m": 1.9,
+    "periodo_s": 6.0,
+    "direcao_graus": 98,
     "direcao": "E",
-    "swell_altura_m": 1.2,
-    "swell_periodo_s": 8.7,
-    "swell_direcao": "ENE",
-    "surf_nivel": "bom",
-    "surf_emoji": "🟢",
-    "surf_descricao": "Bom para surf",
+    "swell_altura_m": 1.14,
+    "swell_periodo_s": 6.9,
+    "swell_direcao": "E",
+    "surf_nivel": "razoavel",
+    "surf_emoji": "🟡",
+    "surf_descricao": "Surf razoável",
     "fonte": "Open-Meteo Marine",
-    "atualizado_em": "2026-08-17T08:58:23.119297+00:00"
+    "atualizado_em": "2026-08-18T08:52:29.726554+00:00"
   },
   "agua": {
     "parametro": "Escherichia coli",

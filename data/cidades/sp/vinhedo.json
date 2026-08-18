@@ -4,45 +4,12 @@
   "slug": "vinhedo",
   "latitude": -23.0465,
   "longitude": -46.9792,
-  "atualizado_em": "2026-08-15T08:23:02.258662+00:00",
+  "atualizado_em": "2026-08-18T08:32:14.443005+00:00",
   "previsao": [
     {
-      "data": "2026-08-15",
-      "min": 17.2,
-      "max": 28.9,
-      "condicao": "Chuvisco moderado",
-      "condicao_codigo": 53,
-      "chuva_mm": 0.8,
-      "uv": 6.7,
-      "nascer_sol": "06:32",
-      "por_sol": "17:51"
-    },
-    {
-      "data": "2026-08-16",
-      "min": 16.4,
-      "max": 30.9,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.1,
-      "uv": 6.7,
-      "nascer_sol": "06:32",
-      "por_sol": "17:52"
-    },
-    {
-      "data": "2026-08-17",
-      "min": 17.5,
-      "max": 32.2,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 6.8,
-      "nascer_sol": "06:31",
-      "por_sol": "17:52"
-    },
-    {
       "data": "2026-08-18",
-      "min": 17.3,
-      "max": 32.4,
+      "min": 16.8,
+      "max": 30.4,
       "condicao": "Céu limpo",
       "condicao_codigo": 0,
       "chuva_mm": 0,
@@ -52,50 +19,79 @@
     },
     {
       "data": "2026-08-19",
-      "min": 16.5,
-      "max": 32.9,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
+      "min": 15.4,
+      "max": 31.6,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "uv": 6.9,
+      "uv": 6.8,
       "nascer_sol": "06:29",
       "por_sol": "17:53"
     },
     {
       "data": "2026-08-20",
-      "min": 18.1,
-      "max": 33.0,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "min": 18.0,
+      "max": 32.3,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "uv": 7.0,
+      "uv": 6.8,
       "nascer_sol": "06:28",
       "por_sol": "17:53"
     },
     {
       "data": "2026-08-21",
-      "min": 14.4,
-      "max": 27.3,
+      "min": 16.1,
+      "max": 25.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.6,
+      "nascer_sol": "06:27",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-08-22",
+      "min": 12.2,
+      "max": 23.6,
       "condicao": "Parcialmente nublado",
       "condicao_codigo": 2,
       "chuva_mm": 0,
-      "uv": 5.5,
+      "uv": 7.0,
       "nascer_sol": "06:27",
-      "por_sol": "17:53"
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-08-23",
+      "min": 12.8,
+      "max": 26.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 7.0,
+      "nascer_sol": "06:26",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-08-24",
+      "min": 11.4,
+      "max": 15.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 5.8,
+      "uv": 6.6,
+      "nascer_sol": "06:25",
+      "por_sol": "17:54"
     }
   ],
   "reservatorio": {
-    "nome": "Jaguari",
-    "nivel_pct": 57.5,
-    "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-08-16",
-    "distancia_km": 99.3,
-    "aproximado": true,
-    "tipo": "RCU",
-    "acumula": true,
-    "nota": "Reservatório hidrelétrico mais próximo (99km). Pode não ser o sistema de abastecimento desta cidade.",
-    "fonte": "ONS / ANA",
-    "atualizado_em": "2026-08-18T07:11:59.637476+00:00"
+    "nome": "Sistema Local SABESP",
+    "nivel_pct": null,
+    "variacao_semana_pct": null,
+    "sistema_id": null,
+    "nota": "Abastecido pela SABESP via sistema local não monitorado online.",
+    "fonte": "SABESP",
+    "atualizado_em": "2026-08-18T08:52:27.774583+00:00"
   },
   "queimadas": {
     "focos_100km": 6,
@@ -103,38 +99,38 @@
     "atualizado_em": "2026-08-18T07:12:02.117086+00:00"
   },
   "uv": {
-    "indice": 6.7,
+    "indice": 6.8,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 73,
+    "indice": 79,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 13.3,
-    "pm10": 13.4,
-    "no2": 14.5,
-    "o3": 47.0,
+    "pm25": 17.6,
+    "pm10": 17.8,
+    "no2": 33.7,
+    "o3": 32.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-15T08:23:02.258662+00:00"
+    "atualizado_em": "2026-08-18T08:32:14.443005+00:00"
   },
   "sol": {
-    "nascer": "06:32",
-    "por": "17:51",
-    "duracao_h": 11.3,
+    "nascer": "06:30",
+    "por": "17:52",
+    "duracao_h": 11.4,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 38.0,
-    "fase_pct": 6.2,
-    "dias_proxima_cheia": 13,
+    "nome": "Crescente",
+    "iluminacao_pct": 86.0,
+    "fase_pct": 16.4,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 17.5,
+  "temperatura_atual": 16.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -161,17 +157,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-13T09:30:24.349982+00:00"
   },
-  "_clima_em": "2026-08-15T08:23:02.258662+00:00",
+  "_clima_em": "2026-08-18T08:32:14.443005+00:00",
   "vento": {
-    "velocidade_kmh": 15.9,
-    "direcao_graus": 122,
+    "velocidade_kmh": 5.8,
+    "direcao_graus": 112,
     "direcao": "ESE",
-    "max_kmh": 20.2,
-    "rajada_kmh": 38.9,
-    "direcao_dominante": "ESE",
+    "max_kmh": 8.6,
+    "rajada_kmh": 25.2,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 89,
-  "pressao_hpa": 1019,
-  "ponto_orvalho_c": 15.6
+  "umidade_pct": 82,
+  "pressao_hpa": 1020,
+  "ponto_orvalho_c": 13.9
 }
