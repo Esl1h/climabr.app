@@ -4,33 +4,111 @@
   "slug": "jequia-da-praia",
   "latitude": -9.9215,
   "longitude": -36.0973,
-  "atualizado_em": "2026-08-20T05:20:09.734103+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-20T08:33:13.277796+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-20",
+      "min": 21.8,
+      "max": 26.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 7.7,
+      "nascer_sol": "05:32",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-08-21",
+      "min": 20.8,
+      "max": 26.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 7.3,
+      "nascer_sol": "05:32",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-08-22",
+      "min": 19.1,
+      "max": 28.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.2,
+      "nascer_sol": "05:31",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-08-23",
+      "min": 22.7,
+      "max": 26.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.4,
+      "uv": 8.2,
+      "nascer_sol": "05:31",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-08-24",
+      "min": 21.9,
+      "max": 26.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 7.5,
+      "nascer_sol": "05:30",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-08-25",
+      "min": 21.0,
+      "max": 27.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.5,
+      "uv": 8.1,
+      "nascer_sol": "05:30",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-08-26",
+      "min": 21.8,
+      "max": 26.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 7.8,
+      "nascer_sol": "05:29",
+      "por_sol": "17:22"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-08-20T07:13:57.395375+00:00"
   },
   "uv": {
-    "indice": 7.5,
+    "indice": 7.7,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 52,
+    "indice": 59,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 13.4,
-    "pm10": 19.2,
-    "no2": 4.1,
-    "o3": 49.0,
+    "pm25": 20.5,
+    "pm10": 26.8,
+    "no2": 8.0,
+    "o3": 46.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-18T08:32:14.443005+00:00"
+    "atualizado_em": "2026-08-20T08:33:13.277796+00:00"
   },
   "sol": {
-    "nascer": "05:33",
+    "nascer": "05:32",
     "por": "17:22",
     "duracao_h": 11.8,
     "estacao": "Inverno",
@@ -38,25 +116,24 @@
   },
   "lua": {
     "nome": "Crescente",
-    "iluminacao_pct": 86.0,
-    "fase_pct": 16.4,
-    "dias_proxima_cheia": 10,
+    "iluminacao_pct": 99.0,
+    "fase_pct": 23.2,
+    "dias_proxima_cheia": 8,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 21.9,
+  "temperatura_atual": 22.1,
   "vento": {
-    "velocidade_kmh": 5.4,
-    "direcao_graus": 150,
-    "direcao": "SSE",
-    "max_kmh": 18.3,
-    "rajada_kmh": 36.7,
-    "direcao_dominante": "SSE",
-    "fonte": "Open-Meteo",
-    "atualizado_em": "2026-08-19T08:52:46.299765+00:00"
+    "velocidade_kmh": 7.7,
+    "direcao_graus": 106,
+    "direcao": "ESE",
+    "max_kmh": 19.6,
+    "rajada_kmh": 39.6,
+    "direcao_dominante": "SE",
+    "fonte": "Open-Meteo"
   },
-  "umidade_pct": 96,
+  "umidade_pct": 87,
   "pressao_hpa": 1018,
-  "ponto_orvalho_c": 21.3,
+  "ponto_orvalho_c": 19.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -83,21 +160,21 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-15T08:44:13.301264+00:00"
   },
-  "_clima_em": "2026-08-18T08:32:14.443005+00:00",
+  "_clima_em": "2026-08-20T08:33:13.277796+00:00",
   "ondas": {
-    "altura_m": 1.4,
-    "altura_max_m": 1.46,
-    "periodo_s": 7.7,
-    "direcao_graus": 137,
+    "altura_m": 1.18,
+    "altura_max_m": 1.2,
+    "periodo_s": 7.5,
+    "direcao_graus": 129,
     "direcao": "SE",
-    "swell_altura_m": 1.28,
-    "swell_periodo_s": 7.2,
+    "swell_altura_m": 1.12,
+    "swell_periodo_s": 6.9,
     "swell_direcao": "SE",
     "surf_nivel": "bom",
     "surf_emoji": "🟢",
     "surf_descricao": "Bom para surf",
     "fonte": "Open-Meteo Marine",
-    "atualizado_em": "2026-08-19T08:52:46.299765+00:00"
+    "atualizado_em": "2026-08-20T08:53:18.976777+00:00"
   },
   "agua": {
     "parametro": "Escherichia coli",
