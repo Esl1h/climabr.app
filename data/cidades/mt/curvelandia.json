@@ -4,8 +4,86 @@
   "slug": "curvelandia",
   "latitude": -15.6171,
   "longitude": -57.8764,
-  "atualizado_em": "2026-08-21T05:34:05.881585+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-21T08:35:43.358321+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-21",
+      "min": 17.7,
+      "max": 29.5,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 7.5,
+      "nascer_sol": "07:04",
+      "por_sol": "18:44"
+    },
+    {
+      "data": "2026-08-22",
+      "min": 18.5,
+      "max": 30.6,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.6,
+      "nascer_sol": "07:03",
+      "por_sol": "18:44"
+    },
+    {
+      "data": "2026-08-23",
+      "min": 17.9,
+      "max": 32.8,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.6,
+      "nascer_sol": "07:03",
+      "por_sol": "18:44"
+    },
+    {
+      "data": "2026-08-24",
+      "min": 19.6,
+      "max": 35.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.7,
+      "nascer_sol": "07:02",
+      "por_sol": "18:44"
+    },
+    {
+      "data": "2026-08-25",
+      "min": 22.6,
+      "max": 37.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "07:02",
+      "por_sol": "18:45"
+    },
+    {
+      "data": "2026-08-26",
+      "min": 24.6,
+      "max": 38.1,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 7.8,
+      "nascer_sol": "07:01",
+      "por_sol": "18:45"
+    },
+    {
+      "data": "2026-08-27",
+      "min": 26.7,
+      "max": 39.7,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "07:00",
+      "por_sol": "18:45"
+    }
+  ],
   "reservatorio": {
     "nome": "Jauru",
     "nivel_pct": 0.0,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-08-21T07:14:55.091906+00:00"
   },
   "uv": {
-    "indice": 7.4,
+    "indice": 7.5,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 38,
+    "indice": 41,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.9,
-    "pm10": 5.1,
-    "no2": 8.3,
-    "o3": 37.0,
+    "pm25": 4.4,
+    "pm10": 4.5,
+    "no2": 4.9,
+    "o3": 36.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-17T08:38:13.648830+00:00"
+    "atualizado_em": "2026-08-21T08:35:43.358321+00:00"
   },
   "sol": {
-    "nascer": "07:07",
-    "por": "18:43",
-    "duracao_h": 11.6,
+    "nascer": "07:04",
+    "por": "18:44",
+    "duracao_h": 11.7,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 73.0,
-    "fase_pct": 13.0,
-    "dias_proxima_cheia": 11,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 26.5,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 21.6,
+  "temperatura_atual": 18.2,
   "vento": {
-    "velocidade_kmh": 4.2,
-    "direcao_graus": 5,
-    "direcao": "N",
-    "max_kmh": 15.9,
-    "rajada_kmh": 33.5,
-    "direcao_dominante": "NNE",
+    "velocidade_kmh": 9.4,
+    "direcao_graus": 185,
+    "direcao": "S",
+    "max_kmh": 12.9,
+    "rajada_kmh": 27.4,
+    "direcao_dominante": "S",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 67,
-  "pressao_hpa": 1010,
-  "ponto_orvalho_c": 15.2,
+  "umidade_pct": 79,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 14.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-17T08:59:06.400824+00:00"
   },
-  "_clima_em": "2026-08-17T08:38:13.648830+00:00"
+  "_clima_em": "2026-08-21T08:35:43.358321+00:00"
 }
