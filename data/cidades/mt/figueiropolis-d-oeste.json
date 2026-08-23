@@ -4,8 +4,86 @@
   "slug": "figueiropolis-d-oeste",
   "latitude": -15.5274,
   "longitude": -58.7026,
-  "atualizado_em": "2026-08-23T05:33:56.847515+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-23T08:25:02.196162+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-23",
+      "min": 17.8,
+      "max": 31.0,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.7,
+      "nascer_sol": "07:06",
+      "por_sol": "18:48"
+    },
+    {
+      "data": "2026-08-24",
+      "min": 19.6,
+      "max": 32.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.7,
+      "nascer_sol": "07:05",
+      "por_sol": "18:48"
+    },
+    {
+      "data": "2026-08-25",
+      "min": 20.8,
+      "max": 34.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.0,
+      "nascer_sol": "07:05",
+      "por_sol": "18:48"
+    },
+    {
+      "data": "2026-08-26",
+      "min": 24.0,
+      "max": 34.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 7.7,
+      "nascer_sol": "07:04",
+      "por_sol": "18:48"
+    },
+    {
+      "data": "2026-08-27",
+      "min": 23.8,
+      "max": 35.7,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 7.8,
+      "nascer_sol": "07:03",
+      "por_sol": "18:48"
+    },
+    {
+      "data": "2026-08-28",
+      "min": 25.0,
+      "max": 36.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 8.0,
+      "nascer_sol": "07:03",
+      "por_sol": "18:48"
+    },
+    {
+      "data": "2026-08-29",
+      "min": 27.5,
+      "max": 36.1,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 5.8,
+      "nascer_sol": "07:02",
+      "por_sol": "18:48"
+    }
+  ],
   "reservatorio": {
     "nome": "Jauru",
     "nivel_pct": 0.0,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-08-23T07:08:23.813191+00:00"
   },
   "uv": {
-    "indice": 7.5,
+    "indice": 7.7,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 38,
+    "indice": 26,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.1,
-    "pm10": 4.2,
-    "no2": 4.7,
-    "o3": 39.0,
+    "pm25": 1.0,
+    "pm10": 1.2,
+    "no2": 7.1,
+    "o3": 46.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-21T08:35:43.358321+00:00"
+    "atualizado_em": "2026-08-23T08:25:02.196162+00:00"
   },
   "sol": {
-    "nascer": "07:07",
-    "por": "18:47",
+    "nascer": "07:06",
+    "por": "18:48",
     "duracao_h": 11.7,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Quarto Crescente",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 26.5,
-    "dias_proxima_cheia": 7,
+    "iluminacao_pct": 87.0,
+    "fase_pct": 33.3,
+    "dias_proxima_cheia": 5,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 17.7,
+  "temperatura_atual": 18.0,
   "vento": {
-    "velocidade_kmh": 7.6,
-    "direcao_graus": 158,
-    "direcao": "SSE",
-    "max_kmh": 11.8,
-    "rajada_kmh": 25.2,
+    "velocidade_kmh": 2.8,
+    "direcao_graus": 207,
+    "direcao": "SSO",
+    "max_kmh": 8.3,
+    "rajada_kmh": 21.2,
     "direcao_dominante": "SSE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 76,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 13.3,
+  "umidade_pct": 61,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 10.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-14T09:25:16.693341+00:00"
   },
-  "_clima_em": "2026-08-21T08:35:43.358321+00:00"
+  "_clima_em": "2026-08-23T08:25:02.196162+00:00"
 }
