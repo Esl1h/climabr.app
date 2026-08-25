@@ -4,8 +4,86 @@
   "slug": "colniza",
   "latitude": -9.2924,
   "longitude": -60.3042,
-  "atualizado_em": "2026-08-25T05:34:28.654381+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-25T08:37:29.654803+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-25",
+      "min": 22.6,
+      "max": 34.3,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.2,
+      "nascer_sol": "07:06",
+      "por_sol": "18:59"
+    },
+    {
+      "data": "2026-08-26",
+      "min": 21.9,
+      "max": 34.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 8.2,
+      "nascer_sol": "07:06",
+      "por_sol": "18:59"
+    },
+    {
+      "data": "2026-08-27",
+      "min": 22.3,
+      "max": 35.2,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.2,
+      "nascer_sol": "07:05",
+      "por_sol": "18:59"
+    },
+    {
+      "data": "2026-08-28",
+      "min": 23.7,
+      "max": 35.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 8.2,
+      "nascer_sol": "07:05",
+      "por_sol": "18:59"
+    },
+    {
+      "data": "2026-08-29",
+      "min": 24.4,
+      "max": 35.6,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 8.2,
+      "nascer_sol": "07:04",
+      "por_sol": "18:59"
+    },
+    {
+      "data": "2026-08-30",
+      "min": 24.2,
+      "max": 36.1,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 6.5,
+      "nascer_sol": "07:04",
+      "por_sol": "18:59"
+    },
+    {
+      "data": "2026-08-31",
+      "min": 25.3,
+      "max": 35.6,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.5,
+      "nascer_sol": "07:03",
+      "por_sol": "18:59"
+    }
+  ],
   "reservatorio": {
     "nome": "Dardanelos",
     "nivel_pct": 8.7,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-08-25T07:22:21.991751+00:00"
   },
   "uv": {
-    "indice": 8.1,
+    "indice": 8.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 233,
+    "indice": 284,
     "categoria": "Muito Ruim",
     "principal_poluente": "PM2.5",
-    "pm25": 159.7,
-    "pm10": 160.2,
-    "no2": 39.6,
-    "o3": 0.0,
+    "pm25": 284.1,
+    "pm10": 287.8,
+    "no2": 33.8,
+    "o3": 20.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-22T08:24:25.722524+00:00"
+    "atualizado_em": "2026-08-25T08:37:29.654803+00:00"
   },
   "sol": {
-    "nascer": "07:08",
+    "nascer": "07:06",
     "por": "18:59",
     "duracao_h": 11.9,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 95.0,
-    "fase_pct": 29.9,
-    "dias_proxima_cheia": 6,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 58.0,
+    "fase_pct": 40.1,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
   "temperatura_atual": 22.6,
   "vento": {
-    "velocidade_kmh": 8.8,
-    "direcao_graus": 199,
-    "direcao": "SSO",
-    "max_kmh": 10.4,
-    "rajada_kmh": 22.7,
-    "direcao_dominante": "S",
+    "velocidade_kmh": 2.4,
+    "direcao_graus": 312,
+    "direcao": "NO",
+    "max_kmh": 9.1,
+    "rajada_kmh": 29.2,
+    "direcao_dominante": "NO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 90,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 20.8,
+  "umidade_pct": 99,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 22.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-17T08:59:06.400824+00:00"
   },
-  "_clima_em": "2026-08-22T08:24:25.722524+00:00"
+  "_clima_em": "2026-08-25T08:37:29.654803+00:00"
 }
