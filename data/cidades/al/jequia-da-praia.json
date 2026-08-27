@@ -4,33 +4,111 @@
   "slug": "jequia-da-praia",
   "latitude": -9.9215,
   "longitude": -36.0973,
-  "atualizado_em": "2026-08-27T15:57:22.446396+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-27T18:47:57.707387+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-27",
+      "min": 21.5,
+      "max": 27.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.1,
+      "uv": 7.5,
+      "nascer_sol": "05:29",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-08-28",
+      "min": 21.7,
+      "max": 27.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.0,
+      "uv": 7.6,
+      "nascer_sol": "05:28",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-08-29",
+      "min": 21.3,
+      "max": 27.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.6,
+      "uv": 8.4,
+      "nascer_sol": "05:28",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-08-30",
+      "min": 21.2,
+      "max": 27.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.6,
+      "uv": 8.0,
+      "nascer_sol": "05:27",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-08-31",
+      "min": 21.9,
+      "max": 26.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.0,
+      "uv": 8.0,
+      "nascer_sol": "05:27",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-09-01",
+      "min": 22.3,
+      "max": 27.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.7,
+      "uv": 8.1,
+      "nascer_sol": "05:26",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-09-02",
+      "min": 22.3,
+      "max": 27.2,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.2,
+      "nascer_sol": "05:26",
+      "por_sol": "17:21"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-08-27T17:42:56.743637+00:00"
   },
   "uv": {
-    "indice": 7.8,
+    "indice": 7.5,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 61,
+    "indice": 60,
     "categoria": "Moderada",
     "principal_poluente": "PM10",
-    "pm25": 12.9,
-    "pm10": 19.6,
-    "no2": 2.2,
-    "o3": 64.0,
+    "pm25": 10.4,
+    "pm10": 15.9,
+    "no2": 1.0,
+    "o3": 68.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-25T08:37:29.654803+00:00"
+    "atualizado_em": "2026-08-27T18:47:57.707387+00:00"
   },
   "sol": {
-    "nascer": "05:30",
+    "nascer": "05:29",
     "por": "17:22",
     "duracao_h": 11.9,
     "estacao": "Inverno",
@@ -38,25 +116,24 @@
   },
   "lua": {
     "nome": "Gibosa Crescente",
-    "iluminacao_pct": 58.0,
-    "fase_pct": 40.1,
-    "dias_proxima_cheia": 3,
+    "iluminacao_pct": 20.0,
+    "fase_pct": 46.9,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.3,
+  "temperatura_atual": 25.6,
   "vento": {
-    "velocidade_kmh": 10.8,
-    "direcao_graus": 126,
-    "direcao": "SE",
-    "max_kmh": 17.1,
-    "rajada_kmh": 34.9,
-    "direcao_dominante": "SE",
-    "fonte": "Open-Meteo",
-    "atualizado_em": "2026-08-25T08:57:50.503256+00:00"
+    "velocidade_kmh": 16.8,
+    "direcao_graus": 94,
+    "direcao": "E",
+    "max_kmh": 17.2,
+    "rajada_kmh": 35.3,
+    "direcao_dominante": "E",
+    "fonte": "Open-Meteo"
   },
-  "umidade_pct": 78,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 19.2,
+  "umidade_pct": 77,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 21.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -83,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-15T08:44:13.301264+00:00"
   },
-  "_clima_em": "2026-08-25T08:37:29.654803+00:00",
+  "_clima_em": "2026-08-27T18:47:57.707387+00:00",
   "ondas": {
     "altura_m": 0.98,
     "altura_max_m": 0.98,

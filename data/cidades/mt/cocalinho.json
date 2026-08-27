@@ -4,47 +4,84 @@
   "slug": "cocalinho",
   "latitude": -13.8698,
   "longitude": -51.1484,
-  "atualizado_em": "2026-08-27T16:11:45.566520+00:00",
+  "atualizado_em": "2026-08-27T18:47:57.707387+00:00",
   "previsao": [
     {
       "data": "2026-08-27",
-      "min": 19,
-      "max": 39,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 22.7,
+      "max": 38.4,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 8.0,
+      "nascer_sol": "06:32",
+      "por_sol": "18:19"
     },
     {
       "data": "2026-08-28",
-      "min": 22,
-      "max": 40,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 25.5,
+      "max": 38.8,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.7,
+      "nascer_sol": "06:31",
+      "por_sol": "18:19"
     },
     {
       "data": "2026-08-29",
-      "min": 23,
-      "max": 39,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 25.8,
+      "max": 40.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 8.1,
+      "nascer_sol": "06:31",
+      "por_sol": "18:19"
     },
     {
       "data": "2026-08-30",
-      "min": 21,
-      "max": 39,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 26.1,
+      "max": 40.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 8.1,
+      "nascer_sol": "06:30",
+      "por_sol": "18:19"
+    },
+    {
+      "data": "2026-08-31",
+      "min": 26.0,
+      "max": 40.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.2,
+      "nascer_sol": "06:29",
+      "por_sol": "18:19"
+    },
+    {
+      "data": "2026-09-01",
+      "min": 27.6,
+      "max": 40.7,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.3,
+      "nascer_sol": "06:29",
+      "por_sol": "18:20"
+    },
+    {
+      "data": "2026-09-02",
+      "min": 28.5,
+      "max": 39.2,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.4,
+      "nascer_sol": "06:28",
+      "por_sol": "18:20"
     }
   ],
   "queimadas": {
@@ -54,24 +91,24 @@
   },
   "uv": {
     "indice": 8.0,
-    "categoria": "Alto",
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 35,
-    "categoria": "Boa",
+    "indice": 78,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 5.4,
-    "pm10": 5.5,
-    "no2": 15.4,
-    "o3": 20.0,
+    "pm25": 34.0,
+    "pm10": 35.9,
+    "no2": 2.3,
+    "o3": 169.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-25T08:37:29.654803+00:00"
+    "atualizado_em": "2026-08-27T18:47:57.707387+00:00"
   },
   "sol": {
-    "nascer": "06:33",
+    "nascer": "06:32",
     "por": "18:19",
     "duracao_h": 11.8,
     "estacao": "Inverno",
@@ -79,24 +116,24 @@
   },
   "lua": {
     "nome": "Gibosa Crescente",
-    "iluminacao_pct": 58.0,
-    "fase_pct": 40.1,
-    "dias_proxima_cheia": 3,
+    "iluminacao_pct": 20.0,
+    "fase_pct": 46.9,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 24.2,
+  "temperatura_atual": 38.4,
   "vento": {
-    "velocidade_kmh": 6.1,
-    "direcao_graus": 182,
-    "direcao": "S",
-    "max_kmh": 8.6,
-    "rajada_kmh": 23.4,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 9.7,
+    "direcao_graus": 16,
+    "direcao": "NNE",
+    "max_kmh": 11.9,
+    "rajada_kmh": 24.1,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 43,
-  "pressao_hpa": 1011,
-  "ponto_orvalho_c": 10.7,
+  "umidade_pct": 20,
+  "pressao_hpa": 1007,
+  "ponto_orvalho_c": 11.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -123,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-17T08:59:06.400824+00:00"
   },
-  "_clima_em": "2026-08-25T08:37:29.654803+00:00"
+  "_clima_em": "2026-08-27T18:47:57.707387+00:00"
 }
