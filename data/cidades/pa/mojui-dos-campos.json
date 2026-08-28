@@ -4,8 +4,86 @@
   "slug": "mojui-dos-campos",
   "latitude": -3.0704,
   "longitude": -54.5752,
-  "atualizado_em": "2026-08-28T17:20:08.608249+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-28T19:51:54.914449+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-28",
+      "min": 24.3,
+      "max": 34.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 8.8,
+      "nascer_sol": "06:38",
+      "por_sol": "18:40"
+    },
+    {
+      "data": "2026-08-29",
+      "min": 24.5,
+      "max": 31.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 7.3,
+      "nascer_sol": "06:37",
+      "por_sol": "18:40"
+    },
+    {
+      "data": "2026-08-30",
+      "min": 24.0,
+      "max": 35.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 0.7,
+      "uv": 8.8,
+      "nascer_sol": "06:37",
+      "por_sol": "18:40"
+    },
+    {
+      "data": "2026-08-31",
+      "min": 25.0,
+      "max": 34.4,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.9,
+      "nascer_sol": "06:37",
+      "por_sol": "18:40"
+    },
+    {
+      "data": "2026-09-01",
+      "min": 25.2,
+      "max": 35.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "06:36",
+      "por_sol": "18:40"
+    },
+    {
+      "data": "2026-09-02",
+      "min": 24.8,
+      "max": 35.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.0,
+      "nascer_sol": "06:36",
+      "por_sol": "18:39"
+    },
+    {
+      "data": "2026-09-03",
+      "min": 24.1,
+      "max": 35.1,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "06:36",
+      "por_sol": "18:39"
+    }
+  ],
   "reservatorio": {
     "nome": "Curua-Una",
     "nivel_pct": 92.9,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-08-28T18:52:01.151803+00:00"
   },
   "uv": {
-    "indice": 8.7,
+    "indice": 8.8,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 32,
+    "indice": 49,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 6.2,
-    "pm10": 6.9,
-    "no2": 1.7,
-    "o3": 21.0,
+    "pm25": 7.2,
+    "pm10": 9.3,
+    "no2": 0.3,
+    "o3": 57.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-25T08:37:29.654803+00:00"
+    "atualizado_em": "2026-08-28T19:51:54.914449+00:00"
   },
   "sol": {
-    "nascer": "06:39",
-    "por": "18:41",
+    "nascer": "06:38",
+    "por": "18:40",
     "duracao_h": 12.0,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 58.0,
-    "fase_pct": 40.1,
-    "dias_proxima_cheia": 3,
+    "nome": "Cheia",
+    "iluminacao_pct": 2.0,
+    "fase_pct": 50.2,
+    "dias_proxima_cheia": 0,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 24.1,
+  "temperatura_atual": 32.8,
   "vento": {
-    "velocidade_kmh": 5.1,
-    "direcao_graus": 72,
+    "velocidade_kmh": 8.7,
+    "direcao_graus": 73,
     "direcao": "ENE",
-    "max_kmh": 8.4,
-    "rajada_kmh": 26.6,
+    "max_kmh": 14.5,
+    "rajada_kmh": 38.2,
     "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 92,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 22.7,
+  "umidade_pct": 52,
+  "pressao_hpa": 1008,
+  "ponto_orvalho_c": 21.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-19T08:53:59.875928+00:00"
   },
-  "_clima_em": "2026-08-25T08:37:29.654803+00:00"
+  "_clima_em": "2026-08-28T19:51:54.914449+00:00"
 }

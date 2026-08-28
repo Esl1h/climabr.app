@@ -4,47 +4,84 @@
   "slug": "pedra-bonita",
   "latitude": -20.4766,
   "longitude": -42.3753,
-  "atualizado_em": "2026-08-28T17:17:01.498508+00:00",
+  "atualizado_em": "2026-08-28T19:51:54.914449+00:00",
   "previsao": [
     {
+      "data": "2026-08-28",
+      "min": 14.7,
+      "max": 23.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 7.5,
+      "nascer_sol": "06:01",
+      "por_sol": "17:39"
+    },
+    {
       "data": "2026-08-29",
-      "min": 16,
-      "max": 26,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 15.6,
+      "max": 27.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.7,
+      "nascer_sol": "06:00",
+      "por_sol": "17:40"
     },
     {
       "data": "2026-08-30",
-      "min": 13,
-      "max": 25,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 16.6,
+      "max": 27.3,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.7,
+      "nascer_sol": "05:59",
+      "por_sol": "17:40"
     },
     {
       "data": "2026-08-31",
-      "min": 14,
-      "max": 26,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 16.5,
+      "max": 27.3,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.8,
+      "nascer_sol": "05:58",
+      "por_sol": "17:40"
     },
     {
       "data": "2026-09-01",
-      "min": 12,
-      "max": 27,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 15.5,
+      "max": 29.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.8,
+      "nascer_sol": "05:58",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-09-02",
+      "min": 15.9,
+      "max": 23.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 7.8,
+      "uv": 1.2,
+      "nascer_sol": "05:57",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-09-03",
+      "min": 14.5,
+      "max": 23.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.5,
+      "nascer_sol": "05:56",
+      "por_sol": "17:41"
     }
   ],
   "reservatorio": {
@@ -66,50 +103,50 @@
     "atualizado_em": "2026-08-28T18:52:01.151803+00:00"
   },
   "uv": {
-    "indice": 6.5,
+    "indice": 7.5,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 29,
+    "indice": 42,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.2,
-    "pm10": 4.9,
-    "no2": 5.6,
-    "o3": 27.0,
+    "pm25": 6.0,
+    "pm10": 6.3,
+    "no2": 3.2,
+    "o3": 94.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-26T08:38:24.688448+00:00"
+    "atualizado_em": "2026-08-28T19:51:54.914449+00:00"
   },
   "sol": {
-    "nascer": "06:03",
+    "nascer": "06:01",
     "por": "17:39",
     "duracao_h": 11.6,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 40.0,
-    "fase_pct": 43.5,
-    "dias_proxima_cheia": 2,
+    "nome": "Cheia",
+    "iluminacao_pct": 2.0,
+    "fase_pct": 50.2,
+    "dias_proxima_cheia": 0,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 16.5,
+  "temperatura_atual": 22.1,
   "vento": {
-    "velocidade_kmh": 3.5,
-    "direcao_graus": 24,
+    "velocidade_kmh": 2.8,
+    "direcao_graus": 15,
     "direcao": "NNE",
-    "max_kmh": 15.2,
-    "rajada_kmh": 31.3,
-    "direcao_dominante": "SE",
+    "max_kmh": 12.3,
+    "rajada_kmh": 26.6,
+    "direcao_dominante": "N",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 94,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 15.5,
+  "umidade_pct": 70,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 16.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -136,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-18T08:53:44.572924+00:00"
   },
-  "_clima_em": "2026-08-26T08:38:24.688448+00:00"
+  "_clima_em": "2026-08-28T19:51:54.914449+00:00"
 }

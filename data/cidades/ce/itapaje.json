@@ -4,58 +4,136 @@
   "slug": "itapaje",
   "latitude": -3.7328,
   "longitude": -39.575,
-  "atualizado_em": "2026-08-28T17:04:28.337115+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-28T19:51:54.914449+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-28",
+      "min": 22.6,
+      "max": 32.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 6.3,
+      "nascer_sol": "05:38",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-08-29",
+      "min": 22.5,
+      "max": 32.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 8.8,
+      "nascer_sol": "05:38",
+      "por_sol": "17:40"
+    },
+    {
+      "data": "2026-08-30",
+      "min": 22.0,
+      "max": 34.2,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.9,
+      "nascer_sol": "05:37",
+      "por_sol": "17:39"
+    },
+    {
+      "data": "2026-08-31",
+      "min": 22.9,
+      "max": 32.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.1,
+      "uv": 8.9,
+      "nascer_sol": "05:37",
+      "por_sol": "17:39"
+    },
+    {
+      "data": "2026-09-01",
+      "min": 21.7,
+      "max": 33.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.7,
+      "nascer_sol": "05:36",
+      "por_sol": "17:39"
+    },
+    {
+      "data": "2026-09-02",
+      "min": 22.0,
+      "max": 34.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.6,
+      "nascer_sol": "05:36",
+      "por_sol": "17:39"
+    },
+    {
+      "data": "2026-09-03",
+      "min": 22.4,
+      "max": 33.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 8.7,
+      "nascer_sol": "05:36",
+      "por_sol": "17:38"
+    }
+  ],
   "queimadas": {
     "focos_100km": 27,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-08-28T18:52:01.151803+00:00"
   },
   "uv": {
-    "indice": 8.8,
-    "categoria": "Muito Alto",
+    "indice": 6.3,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 51,
+    "indice": 52,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 8.9,
-    "pm10": 12.5,
-    "no2": 3.9,
-    "o3": 59.0,
+    "pm25": 12.7,
+    "pm10": 17.5,
+    "no2": 2.0,
+    "o3": 85.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-26T08:38:24.688448+00:00"
+    "atualizado_em": "2026-08-28T19:51:54.914449+00:00"
   },
   "sol": {
-    "nascer": "05:39",
+    "nascer": "05:38",
     "por": "17:40",
     "duracao_h": 12.0,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 40.0,
-    "fase_pct": 43.5,
-    "dias_proxima_cheia": 2,
+    "nome": "Cheia",
+    "iluminacao_pct": 2.0,
+    "fase_pct": 50.2,
+    "dias_proxima_cheia": 0,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.6,
+  "temperatura_atual": 28.6,
   "vento": {
-    "velocidade_kmh": 12.6,
-    "direcao_graus": 87,
-    "direcao": "E",
-    "max_kmh": 23.2,
-    "rajada_kmh": 48.2,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 19.0,
+    "direcao_graus": 70,
+    "direcao": "ENE",
+    "max_kmh": 21.6,
+    "rajada_kmh": 47.2,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 82,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 19.3,
+  "umidade_pct": 55,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 18.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-16T08:46:06.223270+00:00"
   },
-  "_clima_em": "2026-08-26T08:38:24.688448+00:00",
+  "_clima_em": "2026-08-28T19:51:54.914449+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 1287,
