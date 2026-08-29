@@ -4,47 +4,84 @@
   "slug": "taquarussu",
   "latitude": -22.6678,
   "longitude": -53.4311,
-  "atualizado_em": "2026-08-29T11:36:37.618053+00:00",
+  "atualizado_em": "2026-08-29T13:35:13.678061+00:00",
   "previsao": [
     {
       "data": "2026-08-29",
-      "min": 21,
-      "max": 36,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 24.1,
+      "max": 34.9,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 1.2,
+      "uv": 7.1,
+      "nascer_sol": "06:46",
+      "por_sol": "18:22"
     },
     {
       "data": "2026-08-30",
-      "min": 21,
-      "max": 36,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.5,
+      "max": 35.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 6.8,
+      "nascer_sol": "06:45",
+      "por_sol": "18:23"
     },
     {
       "data": "2026-08-31",
-      "min": 24,
-      "max": 34,
-      "condicao": "Chuvas Isoladas",
-      "condicao_codigo": "ci",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.1,
+      "max": 35.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.7,
+      "uv": 7.2,
+      "nascer_sol": "06:44",
+      "por_sol": "18:23"
     },
     {
       "data": "2026-09-01",
-      "min": 20,
-      "max": 22,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
+      "min": 18.5,
+      "max": 24.8,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 24.2,
+      "uv": 5.2,
+      "nascer_sol": "06:43",
+      "por_sol": "18:23"
+    },
+    {
+      "data": "2026-09-02",
+      "min": 15.3,
+      "max": 26.6,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 7.3,
+      "nascer_sol": "06:42",
+      "por_sol": "18:23"
+    },
+    {
+      "data": "2026-09-03",
+      "min": 17.2,
+      "max": 27.4,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 4.3,
+      "nascer_sol": "06:41",
+      "por_sol": "18:24"
+    },
+    {
+      "data": "2026-09-04",
+      "min": 19.6,
+      "max": 27.5,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 23.4,
+      "uv": 6.9,
+      "nascer_sol": "06:40",
+      "por_sol": "18:24"
     }
   ],
   "reservatorio": {
@@ -66,50 +103,50 @@
     "atualizado_em": "2026-08-29T12:45:37.225656+00:00"
   },
   "uv": {
-    "indice": 5.5,
-    "categoria": "Moderado",
+    "indice": 7.1,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 40,
-    "categoria": "Boa",
+    "indice": 53,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 6.4,
-    "pm10": 6.6,
-    "no2": 5.3,
-    "o3": 54.0,
+    "pm25": 13.7,
+    "pm10": 14.2,
+    "no2": 1.9,
+    "o3": 80.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-26T08:38:24.688448+00:00"
+    "atualizado_em": "2026-08-29T13:35:13.678061+00:00"
   },
   "sol": {
-    "nascer": "06:49",
-    "por": "18:21",
-    "duracao_h": 11.5,
+    "nascer": "06:46",
+    "por": "18:22",
+    "duracao_h": 11.6,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 40.0,
-    "fase_pct": 43.5,
-    "dias_proxima_cheia": 2,
+    "nome": "Cheia",
+    "iluminacao_pct": 23.0,
+    "fase_pct": 53.6,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 17.6,
+  "temperatura_atual": 32.0,
   "vento": {
-    "velocidade_kmh": 5.4,
-    "direcao_graus": 86,
-    "direcao": "E",
-    "max_kmh": 15.6,
-    "rajada_kmh": 30.2,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 16.7,
+    "direcao_graus": 323,
+    "direcao": "NO",
+    "max_kmh": 26.1,
+    "rajada_kmh": 54.4,
+    "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 91,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 16.1,
+  "umidade_pct": 51,
+  "pressao_hpa": 1010,
+  "ponto_orvalho_c": 20.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -136,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-17T08:59:06.400824+00:00"
   },
-  "_clima_em": "2026-08-26T08:38:24.688448+00:00"
+  "_clima_em": "2026-08-29T13:35:13.678061+00:00"
 }

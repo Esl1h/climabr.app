@@ -4,58 +4,136 @@
   "slug": "tome-acu",
   "latitude": -2.6361,
   "longitude": -48.2676,
-  "atualizado_em": "2026-08-29T11:45:12.839526+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-08-29T13:35:13.678061+00:00",
+  "previsao": [
+    {
+      "data": "2026-08-29",
+      "min": 22.7,
+      "max": 33.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 8.6,
+      "nascer_sol": "06:12",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-08-30",
+      "min": 22.9,
+      "max": 33.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "06:12",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-08-31",
+      "min": 23.1,
+      "max": 34.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.8,
+      "nascer_sol": "06:11",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-09-01",
+      "min": 23.1,
+      "max": 33.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.8,
+      "nascer_sol": "06:11",
+      "por_sol": "18:14"
+    },
+    {
+      "data": "2026-09-02",
+      "min": 21.9,
+      "max": 33.5,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "06:10",
+      "por_sol": "18:14"
+    },
+    {
+      "data": "2026-09-03",
+      "min": 22.7,
+      "max": 34.5,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.9,
+      "nascer_sol": "06:10",
+      "por_sol": "18:14"
+    },
+    {
+      "data": "2026-09-04",
+      "min": 24.4,
+      "max": 33.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 8.6,
+      "nascer_sol": "06:10",
+      "por_sol": "18:14"
+    }
+  ],
   "queimadas": {
     "focos_100km": 67,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-08-29T12:45:37.225656+00:00"
   },
   "uv": {
-    "indice": 8.7,
+    "indice": 8.6,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 51,
+    "indice": 57,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 8.5,
-    "pm10": 11.1,
+    "pm25": 9.2,
+    "pm10": 11.9,
     "no2": 0.5,
-    "o3": 70.0,
+    "o3": 60.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-27T18:47:57.707387+00:00"
+    "atualizado_em": "2026-08-29T13:35:13.678061+00:00"
   },
   "sol": {
-    "nascer": "06:13",
-    "por": "18:16",
+    "nascer": "06:12",
+    "por": "18:15",
     "duracao_h": 12.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 20.0,
-    "fase_pct": 46.9,
+    "nome": "Cheia",
+    "iluminacao_pct": 23.0,
+    "fase_pct": 53.6,
     "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 32.4,
+  "temperatura_atual": 30.0,
   "vento": {
-    "velocidade_kmh": 8.6,
-    "direcao_graus": 75,
+    "velocidade_kmh": 9.6,
+    "direcao_graus": 70,
     "direcao": "ENE",
-    "max_kmh": 16.4,
-    "rajada_kmh": 35.6,
-    "direcao_dominante": "ENE",
+    "max_kmh": 15.5,
+    "rajada_kmh": 34.9,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 49,
-  "pressao_hpa": 1009,
-  "ponto_orvalho_c": 20.4,
+  "umidade_pct": 60,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 21.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-14T09:25:16.693341+00:00"
   },
-  "_clima_em": "2026-08-27T18:47:57.707387+00:00"
+  "_clima_em": "2026-08-29T13:35:13.678061+00:00"
 }
