@@ -4,47 +4,84 @@
   "slug": "terra-santa",
   "latitude": -1.9515,
   "longitude": -56.4584,
-  "atualizado_em": "2026-08-31T11:33:58.986761+00:00",
+  "atualizado_em": "2026-08-31T15:48:27.457557+00:00",
   "previsao": [
     {
       "data": "2026-08-31",
-      "min": 24,
-      "max": 35,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 25.4,
+      "max": 35.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 8.8,
+      "nascer_sol": "06:44",
+      "por_sol": "18:48"
     },
     {
       "data": "2026-09-01",
-      "min": 24,
-      "max": 36,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 25.6,
+      "max": 35.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 8.8,
+      "nascer_sol": "06:43",
+      "por_sol": "18:48"
     },
     {
       "data": "2026-09-02",
-      "min": 24,
-      "max": 36,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 25.9,
+      "max": 35.7,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 8.8,
+      "nascer_sol": "06:43",
+      "por_sol": "18:47"
     },
     {
       "data": "2026-09-03",
-      "min": 23,
-      "max": 37,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 25.6,
+      "max": 36.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 8.8,
+      "nascer_sol": "06:42",
+      "por_sol": "18:47"
+    },
+    {
+      "data": "2026-09-04",
+      "min": 25.4,
+      "max": 36.4,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.9,
+      "nascer_sol": "06:42",
+      "por_sol": "18:47"
+    },
+    {
+      "data": "2026-09-05",
+      "min": 26.9,
+      "max": 35.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "06:42",
+      "por_sol": "18:47"
+    },
+    {
+      "data": "2026-09-06",
+      "min": 27.3,
+      "max": 35.6,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "06:41",
+      "por_sol": "18:46"
     }
   ],
   "queimadas": {
@@ -63,12 +100,12 @@
     "indice": 44,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 10.0,
-    "pm10": 13.1,
-    "no2": 0.7,
-    "o3": 52.0,
+    "pm25": 7.3,
+    "pm10": 8.6,
+    "no2": 0.3,
+    "o3": 73.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-29T13:35:13.678061+00:00"
+    "atualizado_em": "2026-08-31T15:48:27.457557+00:00"
   },
   "sol": {
     "nascer": "06:44",
@@ -79,24 +116,24 @@
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 23.0,
-    "fase_pct": 53.6,
-    "dias_proxima_cheia": 1,
+    "iluminacao_pct": 61.0,
+    "fase_pct": 60.4,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 32.0,
+  "temperatura_atual": 35.2,
   "vento": {
-    "velocidade_kmh": 13.7,
-    "direcao_graus": 80,
+    "velocidade_kmh": 12.6,
+    "direcao_graus": 94,
     "direcao": "E",
-    "max_kmh": 15.8,
-    "rajada_kmh": 41.0,
+    "max_kmh": 13.0,
+    "rajada_kmh": 34.9,
     "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 49,
-  "pressao_hpa": 1013,
-  "ponto_orvalho_c": 20.0,
+  "umidade_pct": 39,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 19.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -123,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-19T08:53:59.875928+00:00"
   },
-  "_clima_em": "2026-08-29T13:35:13.678061+00:00"
+  "_clima_em": "2026-08-31T15:48:27.457557+00:00"
 }
