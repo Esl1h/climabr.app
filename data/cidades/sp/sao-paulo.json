@@ -4,7 +4,7 @@
   "slug": "sao-paulo",
   "latitude": -23.6501,
   "longitude": -46.6481,
-  "atualizado_em": "2026-09-01T13:41:50.621680+00:00",
+  "atualizado_em": "2026-09-01T22:50:25.915378+00:00",
   "previsao": [
     {
       "data": "2026-08-29",
@@ -173,19 +173,41 @@
   "ponto_orvalho_c": 15.5,
   "alagamentos": {
     "data": "2026-09-01",
-    "pontos_total": 9,
-    "ativos": 3,
+    "pontos_total": 11,
+    "ativos": 1,
     "ativos_intransitaveis": 1,
-    "intransitaveis_total": 2,
+    "intransitaveis_total": 3,
     "pontos": [
+      {
+        "zona": "Zona Norte",
+        "subprefeitura": "Vila Maria/ Vila Guilherme",
+        "local": "AV MORVAN DIAS DE FIGUEIREDO",
+        "referencia": "ALTURA DO N. 9223",
+        "sentido": "A SENNA/CASTELO B",
+        "inicio": "08:24",
+        "fim": "08:50",
+        "ativo": false,
+        "transitavel": false
+      },
       {
         "zona": "Zona Norte",
         "subprefeitura": "Pirituba/Jaraguá",
         "local": "AV RAIMUNDO PEREIRA DE MAGALHAES",
         "referencia": "ALTURA DO N. 12817",
-        "sentido": "CENTRO/BAIRRO",
+        "sentido": "AMBOS",
         "inicio": "07:52",
-        "fim": "07:56",
+        "fim": "09:30",
+        "ativo": false,
+        "transitavel": true
+      },
+      {
+        "zona": "Zona Norte",
+        "subprefeitura": "Santana",
+        "local": "R ALFREDO PUJOL",
+        "referencia": "R ALUISIO AZEVEDO",
+        "sentido": "CENTRO/BAIRRO",
+        "inicio": "09:15",
+        "fim": "09:38",
         "ativo": false,
         "transitavel": true
       },
@@ -218,8 +240,8 @@
         "referencia": "ALTURA DO NUMERO 522",
         "sentido": "AEROPORTO/SANTANA",
         "inicio": "05:02",
-        "fim": null,
-        "ativo": true,
+        "fim": "08:49",
+        "ativo": false,
         "transitavel": true
       },
       {
@@ -229,8 +251,8 @@
         "referencia": "ALTURA DO NUMERO 1",
         "sentido": "CASTELO/INTERLAGOS",
         "inicio": "05:54",
-        "fim": null,
-        "ativo": true,
+        "fim": "09:59",
+        "ativo": false,
         "transitavel": true
       },
       {
@@ -280,6 +302,6 @@
     ],
     "fonte": "CGE / Prefeitura de São Paulo",
     "url": "https://www.cgesp.org/v3/alagamentos.jsp",
-    "atualizado_em": "2026-09-01T10:41:49.281307-03:00"
+    "atualizado_em": "2026-09-01T19:50:24.320237-03:00"
   }
 }
