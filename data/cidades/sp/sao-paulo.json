@@ -4,7 +4,7 @@
   "slug": "sao-paulo",
   "latitude": -23.6501,
   "longitude": -46.6481,
-  "atualizado_em": "2026-08-31T16:23:10.740487+00:00",
+  "atualizado_em": "2026-09-01T00:06:01.477637+00:00",
   "previsao": [
     {
       "data": "2026-08-29",
@@ -173,13 +173,47 @@
   "ponto_orvalho_c": 15.5,
   "alagamentos": {
     "data": "2026-08-31",
-    "pontos_total": 0,
+    "pontos_total": 3,
     "ativos": 0,
     "ativos_intransitaveis": 0,
     "intransitaveis_total": 0,
-    "pontos": [],
+    "pontos": [
+      {
+        "zona": "Centro",
+        "subprefeitura": "Sé",
+        "local": "R MARTINS FONTES",
+        "referencia": "PC DESEM MARIO PIRES",
+        "sentido": "CENTRO/BAIRRO",
+        "inicio": "01:10",
+        "fim": "02:32",
+        "ativo": false,
+        "transitavel": true
+      },
+      {
+        "zona": "Centro",
+        "subprefeitura": "Sé",
+        "local": "VEL PRES JOAO GOULART",
+        "referencia": "AV PACAEMBU",
+        "sentido": "LAPA/PENHA",
+        "inicio": "06:28",
+        "fim": "12:34",
+        "ativo": false,
+        "transitavel": true
+      },
+      {
+        "zona": "Zona Sudeste",
+        "subprefeitura": "Vila Mariana",
+        "local": "AV IBIRAPUERA",
+        "referencia": "AC A AV IBIRAPUERA",
+        "sentido": "CENTRO/BAIRRO",
+        "inicio": "07:11",
+        "fim": "16:39",
+        "ativo": false,
+        "transitavel": true
+      }
+    ],
     "fonte": "CGE / Prefeitura de São Paulo",
     "url": "https://www.cgesp.org/v3/alagamentos.jsp",
-    "atualizado_em": "2026-08-31T13:23:09.651247-03:00"
+    "atualizado_em": "2026-08-31T21:05:59.982460-03:00"
   }
 }
