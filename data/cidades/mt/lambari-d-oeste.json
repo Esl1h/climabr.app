@@ -4,8 +4,86 @@
   "slug": "lambari-d-oeste",
   "latitude": -15.3771,
   "longitude": -57.7792,
-  "atualizado_em": "2026-09-03T09:27:36.552306+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-03T12:33:38.218727+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-03",
+      "min": 22.3,
+      "max": 35.5,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 8.1,
+      "nascer_sol": "06:55",
+      "por_sol": "18:45"
+    },
+    {
+      "data": "2026-09-04",
+      "min": 23.8,
+      "max": 36.2,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.1,
+      "nascer_sol": "06:54",
+      "por_sol": "18:45"
+    },
+    {
+      "data": "2026-09-05",
+      "min": 22.6,
+      "max": 34.9,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.4,
+      "uv": 8.2,
+      "nascer_sol": "06:53",
+      "por_sol": "18:45"
+    },
+    {
+      "data": "2026-09-06",
+      "min": 19.9,
+      "max": 23.9,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 23.3,
+      "uv": 8.2,
+      "nascer_sol": "06:52",
+      "por_sol": "18:45"
+    },
+    {
+      "data": "2026-09-07",
+      "min": 19.9,
+      "max": 26.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.2,
+      "nascer_sol": "06:51",
+      "por_sol": "18:45"
+    },
+    {
+      "data": "2026-09-08",
+      "min": 19.1,
+      "max": 32.3,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.3,
+      "nascer_sol": "06:51",
+      "por_sol": "18:46"
+    },
+    {
+      "data": "2026-09-09",
+      "min": 23.4,
+      "max": 34.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.4,
+      "uv": 7.4,
+      "nascer_sol": "06:50",
+      "por_sol": "18:46"
+    }
+  ],
   "reservatorio": {
     "nome": "Jauru",
     "nivel_pct": 0.0,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-09-03T11:28:04.826580+00:00"
   },
   "uv": {
-    "indice": 7.9,
-    "categoria": "Alto",
+    "indice": 8.1,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 69,
+    "indice": 51,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 22.1,
-    "pm10": 23.1,
-    "no2": 4.7,
-    "o3": 93.0,
+    "pm25": 12.7,
+    "pm10": 13.2,
+    "no2": 5.6,
+    "o3": 92.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-08-30T13:29:56.854668+00:00"
+    "atualizado_em": "2026-09-03T12:33:38.218727+00:00"
   },
   "sol": {
-    "nascer": "06:57",
+    "nascer": "06:55",
     "por": "18:45",
     "duracao_h": 11.8,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 43.0,
-    "fase_pct": 57.0,
-    "dias_proxima_cheia": 2,
+    "nome": "Gibosa Minguante",
+    "iluminacao_pct": 96.0,
+    "fase_pct": 70.6,
+    "dias_proxima_cheia": 6,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 31.8,
+  "temperatura_atual": 28.6,
   "vento": {
-    "velocidade_kmh": 0.5,
-    "direcao_graus": 315,
-    "direcao": "NO",
-    "max_kmh": 11.5,
-    "rajada_kmh": 25.9,
-    "direcao_dominante": "NNO",
+    "velocidade_kmh": 5.4,
+    "direcao_graus": 358,
+    "direcao": "N",
+    "max_kmh": 7.6,
+    "rajada_kmh": 24.1,
+    "direcao_dominante": "N",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 53,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 21.2,
+  "umidade_pct": 65,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 21.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-17T08:59:06.400824+00:00"
   },
-  "_clima_em": "2026-08-30T13:29:56.854668+00:00"
+  "_clima_em": "2026-09-03T12:33:38.218727+00:00"
 }
