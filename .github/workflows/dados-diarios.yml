@@ -31,6 +31,7 @@ jobs:
 
       - name: COPASA — reservatórios MG
         run: python3 scripts/scrape-copasa.py
+        continue-on-error: true
 
       # Etapa de coleta do scrape-ondas.py. A etapa "identificar" já rodou uma
       # vez e deixou data/municipios-costeiros.json com 219 municípios, mas a
