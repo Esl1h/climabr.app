@@ -4,7 +4,7 @@
   "slug": "sao-paulo",
   "latitude": -23.6501,
   "longitude": -46.6481,
-  "atualizado_em": "2026-09-14T15:15:11.940003+00:00",
+  "atualizado_em": "2026-09-14T23:30:52.017657+00:00",
   "previsao": [
     {
       "data": "2026-09-03",
@@ -173,13 +173,80 @@
   "ponto_orvalho_c": 12.9,
   "alagamentos": {
     "data": "2026-09-14",
-    "pontos_total": 0,
-    "ativos": 0,
+    "pontos_total": 6,
+    "ativos": 2,
     "ativos_intransitaveis": 0,
     "intransitaveis_total": 0,
-    "pontos": [],
+    "pontos": [
+      {
+        "zona": "Zona Norte",
+        "subprefeitura": "Pirituba/Jaraguá",
+        "local": "AV CARD MOTTA",
+        "referencia": "AV OTAVIANO ALVES DE LIMA",
+        "sentido": "CENTRO/BAIRRO",
+        "inicio": "14:31",
+        "fim": null,
+        "ativo": true,
+        "transitavel": true
+      },
+      {
+        "zona": "Zona Oeste",
+        "subprefeitura": "Pinheiros",
+        "local": "AV DOS BANDEIRANTES",
+        "referencia": "AL VICENTE PINZON",
+        "sentido": "IMIGRANTES/MARGINAL",
+        "inicio": "05:40",
+        "fim": "06:17",
+        "ativo": false,
+        "transitavel": true
+      },
+      {
+        "zona": "Zona Leste",
+        "subprefeitura": "Itaquera",
+        "local": "AV JACU PESSEGO N TRABALHADORES",
+        "referencia": "PA PASCOAL GIANNETTI",
+        "sentido": "MAUA/A SENNA",
+        "inicio": "05:23",
+        "fim": null,
+        "ativo": true,
+        "transitavel": true
+      },
+      {
+        "zona": "Zona Leste",
+        "subprefeitura": "Itaquera",
+        "local": "AV JACU PESSEGO N TRABALHADORES",
+        "referencia": "R NILCE",
+        "sentido": "A SENNA/MAUA",
+        "inicio": "07:26",
+        "fim": "07:54",
+        "ativo": false,
+        "transitavel": true
+      },
+      {
+        "zona": "Zona Leste",
+        "subprefeitura": "Mooca",
+        "local": "R PORTO SEGURO",
+        "referencia": "142",
+        "sentido": "CENTRO/BAIRRO",
+        "inicio": "08:16",
+        "fim": "08:22",
+        "ativo": false,
+        "transitavel": true
+      },
+      {
+        "zona": "Zona Leste",
+        "subprefeitura": "Mooca",
+        "local": "AV CRUZEIRO DO SUL",
+        "referencia": "400",
+        "sentido": "IPIRANGA/SANTANA",
+        "inicio": "18:24",
+        "fim": "18:32",
+        "ativo": false,
+        "transitavel": true
+      }
+    ],
     "fonte": "CGE / Prefeitura de São Paulo",
     "url": "https://www.cgesp.org/v3/alagamentos.jsp",
-    "atualizado_em": "2026-09-14T12:15:11.059259-03:00"
+    "atualizado_em": "2026-09-14T20:30:50.674526-03:00"
   }
 }
