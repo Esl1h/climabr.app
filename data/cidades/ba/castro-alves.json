@@ -4,8 +4,86 @@
   "slug": "castro-alves",
   "latitude": -12.7316,
   "longitude": -39.364,
-  "atualizado_em": "2026-09-15T10:02:13.283405+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-15T13:06:32.817680+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-15",
+      "min": 18.7,
+      "max": 31.2,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "05:31",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-09-16",
+      "min": 18.6,
+      "max": 31.3,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "05:31",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-09-17",
+      "min": 20.1,
+      "max": 30.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "05:30",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-09-18",
+      "min": 20.9,
+      "max": 29.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.1,
+      "uv": 8.1,
+      "nascer_sol": "05:29",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-09-19",
+      "min": 20.7,
+      "max": 26.3,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 9.0,
+      "uv": 8.2,
+      "nascer_sol": "05:29",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-09-20",
+      "min": 20.0,
+      "max": 27.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.0,
+      "uv": 7.3,
+      "nascer_sol": "05:28",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-09-21",
+      "min": 20.6,
+      "max": 30.3,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 7.2,
+      "nascer_sol": "05:27",
+      "por_sol": "17:33"
+    }
+  ],
   "reservatorio": {
     "nome": "Pedra Do Cavalo",
     "nivel_pct": 92.5,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-09-15T11:55:21.491815+00:00"
   },
   "uv": {
-    "indice": 6.0,
-    "categoria": "Alto",
+    "indice": 8.8,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 32,
+    "indice": 40,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 3.0,
-    "pm10": 3.9,
-    "no2": 2.0,
-    "o3": 56.0,
+    "pm25": 8.1,
+    "pm10": 12.0,
+    "no2": 0.5,
+    "o3": 76.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-03T12:33:38.218727+00:00"
+    "atualizado_em": "2026-09-15T13:06:32.817680+00:00"
   },
   "sol": {
-    "nascer": "05:40",
+    "nascer": "05:31",
     "por": "17:33",
-    "duracao_h": 11.9,
+    "duracao_h": 12.0,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 96.0,
-    "fase_pct": 70.6,
-    "dias_proxima_cheia": 6,
+    "nome": "Nova",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 11.2,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 27.6,
+  "temperatura_atual": 28.6,
   "vento": {
-    "velocidade_kmh": 14.3,
-    "direcao_graus": 130,
-    "direcao": "SE",
-    "max_kmh": 24.9,
-    "rajada_kmh": 47.5,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 11.2,
+    "direcao_graus": 91,
+    "direcao": "E",
+    "max_kmh": 18.1,
+    "rajada_kmh": 33.5,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 71,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 22.0,
+  "umidade_pct": 45,
+  "pressao_hpa": 1019,
+  "ponto_orvalho_c": 15.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-23T08:46:28.987478+00:00"
   },
-  "_clima_em": "2026-09-03T12:33:38.218727+00:00"
+  "_clima_em": "2026-09-15T13:06:32.817680+00:00"
 }

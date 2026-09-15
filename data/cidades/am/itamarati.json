@@ -4,58 +4,136 @@
   "slug": "itamarati",
   "latitude": -6.6828,
   "longitude": -68.1128,
-  "atualizado_em": "2026-09-15T09:52:29.294927+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-15T13:06:32.817680+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-15",
+      "min": 21.2,
+      "max": 32.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 8.9,
+      "nascer_sol": "07:25",
+      "por_sol": "19:29"
+    },
+    {
+      "data": "2026-09-16",
+      "min": 22.7,
+      "max": 33.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.9,
+      "nascer_sol": "07:25",
+      "por_sol": "19:29"
+    },
+    {
+      "data": "2026-09-17",
+      "min": 22.9,
+      "max": 33.3,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.6,
+      "uv": 9.0,
+      "nascer_sol": "07:24",
+      "por_sol": "19:29"
+    },
+    {
+      "data": "2026-09-18",
+      "min": 22.4,
+      "max": 33.7,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 1.6,
+      "uv": 9.0,
+      "nascer_sol": "07:24",
+      "por_sol": "19:29"
+    },
+    {
+      "data": "2026-09-19",
+      "min": 23.5,
+      "max": 34.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.1,
+      "nascer_sol": "07:23",
+      "por_sol": "19:28"
+    },
+    {
+      "data": "2026-09-20",
+      "min": 23.2,
+      "max": 33.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 9.8,
+      "nascer_sol": "07:23",
+      "por_sol": "19:28"
+    },
+    {
+      "data": "2026-09-21",
+      "min": 24.0,
+      "max": 34.0,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 7.8,
+      "nascer_sol": "07:22",
+      "por_sol": "19:28"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-15T11:55:21.491815+00:00"
   },
   "uv": {
-    "indice": 8.7,
+    "indice": 8.9,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 56,
+    "indice": 58,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 12.7,
-    "pm10": 13.2,
-    "no2": 1.1,
-    "o3": 14.0,
+    "pm25": 20.8,
+    "pm10": 21.3,
+    "no2": 0.7,
+    "o3": 47.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-02T12:30:31.961796+00:00"
+    "atualizado_em": "2026-09-15T13:06:32.817680+00:00"
   },
   "sol": {
-    "nascer": "07:32",
-    "por": "19:31",
-    "duracao_h": 12.0,
+    "nascer": "07:25",
+    "por": "19:29",
+    "duracao_h": 12.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 88.0,
-    "fase_pct": 67.2,
-    "dias_proxima_cheia": 5,
+    "nome": "Nova",
+    "iluminacao_pct": 65.0,
+    "fase_pct": 11.2,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 27.6,
+  "temperatura_atual": 26.4,
   "vento": {
-    "velocidade_kmh": 3.8,
-    "direcao_graus": 131,
-    "direcao": "SE",
-    "max_kmh": 9.8,
+    "velocidade_kmh": 6.5,
+    "direcao_graus": 156,
+    "direcao": "SSE",
+    "max_kmh": 9.0,
     "rajada_kmh": 24.8,
-    "direcao_dominante": "SE",
+    "direcao_dominante": "SSE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 80,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 23.9,
+  "umidade_pct": 70,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 20.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-16T08:46:06.223270+00:00"
   },
-  "_clima_em": "2026-09-02T12:30:31.961796+00:00"
+  "_clima_em": "2026-09-15T13:06:32.817680+00:00"
 }
