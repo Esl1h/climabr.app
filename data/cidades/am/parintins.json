@@ -4,58 +4,136 @@
   "slug": "parintins",
   "latitude": -2.6881,
   "longitude": -56.8546,
-  "atualizado_em": "2026-09-16T09:47:01.061008+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-16T13:04:57.232020+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-16",
+      "min": 27.3,
+      "max": 34.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 2.5,
+      "uv": 8.9,
+      "nascer_sol": "06:39",
+      "por_sol": "18:44"
+    },
+    {
+      "data": "2026-09-17",
+      "min": 27.7,
+      "max": 35.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "06:38",
+      "por_sol": "18:44"
+    },
+    {
+      "data": "2026-09-18",
+      "min": 27.8,
+      "max": 35.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 9.1,
+      "nascer_sol": "06:38",
+      "por_sol": "18:44"
+    },
+    {
+      "data": "2026-09-19",
+      "min": 28.5,
+      "max": 34.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 9.2,
+      "nascer_sol": "06:38",
+      "por_sol": "18:44"
+    },
+    {
+      "data": "2026-09-20",
+      "min": 28.5,
+      "max": 34.7,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "06:37",
+      "por_sol": "18:43"
+    },
+    {
+      "data": "2026-09-21",
+      "min": 28.7,
+      "max": 35.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "06:37",
+      "por_sol": "18:43"
+    },
+    {
+      "data": "2026-09-22",
+      "min": 29.0,
+      "max": 35.7,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "06:36",
+      "por_sol": "18:43"
+    }
+  ],
   "queimadas": {
     "focos_100km": 106,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-16T11:51:49.458053+00:00"
   },
   "uv": {
-    "indice": 8.8,
+    "indice": 8.9,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 30,
-    "categoria": "Boa",
+    "indice": 53,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 3.6,
-    "pm10": 4.2,
-    "no2": 0.8,
-    "o3": 51.0,
+    "pm25": 7.0,
+    "pm10": 8.5,
+    "no2": 0.6,
+    "o3": 62.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-04T12:28:20.062453+00:00"
+    "atualizado_em": "2026-09-16T13:04:57.232020+00:00"
   },
   "sol": {
-    "nascer": "06:44",
-    "por": "18:48",
+    "nascer": "06:39",
+    "por": "18:44",
     "duracao_h": 12.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 73.9,
-    "dias_proxima_cheia": 7,
+    "nome": "Crescente",
+    "iluminacao_pct": 79.0,
+    "fase_pct": 14.6,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 30.3,
+  "temperatura_atual": 31.8,
   "vento": {
-    "velocidade_kmh": 11.8,
-    "direcao_graus": 70,
+    "velocidade_kmh": 13.7,
+    "direcao_graus": 63,
     "direcao": "ENE",
-    "max_kmh": 14.2,
-    "rajada_kmh": 33.1,
-    "direcao_dominante": "ENE",
+    "max_kmh": 16.2,
+    "rajada_kmh": 31.0,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 68,
+  "umidade_pct": 60,
   "pressao_hpa": 1014,
-  "ponto_orvalho_c": 23.7,
+  "ponto_orvalho_c": 23.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-16T08:46:06.223270+00:00"
   },
-  "_clima_em": "2026-09-04T12:28:20.062453+00:00",
+  "_clima_em": "2026-09-16T13:04:57.232020+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 4055,

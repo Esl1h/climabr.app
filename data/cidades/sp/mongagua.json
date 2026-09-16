@@ -85,17 +85,13 @@
     }
   ],
   "reservatorio": {
-    "nome": "Henry Borden",
-    "nivel_pct": 83.8,
-    "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-09-14",
-    "distancia_km": 30.9,
-    "aproximado": true,
-    "tipo": "FIO",
-    "acumula": false,
-    "nota": "Reservatório hidrelétrico mais próximo (31km). Pode não ser o sistema de abastecimento desta cidade.",
-    "fonte": "ONS / ANA",
-    "atualizado_em": "2026-09-16T11:51:47.093156+00:00"
+    "nome": "Sistema Local SABESP",
+    "nivel_pct": null,
+    "variacao_semana_pct": null,
+    "sistema_id": null,
+    "nota": "Abastecido pela SABESP via sistema local não monitorado online.",
+    "fonte": "SABESP",
+    "atualizado_em": "2026-09-16T13:25:08.317257+00:00"
   },
   "queimadas": {
     "focos_100km": 4,
@@ -163,30 +159,31 @@
   },
   "_clima_em": "2026-09-03T12:33:38.218727+00:00",
   "vento": {
-    "velocidade_kmh": 4.5,
-    "direcao_graus": 127,
-    "direcao": "SE",
-    "max_kmh": 10.8,
-    "rajada_kmh": 30.2,
-    "direcao_dominante": "NE",
-    "fonte": "Open-Meteo"
+    "velocidade_kmh": 6.0,
+    "direcao_graus": 237,
+    "direcao": "OSO",
+    "max_kmh": 10.1,
+    "rajada_kmh": 24.1,
+    "direcao_dominante": "NNO",
+    "fonte": "Open-Meteo",
+    "atualizado_em": "2026-09-16T13:25:39.818471+00:00"
   },
   "umidade_pct": 72,
   "pressao_hpa": 1018,
   "ponto_orvalho_c": 15.5,
   "ondas": {
-    "altura_m": 1.38,
-    "altura_max_m": 1.54,
-    "periodo_s": 8.8,
-    "direcao_graus": 162,
+    "altura_m": 1.4,
+    "altura_max_m": 1.52,
+    "periodo_s": 7.6,
+    "direcao_graus": 163,
     "direcao": "SSE",
-    "swell_altura_m": 1.54,
-    "swell_periodo_s": 7.7,
+    "swell_altura_m": 1.5,
+    "swell_periodo_s": 7.2,
     "swell_direcao": "SSE",
     "surf_nivel": "bom",
     "surf_emoji": "🟢",
-    "surf_descricao": "Ótimo para surf",
+    "surf_descricao": "Bom para surf",
     "fonte": "Open-Meteo Marine",
-    "atualizado_em": "2026-09-15T13:27:08.145669+00:00"
+    "atualizado_em": "2026-09-16T13:25:39.818471+00:00"
   }
 }

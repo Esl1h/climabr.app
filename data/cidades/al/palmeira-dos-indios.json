@@ -4,8 +4,86 @@
   "slug": "palmeira-dos-indios",
   "latitude": -9.4182,
   "longitude": -36.6057,
-  "atualizado_em": "2026-09-16T09:40:01.031701+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-16T13:04:57.232020+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-16",
+      "min": 21.0,
+      "max": 30.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 8.8,
+      "nascer_sol": "05:19",
+      "por_sol": "17:23"
+    },
+    {
+      "data": "2026-09-17",
+      "min": 20.6,
+      "max": 28.6,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 5.5,
+      "uv": 7.5,
+      "nascer_sol": "05:19",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-18",
+      "min": 20.7,
+      "max": 26.7,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 7.0,
+      "uv": 8.5,
+      "nascer_sol": "05:18",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-19",
+      "min": 19.6,
+      "max": 27.7,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.0,
+      "uv": 8.4,
+      "nascer_sol": "05:17",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-20",
+      "min": 19.9,
+      "max": 28.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.7,
+      "uv": 9.0,
+      "nascer_sol": "05:17",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-21",
+      "min": 18.5,
+      "max": 29.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "05:16",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-22",
+      "min": 18.9,
+      "max": 29.5,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "05:16",
+      "por_sol": "17:22"
+    }
+  ],
   "reservatorio": {
     "nome": "Xingo",
     "nivel_pct": 65.8,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-09-16T11:51:49.458053+00:00"
   },
   "uv": {
-    "indice": 8.6,
+    "indice": 8.8,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 45,
+    "indice": 49,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 8.6,
-    "pm10": 11.7,
-    "no2": 1.4,
-    "o3": 69.0,
+    "pm25": 7.9,
+    "pm10": 11.2,
+    "no2": 1.1,
+    "o3": 67.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-03T12:33:38.218727+00:00"
+    "atualizado_em": "2026-09-16T13:04:57.232020+00:00"
   },
   "sol": {
-    "nascer": "05:27",
-    "por": "17:24",
-    "duracao_h": 11.9,
+    "nascer": "05:19",
+    "por": "17:23",
+    "duracao_h": 12.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 96.0,
-    "fase_pct": 70.6,
-    "dias_proxima_cheia": 6,
+    "nome": "Crescente",
+    "iluminacao_pct": 79.0,
+    "fase_pct": 14.6,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 28.4,
+  "temperatura_atual": 27.6,
   "vento": {
-    "velocidade_kmh": 19.1,
-    "direcao_graus": 81,
+    "velocidade_kmh": 16.2,
+    "direcao_graus": 86,
     "direcao": "E",
-    "max_kmh": 21.3,
-    "rajada_kmh": 42.5,
+    "max_kmh": 20.2,
+    "rajada_kmh": 39.2,
     "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 55,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 18.5,
+  "umidade_pct": 59,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 18.7,
   "dengue": {
     "nivel_alerta": 4,
     "nivel_label": "Emergência",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-24T09:04:19.121354+00:00"
   },
-  "_clima_em": "2026-09-03T12:33:38.218727+00:00",
+  "_clima_em": "2026-09-16T13:04:57.232020+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 970,
