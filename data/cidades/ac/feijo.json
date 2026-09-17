@@ -4,58 +4,136 @@
   "slug": "feijo",
   "latitude": -8.9244,
   "longitude": -70.7448,
-  "atualizado_em": "2026-09-17T09:42:30.797314+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-17T13:00:59.082587+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-17",
+      "min": 21.9,
+      "max": 29.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 8.4,
+      "uv": 5.0,
+      "nascer_sol": "07:35",
+      "por_sol": "19:39"
+    },
+    {
+      "data": "2026-09-18",
+      "min": 22.5,
+      "max": 31.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 6.2,
+      "nascer_sol": "07:34",
+      "por_sol": "19:39"
+    },
+    {
+      "data": "2026-09-19",
+      "min": 21.7,
+      "max": 33.6,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "07:34",
+      "por_sol": "19:39"
+    },
+    {
+      "data": "2026-09-20",
+      "min": 22.7,
+      "max": 32.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.1,
+      "nascer_sol": "07:33",
+      "por_sol": "19:39"
+    },
+    {
+      "data": "2026-09-21",
+      "min": 23.6,
+      "max": 33.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 9.1,
+      "nascer_sol": "07:33",
+      "por_sol": "19:38"
+    },
+    {
+      "data": "2026-09-22",
+      "min": 24.0,
+      "max": 33.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 7.8,
+      "nascer_sol": "07:32",
+      "por_sol": "19:38"
+    },
+    {
+      "data": "2026-09-23",
+      "min": 24.0,
+      "max": 34.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.4,
+      "uv": 10.1,
+      "nascer_sol": "07:31",
+      "por_sol": "19:38"
+    }
+  ],
   "queimadas": {
     "focos_100km": 72,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-17T11:54:25.409041+00:00"
   },
   "uv": {
-    "indice": 8.9,
-    "categoria": "Muito Alto",
+    "indice": 5.0,
+    "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 107,
-    "categoria": "Ruim para grupos sensíveis",
+    "indice": 57,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 42.3,
-    "pm10": 43.0,
-    "no2": 3.8,
-    "o3": 50.0,
+    "pm25": 13.9,
+    "pm10": 14.0,
+    "no2": 0.6,
+    "o3": 18.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-15T13:06:32.817680+00:00"
+    "atualizado_em": "2026-09-17T13:00:59.082587+00:00"
   },
   "sol": {
-    "nascer": "07:36",
+    "nascer": "07:35",
     "por": "19:39",
     "duracao_h": 12.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 65.0,
-    "fase_pct": 11.2,
-    "dias_proxima_cheia": 11,
+    "nome": "Crescente",
+    "iluminacao_pct": 90.0,
+    "fase_pct": 18.0,
+    "dias_proxima_cheia": 9,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 24.2,
+  "temperatura_atual": 25.3,
   "vento": {
-    "velocidade_kmh": 4.7,
-    "direcao_graus": 140,
-    "direcao": "SE",
-    "max_kmh": 7.3,
-    "rajada_kmh": 20.2,
-    "direcao_dominante": "SSE",
+    "velocidade_kmh": 3.6,
+    "direcao_graus": 18,
+    "direcao": "NNE",
+    "max_kmh": 8.6,
+    "rajada_kmh": 28.4,
+    "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 77,
-  "pressao_hpa": 1015,
-  "ponto_orvalho_c": 19.9,
+  "umidade_pct": 81,
+  "pressao_hpa": 1017,
+  "ponto_orvalho_c": 21.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-15T13:28:39.264092+00:00"
   },
-  "_clima_em": "2026-09-15T13:06:32.817680+00:00"
+  "_clima_em": "2026-09-17T13:00:59.082587+00:00"
 }

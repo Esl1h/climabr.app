@@ -4,58 +4,136 @@
   "slug": "colonia-leopoldina",
   "latitude": -8.9418,
   "longitude": -35.76,
-  "atualizado_em": "2026-09-17T09:45:31.826741+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-17T13:00:59.082587+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-17",
+      "min": 20.4,
+      "max": 25.8,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 6.4,
+      "uv": 8.4,
+      "nascer_sol": "05:15",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-09-18",
+      "min": 20.1,
+      "max": 26.1,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 10.1,
+      "uv": 8.6,
+      "nascer_sol": "05:15",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-09-19",
+      "min": 19.8,
+      "max": 25.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 7.7,
+      "uv": 7.2,
+      "nascer_sol": "05:14",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-09-20",
+      "min": 19.5,
+      "max": 26.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.0,
+      "uv": 8.2,
+      "nascer_sol": "05:13",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-09-21",
+      "min": 19.2,
+      "max": 27.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 8.9,
+      "nascer_sol": "05:13",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-09-22",
+      "min": 19.5,
+      "max": 27.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 8.9,
+      "nascer_sol": "05:12",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-09-23",
+      "min": 20.3,
+      "max": 26.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.9,
+      "uv": 8.9,
+      "nascer_sol": "05:12",
+      "por_sol": "17:18"
+    }
+  ],
   "queimadas": {
     "focos_100km": 5,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-17T11:54:25.409041+00:00"
   },
   "uv": {
-    "indice": 8.8,
+    "indice": 8.4,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 71,
+    "indice": 55,
     "categoria": "Moderada",
-    "principal_poluente": "PM10",
-    "pm25": 9.5,
-    "pm10": 14.3,
-    "no2": 0.0,
-    "o3": 71.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 7.0,
+    "pm10": 10.1,
+    "no2": 0.3,
+    "o3": 60.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-15T13:06:32.817680+00:00"
+    "atualizado_em": "2026-09-17T13:00:59.082587+00:00"
   },
   "sol": {
-    "nascer": "05:16",
+    "nascer": "05:15",
     "por": "17:19",
     "duracao_h": 12.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 65.0,
-    "fase_pct": 11.2,
-    "dias_proxima_cheia": 11,
+    "nome": "Crescente",
+    "iluminacao_pct": 90.0,
+    "fase_pct": 18.0,
+    "dias_proxima_cheia": 9,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 25.6,
+  "temperatura_atual": 23.9,
   "vento": {
     "velocidade_kmh": 10.5,
-    "direcao_graus": 114,
+    "direcao_graus": 123,
     "direcao": "ESE",
-    "max_kmh": 14.7,
-    "rajada_kmh": 28.8,
+    "max_kmh": 18.2,
+    "rajada_kmh": 36.0,
     "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 65,
-  "pressao_hpa": 1019,
-  "ponto_orvalho_c": 18.6,
+  "umidade_pct": 85,
+  "pressao_hpa": 1021,
+  "ponto_orvalho_c": 21.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-24T09:04:19.121354+00:00"
   },
-  "_clima_em": "2026-09-15T13:06:32.817680+00:00",
+  "_clima_em": "2026-09-17T13:00:59.082587+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 2538,

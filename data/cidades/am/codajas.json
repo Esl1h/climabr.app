@@ -4,8 +4,86 @@
   "slug": "codajas",
   "latitude": -3.289,
   "longitude": -62.9733,
-  "atualizado_em": "2026-09-17T09:54:50.081589+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-17T13:00:59.082587+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-17",
+      "min": 24.6,
+      "max": 32.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 0.7,
+      "uv": 8.9,
+      "nascer_sol": "07:03",
+      "por_sol": "19:09"
+    },
+    {
+      "data": "2026-09-18",
+      "min": 25.2,
+      "max": 32.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 8.8,
+      "nascer_sol": "07:03",
+      "por_sol": "19:08"
+    },
+    {
+      "data": "2026-09-19",
+      "min": 24.9,
+      "max": 32.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.8,
+      "uv": 8.2,
+      "nascer_sol": "07:02",
+      "por_sol": "19:08"
+    },
+    {
+      "data": "2026-09-20",
+      "min": 25.0,
+      "max": 34.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.0,
+      "nascer_sol": "07:02",
+      "por_sol": "19:08"
+    },
+    {
+      "data": "2026-09-21",
+      "min": 26.0,
+      "max": 34.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.1,
+      "uv": 8.9,
+      "nascer_sol": "07:01",
+      "por_sol": "19:08"
+    },
+    {
+      "data": "2026-09-22",
+      "min": 26.1,
+      "max": 30.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 8.1,
+      "uv": 5.3,
+      "nascer_sol": "07:01",
+      "por_sol": "19:07"
+    },
+    {
+      "data": "2026-09-23",
+      "min": 26.1,
+      "max": 34.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 8.1,
+      "nascer_sol": "07:00",
+      "por_sol": "19:07"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
@@ -19,43 +97,43 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 57,
+    "indice": 58,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 13.2,
-    "pm10": 14.0,
-    "no2": 0.3,
-    "o3": 39.0,
+    "pm25": 19.9,
+    "pm10": 21.2,
+    "no2": 0.6,
+    "o3": 48.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-15T13:06:32.817680+00:00"
+    "atualizado_em": "2026-09-17T13:00:59.082587+00:00"
   },
   "sol": {
-    "nascer": "07:04",
+    "nascer": "07:03",
     "por": "19:09",
     "duracao_h": 12.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 65.0,
-    "fase_pct": 11.2,
-    "dias_proxima_cheia": 11,
+    "nome": "Crescente",
+    "iluminacao_pct": 90.0,
+    "fase_pct": 18.0,
+    "dias_proxima_cheia": 9,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 27.1,
+  "temperatura_atual": 27.4,
   "vento": {
-    "velocidade_kmh": 11.4,
-    "direcao_graus": 168,
-    "direcao": "SSE",
-    "max_kmh": 11.4,
-    "rajada_kmh": 27.4,
-    "direcao_dominante": "S",
+    "velocidade_kmh": 0.5,
+    "direcao_graus": 135,
+    "direcao": "SE",
+    "max_kmh": 6.5,
+    "rajada_kmh": 18.4,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 83,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 23.9,
+  "umidade_pct": 84,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 24.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -65,9 +143,9 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 24071,
-    "semana_epidemiologica": 202631,
+    "semana_epidemiologica": 202635,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-08-16T08:46:06.223270+00:00"
+    "atualizado_em": "2026-09-17T13:23:03.924704+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -78,9 +156,9 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 24071,
-    "semana_epidemiologica": 202631,
+    "semana_epidemiologica": 202635,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-08-16T08:46:06.223270+00:00"
+    "atualizado_em": "2026-09-17T13:23:03.924704+00:00"
   },
-  "_clima_em": "2026-09-15T13:06:32.817680+00:00"
+  "_clima_em": "2026-09-17T13:00:59.082587+00:00"
 }
