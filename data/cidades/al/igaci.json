@@ -4,8 +4,86 @@
   "slug": "igaci",
   "latitude": -9.5434,
   "longitude": -36.682,
-  "atualizado_em": "2026-09-22T09:35:39.186749+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-22T13:03:13.673219+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-22",
+      "min": 20.2,
+      "max": 31.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "05:16",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-23",
+      "min": 19.0,
+      "max": 32.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "05:15",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-24",
+      "min": 20.1,
+      "max": 32.7,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "05:15",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-25",
+      "min": 19.5,
+      "max": 31.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 9.1,
+      "nascer_sol": "05:14",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 21.7,
+      "max": 32.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 8.9,
+      "nascer_sol": "05:13",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 20.4,
+      "max": 31.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.9,
+      "nascer_sol": "05:13",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 21.3,
+      "max": 29.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.6,
+      "uv": 9.0,
+      "nascer_sol": "05:12",
+      "por_sol": "17:22"
+    }
+  ],
   "reservatorio": {
     "nome": "Xingo",
     "nivel_pct": 65.8,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-09-22T11:53:58.580937+00:00"
   },
   "uv": {
-    "indice": 8.6,
+    "indice": 9.1,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 39,
-    "categoria": "Boa",
+    "indice": 51,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 6.3,
-    "pm10": 8.6,
-    "no2": 1.4,
-    "o3": 61.0,
+    "pm25": 9.4,
+    "pm10": 13.2,
+    "no2": 0.5,
+    "o3": 79.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-04T12:28:20.062453+00:00"
+    "atualizado_em": "2026-09-22T13:03:13.673219+00:00"
   },
   "sol": {
-    "nascer": "05:27",
-    "por": "17:24",
-    "duracao_h": 12.0,
+    "nascer": "05:16",
+    "por": "17:22",
+    "duracao_h": 12.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 73.9,
-    "dias_proxima_cheia": 7,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 81.0,
+    "fase_pct": 34.9,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 28.2,
+  "temperatura_atual": 28.5,
   "vento": {
-    "velocidade_kmh": 14.4,
-    "direcao_graus": 89,
-    "direcao": "E",
-    "max_kmh": 15.9,
-    "rajada_kmh": 37.4,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 11.6,
+    "direcao_graus": 112,
+    "direcao": "ESE",
+    "max_kmh": 17.6,
+    "rajada_kmh": 35.6,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 58,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 19.2,
+  "umidade_pct": 45,
+  "pressao_hpa": 1017,
+  "ponto_orvalho_c": 15.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-15T13:28:39.264092+00:00"
   },
-  "_clima_em": "2026-09-04T12:28:20.062453+00:00",
+  "_clima_em": "2026-09-22T13:03:13.673219+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 3074,

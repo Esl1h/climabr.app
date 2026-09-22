@@ -4,58 +4,136 @@
   "slug": "manacapuru",
   "latitude": -3.2915,
   "longitude": -60.9588,
-  "atualizado_em": "2026-09-22T09:45:12.045157+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-22T13:03:13.673219+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-22",
+      "min": 25.1,
+      "max": 36.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.0,
+      "nascer_sol": "06:53",
+      "por_sol": "18:59"
+    },
+    {
+      "data": "2026-09-23",
+      "min": 24.4,
+      "max": 35.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.6,
+      "uv": 9.1,
+      "nascer_sol": "06:53",
+      "por_sol": "18:59"
+    },
+    {
+      "data": "2026-09-24",
+      "min": 25.0,
+      "max": 33.4,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 2.6,
+      "uv": 8.2,
+      "nascer_sol": "06:52",
+      "por_sol": "18:59"
+    },
+    {
+      "data": "2026-09-25",
+      "min": 23.9,
+      "max": 31.9,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 5.3,
+      "uv": 9.1,
+      "nascer_sol": "06:52",
+      "por_sol": "18:59"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 24.9,
+      "max": 30.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 9.6,
+      "uv": 6.3,
+      "nascer_sol": "06:51",
+      "por_sol": "18:58"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 24.6,
+      "max": 31.1,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 9.3,
+      "uv": 7.7,
+      "nascer_sol": "06:51",
+      "por_sol": "18:58"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 25.3,
+      "max": 27.6,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 7.8,
+      "uv": 6.9,
+      "nascer_sol": "06:50",
+      "por_sol": "18:58"
+    }
+  ],
   "queimadas": {
     "focos_100km": 438,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-22T11:53:58.580937+00:00"
   },
   "uv": {
-    "indice": 8.8,
+    "indice": 9.0,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 80,
-    "categoria": "Moderada",
+    "indice": 111,
+    "categoria": "Ruim para grupos sensíveis",
     "principal_poluente": "PM2.5",
-    "pm25": 25.3,
-    "pm10": 26.4,
-    "no2": 1.0,
-    "o3": 58.0,
+    "pm25": 25.8,
+    "pm10": 26.7,
+    "no2": 2.4,
+    "o3": 100.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-15T13:06:32.817680+00:00"
+    "atualizado_em": "2026-09-22T13:03:13.673219+00:00"
   },
   "sol": {
-    "nascer": "06:56",
-    "por": "19:01",
+    "nascer": "06:53",
+    "por": "18:59",
     "duracao_h": 12.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 65.0,
-    "fase_pct": 11.2,
-    "dias_proxima_cheia": 11,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 81.0,
+    "fase_pct": 34.9,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 28.6,
+  "temperatura_atual": 31.5,
   "vento": {
-    "velocidade_kmh": 7.2,
-    "direcao_graus": 181,
-    "direcao": "S",
-    "max_kmh": 9.9,
-    "rajada_kmh": 29.9,
-    "direcao_dominante": "S",
+    "velocidade_kmh": 7.7,
+    "direcao_graus": 59,
+    "direcao": "ENE",
+    "max_kmh": 10.3,
+    "rajada_kmh": 27.7,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 73,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 23.3,
+  "umidade_pct": 57,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 22.0,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-24T09:04:19.121354+00:00"
   },
-  "_clima_em": "2026-09-15T13:06:32.817680+00:00",
+  "_clima_em": "2026-09-22T13:03:13.673219+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 8241,

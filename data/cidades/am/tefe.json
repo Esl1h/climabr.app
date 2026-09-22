@@ -4,58 +4,136 @@
   "slug": "tefe",
   "latitude": -4.4701,
   "longitude": -65.5315,
-  "atualizado_em": "2026-09-22T09:46:57.937891+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-22T13:03:13.673219+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-22",
+      "min": 23.9,
+      "max": 34.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 8.7,
+      "nascer_sol": "07:11",
+      "por_sol": "19:18"
+    },
+    {
+      "data": "2026-09-23",
+      "min": 24.3,
+      "max": 36.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "07:11",
+      "por_sol": "19:17"
+    },
+    {
+      "data": "2026-09-24",
+      "min": 24.8,
+      "max": 33.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.9,
+      "uv": 9.2,
+      "nascer_sol": "07:10",
+      "por_sol": "19:17"
+    },
+    {
+      "data": "2026-09-25",
+      "min": 23.8,
+      "max": 33.3,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 8.0,
+      "uv": 9.2,
+      "nascer_sol": "07:10",
+      "por_sol": "19:17"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 24.1,
+      "max": 31.3,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 4.5,
+      "uv": 8.4,
+      "nascer_sol": "07:09",
+      "por_sol": "19:17"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 24.5,
+      "max": 32.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 7.2,
+      "uv": 1.7,
+      "nascer_sol": "07:09",
+      "por_sol": "19:16"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 24.1,
+      "max": 30.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 5.4,
+      "uv": 6.1,
+      "nascer_sol": "07:08",
+      "por_sol": "19:16"
+    }
+  ],
   "queimadas": {
     "focos_100km": 2,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-22T11:53:58.580937+00:00"
   },
   "uv": {
-    "indice": 8.9,
+    "indice": 8.7,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 93,
+    "indice": 68,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 33.1,
-    "pm10": 34.2,
-    "no2": 0.7,
-    "o3": 36.0,
+    "pm25": 24.3,
+    "pm10": 27.2,
+    "no2": 0.6,
+    "o3": 23.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-16T13:04:57.232020+00:00"
+    "atualizado_em": "2026-09-22T13:03:13.673219+00:00"
   },
   "sol": {
-    "nascer": "07:14",
-    "por": "19:19",
+    "nascer": "07:11",
+    "por": "19:18",
     "duracao_h": 12.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 79.0,
-    "fase_pct": 14.6,
-    "dias_proxima_cheia": 10,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 81.0,
+    "fase_pct": 34.9,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 27.6,
+  "temperatura_atual": 30.0,
   "vento": {
-    "velocidade_kmh": 7.9,
-    "direcao_graus": 183,
-    "direcao": "S",
-    "max_kmh": 9.0,
-    "rajada_kmh": 36.0,
-    "direcao_dominante": "SSE",
+    "velocidade_kmh": 1.9,
+    "direcao_graus": 29,
+    "direcao": "NNE",
+    "max_kmh": 8.0,
+    "rajada_kmh": 24.8,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 79,
-  "pressao_hpa": 1015,
-  "ponto_orvalho_c": 23.5,
+  "umidade_pct": 74,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 24.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-24T09:04:19.121354+00:00"
   },
-  "_clima_em": "2026-09-16T13:04:57.232020+00:00",
+  "_clima_em": "2026-09-22T13:03:13.673219+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 4921,

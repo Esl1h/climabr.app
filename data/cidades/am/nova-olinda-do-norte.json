@@ -4,58 +4,136 @@
   "slug": "nova-olinda-do-norte",
   "latitude": -3.9895,
   "longitude": -58.5998,
-  "atualizado_em": "2026-09-22T09:45:46.239686+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-22T13:03:13.673219+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-22",
+      "min": 24.7,
+      "max": 37.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.1,
+      "nascer_sol": "06:44",
+      "por_sol": "18:50"
+    },
+    {
+      "data": "2026-09-23",
+      "min": 25.8,
+      "max": 37.7,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.1,
+      "uv": 9.1,
+      "nascer_sol": "06:43",
+      "por_sol": "18:50"
+    },
+    {
+      "data": "2026-09-24",
+      "min": 26.0,
+      "max": 36.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 9.2,
+      "nascer_sol": "06:43",
+      "por_sol": "18:49"
+    },
+    {
+      "data": "2026-09-25",
+      "min": 24.0,
+      "max": 35.1,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 6.1,
+      "uv": 8.9,
+      "nascer_sol": "06:42",
+      "por_sol": "18:49"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 25.1,
+      "max": 34.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 9.0,
+      "nascer_sol": "06:42",
+      "por_sol": "18:49"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 24.1,
+      "max": 31.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 11.7,
+      "uv": 5.8,
+      "nascer_sol": "06:41",
+      "por_sol": "18:49"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 24.3,
+      "max": 27.8,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 12.3,
+      "uv": 7.8,
+      "nascer_sol": "06:41",
+      "por_sol": "18:49"
+    }
+  ],
   "queimadas": {
     "focos_100km": 253,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-22T11:53:58.580937+00:00"
   },
   "uv": {
-    "indice": 8.9,
+    "indice": 9.1,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 71,
+    "indice": 51,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 28.9,
-    "pm10": 31.4,
-    "no2": 0.8,
-    "o3": 63.0,
+    "pm25": 5.7,
+    "pm10": 5.9,
+    "no2": 0.4,
+    "o3": 48.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-16T13:04:57.232020+00:00"
+    "atualizado_em": "2026-09-22T13:03:13.673219+00:00"
   },
   "sol": {
-    "nascer": "06:46",
-    "por": "18:51",
+    "nascer": "06:44",
+    "por": "18:50",
     "duracao_h": 12.1,
     "estacao": "Inverno",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 79.0,
-    "fase_pct": 14.6,
-    "dias_proxima_cheia": 10,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 81.0,
+    "fase_pct": 34.9,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 31.6,
+  "temperatura_atual": 32.8,
   "vento": {
-    "velocidade_kmh": 2.6,
-    "direcao_graus": 106,
-    "direcao": "ESE",
-    "max_kmh": 9.9,
-    "rajada_kmh": 29.2,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 12.0,
+    "direcao_graus": 72,
+    "direcao": "ENE",
+    "max_kmh": 13.8,
+    "rajada_kmh": 36.7,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 55,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 21.4,
+  "umidade_pct": 49,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 20.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-17T13:23:03.924704+00:00"
   },
-  "_clima_em": "2026-09-16T13:04:57.232020+00:00",
+  "_clima_em": "2026-09-22T13:03:13.673219+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 1866,
