@@ -4,58 +4,136 @@
   "slug": "jordao",
   "latitude": -9.2427,
   "longitude": -71.9061,
-  "atualizado_em": "2026-09-24T09:36:24.737176+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-24T13:08:57.291460+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-24",
+      "min": 22.0,
+      "max": 32.3,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 4.0,
+      "uv": 9.2,
+      "nascer_sol": "07:35",
+      "por_sol": "19:43"
+    },
+    {
+      "data": "2026-09-25",
+      "min": 23.7,
+      "max": 32.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 9.2,
+      "nascer_sol": "07:35",
+      "por_sol": "19:43"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 22.9,
+      "max": 31.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 3.2,
+      "uv": 9.2,
+      "nascer_sol": "07:34",
+      "por_sol": "19:43"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 23.1,
+      "max": 28.5,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 4.1,
+      "uv": 9.2,
+      "nascer_sol": "07:34",
+      "por_sol": "19:43"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 21.7,
+      "max": 31.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 9.2,
+      "nascer_sol": "07:33",
+      "por_sol": "19:42"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 22.8,
+      "max": 30.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.2,
+      "uv": 7.1,
+      "nascer_sol": "07:32",
+      "por_sol": "19:42"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 22.9,
+      "max": 29.0,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 11.9,
+      "uv": 8.0,
+      "nascer_sol": "07:32",
+      "por_sol": "19:42"
+    }
+  ],
   "queimadas": {
     "focos_100km": 79,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 3.7,
-    "categoria": "Moderado",
+    "indice": 9.2,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 50,
-    "categoria": "Boa",
+    "indice": 91,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 12.6,
-    "pm10": 12.8,
-    "no2": 0.5,
-    "o3": 19.0,
+    "pm25": 26.5,
+    "pm10": 26.7,
+    "no2": 1.4,
+    "o3": 24.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-17T13:00:59.082587+00:00"
+    "atualizado_em": "2026-09-24T13:08:57.291460+00:00"
   },
   "sol": {
-    "nascer": "07:40",
+    "nascer": "07:35",
     "por": "19:43",
     "duracao_h": 12.1,
-    "estacao": "Inverno",
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 90.0,
-    "fase_pct": 18.0,
-    "dias_proxima_cheia": 9,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 50.0,
+    "fase_pct": 41.7,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.8,
+  "temperatura_atual": 27.8,
   "vento": {
-    "velocidade_kmh": 4.5,
-    "direcao_graus": 317,
-    "direcao": "NO",
-    "max_kmh": 19.6,
-    "rajada_kmh": 42.5,
-    "direcao_dominante": "SO",
+    "velocidade_kmh": 1.9,
+    "direcao_graus": 49,
+    "direcao": "NE",
+    "max_kmh": 10.1,
+    "rajada_kmh": 24.8,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 89,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 22.0,
+  "umidade_pct": 80,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 24.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-15T13:28:39.264092+00:00"
   },
-  "_clima_em": "2026-09-17T13:00:59.082587+00:00"
+  "_clima_em": "2026-09-24T13:08:57.291460+00:00"
 }

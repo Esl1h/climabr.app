@@ -4,58 +4,136 @@
   "slug": "bom-jesus-da-serra",
   "latitude": -14.3899,
   "longitude": -40.5773,
-  "atualizado_em": "2026-09-24T09:54:04.074295+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-24T13:08:57.291460+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-24",
+      "min": 18.2,
+      "max": 27.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.7,
+      "nascer_sol": "05:30",
+      "por_sol": "17:38"
+    },
+    {
+      "data": "2026-09-25",
+      "min": 16.3,
+      "max": 27.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.0,
+      "nascer_sol": "05:29",
+      "por_sol": "17:38"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 16.6,
+      "max": 29.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "05:28",
+      "por_sol": "17:38"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 17.8,
+      "max": 28.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "05:28",
+      "por_sol": "17:38"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 15.5,
+      "max": 28.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "05:27",
+      "por_sol": "17:38"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 16.5,
+      "max": 29.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "05:26",
+      "por_sol": "17:38"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 16.1,
+      "max": 31.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.7,
+      "nascer_sol": "05:25",
+      "por_sol": "17:38"
+    }
+  ],
   "queimadas": {
     "focos_100km": 96,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 8.8,
+    "indice": 8.7,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 35,
+    "indice": 31,
     "categoria": "Boa",
     "principal_poluente": "PM10",
-    "pm25": 5.5,
-    "pm10": 8.3,
-    "no2": 0.4,
-    "o3": 62.0,
+    "pm25": 4.8,
+    "pm10": 7.5,
+    "no2": 0.5,
+    "o3": 58.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-17T13:00:59.082587+00:00"
+    "atualizado_em": "2026-09-24T13:08:57.291460+00:00"
   },
   "sol": {
-    "nascer": "05:35",
+    "nascer": "05:30",
     "por": "17:38",
-    "duracao_h": 12.0,
-    "estacao": "Inverno",
+    "duracao_h": 12.1,
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 90.0,
-    "fase_pct": 18.0,
-    "dias_proxima_cheia": 9,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 50.0,
+    "fase_pct": 41.7,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.9,
+  "temperatura_atual": 25.5,
   "vento": {
-    "velocidade_kmh": 21.8,
-    "direcao_graus": 105,
-    "direcao": "ESE",
-    "max_kmh": 22.4,
-    "rajada_kmh": 44.3,
-    "direcao_dominante": "ESE",
+    "velocidade_kmh": 16.0,
+    "direcao_graus": 83,
+    "direcao": "E",
+    "max_kmh": 20.3,
+    "rajada_kmh": 36.7,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 52,
-  "pressao_hpa": 1024,
-  "ponto_orvalho_c": 13.5,
+  "umidade_pct": 51,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 14.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-17T13:23:03.924704+00:00"
   },
-  "_clima_em": "2026-09-17T13:00:59.082587+00:00"
+  "_clima_em": "2026-09-24T13:08:57.291460+00:00"
 }

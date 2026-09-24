@@ -4,58 +4,136 @@
   "slug": "buritirama",
   "latitude": -10.5881,
   "longitude": -43.6676,
-  "atualizado_em": "2026-09-24T09:54:49.646114+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-24T13:08:57.291460+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-24",
+      "min": 25.5,
+      "max": 36.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 8.7,
+      "nascer_sol": "05:42",
+      "por_sol": "17:50"
+    },
+    {
+      "data": "2026-09-25",
+      "min": 24.0,
+      "max": 36.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 8.9,
+      "nascer_sol": "05:42",
+      "por_sol": "17:50"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 24.3,
+      "max": 36.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "05:41",
+      "por_sol": "17:50"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 23.6,
+      "max": 36.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:40",
+      "por_sol": "17:50"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 22.8,
+      "max": 36.1,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.9,
+      "nascer_sol": "05:40",
+      "por_sol": "17:50"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 23.2,
+      "max": 37.0,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "05:39",
+      "por_sol": "17:50"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 26.3,
+      "max": 37.7,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "05:39",
+      "por_sol": "17:50"
+    }
+  ],
   "queimadas": {
     "focos_100km": 55,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 8.8,
+    "indice": 8.7,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 33,
+    "indice": 30,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 5.3,
-    "pm10": 7.3,
-    "no2": 0.5,
-    "o3": 73.0,
+    "pm25": 2.7,
+    "pm10": 3.5,
+    "no2": 0.6,
+    "o3": 81.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-17T13:00:59.082587+00:00"
+    "atualizado_em": "2026-09-24T13:08:57.291460+00:00"
   },
   "sol": {
-    "nascer": "05:47",
+    "nascer": "05:42",
     "por": "17:50",
     "duracao_h": 12.1,
-    "estacao": "Inverno",
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 90.0,
-    "fase_pct": 18.0,
-    "dias_proxima_cheia": 9,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 50.0,
+    "fase_pct": 41.7,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 28.2,
+  "temperatura_atual": 34.1,
   "vento": {
-    "velocidade_kmh": 19.3,
-    "direcao_graus": 86,
-    "direcao": "E",
-    "max_kmh": 22.0,
-    "rajada_kmh": 45.7,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 16.4,
+    "direcao_graus": 50,
+    "direcao": "NE",
+    "max_kmh": 17.4,
+    "rajada_kmh": 37.1,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 32,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 10.1,
+  "umidade_pct": 28,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 13.1,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-17T13:23:03.924704+00:00"
   },
-  "_clima_em": "2026-09-17T13:00:59.082587+00:00",
+  "_clima_em": "2026-09-24T13:08:57.291460+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 521,

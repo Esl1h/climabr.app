@@ -4,8 +4,86 @@
   "slug": "alagoinhas",
   "latitude": -12.1131,
   "longitude": -38.4022,
-  "atualizado_em": "2026-09-24T09:51:03.615938+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-24T13:08:57.291460+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-24",
+      "min": 20.3,
+      "max": 29.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 9.1,
+      "nascer_sol": "05:21",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-25",
+      "min": 20.5,
+      "max": 30.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.4,
+      "uv": 8.8,
+      "nascer_sol": "05:21",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 21.2,
+      "max": 29.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 9.1,
+      "nascer_sol": "05:20",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 20.2,
+      "max": 30.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.4,
+      "uv": 9.2,
+      "nascer_sol": "05:19",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 20.8,
+      "max": 29.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.1,
+      "uv": 8.2,
+      "nascer_sol": "05:18",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 19.6,
+      "max": 33.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.4,
+      "nascer_sol": "05:18",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 19.7,
+      "max": 33.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.9,
+      "nascer_sol": "05:17",
+      "por_sol": "17:29"
+    }
+  ],
   "reservatorio": {
     "nome": "Pedra Do Cavalo",
     "nivel_pct": 88.0,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 8.8,
+    "indice": 9.1,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 47,
+    "indice": 44,
     "categoria": "Boa",
     "principal_poluente": "PM10",
-    "pm25": 6.4,
-    "pm10": 10.2,
-    "no2": 0.2,
-    "o3": 60.0,
+    "pm25": 8.2,
+    "pm10": 12.5,
+    "no2": 0.4,
+    "o3": 64.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-17T13:00:59.082587+00:00"
+    "atualizado_em": "2026-09-24T13:08:57.291460+00:00"
   },
   "sol": {
-    "nascer": "05:26",
+    "nascer": "05:21",
     "por": "17:29",
     "duracao_h": 12.1,
-    "estacao": "Inverno",
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 90.0,
-    "fase_pct": 18.0,
-    "dias_proxima_cheia": 9,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 50.0,
+    "fase_pct": 41.7,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 29.1,
+  "temperatura_atual": 28.6,
   "vento": {
-    "velocidade_kmh": 13.6,
-    "direcao_graus": 129,
-    "direcao": "SE",
-    "max_kmh": 20.4,
-    "rajada_kmh": 42.1,
-    "direcao_dominante": "SSE",
+    "velocidade_kmh": 12.5,
+    "direcao_graus": 120,
+    "direcao": "ESE",
+    "max_kmh": 16.1,
+    "rajada_kmh": 35.3,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 46,
-  "pressao_hpa": 1022,
-  "ponto_orvalho_c": 16.2,
+  "umidade_pct": 56,
+  "pressao_hpa": 1017,
+  "ponto_orvalho_c": 18.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-24T09:04:19.121354+00:00"
   },
-  "_clima_em": "2026-09-17T13:00:59.082587+00:00",
+  "_clima_em": "2026-09-24T13:08:57.291460+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 3,

@@ -4,58 +4,136 @@
   "slug": "mancio-lima",
   "latitude": -7.5044,
   "longitude": -73.4391,
-  "atualizado_em": "2026-09-24T09:36:29.109261+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-24T13:08:57.291460+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-24",
+      "min": 22.6,
+      "max": 34.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 9.2,
+      "nascer_sol": "07:42",
+      "por_sol": "19:49"
+    },
+    {
+      "data": "2026-09-25",
+      "min": 23.3,
+      "max": 34.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 9.2,
+      "nascer_sol": "07:41",
+      "por_sol": "19:49"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 23.2,
+      "max": 33.1,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 5.8,
+      "uv": 8.5,
+      "nascer_sol": "07:40",
+      "por_sol": "19:49"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 22.6,
+      "max": 30.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 11.4,
+      "uv": 5.2,
+      "nascer_sol": "07:40",
+      "por_sol": "19:48"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 22.9,
+      "max": 32.4,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 4.2,
+      "uv": 7.9,
+      "nascer_sol": "07:39",
+      "por_sol": "19:48"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 23.2,
+      "max": 30.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 6.7,
+      "nascer_sol": "07:39",
+      "por_sol": "19:48"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 23.1,
+      "max": 31.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 6.0,
+      "uv": 6.7,
+      "nascer_sol": "07:38",
+      "por_sol": "19:48"
+    }
+  ],
   "queimadas": {
     "focos_100km": 21,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 8.2,
+    "indice": 9.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 53,
-    "categoria": "Moderada",
+    "indice": 40,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 10.6,
-    "pm10": 10.8,
-    "no2": 0.3,
-    "o3": 22.0,
+    "pm25": 7.2,
+    "pm10": 7.3,
+    "no2": 0.5,
+    "o3": 15.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-17T13:00:59.082587+00:00"
+    "atualizado_em": "2026-09-24T13:08:57.291460+00:00"
   },
   "sol": {
-    "nascer": "07:45",
-    "por": "19:50",
+    "nascer": "07:42",
+    "por": "19:49",
     "duracao_h": 12.1,
-    "estacao": "Inverno",
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 90.0,
-    "fase_pct": 18.0,
-    "dias_proxima_cheia": 9,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 50.0,
+    "fase_pct": 41.7,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.7,
+  "temperatura_atual": 27.2,
   "vento": {
-    "velocidade_kmh": 2.6,
-    "direcao_graus": 25,
-    "direcao": "NNE",
-    "max_kmh": 8.5,
-    "rajada_kmh": 23.0,
-    "direcao_dominante": "SSE",
+    "velocidade_kmh": 4.0,
+    "direcao_graus": 300,
+    "direcao": "ONO",
+    "max_kmh": 10.5,
+    "rajada_kmh": 20.9,
+    "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 97,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 22.2,
+  "umidade_pct": 79,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 23.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-24T09:04:19.121354+00:00"
   },
-  "_clima_em": "2026-09-17T13:00:59.082587+00:00"
+  "_clima_em": "2026-09-24T13:08:57.291460+00:00"
 }

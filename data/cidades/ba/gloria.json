@@ -4,8 +4,86 @@
   "slug": "gloria",
   "latitude": -9.2294,
   "longitude": -38.4448,
-  "atualizado_em": "2026-09-24T10:00:39.432569+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-24T13:08:57.291460+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-24",
+      "min": 19.5,
+      "max": 33.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:22",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-25",
+      "min": 20.2,
+      "max": 31.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 9.2,
+      "nascer_sol": "05:21",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 19.8,
+      "max": 32.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:21",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 18.8,
+      "max": 31.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:20",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 19.6,
+      "max": 32.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.2,
+      "nascer_sol": "05:19",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 21.2,
+      "max": 32.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 8.9,
+      "nascer_sol": "05:19",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 20.9,
+      "max": 34.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "05:18",
+      "por_sol": "17:29"
+    }
+  ],
   "reservatorio": {
     "nome": "Luiz Gonzaga",
     "nivel_pct": 64.0,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 8.9,
+    "indice": 9.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 35,
+    "indice": 33,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 3.1,
-    "pm10": 4.1,
-    "no2": 0.6,
-    "o3": 60.0,
+    "pm25": 7.0,
+    "pm10": 9.6,
+    "no2": 0.7,
+    "o3": 75.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-16T13:04:57.232020+00:00"
+    "atualizado_em": "2026-09-24T13:08:57.291460+00:00"
   },
   "sol": {
-    "nascer": "05:27",
-    "por": "17:30",
+    "nascer": "05:22",
+    "por": "17:29",
     "duracao_h": 12.1,
-    "estacao": "Inverno",
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 79.0,
-    "fase_pct": 14.6,
-    "dias_proxima_cheia": 10,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 50.0,
+    "fase_pct": 41.7,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 28.8,
+  "temperatura_atual": 29.6,
   "vento": {
-    "velocidade_kmh": 19.1,
-    "direcao_graus": 108,
+    "velocidade_kmh": 15.5,
+    "direcao_graus": 116,
     "direcao": "ESE",
-    "max_kmh": 27.4,
-    "rajada_kmh": 51.5,
-    "direcao_dominante": "ESE",
+    "max_kmh": 24.3,
+    "rajada_kmh": 46.8,
+    "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 45,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 15.8,
+  "umidade_pct": 46,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 16.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-17T13:23:03.924704+00:00"
   },
-  "_clima_em": "2026-09-16T13:04:57.232020+00:00"
+  "_clima_em": "2026-09-24T13:08:57.291460+00:00"
 }

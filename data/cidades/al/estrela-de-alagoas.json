@@ -4,8 +4,86 @@
   "slug": "estrela-de-alagoas",
   "latitude": -9.3934,
   "longitude": -36.7703,
-  "atualizado_em": "2026-09-24T09:39:30.766401+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-24T13:08:57.291460+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-24",
+      "min": 20.3,
+      "max": 31.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "05:15",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-25",
+      "min": 21.3,
+      "max": 30.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 9.1,
+      "nascer_sol": "05:14",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 20.2,
+      "max": 29.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.2,
+      "nascer_sol": "05:14",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 19.8,
+      "max": 30.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.2,
+      "nascer_sol": "05:13",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 21.4,
+      "max": 29.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.4,
+      "uv": 9.1,
+      "nascer_sol": "05:12",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 21.2,
+      "max": 30.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 8.9,
+      "nascer_sol": "05:12",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 20.7,
+      "max": 31.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "05:11",
+      "por_sol": "17:22"
+    }
+  ],
   "reservatorio": {
     "nome": "Xingo",
     "nivel_pct": 78.0,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 8.2,
+    "indice": 9.1,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 38,
+    "indice": 40,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 8.9,
-    "pm10": 12.1,
-    "no2": 0.9,
-    "o3": 64.0,
+    "pm25": 6.8,
+    "pm10": 9.3,
+    "no2": 0.6,
+    "o3": 77.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-17T13:00:59.082587+00:00"
+    "atualizado_em": "2026-09-24T13:08:57.291460+00:00"
   },
   "sol": {
-    "nascer": "05:19",
-    "por": "17:23",
+    "nascer": "05:15",
+    "por": "17:22",
     "duracao_h": 12.1,
-    "estacao": "Inverno",
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 90.0,
-    "fase_pct": 18.0,
-    "dias_proxima_cheia": 9,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 50.0,
+    "fase_pct": 41.7,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 27.2,
+  "temperatura_atual": 29.1,
   "vento": {
-    "velocidade_kmh": 14.6,
-    "direcao_graus": 125,
-    "direcao": "SE",
-    "max_kmh": 22.1,
-    "rajada_kmh": 44.3,
+    "velocidade_kmh": 12.7,
+    "direcao_graus": 115,
+    "direcao": "ESE",
+    "max_kmh": 20.1,
+    "rajada_kmh": 37.8,
     "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 60,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 18.8,
+  "umidade_pct": 46,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 16.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-15T13:28:39.264092+00:00"
   },
-  "_clima_em": "2026-09-17T13:00:59.082587+00:00",
+  "_clima_em": "2026-09-24T13:08:57.291460+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 575,

@@ -4,58 +4,136 @@
   "slug": "caraibas",
   "latitude": -14.6256,
   "longitude": -41.2837,
-  "atualizado_em": "2026-09-24T09:56:48.678583+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-24T13:08:57.291460+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-24",
+      "min": 21.1,
+      "max": 32.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.7,
+      "nascer_sol": "05:33",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-09-25",
+      "min": 19.9,
+      "max": 32.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.9,
+      "nascer_sol": "05:32",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 19.8,
+      "max": 34.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.0,
+      "nascer_sol": "05:31",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 20.0,
+      "max": 34.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.0,
+      "nascer_sol": "05:30",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 18.5,
+      "max": 32.9,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "05:30",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 17.9,
+      "max": 33.5,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "05:29",
+      "por_sol": "17:41"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 19.4,
+      "max": 34.7,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 8.7,
+      "nascer_sol": "05:28",
+      "por_sol": "17:41"
+    }
+  ],
   "queimadas": {
     "focos_100km": 110,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 8.7,
-    "categoria": "Muito Alto",
+    "indice": 7.7,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 48,
+    "indice": 50,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 5.1,
-    "pm10": 7.5,
-    "no2": 0.6,
-    "o3": 64.0,
+    "pm25": 5.6,
+    "pm10": 7.3,
+    "no2": 0.9,
+    "o3": 65.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-17T13:00:59.082587+00:00"
+    "atualizado_em": "2026-09-24T13:08:57.291460+00:00"
   },
   "sol": {
-    "nascer": "05:38",
-    "por": "17:40",
-    "duracao_h": 12.0,
-    "estacao": "Inverno",
+    "nascer": "05:33",
+    "por": "17:41",
+    "duracao_h": 12.1,
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 90.0,
-    "fase_pct": 18.0,
-    "dias_proxima_cheia": 9,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 50.0,
+    "fase_pct": 41.7,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 27.6,
+  "temperatura_atual": 29.5,
   "vento": {
-    "velocidade_kmh": 18.5,
-    "direcao_graus": 96,
-    "direcao": "E",
-    "max_kmh": 22.1,
-    "rajada_kmh": 43.2,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 14.1,
+    "direcao_graus": 68,
+    "direcao": "ENE",
+    "max_kmh": 18.7,
+    "rajada_kmh": 36.4,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
   "umidade_pct": 43,
-  "pressao_hpa": 1023,
-  "ponto_orvalho_c": 13.7,
+  "pressao_hpa": 1017,
+  "ponto_orvalho_c": 15.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-23T08:46:28.987478+00:00"
   },
-  "_clima_em": "2026-09-17T13:00:59.082587+00:00",
+  "_clima_em": "2026-09-24T13:08:57.291460+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 59,

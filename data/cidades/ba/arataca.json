@@ -4,8 +4,86 @@
   "slug": "arataca",
   "latitude": -15.2433,
   "longitude": -39.4122,
-  "atualizado_em": "2026-09-24T09:52:31.702744+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-24T13:08:57.291460+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-24",
+      "min": 20.4,
+      "max": 27.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 8.2,
+      "nascer_sol": "05:25",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-09-25",
+      "min": 19.8,
+      "max": 27.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 6.3,
+      "nascer_sol": "05:24",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 20.0,
+      "max": 28.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 8.9,
+      "nascer_sol": "05:24",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 19.5,
+      "max": 29.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 8.9,
+      "nascer_sol": "05:23",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 19.3,
+      "max": 28.5,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 9.0,
+      "nascer_sol": "05:22",
+      "por_sol": "17:34"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 18.7,
+      "max": 30.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.3,
+      "nascer_sol": "05:21",
+      "por_sol": "17:34"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 19.4,
+      "max": 30.0,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.3,
+      "nascer_sol": "05:20",
+      "por_sol": "17:34"
+    }
+  ],
   "reservatorio": {
     "nome": "Itapebi",
     "nivel_pct": 34.0,
@@ -25,49 +103,49 @@
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 6.1,
-    "categoria": "Alto",
+    "indice": 8.2,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 36,
+    "indice": 38,
     "categoria": "Boa",
     "principal_poluente": "PM10",
-    "pm25": 8.6,
-    "pm10": 13.7,
-    "no2": 0.0,
-    "o3": 54.0,
+    "pm25": 7.1,
+    "pm10": 11.3,
+    "no2": 0.1,
+    "o3": 56.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-17T13:00:59.082587+00:00"
+    "atualizado_em": "2026-09-24T13:08:57.291460+00:00"
   },
   "sol": {
-    "nascer": "05:31",
+    "nascer": "05:25",
     "por": "17:33",
-    "duracao_h": 12.0,
-    "estacao": "Inverno",
+    "duracao_h": 12.1,
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 90.0,
-    "fase_pct": 18.0,
-    "dias_proxima_cheia": 9,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 50.0,
+    "fase_pct": 41.7,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 25.3,
+  "temperatura_atual": 26.1,
   "vento": {
-    "velocidade_kmh": 10.5,
-    "direcao_graus": 109,
-    "direcao": "ESE",
-    "max_kmh": 14.6,
-    "rajada_kmh": 37.4,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 8.0,
+    "direcao_graus": 84,
+    "direcao": "E",
+    "max_kmh": 10.1,
+    "rajada_kmh": 26.3,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 73,
-  "pressao_hpa": 1024,
+  "umidade_pct": 70,
+  "pressao_hpa": 1018,
   "ponto_orvalho_c": 20.2,
   "dengue": {
     "nivel_alerta": 1,
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-17T13:23:03.924704+00:00"
   },
-  "_clima_em": "2026-09-17T13:00:59.082587+00:00"
+  "_clima_em": "2026-09-24T13:08:57.291460+00:00"
 }
