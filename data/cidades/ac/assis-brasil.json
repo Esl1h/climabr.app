@@ -4,58 +4,136 @@
   "slug": "assis-brasil",
   "latitude": -10.7798,
   "longitude": -70.0057,
-  "atualizado_em": "2026-09-25T09:52:55.067590+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-25T13:13:39.617002+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-25",
+      "min": 22.5,
+      "max": 31.7,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.9,
+      "uv": 8.8,
+      "nascer_sol": "07:27",
+      "por_sol": "19:35"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 23.2,
+      "max": 32.8,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 1.5,
+      "uv": 8.7,
+      "nascer_sol": "07:27",
+      "por_sol": "19:35"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 22.6,
+      "max": 29.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 6.5,
+      "uv": 8.4,
+      "nascer_sol": "07:26",
+      "por_sol": "19:35"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 22.8,
+      "max": 33.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 8.0,
+      "nascer_sol": "07:25",
+      "por_sol": "19:35"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 23.2,
+      "max": 30.7,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 2.1,
+      "uv": 9.2,
+      "nascer_sol": "07:25",
+      "por_sol": "19:35"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 23.2,
+      "max": 28.9,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 9.4,
+      "uv": 7.5,
+      "nascer_sol": "07:24",
+      "por_sol": "19:35"
+    },
+    {
+      "data": "2026-10-01",
+      "min": 22.1,
+      "max": 30.1,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 19.7,
+      "uv": 4.0,
+      "nascer_sol": "07:23",
+      "por_sol": "19:35"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 8.5,
+    "indice": 8.8,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 63,
+    "indice": 71,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 21.0,
-    "pm10": 22.0,
-    "no2": 0.6,
-    "o3": 23.0,
+    "pm25": 11.9,
+    "pm10": 12.1,
+    "no2": 0.1,
+    "o3": 41.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-22T13:03:13.673219+00:00"
+    "atualizado_em": "2026-09-25T13:13:39.617002+00:00"
   },
   "sol": {
-    "nascer": "07:29",
-    "por": "19:36",
+    "nascer": "07:27",
+    "por": "19:35",
     "duracao_h": 12.1,
-    "estacao": "Inverno",
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 81.0,
-    "fase_pct": 34.9,
-    "dias_proxima_cheia": 4,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 31.0,
+    "fase_pct": 45.1,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 27.2,
+  "temperatura_atual": 24.9,
   "vento": {
-    "velocidade_kmh": 8.4,
-    "direcao_graus": 304,
-    "direcao": "NO",
-    "max_kmh": 11.0,
-    "rajada_kmh": 31.0,
-    "direcao_dominante": "NO",
+    "velocidade_kmh": 7.7,
+    "direcao_graus": 298,
+    "direcao": "ONO",
+    "max_kmh": 9.3,
+    "rajada_kmh": 24.8,
+    "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 74,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 22.1,
+  "umidade_pct": 94,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 23.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-15T13:28:39.264092+00:00"
   },
-  "_clima_em": "2026-09-22T13:03:13.673219+00:00",
+  "_clima_em": "2026-09-25T13:13:39.617002+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 12,

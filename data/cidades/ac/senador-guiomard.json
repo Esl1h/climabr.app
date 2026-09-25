@@ -4,58 +4,136 @@
   "slug": "senador-guiomard",
   "latitude": -9.9972,
   "longitude": -67.4276,
-  "atualizado_em": "2026-09-25T09:54:20.634939+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-25T13:13:39.617002+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-25",
+      "min": 23.8,
+      "max": 35.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.3,
+      "uv": 9.1,
+      "nascer_sol": "07:17",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 24.1,
+      "max": 34.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.4,
+      "uv": 9.2,
+      "nascer_sol": "07:16",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 22.5,
+      "max": 34.2,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 4.5,
+      "uv": 7.6,
+      "nascer_sol": "07:16",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 23.5,
+      "max": 35.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 9.1,
+      "nascer_sol": "07:15",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 24.0,
+      "max": 31.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 5.7,
+      "uv": 5.9,
+      "nascer_sol": "07:15",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 23.6,
+      "max": 31.4,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 9.9,
+      "uv": 9.3,
+      "nascer_sol": "07:14",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-10-01",
+      "min": 23.5,
+      "max": 33.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.6,
+      "uv": 4.8,
+      "nascer_sol": "07:13",
+      "por_sol": "19:25"
+    }
+  ],
   "queimadas": {
     "focos_100km": 6,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 8.7,
+    "indice": 9.1,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 59,
+    "indice": 56,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 18.5,
-    "pm10": 20.0,
-    "no2": 2.2,
-    "o3": 32.0,
+    "pm25": 14.8,
+    "pm10": 15.3,
+    "no2": 2.0,
+    "o3": 52.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-22T13:03:13.673219+00:00"
+    "atualizado_em": "2026-09-25T13:13:39.617002+00:00"
   },
   "sol": {
-    "nascer": "07:19",
+    "nascer": "07:17",
     "por": "19:25",
     "duracao_h": 12.1,
-    "estacao": "Inverno",
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 81.0,
-    "fase_pct": 34.9,
-    "dias_proxima_cheia": 4,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 31.0,
+    "fase_pct": 45.1,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 29.5,
+  "temperatura_atual": 28.5,
   "vento": {
-    "velocidade_kmh": 8.6,
-    "direcao_graus": 358,
+    "velocidade_kmh": 7.7,
+    "direcao_graus": 357,
     "direcao": "N",
-    "max_kmh": 12.9,
-    "rajada_kmh": 33.5,
+    "max_kmh": 10.5,
+    "rajada_kmh": 27.0,
     "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 69,
-  "pressao_hpa": 1013,
-  "ponto_orvalho_c": 23.1,
+  "umidade_pct": 77,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 24.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-15T13:28:39.264092+00:00"
   },
-  "_clima_em": "2026-09-22T13:03:13.673219+00:00"
+  "_clima_em": "2026-09-25T13:13:39.617002+00:00"
 }

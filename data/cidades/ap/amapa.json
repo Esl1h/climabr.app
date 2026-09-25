@@ -4,8 +4,86 @@
   "slug": "amapa",
   "latitude": 1.7299,
   "longitude": -50.6024,
-  "atualizado_em": "2026-09-25T10:02:23.910154+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-25T13:13:39.617002+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-25",
+      "min": 24.3,
+      "max": 33.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 9.1,
+      "nascer_sol": "06:10",
+      "por_sol": "18:17"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 24.2,
+      "max": 36.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "06:10",
+      "por_sol": "18:16"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 24.8,
+      "max": 34.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.1,
+      "uv": 9.1,
+      "nascer_sol": "06:10",
+      "por_sol": "18:16"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 24.8,
+      "max": 34.0,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 2.3,
+      "uv": 9.1,
+      "nascer_sol": "06:09",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 23.7,
+      "max": 35.4,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "06:09",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 23.7,
+      "max": 35.8,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "06:09",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-10-01",
+      "min": 25.4,
+      "max": 34.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.2,
+      "nascer_sol": "06:09",
+      "por_sol": "18:14"
+    }
+  ],
   "reservatorio": {
     "nome": "Coaracy Nunes",
     "nivel_pct": 96.8,
@@ -25,38 +103,38 @@
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 9.0,
+    "indice": 9.1,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 51,
+    "indice": 52,
     "categoria": "Moderada",
     "principal_poluente": "PM10",
-    "pm25": 8.8,
-    "pm10": 14.0,
-    "no2": 0.3,
-    "o3": 55.0,
+    "pm25": 7.4,
+    "pm10": 11.3,
+    "no2": 0.2,
+    "o3": 43.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-16T13:04:57.232020+00:00"
+    "atualizado_em": "2026-09-25T13:13:39.617002+00:00"
   },
   "sol": {
-    "nascer": "06:13",
-    "por": "18:20",
+    "nascer": "06:10",
+    "por": "18:17",
     "duracao_h": 12.1,
-    "estacao": "Verão",
+    "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 79.0,
-    "fase_pct": 14.6,
-    "dias_proxima_cheia": 10,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 31.0,
+    "fase_pct": 45.1,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 30.9,
+  "temperatura_atual": 31.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -83,17 +161,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-15T13:28:39.264092+00:00"
   },
-  "_clima_em": "2026-09-16T13:04:57.232020+00:00",
+  "_clima_em": "2026-09-25T13:13:39.617002+00:00",
   "vento": {
-    "velocidade_kmh": 11.8,
-    "direcao_graus": 77,
-    "direcao": "ENE",
-    "max_kmh": 15.8,
-    "rajada_kmh": 36.4,
+    "velocidade_kmh": 10.2,
+    "direcao_graus": 54,
+    "direcao": "NE",
+    "max_kmh": 15.1,
+    "rajada_kmh": 37.1,
     "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
   "umidade_pct": 57,
-  "pressao_hpa": 1015,
-  "ponto_orvalho_c": 21.3
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 22.1
 }

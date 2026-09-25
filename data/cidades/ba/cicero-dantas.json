@@ -4,8 +4,86 @@
   "slug": "cicero-dantas",
   "latitude": -10.5069,
   "longitude": -38.4542,
-  "atualizado_em": "2026-09-25T10:16:01.752169+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-25T13:13:39.617002+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-25",
+      "min": 19.3,
+      "max": 30.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 9.2,
+      "nascer_sol": "05:21",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 19.3,
+      "max": 31.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 9.2,
+      "nascer_sol": "05:20",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 18.9,
+      "max": 30.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.1,
+      "uv": 9.3,
+      "nascer_sol": "05:20",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 19.9,
+      "max": 30.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 8.8,
+      "nascer_sol": "05:19",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 19.9,
+      "max": 31.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.3,
+      "nascer_sol": "05:18",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 19.6,
+      "max": 33.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.0,
+      "nascer_sol": "05:18",
+      "por_sol": "17:29"
+    },
+    {
+      "data": "2026-10-01",
+      "min": 20.0,
+      "max": 34.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:17",
+      "por_sol": "17:29"
+    }
+  ],
   "reservatorio": {
     "nome": "Xingo",
     "nivel_pct": 68.3,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 9.0,
+    "indice": 9.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 33,
+    "indice": 27,
     "categoria": "Boa",
-    "principal_poluente": "PM10",
-    "pm25": 6.2,
-    "pm10": 9.6,
-    "no2": 0.4,
-    "o3": 60.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 3.0,
+    "pm10": 4.4,
+    "no2": 0.5,
+    "o3": 65.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-17T13:00:59.082587+00:00"
+    "atualizado_em": "2026-09-25T13:13:39.617002+00:00"
   },
   "sol": {
-    "nascer": "05:26",
-    "por": "17:30",
+    "nascer": "05:21",
+    "por": "17:29",
     "duracao_h": 12.1,
-    "estacao": "Inverno",
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 90.0,
-    "fase_pct": 18.0,
-    "dias_proxima_cheia": 9,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 31.0,
+    "fase_pct": 45.1,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 27.6,
+  "temperatura_atual": 27.8,
   "vento": {
-    "velocidade_kmh": 18.4,
-    "direcao_graus": 119,
+    "velocidade_kmh": 15.4,
+    "direcao_graus": 120,
     "direcao": "ESE",
-    "max_kmh": 28.1,
-    "rajada_kmh": 54.4,
-    "direcao_dominante": "SE",
+    "max_kmh": 20.7,
+    "rajada_kmh": 39.2,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 48,
-  "pressao_hpa": 1021,
-  "ponto_orvalho_c": 15.5,
+  "umidade_pct": 53,
+  "pressao_hpa": 1017,
+  "ponto_orvalho_c": 17.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-17T13:23:03.924704+00:00"
   },
-  "_clima_em": "2026-09-17T13:00:59.082587+00:00",
+  "_clima_em": "2026-09-25T13:13:39.617002+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 67,

@@ -4,8 +4,86 @@
   "slug": "rio-preto-da-eva",
   "latitude": -2.5298,
   "longitude": -59.6384,
-  "atualizado_em": "2026-09-25T10:07:22.286269+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-25T13:13:39.617002+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-25",
+      "min": 23.3,
+      "max": 33.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 2.4,
+      "uv": 8.1,
+      "nascer_sol": "06:46",
+      "por_sol": "18:53"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 23.4,
+      "max": 32.5,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.2,
+      "uv": 9.1,
+      "nascer_sol": "06:46",
+      "por_sol": "18:53"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 24.6,
+      "max": 35.7,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.5,
+      "uv": 9.2,
+      "nascer_sol": "06:45",
+      "por_sol": "18:53"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 23.2,
+      "max": 31.1,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 8.9,
+      "uv": 4.8,
+      "nascer_sol": "06:45",
+      "por_sol": "18:52"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 23.4,
+      "max": 32.5,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 12.0,
+      "uv": 8.4,
+      "nascer_sol": "06:45",
+      "por_sol": "18:52"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 23.8,
+      "max": 34.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 8.8,
+      "nascer_sol": "06:44",
+      "por_sol": "18:52"
+    },
+    {
+      "data": "2026-10-01",
+      "min": 24.5,
+      "max": 35.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 5.4,
+      "nascer_sol": "06:44",
+      "por_sol": "18:52"
+    }
+  ],
   "reservatorio": {
     "nome": "Balbina",
     "nivel_pct": 64.4,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 9.1,
+    "indice": 8.1,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 50,
-    "categoria": "Boa",
+    "indice": 83,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 2.8,
-    "pm10": 2.8,
-    "no2": 0.5,
-    "o3": 48.0,
+    "pm25": 29.0,
+    "pm10": 30.4,
+    "no2": 1.1,
+    "o3": 71.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-22T13:03:13.673219+00:00"
+    "atualizado_em": "2026-09-25T13:13:39.617002+00:00"
   },
   "sol": {
-    "nascer": "06:48",
-    "por": "18:54",
+    "nascer": "06:46",
+    "por": "18:53",
     "duracao_h": 12.1,
-    "estacao": "Inverno",
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 81.0,
-    "fase_pct": 34.9,
-    "dias_proxima_cheia": 4,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 31.0,
+    "fase_pct": 45.1,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 32.0,
+  "temperatura_atual": 28.9,
   "vento": {
-    "velocidade_kmh": 8.1,
-    "direcao_graus": 55,
-    "direcao": "NE",
-    "max_kmh": 11.5,
-    "rajada_kmh": 33.1,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 2.7,
+    "direcao_graus": 58,
+    "direcao": "ENE",
+    "max_kmh": 10.1,
+    "rajada_kmh": 24.5,
+    "direcao_dominante": "ONO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 48,
-  "pressao_hpa": 1013,
-  "ponto_orvalho_c": 19.6,
+  "umidade_pct": 70,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 23.0,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-17T13:23:03.924704+00:00"
   },
-  "_clima_em": "2026-09-22T13:03:13.673219+00:00",
+  "_clima_em": "2026-09-25T13:13:39.617002+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 4955,

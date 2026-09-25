@@ -4,58 +4,136 @@
   "slug": "branquinha",
   "latitude": -9.223,
   "longitude": -36.0419,
-  "atualizado_em": "2026-09-25T09:55:31.064572+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-25T13:13:39.617002+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-25",
+      "min": 22.2,
+      "max": 29.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.5,
+      "uv": 6.8,
+      "nascer_sol": "05:12",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 21.4,
+      "max": 29.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 9.0,
+      "nascer_sol": "05:11",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 21.4,
+      "max": 28.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.5,
+      "uv": 8.3,
+      "nascer_sol": "05:10",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 21.9,
+      "max": 29.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.4,
+      "uv": 8.3,
+      "nascer_sol": "05:10",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 21.9,
+      "max": 29.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 6.5,
+      "nascer_sol": "05:09",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 20.1,
+      "max": 31.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.6,
+      "nascer_sol": "05:09",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-10-01",
+      "min": 22.0,
+      "max": 31.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "05:08",
+      "por_sol": "17:19"
+    }
+  ],
   "queimadas": {
     "focos_100km": 21,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 9.1,
-    "categoria": "Muito Alto",
+    "indice": 6.8,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 60,
+    "indice": 52,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 10.2,
-    "pm10": 14.8,
-    "no2": 0.0,
-    "o3": 71.0,
+    "pm25": 7.2,
+    "pm10": 10.2,
+    "no2": 0.6,
+    "o3": 69.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-22T13:03:13.673219+00:00"
+    "atualizado_em": "2026-09-25T13:13:39.617002+00:00"
   },
   "sol": {
-    "nascer": "05:13",
-    "por": "17:20",
+    "nascer": "05:12",
+    "por": "17:19",
     "duracao_h": 12.1,
-    "estacao": "Inverno",
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 81.0,
-    "fase_pct": 34.9,
-    "dias_proxima_cheia": 4,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 31.0,
+    "fase_pct": 45.1,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
   "temperatura_atual": 28.1,
   "vento": {
-    "velocidade_kmh": 8.6,
-    "direcao_graus": 123,
+    "velocidade_kmh": 11.7,
+    "direcao_graus": 115,
     "direcao": "ESE",
-    "max_kmh": 18.6,
-    "rajada_kmh": 31.3,
+    "max_kmh": 19.1,
+    "rajada_kmh": 34.2,
     "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 53,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 17.7,
+  "umidade_pct": 62,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 20.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-15T13:28:39.264092+00:00"
   },
-  "_clima_em": "2026-09-22T13:03:13.673219+00:00",
+  "_clima_em": "2026-09-25T13:13:39.617002+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 2373,

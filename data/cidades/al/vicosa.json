@@ -4,53 +4,131 @@
   "slug": "vicosa",
   "latitude": -9.3592,
   "longitude": -36.2651,
-  "atualizado_em": "2026-09-25T10:02:13.931596+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-25T13:13:39.617002+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-25",
+      "min": 20.6,
+      "max": 27.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.0,
+      "uv": 6.9,
+      "nascer_sol": "05:12",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-09-26",
+      "min": 19.9,
+      "max": 27.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 9.1,
+      "nascer_sol": "05:12",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-09-27",
+      "min": 20.5,
+      "max": 27.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 5.2,
+      "uv": 9.0,
+      "nascer_sol": "05:11",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-09-28",
+      "min": 20.8,
+      "max": 26.5,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 5.7,
+      "uv": 7.5,
+      "nascer_sol": "05:11",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 21.1,
+      "max": 26.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.4,
+      "uv": 6.5,
+      "nascer_sol": "05:10",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 20.5,
+      "max": 28.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 8.8,
+      "nascer_sol": "05:09",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-10-01",
+      "min": 21.0,
+      "max": 28.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "05:09",
+      "por_sol": "17:20"
+    }
+  ],
   "queimadas": {
     "focos_100km": 17,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-24T12:00:41.507547+00:00"
   },
   "uv": {
-    "indice": 8.8,
-    "categoria": "Muito Alto",
+    "indice": 6.9,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 40,
+    "indice": 39,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 6.8,
-    "pm10": 9.9,
-    "no2": 0.8,
-    "o3": 58.0,
+    "pm25": 5.8,
+    "pm10": 8.3,
+    "no2": 0.9,
+    "o3": 68.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-16T13:04:57.232020+00:00"
+    "atualizado_em": "2026-09-25T13:13:39.617002+00:00"
   },
   "sol": {
-    "nascer": "05:18",
-    "por": "17:21",
+    "nascer": "05:12",
+    "por": "17:20",
     "duracao_h": 12.1,
-    "estacao": "Inverno",
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 79.0,
-    "fase_pct": 14.6,
-    "dias_proxima_cheia": 10,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 31.0,
+    "fase_pct": 45.1,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 25.5,
+  "temperatura_atual": 25.6,
   "vento": {
-    "velocidade_kmh": 15.3,
-    "direcao_graus": 87,
-    "direcao": "E",
-    "max_kmh": 17.6,
-    "rajada_kmh": 29.9,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 12.6,
+    "direcao_graus": 107,
+    "direcao": "ESE",
+    "max_kmh": 19.3,
+    "rajada_kmh": 34.2,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
   "dengue": {
@@ -79,10 +157,10 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-08-24T09:04:19.121354+00:00"
   },
-  "_clima_em": "2026-09-16T13:04:57.232020+00:00",
+  "_clima_em": "2026-09-25T13:13:39.617002+00:00",
   "umidade_pct": 74,
-  "pressao_hpa": 1019,
-  "ponto_orvalho_c": 20.5,
+  "pressao_hpa": 1017,
+  "ponto_orvalho_c": 20.7,
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 1529,
