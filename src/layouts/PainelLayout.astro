@@ -28,8 +28,21 @@ const ogTitle = cidade && estado ? `${cidade}/${estado.toUpperCase()} — ClimaB
 
 // Em páginas de cidade: card PNG (gerado pelo Worker) como imagem social.
 // PNG tem suporte universal (Twitter/X, Facebook, WhatsApp). O SVG fica como alternativo.
-const cardImage = ogImage ?? (estado && slug ? `https://climabr.app/${estado}/${slug}.png` : undefined);
+// Nas demais páginas (home, rankings, estado): card estático do produto.
+const cardImage = ogImage ?? (estado && slug ? `https://climabr.app/${estado}/${slug}.png` : 'https://climabr.app/og.png');
 const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.json` : undefined;
+
+// Rodapé de estados: 27 links de crawl/temático em todas as páginas. Dados
+// fixos (UFs existentes não mudam) para não importar 5571 municípios aqui.
+const UFS: [string, string][] = [
+  ['AC', 'Acre'], ['AL', 'Alagoas'], ['AP', 'Amapá'], ['AM', 'Amazonas'],
+  ['BA', 'Bahia'], ['CE', 'Ceará'], ['DF', 'Distrito Federal'], ['ES', 'Espírito Santo'],
+  ['GO', 'Goiás'], ['MA', 'Maranhão'], ['MT', 'Mato Grosso'], ['MS', 'Mato Grosso do Sul'],
+  ['MG', 'Minas Gerais'], ['PA', 'Pará'], ['PB', 'Paraíba'], ['PR', 'Paraná'],
+  ['PE', 'Pernambuco'], ['PI', 'Piauí'], ['RJ', 'Rio de Janeiro'], ['RN', 'Rio Grande do Norte'],
+  ['RS', 'Rio Grande do Sul'], ['RO', 'Rondônia'], ['RR', 'Roraima'], ['SC', 'Santa Catarina'],
+  ['SP', 'São Paulo'], ['SE', 'Sergipe'], ['TO', 'Tocantins'],
+];
 ---
 
 <!doctype html>
@@ -103,8 +116,9 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
     <header class="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur px-4 py-3">
       <div class="flex items-center justify-between max-w-3xl mx-auto">
         <!-- Logo -->
-        <a href="/" class="text-lg font-bold tracking-tight hover:opacity-80 transition-opacity">
-          <span aria-hidden="true" class="not-italic mr-1">🛰️</span><span class="italic text-emerald-700 dark:text-emerald-500">Clima</span><span class="italic text-blue-600 dark:text-blue-500">BR</span><span class="text-yellow-600 dark:text-yellow-500">.app</span>
+        <a href="/" class="flex items-center gap-1.5 text-lg font-bold tracking-tight hover:opacity-80 transition-opacity">
+          <img src="/favicon.svg" alt="" aria-hidden="true" width="20" height="20" class="h-5 w-5" />
+          <span><span>Clima</span><span class="text-primary dark:text-primary">BR</span><span class="font-medium text-muted-foreground">.app</span></span>
         </a>
 
         <!-- Busca de cidade: índice carregado sob demanda no primeiro foco -->
@@ -161,6 +175,14 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
               class="hidden absolute right-0 top-10 w-48 bg-popover border border-border rounded-lg shadow-xl z-50 py-1"
               role="menu"
             >
+              <button
+                id="btn-instalar"
+                class="hidden items-center gap-2 px-4 py-2.5 text-left text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
+                role="menuitem"
+              >
+                <span class="text-primary text-xs">⤓</span>
+                Instalar app
+              </button>
               <a
                 id="menu-telao"
                 href="#"
@@ -217,9 +239,24 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
     </main>
 
     <footer class="mt-16 border-t border-border px-4 py-6 text-center text-xs text-muted-foreground">
-      Dados de fontes públicas: INMET, ANA, INPE, CETESB, SVS/MS, ANEEL e outros, atualizados automaticamente.
-      Acesse também via <a href="/curl" class="underline hover:text-foreground">curl, JSON</a> ou modo painel. &nbsp;·&nbsp;
-      <a href="/llms.txt" class="underline hover:text-foreground">llms.txt</a>
+      <nav aria-label="Previsão por estado" class="mx-auto max-w-3xl">
+        <p class="mb-2 text-[10px] font-semibold uppercase tracking-wider">Previsão por estado</p>
+        <ul class="flex flex-wrap justify-center gap-x-3 gap-y-1">
+          {UFS.map(([uf, nome]) => (
+            <li>
+              <a href={`/${uf.toLowerCase()}`} class="hover:text-foreground hover:underline" title={`${nome} (${uf})`}>
+                {uf}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <p class="mt-4">
+        Dados de fontes públicas: INMET, ANA, INPE, CETESB, SVS/MS, ANEEL e outros, atualizados automaticamente.
+        <a href="/fontes" class="underline hover:text-foreground">Fontes e método</a>. &nbsp;·&nbsp;
+        Acesse também via <a href="/curl" class="underline hover:text-foreground">curl, JSON</a> ou modo painel. &nbsp;·&nbsp;
+        <a href="/llms.txt" class="underline hover:text-foreground">llms.txt</a>
+      </p>
     </footer>
 
     <script>
@@ -294,6 +331,32 @@ const jsonHref = estado && slug ? `https://climabr.app/api/${estado}/${slug}.jso
       document.addEventListener('astro:page-load', atualizarLinksCidade);
       // O swap do ClientRouter repõe os atributos estáticos do <html>; reaplica o tema
       document.addEventListener('astro:after-swap', aplicarTema);
+
+      // Instalar como app (PWA): o prompt só é disparável uma vez e só existe
+      // se o navegador oferecer; sem suporte, o item nunca aparece
+      interface PromptInstalar {
+        prompt(): void;
+        userChoice: Promise<{ outcome: string }>;
+      }
+      let promptInstalar: PromptInstalar | null = null;
+      document.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault(); // evita o prompt sair sem clique do usuário
+        promptInstalar = e as unknown as PromptInstalar;
+        const item = document.getElementById('btn-instalar');
+        item?.classList.remove('hidden');
+        item?.classList.add('flex');
+      });
+      document.addEventListener('click', async (e) => {
+        const item = e.target instanceof Element ? e.target.closest('#btn-instalar') : null;
+        if (!item || !promptInstalar) return;
+        promptInstalar.prompt();
+        await promptInstalar.userChoice; // evita prompt fantasma se o usuário fechou
+        promptInstalar = null;
+        document.getElementById('btn-instalar')?.classList.add('hidden');
+      });
+      document.addEventListener('appinstalled', () => {
+        document.getElementById('btn-instalar')?.classList.add('hidden');
+      });
 
       // PWA: service worker só em produção (no dev atrapalharia o HMR)
       if (import.meta.env.PROD && 'serviceWorker' in navigator) {
