@@ -4,7 +4,7 @@
 // - Páginas (navigate): NetworkFirst — offline serve a última versão vista
 // - Assets com hash (/_astro/): CacheFirst — imutáveis por definição
 // - API JSON: NetworkFirst com validade curta
-const VERSAO = 'v1';
+const VERSAO = 'v2';
 const CACHE_PAGINAS = `paginas-${VERSAO}`;
 const CACHE_ASSETS = `assets-${VERSAO}`;
 const CACHE_API = `api-${VERSAO}`;
@@ -12,8 +12,16 @@ const CACHES_ATUAIS = [CACHE_PAGINAS, CACHE_ASSETS, CACHE_API];
 const LIMITE_PAGINAS = 30;
 const LIMITE_API = 30;
 
-self.addEventListener('install', () => {
-  self.skipWaiting();
+self.addEventListener('install', (evento) => {
+  // offline.html precisa estar no cache desde a instalação: quando rede e
+  // cache falham, a resposta é esta página, não o erro do browser
+  evento.waitUntil(
+    (async () => {
+      const cache = await caches.open(CACHE_PAGINAS);
+      await cache.add('/offline.html');
+      self.skipWaiting();
+    })()
+  );
 });
 
 self.addEventListener('activate', (evento) => {
@@ -50,6 +58,14 @@ async function networkFirst(requisicao, nomeCache, limite) {
   }
 }
 
+// Último recurso de navegação: rede e cache falharam; no lugar do erro duro
+// do browser, mostra a página offline com atalhos para capitais
+async function offlineFallback(): Promise<Response> {
+  const cache = await caches.open(CACHE_PAGINAS);
+  const emCache = await cache.match('/offline.html');
+  return emCache ?? new Response('Sem conexão', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
+}
+
 async function cacheFirst(requisicao, nomeCache) {
   const cache = await caches.open(nomeCache);
   const emCache = await cache.match(requisicao);
@@ -67,7 +83,7 @@ self.addEventListener('fetch', (evento) => {
   if (url.origin !== self.location.origin) return;
 
   if (request.mode === 'navigate') {
-    evento.respondWith(networkFirst(request, CACHE_PAGINAS, LIMITE_PAGINAS));
+    evento.respondWith(networkFirst(request, CACHE_PAGINAS, LIMITE_PAGINAS).catch(offlineFallback));
     return;
   }
   if (url.pathname.startsWith('/_astro/')) {
