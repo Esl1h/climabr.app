@@ -43,7 +43,7 @@ interface Props {
 
 const { uf, nome, cidades } = Astro.props;
 
-const titulo = `${nome} (${uf.toUpperCase()}) — ${cidades.length} municípios — ClimaBR.app`;
+const titulo = `Previsão do tempo em ${nome} (${uf.toUpperCase()}) hoje | ClimaBR`;
 const descricao = `Dados ambientais dos ${cidades.length} municípios de ${nome}: previsão do tempo, ` +
   `qualidade do ar, índice UV, vento, reservatórios, queimadas e alertas de dengue por cidade.`;
 
@@ -326,5 +326,27 @@ const normalizar = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g,
     "url": `https://climabr.app/${uf}`,
     "isPartOf": { "@type": "WebSite", "name": "ClimaBR.app", "url": "https://climabr.app" },
     "about": { "@type": "Place", "name": nome, "addressRegion": uf.toUpperCase(), "addressCountry": "BR" },
+    "mainEntity": {
+      "@type": "Dataset",
+      "name": `Dados ambientais — ${nome} (${uf.toUpperCase()})`,
+      "description": `Ciclo de coleta e fontes publicados em https://climabr.app/fontes; cada município tem JSON em /api/${uf}/[slug].json.`,
+      "url": `https://climabr.app/${uf}`,
+      "creator": { "@type": "Organization", "name": "ClimaBR.app", "url": "https://climabr.app" },
+      "inLanguage": "pt-BR",
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": nome,
+        "address": {
+          "@type": "PostalAddress", "addressRegion": uf.toUpperCase(), "addressCountry": "BR",
+        },
+      },
+      "keywords": ["previsão do tempo", "qualidade do ar", "dengue", "reservatórios", "queimadas", nome],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "application/json",
+        "@id": `https://climabr.app/api/${uf}/[slug].json`,
+      },
+    },
   })} />
 </PainelLayout>
