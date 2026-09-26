@@ -1,36 +1,74 @@
 ---
 import type { DadosCidade } from '../lib/types';
+import { iconeTempoTexto } from '../lib/icone-tempo';
+import { corTemperatura } from '../lib/temperatura';
 
 interface Props {
   previsao: DadosCidade['previsao'];
 }
 const { previsao } = Astro.props;
 
+// Cor pela faixa térmica via CSS var: acompanha o tema e a hidratação
+// client-side reaplica a mesma var quando chega a previsão ao vivo
+const corTempoInline = (t: number) => ({ color: corTemperatura(t) });
+
 function diaSemana(dataStr: string): string {
   const d = new Date(dataStr + 'T12:00:00');
   return d.toLocaleDateString('pt-BR', { weekday: 'short' }).replace('.', '');
 }
+
+// Escala comum aos 7 dias: a banda de cada dia (min→max) é posicionada no
+// mesmo eixo, então a leitura é "tendência da semana", não barra isolada.
+const dias = previsao?.slice(0, 7) ?? [];
+const semanaMin = Math.min(...dias.map((d) => d.min));
+const semanaMax = Math.max(...dias.map((d) => d.max));
+const faixa = Math.max(semanaMax - semanaMin, 1); // evita divisão por 0 em cidade estável
+
+const banda = (dia: { min: number; max: number }) => {
+  const top = ((semanaMax - dia.max) / faixa) * 100;
+  const altura = Math.max(((dia.max - dia.min) / faixa) * 100, 6); // mínimo visível
+  return { top: `${top.toFixed(1)}%`, height: `${altura.toFixed(1)}%`, backgroundColor: corTemperatura(dia.max) };
+};
 ---
 
-{previsao && previsao.length > 0 && (
+{dias.length > 0 && (
   <section id="bloco-previsao" aria-label="Previsão do tempo" class="sm:col-span-2">
-    <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
-      <span aria-hidden="true">🌤</span> Previsão 7 dias
+    <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+      Previsão 7 dias
     </h2>
     <p class="sr-only">
-      Previsão para os próximos dias: {previsao.map(d => `${d.data}: mínima ${Math.round(d.min)}°C, máxima ${Math.round(d.max)}°C, ${d.condicao}`).join('; ')}
+      Previsão para os próximos dias: {dias.map(d => `${d.data}: mínima ${Math.round(d.min)}°C, máxima ${Math.round(d.max)}°C, ${d.condicao}`).join('; ')}
     </p>
+    <div
+      data-chuva-6h
+      class="mb-2 hidden flex-wrap items-baseline gap-x-3 gap-y-1 rounded-lg border border-border bg-card px-4 py-2.5 text-sm"
+    >
+      <span class="text-xs uppercase tracking-wider text-muted-foreground">Próximas 6h</span>
+      <span data-chuva-6h-conteudo class="hidden flex-wrap items-baseline gap-x-3"></span>
+    </div>
     <div class="grid grid-cols-4 gap-2 sm:grid-cols-7" data-previsao-grid>
-      {previsao.slice(0, 7).map((dia) => (
-        <div class="flex flex-col items-center rounded-lg border border-border bg-card px-2 py-3 text-center" data-dia>
+      {dias.map((dia) => (
+        <div class="flex flex-col items-center rounded-lg border border-border bg-card px-2 py-3 text-center transition-colors hover:border-primary/40" data-dia>
           <span class="text-xs text-muted-foreground capitalize" data-f="dow">{diaSemana(dia.data)}</span>
-          <span class="mt-1 inline-flex items-center gap-1">
+          <span class="mt-1.5 text-2xl leading-none" data-f="icone" aria-hidden="true">{iconeTempoTexto(dia.condicao ?? '')}</span>
+          <span class="mt-1.5 inline-flex items-center gap-1">
             <span class="text-sm leading-none text-status-pessimo" aria-hidden="true">↑</span>
-            <span class="text-lg font-bold tabular-nums text-foreground" data-f="max">{Math.round(dia.max)}°</span>
+            <span
+              class="text-lg font-bold tabular-nums"
+              data-f="max"
+              style={corTempoInline(dia.max)}
+            >{Math.round(dia.max)}°</span>
           </span>
           <span class="inline-flex items-center gap-1">
             <span class="text-xs leading-none text-status-info" aria-hidden="true">↓</span>
             <span class="text-xs tabular-nums text-muted-foreground" data-f="min">{Math.round(dia.min)}°</span>
+          </span>
+          <span class="relative mt-2 block h-9 w-6 overflow-hidden rounded-full bg-muted" aria-hidden="true">
+            <span
+              data-f="banda"
+              class="absolute inset-x-0 rounded-full bg-status-critico"
+              style={banda(dia)}
+            ></span>
           </span>
           <span class="mt-1 text-xs text-status-info" data-f="chuva" hidden={!(dia.chuva_mm > 0)}>{dia.chuva_mm > 0 ? `${dia.chuva_mm}mm` : ''}</span>
           <span class="mt-1 text-xs text-muted-foreground leading-tight" data-f="cond">{dia.condicao}</span>

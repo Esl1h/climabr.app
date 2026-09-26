@@ -39,8 +39,7 @@ const vel = vento?.velocidade_kmh ?? vento?.max_kmh;
 
 {vento && vel != null && (
   <section aria-label="Velocidade do vento">
-    <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
-      <span aria-hidden="true">🌬️</span> Vento
+    <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Vento
     </h2>
     <div class="rounded-lg border border-border bg-card p-4">
       <div class="flex items-center justify-between">
@@ -68,6 +67,10 @@ const vel = vento?.velocidade_kmh ?? vento?.max_kmh;
           <p class="mt-1">{vento.fonte}</p>
         </div>
       </div>
+      <p data-vento-12h class="mt-2 hidden border-t border-border pt-2 text-xs text-muted-foreground">
+        <span class="font-medium text-foreground/80">Próximas 12h:</span>
+        <span data-vento-12h-conteudo class="tabular-nums"></span>
+      </p>
     </div>
   </section>
 )}

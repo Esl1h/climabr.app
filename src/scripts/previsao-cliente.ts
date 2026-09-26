@@ -11,6 +11,7 @@
 
 import { corAqi, catAqi } from './cores-status';
 import { corTemperatura, catTemperatura } from '../lib/temperatura';
+import { iconeTempoWmo } from '../lib/icone-tempo';
 
 // WMO Weather Codes → descrição PT-BR (espelha scripts/scrape-openmeteo.py)
 const WMO_DESCRICAO: Record<number, string> = {
@@ -55,6 +56,7 @@ async function buscarOpenMeteo(lat: number, lon: number): Promise<any> {
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}`
     + `&current=temperature_2m,weather_code,relative_humidity_2m,pressure_msl,dew_point_2m`
     + `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_sum,uv_index_max`
+    + `&hourly=precipitation_probability,precipitation,wind_speed_10m,wind_gusts_10m,uv_index`
     + `&timezone=America%2FSao_Paulo&forecast_days=7`;
 
   const chave = `om:${lat},${lon}`;
@@ -204,6 +206,38 @@ export async function hidratarClima(): Promise<void> {
     tempEl.removeAttribute('data-skeleton');
     tempEl.hidden = false;
 
+    // Delta vs última visita: guarda a leitura localmente e compara se a
+    // anterior tiver menos de 36h (janela dentro de dia/noite). Nada sai do
+    // dispositivo; o chip só existe com hidratação bem-sucedida.
+    try {
+      const chaveDelta = `climabr_delta:${root.dataset.uf}/${root.dataset.slug}`;
+      const bruto = localStorage.getItem(chaveDelta);
+      if (bruto) {
+        const antes = JSON.parse(bruto) as { t: number; ts: number };
+        if (Date.now() - antes.ts > 36 * 3600_000) {
+          localStorage.removeItem(chaveDelta);
+        } else if (Math.abs(arred(tAtual) - antes.t) >= 0.5) {
+          const delta = arred(tAtual) - antes.t;
+          const chip = document.querySelector<HTMLElement>('[data-delta-ultima]');
+          if (chip) {
+            chip.textContent = `${delta > 0 ? '↑' : '↓'} ${Math.abs(delta).toFixed(1)}° vs sua última visita`;
+            chip.style.color = delta > 0 ? 'var(--status-ruim)' : 'var(--status-bom)';
+            chip.classList.remove('hidden');
+          }
+        }
+      }
+      localStorage.setItem(chaveDelta, JSON.stringify({ t: arred(tAtual), ts: Date.now() }));
+    } catch { /* storage indisponível: o delta é opcional */ }
+
+    // Ícone e rótulo de condição de hoje no cabeçalho (weather_code é mais
+    // preciso que o texto do snapshot)
+    if (typeof cur.weather_code === 'number') {
+      const iconeEl = document.getElementById('clima-icone');
+      if (iconeEl) iconeEl.textContent = iconeTempoWmo(cur.weather_code);
+      const condHojeEl = document.querySelector<HTMLElement>('[data-f="cond-atual"]');
+      if (condHojeEl) condHojeEl.textContent = WMO_DESCRICAO[cur.weather_code] ?? `Código ${cur.weather_code}`;
+    }
+
     // O resumo textual cita o mesmo valor; atualiza para não divergir
     const resumoEl = document.querySelector<HTMLElement>('[data-resumo-temp]');
     if (resumoEl) resumoEl.textContent = `${arred(tAtual).toFixed(1)}°C`;
@@ -266,6 +300,16 @@ export async function hidratarClima(): Promise<void> {
       set('min', `${dia.min}°`);
       set('cond', dia.cond);
 
+      // Ícone por código WMO do dia (faca diária: weather_code do daily)
+      const iconeEl = card.querySelector<HTMLElement>('[data-f="icone"]');
+      if (iconeEl && typeof daily?.weather_code?.[i] === 'number') {
+        iconeEl.textContent = iconeTempoWmo(daily.weather_code[i]);
+      }
+
+      // Cor da máxima acompanha a mesma faixa térmica do build
+      const maxEl = card.querySelector<HTMLElement>('[data-f="max"]');
+      if (maxEl) maxEl.style.color = corTemperatura(dia.max);
+
       const chuvaEl = card.querySelector<HTMLElement>('[data-f="chuva"]');
       if (chuvaEl) {
         if (dia.chuva > 0) {
@@ -276,6 +320,124 @@ export async function hidratarClima(): Promise<void> {
         }
       }
     });
+
+    // Banda min→max dos cards no mesmo eixo da semana: reposiciona todas as
+    // faixas sobre a nova escala da previsão ao vivo (o build posicionou
+    // pelo snapshot, que pode estar defasado)
+    const semanaMin = Math.min(...dias.map((d) => d.min));
+    const semanaMax = Math.max(...dias.map((d) => d.max));
+    const escala = Math.max(semanaMax - semanaMin, 1);
+    grid.querySelectorAll<HTMLElement>('[data-dia]').forEach((card, i) => {
+      const bandaEl = card.querySelector<HTMLElement>('[data-f="banda"]');
+      const dia = dias[i];
+      if (!bandaEl || !dia) return;
+      const top = ((semanaMax - dia.max) / escala) * 100;
+      const altura = Math.max(((dia.max - dia.min) / escala) * 100, 6);
+      bandaEl.style.top = `${top.toFixed(1)}%`;
+      bandaEl.style.height = `${altura.toFixed(1)}%`;
+      bandaEl.style.backgroundColor = corTemperatura(dia.max);
+    });
+  }
+
+  // Próximas 6h de chuva (probabilidade e mm) do próprio fetch, agora horária
+  const hourly = data?.hourly;
+  const faixa6h = document.querySelector<HTMLElement>('[data-chuva-6h]');
+  const conteudo6h = document.querySelector<HTMLElement>('[data-chuva-6h-conteudo]');
+  if (faixa6h && conteudo6h && Array.isArray(hourly?.time)) {
+    // Rótulo por hora: probabilidade quando chove pouco, mm quando pesa
+    const detalhe = (p: number, mm: number): string => (mm > 0.5 ? `${mm} mm` : `${p}%`);
+    const chip = (h: string, p: number, mm: number): string =>
+      `<span class="inline-flex items-center gap-1 tabular-nums ${p >= 50 || mm > 0.5 ? 'font-semibold text-status-info' : 'text-muted-foreground'}">${h} ${detalhe(p, mm)}</span>`;
+
+    // O corte "agora" usa o formato sueco sv-SE ("2026-09-26 00:45" no fuso),
+    // ordenável como string depois de normalizado pelo horaDeCorte
+    const inicio = horaDeCorte(hourly.time);
+
+    const totalMm = arred(hourly.time.slice(inicio, inicio + 6)
+      .map((_: string, i: number) => hourly.precipitation?.[inicio + i] ?? 0)
+      .reduce((a: number, b: number) => a + b, 0));
+    const totalProb = Math.max(...hourly.time.slice(inicio, inicio + 6)
+      .map((_: string, i: number) => hourly.precipitation_probability?.[inicio + i] ?? 0));
+
+    const selo = totalMm > 0.5
+      ? `<span class="font-semibold text-status-info">🌧️ ${totalMm} mm na janela de 6h</span>`
+      : totalProb >= 50
+        ? `<span class="font-semibold text-status-info">Risco de chuva: até ${totalProb}%</span>`
+        : `<span class="font-medium text-muted-foreground">Sem chuva nas próximas 6h</span>`;
+
+    const chips = hourly.time.slice(inicio, inicio + 6)
+      .map((t: string, i: number) =>
+        chip(`${t.slice(11, 13)}h`, hourly.precipitation_probability?.[inicio + i] ?? 0, arred(hourly.precipitation?.[inicio + i] ?? 0)))
+      .join('');
+
+    conteudo6h.innerHTML = `${selo}${chips}`;
+    conteudo6h.classList.remove('hidden');
+    conteudo6h.classList.add('flex'); // o gap-x entre os chips depende de flex
+    faixa6h.classList.remove('hidden');
+  }
+
+  // Rajada prevista nas próximas 12h (wind_gusts_10m). Sem API extra: é o
+  // mesmo fetch horário da chuva, então o custo é zero em requisições.
+  const vento12hEl = document.querySelector<HTMLElement>('[data-vento-12h]');
+  const vento12hTxt = document.querySelector<HTMLElement>('[data-vento-12h-conteudo]');
+  if (vento12hEl && vento12hTxt && Array.isArray(hourly?.time)) {
+    const apta = horaDeCorte(hourly.time);
+    const fim = Math.min(apta + 12, hourly.time.length);
+    let indiceRajada = apta;
+    let pico = -1;
+    for (let i = apta; i < fim; i++) {
+      const r = hourly.wind_gusts_10m?.[i] ?? -1;
+      if (r > pico) { pico = r; indiceRajada = i; }
+    }
+    vento12hEl.classList.remove('hidden');
+    if (pico > 0) {
+      vento12hTxt.textContent = `rajadas até ${Math.round(pico)} km/h, por volta das ${hourly.time[indiceRajada].slice(11, 13)}h`;
+    } else {
+      vento12hTxt.textContent = 'sem grade de rajada disponível';
+    }
+  }
+
+  // Curva de UV por hora (06h-19h): barras client-side no card do UV
+  const uvHorasEl = document.querySelector<HTMLElement>('[data-uv-horas]');
+  if (uvHorasEl?.hidden && Array.isArray(hourly?.uv_index)) {
+    const apta = horaDeCorte(hourly.time);
+    const horas: number[] = [];
+    const valores: number[] = [];
+    for (let i = apta; i < apta + 24 && i < hourly.time.length; i++) {
+      const hora = parseInt(hourly.time[i].slice(11, 13), 10);
+      if (hora < 6 || hora > 19) continue;
+      const v = hourly.uv_index[i];
+      if (typeof v === 'number') { horas.push(hora); valores.push(v); }
+    }
+    if (valores.length > 0 && valores.some((v) => v > 0.2)) {
+      const pico = Math.max(...valores);
+      const barras = uvHorasEl.querySelector<HTMLElement>('[data-uv-horas-barras]')!;
+      const rotulos = uvHorasEl.querySelector<HTMLElement>('[data-uv-horas-rotulos]')!;
+      for (let i = 0; i < valores.length; i++) {
+        const v = valores[i];
+        const bar = document.createElement('span');
+        bar.className = 'flex-1 rounded-sm bg-muted';
+        bar.style.height = `${Math.max((v / Math.max(pico, 1)) * 100, 4)}%`;
+        bar.style.backgroundColor = corUv(v);
+        if (v < 0.2) bar.style.opacity = '0.35';
+        bar.title = `${horas[i]}h · UV ${v.toFixed(1)}`;
+        barras.appendChild(bar);
+      }
+      rotulos.innerHTML = `<span>${horas[0]}h</span><span>${horas[horas.length - 1]}h</span>`;
+      uvHorasEl.hidden = false; // o markup usa o atributo, não a classe
+    }
+  }
+
+  // Primeiro índice cujo timestamp local >= agora. O Open-Meteo devolve o
+  // tempo no fuso pedido ("2026-09-26T01:00"); sv-SE gera o mesmo vetor só
+  // que com espaço, que não ordena igual — por isso normalizo para "T"
+  function horaDeCorte(times: string[]): number {
+    const agoraLocal = new Intl.DateTimeFormat('sv-SE', {
+      timeZone: 'America/Sao_Paulo', year: 'numeric', month: '2-digit',
+      day: '2-digit', hour: '2-digit', minute: '2-digit',
+    }).format(new Date()).replace(' ', 'T');
+    const i = times.findIndex((t) => t >= agoraLocal);
+    return i < 0 ? 0 : i;
   }
 
   // Índice UV (uv_index_max de hoje, do mesmo fetch)
