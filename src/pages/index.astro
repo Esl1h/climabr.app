@@ -8,6 +8,7 @@ import {
   corFocosTexto,
   corDengueTexto,
 } from '../lib/destaques';
+import { corTemperaturaTexto, catTemperatura } from '../lib/temperatura';
 
 const capitais = await capitaisAgora();
 const todas = await lerTodas();
@@ -66,8 +67,8 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
   <div class="space-y-10">
     <div class="mx-auto max-w-xl space-y-8">
       <div class="text-center space-y-2">
-        <h1 class="text-3xl font-bold">
-          <span class="italic text-emerald-700 dark:text-emerald-500">Clima</span><span class="italic text-blue-600 dark:text-blue-500">BR</span><span class="text-yellow-600 dark:text-yellow-500">.app</span>
+        <h1 class="text-4xl font-bold tracking-tight">
+          <span>Clima</span><span class="text-primary">BR</span><span class="font-medium text-muted-foreground">.app</span>
         </h1>
         <p class="text-muted-foreground">Previsão do tempo e painel ambiental para todas as 5.571 cidades brasileiras: qualidade do ar, água, clima e alertas</p>
       </div>
@@ -96,6 +97,7 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
 
       <button
         id="btn-geo"
+        aria-live="polite"
         class="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
       >
         📍 Usar minha localização
@@ -110,8 +112,8 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
     <!-- Alertas meteorológicos ativos por estado (INMET) -->
     {ufsAlerta.length > 0 && (
       <section aria-label="Alertas meteorológicos" data-alertas-home>
-        <h2 class="mb-3 text-base font-semibold text-foreground">
-          <span aria-hidden="true">⚠️</span> Alertas meteorológicos ativos
+        <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+          Alertas meteorológicos ativos
         </h2>
         <div class="flex flex-wrap gap-2">
           {ufsAlerta.map((u) => (
@@ -131,19 +133,48 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
 
     <!-- Capitais agora: snapshot do build, hidratado ao vivo por agora-cliente.ts -->
     <section aria-label="Capitais agora">
-      <h2 class="mb-3 text-base font-semibold text-foreground">Capitais agora</h2>
-      <div class="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5">
+      <div class="mb-3 flex flex-wrap items-baseline justify-between gap-2">
+        <h2 class="text-base font-semibold text-foreground">Capitais agora</h2>
+        <div class="flex items-center gap-3 text-xs">
+          <button
+            id="btn-ordenar-agora"
+            type="button"
+            class="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            ordem: alfabética ▾
+          </button>
+          <button
+            id="btn-comparar-agora"
+            type="button"
+            class="text-primary hover:underline"
+          >
+            comparar
+          </button>
+        </div>
+      </div>
+      <div
+        id="comparar-barra"
+        class="mb-2 hidden items-baseline gap-x-2 rounded-lg border border-primary/40 bg-primary/5 px-3 py-2 text-xs"
+        aria-live="polite"
+      ></div>
+      <div class="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5" id="grid-capitais">
         {capitais.map((c) => (
           <a
             href={`/${c.uf}/${c.slug}`}
             data-agora
             data-lat={c.latitude}
             data-lon={c.longitude}
-            class="rounded-lg border border-border bg-card px-2.5 py-2 hover:bg-accent transition-colors"
+            class="group rounded-lg border border-border bg-card px-3 py-2.5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
           >
             <p class="truncate text-xs font-medium text-foreground/80">{c.nome}</p>
-            <p class="mt-0.5 flex items-baseline gap-2">
-              <span data-agora-temp class="text-sm font-bold tabular-nums text-foreground">{c.temperatura != null ? `${Math.round(c.temperatura)}°` : '—'}</span>
+            <p
+              data-agora-temp
+              class={`mt-1 text-xl font-bold tabular-nums leading-none ${c.temperatura != null ? corTemperaturaTexto(c.temperatura) : ''}`}
+              title={c.temperatura != null ? catTemperatura(c.temperatura) : undefined}
+            >
+              {c.temperatura != null ? `${Math.round(c.temperatura)}°` : '—'}
+            </p>
+            <p class="mt-1">
               <span
                 data-agora-aqi
                 hidden={c.aqi == null}
@@ -232,6 +263,12 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
     "url": "https://climabr.app",
     "description": "Previsão do tempo e painel ambiental para todas as 5.571 cidades brasileiras: qualidade do ar, água, clima e alertas.",
     "inLanguage": "pt-BR",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ClimaBR.app",
+      "url": "https://climabr.app",
+      "logo": { "@type": "ImageObject", "url": "https://climabr.app/favicon.svg" },
+    },
     "potentialAction": {
       "@type": "SearchAction",
       "target": { "@type": "EntryPoint", "urlTemplate": "https://climabr.app/?q={termo}" },
@@ -313,8 +350,92 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
   initHome();
   document.addEventListener('astro:page-load', initHome);
 
-  // Geolocalização: acha o município mais próximo no índice, tudo no cliente;
-  // a permissão é pedida pelo próprio navegador e nada sai do dispositivo
+  // Ordenar/comparar capitais: só reordena após a hidratação trazer data-temp.
+  // Re-executa em cada navegação (ClientRouter recria o DOM); o dataset.init
+  // evita achar listeners duplicados na primeira carga.
+  function initAgoraFerramentas(): void {
+    const grid = document.getElementById('grid-capitais');
+    const btnOrdenar = document.getElementById('btn-ordenar-agora');
+    const btnComparar = document.getElementById('btn-comparar-agora');
+    const barra = document.getElementById('comparar-barra');
+    if (!grid || !btnOrdenar || !btnComparar || !barra || grid.dataset.init) return;
+    grid.dataset.init = '1';
+
+    let ordenado = false;
+    btnOrdenar.addEventListener('click', () => {
+      aoTempo(grid, btnOrdenar, ordenado);
+    });
+
+    function aoTempo(caixa: HTMLElement, botao: HTMLElement, reverso: boolean): void {
+      const itens = [...caixa.querySelectorAll<HTMLElement>('[data-agora]')];
+      const prontos = itens.filter((i) => i.dataset.temp != null);
+      if (prontos.length === 0) return;
+      prontos.sort((a, b) =>
+        reverso ? Number(a.dataset.temp) - Number(b.dataset.temp)
+          : Number(b.dataset.temp) - Number(a.dataset.temp));
+      prontos.forEach((i) => caixa.appendChild(i));
+      botao.textContent = reverso ? 'ordem: alfabética ↺' : 'ordem: mais quente ↺';
+      ordenado = !reverso;
+    }
+
+    // Comparar: modo seleção com chips; até 3 capitais na barra
+    let comparando = false;
+    const escolhidas: HTMLElement[] = [];
+    const desenharBarra = (): void => {
+      barra.textContent = '';
+      const nomes: string[] = [];
+      for (const el of escolhidas) {
+        const nome = el.querySelector('p')?.textContent ?? '';
+        nomes.push(`${nome} (${el.dataset.temp ?? '?'}°)`);
+        const chip = document.createElement('button');
+        chip.type = 'button';
+        chip.textContent = `${nome} ×`;
+        chip.className = 'rounded-full border border-input bg-card px-2 py-0.5 shrink-0 hover:text-destructive';
+        chip.addEventListener('click', () => {
+          const i = escolhidas.indexOf(el);
+          if (i >= 0) escolhidas.splice(i, 1);
+          desenharBarra();
+        });
+        barra.appendChild(chip);
+      }
+      if (escolhidas.length >= 2) {
+        const dica = document.createElement('span');
+        dica.className = 'text-muted-foreground';
+        dica.textContent = `diferença: ${(
+          Math.max(...escolhidas.map((e) => Number(e.dataset.temp ?? 0))) -
+          Math.min(...escolhidas.map((e) => Number(e.dataset.temp ?? 0)))
+        ).toFixed(0)}°`;
+        barra.appendChild(dica);
+      }
+      barra.classList.toggle('hidden', escolhidas.length === 0);
+    };
+
+    btnComparar.addEventListener('click', () => {
+      comparando = !comparando;
+      btnComparar.textContent = comparando ? 'cancelar comparação' : 'comparar';
+      if (!comparando) {
+        escolhidas.length = 0;
+        desenharBarra();
+      }
+    });
+
+    // No modo comparação, clique num cartão seleciona em vez de navegar
+    grid.addEventListener('click', (e) => {
+      if (e.defaultPrevented || !comparando) return;
+      const cartao = (e.target instanceof Element)
+        ? e.target.closest<HTMLElement>('[data-agora]')
+        : null;
+      if (!cartao) return;
+      e.preventDefault();
+      e.stopPropagation();
+      const i = escolhidas.indexOf(cartao);
+      if (i >= 0) escolhidas.splice(i, 1);
+      else if (escolhidas.length < 3) escolhidas.push(cartao);
+      desenharBarra();
+    }, true);
+  }
+  initAgoraFerramentas();
+  document.addEventListener('astro:page-load', initAgoraFerramentas);
   document.addEventListener('click', (e) => {
     const btn = e.target instanceof Element ? e.target.closest<HTMLButtonElement>('#btn-geo') : null;
     if (!btn) return;

@@ -30,8 +30,7 @@ const temAlerta = nivelMax >= 1;
 
 {doencas.length > 0 && (
   <section aria-label="Alertas epidemiológicos">
-    <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
-      <span aria-hidden="true">🦟</span> Epidemiologia
+    <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Epidemiologia
     </h2>
     <div class="rounded-lg border border-border bg-card p-4 space-y-3">
       {doencas.map(({ label, dados }) => dados && (

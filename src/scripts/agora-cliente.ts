@@ -16,6 +16,7 @@
  * Não toca a Cloudflare: os bytes vão direto do Open-Meteo ao cliente.
  */
 import { corAqi, catAqi } from './cores-status';
+import { corTemperatura } from '../lib/temperatura';
 
 const TTL_MS = 10 * 60_000; // mesmo cache curto da página de cidade
 
@@ -69,6 +70,8 @@ function preencherTemperatura(el: HTMLElement, temp: unknown): void {
   const alvo = el.querySelector<HTMLElement>('[data-agora-temp]');
   if (alvo && typeof temp === 'number') {
     alvo.textContent = `${Math.round(temp)}°`;
+    // Acompanha a cor de faixa térmica renderizada no build pela mesma heurística
+    alvo.style.color = corTemperatura(temp);
     el.dataset.temp = String(temp); // guardado para a reordenação do ranking
   }
 }
