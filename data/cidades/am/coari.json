@@ -4,58 +4,136 @@
   "slug": "coari",
   "latitude": -4.4364,
   "longitude": -64.1253,
-  "atualizado_em": "2026-09-28T11:29:12.514860+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-28T16:25:03.144943+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-28",
+      "min": 23.5,
+      "max": 32.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 13.0,
+      "uv": 7.7,
+      "nascer_sol": "07:03",
+      "por_sol": "19:11"
+    },
+    {
+      "data": "2026-09-29",
+      "min": 23.5,
+      "max": 32.7,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 4.6,
+      "uv": 9.2,
+      "nascer_sol": "07:02",
+      "por_sol": "19:10"
+    },
+    {
+      "data": "2026-09-30",
+      "min": 23.9,
+      "max": 33.4,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 6.7,
+      "uv": 9.1,
+      "nascer_sol": "07:02",
+      "por_sol": "19:10"
+    },
+    {
+      "data": "2026-10-01",
+      "min": 24.9,
+      "max": 33.7,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.8,
+      "uv": 9.1,
+      "nascer_sol": "07:01",
+      "por_sol": "19:10"
+    },
+    {
+      "data": "2026-10-02",
+      "min": 23.9,
+      "max": 32.5,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 5.4,
+      "uv": 6.2,
+      "nascer_sol": "07:01",
+      "por_sol": "19:10"
+    },
+    {
+      "data": "2026-10-03",
+      "min": 23.5,
+      "max": 32.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.3,
+      "uv": 8.6,
+      "nascer_sol": "07:00",
+      "por_sol": "19:10"
+    },
+    {
+      "data": "2026-10-04",
+      "min": 24.7,
+      "max": 34.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.3,
+      "nascer_sol": "07:00",
+      "por_sol": "19:09"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-28T14:14:58.236636+00:00"
   },
   "uv": {
-    "indice": 5.4,
-    "categoria": "Moderado",
+    "indice": 7.7,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 45,
-    "categoria": "Boa",
+    "indice": 56,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 2.8,
-    "pm10": 2.8,
-    "no2": 0.7,
-    "o3": 29.0,
+    "pm25": 15.0,
+    "pm10": 15.8,
+    "no2": 0.1,
+    "o3": 54.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-26T12:38:48.148943+00:00"
+    "atualizado_em": "2026-09-28T16:25:03.144943+00:00"
   },
   "sol": {
-    "nascer": "07:04",
+    "nascer": "07:03",
     "por": "19:11",
     "duracao_h": 12.1,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 10.0,
-    "fase_pct": 48.4,
-    "dias_proxima_cheia": 0,
+    "nome": "Cheia",
+    "iluminacao_pct": 32.0,
+    "fase_pct": 55.2,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 24.5,
+  "temperatura_atual": 31.7,
   "vento": {
-    "velocidade_kmh": 3.5,
-    "direcao_graus": 129,
-    "direcao": "SE",
-    "max_kmh": 4.9,
-    "rajada_kmh": 25.9,
-    "direcao_dominante": "NE",
+    "velocidade_kmh": 7.1,
+    "direcao_graus": 276,
+    "direcao": "O",
+    "max_kmh": 13.3,
+    "rajada_kmh": 32.8,
+    "direcao_dominante": "ONO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 96,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 23.9,
+  "umidade_pct": 65,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 24.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-17T13:23:03.924704+00:00"
   },
-  "_clima_em": "2026-09-26T12:38:48.148943+00:00",
+  "_clima_em": "2026-09-28T16:25:03.144943+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 873,
