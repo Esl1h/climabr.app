@@ -4,58 +4,136 @@
   "slug": "manaquiri",
   "latitude": -3.7791,
   "longitude": -60.6973,
-  "atualizado_em": "2026-09-30T10:59:45.248206+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-30T14:35:04.989987+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-30",
+      "min": 24.3,
+      "max": 34.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "06:48",
+      "por_sol": "18:56"
+    },
+    {
+      "data": "2026-10-01",
+      "min": 24.1,
+      "max": 35.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.2,
+      "uv": 9.2,
+      "nascer_sol": "06:48",
+      "por_sol": "18:56"
+    },
+    {
+      "data": "2026-10-02",
+      "min": 24.8,
+      "max": 32.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 2.9,
+      "uv": 9.1,
+      "nascer_sol": "06:47",
+      "por_sol": "18:56"
+    },
+    {
+      "data": "2026-10-03",
+      "min": 23.1,
+      "max": 32.3,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 4.9,
+      "uv": 9.1,
+      "nascer_sol": "06:47",
+      "por_sol": "18:56"
+    },
+    {
+      "data": "2026-10-04",
+      "min": 23.6,
+      "max": 32.7,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 3.3,
+      "uv": 9.2,
+      "nascer_sol": "06:46",
+      "por_sol": "18:55"
+    },
+    {
+      "data": "2026-10-05",
+      "min": 24.1,
+      "max": 34.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 8.7,
+      "nascer_sol": "06:46",
+      "por_sol": "18:55"
+    },
+    {
+      "data": "2026-10-06",
+      "min": 24.5,
+      "max": 27.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 6.6,
+      "uv": 8.4,
+      "nascer_sol": "06:46",
+      "por_sol": "18:55"
+    }
+  ],
   "queimadas": {
     "focos_100km": 18,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-30T12:49:59.560823+00:00"
   },
   "uv": {
-    "indice": 9.1,
+    "indice": 9.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 100,
+    "indice": 59,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 16.0,
-    "pm10": 16.8,
-    "no2": 0.8,
-    "o3": 58.0,
+    "pm25": 15.1,
+    "pm10": 15.8,
+    "no2": 0.4,
+    "o3": 51.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-27T13:30:19.706334+00:00"
+    "atualizado_em": "2026-09-30T14:35:04.989987+00:00"
   },
   "sol": {
-    "nascer": "06:49",
-    "por": "18:57",
+    "nascer": "06:48",
+    "por": "18:56",
     "duracao_h": 12.1,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 11.0,
-    "fase_pct": 51.8,
-    "dias_proxima_cheia": 1,
+    "iluminacao_pct": 68.0,
+    "fase_pct": 62.0,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 31.7,
+  "temperatura_atual": 33.4,
   "vento": {
-    "velocidade_kmh": 4.0,
-    "direcao_graus": 238,
-    "direcao": "OSO",
-    "max_kmh": 7.3,
-    "rajada_kmh": 23.4,
-    "direcao_dominante": "SO",
+    "velocidade_kmh": 5.0,
+    "direcao_graus": 109,
+    "direcao": "ESE",
+    "max_kmh": 8.8,
+    "rajada_kmh": 20.9,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 62,
-  "pressao_hpa": 1013,
-  "ponto_orvalho_c": 23.4,
+  "umidade_pct": 54,
+  "pressao_hpa": 1011,
+  "ponto_orvalho_c": 22.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-17T13:23:03.924704+00:00"
   },
-  "_clima_em": "2026-09-27T13:30:19.706334+00:00",
+  "_clima_em": "2026-09-30T14:35:04.989987+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 3128,

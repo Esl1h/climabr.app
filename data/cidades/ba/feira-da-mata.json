@@ -4,33 +4,111 @@
   "slug": "feira-da-mata",
   "latitude": -14.1317,
   "longitude": -44.2322,
-  "atualizado_em": "2026-09-30T11:11:22.116877+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-30T14:35:04.989987+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-30",
+      "min": 23.2,
+      "max": 39.8,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:40",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-10-01",
+      "min": 23.9,
+      "max": 39.1,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:39",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-10-02",
+      "min": 24.4,
+      "max": 40.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:39",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-10-03",
+      "min": 21.4,
+      "max": 38.7,
+      "condicao": "Chuva isolada forte",
+      "condicao_codigo": 82,
+      "chuva_mm": 11.3,
+      "uv": 5.3,
+      "nascer_sol": "05:38",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-10-04",
+      "min": 23.0,
+      "max": 35.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 0.9,
+      "uv": 6.1,
+      "nascer_sol": "05:37",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-10-05",
+      "min": 23.7,
+      "max": 35.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 9.0,
+      "nascer_sol": "05:36",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-10-06",
+      "min": 24.3,
+      "max": 37.5,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 9.0,
+      "nascer_sol": "05:36",
+      "por_sol": "17:53"
+    }
+  ],
   "queimadas": {
     "focos_100km": 71,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-30T12:49:59.560823+00:00"
   },
   "uv": {
-    "indice": 9.1,
+    "indice": 9.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 25,
+    "indice": 38,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
     "pm25": 4.6,
-    "pm10": 5.8,
-    "no2": 0.3,
-    "o3": 76.0,
+    "pm10": 5.1,
+    "no2": 0.6,
+    "o3": 94.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-27T13:30:19.706334+00:00"
+    "atualizado_em": "2026-09-30T14:35:04.989987+00:00"
   },
   "sol": {
-    "nascer": "05:42",
+    "nascer": "05:40",
     "por": "17:53",
     "duracao_h": 12.2,
     "estacao": "Primavera",
@@ -38,24 +116,24 @@
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 11.0,
-    "fase_pct": 51.8,
-    "dias_proxima_cheia": 1,
+    "iluminacao_pct": 68.0,
+    "fase_pct": 62.0,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 35.1,
+  "temperatura_atual": 38.4,
   "vento": {
-    "velocidade_kmh": 11.8,
-    "direcao_graus": 116,
-    "direcao": "ESE",
-    "max_kmh": 19.5,
-    "rajada_kmh": 41.0,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 4.6,
+    "direcao_graus": 21,
+    "direcao": "NNE",
+    "max_kmh": 15.7,
+    "rajada_kmh": 30.2,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 26,
-  "pressao_hpa": 1015,
-  "ponto_orvalho_c": 12.8,
+  "umidade_pct": 16,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 8.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-17T13:23:03.924704+00:00"
   },
-  "_clima_em": "2026-09-27T13:30:19.706334+00:00",
+  "_clima_em": "2026-09-30T14:35:04.989987+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 197,

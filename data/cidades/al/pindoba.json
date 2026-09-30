@@ -4,33 +4,111 @@
   "slug": "pindoba",
   "latitude": -9.476,
   "longitude": -36.2856,
-  "atualizado_em": "2026-09-30T10:53:54.777791+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-09-30T14:35:04.989987+00:00",
+  "previsao": [
+    {
+      "data": "2026-09-30",
+      "min": 20.1,
+      "max": 31.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.2,
+      "nascer_sol": "05:09",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-10-01",
+      "min": 21.2,
+      "max": 31.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 9.2,
+      "nascer_sol": "05:09",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-10-02",
+      "min": 21.1,
+      "max": 31.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 8.5,
+      "nascer_sol": "05:08",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-10-03",
+      "min": 20.5,
+      "max": 32.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.2,
+      "nascer_sol": "05:08",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-10-04",
+      "min": 20.9,
+      "max": 30.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.3,
+      "uv": 6.4,
+      "nascer_sol": "05:07",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-10-05",
+      "min": 20.5,
+      "max": 29.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.1,
+      "uv": 7.8,
+      "nascer_sol": "05:07",
+      "por_sol": "17:20"
+    },
+    {
+      "data": "2026-10-06",
+      "min": 20.8,
+      "max": 27.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 4.0,
+      "uv": 7.2,
+      "nascer_sol": "05:06",
+      "por_sol": "17:20"
+    }
+  ],
   "queimadas": {
     "focos_100km": 21,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-09-30T12:49:59.560823+00:00"
   },
   "uv": {
-    "indice": 7.5,
-    "categoria": "Alto",
+    "indice": 9.2,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 64,
+    "indice": 58,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 10.5,
-    "pm10": 14.7,
-    "no2": 0.4,
-    "o3": 63.0,
+    "pm25": 8.5,
+    "pm10": 11.4,
+    "no2": 0.7,
+    "o3": 77.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-27T13:30:19.706334+00:00"
+    "atualizado_em": "2026-09-30T14:35:04.989987+00:00"
   },
   "sol": {
-    "nascer": "05:11",
+    "nascer": "05:09",
     "por": "17:20",
     "duracao_h": 12.2,
     "estacao": "Primavera",
@@ -38,24 +116,24 @@
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 11.0,
-    "fase_pct": 51.8,
-    "dias_proxima_cheia": 1,
+    "iluminacao_pct": 68.0,
+    "fase_pct": 62.0,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 26.5,
+  "temperatura_atual": 30.2,
   "vento": {
-    "velocidade_kmh": 17.9,
-    "direcao_graus": 109,
-    "direcao": "ESE",
-    "max_kmh": 21.1,
-    "rajada_kmh": 40.3,
-    "direcao_dominante": "ESE",
+    "velocidade_kmh": 14.8,
+    "direcao_graus": 85,
+    "direcao": "E",
+    "max_kmh": 21.8,
+    "rajada_kmh": 39.6,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 65,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 19.5,
+  "umidade_pct": 47,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 17.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-15T13:28:39.264092+00:00"
   },
-  "_clima_em": "2026-09-27T13:30:19.706334+00:00"
+  "_clima_em": "2026-09-30T14:35:04.989987+00:00"
 }
