@@ -14,10 +14,10 @@ jobs:
     timeout-minutes: 40
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Setup Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: '3.12'
 
@@ -56,7 +56,7 @@ jobs:
 
       - name: Commit dados locais (fallback)
         if: always()
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: 'dados: coleta diária (Open-Meteo, SABESP, COPASA, dengue, alertas)'
           file_pattern: 'data/cidades/**/*.json data/alertas/*.json data/bandeira.json'
