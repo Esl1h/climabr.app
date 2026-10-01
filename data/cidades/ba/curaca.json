@@ -4,8 +4,86 @@
   "slug": "curaca",
   "latitude": -9.2225,
   "longitude": -39.6515,
-  "atualizado_em": "2026-09-30T11:10:33.421431+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-01T15:03:24.546197+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-01",
+      "min": 21.4,
+      "max": 36.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:22",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-10-02",
+      "min": 22.3,
+      "max": 35.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 9.3,
+      "nascer_sol": "05:22",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-10-03",
+      "min": 22.4,
+      "max": 35.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 9.2,
+      "nascer_sol": "05:21",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-10-04",
+      "min": 21.8,
+      "max": 33.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.3,
+      "nascer_sol": "05:21",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-10-05",
+      "min": 20.0,
+      "max": 34.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:20",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-10-06",
+      "min": 21.4,
+      "max": 34.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.9,
+      "nascer_sol": "05:19",
+      "por_sol": "17:33"
+    },
+    {
+      "data": "2026-10-07",
+      "min": 22.1,
+      "max": 35.1,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:19",
+      "por_sol": "17:33"
+    }
+  ],
   "reservatorio": {
     "nome": "Sobradinho",
     "nivel_pct": 65.4,
@@ -25,62 +103,62 @@
     "atualizado_em": "2026-10-01T13:35:56.890740+00:00"
   },
   "uv": {
-    "indice": 8.5,
+    "indice": 9.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 21,
+    "indice": 23,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 2.4,
-    "pm10": 3.4,
-    "no2": 0.2,
-    "o3": 64.0,
+    "pm25": 3.0,
+    "pm10": 3.9,
+    "no2": 0.3,
+    "o3": 75.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-28T16:25:03.144943+00:00"
+    "atualizado_em": "2026-10-01T15:03:24.546197+00:00"
   },
   "sol": {
-    "nascer": "05:24",
-    "por": "17:34",
+    "nascer": "05:22",
+    "por": "17:33",
     "duracao_h": 12.2,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 32.0,
-    "fase_pct": 55.2,
-    "dias_proxima_cheia": 2,
+    "nome": "Gibosa Minguante",
+    "iluminacao_pct": 82.0,
+    "fase_pct": 65.4,
+    "dias_proxima_cheia": 5,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 34.3,
+  "temperatura_atual": 34.8,
   "vento": {
-    "velocidade_kmh": 10.9,
-    "direcao_graus": 99,
+    "velocidade_kmh": 14.1,
+    "direcao_graus": 94,
     "direcao": "E",
-    "max_kmh": 25.6,
-    "rajada_kmh": 46.8,
-    "direcao_dominante": "ESE",
+    "max_kmh": 23.3,
+    "rajada_kmh": 41.0,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 28,
+  "umidade_pct": 30,
   "pressao_hpa": 1012,
-  "ponto_orvalho_c": 13.4,
+  "ponto_orvalho_c": 14.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
     "nivel_incidencia": 0,
     "nivel_incidencia_label": "Baixa",
-    "casos_semana": 3,
-    "casos_estimados": 3,
-    "incidencia_100k": 8.9,
+    "casos_semana": 0,
+    "casos_estimados": 0,
+    "incidencia_100k": 0.0,
     "populacao": 33603,
-    "semana_epidemiologica": 202632,
+    "semana_epidemiologica": 202638,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-08-24T09:04:19.121354+00:00"
+    "atualizado_em": "2026-10-01T15:25:16.482150+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -91,11 +169,11 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 33603,
-    "semana_epidemiologica": 202632,
+    "semana_epidemiologica": 202638,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-08-24T09:04:19.121354+00:00"
+    "atualizado_em": "2026-10-01T15:25:16.482150+00:00"
   },
-  "_clima_em": "2026-09-28T16:25:03.144943+00:00",
+  "_clima_em": "2026-10-01T15:03:24.546197+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 16,
