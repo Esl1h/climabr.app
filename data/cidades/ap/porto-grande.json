@@ -4,8 +4,86 @@
   "slug": "porto-grande",
   "latitude": 0.5856,
   "longitude": -51.67,
-  "atualizado_em": "2026-10-02T10:56:48.661191+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-02T14:25:50.112875+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-02",
+      "min": 22.7,
+      "max": 33.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 9.1,
+      "nascer_sol": "06:12",
+      "por_sol": "18:19"
+    },
+    {
+      "data": "2026-10-03",
+      "min": 22.7,
+      "max": 33.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 8.8,
+      "nascer_sol": "06:12",
+      "por_sol": "18:18"
+    },
+    {
+      "data": "2026-10-04",
+      "min": 22.2,
+      "max": 33.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 9.1,
+      "nascer_sol": "06:12",
+      "por_sol": "18:18"
+    },
+    {
+      "data": "2026-10-05",
+      "min": 22.9,
+      "max": 33.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 9.1,
+      "nascer_sol": "06:12",
+      "por_sol": "18:18"
+    },
+    {
+      "data": "2026-10-06",
+      "min": 23.6,
+      "max": 33.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 9.2,
+      "nascer_sol": "06:11",
+      "por_sol": "18:17"
+    },
+    {
+      "data": "2026-10-07",
+      "min": 21.5,
+      "max": 35.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "06:11",
+      "por_sol": "18:17"
+    },
+    {
+      "data": "2026-10-08",
+      "min": 22.8,
+      "max": 34.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "06:11",
+      "por_sol": "18:17"
+    }
+  ],
   "reservatorio": {
     "nome": "Cachoeira Caldeirao",
     "nivel_pct": 102.2,
@@ -25,38 +103,38 @@
     "atualizado_em": "2026-10-02T12:54:57.501977+00:00"
   },
   "uv": {
-    "indice": 9.2,
+    "indice": 9.1,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 39,
+    "indice": 44,
     "categoria": "Boa",
-    "principal_poluente": "PM2.5",
-    "pm25": 6.7,
-    "pm10": 9.6,
-    "no2": 0.3,
-    "o3": 52.0,
+    "principal_poluente": "PM10",
+    "pm25": 6.6,
+    "pm10": 10.4,
+    "no2": 0.2,
+    "o3": 46.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-09-30T14:35:04.989987+00:00"
+    "atualizado_em": "2026-10-02T14:25:50.112875+00:00"
   },
   "sol": {
-    "nascer": "06:13",
+    "nascer": "06:12",
     "por": "18:19",
     "duracao_h": 12.1,
     "estacao": "Outono",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 68.0,
-    "fase_pct": 62.0,
-    "dias_proxima_cheia": 4,
+    "nome": "Gibosa Minguante",
+    "iluminacao_pct": 92.0,
+    "fase_pct": 68.8,
+    "dias_proxima_cheia": 6,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 32.4,
+  "temperatura_atual": 32.0,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -83,17 +161,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-09-15T13:28:39.264092+00:00"
   },
-  "_clima_em": "2026-09-30T14:35:04.989987+00:00",
+  "_clima_em": "2026-10-02T14:25:50.112875+00:00",
   "vento": {
-    "velocidade_kmh": 10.0,
-    "direcao_graus": 81,
-    "direcao": "E",
-    "max_kmh": 13.8,
-    "rajada_kmh": 30.6,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 11.5,
+    "direcao_graus": 63,
+    "direcao": "ENE",
+    "max_kmh": 12.4,
+    "rajada_kmh": 34.6,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 51,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 21.0
+  "umidade_pct": 53,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 21.1
 }
