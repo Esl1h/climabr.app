@@ -4,8 +4,86 @@
   "slug": "sao-bras",
   "latitude": -10.1086,
   "longitude": -36.8619,
-  "atualizado_em": "2026-10-06T11:42:26.805541+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-06T14:42:45.396276+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-06",
+      "min": 23.7,
+      "max": 32.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 8.2,
+      "nascer_sol": "05:08",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-10-07",
+      "min": 22.1,
+      "max": 32.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:07",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-10-08",
+      "min": 21.8,
+      "max": 32.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 9.2,
+      "nascer_sol": "05:07",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-10-09",
+      "min": 22.7,
+      "max": 32.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.1,
+      "uv": 9.3,
+      "nascer_sol": "05:06",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-10-10",
+      "min": 22.2,
+      "max": 33.2,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:06",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-10-11",
+      "min": 22.8,
+      "max": 33.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 9.3,
+      "nascer_sol": "05:05",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-10-12",
+      "min": 23.3,
+      "max": 31.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 9.2,
+      "nascer_sol": "05:05",
+      "por_sol": "17:22"
+    }
+  ],
   "reservatorio": {
     "nome": "Xingo",
     "nivel_pct": 70.7,
@@ -25,25 +103,25 @@
     "atualizado_em": "2026-10-06T13:27:52.810853+00:00"
   },
   "uv": {
-    "indice": 9.2,
+    "indice": 8.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 52,
+    "indice": 59,
     "categoria": "Moderada",
     "principal_poluente": "PM10",
-    "pm25": 9.0,
-    "pm10": 13.8,
-    "no2": 0.3,
-    "o3": 66.0,
+    "pm25": 8.3,
+    "pm10": 12.7,
+    "no2": 0.5,
+    "o3": 64.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-04T13:39:04.907077+00:00"
+    "atualizado_em": "2026-10-06T14:42:45.396276+00:00"
   },
   "sol": {
-    "nascer": "05:09",
+    "nascer": "05:08",
     "por": "17:22",
     "duracao_h": 12.2,
     "estacao": "Primavera",
@@ -51,24 +129,24 @@
   },
   "lua": {
     "nome": "Quarto Minguante",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 75.5,
-    "dias_proxima_cheia": 8,
+    "iluminacao_pct": 90.0,
+    "fase_pct": 82.3,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 32.9,
+  "temperatura_atual": 31.6,
   "vento": {
-    "velocidade_kmh": 24.1,
-    "direcao_graus": 112,
+    "velocidade_kmh": 22.2,
+    "direcao_graus": 113,
     "direcao": "ESE",
-    "max_kmh": 26.0,
-    "rajada_kmh": 47.5,
-    "direcao_dominante": "E",
+    "max_kmh": 28.6,
+    "rajada_kmh": 50.4,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 37,
+  "umidade_pct": 50,
   "pressao_hpa": 1017,
-  "ponto_orvalho_c": 16.5,
+  "ponto_orvalho_c": 19.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-03T13:22:23.257726+00:00"
   },
-  "_clima_em": "2026-10-04T13:39:04.907077+00:00",
+  "_clima_em": "2026-10-06T14:42:45.396276+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 200,

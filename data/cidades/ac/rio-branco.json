@@ -4,33 +4,111 @@
   "slug": "rio-branco",
   "latitude": -10.0661,
   "longitude": -68.3711,
-  "atualizado_em": "2026-10-06T11:35:21.380046+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-06T14:42:45.396276+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-06",
+      "min": 24.9,
+      "max": 37.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.3,
+      "nascer_sol": "07:14",
+      "por_sol": "19:28"
+    },
+    {
+      "data": "2026-10-07",
+      "min": 24.5,
+      "max": 36.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.2,
+      "uv": 9.3,
+      "nascer_sol": "07:13",
+      "por_sol": "19:28"
+    },
+    {
+      "data": "2026-10-08",
+      "min": 23.7,
+      "max": 35.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 4.0,
+      "uv": 9.3,
+      "nascer_sol": "07:13",
+      "por_sol": "19:28"
+    },
+    {
+      "data": "2026-10-09",
+      "min": 23.7,
+      "max": 34.5,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 4.1,
+      "uv": 9.3,
+      "nascer_sol": "07:12",
+      "por_sol": "19:28"
+    },
+    {
+      "data": "2026-10-10",
+      "min": 23.7,
+      "max": 35.5,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 18.8,
+      "uv": 7.4,
+      "nascer_sol": "07:12",
+      "por_sol": "19:28"
+    },
+    {
+      "data": "2026-10-11",
+      "min": 22.6,
+      "max": 34.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 10.6,
+      "nascer_sol": "07:11",
+      "por_sol": "19:28"
+    },
+    {
+      "data": "2026-10-12",
+      "min": 24.3,
+      "max": 36.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.3,
+      "nascer_sol": "07:11",
+      "por_sol": "19:28"
+    }
+  ],
   "queimadas": {
     "focos_100km": 223,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-06T13:27:52.810853+00:00"
   },
   "uv": {
-    "indice": 8.8,
+    "indice": 9.3,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 55,
+    "indice": 52,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 19.6,
-    "pm10": 19.9,
-    "no2": 0.7,
+    "pm25": 10.0,
+    "pm10": 10.4,
+    "no2": 0.3,
     "o3": 25.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-04T13:39:04.907077+00:00"
+    "atualizado_em": "2026-10-06T14:42:45.396276+00:00"
   },
   "sol": {
-    "nascer": "07:15",
+    "nascer": "07:14",
     "por": "19:28",
     "duracao_h": 12.2,
     "estacao": "Primavera",
@@ -38,24 +116,24 @@
   },
   "lua": {
     "nome": "Quarto Minguante",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 75.5,
-    "dias_proxima_cheia": 8,
+    "iluminacao_pct": 90.0,
+    "fase_pct": 82.3,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 27.4,
+  "temperatura_atual": 35.5,
   "vento": {
-    "velocidade_kmh": 9.2,
-    "direcao_graus": 313,
-    "direcao": "NO",
-    "max_kmh": 14.9,
-    "rajada_kmh": 39.2,
-    "direcao_dominante": "NNO",
+    "velocidade_kmh": 10.6,
+    "direcao_graus": 349,
+    "direcao": "N",
+    "max_kmh": 10.7,
+    "rajada_kmh": 32.0,
+    "direcao_dominante": "NO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 80,
-  "pressao_hpa": 1014,
-  "ponto_orvalho_c": 23.7,
+  "umidade_pct": 36,
+  "pressao_hpa": 1011,
+  "ponto_orvalho_c": 18.0,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-01T15:25:16.482150+00:00"
   },
-  "_clima_em": "2026-10-04T13:39:04.907077+00:00",
+  "_clima_em": "2026-10-06T14:42:45.396276+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 398,

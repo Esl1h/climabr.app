@@ -4,33 +4,111 @@
   "slug": "sao-miguel-dos-campos",
   "latitude": -9.7728,
   "longitude": -36.1008,
-  "atualizado_em": "2026-10-06T11:42:45.005742+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-06T14:42:45.396276+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-06",
+      "min": 21.7,
+      "max": 29.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 8.8,
+      "nascer_sol": "05:05",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-10-07",
+      "min": 22.0,
+      "max": 29.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 9.1,
+      "nascer_sol": "05:04",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-10-08",
+      "min": 19.9,
+      "max": 28.6,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 3.8,
+      "uv": 9.1,
+      "nascer_sol": "05:04",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-10-09",
+      "min": 21.9,
+      "max": 29.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.3,
+      "uv": 8.9,
+      "nascer_sol": "05:03",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-10-10",
+      "min": 22.0,
+      "max": 30.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 9.1,
+      "nascer_sol": "05:03",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-10-11",
+      "min": 22.1,
+      "max": 29.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.8,
+      "uv": 8.2,
+      "nascer_sol": "05:02",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-10-12",
+      "min": 22.2,
+      "max": 28.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.6,
+      "uv": 9.0,
+      "nascer_sol": "05:02",
+      "por_sol": "17:19"
+    }
+  ],
   "queimadas": {
     "focos_100km": 6,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-06T13:27:52.810853+00:00"
   },
   "uv": {
-    "indice": 9.1,
+    "indice": 8.8,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 54,
+    "indice": 62,
     "categoria": "Moderada",
-    "principal_poluente": "PM10",
-    "pm25": 11.0,
-    "pm10": 17.2,
-    "no2": 0.5,
-    "o3": 64.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 9.7,
+    "pm10": 14.0,
+    "no2": 1.0,
+    "o3": 66.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-04T13:39:04.907077+00:00"
+    "atualizado_em": "2026-10-06T14:42:45.396276+00:00"
   },
   "sol": {
-    "nascer": "05:06",
+    "nascer": "05:05",
     "por": "17:19",
     "duracao_h": 12.2,
     "estacao": "Primavera",
@@ -38,24 +116,24 @@
   },
   "lua": {
     "nome": "Quarto Minguante",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 75.5,
-    "dias_proxima_cheia": 8,
+    "iluminacao_pct": 90.0,
+    "fase_pct": 82.3,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 29.0,
+  "temperatura_atual": 29.2,
   "vento": {
-    "velocidade_kmh": 22.2,
-    "direcao_graus": 102,
+    "velocidade_kmh": 19.0,
+    "direcao_graus": 112,
     "direcao": "ESE",
-    "max_kmh": 24.2,
-    "rajada_kmh": 47.9,
-    "direcao_dominante": "E",
+    "max_kmh": 21.6,
+    "rajada_kmh": 43.2,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 54,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 18.9,
+  "umidade_pct": 61,
+  "pressao_hpa": 1017,
+  "ponto_orvalho_c": 20.9,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-01T15:25:16.482150+00:00"
   },
-  "_clima_em": "2026-10-04T13:39:04.907077+00:00",
+  "_clima_em": "2026-10-06T14:42:45.396276+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 3746,
