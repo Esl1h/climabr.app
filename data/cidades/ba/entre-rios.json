@@ -4,8 +4,86 @@
   "slug": "entre-rios",
   "latitude": -12.0636,
   "longitude": -38.0483,
-  "atualizado_em": "2026-10-07T11:47:32.418681+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-07T15:02:31.839905+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-07",
+      "min": 20.8,
+      "max": 31.5,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:11",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-10-08",
+      "min": 19.6,
+      "max": 32.8,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:11",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-10-09",
+      "min": 20.9,
+      "max": 30.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 9.2,
+      "nascer_sol": "05:10",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-10-10",
+      "min": 20.6,
+      "max": 31.2,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:10",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-10-11",
+      "min": 20.6,
+      "max": 31.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:09",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-10-12",
+      "min": 20.3,
+      "max": 31.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.5,
+      "nascer_sol": "05:09",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-10-13",
+      "min": 21.6,
+      "max": 31.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "05:08",
+      "por_sol": "17:28"
+    }
+  ],
   "reservatorio": {
     "nome": "Pedra Do Cavalo",
     "nivel_pct": 83.7,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-10-07T13:39:24.356806+00:00"
   },
   "uv": {
-    "indice": 7.0,
-    "categoria": "Alto",
+    "indice": 9.2,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 26,
-    "categoria": "Boa",
+    "indice": 51,
+    "categoria": "Moderada",
     "principal_poluente": "PM10",
-    "pm25": 7.5,
-    "pm10": 12.1,
+    "pm25": 9.2,
+    "pm10": 14.8,
     "no2": 0.2,
-    "o3": 56.0,
+    "o3": 67.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-04T13:39:04.907077+00:00"
+    "atualizado_em": "2026-10-07T15:02:31.839905+00:00"
   },
   "sol": {
-    "nascer": "05:13",
+    "nascer": "05:11",
     "por": "17:28",
-    "duracao_h": 12.2,
+    "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Quarto Minguante",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 75.5,
-    "dias_proxima_cheia": 8,
+    "iluminacao_pct": 78.0,
+    "fase_pct": 85.7,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 30.6,
+  "temperatura_atual": 31.5,
   "vento": {
-    "velocidade_kmh": 16.8,
-    "direcao_graus": 92,
-    "direcao": "E",
-    "max_kmh": 17.8,
-    "rajada_kmh": 41.8,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 13.6,
+    "direcao_graus": 110,
+    "direcao": "ESE",
+    "max_kmh": 14.7,
+    "rajada_kmh": 36.7,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 47,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 17.9,
+  "umidade_pct": 40,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 16.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-04T13:59:47.865971+00:00"
   },
-  "_clima_em": "2026-10-04T13:39:04.907077+00:00",
+  "_clima_em": "2026-10-07T15:02:31.839905+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 199,

@@ -4,58 +4,136 @@
   "slug": "careiro-da-varzea",
   "latitude": -3.286,
   "longitude": -59.5987,
-  "atualizado_em": "2026-10-07T11:35:01.469937+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-07T15:02:31.839905+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-07",
+      "min": 24.0,
+      "max": 37.3,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 12.3,
+      "uv": 9.2,
+      "nascer_sol": "06:41",
+      "por_sol": "18:50"
+    },
+    {
+      "data": "2026-10-08",
+      "min": 26.7,
+      "max": 38.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "06:41",
+      "por_sol": "18:50"
+    },
+    {
+      "data": "2026-10-09",
+      "min": 27.3,
+      "max": 38.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "06:40",
+      "por_sol": "18:50"
+    },
+    {
+      "data": "2026-10-10",
+      "min": 27.5,
+      "max": 38.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.2,
+      "nascer_sol": "06:40",
+      "por_sol": "18:50"
+    },
+    {
+      "data": "2026-10-11",
+      "min": 28.5,
+      "max": 37.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "06:40",
+      "por_sol": "18:50"
+    },
+    {
+      "data": "2026-10-12",
+      "min": 27.5,
+      "max": 36.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 8.1,
+      "nascer_sol": "06:39",
+      "por_sol": "18:49"
+    },
+    {
+      "data": "2026-10-13",
+      "min": 27.6,
+      "max": 35.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.4,
+      "nascer_sol": "06:39",
+      "por_sol": "18:49"
+    }
+  ],
   "queimadas": {
     "focos_100km": 260,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-07T13:39:24.356806+00:00"
   },
   "uv": {
-    "indice": 8.5,
+    "indice": 9.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 95,
+    "indice": 69,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 24.3,
-    "pm10": 26.3,
-    "no2": 0.8,
-    "o3": 87.0,
+    "pm25": 7.2,
+    "pm10": 8.0,
+    "no2": 0.6,
+    "o3": 86.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-05T16:45:43.164672+00:00"
+    "atualizado_em": "2026-10-07T15:02:31.839905+00:00"
   },
   "sol": {
-    "nascer": "06:42",
-    "por": "18:51",
-    "duracao_h": 12.1,
+    "nascer": "06:41",
+    "por": "18:50",
+    "duracao_h": 12.2,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Quarto Minguante",
-    "iluminacao_pct": 97.0,
-    "fase_pct": 78.9,
-    "dias_proxima_cheia": 9,
+    "iluminacao_pct": 78.0,
+    "fase_pct": 85.7,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 35.6,
+  "temperatura_atual": 35.3,
   "vento": {
-    "velocidade_kmh": 10.8,
-    "direcao_graus": 43,
-    "direcao": "NE",
-    "max_kmh": 10.8,
-    "rajada_kmh": 29.9,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 17.5,
+    "direcao_graus": 78,
+    "direcao": "ENE",
+    "max_kmh": 17.6,
+    "rajada_kmh": 40.7,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 43,
-  "pressao_hpa": 1009,
-  "ponto_orvalho_c": 21.1,
+  "umidade_pct": 38,
+  "pressao_hpa": 1010,
+  "ponto_orvalho_c": 18.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-04T13:59:47.865971+00:00"
   },
-  "_clima_em": "2026-10-05T16:45:43.164672+00:00"
+  "_clima_em": "2026-10-07T15:02:31.839905+00:00"
 }
