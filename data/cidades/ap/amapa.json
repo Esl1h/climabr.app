@@ -4,8 +4,86 @@
   "slug": "amapa",
   "latitude": 1.7299,
   "longitude": -50.6024,
-  "atualizado_em": "2026-10-08T11:48:35.365802+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-08T15:10:56.912652+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-08",
+      "min": 25.0,
+      "max": 32.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 8.9,
+      "nascer_sol": "06:07",
+      "por_sol": "18:12"
+    },
+    {
+      "data": "2026-10-09",
+      "min": 24.3,
+      "max": 34.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 8.6,
+      "nascer_sol": "06:06",
+      "por_sol": "18:12"
+    },
+    {
+      "data": "2026-10-10",
+      "min": 24.9,
+      "max": 34.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 8.9,
+      "nascer_sol": "06:06",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-10-11",
+      "min": 24.7,
+      "max": 33.4,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 4.0,
+      "uv": 9.0,
+      "nascer_sol": "06:06",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-10-12",
+      "min": 23.5,
+      "max": 34.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.0,
+      "nascer_sol": "06:06",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-10-13",
+      "min": 24.7,
+      "max": 35.5,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "06:06",
+      "por_sol": "18:10"
+    },
+    {
+      "data": "2026-10-14",
+      "min": 25.7,
+      "max": 34.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "06:05",
+      "por_sol": "18:10"
+    }
+  ],
   "reservatorio": {
     "nome": "Coaracy Nunes",
     "nivel_pct": 86.5,
@@ -25,7 +103,7 @@
     "atualizado_em": "2026-10-08T13:47:03.168886+00:00"
   },
   "uv": {
-    "indice": 9.0,
+    "indice": 8.9,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
@@ -34,13 +112,13 @@
   "qualidade_ar": {
     "indice": 53,
     "categoria": "Moderada",
-    "principal_poluente": "PM10",
-    "pm25": 6.6,
-    "pm10": 10.8,
-    "no2": 0.1,
-    "o3": 54.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 6.5,
+    "pm10": 9.7,
+    "no2": 0.2,
+    "o3": 55.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-06T14:42:45.396276+00:00"
+    "atualizado_em": "2026-10-08T15:10:56.912652+00:00"
   },
   "sol": {
     "nascer": "06:07",
@@ -50,13 +128,13 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 90.0,
-    "fase_pct": 82.3,
-    "dias_proxima_cheia": 10,
+    "nome": "Minguante",
+    "iluminacao_pct": 63.0,
+    "fase_pct": 89.1,
+    "dias_proxima_cheia": 12,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 34.1,
+  "temperatura_atual": 32.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -83,17 +161,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-03T13:22:23.257726+00:00"
   },
-  "_clima_em": "2026-10-06T14:42:45.396276+00:00",
+  "_clima_em": "2026-10-08T15:10:56.912652+00:00",
   "vento": {
-    "velocidade_kmh": 13.6,
-    "direcao_graus": 107,
-    "direcao": "ESE",
-    "max_kmh": 15.0,
-    "rajada_kmh": 36.0,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 14.7,
+    "direcao_graus": 68,
+    "direcao": "ENE",
+    "max_kmh": 16.8,
+    "rajada_kmh": 40.0,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 38,
+  "umidade_pct": 50,
   "pressao_hpa": 1013,
-  "ponto_orvalho_c": 17.8
+  "ponto_orvalho_c": 20.8
 }

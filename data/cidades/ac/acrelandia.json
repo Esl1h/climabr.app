@@ -4,58 +4,136 @@
   "slug": "acrelandia",
   "latitude": -9.9339,
   "longitude": -66.9502,
-  "atualizado_em": "2026-10-08T11:39:11.517374+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-08T15:10:56.912652+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-08",
+      "min": 24.8,
+      "max": 32.1,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 3.6,
+      "uv": 9.1,
+      "nascer_sol": "07:07",
+      "por_sol": "19:22"
+    },
+    {
+      "data": "2026-10-09",
+      "min": 24.7,
+      "max": 33.9,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 2.5,
+      "uv": 9.2,
+      "nascer_sol": "07:07",
+      "por_sol": "19:22"
+    },
+    {
+      "data": "2026-10-10",
+      "min": 24.4,
+      "max": 34.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.5,
+      "uv": 8.5,
+      "nascer_sol": "07:06",
+      "por_sol": "19:22"
+    },
+    {
+      "data": "2026-10-11",
+      "min": 23.6,
+      "max": 30.2,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 13.0,
+      "uv": 9.3,
+      "nascer_sol": "07:06",
+      "por_sol": "19:22"
+    },
+    {
+      "data": "2026-10-12",
+      "min": 23.6,
+      "max": 34.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.1,
+      "nascer_sol": "07:05",
+      "por_sol": "19:22"
+    },
+    {
+      "data": "2026-10-13",
+      "min": 24.2,
+      "max": 34.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.5,
+      "uv": 7.5,
+      "nascer_sol": "07:05",
+      "por_sol": "19:22"
+    },
+    {
+      "data": "2026-10-14",
+      "min": 25.4,
+      "max": 35.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 7.0,
+      "nascer_sol": "07:04",
+      "por_sol": "19:23"
+    }
+  ],
   "queimadas": {
     "focos_100km": 99,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-08T13:47:03.168886+00:00"
   },
   "uv": {
-    "indice": 9.2,
+    "indice": 9.1,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 55,
+    "indice": 75,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 13.8,
-    "pm10": 14.7,
-    "no2": 0.4,
-    "o3": 31.0,
+    "pm25": 36.8,
+    "pm10": 38.6,
+    "no2": 0.7,
+    "o3": 76.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-06T14:42:45.396276+00:00"
+    "atualizado_em": "2026-10-08T15:10:56.912652+00:00"
   },
   "sol": {
-    "nascer": "07:08",
+    "nascer": "07:07",
     "por": "19:22",
-    "duracao_h": 12.2,
+    "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 90.0,
-    "fase_pct": 82.3,
-    "dias_proxima_cheia": 10,
+    "nome": "Minguante",
+    "iluminacao_pct": 63.0,
+    "fase_pct": 89.1,
+    "dias_proxima_cheia": 12,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 34.8,
+  "temperatura_atual": 27.3,
   "vento": {
-    "velocidade_kmh": 7.8,
-    "direcao_graus": 352,
-    "direcao": "N",
-    "max_kmh": 11.7,
-    "rajada_kmh": 27.4,
-    "direcao_dominante": "N",
+    "velocidade_kmh": 13.0,
+    "direcao_graus": 275,
+    "direcao": "O",
+    "max_kmh": 14.4,
+    "rajada_kmh": 34.2,
+    "direcao_dominante": "NO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 47,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 21.7,
+  "umidade_pct": 87,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 25.0,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-02T14:47:24.617134+00:00"
   },
-  "_clima_em": "2026-10-06T14:42:45.396276+00:00",
+  "_clima_em": "2026-10-08T15:10:56.912652+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 61,
