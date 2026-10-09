@@ -4,58 +4,136 @@
   "slug": "nova-olinda-do-norte",
   "latitude": -3.9895,
   "longitude": -58.5998,
-  "atualizado_em": "2026-10-09T11:46:06.962491+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-09T14:56:23.253694+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-09",
+      "min": 24.6,
+      "max": 37.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.9,
+      "nascer_sol": "06:36",
+      "por_sol": "18:46"
+    },
+    {
+      "data": "2026-10-10",
+      "min": 25.8,
+      "max": 38.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.2,
+      "nascer_sol": "06:36",
+      "por_sol": "18:46"
+    },
+    {
+      "data": "2026-10-11",
+      "min": 26.2,
+      "max": 38.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.2,
+      "nascer_sol": "06:35",
+      "por_sol": "18:46"
+    },
+    {
+      "data": "2026-10-12",
+      "min": 26.3,
+      "max": 37.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 9.2,
+      "nascer_sol": "06:35",
+      "por_sol": "18:46"
+    },
+    {
+      "data": "2026-10-13",
+      "min": 26.2,
+      "max": 36.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.6,
+      "nascer_sol": "06:35",
+      "por_sol": "18:46"
+    },
+    {
+      "data": "2026-10-14",
+      "min": 25.3,
+      "max": 35.4,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 5.1,
+      "uv": 7.7,
+      "nascer_sol": "06:34",
+      "por_sol": "18:46"
+    },
+    {
+      "data": "2026-10-15",
+      "min": 25.9,
+      "max": 37.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 7.7,
+      "nascer_sol": "06:34",
+      "por_sol": "18:46"
+    }
+  ],
   "queimadas": {
     "focos_100km": 720,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-09T13:31:58.301404+00:00"
   },
   "uv": {
-    "indice": 9.2,
+    "indice": 8.9,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 72,
+    "indice": 82,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 12.3,
-    "pm10": 13.1,
-    "no2": 0.6,
-    "o3": 95.0,
+    "pm25": 14.6,
+    "pm10": 17.1,
+    "no2": 0.3,
+    "o3": 79.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-07T15:02:31.839905+00:00"
+    "atualizado_em": "2026-10-09T14:56:23.253694+00:00"
   },
   "sol": {
-    "nascer": "06:37",
-    "por": "18:47",
+    "nascer": "06:36",
+    "por": "18:46",
     "duracao_h": 12.2,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 78.0,
-    "fase_pct": 85.7,
-    "dias_proxima_cheia": 11,
+    "nome": "Minguante",
+    "iluminacao_pct": 46.0,
+    "fase_pct": 92.5,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 35.0,
+  "temperatura_atual": 35.9,
   "vento": {
-    "velocidade_kmh": 16.9,
-    "direcao_graus": 67,
+    "velocidade_kmh": 13.3,
+    "direcao_graus": 65,
     "direcao": "ENE",
-    "max_kmh": 18.1,
-    "rajada_kmh": 45.0,
-    "direcao_dominante": "ENE",
+    "max_kmh": 14.5,
+    "rajada_kmh": 37.4,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 38,
-  "pressao_hpa": 1010,
-  "ponto_orvalho_c": 18.6,
+  "umidade_pct": 37,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 18.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-04T13:59:47.865971+00:00"
   },
-  "_clima_em": "2026-10-07T15:02:31.839905+00:00",
+  "_clima_em": "2026-10-09T14:56:23.253694+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 1866,

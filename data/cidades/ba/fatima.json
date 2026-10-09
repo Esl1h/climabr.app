@@ -4,8 +4,86 @@
   "slug": "fatima",
   "latitude": -10.5952,
   "longitude": -38.2021,
-  "atualizado_em": "2026-10-09T11:57:22.020688+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-09T14:56:23.253694+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-09",
+      "min": 20.9,
+      "max": 33.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.4,
+      "nascer_sol": "05:11",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-10-10",
+      "min": 18.6,
+      "max": 32.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.4,
+      "nascer_sol": "05:11",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-10-11",
+      "min": 18.9,
+      "max": 34.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.4,
+      "nascer_sol": "05:10",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-10-12",
+      "min": 20.4,
+      "max": 33.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.5,
+      "nascer_sol": "05:10",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-10-13",
+      "min": 22.2,
+      "max": 35.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.5,
+      "nascer_sol": "05:09",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-10-14",
+      "min": 21.4,
+      "max": 36.3,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:09",
+      "por_sol": "17:28"
+    },
+    {
+      "data": "2026-10-15",
+      "min": 21.9,
+      "max": 37.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:08",
+      "por_sol": "17:28"
+    }
+  ],
   "reservatorio": {
     "nome": "Xingo",
     "nivel_pct": 78.0,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-10-09T13:31:58.301404+00:00"
   },
   "uv": {
-    "indice": 7.0,
-    "categoria": "Alto",
+    "indice": 9.4,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 43,
+    "indice": 35,
     "categoria": "Boa",
-    "principal_poluente": "PM10",
-    "pm25": 6.7,
-    "pm10": 10.3,
+    "principal_poluente": "PM2.5",
+    "pm25": 6.2,
+    "pm10": 9.3,
     "no2": 0.4,
-    "o3": 67.0,
+    "o3": 88.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-06T14:42:45.396276+00:00"
+    "atualizado_em": "2026-10-09T14:56:23.253694+00:00"
   },
   "sol": {
-    "nascer": "05:13",
+    "nascer": "05:11",
     "por": "17:28",
-    "duracao_h": 12.2,
+    "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 90.0,
-    "fase_pct": 82.3,
-    "dias_proxima_cheia": 10,
+    "nome": "Minguante",
+    "iluminacao_pct": 46.0,
+    "fase_pct": 92.5,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 31.3,
+  "temperatura_atual": 32.8,
   "vento": {
-    "velocidade_kmh": 17.8,
-    "direcao_graus": 106,
+    "velocidade_kmh": 9.5,
+    "direcao_graus": 117,
     "direcao": "ESE",
-    "max_kmh": 21.6,
-    "rajada_kmh": 44.6,
+    "max_kmh": 21.2,
+    "rajada_kmh": 44.3,
     "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 46,
-  "pressao_hpa": 1016,
-  "ponto_orvalho_c": 18.3,
+  "umidade_pct": 34,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 14.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-04T13:59:47.865971+00:00"
   },
-  "_clima_em": "2026-10-06T14:42:45.396276+00:00",
+  "_clima_em": "2026-10-09T14:56:23.253694+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 329,
