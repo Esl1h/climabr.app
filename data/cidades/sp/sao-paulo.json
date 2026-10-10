@@ -4,7 +4,7 @@
   "slug": "sao-paulo",
   "latitude": -23.6501,
   "longitude": -46.6481,
-  "atualizado_em": "2026-10-09T15:34:07.437973+00:00",
+  "atualizado_em": "2026-10-10T00:20:06.571814+00:00",
   "previsao": [
     {
       "data": "2026-10-08",
@@ -173,13 +173,80 @@
   "ponto_orvalho_c": 17.2,
   "alagamentos": {
     "data": "2026-10-09",
-    "pontos_total": 0,
-    "ativos": 0,
-    "ativos_intransitaveis": 0,
-    "intransitaveis_total": 0,
-    "pontos": [],
+    "pontos_total": 6,
+    "ativos": 4,
+    "ativos_intransitaveis": 2,
+    "intransitaveis_total": 4,
+    "pontos": [
+      {
+        "zona": "Centro",
+        "subprefeitura": "Sé",
+        "local": "R S PAULO (LIBERDADE)",
+        "referencia": "PC NINA RODRIGUES",
+        "sentido": "UNICO",
+        "inicio": "18:12",
+        "fim": null,
+        "ativo": true,
+        "transitavel": false
+      },
+      {
+        "zona": "Centro",
+        "subprefeitura": "Sé",
+        "local": "R LEOPOLDO MIGUEZ",
+        "referencia": "R TEIXEIRA LEITE",
+        "sentido": "AMBOS",
+        "inicio": "18:15",
+        "fim": null,
+        "ativo": true,
+        "transitavel": false
+      },
+      {
+        "zona": "Zona Leste",
+        "subprefeitura": "Aricanduva/ Vila Formosa",
+        "local": "AV DR EDUARDO COTCHING",
+        "referencia": "R JORGE BITTAR",
+        "sentido": "AMBOS",
+        "inicio": "18:09",
+        "fim": "18:25",
+        "ativo": false,
+        "transitavel": false
+      },
+      {
+        "zona": "Zona Leste",
+        "subprefeitura": "Aricanduva/ Vila Formosa",
+        "local": "AV DR EDUARDO COTCHING",
+        "referencia": "R JORGE BITTAR",
+        "sentido": "CENTRO/BAIRRO",
+        "inicio": "18:15",
+        "fim": "18:25",
+        "ativo": false,
+        "transitavel": false
+      },
+      {
+        "zona": "Zona Sul",
+        "subprefeitura": "M&#039;Boi Mirim",
+        "local": "ES M&#039;BOI MIRIM",
+        "referencia": "955",
+        "sentido": "BAIRRO/CENTRO",
+        "inicio": "18:47",
+        "fim": null,
+        "ativo": true,
+        "transitavel": true
+      },
+      {
+        "zona": "Zona Sudeste",
+        "subprefeitura": "Ipiranga",
+        "local": "AV DO ESTADO",
+        "referencia": "R PRES BATISTA PEREIRA",
+        "sentido": "AMBOS",
+        "inicio": "18:12",
+        "fim": null,
+        "ativo": true,
+        "transitavel": true
+      }
+    ],
     "fonte": "CGE / Prefeitura de São Paulo",
     "url": "https://www.cgesp.org/v3/alagamentos.jsp",
-    "atualizado_em": "2026-10-09T12:34:06.356690-03:00"
+    "atualizado_em": "2026-10-09T21:20:05.615016-03:00"
   }
 }
