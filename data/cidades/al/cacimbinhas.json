@@ -4,8 +4,86 @@
   "slug": "cacimbinhas",
   "latitude": -9.4469,
   "longitude": -36.9218,
-  "atualizado_em": "2026-10-12T12:33:20.812431+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-12T17:19:16.015817+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-12",
+      "min": 19.1,
+      "max": 34.0,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:05",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-10-13",
+      "min": 21.7,
+      "max": 34.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:05",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-10-14",
+      "min": 20.7,
+      "max": 36.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:04",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-10-15",
+      "min": 21.5,
+      "max": 38.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:04",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-10-16",
+      "min": 23.8,
+      "max": 39.8,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:03",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-10-17",
+      "min": 24.5,
+      "max": 37.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 9.7,
+      "nascer_sol": "05:03",
+      "por_sol": "17:22"
+    },
+    {
+      "data": "2026-10-18",
+      "min": 25.8,
+      "max": 38.5,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:03",
+      "por_sol": "17:22"
+    }
+  ],
   "reservatorio": {
     "nome": "Xingo",
     "nivel_pct": 65.8,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-10-12T15:48:27.119957+00:00"
   },
   "uv": {
-    "indice": 9.2,
+    "indice": 9.3,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 56,
+    "indice": 55,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 6.6,
-    "pm10": 9.4,
-    "no2": 0.5,
-    "o3": 73.0,
+    "pm25": 8.9,
+    "pm10": 12.3,
+    "no2": 0.7,
+    "o3": 102.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-06T14:42:45.396276+00:00"
+    "atualizado_em": "2026-10-12T17:19:16.015817+00:00"
   },
   "sol": {
-    "nascer": "05:09",
+    "nascer": "05:05",
     "por": "17:22",
-    "duracao_h": 12.2,
+    "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 90.0,
-    "fase_pct": 82.3,
-    "dias_proxima_cheia": 10,
+    "nome": "Nova",
+    "iluminacao_pct": 16.0,
+    "fase_pct": 2.6,
+    "dias_proxima_cheia": 14,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 30.0,
+  "temperatura_atual": 33.9,
   "vento": {
-    "velocidade_kmh": 20.5,
-    "direcao_graus": 115,
-    "direcao": "ESE",
-    "max_kmh": 25.0,
-    "rajada_kmh": 47.5,
-    "direcao_dominante": "ESE",
+    "velocidade_kmh": 17.5,
+    "direcao_graus": 89,
+    "direcao": "E",
+    "max_kmh": 26.3,
+    "rajada_kmh": 48.2,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 52,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 19.0,
+  "umidade_pct": 25,
+  "pressao_hpa": 1011,
+  "ponto_orvalho_c": 11.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-02T14:47:24.617134+00:00"
   },
-  "_clima_em": "2026-10-06T14:42:45.396276+00:00",
+  "_clima_em": "2026-10-12T17:19:16.015817+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 1851,

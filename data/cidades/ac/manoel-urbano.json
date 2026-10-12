@@ -4,58 +4,136 @@
   "slug": "manoel-urbano",
   "latitude": -9.3811,
   "longitude": -69.8538,
-  "atualizado_em": "2026-10-12T12:31:30.807851+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-12T17:19:16.015817+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-12",
+      "min": 23.2,
+      "max": 31.9,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 2.3,
+      "uv": 9.4,
+      "nascer_sol": "07:17",
+      "por_sol": "19:34"
+    },
+    {
+      "data": "2026-10-13",
+      "min": 23.3,
+      "max": 33.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 8.9,
+      "nascer_sol": "07:16",
+      "por_sol": "19:34"
+    },
+    {
+      "data": "2026-10-14",
+      "min": 23.8,
+      "max": 33.3,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 1.1,
+      "uv": 8.8,
+      "nascer_sol": "07:16",
+      "por_sol": "19:34"
+    },
+    {
+      "data": "2026-10-15",
+      "min": 23.6,
+      "max": 33.4,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 2.6,
+      "uv": 9.3,
+      "nascer_sol": "07:15",
+      "por_sol": "19:34"
+    },
+    {
+      "data": "2026-10-16",
+      "min": 23.6,
+      "max": 31.8,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 4.8,
+      "uv": 7.8,
+      "nascer_sol": "07:15",
+      "por_sol": "19:34"
+    },
+    {
+      "data": "2026-10-17",
+      "min": 22.5,
+      "max": 30.1,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 22.3,
+      "uv": 8.6,
+      "nascer_sol": "07:15",
+      "por_sol": "19:34"
+    },
+    {
+      "data": "2026-10-18",
+      "min": 22.9,
+      "max": 30.0,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 8.5,
+      "uv": 9.4,
+      "nascer_sol": "07:14",
+      "por_sol": "19:34"
+    }
+  ],
   "queimadas": {
     "focos_100km": 14,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-12T15:48:27.119957+00:00"
   },
   "uv": {
-    "indice": 9.3,
+    "indice": 9.4,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 45,
-    "categoria": "Boa",
+    "indice": 61,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 10.3,
-    "pm10": 10.6,
+    "pm25": 23.2,
+    "pm10": 24.5,
     "no2": 0.2,
-    "o3": 17.0,
+    "o3": 39.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-06T14:42:45.396276+00:00"
+    "atualizado_em": "2026-10-12T17:19:16.015817+00:00"
   },
   "sol": {
-    "nascer": "07:20",
+    "nascer": "07:17",
     "por": "19:34",
-    "duracao_h": 12.2,
+    "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 90.0,
-    "fase_pct": 82.3,
-    "dias_proxima_cheia": 10,
+    "nome": "Nova",
+    "iluminacao_pct": 16.0,
+    "fase_pct": 2.6,
+    "dias_proxima_cheia": 14,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 33.3,
+  "temperatura_atual": 31.2,
   "vento": {
-    "velocidade_kmh": 10.0,
-    "direcao_graus": 346,
+    "velocidade_kmh": 6.4,
+    "direcao_graus": 344,
     "direcao": "NNO",
-    "max_kmh": 10.3,
+    "max_kmh": 12.0,
     "rajada_kmh": 29.9,
-    "direcao_dominante": "NNO",
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 50,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 21.4,
+  "umidade_pct": 58,
+  "pressao_hpa": 1009,
+  "ponto_orvalho_c": 22.0,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-02T14:47:24.617134+00:00"
   },
-  "_clima_em": "2026-10-06T14:42:45.396276+00:00",
+  "_clima_em": "2026-10-12T17:19:16.015817+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 12,

@@ -4,58 +4,136 @@
   "slug": "santana-do-mundau",
   "latitude": -9.131,
   "longitude": -36.1913,
-  "atualizado_em": "2026-10-12T12:38:52.015005+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-12T17:19:16.015817+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-12",
+      "min": 18.7,
+      "max": 29.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.3,
+      "nascer_sol": "05:03",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-10-13",
+      "min": 20.1,
+      "max": 29.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.3,
+      "nascer_sol": "05:02",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-10-14",
+      "min": 19.9,
+      "max": 30.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.3,
+      "nascer_sol": "05:02",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-10-15",
+      "min": 21.0,
+      "max": 32.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:01",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-10-16",
+      "min": 22.1,
+      "max": 32.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:01",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-10-17",
+      "min": 23.0,
+      "max": 32.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:00",
+      "por_sol": "17:19"
+    },
+    {
+      "data": "2026-10-18",
+      "min": 22.1,
+      "max": 32.9,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:00",
+      "por_sol": "17:19"
+    }
+  ],
   "queimadas": {
     "focos_100km": 15,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-12T15:48:27.119957+00:00"
   },
   "uv": {
-    "indice": 9.2,
+    "indice": 9.3,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 75,
+    "indice": 69,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 11.6,
-    "pm10": 14.9,
-    "no2": 1.1,
-    "o3": 86.0,
+    "pm25": 8.0,
+    "pm10": 11.6,
+    "no2": 0.7,
+    "o3": 81.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-08T15:10:56.912652+00:00"
+    "atualizado_em": "2026-10-12T17:19:16.015817+00:00"
   },
   "sol": {
-    "nascer": "05:05",
+    "nascer": "05:03",
     "por": "17:19",
-    "duracao_h": 12.2,
+    "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Minguante",
-    "iluminacao_pct": 63.0,
-    "fase_pct": 89.1,
-    "dias_proxima_cheia": 12,
+    "nome": "Nova",
+    "iluminacao_pct": 16.0,
+    "fase_pct": 2.6,
+    "dias_proxima_cheia": 14,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 28.3,
+  "temperatura_atual": 28.9,
   "vento": {
-    "velocidade_kmh": 10.5,
-    "direcao_graus": 119,
-    "direcao": "ESE",
-    "max_kmh": 16.5,
-    "rajada_kmh": 30.2,
-    "direcao_dominante": "ESE",
+    "velocidade_kmh": 15.2,
+    "direcao_graus": 74,
+    "direcao": "ENE",
+    "max_kmh": 19.1,
+    "rajada_kmh": 34.9,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 55,
-  "pressao_hpa": 1015,
-  "ponto_orvalho_c": 18.3,
+  "umidade_pct": 49,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 17.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-03T13:22:23.257726+00:00"
   },
-  "_clima_em": "2026-10-08T15:10:56.912652+00:00",
+  "_clima_em": "2026-10-12T17:19:16.015817+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 5767,
