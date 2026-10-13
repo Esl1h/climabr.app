@@ -85,17 +85,13 @@
     }
   ],
   "reservatorio": {
-    "nome": "Henry Borden",
-    "nivel_pct": 88.5,
-    "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-10-12",
-    "distancia_km": 44.8,
-    "aproximado": true,
-    "tipo": "FIO",
-    "acumula": false,
-    "nota": "Reservatório hidrelétrico mais próximo (45km). Pode não ser o sistema de abastecimento desta cidade.",
-    "fonte": "ONS / ANA",
-    "atualizado_em": "2026-10-13T14:25:54.521984+00:00"
+    "nome": "Sistema Local SABESP",
+    "nivel_pct": null,
+    "variacao_semana_pct": null,
+    "sistema_id": null,
+    "nota": "Abastecido pela SABESP via sistema local não monitorado online.",
+    "fonte": "SABESP",
+    "atualizado_em": "2026-10-13T15:52:29.643299+00:00"
   },
   "queimadas": {
     "focos_100km": 0,
@@ -163,30 +159,31 @@
   "temperatura_atual": 21.4,
   "_clima_em": "2026-10-12T17:19:16.015817+00:00",
   "vento": {
-    "velocidade_kmh": 6.3,
-    "direcao_graus": 156,
-    "direcao": "SSE",
-    "max_kmh": 9.9,
-    "rajada_kmh": 24.1,
-    "direcao_dominante": "OSO",
-    "fonte": "Open-Meteo"
+    "velocidade_kmh": 9.9,
+    "direcao_graus": 122,
+    "direcao": "ESE",
+    "max_kmh": 11.2,
+    "rajada_kmh": 25.9,
+    "direcao_dominante": "NNO",
+    "fonte": "Open-Meteo",
+    "atualizado_em": "2026-10-13T15:53:00.707531+00:00"
   },
   "umidade_pct": 97,
   "pressao_hpa": 1014,
   "ponto_orvalho_c": 21.0,
   "ondas": {
-    "altura_m": 0.8,
-    "altura_max_m": 0.92,
-    "periodo_s": 7.4,
-    "direcao_graus": 135,
-    "direcao": "SE",
-    "swell_altura_m": 0.88,
-    "swell_periodo_s": 5.6,
-    "swell_direcao": "SE",
+    "altura_m": 0.68,
+    "altura_max_m": 0.74,
+    "periodo_s": 6.8,
+    "direcao_graus": 153,
+    "direcao": "SSE",
+    "swell_altura_m": 0.6,
+    "swell_periodo_s": 6.1,
+    "swell_direcao": "SSE",
     "surf_nivel": "bom",
     "surf_emoji": "🟢",
     "surf_descricao": "Bom para surf",
     "fonte": "Open-Meteo Marine",
-    "atualizado_em": "2026-10-09T15:17:00.308849+00:00"
+    "atualizado_em": "2026-10-13T15:53:00.707531+00:00"
   }
 }
