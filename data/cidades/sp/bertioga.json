@@ -85,17 +85,13 @@
     }
   ],
   "reservatorio": {
-    "nome": "Henry Borden",
-    "nivel_pct": 88.5,
-    "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-10-12",
-    "distancia_km": 44.8,
-    "aproximado": true,
-    "tipo": "FIO",
-    "acumula": false,
-    "nota": "Reservatório hidrelétrico mais próximo (45km). Pode não ser o sistema de abastecimento desta cidade.",
-    "fonte": "ONS / ANA",
-    "atualizado_em": "2026-10-14T12:10:33.345110+00:00"
+    "nome": "Sistema Local SABESP",
+    "nivel_pct": null,
+    "variacao_semana_pct": null,
+    "sistema_id": null,
+    "nota": "Abastecido pela SABESP via sistema local não monitorado online.",
+    "fonte": "SABESP",
+    "atualizado_em": "2026-10-14T13:37:15.283549+00:00"
   },
   "queimadas": {
     "focos_100km": 0,
@@ -111,9 +107,9 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 64018,
-    "semana_epidemiologica": 202638,
+    "semana_epidemiologica": 202639,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-09-30T14:56:40.448904+00:00"
+    "atualizado_em": "2026-10-14T13:38:33.193590+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -124,9 +120,9 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 64018,
-    "semana_epidemiologica": 202638,
+    "semana_epidemiologica": 202639,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-09-30T14:56:40.448904+00:00"
+    "atualizado_em": "2026-10-14T13:38:33.193590+00:00"
   },
   "uv": {
     "indice": 5.2,
@@ -163,31 +159,31 @@
   "temperatura_atual": 21.4,
   "_clima_em": "2026-10-12T17:19:16.015817+00:00",
   "vento": {
-    "velocidade_kmh": 9.9,
-    "direcao_graus": 122,
-    "direcao": "ESE",
-    "max_kmh": 11.2,
-    "rajada_kmh": 25.9,
-    "direcao_dominante": "NNO",
+    "velocidade_kmh": 5.9,
+    "direcao_graus": 153,
+    "direcao": "SSE",
+    "max_kmh": 8.8,
+    "rajada_kmh": 27.0,
+    "direcao_dominante": "O",
     "fonte": "Open-Meteo",
-    "atualizado_em": "2026-10-13T15:53:00.707531+00:00"
+    "atualizado_em": "2026-10-14T13:37:46.410483+00:00"
   },
   "umidade_pct": 97,
   "pressao_hpa": 1014,
   "ponto_orvalho_c": 21.0,
   "ondas": {
-    "altura_m": 0.68,
-    "altura_max_m": 0.74,
-    "periodo_s": 6.8,
-    "direcao_graus": 153,
+    "altura_m": 0.62,
+    "altura_max_m": 0.66,
+    "periodo_s": 7.8,
+    "direcao_graus": 155,
     "direcao": "SSE",
-    "swell_altura_m": 0.6,
-    "swell_periodo_s": 6.1,
+    "swell_altura_m": 0.62,
+    "swell_periodo_s": 6.5,
     "swell_direcao": "SSE",
     "surf_nivel": "bom",
     "surf_emoji": "🟢",
     "surf_descricao": "Bom para surf",
     "fonte": "Open-Meteo Marine",
-    "atualizado_em": "2026-10-13T15:53:00.707531+00:00"
+    "atualizado_em": "2026-10-14T13:37:46.410483+00:00"
   }
 }
