@@ -4,7 +4,7 @@
   "slug": "sao-paulo",
   "latitude": -23.6501,
   "longitude": -46.6481,
-  "atualizado_em": "2026-10-14T14:03:00.915886+00:00",
+  "atualizado_em": "2026-10-14T23:28:19.864077+00:00",
   "previsao": [
     {
       "data": "2026-10-13",
@@ -173,13 +173,190 @@
   "ponto_orvalho_c": 17.1,
   "alagamentos": {
     "data": "2026-10-14",
-    "pontos_total": 0,
-    "ativos": 0,
-    "ativos_intransitaveis": 0,
-    "intransitaveis_total": 0,
-    "pontos": [],
+    "pontos_total": 16,
+    "ativos": 7,
+    "ativos_intransitaveis": 4,
+    "intransitaveis_total": 10,
+    "pontos": [
+      {
+        "zona": "Zona Norte",
+        "subprefeitura": "Santana",
+        "local": "PTE DAS BANDEIRAS SEN ROMEU TUMA",
+        "referencia": "287",
+        "sentido": "CENTRO/BAIRRO",
+        "inicio": "16:36",
+        "fim": "17:45",
+        "ativo": false,
+        "transitavel": true
+      },
+      {
+        "zona": "Centro",
+        "subprefeitura": "Sé",
+        "local": "PC QUATORZE BIS",
+        "referencia": "R MANOEL DUTRA",
+        "sentido": "BAIRRO/CENTRO",
+        "inicio": "15:53",
+        "fim": "18:03",
+        "ativo": false,
+        "transitavel": false
+      },
+      {
+        "zona": "Centro",
+        "subprefeitura": "Sé",
+        "local": "PC JOSE LUIZ DE MELLO MALHEIRO",
+        "referencia": "1",
+        "sentido": "AMBOS",
+        "inicio": "16:11",
+        "fim": null,
+        "ativo": true,
+        "transitavel": false
+      },
+      {
+        "zona": "Centro",
+        "subprefeitura": "Sé",
+        "local": "MARGINAL TIETE CBAS CENTRAL",
+        "referencia": "PTE DAS BANDEIRAS SEN ROMEU TUMA",
+        "sentido": "CASTELO B/A SENNA",
+        "inicio": "16:12",
+        "fim": "17:35",
+        "ativo": false,
+        "transitavel": true
+      },
+      {
+        "zona": "Centro",
+        "subprefeitura": "Sé",
+        "local": "R ANTONIO DE SA",
+        "referencia": "VD GOV ROBERTO ABREU SODRE",
+        "sentido": "CENTRO/BAIRRO",
+        "inicio": "16:13",
+        "fim": null,
+        "ativo": true,
+        "transitavel": true
+      },
+      {
+        "zona": "Centro",
+        "subprefeitura": "Sé",
+        "local": "R GLICERIO",
+        "referencia": "R ALM MAURITI",
+        "sentido": "AMBOS",
+        "inicio": "16:24",
+        "fim": null,
+        "ativo": true,
+        "transitavel": false
+      },
+      {
+        "zona": "Centro",
+        "subprefeitura": "Sé",
+        "local": "AV SANTOS DUMONT",
+        "referencia": "R GUAPORE",
+        "sentido": "AEROPORTO/SANTANA",
+        "inicio": "16:24",
+        "fim": null,
+        "ativo": true,
+        "transitavel": true
+      },
+      {
+        "zona": "Centro",
+        "subprefeitura": "Sé",
+        "local": "R S PAULO (LIBERDADE)",
+        "referencia": "R GLICERIO",
+        "sentido": "UNICO",
+        "inicio": "16:59",
+        "fim": "17:54",
+        "ativo": false,
+        "transitavel": false
+      },
+      {
+        "zona": "Zona Leste",
+        "subprefeitura": "Mooca",
+        "local": "AV CELSO GARCIA",
+        "referencia": "117",
+        "sentido": "AMBOS",
+        "inicio": "16:47",
+        "fim": "17:15",
+        "ativo": false,
+        "transitavel": false
+      },
+      {
+        "zona": "Zona Leste",
+        "subprefeitura": "Mooca",
+        "local": "R S CAETANO (BOM RETIRO)",
+        "referencia": "824",
+        "sentido": "CENTRO/BAIRRO",
+        "inicio": "17:03",
+        "fim": "18:36",
+        "ativo": false,
+        "transitavel": false
+      },
+      {
+        "zona": "Zona Sul",
+        "subprefeitura": "Santo Amaro",
+        "local": "AV STO AMARO",
+        "referencia": "AV ROQUE PETRONI JUNIOR",
+        "sentido": "AMBOS",
+        "inicio": "16:36",
+        "fim": null,
+        "ativo": true,
+        "transitavel": false
+      },
+      {
+        "zona": "Zona Sudeste",
+        "subprefeitura": "Vila Mariana",
+        "local": "AV DR RICARDO JAFET",
+        "referencia": "R VERGUEIRO",
+        "sentido": "S PAULO/SANTOS",
+        "inicio": "16:05",
+        "fim": "17:25",
+        "ativo": false,
+        "transitavel": false
+      },
+      {
+        "zona": "Zona Sudeste",
+        "subprefeitura": "Vila Mariana",
+        "local": "AV IBIRAPUERA",
+        "referencia": "AV ARATAS",
+        "sentido": "AMBOS",
+        "inicio": "16:32",
+        "fim": "18:13",
+        "ativo": false,
+        "transitavel": true
+      },
+      {
+        "zona": "Zona Sudeste",
+        "subprefeitura": "Vila Mariana",
+        "local": "CV TRIBUNAL DE JUSTICA DO E. SP",
+        "referencia": "1",
+        "sentido": "IBIRAPUERA/MARGINAL",
+        "inicio": "16:50",
+        "fim": null,
+        "ativo": true,
+        "transitavel": false
+      },
+      {
+        "zona": "Zona Sudeste",
+        "subprefeitura": "Vila Mariana",
+        "local": "AV PEDRO ALVARES CABRAL",
+        "referencia": "PC AYRTON SENNA DO BRASIL",
+        "sentido": "AMBOS",
+        "inicio": "16:53",
+        "fim": null,
+        "ativo": true,
+        "transitavel": true
+      },
+      {
+        "zona": "Zona Sudeste",
+        "subprefeitura": "Vila Mariana",
+        "local": "PC JUCA MULATO",
+        "referencia": "AV PROF ASCENDINO REIS",
+        "sentido": "AMBOS",
+        "inicio": "16:57",
+        "fim": "17:50",
+        "ativo": false,
+        "transitavel": false
+      }
+    ],
     "fonte": "CGE / Prefeitura de São Paulo",
     "url": "https://www.cgesp.org/v3/alagamentos.jsp",
-    "atualizado_em": "2026-10-14T11:02:59.259219-03:00"
+    "atualizado_em": "2026-10-14T20:28:18.218468-03:00"
   }
 }
