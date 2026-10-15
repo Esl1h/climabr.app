@@ -4,8 +4,86 @@
   "slug": "igaci",
   "latitude": -9.5434,
   "longitude": -36.682,
-  "atualizado_em": "2026-10-15T09:33:16.732180+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-15T13:02:33.909237+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-15",
+      "min": 21.6,
+      "max": 35.5,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:03",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-10-16",
+      "min": 22.6,
+      "max": 36.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.3,
+      "nascer_sol": "05:02",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-10-17",
+      "min": 22.5,
+      "max": 35.7,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:02",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-10-18",
+      "min": 23.6,
+      "max": 36.5,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.4,
+      "nascer_sol": "05:01",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-10-19",
+      "min": 22.8,
+      "max": 36.5,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.4,
+      "nascer_sol": "05:01",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-10-20",
+      "min": 21.9,
+      "max": 35.4,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:00",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-10-21",
+      "min": 21.7,
+      "max": 33.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 8.7,
+      "nascer_sol": "05:00",
+      "por_sol": "17:22"
+    }
+  ],
   "reservatorio": {
     "nome": "Xingo",
     "nivel_pct": 70.7,
@@ -35,40 +113,40 @@
     "indice": 51,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 8.3,
-    "pm10": 11.4,
-    "no2": 0.7,
-    "o3": 82.0,
+    "pm25": 10.0,
+    "pm10": 13.4,
+    "no2": 1.0,
+    "o3": 87.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-13T15:32:26.090995+00:00"
+    "atualizado_em": "2026-10-15T13:02:33.909237+00:00"
   },
   "sol": {
-    "nascer": "05:04",
+    "nascer": "05:03",
     "por": "17:21",
     "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 37.0,
-    "fase_pct": 6.0,
-    "dias_proxima_cheia": 13,
+    "nome": "Crescente",
+    "iluminacao_pct": 72.0,
+    "fase_pct": 12.8,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 33.9,
+  "temperatura_atual": 32.4,
   "vento": {
-    "velocidade_kmh": 17.0,
-    "direcao_graus": 70,
+    "velocidade_kmh": 12.6,
+    "direcao_graus": 63,
     "direcao": "ENE",
-    "max_kmh": 22.3,
-    "rajada_kmh": 43.2,
-    "direcao_dominante": "E",
+    "max_kmh": 23.2,
+    "rajada_kmh": 43.9,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 31,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 14.3,
+  "umidade_pct": 41,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 17.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -78,9 +156,9 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 23996,
-    "semana_epidemiologica": 202638,
+    "semana_epidemiologica": 202639,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-10-02T14:47:24.617134+00:00"
+    "atualizado_em": "2026-10-15T13:24:26.373794+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -91,11 +169,11 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 23996,
-    "semana_epidemiologica": 202638,
+    "semana_epidemiologica": 202639,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-10-02T14:47:24.617134+00:00"
+    "atualizado_em": "2026-10-15T13:24:26.373794+00:00"
   },
-  "_clima_em": "2026-10-13T15:32:26.090995+00:00",
+  "_clima_em": "2026-10-15T13:02:33.909237+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 3074,

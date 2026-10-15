@@ -4,8 +4,86 @@
   "slug": "euclides-da-cunha",
   "latitude": -10.4642,
   "longitude": -38.9151,
-  "atualizado_em": "2026-10-13T12:39:06.215540+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-15T13:02:33.909237+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-15",
+      "min": 19.2,
+      "max": 36.5,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.6,
+      "nascer_sol": "05:11",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-10-16",
+      "min": 20.6,
+      "max": 36.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 9.6,
+      "nascer_sol": "05:11",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-10-17",
+      "min": 21.0,
+      "max": 35.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.6,
+      "nascer_sol": "05:10",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-10-18",
+      "min": 22.2,
+      "max": 36.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.8,
+      "uv": 9.5,
+      "nascer_sol": "05:10",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-10-19",
+      "min": 22.2,
+      "max": 33.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.7,
+      "uv": 9.6,
+      "nascer_sol": "05:09",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-10-20",
+      "min": 20.8,
+      "max": 34.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:09",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-10-21",
+      "min": 19.5,
+      "max": 33.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.5,
+      "nascer_sol": "05:08",
+      "por_sol": "17:31"
+    }
+  ],
   "reservatorio": {
     "nome": "P. Afonso 4",
     "nivel_pct": 65.5,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-10-15T11:47:22.541432+00:00"
   },
   "uv": {
-    "indice": 9.5,
+    "indice": 9.6,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 28,
+    "indice": 24,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 4.7,
-    "pm10": 6.5,
-    "no2": 0.3,
+    "pm25": 7.7,
+    "pm10": 10.2,
+    "no2": 0.6,
     "o3": 84.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-12T17:19:16.015817+00:00"
+    "atualizado_em": "2026-10-15T13:02:33.909237+00:00"
   },
   "sol": {
-    "nascer": "05:13",
+    "nascer": "05:11",
     "por": "17:31",
     "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 16.0,
-    "fase_pct": 2.6,
-    "dias_proxima_cheia": 14,
+    "nome": "Crescente",
+    "iluminacao_pct": 72.0,
+    "fase_pct": 12.8,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 32.9,
+  "temperatura_atual": 31.9,
   "vento": {
-    "velocidade_kmh": 13.3,
-    "direcao_graus": 108,
-    "direcao": "ESE",
-    "max_kmh": 24.1,
-    "rajada_kmh": 47.9,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 3.8,
+    "direcao_graus": 11,
+    "direcao": "N",
+    "max_kmh": 21.2,
+    "rajada_kmh": 41.4,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 28,
-  "pressao_hpa": 1010,
-  "ponto_orvalho_c": 12.1,
+  "umidade_pct": 37,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 15.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-14T13:38:33.193590+00:00"
   },
-  "_clima_em": "2026-10-12T17:19:16.015817+00:00",
+  "_clima_em": "2026-10-15T13:02:33.909237+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 464,
