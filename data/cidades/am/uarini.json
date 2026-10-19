@@ -4,58 +4,136 @@
   "slug": "uarini",
   "latitude": -3.1657,
   "longitude": -65.4108,
-  "atualizado_em": "2026-10-19T10:36:28.346427+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-19T15:14:58.831970+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-19",
+      "min": 23.9,
+      "max": 30.4,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 5.7,
+      "uv": 8.8,
+      "nascer_sol": "07:00",
+      "por_sol": "19:12"
+    },
+    {
+      "data": "2026-10-20",
+      "min": 23.6,
+      "max": 32.8,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 1.6,
+      "uv": 9.1,
+      "nascer_sol": "07:00",
+      "por_sol": "19:12"
+    },
+    {
+      "data": "2026-10-21",
+      "min": 24.2,
+      "max": 31.9,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 6.4,
+      "uv": 7.3,
+      "nascer_sol": "07:00",
+      "por_sol": "19:11"
+    },
+    {
+      "data": "2026-10-22",
+      "min": 24.0,
+      "max": 31.5,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.6,
+      "uv": 8.3,
+      "nascer_sol": "07:00",
+      "por_sol": "19:11"
+    },
+    {
+      "data": "2026-10-23",
+      "min": 24.1,
+      "max": 33.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.4,
+      "nascer_sol": "06:59",
+      "por_sol": "19:11"
+    },
+    {
+      "data": "2026-10-24",
+      "min": 24.3,
+      "max": 33.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 10.5,
+      "nascer_sol": "06:59",
+      "por_sol": "19:11"
+    },
+    {
+      "data": "2026-10-25",
+      "min": 24.5,
+      "max": 34.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.6,
+      "nascer_sol": "06:59",
+      "por_sol": "19:11"
+    }
+  ],
   "queimadas": {
     "focos_100km": 2,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-19T13:43:45.476331+00:00"
   },
   "uv": {
-    "indice": 9.2,
+    "indice": 8.8,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 49,
-    "categoria": "Boa",
+    "indice": 53,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 11.2,
-    "pm10": 11.6,
-    "no2": 0.3,
-    "o3": 20.0,
+    "pm25": 10.9,
+    "pm10": 11.4,
+    "no2": 0.1,
+    "o3": 35.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-14T13:17:03.324360+00:00"
+    "atualizado_em": "2026-10-19T15:14:58.831970+00:00"
   },
   "sol": {
-    "nascer": "07:02",
+    "nascer": "07:00",
     "por": "19:12",
     "duracao_h": 12.2,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 56.0,
-    "fase_pct": 9.4,
-    "dias_proxima_cheia": 12,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 26.3,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 29.1,
+  "temperatura_atual": 25.8,
   "vento": {
-    "velocidade_kmh": 6.1,
-    "direcao_graus": 14,
-    "direcao": "NNE",
-    "max_kmh": 9.2,
-    "rajada_kmh": 27.4,
+    "velocidade_kmh": 5.1,
+    "direcao_graus": 54,
+    "direcao": "NE",
+    "max_kmh": 7.2,
+    "rajada_kmh": 21.6,
     "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 77,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 24.7,
+  "umidade_pct": 94,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 24.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-04T13:59:47.865971+00:00"
   },
-  "_clima_em": "2026-10-14T13:17:03.324360+00:00",
+  "_clima_em": "2026-10-19T15:14:58.831970+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 743,

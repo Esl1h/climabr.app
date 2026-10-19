@@ -4,59 +4,136 @@
   "slug": "passo-de-camaragibe",
   "latitude": -9.256,
   "longitude": -35.4999,
-  "atualizado_em": "2026-10-19T10:28:10.265958+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-19T15:14:58.831970+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-19",
+      "min": 23.5,
+      "max": 32.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "04:57",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-10-20",
+      "min": 23.4,
+      "max": 31.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 7.8,
+      "nascer_sol": "04:56",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-10-21",
+      "min": 23.4,
+      "max": 29.4,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.9,
+      "uv": 8.4,
+      "nascer_sol": "04:56",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-10-22",
+      "min": 23.2,
+      "max": 29.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 6.1,
+      "uv": 8.4,
+      "nascer_sol": "04:55",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-10-23",
+      "min": 22.8,
+      "max": 29.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.8,
+      "uv": 9.2,
+      "nascer_sol": "04:55",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-10-24",
+      "min": 23.6,
+      "max": 31.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 9.2,
+      "nascer_sol": "04:55",
+      "por_sol": "17:17"
+    },
+    {
+      "data": "2026-10-25",
+      "min": 22.3,
+      "max": 31.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "04:54",
+      "por_sol": "17:17"
+    }
+  ],
   "queimadas": {
     "focos_100km": 27,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-19T13:43:45.476331+00:00"
   },
   "uv": {
-    "indice": 9.1,
+    "indice": 9.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 54,
+    "indice": 56,
     "categoria": "Moderada",
-    "principal_poluente": "PM10",
-    "pm25": 8.6,
-    "pm10": 12.9,
-    "no2": 0.4,
-    "o3": 57.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 10.7,
+    "pm10": 15.0,
+    "no2": 0.8,
+    "o3": 71.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-14T13:17:03.324360+00:00"
+    "atualizado_em": "2026-10-19T15:14:58.831970+00:00"
   },
   "sol": {
-    "nascer": "04:59",
-    "por": "17:16",
+    "nascer": "04:57",
+    "por": "17:17",
     "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 56.0,
-    "fase_pct": 9.4,
-    "dias_proxima_cheia": 12,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 26.3,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 30.3,
+  "temperatura_atual": 32.4,
   "vento": {
-    "velocidade_kmh": 12.2,
-    "direcao_graus": 46,
-    "direcao": "NE",
-    "max_kmh": 20.3,
-    "rajada_kmh": 42.5,
+    "velocidade_kmh": 17.5,
+    "direcao_graus": 63,
+    "direcao": "ENE",
+    "max_kmh": 22.0,
+    "rajada_kmh": 45.4,
     "direcao_dominante": "NE",
-    "fonte": "Open-Meteo",
-    "atualizado_em": "2026-10-15T13:23:08.896665+00:00"
+    "fonte": "Open-Meteo"
   },
-  "umidade_pct": 46,
-  "pressao_hpa": 1016,
-  "ponto_orvalho_c": 17.5,
+  "umidade_pct": 48,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 19.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -66,9 +143,9 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 13870,
-    "semana_epidemiologica": 202638,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-10-03T13:22:23.257726+00:00"
+    "atualizado_em": "2026-10-19T15:36:55.098723+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -79,25 +156,25 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 13870,
-    "semana_epidemiologica": 202638,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-10-03T13:22:23.257726+00:00"
+    "atualizado_em": "2026-10-19T15:36:55.098723+00:00"
   },
-  "_clima_em": "2026-10-14T13:17:03.324360+00:00",
+  "_clima_em": "2026-10-19T15:14:58.831970+00:00",
   "ondas": {
-    "altura_m": 0.8,
-    "altura_max_m": 0.88,
-    "periodo_s": 6.0,
-    "direcao_graus": 98,
-    "direcao": "E",
-    "swell_altura_m": 0.8,
-    "swell_periodo_s": 6.1,
-    "swell_direcao": "E",
+    "altura_m": 0.94,
+    "altura_max_m": 0.98,
+    "periodo_s": 7.0,
+    "direcao_graus": 105,
+    "direcao": "ESE",
+    "swell_altura_m": 0.66,
+    "swell_periodo_s": 8.7,
+    "swell_direcao": "ESE",
     "surf_nivel": "bom",
     "surf_emoji": "🟢",
     "surf_descricao": "Bom para surf",
     "fonte": "Open-Meteo Marine",
-    "atualizado_em": "2026-10-15T13:23:08.896665+00:00"
+    "atualizado_em": "2026-10-19T15:35:58.352577+00:00"
   },
   "agua": {
     "parametro": "Escherichia coli",

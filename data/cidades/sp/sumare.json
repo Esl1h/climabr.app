@@ -85,17 +85,13 @@
     }
   ],
   "reservatorio": {
-    "nome": "Jaguari",
-    "nivel_pct": 69.0,
-    "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-10-18",
-    "distancia_km": 132.9,
-    "aproximado": true,
-    "tipo": "RCU",
-    "acumula": true,
-    "nota": "Reservatório hidrelétrico mais próximo (133km). Pode não ser o sistema de abastecimento desta cidade.",
-    "fonte": "ONS / ANA",
-    "atualizado_em": "2026-10-19T13:43:41.229708+00:00"
+    "nome": "Sistema Local SABESP",
+    "nivel_pct": null,
+    "variacao_semana_pct": null,
+    "sistema_id": null,
+    "nota": "Abastecido pela SABESP via sistema local não monitorado online.",
+    "fonte": "SABESP",
+    "atualizado_em": "2026-10-19T15:35:27.567360+00:00"
   },
   "queimadas": {
     "focos_100km": 15,
@@ -138,15 +134,15 @@
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
-    "nivel_incidencia": 0,
-    "nivel_incidencia_label": "Baixa",
-    "casos_semana": 1,
-    "casos_estimados": 9,
-    "incidencia_100k": 3.1,
+    "nivel_incidencia": 1,
+    "nivel_incidencia_label": "Média",
+    "casos_semana": 4,
+    "casos_estimados": 16,
+    "incidencia_100k": 5.4,
     "populacao": 294128,
-    "semana_epidemiologica": 202638,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-10-02T14:47:24.617134+00:00"
+    "atualizado_em": "2026-10-19T15:36:55.098723+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -157,9 +153,9 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 294128,
-    "semana_epidemiologica": 202638,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-10-02T14:47:24.617134+00:00"
+    "atualizado_em": "2026-10-19T15:36:55.098723+00:00"
   },
   "_clima_em": "2026-10-15T13:02:33.909237+00:00",
   "vento": {

@@ -4,58 +4,136 @@
   "slug": "tarauaca",
   "latitude": -8.2395,
   "longitude": -71.445,
-  "atualizado_em": "2026-10-19T10:22:46.734698+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-19T15:14:58.831970+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-19",
+      "min": 21.5,
+      "max": 33.4,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 6.6,
+      "uv": 8.7,
+      "nascer_sol": "07:21",
+      "por_sol": "19:39"
+    },
+    {
+      "data": "2026-10-20",
+      "min": 22.5,
+      "max": 30.5,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 6.7,
+      "uv": 9.0,
+      "nascer_sol": "07:20",
+      "por_sol": "19:40"
+    },
+    {
+      "data": "2026-10-21",
+      "min": 23.7,
+      "max": 26.9,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 14.9,
+      "uv": 6.7,
+      "nascer_sol": "07:20",
+      "por_sol": "19:40"
+    },
+    {
+      "data": "2026-10-22",
+      "min": 23.7,
+      "max": 31.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 9.9,
+      "uv": 6.8,
+      "nascer_sol": "07:20",
+      "por_sol": "19:40"
+    },
+    {
+      "data": "2026-10-23",
+      "min": 23.0,
+      "max": 30.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 11.1,
+      "uv": 9.4,
+      "nascer_sol": "07:19",
+      "por_sol": "19:40"
+    },
+    {
+      "data": "2026-10-24",
+      "min": 23.3,
+      "max": 32.1,
+      "condicao": "Névoa",
+      "condicao_codigo": 45,
+      "chuva_mm": 0,
+      "uv": 10.1,
+      "nascer_sol": "07:19",
+      "por_sol": "19:40"
+    },
+    {
+      "data": "2026-10-25",
+      "min": 22.7,
+      "max": 34.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.6,
+      "nascer_sol": "07:19",
+      "por_sol": "19:40"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-19T13:43:45.476331+00:00"
   },
   "uv": {
-    "indice": 8.9,
+    "indice": 8.7,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 49,
-    "categoria": "Boa",
+    "indice": 53,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 13.0,
-    "pm10": 13.0,
-    "no2": 0.2,
-    "o3": 13.0,
+    "pm25": 6.9,
+    "pm10": 7.0,
+    "no2": 0.1,
+    "o3": 32.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-14T13:17:03.324360+00:00"
+    "atualizado_em": "2026-10-19T15:14:58.831970+00:00"
   },
   "sol": {
-    "nascer": "07:23",
+    "nascer": "07:21",
     "por": "19:39",
     "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 56.0,
-    "fase_pct": 9.4,
-    "dias_proxima_cheia": 12,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 26.3,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 30.0,
+  "temperatura_atual": 30.9,
   "vento": {
-    "velocidade_kmh": 5.6,
-    "direcao_graus": 333,
-    "direcao": "NNO",
-    "max_kmh": 10.4,
-    "rajada_kmh": 24.1,
-    "direcao_dominante": "NNO",
+    "velocidade_kmh": 4.0,
+    "direcao_graus": 352,
+    "direcao": "N",
+    "max_kmh": 7.2,
+    "rajada_kmh": 23.0,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 68,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 23.3,
+  "umidade_pct": 61,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 22.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-14T13:38:33.193590+00:00"
   },
-  "_clima_em": "2026-10-14T13:17:03.324360+00:00"
+  "_clima_em": "2026-10-19T15:14:58.831970+00:00"
 }

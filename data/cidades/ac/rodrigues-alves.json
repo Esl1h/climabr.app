@@ -4,58 +4,136 @@
   "slug": "rodrigues-alves",
   "latitude": -7.8438,
   "longitude": -73.2234,
-  "atualizado_em": "2026-10-19T10:22:28.552708+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-19T15:14:58.831970+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-19",
+      "min": 21.8,
+      "max": 32.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.2,
+      "uv": 9.4,
+      "nascer_sol": "07:28",
+      "por_sol": "19:46"
+    },
+    {
+      "data": "2026-10-20",
+      "min": 22.8,
+      "max": 32.1,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 9.7,
+      "uv": 8.8,
+      "nascer_sol": "07:28",
+      "por_sol": "19:46"
+    },
+    {
+      "data": "2026-10-21",
+      "min": 23.7,
+      "max": 32.2,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 11.5,
+      "uv": 8.2,
+      "nascer_sol": "07:27",
+      "por_sol": "19:46"
+    },
+    {
+      "data": "2026-10-22",
+      "min": 22.8,
+      "max": 32.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.1,
+      "uv": 8.8,
+      "nascer_sol": "07:27",
+      "por_sol": "19:46"
+    },
+    {
+      "data": "2026-10-23",
+      "min": 23.2,
+      "max": 30.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 5.1,
+      "uv": 9.4,
+      "nascer_sol": "07:27",
+      "por_sol": "19:46"
+    },
+    {
+      "data": "2026-10-24",
+      "min": 23.5,
+      "max": 32.4,
+      "condicao": "Névoa",
+      "condicao_codigo": 45,
+      "chuva_mm": 0,
+      "uv": 9.7,
+      "nascer_sol": "07:26",
+      "por_sol": "19:47"
+    },
+    {
+      "data": "2026-10-25",
+      "min": 23.3,
+      "max": 33.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.2,
+      "nascer_sol": "07:26",
+      "por_sol": "19:47"
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-19T13:43:45.476331+00:00"
   },
   "uv": {
-    "indice": 8.8,
+    "indice": 9.4,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 61,
-    "categoria": "Moderada",
+    "indice": 44,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 18.8,
-    "pm10": 19.0,
-    "no2": 0.6,
-    "o3": 16.0,
+    "pm25": 7.2,
+    "pm10": 7.5,
+    "no2": 0.1,
+    "o3": 37.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-14T13:17:03.324360+00:00"
+    "atualizado_em": "2026-10-19T15:14:58.831970+00:00"
   },
   "sol": {
-    "nascer": "07:30",
+    "nascer": "07:28",
     "por": "19:46",
     "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 56.0,
-    "fase_pct": 9.4,
-    "dias_proxima_cheia": 12,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 26.3,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 30.3,
+  "temperatura_atual": 30.6,
   "vento": {
-    "velocidade_kmh": 5.9,
-    "direcao_graus": 337,
-    "direcao": "NNO",
-    "max_kmh": 15.2,
-    "rajada_kmh": 42.5,
-    "direcao_dominante": "NNO",
+    "velocidade_kmh": 2.8,
+    "direcao_graus": 315,
+    "direcao": "NO",
+    "max_kmh": 8.5,
+    "rajada_kmh": 18.4,
+    "direcao_dominante": "N",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 68,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 23.8,
+  "umidade_pct": 60,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 22.0,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-14T13:38:33.193590+00:00"
   },
-  "_clima_em": "2026-10-14T13:17:03.324360+00:00"
+  "_clima_em": "2026-10-19T15:14:58.831970+00:00"
 }

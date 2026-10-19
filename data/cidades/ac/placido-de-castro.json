@@ -4,58 +4,136 @@
   "slug": "placido-de-castro",
   "latitude": -10.2491,
   "longitude": -67.3403,
-  "atualizado_em": "2026-10-19T10:22:14.889094+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-19T15:14:58.831970+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-19",
+      "min": 22.4,
+      "max": 33.1,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 8.0,
+      "uv": 9.2,
+      "nascer_sol": "07:03",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-10-20",
+      "min": 23.3,
+      "max": 32.7,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 3.0,
+      "uv": 9.4,
+      "nascer_sol": "07:03",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-10-21",
+      "min": 23.6,
+      "max": 33.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.9,
+      "uv": 9.4,
+      "nascer_sol": "07:02",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-10-22",
+      "min": 24.0,
+      "max": 32.9,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.8,
+      "uv": 8.0,
+      "nascer_sol": "07:02",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-10-23",
+      "min": 23.9,
+      "max": 32.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 9.4,
+      "nascer_sol": "07:01",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-10-24",
+      "min": 23.8,
+      "max": 35.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.9,
+      "nascer_sol": "07:01",
+      "por_sol": "19:25"
+    },
+    {
+      "data": "2026-10-25",
+      "min": 23.9,
+      "max": 36.1,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 9.8,
+      "nascer_sol": "07:00",
+      "por_sol": "19:25"
+    }
+  ],
   "queimadas": {
     "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-19T13:43:45.476331+00:00"
   },
   "uv": {
-    "indice": 8.8,
+    "indice": 9.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 64,
+    "indice": 53,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 15.6,
-    "pm10": 15.9,
-    "no2": 1.3,
-    "o3": 37.0,
+    "pm25": 9.3,
+    "pm10": 9.8,
+    "no2": 0.2,
+    "o3": 45.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-14T13:17:03.324360+00:00"
+    "atualizado_em": "2026-10-19T15:14:58.831970+00:00"
   },
   "sol": {
-    "nascer": "07:05",
-    "por": "19:24",
-    "duracao_h": 12.3,
+    "nascer": "07:03",
+    "por": "19:25",
+    "duracao_h": 12.4,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 56.0,
-    "fase_pct": 9.4,
-    "dias_proxima_cheia": 12,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 26.3,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 31.9,
+  "temperatura_atual": 32.8,
   "vento": {
-    "velocidade_kmh": 9.3,
-    "direcao_graus": 342,
-    "direcao": "NNO",
-    "max_kmh": 13.2,
-    "rajada_kmh": 32.8,
-    "direcao_dominante": "NNO",
+    "velocidade_kmh": 2.4,
+    "direcao_graus": 117,
+    "direcao": "ESE",
+    "max_kmh": 8.8,
+    "rajada_kmh": 23.8,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 56,
+  "umidade_pct": 51,
   "pressao_hpa": 1012,
-  "ponto_orvalho_c": 22.0,
+  "ponto_orvalho_c": 21.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-14T13:38:33.193590+00:00"
   },
-  "_clima_em": "2026-10-14T13:17:03.324360+00:00"
+  "_clima_em": "2026-10-19T15:14:58.831970+00:00"
 }

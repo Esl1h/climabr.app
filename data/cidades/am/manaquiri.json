@@ -4,58 +4,136 @@
   "slug": "manaquiri",
   "latitude": -3.7791,
   "longitude": -60.6973,
-  "atualizado_em": "2026-10-19T10:34:34.848594+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-19T15:14:58.831970+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-19",
+      "min": 22.5,
+      "max": 31.0,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 1.9,
+      "uv": 9.2,
+      "nascer_sol": "06:41",
+      "por_sol": "18:53"
+    },
+    {
+      "data": "2026-10-20",
+      "min": 24.0,
+      "max": 31.0,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 6.6,
+      "uv": 9.2,
+      "nascer_sol": "06:41",
+      "por_sol": "18:53"
+    },
+    {
+      "data": "2026-10-21",
+      "min": 24.5,
+      "max": 31.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 4.9,
+      "uv": 9.2,
+      "nascer_sol": "06:41",
+      "por_sol": "18:53"
+    },
+    {
+      "data": "2026-10-22",
+      "min": 24.4,
+      "max": 31.1,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 6.3,
+      "uv": 8.9,
+      "nascer_sol": "06:40",
+      "por_sol": "18:53"
+    },
+    {
+      "data": "2026-10-23",
+      "min": 23.7,
+      "max": 33.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 8.7,
+      "nascer_sol": "06:40",
+      "por_sol": "18:53"
+    },
+    {
+      "data": "2026-10-24",
+      "min": 24.1,
+      "max": 35.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 10.0,
+      "nascer_sol": "06:40",
+      "por_sol": "18:53"
+    },
+    {
+      "data": "2026-10-25",
+      "min": 24.7,
+      "max": 35.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.5,
+      "nascer_sol": "06:40",
+      "por_sol": "18:53"
+    }
+  ],
   "queimadas": {
     "focos_100km": 15,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-19T13:43:45.476331+00:00"
   },
   "uv": {
-    "indice": 8.7,
+    "indice": 9.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 176,
+    "indice": 185,
     "categoria": "Ruim",
     "principal_poluente": "PM2.5",
-    "pm25": 36.3,
-    "pm10": 36.8,
-    "no2": 2.7,
-    "o3": 71.0,
+    "pm25": 53.9,
+    "pm10": 54.9,
+    "no2": 1.5,
+    "o3": 92.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-14T13:17:03.324360+00:00"
+    "atualizado_em": "2026-10-19T15:14:58.831970+00:00"
   },
   "sol": {
-    "nascer": "06:43",
-    "por": "18:54",
+    "nascer": "06:41",
+    "por": "18:53",
     "duracao_h": 12.2,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 56.0,
-    "fase_pct": 9.4,
-    "dias_proxima_cheia": 12,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 26.3,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 30.6,
+  "temperatura_atual": 28.2,
   "vento": {
-    "velocidade_kmh": 3.0,
-    "direcao_graus": 104,
+    "velocidade_kmh": 4.3,
+    "direcao_graus": 107,
     "direcao": "ESE",
-    "max_kmh": 12.1,
-    "rajada_kmh": 31.0,
-    "direcao_dominante": "E",
+    "max_kmh": 9.2,
+    "rajada_kmh": 25.6,
+    "direcao_dominante": "SSE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 67,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 23.8,
+  "umidade_pct": 76,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 23.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-04T13:59:47.865971+00:00"
   },
-  "_clima_em": "2026-10-14T13:17:03.324360+00:00",
+  "_clima_em": "2026-10-19T15:14:58.831970+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 3128,

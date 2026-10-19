@@ -4,8 +4,86 @@
   "slug": "itapiranga",
   "latitude": -2.4972,
   "longitude": -58.6133,
-  "atualizado_em": "2026-10-19T10:34:07.537980+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-19T15:14:58.831970+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-19",
+      "min": 23.8,
+      "max": 33.1,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 5.1,
+      "uv": 8.6,
+      "nascer_sol": "06:34",
+      "por_sol": "18:44"
+    },
+    {
+      "data": "2026-10-20",
+      "min": 23.2,
+      "max": 33.1,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 8.0,
+      "uv": 9.2,
+      "nascer_sol": "06:33",
+      "por_sol": "18:44"
+    },
+    {
+      "data": "2026-10-21",
+      "min": 23.7,
+      "max": 32.9,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 12.4,
+      "uv": 9.2,
+      "nascer_sol": "06:33",
+      "por_sol": "18:44"
+    },
+    {
+      "data": "2026-10-22",
+      "min": 24.2,
+      "max": 36.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 9.2,
+      "nascer_sol": "06:33",
+      "por_sol": "18:44"
+    },
+    {
+      "data": "2026-10-23",
+      "min": 22.5,
+      "max": 36.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.2,
+      "nascer_sol": "06:33",
+      "por_sol": "18:44"
+    },
+    {
+      "data": "2026-10-24",
+      "min": 23.8,
+      "max": 36.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 9.3,
+      "nascer_sol": "06:33",
+      "por_sol": "18:43"
+    },
+    {
+      "data": "2026-10-25",
+      "min": 24.3,
+      "max": 37.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.3,
+      "nascer_sol": "06:32",
+      "por_sol": "18:43"
+    }
+  ],
   "reservatorio": {
     "nome": "Balbina",
     "nivel_pct": 55.7,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-10-19T13:43:45.476331+00:00"
   },
   "uv": {
-    "indice": 9.2,
+    "indice": 8.6,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 132,
-    "categoria": "Ruim para grupos sensíveis",
+    "indice": 167,
+    "categoria": "Ruim",
     "principal_poluente": "PM2.5",
-    "pm25": 36.8,
-    "pm10": 38.8,
-    "no2": 1.7,
-    "o3": 78.0,
+    "pm25": 30.3,
+    "pm10": 31.1,
+    "no2": 1.6,
+    "o3": 84.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-14T13:17:03.324360+00:00"
+    "atualizado_em": "2026-10-19T15:14:58.831970+00:00"
   },
   "sol": {
-    "nascer": "06:35",
-    "por": "18:45",
+    "nascer": "06:34",
+    "por": "18:44",
     "duracao_h": 12.2,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 56.0,
-    "fase_pct": 9.4,
-    "dias_proxima_cheia": 12,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 26.3,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 32.0,
+  "temperatura_atual": 30.5,
   "vento": {
-    "velocidade_kmh": 9.3,
-    "direcao_graus": 81,
-    "direcao": "E",
-    "max_kmh": 11.2,
-    "rajada_kmh": 32.0,
+    "velocidade_kmh": 1.8,
+    "direcao_graus": 53,
+    "direcao": "NE",
+    "max_kmh": 9.1,
+    "rajada_kmh": 21.6,
     "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 54,
-  "pressao_hpa": 1013,
-  "ponto_orvalho_c": 21.4,
+  "umidade_pct": 69,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 24.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-04T13:59:47.865971+00:00"
   },
-  "_clima_em": "2026-10-14T13:17:03.324360+00:00"
+  "_clima_em": "2026-10-19T15:14:58.831970+00:00"
 }

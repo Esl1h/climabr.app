@@ -4,8 +4,86 @@
   "slug": "candeias",
   "latitude": -12.6785,
   "longitude": -38.4812,
-  "atualizado_em": "2026-10-19T10:42:44.425479+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-19T15:14:58.831970+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-19",
+      "min": 24.2,
+      "max": 31.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.2,
+      "uv": 9.3,
+      "nascer_sol": "05:06",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-10-20",
+      "min": 23.2,
+      "max": 32.4,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 0.7,
+      "uv": 6.5,
+      "nascer_sol": "05:05",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-10-21",
+      "min": 22.8,
+      "max": 32.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.4,
+      "uv": 9.3,
+      "nascer_sol": "05:05",
+      "por_sol": "17:31"
+    },
+    {
+      "data": "2026-10-22",
+      "min": 22.8,
+      "max": 30.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.3,
+      "uv": 9.3,
+      "nascer_sol": "05:04",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-10-23",
+      "min": 22.6,
+      "max": 31.7,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.0,
+      "uv": 9.4,
+      "nascer_sol": "05:04",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-10-24",
+      "min": 22.6,
+      "max": 35.3,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:03",
+      "por_sol": "17:32"
+    },
+    {
+      "data": "2026-10-25",
+      "min": 22.9,
+      "max": 37.2,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:03",
+      "por_sol": "17:32"
+    }
+  ],
   "reservatorio": {
     "nome": "Pedra Do Cavalo",
     "nivel_pct": 80.5,
@@ -25,51 +103,50 @@
     "atualizado_em": "2026-10-19T13:43:45.476331+00:00"
   },
   "uv": {
-    "indice": 9.2,
+    "indice": 9.3,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 55,
+    "indice": 56,
     "categoria": "Moderada",
-    "principal_poluente": "PM10",
-    "pm25": 10.4,
-    "pm10": 15.9,
-    "no2": 1.9,
-    "o3": 89.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 15.3,
+    "pm10": 20.1,
+    "no2": 3.1,
+    "o3": 91.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-13T15:32:26.090995+00:00"
+    "atualizado_em": "2026-10-19T15:14:58.831970+00:00"
   },
   "sol": {
-    "nascer": "05:09",
-    "por": "17:30",
+    "nascer": "05:06",
+    "por": "17:31",
     "duracao_h": 12.4,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 37.0,
-    "fase_pct": 6.0,
-    "dias_proxima_cheia": 13,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 26.3,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 32.3,
+  "temperatura_atual": 31.2,
   "vento": {
-    "velocidade_kmh": 7.5,
-    "direcao_graus": 40,
-    "direcao": "NE",
-    "max_kmh": 16.7,
-    "rajada_kmh": 36.7,
+    "velocidade_kmh": 5.1,
+    "direcao_graus": 157,
+    "direcao": "SSE",
+    "max_kmh": 15.9,
+    "rajada_kmh": 34.6,
     "direcao_dominante": "ENE",
-    "fonte": "Open-Meteo",
-    "atualizado_em": "2026-10-15T13:23:08.896665+00:00"
+    "fonte": "Open-Meteo"
   },
-  "umidade_pct": 38,
-  "pressao_hpa": 1013,
-  "ponto_orvalho_c": 16.0,
+  "umidade_pct": 55,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 21.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -96,20 +173,20 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-13T15:54:18.713262+00:00"
   },
-  "_clima_em": "2026-10-13T15:32:26.090995+00:00",
+  "_clima_em": "2026-10-19T15:14:58.831970+00:00",
   "ondas": {
-    "altura_m": 0.12,
+    "altura_m": 0.18,
     "altura_max_m": 0.22,
-    "periodo_s": 5.6,
-    "direcao_graus": 146,
-    "direcao": "SE",
-    "swell_altura_m": 0.12,
-    "swell_periodo_s": 5.5,
+    "periodo_s": 9.2,
+    "direcao_graus": 155,
+    "direcao": "SSE",
+    "swell_altura_m": 0.14,
+    "swell_periodo_s": 7.4,
     "swell_direcao": "SSE",
     "surf_nivel": "ruim",
     "surf_emoji": "🔴",
     "surf_descricao": "Mar muito calmo",
     "fonte": "Open-Meteo Marine",
-    "atualizado_em": "2026-10-15T13:23:08.896665+00:00"
+    "atualizado_em": "2026-10-19T15:35:58.352577+00:00"
   }
 }
