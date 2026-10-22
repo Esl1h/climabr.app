@@ -4,33 +4,111 @@
   "slug": "acrelandia",
   "latitude": -9.9339,
   "longitude": -66.9502,
-  "atualizado_em": "2026-10-22T09:42:15.195057+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-22T13:24:20.613821+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-22",
+      "min": 23.4,
+      "max": 31.5,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 12.1,
+      "uv": 2.7,
+      "nascer_sol": "07:00",
+      "por_sol": "19:23"
+    },
+    {
+      "data": "2026-10-23",
+      "min": 22.9,
+      "max": 34.0,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 1.7,
+      "uv": 9.2,
+      "nascer_sol": "07:00",
+      "por_sol": "19:23"
+    },
+    {
+      "data": "2026-10-24",
+      "min": 23.7,
+      "max": 34.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 9.4,
+      "nascer_sol": "07:00",
+      "por_sol": "19:23"
+    },
+    {
+      "data": "2026-10-25",
+      "min": 25.2,
+      "max": 35.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "06:59",
+      "por_sol": "19:23"
+    },
+    {
+      "data": "2026-10-26",
+      "min": 25.0,
+      "max": 33.7,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 5.7,
+      "uv": 9.3,
+      "nascer_sol": "06:59",
+      "por_sol": "19:24"
+    },
+    {
+      "data": "2026-10-27",
+      "min": 24.3,
+      "max": 31.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 11.1,
+      "uv": 9.0,
+      "nascer_sol": "06:58",
+      "por_sol": "19:24"
+    },
+    {
+      "data": "2026-10-28",
+      "min": 24.1,
+      "max": 26.3,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 9.6,
+      "uv": 7.3,
+      "nascer_sol": "06:58",
+      "por_sol": "19:24"
+    }
+  ],
   "queimadas": {
     "focos_100km": 10,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-22T12:10:04.602256+00:00"
   },
   "uv": {
-    "indice": 8.1,
-    "categoria": "Muito Alto",
+    "indice": 2.7,
+    "categoria": "Baixo",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 57,
+    "indice": 58,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 9.4,
-    "pm10": 9.9,
-    "no2": 0.1,
-    "o3": 44.0,
+    "pm25": 9.2,
+    "pm10": 9.3,
+    "no2": 0.4,
+    "o3": 48.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-19T15:14:58.831970+00:00"
+    "atualizado_em": "2026-10-22T13:24:20.613821+00:00"
   },
   "sol": {
-    "nascer": "07:02",
+    "nascer": "07:00",
     "por": "19:23",
     "duracao_h": 12.4,
     "estacao": "Primavera",
@@ -38,24 +116,24 @@
   },
   "lua": {
     "nome": "Quarto Crescente",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 26.3,
-    "dias_proxima_cheia": 7,
+    "iluminacao_pct": 75.0,
+    "fase_pct": 36.5,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 32.4,
+  "temperatura_atual": 26.9,
   "vento": {
-    "velocidade_kmh": 1.9,
-    "direcao_graus": 112,
-    "direcao": "ESE",
-    "max_kmh": 7.5,
-    "rajada_kmh": 19.4,
-    "direcao_dominante": "ESE",
+    "velocidade_kmh": 1.3,
+    "direcao_graus": 360,
+    "direcao": "N",
+    "max_kmh": 10.1,
+    "rajada_kmh": 25.6,
+    "direcao_dominante": "N",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 56,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 22.4,
+  "umidade_pct": 84,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 23.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-15T13:24:26.373794+00:00"
   },
-  "_clima_em": "2026-10-19T15:14:58.831970+00:00",
+  "_clima_em": "2026-10-22T13:24:20.613821+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 61,
