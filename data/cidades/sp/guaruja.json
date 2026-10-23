@@ -85,17 +85,13 @@
     }
   ],
   "reservatorio": {
-    "nome": "Henry Borden",
-    "nivel_pct": 88.5,
-    "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-10-21",
-    "distancia_km": 23.7,
-    "aproximado": true,
-    "tipo": "FIO",
-    "acumula": false,
-    "nota": "Reservatório hidrelétrico mais próximo (24km). Pode não ser o sistema de abastecimento desta cidade.",
-    "fonte": "ONS / ANA",
-    "atualizado_em": "2026-10-23T11:52:11.297984+00:00"
+    "nome": "Sistema Local SABESP",
+    "nivel_pct": null,
+    "variacao_semana_pct": null,
+    "sistema_id": null,
+    "nota": "Abastecido pela SABESP via sistema local não monitorado online.",
+    "fonte": "SABESP",
+    "atualizado_em": "2026-10-23T13:23:03.552778+00:00"
   },
   "queimadas": {
     "focos_100km": 0,
@@ -163,30 +159,31 @@
   },
   "_clima_em": "2026-10-22T13:24:20.613821+00:00",
   "vento": {
-    "velocidade_kmh": 18.2,
-    "direcao_graus": 93,
-    "direcao": "E",
-    "max_kmh": 23.0,
-    "rajada_kmh": 52.6,
+    "velocidade_kmh": 2.2,
+    "direcao_graus": 194,
+    "direcao": "SSO",
+    "max_kmh": 12.8,
+    "rajada_kmh": 24.5,
     "direcao_dominante": "E",
-    "fonte": "Open-Meteo"
+    "fonte": "Open-Meteo",
+    "atualizado_em": "2026-10-23T13:23:34.644181+00:00"
   },
   "umidade_pct": 74,
   "pressao_hpa": 1020,
   "ponto_orvalho_c": 18.7,
   "ondas": {
-    "altura_m": 1.62,
-    "altura_max_m": 1.84,
-    "periodo_s": 6.8,
-    "direcao_graus": 126,
+    "altura_m": 1.36,
+    "altura_max_m": 1.7,
+    "periodo_s": 8.3,
+    "direcao_graus": 135,
     "direcao": "SE",
-    "swell_altura_m": 1.14,
-    "swell_periodo_s": 9.0,
+    "swell_altura_m": 1.12,
+    "swell_periodo_s": 9.1,
     "swell_direcao": "SSE",
     "surf_nivel": "bom",
     "surf_emoji": "🟢",
-    "surf_descricao": "Bom para surf",
+    "surf_descricao": "Ótimo para surf",
     "fonte": "Open-Meteo Marine",
-    "atualizado_em": "2026-10-22T13:45:13.386466+00:00"
+    "atualizado_em": "2026-10-23T13:23:34.644181+00:00"
   }
 }
