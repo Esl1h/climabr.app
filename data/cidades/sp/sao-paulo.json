@@ -4,7 +4,7 @@
   "slug": "sao-paulo",
   "latitude": -23.6501,
   "longitude": -46.6481,
-  "atualizado_em": "2026-10-23T13:02:59.426313+00:00",
+  "atualizado_em": "2026-10-23T13:49:28.722230+00:00",
   "previsao": [
     {
       "data": "2026-10-23",
@@ -172,14 +172,26 @@
   "pressao_hpa": 1018,
   "ponto_orvalho_c": 17.1,
   "alagamentos": {
-    "data": "2026-10-22",
-    "pontos_total": 0,
+    "data": "2026-10-23",
+    "pontos_total": 1,
     "ativos": 0,
     "ativos_intransitaveis": 0,
     "intransitaveis_total": 0,
-    "pontos": [],
+    "pontos": [
+      {
+        "zona": "Zona Oeste",
+        "subprefeitura": "Pinheiros",
+        "local": "R ESCOCIA",
+        "referencia": "AV BRIG FARIA LIMA",
+        "sentido": "NAO INFORMADO",
+        "inicio": "06:38",
+        "fim": "06:55",
+        "ativo": false,
+        "transitavel": true
+      }
+    ],
     "fonte": "CGE / Prefeitura de São Paulo",
     "url": "https://www.cgesp.org/v3/alagamentos.jsp",
-    "atualizado_em": "2026-10-22T20:38:27.103579-03:00"
+    "atualizado_em": "2026-10-23T10:49:26.939297-03:00"
   }
 }
