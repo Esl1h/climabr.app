@@ -366,6 +366,21 @@ const temDados = dados && (
     </div>
   </div>
 
+  <nav class="mb-6 flex flex-wrap gap-2 text-sm" aria-label="Modos de visualização">
+    <a
+      href={`/${municipio.estado}/${municipio.slug}/telao`}
+      class="rounded-md border border-input bg-card px-3 py-1.5 text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
+    >
+      📺 Modo Painel
+    </a>
+    <a
+      href={`/mobile?c=${municipio.estado}/${municipio.slug}`}
+      class="rounded-md border border-input bg-card px-3 py-1.5 text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
+    >
+      📱 Modo Mobile
+    </a>
+  </nav>
+
   {temDados ? (
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 items-start">
       <BlocoPrevisao previsao={dados!.previsao} />
