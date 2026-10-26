@@ -327,7 +327,8 @@ const UFS: [string, string][] = [
           telaoLink.classList.add('flex');
         }
         if (mobileLink) {
-          mobileLink.setAttribute('href', `/mobile?c=${m[1]}/${m[2]}`);
+          const ibge = document.getElementById('clima-root')?.dataset.ibge;
+          mobileLink.setAttribute('href', `/mobile?c=${m[1]}/${m[2]}${ibge ? `&ibge=${ibge}` : ''}`);
           mobileLink.classList.remove('hidden');
           mobileLink.classList.add('flex');
         }
