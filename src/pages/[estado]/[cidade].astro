@@ -351,7 +351,7 @@ const temDados = dados && (
             data-fim={a.fim}
             role="status"
           >
-            <svg class="h-4 w-4 shrink-0 self-center ${cls.texto}" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <svg class={`h-4 w-4 shrink-0 self-center ${cls.texto}`} viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
               <path d="M6.2 1.94a1.92 1.92 0 0 1 3.6 0l4.3 10.21a1.66 1.66 0 0 1-1.52 2.31H3.42a1.66 1.66 0 0 1-1.52-2.31L6.2 1.94ZM8 5a.75.75 0 0 0-.75.75v2.5a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8 5Zm0 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
             </svg>
             <strong class={`font-bold ${cls.texto}`}>{a.evento}</strong>
