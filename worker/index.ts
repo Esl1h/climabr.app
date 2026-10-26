@@ -229,6 +229,8 @@ async function buscarDados(siteUrl: string, estado: string, cidade: string): Pro
 // HTML). O JSON estático só atualiza na coleta diária; isto deixa o card em dia.
 // AQI/UV/dengue/reservatório seguem do JSON (não são "ao vivo" em fonte nenhuma).
 async function hidratarTempo(dados: Dados, siteUrl: string, ctx: ExecutionContext): Promise<void> {
+  // A hidratação sobrescreve atualizado_em com a hora atual: a coleta original fica aqui
+  dados.coleta_em = dados.atualizado_em ?? null;
   const lat = Number(dados.latitude);
   const lon = Number(dados.longitude);
   if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
@@ -281,6 +283,9 @@ async function hidratarTempo(dados: Dados, siteUrl: string, ctx: ExecutionContex
 // Formato 1 — one-liner (para tmux/i3/polybar/prompt)
 // ---------------------------------------------------------------------------
 
+// Mesmo limite da página da cidade: coleta com mais de 48h é marcada como atrasada
+const LIMITE_COLETA_MS = 48 * 3600 * 1000;
+
 function formatarOneLiner(dados: Dados, color: boolean): string {
   const cidade = dados.cidade as string || '';
   const uf = (dados.estado as string || '').toUpperCase();
@@ -317,6 +322,9 @@ function formatarOneLiner(dados: Dados, color: boolean): string {
 
   const q = dados.queimadas as Dados | undefined;
   if (q && Number(q.focos_100km) > 0) partes.push(`🔥${q.focos_100km}`);
+
+  const coleta = dados.coleta_em as string | null | undefined;
+  if (coleta && Date.now() - new Date(coleta).getTime() > LIMITE_COLETA_MS) partes.push('⚠ coleta antiga');
 
   return partes.join(' ');
 }
@@ -420,6 +428,13 @@ function formatarTerminal(dados: Dados, color: boolean): string {
   if (bt) {
     const cor_bt = bt.cor === 'Verde' ? c.green : bt.cor === 'Amarela' ? c.yellow : c.red;
     linhas.push(`  ${ICONES.tarifa} ${c.bold}Tarifa${c.reset}     Bandeira ${cor_bt}${bt.cor}${c.reset}  ${c.gray}+R$${Number(bt.adicional_kwh).toFixed(5)}/kWh${c.reset}`);
+  }
+
+  const coleta = dados.coleta_em as string | null | undefined;
+  if (coleta) {
+    const quando = new Date(coleta).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+    const atrasada = Date.now() - new Date(coleta).getTime() > LIMITE_COLETA_MS;
+    linhas.push(`  ${c.gray}Coleta dos dados: ${quando}${c.reset}${atrasada ? `  ${c.yellow}⚠ mais de 48h${c.reset}` : ''}`);
   }
 
   const slug = dados.slug as string || '';
