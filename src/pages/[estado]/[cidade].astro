@@ -228,7 +228,7 @@ const temDados = dados && (
   </nav>
 
   <div class="lg:grid lg:grid-cols-[26rem_minmax(0,1fr)] lg:items-start lg:gap-x-8">
-    <div class="lg:sticky lg:top-24">
+    <div id="agora" class="lg:sticky lg:top-24">
       {avisosCidade.length > 0 && (
         <div class="mb-6 space-y-2" data-alertas>
           {avisosCidade.map((a) => {
@@ -302,7 +302,7 @@ const temDados = dados && (
               <span data-f="cond-atual" class="mt-1 text-xs text-muted-foreground">{condHoje || ''}</span>
             </div>
             <button
-              id="btn-compartilhar"
+              id="btn-compartilhar" data-compartilhar
               aria-label="Compartilhar"
               title="Compartilhar"
               class="inline-flex shrink-0 items-center gap-1.5 rounded-md border border-input bg-card px-3 py-1.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
@@ -383,6 +383,11 @@ const temDados = dados && (
         >
           📱 Modo Mobile
         </a>
+      </nav>
+      <nav class="mt-6 -mx-4 flex gap-2 overflow-x-auto px-4 text-sm lg:mx-0 lg:flex-wrap lg:px-0" aria-label="Seções da página">
+        {temDados && [["#agora", "Agora"], ["#bloco-previsao", "Previsão"], ["#ar", "Ar"], ["#agua", "Água"], ["#saude", "Saúde"]].map(([href, rotulo]) => (
+          <a href={href} class="shrink-0 rounded-full border border-input bg-card px-3 py-1 text-foreground/80 hover:bg-accent hover:text-foreground transition-colors">{rotulo}</a>
+        ))}
       </nav>
     </div>
     <div class="min-w-0">
@@ -477,6 +482,14 @@ const temDados = dados && (
     </section>
   )}
 
+  <nav class="fixed inset-x-0 bottom-0 z-40 grid grid-cols-4 gap-1 border-t border-border bg-background/95 px-2 pt-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] text-center text-xs backdrop-blur sm:hidden" aria-label="Ações">
+    <button type="button" data-compartilhar class="rounded-md py-1.5 text-foreground/80 hover:bg-accent">Compartilhar</button>
+    <a href={`/${municipio.estado}/${municipio.slug}/telao`} class="rounded-md py-1.5 text-foreground/80 hover:bg-accent">Painel</a>
+    <a href={`/mobile?c=${municipio.estado}/${municipio.slug}&ibge=${municipio.id}`} class="rounded-md py-1.5 text-foreground/80 hover:bg-accent">Mobile</a>
+    <a href={`/api/${municipio.estado}/${municipio.slug}.json`} class="rounded-md py-1.5 text-foreground/80 hover:bg-accent">JSON</a>
+  </nav>
+  <div class="h-16 sm:hidden" aria-hidden="true"></div>
+
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
@@ -552,7 +565,7 @@ const temDados = dados && (
 
     // Compartilhar: Web Share API com fallback de copiar o link
     document.addEventListener('click', async (e) => {
-      const btn = e.target instanceof Element ? e.target.closest<HTMLButtonElement>('#btn-compartilhar') : null;
+      const btn = e.target instanceof Element ? e.target.closest<HTMLButtonElement>('[data-compartilhar]') : null;
       if (!btn) return;
       const compartilhavel = { title: document.title, url: window.location.href };
       if (navigator.share) {
