@@ -247,7 +247,6 @@ climabr_chuva_mm{'{cidade="Cotia",estado="SP"}'} 0</pre>
           { param: '?format=json',       cor: 'text-status-moderado', desc: 'JSON completo (mesmo que /api/...)' },
           { param: '?T',                 cor: 'text-muted-foreground',  desc: 'Desativa cores ANSI (alias de format=2)' },
           { param: '.svg',               cor: 'text-status-extremo', desc: 'Extensão SVG na URL (ex: /sp/cotia.svg)' },
-          { param: '.json',              cor: 'text-status-moderado', desc: 'Extensão JSON via Worker (ex: /sp/cotia.json)' },
         ].map(({ param, cor, desc }) => (
           <div class="flex items-center gap-4 px-4 py-2.5">
             <code class={`font-mono text-xs w-44 shrink-0 ${cor}`}>{param}</code>
@@ -296,9 +295,9 @@ curl climabr.app/rs/porto-alegre
 <span class="text-slate-500"># Alertas de dengue em SP</span>
 curl -s climabr.app/api/sp/sao-paulo.json | jq '.dengue'
 
-<span class="text-slate-500"># AQI de todas as capitais via loop</span>
-for uf in sp rj mg rs ce pe ba pr; do
-  curl -s "climabr.app/${'${uf}'}/${'${uf}'}?format=1" 2>/dev/null
+<span class="text-slate-500"># Uma linha por cidade via loop</span>
+for cidade in sp/sao-paulo rj/rio-de-janeiro mg/belo-horizonte rs/porto-alegre; do
+  curl -s "climabr.app/${'${cidade}'}?format=1" 2>/dev/null
 done
 
 <span class="text-slate-500"># Reservatório da sua cidade no Waybar/i3bar</span>

@@ -21,8 +21,7 @@ const titulo = 'Modo Mobile — climabr.app';
       :root { --gap: clamp(0.5rem, 1.4vmin, 1.4rem); }
       * { box-sizing: border-box; }
       html, body { margin: 0; padding: 0; height: 100%; background: #020617; }
-      html { font-size: 11px; }
-      body { font-family: system-ui, -apple-system, sans-serif; color: #f1f5f9; overflow: hidden; }
+      body { font-family: system-ui, -apple-system, sans-serif; color: #f1f5f9; }
 
       .cena { position: fixed; inset: 0; z-index: 0; background: linear-gradient(160deg, #0f172a, #1e293b); transition: background 1.5s ease, filter 1.5s ease; }
       .cena::before { content: ''; position: absolute; inset: -25%; background: radial-gradient(circle, var(--glow, rgba(255,255,255,0.06)), transparent 60%); animation: flutua 22s ease-in-out infinite alternate; }
@@ -37,7 +36,7 @@ const titulo = 'Modo Mobile — climabr.app';
       .clima-tempestade .cena { --glow: rgba(167,139,250,0.28); background: radial-gradient(circle at 30% 8%, rgba(167,139,250,0.28), transparent 45%), linear-gradient(160deg, #0f0a1f, #1e1b4b 55%, #312e81); }
       .noite .cena { filter: brightness(0.6) saturate(0.85); }
 
-      .telao { position: relative; z-index: 1; height: 100dvh; max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; padding: var(--gap); gap: var(--gap); }
+      .telao { position: relative; z-index: 1; min-height: 100dvh; max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; padding: var(--gap); gap: var(--gap); }
       .topo { display: flex; flex-direction: column; align-items: center; text-align: center; gap: calc(var(--gap) * 0.4); border-bottom: 1px solid rgba(148,163,184,0.22); padding-bottom: var(--gap); }
       .topo-linha { display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; gap: var(--gap); }
       .cidade-nome { font-size: clamp(1.8rem, 9vmin, 3rem); font-weight: 800; line-height: 1; letter-spacing: -0.01em; }
@@ -48,7 +47,12 @@ const titulo = 'Modo Mobile — climabr.app';
       .clima-linha .sep { opacity: 0.35; margin-right: 0.35em; font-weight: 400; }
       .marca { font-size: clamp(0.8rem, 3vmin, 1.1rem); color: #cbd5e1; }
 
-      .grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: minmax(0, 1fr); gap: var(--gap); min-height: 0; align-content: stretch; }
+      .alertas { display: flex; flex-direction: column; gap: calc(var(--gap) * 0.5); }
+      .alertas[hidden] { display: none; }
+      .alerta { background: rgba(15,23,42,0.7); border: 1px solid; border-radius: clamp(0.6rem, 1.6vmin, 1.2rem); padding: clamp(0.5rem, 1.6vmin, 0.9rem) clamp(0.7rem, 2vmin, 1.1rem); }
+      .alerta strong { display: block; font-size: clamp(0.85rem, 2.8vmin, 1.1rem); font-weight: 800; }
+      .alerta span { font-size: clamp(0.75rem, 2.2vmin, 0.95rem); color: #cbd5e1; }
+      .grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: auto; gap: var(--gap); align-content: start; }
       .card { position: relative; background: rgba(15,23,42,0.55); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(148,163,184,0.16); border-radius: clamp(0.6rem, 1.6vmin, 1.4rem); box-shadow: 0 10px 34px rgba(0,0,0,0.35); padding: clamp(0.6rem, 2vmin, 1.4rem); display: flex; flex-direction: column; justify-content: center; gap: clamp(0.2rem, 0.7vmin, 0.6rem); overflow: hidden; min-height: 0; text-align: center; }
       .card-wide { grid-column: span 2; }
       .card-titulo { font-size: clamp(0.7rem, 2.4vmin, 1.1rem); color: #cbd5e1; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; display: flex; align-items: center; justify-content: center; gap: 0.4em; }
@@ -92,6 +96,7 @@ const titulo = 'Modo Mobile — climabr.app';
           <span class="marca"><span aria-hidden="true" style="margin-right:0.3em;">🛰️</span><span style="color:#10b981; font-weight:700; font-style:italic;">Clima<span style="color:#3b82f6;">BR</span><span style="color:#eab308; font-style:normal;">.app</span></span></span>
         </div>
       </div>
+      <div class="alertas" id="alertas" hidden></div>
       <div class="grid" id="grid"></div>
     </div>
 
@@ -221,9 +226,32 @@ const titulo = 'Modo Mobile — climabr.app';
         return d;
       }
 
+      // Cores pelo nível do aviso INMET: 1 Perigo Potencial, 2 Perigo, 3 Grande Perigo
+      const AVISO_COR: Record<number, string> = { 1: '#fbbf24', 2: '#fb923c', 3: '#f87171' };
+
+      function renderAlertas(todos: any[], ibge: number) {
+        const agora = Date.now();
+        const meus = todos.filter((a) => Array.isArray(a.geocodes) && a.geocodes.includes(ibge) && (!a.fim || Date.parse(a.fim) > agora));
+        const caixa = document.getElementById('alertas')!;
+        caixa.innerHTML = meus.map((a) => {
+          const cor = AVISO_COR[a.nivel] ?? AVISO_COR[1];
+          const fim = new Date(a.fim).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo' });
+          return `<div class="alerta" style="border-color:${cor}"><strong style="color:${cor}">⚠ ${esc(a.evento)}</strong><span>${esc(a.severidade)} · até ${esc(fim)}</span></div>`;
+        }).join('');
+        caixa.hidden = meus.length === 0;
+      }
+
+      async function buscarAlertas(uf: string, ibge: number) {
+        try {
+          const res = await fetch(`/api/${uf}/alertas.json`);
+          if (res.ok) renderAlertas((await res.json()).alertas ?? [], ibge);
+        } catch { /* rede */ }
+      }
+
       async function main() {
         const params = new URLSearchParams(location.search);
         const c = (params.get('c') || '').toLowerCase();
+        const ibge = Number(params.get('ibge'));
         const m = c.match(/^([a-z]{2})[\/-]([a-z0-9-]+)$/);
         const aviso = document.getElementById('aviso')!;
         if (!m) { aviso.innerHTML = 'Informe a cidade: <code>/mobile?c=sp/sao-paulo</code>'; return; }
@@ -242,6 +270,7 @@ const titulo = 'Modo Mobile — climabr.app';
         document.getElementById('telao')!.hidden = false;
         document.title = `${nome}/${uf.toUpperCase()} — Modo Mobile — climabr.app`;
         render(dados, nome, uf);
+        if (ibge > 0) buscarAlertas(uf, ibge);
 
         const lat = Number(dados.latitude), lon = Number(dados.longitude);
         if (Number.isFinite(lat) && Number.isFinite(lon)) {
