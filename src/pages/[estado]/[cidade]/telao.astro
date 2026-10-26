@@ -127,6 +127,12 @@ const fmtFim = (iso: string) =>
     timeZone: 'America/Sao_Paulo',
   });
 
+// Coleta do build: o painel é um snapshot, então o rodapé diz a idade do dado
+const coletaTexto = dados?.atualizado_em
+  ? new Date(dados.atualizado_em).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo' })
+  : 'sem data';
+const coletaAtrasada = !dados?.atualizado_em || Date.now() - Date.parse(dados.atualizado_em) > 48 * 3600 * 1000;
+
 const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Painel — climabr.app`;
 ---
 
@@ -243,6 +249,11 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       }
       .alerta strong { display: block; font-size: clamp(1rem, 2.8vmin, 2.2rem); font-weight: 800; }
       .alerta span { font-size: clamp(0.8rem, 1.9vmin, 1.6rem); color: #e2e8f0; }
+      .rodape {
+        display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.4em 1.2em;
+        font-size: clamp(0.75rem, 1.5vmin, 1.4rem); color: #cbd5e1; font-variant-numeric: tabular-nums;
+      }
+      .rodape .atrasada { color: #fbbf24; font-weight: 700; }
       .grid {
         flex: 1;
         display: grid;
@@ -513,6 +524,11 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
           </div>
         )}
       </div>
+      <footer class="rodape">
+        <span>Coleta dos dados: {coletaTexto}{coletaAtrasada && <span class="atrasada"> · ⚠ coleta atrasada</span>}</span>
+        <span id="ao-vivo">Tempo ao vivo: aguardando</span>
+        <span id="recarrega">Atualiza em --:--</span>
+      </footer>
     </div>
 
     <script>
@@ -605,6 +621,9 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
           } catch { return; } // mantém o snapshot
         }
 
+        const aoVivo = document.getElementById('ao-vivo');
+        if (aoVivo) aoVivo.textContent = `Tempo ao vivo: ${new Date().toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit' })}`;
+
         // Temperatura atual + tema de fundo + condição (ao vivo)
         const cur = data?.current;
 
@@ -685,7 +704,14 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       });
 
       // Recarrega a cada 10 min para manter dados frescos no telão
-      setTimeout(() => location.reload(), 10 * 60 * 1000);
+      const RECARGA_MS = 10 * 60 * 1000;
+      const fimRecarga = Date.now() + RECARGA_MS;
+      setTimeout(() => location.reload(), RECARGA_MS);
+      setInterval(() => {
+        const seg = Math.max(0, Math.round((fimRecarga - Date.now()) / 1000));
+        const el = document.getElementById('recarrega');
+        if (el) el.textContent = `Atualiza em ${Math.floor(seg / 60)}:${String(seg % 60).padStart(2, '0')}`;
+      }, 1000);
     </script>
   </body>
 </html>

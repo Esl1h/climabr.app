@@ -212,6 +212,7 @@ const temDados = dados && (
 ---
 
 <PainelLayout
+  larga
   title={titulo}
   description={descricao}
   cidade={municipio.nome}
@@ -226,205 +227,215 @@ const temDados = dados && (
     <span class="text-foreground">{municipio.nome}</span>
   </nav>
 
-  {avisosCidade.length > 0 && (
-    <div class="mb-6 space-y-2" data-alertas>
-      {avisosCidade.map((a) => {
-        const cls = AVISO_CLS[a.nivel] ?? AVISO_CLS[1];
-        return (
-          <div
-            class={`flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-lg border px-4 py-3 text-sm ${cls.card}`}
-            data-alerta
-            data-fim={a.fim}
-            role="status"
-          >
-            <svg class={`h-4 w-4 shrink-0 self-center ${cls.texto}`} viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-              <path d="M6.2 1.94a1.92 1.92 0 0 1 3.6 0l4.3 10.21a1.66 1.66 0 0 1-1.52 2.31H3.42a1.66 1.66 0 0 1-1.52-2.31L6.2 1.94ZM8 5a.75.75 0 0 0-.75.75v2.5a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8 5Zm0 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
-            </svg>
-            <strong class={`font-bold ${cls.texto}`}>{a.evento}</strong>
-            <span class={`text-xs font-semibold uppercase tracking-wide ${cls.texto}`}>{a.severidade}</span>
-            <span class="text-xs text-muted-foreground">aviso INMET até {fmtVigencia(a.fim)}</span>
-            <a href={`/${municipio.estado}`} class="ml-auto text-xs text-primary hover:underline">
-              ver detalhes e instruções
-            </a>
-          </div>
-        );
-      })}
-    </div>
-  )}
-
-  <div
-    class="mb-8"
-    id="clima-root"
-    data-lat={municipio.lat ?? ''}
-    data-lon={municipio.lon ?? ''}
-    data-uf={municipio.estado}
-    data-slug={municipio.slug}
-    data-nome={municipio.nome}
-    data-ibge={municipio.id}
-  >
-    <div class="relative overflow-hidden rounded-2xl border border-border bg-card px-5 py-5 shadow-sm">
-      <!-- Glow emerald decorativo (não interativo, atrás do conteúdo) -->
-      <div
-        aria-hidden="true"
-        class="pointer-events-none absolute -top-24 -right-16 h-56 w-56 rounded-full bg-primary/10 blur-3xl dark:bg-primary/15"
-      ></div>
-
-      <div class="relative flex items-start justify-between gap-3">
-        <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-          <p
-            id="clima-agora"
-            class={`${CLS_TEMP} ${tAtual != null ? corTemperaturaTexto(tAtual) : 'text-foreground'}`}
-            aria-live="polite"
-            title={tAtual != null ? `${tAtual}°C agora · ${catTemperatura(tAtual)}` : undefined}
-            hidden={tAtual == null && (municipio.lat == null || municipio.lon == null)}
-            data-skeleton={tAtual == null ? true : undefined}
-          >
-            <span data-temp-valor>
-              {tAtual != null ? `${tAtual.toFixed(1)}°` : (
-                <span class="inline-block h-12 w-36 animate-pulse rounded bg-muted align-middle" aria-hidden="true"></span>
-              )}
-            </span>
-            <span class="sr-only" data-temp-sr>
-              {tAtual != null ? ' agora' : 'Carregando temperatura atual…'}
-            </span>
-          </p>
-          <h1 class="text-2xl font-bold text-foreground">
-            {municipio.nome}
-            <span class="text-muted-foreground text-lg">/{municipio.estado.toUpperCase()}</span>
-          </h1>
+  <div class="lg:grid lg:grid-cols-[26rem_minmax(0,1fr)] lg:items-start lg:gap-x-8">
+    <div id="agora" class="lg:sticky lg:top-24">
+      {avisosCidade.length > 0 && (
+        <div class="mb-6 space-y-2" data-alertas>
+          {avisosCidade.map((a) => {
+            const cls = AVISO_CLS[a.nivel] ?? AVISO_CLS[1];
+            return (
+              <div
+                class={`flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-lg border px-4 py-3 text-sm ${cls.card}`}
+                data-alerta
+                data-fim={a.fim}
+                role="status"
+              >
+                <svg class={`h-4 w-4 shrink-0 self-center ${cls.texto}`} viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                  <path d="M6.2 1.94a1.92 1.92 0 0 1 3.6 0l4.3 10.21a1.66 1.66 0 0 1-1.52 2.31H3.42a1.66 1.66 0 0 1-1.52-2.31L6.2 1.94ZM8 5a.75.75 0 0 0-.75.75v2.5a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8 5Zm0 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
+                </svg>
+                <strong class={`font-bold ${cls.texto}`}>{a.evento}</strong>
+                <span class={`text-xs font-semibold uppercase tracking-wide ${cls.texto}`}>{a.severidade}</span>
+                <span class="text-xs text-muted-foreground">aviso INMET até {fmtVigencia(a.fim)}</span>
+                <a href={`/${municipio.estado}`} class="ml-auto text-xs text-primary hover:underline">
+                  ver detalhes e instruções
+                </a>
+              </div>
+            );
+          })}
         </div>
-        <!-- Condição de hoje: ícone grande + rótulo; hidratado ao vivo -->
-        <div class="mr-1 hidden shrink-0 flex-col items-center text-center sm:flex">
-          <span id="clima-icone" aria-hidden="true" class="text-4xl leading-none drop-shadow-sm">{iconeHoje}</span>
-          <span data-f="cond-atual" class="mt-1 text-xs text-muted-foreground">{condHoje || ''}</span>
-        </div>
-        <button
-          id="btn-compartilhar"
-          aria-label="Compartilhar"
-          title="Compartilhar"
-          class="inline-flex shrink-0 items-center gap-1.5 rounded-md border border-input bg-card px-3 py-1.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
-        >
-          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path d="M13 4.5a2.5 2.5 0 1 1 .702 1.737L6.97 9.604a2.518 2.518 0 0 1 0 .792l6.733 3.367a2.5 2.5 0 1 1-.671 1.341l-6.733-3.367a2.5 2.5 0 1 1 0-3.475l6.733-3.366A2.52 2.52 0 0 1 13 4.5Z" />
-          </svg>
-          <span class="hidden sm:inline">Compartilhar</span>
-        </button>
-      </div>
-      <p
-        class="relative mt-2 flex flex-wrap items-center gap-x-3 text-xs font-medium tabular-nums"
-        data-hoje-minmax
-        title="Máxima e mínima previstas para hoje"
-        hidden={hojePrev == null && (municipio.lat == null || municipio.lon == null)}
-      >
-        <span class="inline-flex items-baseline gap-1 text-status-pessimo">
-          <span aria-hidden="true">↑</span><span>Máx</span><span data-f="hoje-max">{hojePrev ? `${Math.round(hojePrev.max)}°` : ''}</span>
-        </span>
-        <span class="inline-flex items-baseline gap-1 text-status-info">
-          <span aria-hidden="true">↓</span><span>Mín</span><span data-f="hoje-min">{hojePrev ? `${Math.round(hojePrev.min)}°` : ''}</span>
-        </span>
-        <span
-          data-delta-ultima
-          class="hidden rounded-full bg-muted px-2 py-0.5 text-[10px] text-muted-foreground"
-          title="Comparado com a última vez que você abriu esta página"
-        ></span>
-      </p>
-
-      {dados?.atualizado_em ? (
-        <p
-          id="clima-atualizado"
-          class="relative mt-1.5 text-xs text-muted-foreground"
-          data-ts={dados.atualizado_em}
-          title={formatarDataHora(dados.atualizado_em)}
-        >
-          Atualizado em {formatarDataHora(dados.atualizado_em)}
-        </p>
-      ) : (
-        <p id="clima-atualizado" class="relative mt-1.5 text-xs text-muted-foreground">Dados ainda não coletados para esta cidade.</p>
       )}
 
-      <!-- Resumo textual (SEO + acessibilidade): prosa indexável antes dos blocos visuais.
-           <details> mantém o texto no DOM mesmo fechado, então segue indexável;
-           <summary> já expõe o estado expandido/recolhido para leitores de tela. -->
-      <!-- open de propósito: a prosa é o conteúdo que melhor ranqueia,
-           começa visível e continua recolhível manualmente -->
-      <details class="group relative mt-4" open>
-        <summary class="flex w-fit cursor-pointer list-none items-center gap-2 text-sm text-foreground/80 hover:text-primary [&::-webkit-details-marker]:hidden">
-          <span class="text-xs uppercase tracking-wider text-primary font-semibold">Resumo de hoje em {municipio.nome}</span>
-          <svg class="h-4 w-4 text-muted-foreground transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.23 8.27a.75.75 0 0 1 .02-1.06z" clip-rule="evenodd" />
-          </svg>
-        </summary>
-        <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
-          {resumoAntes}<span data-resumo-temp>{resumoTemp}</span>{resumoDepois}
-          {avisosCidade.length > 0 && (
-            <span data-alerta data-fim={avisosCidade[0].fim}>
-              {' '}Atenção: a cidade está sob aviso de {avisosCidade[0].evento} ({avisosCidade[0].severidade}) do
-              INMET até {fmtVigencia(avisosCidade[0].fim)}.
+      <div
+        class="mb-8"
+        id="clima-root"
+        data-lat={municipio.lat ?? ''}
+        data-lon={municipio.lon ?? ''}
+        data-uf={municipio.estado}
+        data-slug={municipio.slug}
+        data-nome={municipio.nome}
+        data-ibge={municipio.id}
+      >
+        <div class="relative overflow-hidden rounded-2xl border border-border bg-card px-5 py-5 shadow-sm">
+          <!-- Glow emerald decorativo (não interativo, atrás do conteúdo) -->
+          <div
+            aria-hidden="true"
+            class="pointer-events-none absolute -top-24 -right-16 h-56 w-56 rounded-full bg-primary/10 blur-3xl dark:bg-primary/15"
+          ></div>
+
+          <div class="relative flex items-start justify-between gap-3">
+            <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <p
+                id="clima-agora"
+                class={`${CLS_TEMP} ${tAtual != null ? corTemperaturaTexto(tAtual) : 'text-foreground'}`}
+                aria-live="polite"
+                title={tAtual != null ? `${tAtual}°C agora · ${catTemperatura(tAtual)}` : undefined}
+                hidden={tAtual == null && (municipio.lat == null || municipio.lon == null)}
+                data-skeleton={tAtual == null ? true : undefined}
+              >
+                <span data-temp-valor>
+                  {tAtual != null ? `${tAtual.toFixed(1)}°` : (
+                    <span class="inline-block h-12 w-36 animate-pulse rounded bg-muted align-middle" aria-hidden="true"></span>
+                  )}
+                </span>
+                <span class="sr-only" data-temp-sr>
+                  {tAtual != null ? ' agora' : 'Carregando temperatura atual…'}
+                </span>
+              </p>
+              <h1 class="text-2xl font-bold text-foreground">
+                {municipio.nome}
+                <span class="text-muted-foreground text-lg">/{municipio.estado.toUpperCase()}</span>
+              </h1>
+            </div>
+            <!-- Condição de hoje: ícone grande + rótulo; hidratado ao vivo -->
+            <div class="mr-1 hidden shrink-0 flex-col items-center text-center sm:flex">
+              <span id="clima-icone" aria-hidden="true" class="text-4xl leading-none drop-shadow-sm">{iconeHoje}</span>
+              <span data-f="cond-atual" class="mt-1 text-xs text-muted-foreground">{condHoje || ''}</span>
+            </div>
+            <button
+              id="btn-compartilhar" data-compartilhar
+              aria-label="Compartilhar"
+              title="Compartilhar"
+              class="inline-flex shrink-0 items-center gap-1.5 rounded-md border border-input bg-card px-3 py-1.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
+            >
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M13 4.5a2.5 2.5 0 1 1 .702 1.737L6.97 9.604a2.518 2.518 0 0 1 0 .792l6.733 3.367a2.5 2.5 0 1 1-.671 1.341l-6.733-3.367a2.5 2.5 0 1 1 0-3.475l6.733-3.366A2.52 2.52 0 0 1 13 4.5Z" />
+              </svg>
+              <span class="hidden sm:inline">Compartilhar</span>
+            </button>
+          </div>
+          <p
+            class="relative mt-2 flex flex-wrap items-center gap-x-3 text-xs font-medium tabular-nums"
+            data-hoje-minmax
+            title="Máxima e mínima previstas para hoje"
+            hidden={hojePrev == null && (municipio.lat == null || municipio.lon == null)}
+          >
+            <span class="inline-flex items-baseline gap-1 text-status-pessimo">
+              <span aria-hidden="true">↑</span><span>Máx</span><span data-f="hoje-max">{hojePrev ? `${Math.round(hojePrev.max)}°` : ''}</span>
             </span>
+            <span class="inline-flex items-baseline gap-1 text-status-info">
+              <span aria-hidden="true">↓</span><span>Mín</span><span data-f="hoje-min">{hojePrev ? `${Math.round(hojePrev.min)}°` : ''}</span>
+            </span>
+            <span
+              data-delta-ultima
+              class="hidden rounded-full bg-muted px-2 py-0.5 text-[10px] text-muted-foreground"
+              title="Comparado com a última vez que você abriu esta página"
+            ></span>
+          </p>
+
+          {dados?.atualizado_em ? (
+            <p
+              id="clima-atualizado"
+              class="relative mt-1.5 text-xs text-muted-foreground"
+              data-ts={dados.atualizado_em}
+              title={formatarDataHora(dados.atualizado_em)}
+            >
+              Atualizado em {formatarDataHora(dados.atualizado_em)}
+            </p>
+          ) : (
+            <p id="clima-atualizado" class="relative mt-1.5 text-xs text-muted-foreground">Dados ainda não coletados para esta cidade.</p>
           )}
-        </p>
-      </details>
+
+          <!-- Resumo textual (SEO + acessibilidade): prosa indexável antes dos blocos visuais.
+               <details> mantém o texto no DOM mesmo fechado, então segue indexável;
+               <summary> já expõe o estado expandido/recolhido para leitores de tela. -->
+          <!-- open de propósito: a prosa é o conteúdo que melhor ranqueia,
+               começa visível e continua recolhível manualmente -->
+          <details class="group relative mt-4" open>
+            <summary class="flex w-fit cursor-pointer list-none items-center gap-2 text-sm text-foreground/80 hover:text-primary [&::-webkit-details-marker]:hidden">
+              <span class="text-xs uppercase tracking-wider text-primary font-semibold">Resumo de hoje em {municipio.nome}</span>
+              <svg class="h-4 w-4 text-muted-foreground transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.23 8.27a.75.75 0 0 1 .02-1.06z" clip-rule="evenodd" />
+              </svg>
+            </summary>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+              {resumoAntes}<span data-resumo-temp>{resumoTemp}</span>{resumoDepois}
+              {avisosCidade.length > 0 && (
+                <span data-alerta data-fim={avisosCidade[0].fim}>
+                  {' '}Atenção: a cidade está sob aviso de {avisosCidade[0].evento} ({avisosCidade[0].severidade}) do
+                  INMET até {fmtVigencia(avisosCidade[0].fim)}.
+                </span>
+              )}
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <nav class="mb-6 flex flex-wrap gap-2 text-sm" aria-label="Modos de visualização">
+        <a
+          href={`/${municipio.estado}/${municipio.slug}/telao`}
+          class="rounded-md border border-input bg-card px-3 py-1.5 text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
+        >
+          📺 Modo Painel
+        </a>
+        <a
+          href={`/mobile?c=${municipio.estado}/${municipio.slug}&ibge=${municipio.id}`}
+          class="rounded-md border border-input bg-card px-3 py-1.5 text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
+        >
+          📱 Modo Mobile
+        </a>
+      </nav>
+      <nav class="mt-6 -mx-4 flex gap-2 overflow-x-auto px-4 text-sm lg:mx-0 lg:flex-wrap lg:px-0" aria-label="Seções da página">
+        {temDados && [["#agora", "Agora"], ["#bloco-previsao", "Previsão"], ["#ar", "Ar"], ["#agua", "Água"], ["#saude", "Saúde"]].map(([href, rotulo]) => (
+          <a href={href} class="shrink-0 rounded-full border border-input bg-card px-3 py-1 text-foreground/80 hover:bg-accent hover:text-foreground transition-colors">{rotulo}</a>
+        ))}
+      </nav>
+    </div>
+    <div class="min-w-0">
+      {temDados ? (
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 items-start">
+          <BlocoPrevisao previsao={dados!.previsao} />
+          <BlocoAr
+            qualidade_ar={dados!.qualidade_ar}
+            umidade_pct={dados!.umidade_pct}
+            pressao_hpa={dados!.pressao_hpa}
+            ponto_orvalho_c={dados!.ponto_orvalho_c}
+          />
+          <BlocoUV uv={dados!.uv} />
+          <BlocoReservatorio reservatorio={dados!.reservatorio} />
+          <BlocoAgua agua={dados!.agua} />
+          <BlocoVento vento={dados!.vento} />
+          <BlocoOndas ondas={dados!.ondas} />
+          <BlocoQueimadas queimadas={dados!.queimadas} />
+          <BlocoDengue
+            dengue={dados!.dengue}
+            chikungunya={dados!.chikungunya}
+            zika={dados!.zika}
+          />
+          <BlocoSol sol={dados!.sol} lua={dados!.lua} />
+          <BlocoBandeira bandeira={bandeira} />
+          <BlocoAlagamentos alagamentos={dados!.alagamentos} />
+          <BlocoChuvaRio chuva={dados!.chuva_estacoes} />
+        </div>
+      ) : (
+        <div class="rounded-lg border border-border bg-card p-8 text-center">
+          <p class="text-muted-foreground">
+            Os dados de <strong class="text-foreground">{municipio.nome}</strong> ainda estão sendo coletados.
+          </p>
+          <p class="mt-2 text-sm text-muted-foreground">
+            As coletas acontecem automaticamente a cada 3-6 horas via GitHub Actions.
+          </p>
+          <div class="mt-4 flex justify-center gap-4 text-sm">
+            <a href={`/api/${estado}/${cidade}.json`} class="text-primary hover:underline">
+              Ver JSON
+            </a>
+            <a href="/" class="text-muted-foreground hover:text-foreground hover:underline">
+              Voltar ao início
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   </div>
-
-  <nav class="mb-6 flex flex-wrap gap-2 text-sm" aria-label="Modos de visualização">
-    <a
-      href={`/${municipio.estado}/${municipio.slug}/telao`}
-      class="rounded-md border border-input bg-card px-3 py-1.5 text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
-    >
-      📺 Modo Painel
-    </a>
-    <a
-      href={`/mobile?c=${municipio.estado}/${municipio.slug}&ibge=${municipio.id}`}
-      class="rounded-md border border-input bg-card px-3 py-1.5 text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
-    >
-      📱 Modo Mobile
-    </a>
-  </nav>
-
-  {temDados ? (
-    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 items-start">
-      <BlocoPrevisao previsao={dados!.previsao} />
-      <BlocoAr
-        qualidade_ar={dados!.qualidade_ar}
-        umidade_pct={dados!.umidade_pct}
-        pressao_hpa={dados!.pressao_hpa}
-        ponto_orvalho_c={dados!.ponto_orvalho_c}
-      />
-      <BlocoUV uv={dados!.uv} />
-      <BlocoReservatorio reservatorio={dados!.reservatorio} />
-      <BlocoAgua agua={dados!.agua} />
-      <BlocoVento vento={dados!.vento} />
-      <BlocoOndas ondas={dados!.ondas} />
-      <BlocoQueimadas queimadas={dados!.queimadas} />
-      <BlocoDengue
-        dengue={dados!.dengue}
-        chikungunya={dados!.chikungunya}
-        zika={dados!.zika}
-      />
-      <BlocoSol sol={dados!.sol} lua={dados!.lua} />
-      <BlocoBandeira bandeira={bandeira} />
-      <BlocoAlagamentos alagamentos={dados!.alagamentos} />
-      <BlocoChuvaRio chuva={dados!.chuva_estacoes} />
-    </div>
-  ) : (
-    <div class="rounded-lg border border-border bg-card p-8 text-center">
-      <p class="text-muted-foreground">
-        Os dados de <strong class="text-foreground">{municipio.nome}</strong> ainda estão sendo coletados.
-      </p>
-      <p class="mt-2 text-sm text-muted-foreground">
-        As coletas acontecem automaticamente a cada 3-6 horas via GitHub Actions.
-      </p>
-      <div class="mt-4 flex justify-center gap-4 text-sm">
-        <a href={`/api/${estado}/${cidade}.json`} class="text-primary hover:underline">
-          Ver JSON
-        </a>
-        <a href="/" class="text-muted-foreground hover:text-foreground hover:underline">
-          Voltar ao início
-        </a>
-      </div>
-    </div>
-  )}
 
   <!-- Âncora do aviso de coleta atrasada, preenchido por previsao-cliente.ts.
        Fica depois dos painéis de propósito: o alerta é sobre os blocos do
@@ -470,6 +481,14 @@ const temDados = dados && (
       </p>
     </section>
   )}
+
+  <nav class="fixed inset-x-0 bottom-0 z-40 grid grid-cols-4 gap-1 border-t border-border bg-background/95 px-2 pt-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] text-center text-xs backdrop-blur sm:hidden" aria-label="Ações">
+    <button type="button" data-compartilhar class="rounded-md py-1.5 text-foreground/80 hover:bg-accent">Compartilhar</button>
+    <a href={`/${municipio.estado}/${municipio.slug}/telao`} class="rounded-md py-1.5 text-foreground/80 hover:bg-accent">Painel</a>
+    <a href={`/mobile?c=${municipio.estado}/${municipio.slug}&ibge=${municipio.id}`} class="rounded-md py-1.5 text-foreground/80 hover:bg-accent">Mobile</a>
+    <a href={`/api/${municipio.estado}/${municipio.slug}.json`} class="rounded-md py-1.5 text-foreground/80 hover:bg-accent">JSON</a>
+  </nav>
+  <div class="h-16 sm:hidden" aria-hidden="true"></div>
 
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
@@ -546,7 +565,7 @@ const temDados = dados && (
 
     // Compartilhar: Web Share API com fallback de copiar o link
     document.addEventListener('click', async (e) => {
-      const btn = e.target instanceof Element ? e.target.closest<HTMLButtonElement>('#btn-compartilhar') : null;
+      const btn = e.target instanceof Element ? e.target.closest<HTMLButtonElement>('[data-compartilhar]') : null;
       if (!btn) return;
       const compartilhavel = { title: document.title, url: window.location.href };
       if (navigator.share) {
