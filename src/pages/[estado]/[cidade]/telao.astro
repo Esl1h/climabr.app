@@ -100,6 +100,33 @@ const estacaoIcone = estacao ? iconeEstacao(estacao) : '';
 // Emoji grande do tempo, usado como marca d'água do fundo
 const climaEmoji = hoje ? (TEMPO_EMOJI[hoje.condicao_codigo as number] ?? '⛅') : '⛅';
 
+// Avisos INMET ativos para este município (mesma regra da página da cidade)
+interface AvisoTelao {
+  evento: string;
+  severidade: string;
+  nivel: number;
+  fim: string | null;
+  geocodes: number[];
+}
+let avisosCidade: AvisoTelao[] = [];
+try {
+  const fs = await import('node:fs/promises');
+  const path = await import('node:path');
+  const raw = await fs.readFile(path.join(process.cwd(), 'data', 'alertas', `${municipio.estado}.json`), 'utf-8');
+  const agoraTs = Date.now();
+  avisosCidade = (JSON.parse(raw) as AvisoTelao[]).filter(
+    (a) => a.geocodes.includes(municipio.id) && (!a.fim || Date.parse(a.fim) > agoraTs)
+  );
+} catch {
+  // Sem avisos ativos para a UF
+}
+const corAviso = (nivel: number) => (nivel >= 3 ? '#f87171' : nivel === 2 ? '#fb923c' : '#fbbf24');
+const fmtFim = (iso: string) =>
+  new Date(iso).toLocaleString('pt-BR', {
+    day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit',
+    timeZone: 'America/Sao_Paulo',
+  });
+
 const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Painel — climabr.app`;
 ---
 
@@ -207,6 +234,15 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       .clima-linha .estacao { display: inline-flex; align-items: center; gap: 0.35em; opacity: 0.92; }
       .clima-linha .sep { opacity: 0.35; margin-right: 0.35em; font-weight: 400; }
 
+      .alertas { display: flex; flex-direction: column; gap: calc(var(--gap) * 0.5); }
+      .alertas[hidden] { display: none; }
+      .alerta {
+        border: 2px solid; border-radius: clamp(0.6rem, 1.6vmin, 1.2rem);
+        padding: clamp(0.5rem, 1.4vmin, 1rem) clamp(0.8rem, 2vmin, 1.4rem);
+        text-align: center;
+      }
+      .alerta strong { display: block; font-size: clamp(1rem, 2.8vmin, 2.2rem); font-weight: 800; }
+      .alerta span { font-size: clamp(0.8rem, 1.9vmin, 1.6rem); color: #e2e8f0; }
       .grid {
         flex: 1;
         display: grid;
@@ -328,6 +364,23 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
           </span>
         </div>
       </div>
+
+      {avisosCidade.length > 0 && (
+        <div class="alertas" data-alertas>
+          {avisosCidade.map((a) => (
+            <div
+              class="alerta"
+              data-alerta
+              data-fim={a.fim}
+              style={`border-color:${corAviso(a.nivel)}; background:${corAviso(a.nivel)}33; color:${corAviso(a.nivel)}`}
+              role="status"
+            >
+              <strong>⚠ {a.evento}</strong>
+              <span>{a.severidade} · até {a.fim ? fmtFim(a.fim) : 'sem prazo'}</span>
+            </div>
+          ))}
+        </div>
+      )}
 
       <!-- Grid de cards -->
       <div class="grid">
@@ -485,8 +538,17 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
         });
         aplicarNoite();
       }
+      // Página é um snapshot do build: aviso vencido sai da tela sem esperar o próximo reload
+      function removerAvisosVencidos() {
+        document.querySelectorAll('[data-alerta]').forEach((el) => {
+          const fim = el.getAttribute('data-fim');
+          if (fim && Date.parse(fim) < Date.now()) el.remove();
+        });
+        const caixa = document.querySelector('[data-alertas]');
+        if (caixa && !caixa.querySelector('[data-alerta]')) caixa.remove();
+      }
       tick();
-      setInterval(tick, 1000);
+      setInterval(() => { tick(); removerAvisosVencidos(); }, 1000);
 
       // Hidratação em tempo real pela mesma fonte/cache da página da cidade
       // (Open-Meteo no browser), para o painel não divergir do snapshot do build.
