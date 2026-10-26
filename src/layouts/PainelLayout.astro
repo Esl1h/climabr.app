@@ -183,6 +183,12 @@ const UFS: [string, string][] = [
                 <span class="text-primary text-xs">⤓</span>
                 Instalar app
               </button>
+              <p
+                id="instalar-ios"
+                class="hidden px-4 py-2.5 text-xs leading-relaxed text-foreground/80"
+              >
+                No iPhone, toque em Compartilhar e depois em "Adicionar à Tela de Início".
+              </p>
               <a
                 id="menu-telao"
                 href="#"
@@ -357,6 +363,16 @@ const UFS: [string, string][] = [
       document.addEventListener('appinstalled', () => {
         document.getElementById('btn-instalar')?.classList.add('hidden');
       });
+
+      // iOS não dispara beforeinstallprompt: a instrução manual é o único caminho de instalação.
+      // O menu é trocado a cada navegação do ClientRouter, então precisa reaplicar.
+      function mostrarInstalarIos(): void {
+        const ehIos = /iPhone|iPad|iPod/.test(navigator.userAgent)
+          && !(navigator as Navigator & { standalone?: boolean }).standalone;
+        if (ehIos) document.getElementById('instalar-ios')?.classList.remove('hidden');
+      }
+      mostrarInstalarIos();
+      document.addEventListener('astro:page-load', mostrarInstalarIos);
 
       // PWA: service worker só em produção (no dev atrapalharia o HMR)
       if (import.meta.env.PROD && 'serviceWorker' in navigator) {
