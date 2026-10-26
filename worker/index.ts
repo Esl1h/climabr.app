@@ -283,6 +283,42 @@ async function hidratarTempo(dados: Dados, siteUrl: string, ctx: ExecutionContex
 // Formato 1 — one-liner (para tmux/i3/polybar/prompt)
 // ---------------------------------------------------------------------------
 
+// Avisos INMET ativos do município. A UF vem da API estática (geocódigos por município) e
+// fica no cache do edge, como a previsão do Open-Meteo, para não repetir a leitura a cada curl
+async function buscarAvisos(dados: Dados, siteUrl: string, ctx: ExecutionContext): Promise<void> {
+  const ibge = Number(dados.codigo_ibge);
+  const uf = String(dados.estado ?? '').toLowerCase();
+  if (!Number.isFinite(ibge) || !uf) return;
+
+  const cache = caches.default;
+  const cacheKey = new Request(`${siteUrl}/__avisos/${uf}`);
+  let todos: Dados[] = [];
+  try {
+    const hit = await cache.match(cacheKey);
+    if (hit) {
+      todos = (await hit.json() as { alertas: Dados[] }).alertas;
+    } else {
+      const res = await fetch(`${siteUrl}/api/${uf}/alertas.json`);
+      if (!res.ok) return;
+      const json = await res.json() as { alertas: Dados[] };
+      todos = json.alertas;
+      const toCache = new Response(JSON.stringify(json), { headers: { 'Cache-Control': 'public, max-age=900' } });
+      ctx.waitUntil(cache.put(cacheKey, toCache));
+    }
+  } catch {
+    return; // sem aviso é melhor que derrubar a resposta do terminal
+  }
+
+  const agora = Date.now();
+  dados.avisos = todos.filter((a) =>
+    (a.geocodes as number[] | undefined)?.includes(ibge) && (!a.fim || Date.parse(a.fim as string) > agora)
+  );
+}
+
+function formatarFim(iso: string): string {
+  return new Date(iso).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo' });
+}
+
 // Mesmo limite da página da cidade: coleta com mais de 48h é marcada como atrasada
 const LIMITE_COLETA_MS = 48 * 3600 * 1000;
 
@@ -290,6 +326,8 @@ function formatarOneLiner(dados: Dados, color: boolean): string {
   const cidade = dados.cidade as string || '';
   const uf = (dados.estado as string || '').toUpperCase();
   const partes: string[] = [`${cidade}/${uf}`];
+  const aviso = (dados.avisos as Dados[] | undefined)?.[0];
+  if (aviso) partes.push(`⚠${aviso.evento}`);
 
   const previsao = (dados.previsao as Dados[] | undefined)?.[0];
   if (previsao) {
@@ -348,6 +386,10 @@ function formatarTerminal(dados: Dados, color: boolean): string {
     `${c.bold}${c.white}  ${cidade}/${uf}${c.reset}${temp}  ${c.gray}${agora}${c.reset}`,
     `${c.gray}  ${sep}${c.reset}`,
   ];
+
+  for (const aviso of (dados.avisos as Dados[] | undefined) ?? []) {
+    linhas.push(`  ${c.red}${c.bold}⚠ ${aviso.evento}${c.reset}  ${c.gray}${aviso.severidade} · até ${formatarFim(aviso.fim as string)}${c.reset}`);
+  }
 
   // Previsão 7 dias
   const previsao = dados.previsao as Dados[] | undefined;
@@ -684,6 +726,7 @@ export default {
           const dados = await buscarDados(siteUrl, loc.uf, loc.slug);
           if (dados && !dados._status) {
             await hidratarTempo(dados, siteUrl, ctx);
+            await buscarAvisos(dados, siteUrl, ctx);
             const cor = !noColor;
             const texto = formatarTerminal(dados, cor);
             return new Response(texto, {
@@ -754,6 +797,7 @@ export default {
         const dados = await buscarDados(siteUrl, estado, cidade);
         if (dados && !dados._status) {
           await hidratarTempo(dados, siteUrl, ctx);
+          await buscarAvisos(dados, siteUrl, ctx);
           const cor = !noColor && curl;
 
           if (format === 'prometheus') {
