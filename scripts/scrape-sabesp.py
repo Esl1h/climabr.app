@@ -215,6 +215,13 @@ def main():
             except Exception:
                 pass
 
+        # Sistema local sem medição não pode apagar o reservatório próximo que
+        # scrape-ana.py gravou (aproximado, com nível). ANA roda antes deste
+        # script, então sem esta guarda o fallback nunca chegava ao site.
+        if sistema_id is None and (existente.get("reservatorio") or {}).get("nivel_pct") is not None:
+            ignorados += 1
+            continue
+
         existente["reservatorio"] = dados_reserv
         if "cidade" not in existente:
             existente.update({
