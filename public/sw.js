@@ -60,7 +60,7 @@ async function networkFirst(requisicao, nomeCache, limite) {
 
 // Último recurso de navegação: rede e cache falharam; no lugar do erro duro
 // do browser, mostra a página offline com atalhos para capitais
-async function offlineFallback(): Promise<Response> {
+async function offlineFallback() {
   const cache = await caches.open(CACHE_PAGINAS);
   const emCache = await cache.match('/offline.html');
   return emCache ?? new Response('Sem conexão', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });

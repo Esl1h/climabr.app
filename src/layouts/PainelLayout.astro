@@ -11,6 +11,8 @@ interface Props {
   ogImage?: string;
   /** Páginas com estética própria sempre escura (ex.: /curl) ignoram o toggle de tema */
   forceDark?: boolean;
+  /** Páginas com painel de duas colunas no desktop (ex.: cidade) usam a largura cheia */
+  larga?: boolean;
 }
 
 const {
@@ -21,7 +23,9 @@ const {
   slug,
   ogImage,
   forceDark = false,
+  larga = false,
 } = Astro.props;
+const larguraMax = larga ? 'max-w-6xl' : 'max-w-3xl';
 
 const canonical = new URL(Astro.url.pathname, 'https://climabr.app').href;
 const ogTitle = cidade && estado ? `${cidade}/${estado.toUpperCase()} — ClimaBR.app` : title;
@@ -114,7 +118,7 @@ const UFS: [string, string][] = [
       Pular para o conteúdo
     </a>
     <header class="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur px-4 py-3">
-      <div class="flex items-center justify-between max-w-3xl mx-auto">
+      <div class={`flex items-center justify-between mx-auto ${larguraMax}`}>
         <!-- Logo -->
         <a href="/" class="flex items-center gap-1.5 text-lg font-bold tracking-tight hover:opacity-80 transition-opacity">
           <img src="/favicon.svg" alt="" aria-hidden="true" width="20" height="20" class="h-5 w-5" />
@@ -183,6 +187,12 @@ const UFS: [string, string][] = [
                 <span class="text-primary text-xs">⤓</span>
                 Instalar app
               </button>
+              <p
+                id="instalar-ios"
+                class="hidden px-4 py-2.5 text-xs leading-relaxed text-foreground/80"
+              >
+                No iPhone, toque em Compartilhar e depois em "Adicionar à Tela de Início".
+              </p>
               <a
                 id="menu-telao"
                 href="#"
@@ -234,12 +244,12 @@ const UFS: [string, string][] = [
       </div>
     </header>
 
-    <main id="conteudo" tabindex="-1" class="mx-auto max-w-3xl px-4 py-8 focus:outline-none">
+    <main id="conteudo" tabindex="-1" class={`mx-auto ${larguraMax} px-4 py-8 focus:outline-none`}>
       <slot />
     </main>
 
     <footer class="mt-16 border-t border-border px-4 py-6 text-center text-xs text-muted-foreground">
-      <nav aria-label="Previsão por estado" class="mx-auto max-w-3xl">
+      <nav aria-label="Previsão por estado" class={`mx-auto ${larguraMax}`}>
         <p class="mb-2 text-[10px] font-semibold uppercase tracking-wider">Previsão por estado</p>
         <ul class="flex flex-wrap justify-center gap-x-3 gap-y-1">
           {UFS.map(([uf, nome]) => (
@@ -321,7 +331,8 @@ const UFS: [string, string][] = [
           telaoLink.classList.add('flex');
         }
         if (mobileLink) {
-          mobileLink.setAttribute('href', `/mobile?c=${m[1]}/${m[2]}`);
+          const ibge = document.getElementById('clima-root')?.dataset.ibge;
+          mobileLink.setAttribute('href', `/mobile?c=${m[1]}/${m[2]}${ibge ? `&ibge=${ibge}` : ''}`);
           mobileLink.classList.remove('hidden');
           mobileLink.classList.add('flex');
         }
@@ -357,6 +368,16 @@ const UFS: [string, string][] = [
       document.addEventListener('appinstalled', () => {
         document.getElementById('btn-instalar')?.classList.add('hidden');
       });
+
+      // iOS não dispara beforeinstallprompt: a instrução manual é o único caminho de instalação.
+      // O menu é trocado a cada navegação do ClientRouter, então precisa reaplicar.
+      function mostrarInstalarIos(): void {
+        const ehIos = /iPhone|iPad|iPod/.test(navigator.userAgent)
+          && !(navigator as Navigator & { standalone?: boolean }).standalone;
+        if (ehIos) document.getElementById('instalar-ios')?.classList.remove('hidden');
+      }
+      mostrarInstalarIos();
+      document.addEventListener('astro:page-load', mostrarInstalarIos);
 
       // PWA: service worker só em produção (no dev atrapalharia o HMR)
       if (import.meta.env.PROD && 'serviceWorker' in navigator) {

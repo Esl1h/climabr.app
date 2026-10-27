@@ -4,112 +4,149 @@
   "slug": "buenopolis",
   "latitude": -17.8805,
   "longitude": -44.0414,
-  "atualizado_em": "2026-10-24T09:26:13.726373+00:00",
+  "atualizado_em": "2026-10-26T14:49:04.790686+00:00",
   "previsao": [
     {
-      "data": "2026-10-24",
-      "min": 19,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
-    },
-    {
-      "data": "2026-10-25",
-      "min": 22,
-      "max": 30,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
-    },
-    {
       "data": "2026-10-26",
-      "min": 22,
-      "max": 28,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 20.7,
+      "max": 31.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.6,
+      "uv": 8.8,
+      "nascer_sol": "05:20",
+      "por_sol": "18:00"
     },
     {
       "data": "2026-10-27",
-      "min": 19,
-      "max": 28,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
+      "min": 20.3,
+      "max": 27.1,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 18.3,
+      "uv": 7.8,
+      "nascer_sol": "05:19",
+      "por_sol": "18:00"
+    },
+    {
+      "data": "2026-10-28",
+      "min": 19.0,
+      "max": 27.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 8.2,
+      "nascer_sol": "05:19",
+      "por_sol": "18:01"
+    },
+    {
+      "data": "2026-10-29",
+      "min": 19.5,
+      "max": 29.3,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 4.0,
+      "uv": 7.2,
+      "nascer_sol": "05:18",
+      "por_sol": "18:01"
+    },
+    {
+      "data": "2026-10-30",
+      "min": 21.2,
+      "max": 28.4,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 18.3,
+      "uv": 7.4,
+      "nascer_sol": "05:17",
+      "por_sol": "18:01"
+    },
+    {
+      "data": "2026-10-31",
+      "min": 20.3,
+      "max": 27.1,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 22.2,
+      "uv": 7.5,
+      "nascer_sol": "05:17",
+      "por_sol": "18:02"
+    },
+    {
+      "data": "2026-11-01",
+      "min": 20.4,
+      "max": 27.2,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 16.0,
+      "uv": 4.7,
+      "nascer_sol": "05:17",
+      "por_sol": "18:02"
     }
   ],
   "reservatorio": {
     "nome": "Três Marias",
-    "nivel_pct": 71.9,
+    "nivel_pct": 71.6,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-10-22",
+    "data_medicao": "2026-10-25",
     "distancia_km": 134.4,
     "aproximado": true,
     "tipo": "RCU",
     "acumula": true,
     "nota": "Reservatório hidrelétrico mais próximo (134km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-10-24T11:20:06.614038+00:00"
+    "atualizado_em": "2026-10-26T13:22:03.445691+00:00"
   },
   "queimadas": {
-    "focos_100km": 36,
+    "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-10-24T11:20:09.635068+00:00"
+    "atualizado_em": "2026-10-26T13:22:05.888560+00:00"
   },
   "uv": {
-    "indice": 9.6,
+    "indice": 8.8,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 26,
+    "indice": 34,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 1.9,
-    "pm10": 2.1,
-    "no2": 0.3,
-    "o3": 68.0,
+    "pm25": 6.5,
+    "pm10": 6.7,
+    "no2": 0.4,
+    "o3": 97.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-22T13:24:20.613821+00:00"
+    "atualizado_em": "2026-10-26T14:49:04.790686+00:00"
   },
   "sol": {
-    "nascer": "05:22",
-    "por": "17:58",
-    "duracao_h": 12.6,
+    "nascer": "05:20",
+    "por": "18:00",
+    "duracao_h": 12.7,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 75.0,
-    "fase_pct": 36.5,
-    "dias_proxima_cheia": 4,
+    "nome": "Cheia",
+    "iluminacao_pct": 0.0,
+    "fase_pct": 50.0,
+    "dias_proxima_cheia": 0,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 30.2,
+  "temperatura_atual": 30.8,
   "vento": {
-    "velocidade_kmh": 9.7,
-    "direcao_graus": 56,
-    "direcao": "NE",
-    "max_kmh": 12.5,
-    "rajada_kmh": 30.6,
-    "direcao_dominante": "NE",
+    "velocidade_kmh": 10.9,
+    "direcao_graus": 353,
+    "direcao": "N",
+    "max_kmh": 16.5,
+    "rajada_kmh": 41.8,
+    "direcao_dominante": "NNE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 41,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 15.3,
+  "umidade_pct": 53,
+  "pressao_hpa": 1011,
+  "ponto_orvalho_c": 20.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -119,9 +156,9 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 9058,
-    "semana_epidemiologica": 202638,
+    "semana_epidemiologica": 202641,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-10-06T15:04:29.723611+00:00"
+    "atualizado_em": "2026-10-26T15:11:14.299530+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -132,9 +169,9 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 9058,
-    "semana_epidemiologica": 202638,
+    "semana_epidemiologica": 202641,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-10-06T15:04:29.723611+00:00"
+    "atualizado_em": "2026-10-26T15:11:14.299530+00:00"
   },
-  "_clima_em": "2026-10-22T13:24:20.613821+00:00"
+  "_clima_em": "2026-10-26T14:49:04.790686+00:00"
 }

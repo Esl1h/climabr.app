@@ -26,14 +26,31 @@
 <body>
 <main>
   <p><strong>Sem conexão</strong> e esta página não está no cache local.</p>
-  <p>Se você já abriu uma cidade recentemente, ela funciona offline:</p>
-  <ul>
-    <li><a href="/rj/rio-de-janeiro">Rio de Janeiro/RJ</a></li>
-    <li><a href="/sp/sao-paulo">São Paulo/SP</a></li>
-    <li><a href="/mg/belo-horizonte">Belo Horizonte/MG</a></li>
-    <li><a href="/rs/porto-alegre">Porto Alegre/RS</a></li>
-  </ul>
+  <p id="sem-salvas">Você ainda não abriu nenhuma cidade neste aparelho.</p>
+  <div id="com-salvas" hidden>
+    <p>Estas cidades abertas recentemente funcionam offline:</p>
+    <ul id="cidades"></ul>
+  </div>
   <p>Reconecte para atualizar ou navegar para outras cidades.</p>
 </main>
+<script>
+  // Lista as cidades que a página de cidade gravou em climabr_recentes
+  let recentes = [];
+  try { recentes = JSON.parse(localStorage.getItem('climabr_recentes') || '[]'); } catch { /* ignora */ }
+  const validas = Array.isArray(recentes) ? recentes.filter((r) => r && r.uf && r.slug && r.nome) : [];
+  if (validas.length) {
+    const lista = document.getElementById('cidades');
+    for (const r of validas) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = '/' + r.uf + '/' + r.slug;
+      a.textContent = r.nome + '/' + String(r.uf).toUpperCase();
+      li.appendChild(a);
+      lista.appendChild(li);
+    }
+    document.getElementById('com-salvas').hidden = false;
+    document.getElementById('sem-salvas').hidden = true;
+  }
+</script>
 </body>
 </html>

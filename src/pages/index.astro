@@ -104,6 +104,17 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
       </button>
 
       <div id="recentes" class="hidden space-y-2">
+        <a
+          id="minha-cidade"
+          href="/"
+          class="hidden items-center justify-between gap-3 rounded-lg border border-primary/40 bg-card px-4 py-3 hover:bg-accent transition-colors"
+        >
+          <span class="min-w-0">
+            <span class="block text-xs uppercase tracking-wide text-muted-foreground">Minha cidade</span>
+            <span id="minha-cidade-nome" class="block truncate font-semibold text-foreground"></span>
+          </span>
+          <span aria-hidden="true" class="text-primary">→</span>
+        </a>
         <p class="text-xs text-muted-foreground uppercase tracking-wide">Recentes</p>
         <div id="recentes-chips" class="flex flex-wrap gap-2"></div>
       </div>
@@ -281,14 +292,42 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
   import { carregarIndice, maisProxima } from '../scripts/busca-cidades';
   import { hidratarAgora } from '../scripts/agora-cliente';
 
+  // Card da última cidade aberta: a home é estática, então o link só existe no cliente
+  function mostrarMinhaCidade(r: { uf?: string; slug?: string; nome?: string } | undefined): void {
+    const link = document.getElementById('minha-cidade');
+    const nome = document.getElementById('minha-cidade-nome');
+    if (!link || !nome || !r?.uf || !r?.slug || !r?.nome) return;
+    link.setAttribute('href', `/${r.uf}/${r.slug}`);
+    nome.textContent = `${r.nome}/${r.uf.toUpperCase()}`;
+    link.classList.remove('hidden');
+    link.classList.add('flex');
+  }
+
+  function lerRecentes(): { uf: string; slug: string; nome: string }[] {
+    try {
+      const bruto = JSON.parse(localStorage.getItem('climabr_recentes') ?? '[]');
+      return Array.isArray(bruto) ? bruto : [];
+    } catch {
+      return [];
+    }
+  }
+
+  // App instalado abre em /?app=1 (start_url): vai direto para a última cidade.
+  // replace evita que o botão voltar caia de novo na home.
+  function abrirUltimaCidadeSeApp(): void {
+    if (new URLSearchParams(location.search).get('app') !== '1') return;
+    const ultima = lerRecentes()[0];
+    if (ultima?.uf && ultima?.slug) location.replace(`/${ultima.uf}/${ultima.slug}`);
+  }
+
   // Chips de cidades visitadas recentemente (gravadas pela página de cidade)
   function renderizarRecentes(): void {
     const wrap = document.getElementById('recentes');
     const chips = document.getElementById('recentes-chips');
     if (!wrap || !chips) return;
-    let recentes: { uf: string; slug: string; nome: string }[] = [];
-    try { recentes = JSON.parse(localStorage.getItem('climabr_recentes') ?? '[]'); } catch { /* ignora */ }
-    if (!Array.isArray(recentes) || recentes.length === 0) return;
+    const recentes = lerRecentes();
+    if (recentes.length === 0) return;
+    mostrarMinhaCidade(recentes[0]);
     chips.innerHTML = '';
     for (const r of recentes.slice(0, 5)) {
       if (!r?.uf || !r?.slug || !r?.nome) continue;
@@ -341,6 +380,7 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
   }
 
   function initHome(): void {
+    abrirUltimaCidadeSeApp();
     renderizarRecentes();
     initBuscaHome();
     limparAlertasVencidos();

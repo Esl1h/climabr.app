@@ -21,7 +21,7 @@ export const GET: APIRoute = async ({ params, props }) => {
     const path = await import('node:path');
     const filePath = path.join(process.cwd(), 'data', 'cidades', estado!, `${cidade}.json`);
     const raw = await fs.readFile(filePath, 'utf-8');
-    dados = JSON.parse(raw);
+    dados = { ...JSON.parse(raw), codigo_ibge: municipio.id };
   } catch {
     dados = {
       cidade: municipio.nome,
@@ -32,6 +32,7 @@ export const GET: APIRoute = async ({ params, props }) => {
       atualizado_em: null,
       _status: 'sem_dados',
       _mensagem: 'Dados ainda não coletados para este município.',
+      codigo_ibge: municipio.id,
     };
   }
 
