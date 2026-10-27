@@ -259,6 +259,8 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(clamp(240px, 28vmin, 540px), 1fr));
         grid-auto-rows: minmax(0, 1fr);
+        /* Cards menores sobem para preencher o buraco deixado pelo card largo */
+        grid-auto-flow: dense;
         gap: var(--gap);
         min-height: 0;
         align-content: stretch;
@@ -280,6 +282,8 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
         min-height: 0;
       }
       .card-wide { grid-column: span 2; grid-row: span 2; }
+      /* Sol e Lua dividem a última linha, sem deixar célula vazia no painel */
+      .card-larga { grid-column: span 2; }
       .card-wide .card-titulo { font-size: clamp(0.85rem, 1.9vmin, 2rem); }
       .card-wide .card-valor { font-size: clamp(2.4rem, 6vmin, 7rem); }
       .card-wide .prev-dia .d { font-size: clamp(0.8rem, 1.7vmin, 1.8rem); }
@@ -502,7 +506,7 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
 
         <!-- Sol -->
         {sol && (
-          <div class="card">
+          <div class="card card-larga">
             <div class="card-titulo"><span class="card-ico">🌅</span> Sol</div>
             <div class="card-sub" style="font-size:clamp(1rem,2.4vmin,2.6rem); color:#e2e8f0; font-weight:700;">
               <span style="color:#fbbf24;">↑ {sol.nascer}</span> &nbsp; <span style="color:#fb923c;">↓ {sol.por}</span>
@@ -513,7 +517,7 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
 
         <!-- Lua -->
         {lua && (
-          <div class="card">
+          <div class="card card-larga">
             <div class="card-titulo"><span class="card-ico">🌙</span> Lua</div>
             <div class="card-sub" style="font-size:clamp(0.95rem,2.1vmin,2.3rem); color:#e2e8f0; font-weight:700;">
               <span style="font-size:1.5em; vertical-align:middle;">{LUA_EMOJI[lua.nome] ?? '🌙'}</span> {lua.nome}
@@ -525,7 +529,7 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
         )}
       </div>
       <footer class="rodape">
-        <span>Coleta dos dados: {coletaTexto}{coletaAtrasada && <span class="atrasada"> · ⚠ coleta atrasada</span>}</span>
+        <span>Coleta dos dados: {coletaTexto} <span id="coleta-idade" data-ts={dados?.atualizado_em ?? ''}></span>{coletaAtrasada && <span class="atrasada"> · ⚠ coleta atrasada</span>}</span>
         <span id="ao-vivo">Tempo ao vivo: aguardando</span>
         <span id="recarrega">Atualiza em --:--</span>
       </footer>
@@ -717,6 +721,17 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
         const el = document.getElementById('recarrega');
         if (el) el.textContent = `Atualiza em ${Math.floor(seg / 60)}:${String(seg % 60).padStart(2, '0')}`;
       }, 1000);
+
+      // A idade da coleta cresce com o relógio, mesmo com o painel parado
+      const idadeEl = document.getElementById('coleta-idade');
+      function atualizarIdade() {
+        const ts = idadeEl?.dataset.ts;
+        if (!idadeEl || !ts) return;
+        const horas = Math.floor((Date.now() - Date.parse(ts)) / 3600000);
+        idadeEl.textContent = `(há ${horas} h)`;
+      }
+      atualizarIdade();
+      setInterval(atualizarIdade, 60000);
     </script>
   </body>
 </html>
