@@ -367,6 +367,49 @@ function formatarOneLiner(dados: Dados, color: boolean): string {
   return partes.join(' ');
 }
 
+// Campos que o filtro ?campos= nunca remove, para a resposta continuar identificada
+const CAMPOS_FIXOS = new Set(['cidade', 'estado', 'slug', 'atualizado_em', 'codigo_ibge']);
+
+// Markdown para notas e LLMs; ?secoes= escolhe quais linhas aparecem
+function formatarMarkdown(dados: Dados, secoes: Set<string> | null): string {
+  const cidade = dados.cidade as string || '';
+  const uf = (dados.estado as string || '').toUpperCase();
+  const coleta = dados.coleta_em as string | null | undefined;
+  const mostrar = (secao: string) => !secoes || secoes.has(secao);
+  const linhas: string[] = [`## ${cidade}/${uf}`];
+  if (coleta) linhas.push(`Atualizado em ${formatarFim(coleta)}`);
+  linhas.push('');
+
+  const previsao = (dados.previsao as Dados[] | undefined)?.[0];
+  if (mostrar('previsao') && previsao) linhas.push(`- Previsão: ${previsao.condicao}, mín ${previsao.min}°C, máx ${previsao.max}°C`);
+
+  const aviso = (dados.avisos as Dados[] | undefined)?.[0];
+  if (mostrar('avisos') && aviso) linhas.push(`- Aviso INMET: ${aviso.evento} (${aviso.severidade})`);
+
+  const ar = dados.qualidade_ar as Dados | undefined;
+  if (mostrar('ar') && ar) linhas.push(`- Ar: ${ar.categoria} (AQI ${ar.indice})`);
+
+  const uv = dados.uv as Dados | undefined;
+  if (mostrar('uv') && uv?.indice != null) linhas.push(`- UV: ${uv.categoria} (${uv.indice})`);
+
+  const res = dados.reservatorio as Dados | undefined;
+  if (mostrar('reservatorio') && res?.nivel_pct != null) linhas.push(`- Reservatório: ${res.nome} ${res.nivel_pct}%`);
+
+  const ondas = dados.ondas as Dados | undefined;
+  if (mostrar('ondas') && ondas) linhas.push(`- Mar: ${ondas.surf_descricao}, ondas de ${ondas.altura_m} m`);
+
+  const dengue = dados.dengue as Dados | undefined;
+  if (mostrar('dengue') && dengue?.nivel_alerta != null && Number(dengue.nivel_alerta) >= 1) {
+    const casos = Number(dengue.casos_semana);
+    linhas.push(`- Dengue: ${dengue.nivel_label}, ${casos} ${casos === 1 ? 'caso' : 'casos'}/semana`);
+  }
+
+  const q = dados.queimadas as Dados | undefined;
+  if (mostrar('queimadas') && q) linhas.push(`- Queimadas: ${q.focos_100km} focos num raio de 100 km`);
+
+  return linhas.join('\n') + '\n';
+}
+
 // ---------------------------------------------------------------------------
 // Formato terminal rico (padrão curl)
 // ---------------------------------------------------------------------------
@@ -812,6 +855,14 @@ export default {
             });
           }
 
+          if (format === 'md') {
+            const secoes = url.searchParams.get('secoes');
+            const filtro = secoes ? new Set(secoes.split(',').map((s) => s.trim())) : null;
+            return new Response(formatarMarkdown(dados, filtro), {
+              headers: { 'Content-Type': 'text/markdown; charset=utf-8', 'Cache-Control': 'public, max-age=1800', ...SECURITY_HEADERS },
+            });
+          }
+
           if (format === 'j1' || format === 'json') {
             return new Response(JSON.stringify(dados, null, 2), {
               headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=1800', 'Access-Control-Allow-Origin': '*', ...SECURITY_HEADERS },
@@ -824,6 +875,23 @@ export default {
             headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'public, max-age=1800', ...SECURITY_HEADERS },
           });
         }
+      }
+    }
+
+    // O JSON estático não lê query string: o filtro de campos é aplicado aqui
+    const apiCidade = url.pathname.match(/^\/api\/[a-z]{2}\/[a-z0-9-]+\.json$/);
+    const campos = url.searchParams.get('campos');
+    if (apiCidade && campos) {
+      const original = await fetch(request);
+      if (original.ok) {
+        const dados = (await original.json()) as Dados;
+        const escolhidos = new Set(campos.split(',').map((c) => c.trim()));
+        const filtrado = Object.fromEntries(
+          Object.entries(dados).filter(([k]) => CAMPOS_FIXOS.has(k) || escolhidos.has(k))
+        );
+        return new Response(JSON.stringify(filtrado, null, 2), {
+          headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=1800', 'Access-Control-Allow-Origin': '*', ...SECURITY_HEADERS },
+        });
       }
     }
 

@@ -227,7 +227,7 @@ const temDados = dados && (
     <span class="text-foreground">{municipio.nome}</span>
   </nav>
 
-  <div class="lg:grid lg:grid-cols-[26rem_minmax(0,1fr)] lg:items-start lg:gap-x-8">
+  <div class="pb-24 lg:grid lg:grid-cols-[26rem_minmax(0,1fr)] lg:items-start lg:gap-x-8 lg:pb-0">
     <div id="agora" class="lg:sticky lg:top-24">
       {avisosCidade.length > 0 && (
         <div class="mb-6 space-y-2" data-alertas>
@@ -295,6 +295,11 @@ const temDados = dados && (
                 {municipio.nome}
                 <span class="text-muted-foreground text-lg">/{municipio.estado.toUpperCase()}</span>
               </h1>
+              {dados?.ondas && (
+                <span class="rounded-full border border-status-info/40 bg-status-info/10 px-2 py-0.5 text-xs text-status-info">
+                  Costeira · {dados.ondas.surf_descricao}
+                </span>
+              )}
             </div>
             <!-- Condição de hoje: ícone grande + rótulo; hidratado ao vivo -->
             <div class="mr-1 hidden shrink-0 flex-col items-center text-center sm:flex">
@@ -384,7 +389,7 @@ const temDados = dados && (
           📱 Modo Mobile
         </a>
       </nav>
-      <nav class="mt-6 -mx-4 flex gap-2 overflow-x-auto px-4 text-sm lg:mx-0 lg:flex-wrap lg:px-0" aria-label="Seções da página">
+      <nav class="mt-6 hidden gap-2 text-sm lg:flex lg:flex-wrap" aria-label="Seções da página">
         {temDados && [["#agora", "Agora"], ["#bloco-previsao", "Previsão"], ["#ar", "Ar"], ["#agua", "Água"], ["#saude", "Saúde"]].map(([href, rotulo]) => (
           <a href={href} class="shrink-0 rounded-full border border-input bg-card px-3 py-1 text-foreground/80 hover:bg-accent hover:text-foreground transition-colors">{rotulo}</a>
         ))}
@@ -444,8 +449,27 @@ const temDados = dados && (
        contradizia o "Tempo atualizado agora" logo acima, que é ao vivo. -->
   <div data-aviso-coleta class="mt-8"></div>
 
+  <nav
+    class="fixed inset-x-0 bottom-0 z-40 flex border-t border-border bg-background/95 pb-[env(safe-area-inset-bottom)] text-xs backdrop-blur lg:hidden"
+    aria-label="Seções da página (celular)"
+  >
+    {temDados && [["#agora", "Agora"], ["#bloco-previsao", "Previsão"], ["#ar", "Ar"], ["#saude", "Saúde"]].map(([href, rotulo]) => (
+      <a href={href} class="flex min-h-12 flex-1 items-center justify-center text-foreground/80 hover:text-primary transition-colors">{rotulo}</a>
+    ))}
+    <details class="relative flex-1">
+      <summary class="flex min-h-12 cursor-pointer list-none items-center justify-center text-foreground/80 hover:text-primary [&::-webkit-details-marker]:hidden">Mais</summary>
+      <div class="absolute bottom-full right-0 mb-2 flex w-44 flex-col rounded-lg border border-border bg-popover py-1 text-left shadow-xl">
+        {temDados && <a href="#cidades-proximas" class="px-4 py-2 text-foreground/80 hover:bg-accent">Cidades próximas</a>}
+        <button type="button" data-compartilhar class="px-4 py-2 text-left text-foreground/80 hover:bg-accent">Compartilhar</button>
+        <a href={`/${municipio.estado}/${municipio.slug}/telao`} class="px-4 py-2 text-foreground/80 hover:bg-accent">Modo Painel</a>
+        <a href={`/mobile?c=${municipio.estado}/${municipio.slug}&ibge=${municipio.id}`} class="px-4 py-2 text-foreground/80 hover:bg-accent">Modo Mobile</a>
+        <a href={`/api/${municipio.estado}/${municipio.slug}.json`} class="px-4 py-2 text-foreground/80 hover:bg-accent">JSON</a>
+      </div>
+    </details>
+  </nav>
+
   {vizinhas.length > 0 && (
-    <section aria-label="Cidades próximas" class="mt-8">
+    <section aria-label="Cidades próximas" id="cidades-proximas" class="mt-8">
       <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
         Cidades próximas
       </h2>
@@ -481,14 +505,6 @@ const temDados = dados && (
       </p>
     </section>
   )}
-
-  <nav class="fixed inset-x-0 bottom-0 z-40 grid grid-cols-4 gap-1 border-t border-border bg-background/95 px-2 pt-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] text-center text-xs backdrop-blur sm:hidden" aria-label="Ações">
-    <button type="button" data-compartilhar class="rounded-md py-1.5 text-foreground/80 hover:bg-accent">Compartilhar</button>
-    <a href={`/${municipio.estado}/${municipio.slug}/telao`} class="rounded-md py-1.5 text-foreground/80 hover:bg-accent">Painel</a>
-    <a href={`/mobile?c=${municipio.estado}/${municipio.slug}&ibge=${municipio.id}`} class="rounded-md py-1.5 text-foreground/80 hover:bg-accent">Mobile</a>
-    <a href={`/api/${municipio.estado}/${municipio.slug}.json`} class="rounded-md py-1.5 text-foreground/80 hover:bg-accent">JSON</a>
-  </nav>
-  <div class="h-16 sm:hidden" aria-hidden="true"></div>
 
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",

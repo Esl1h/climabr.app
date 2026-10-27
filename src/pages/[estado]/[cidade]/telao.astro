@@ -612,13 +612,18 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
           const raw = sessionStorage.getItem(chave);
           if (raw) { const o = JSON.parse(raw); if (Date.now() - o.t < 600000) data = o.d; }
         } catch { /* ignora */ }
+        // Sem resposta, o rodapé diz que o painel está no snapshot, em vez de ficar em "aguardando"
+        const semConexao = () => {
+          const aoVivoSemConexao = document.getElementById('ao-vivo');
+          if (aoVivoSemConexao) aoVivoSemConexao.textContent = 'Sem conexão: exibindo o snapshot';
+        };
         if (!data) {
           try {
             const res = await fetch(url);
-            if (!res.ok) return;
+            if (!res.ok) return semConexao();
             data = await res.json();
             try { sessionStorage.setItem(chave, JSON.stringify({ t: Date.now(), d: data })); } catch { /* ignora */ }
-          } catch { return; } // mantém o snapshot
+          } catch { return semConexao(); } // mantém o snapshot
         }
 
         const aoVivo = document.getElementById('ao-vivo');
