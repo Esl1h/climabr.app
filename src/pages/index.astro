@@ -126,18 +126,27 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
         <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
           Alertas meteorológicos ativos
         </h2>
-        <div class="flex flex-wrap gap-2">
-          {ufsAlerta.map((u) => (
-            <a
-              href={`/${u.uf}`}
-              data-alerta-uf
-              data-fim={u.fimMax}
-              class={`rounded-full border px-3 py-1.5 text-sm transition-colors hover:opacity-80 ${ALERTA_CHIP[u.pior.nivel] ?? ALERTA_CHIP[1]}`}
-            >
-              <strong>{u.uf.toUpperCase()}</strong> · {u.pior.evento}{u.total > 1 ? ` +${u.total - 1}` : ''}
-            </a>
-          ))}
-        </div>
+        <!-- No celular a lista começa recolhida, para as capitais aparecerem na primeira dobra; no desktop abre sozinha -->
+        <details data-alertas-detalhes open>
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-3 rounded-lg border border-status-moderado/40 bg-status-moderado/10 px-3 py-2 text-sm sm:hidden [&::-webkit-details-marker]:hidden">
+            <span>
+              <strong>{ufsAlerta.length} {ufsAlerta.length === 1 ? 'UF' : 'UFs'}</strong> com aviso · maior: {ufsAlerta[0].pior.evento} ({ufsAlerta[0].uf.toUpperCase()})
+            </span>
+            <span aria-hidden="true">▾</span>
+          </summary>
+          <div class="mt-2 flex flex-wrap gap-2 sm:mt-0">
+            {ufsAlerta.map((u) => (
+              <a
+                href={`/${u.uf}`}
+                data-alerta-uf
+                data-fim={u.fimMax}
+                class={`rounded-full border px-3 py-1.5 text-sm transition-colors hover:opacity-80 ${ALERTA_CHIP[u.pior.nivel] ?? ALERTA_CHIP[1]}`}
+              >
+                <strong>{u.uf.toUpperCase()}</strong> · {u.pior.evento}{u.total > 1 ? ` +${u.total - 1}` : ''}
+              </a>
+            ))}
+          </div>
+        </details>
         <p class="mt-2 text-xs text-muted-foreground">Avisos oficiais do INMET · clique na UF para detalhes</p>
       </section>
     )}
@@ -376,6 +385,9 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
       const fim = el.dataset.fim;
       if (fim && Date.parse(fim) < Date.now()) el.remove();
     });
+    // Sem JS a lista fica aberta; com JS, o celular começa recolhido
+    const detalhes = secao.querySelector<HTMLDetailsElement>('[data-alertas-detalhes]');
+    if (detalhes && !matchMedia('(min-width: 640px)').matches) detalhes.open = false;
     if (!secao.querySelector('[data-alerta-uf]')) secao.remove();
   }
 
