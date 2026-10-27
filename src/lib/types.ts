@@ -34,6 +34,66 @@ export interface DadosCidade {
     por_sol?: string | null;
   }>;
 
+  agua?: {
+    parametro: string;
+    amostras: number;
+    com_presenca: number;
+    pct_conformes: number | null;
+    periodo: string;
+    fonte: string;
+    atualizado_em?: string;
+  } | null;
+
+  /** Pontos de alagamento do CGE: só existe para o município de São Paulo */
+  alagamentos?: {
+    data: string;
+    pontos_total: number;
+    ativos: number;
+    ativos_intransitaveis: number;
+    intransitaveis_total: number;
+    pontos: Array<{
+      zona: string;
+      subprefeitura: string;
+      local: string;
+      referencia: string;
+      sentido: string;
+      inicio: string | null;
+      fim: string | null;
+      ativo: boolean;
+      transitavel: boolean;
+    }>;
+    fonte: string;
+    url: string;
+    atualizado_em: string;
+  } | null;
+
+  /** Pluviômetros do Alerta Rio — só existe para o município do Rio de Janeiro */
+  chuva_estacoes?: {
+    estacoes: Array<{
+      nome: string;
+      lat: number | null;
+      lon: number | null;
+      m15: number;
+      h01: number;
+      h24: number;
+      h96: number;
+      mes: number;
+      lido_em: string | null;
+      recente: boolean;
+    }>;
+    total: number;
+    fora_do_ar: number;
+    chovendo: number;
+    com_chuva_24h: number;
+    max_h01: number;
+    max_h01_estacao: string;
+    max_h24: number;
+    max_h24_estacao: string;
+    fonte: string;
+    url: string;
+    atualizado_em: string;
+  } | null;
+
   uv?: {
     indice: number;
     categoria: string;
@@ -67,6 +127,10 @@ export interface DadosCidade {
     distancia_km?: number;
     sistema_id?: number;
     aproximado?: boolean;
+    /** Código do ONS: FIO = fio d'água, RCU/RES/RBB = acumulação */
+    tipo?: string;
+    /** false para fio d'água, que não armazena e oscila em torno de 0% */
+    acumula?: boolean;
     nota?: string;
     fonte: string;
     atualizado_em?: string;
@@ -79,6 +143,9 @@ export interface DadosCidade {
     nivel_incidencia_label?: string;
     casos_semana: number;
     casos_estimados?: number;
+    /** Casos por 100 mil habitantes na semana (p_inc100k do InfoDengue) */
+    incidencia_100k?: number | null;
+    populacao?: number | null;
     semana_epidemiologica?: number;
     fonte: string;
     atualizado_em?: string;

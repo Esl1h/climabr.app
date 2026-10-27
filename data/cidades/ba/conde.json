@@ -4,68 +4,112 @@
   "slug": "conde",
   "latitude": -11.8277,
   "longitude": -37.6776,
-  "atualizado_em": "2026-07-23T07:48:16.832135+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-26T10:38:47.201903+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-26",
+      "min": 24,
+      "max": 39,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-27",
+      "min": 25,
+      "max": 37,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-28",
+      "min": 24,
+      "max": 33,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-29",
+      "min": 25,
+      "max": 34,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    }
+  ],
   "queimadas": {
-    "focos_100km": 0,
+    "focos_100km": 11,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-23T09:04:48.697004+00:00"
+    "atualizado_em": "2026-10-26T13:22:05.888560+00:00"
   },
   "uv": {
-    "indice": 6.9,
-    "categoria": "Alto",
+    "indice": 9.2,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 32,
+    "indice": 50,
     "categoria": "Boa",
     "principal_poluente": "PM10",
-    "pm25": 4.0,
-    "pm10": 6.9,
-    "no2": 0.7,
-    "o3": 55.0,
+    "pm25": 9.7,
+    "pm10": 16.3,
+    "no2": 0.3,
+    "o3": 53.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-21T10:22:44.189167+00:00"
+    "atualizado_em": "2026-10-22T13:24:20.613821+00:00"
   },
   "sol": {
-    "nascer": "05:51",
-    "por": "17:22",
-    "duracao_h": 11.5,
-    "estacao": "Inverno",
+    "nascer": "05:02",
+    "por": "17:28",
+    "duracao_h": 12.4,
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 98.0,
-    "fase_pct": 21.6,
-    "dias_proxima_cheia": 8,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 75.0,
+    "fase_pct": 36.5,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.1,
+  "temperatura_atual": 28.6,
   "vento": {
-    "velocidade_kmh": 6.2,
-    "direcao_graus": 232,
-    "direcao": "SO",
-    "max_kmh": 15.2,
-    "rajada_kmh": 33.1,
-    "direcao_dominante": "SE",
-    "fonte": "Open-Meteo"
+    "velocidade_kmh": 15.8,
+    "direcao_graus": 91,
+    "direcao": "E",
+    "max_kmh": 20.8,
+    "rajada_kmh": 45.0,
+    "direcao_dominante": "ENE",
+    "fonte": "Open-Meteo",
+    "atualizado_em": "2026-10-26T15:09:59.277101+00:00"
   },
-  "umidade_pct": 98,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 21.7,
+  "umidade_pct": 64,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 21.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
     "nivel_incidencia": 0,
     "nivel_incidencia_label": "Baixa",
-    "casos_semana": 0,
-    "casos_estimados": 0,
-    "semana_epidemiologica": 202627,
+    "casos_semana": 1,
+    "casos_estimados": 1,
+    "incidencia_100k": 4.1,
+    "populacao": 24433,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-21T13:45:30.954738+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -74,9 +118,26 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202627,
+    "incidencia_100k": 0.0,
+    "populacao": 24433,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-21T13:45:30.954738+00:00"
   },
-  "_clima_em": "2026-07-21T10:22:44.189167+00:00"
+  "_clima_em": "2026-10-22T13:24:20.613821+00:00",
+  "ondas": {
+    "altura_m": 0.94,
+    "altura_max_m": 1.0,
+    "periodo_s": 6.2,
+    "direcao_graus": 84,
+    "direcao": "E",
+    "swell_altura_m": 0.9,
+    "swell_periodo_s": 5.6,
+    "swell_direcao": "E",
+    "surf_nivel": "bom",
+    "surf_emoji": "🟢",
+    "surf_descricao": "Bom para surf",
+    "fonte": "Open-Meteo Marine",
+    "atualizado_em": "2026-10-26T15:09:59.277101+00:00"
+  }
 }

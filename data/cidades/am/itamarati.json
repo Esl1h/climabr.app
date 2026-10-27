@@ -4,58 +4,99 @@
   "slug": "itamarati",
   "latitude": -6.6828,
   "longitude": -68.1128,
-  "atualizado_em": "2026-07-23T07:37:53.792651+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-26T10:37:23.183647+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-26",
+      "min": 26,
+      "max": 36,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-27",
+      "min": 25,
+      "max": 35,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-28",
+      "min": 24,
+      "max": 34,
+      "condicao": "Chuvas Isoladas",
+      "condicao_codigo": "ci",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-29",
+      "min": 26,
+      "max": 27,
+      "condicao": "Chuvas Isoladas",
+      "condicao_codigo": "ci",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    }
+  ],
   "queimadas": {
     "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-23T09:04:48.697004+00:00"
+    "atualizado_em": "2026-10-26T13:22:05.888560+00:00"
   },
   "uv": {
-    "indice": 7.2,
-    "categoria": "Alto",
+    "indice": 8.5,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 33,
+    "indice": 42,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 6.4,
-    "pm10": 6.6,
-    "no2": 2.2,
-    "o3": 9.0,
+    "pm25": 6.0,
+    "pm10": 6.0,
+    "no2": 0.1,
+    "o3": 32.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-22T10:22:28.456305+00:00"
+    "atualizado_em": "2026-10-23T13:02:59.426313+00:00"
   },
   "sol": {
-    "nascer": "07:45",
-    "por": "19:32",
-    "duracao_h": 11.8,
-    "estacao": "Inverno",
+    "nascer": "07:07",
+    "por": "19:25",
+    "duracao_h": 12.3,
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 24.9,
-    "dias_proxima_cheia": 7,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 59.0,
+    "fase_pct": 39.9,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.9,
+  "temperatura_atual": 26.7,
   "vento": {
-    "velocidade_kmh": 1.1,
-    "direcao_graus": 180,
-    "direcao": "S",
-    "max_kmh": 9.0,
-    "rajada_kmh": 22.3,
-    "direcao_dominante": "NNE",
+    "velocidade_kmh": 1.5,
+    "direcao_graus": 166,
+    "direcao": "SSE",
+    "max_kmh": 6.8,
+    "rajada_kmh": 18.4,
+    "direcao_dominante": "S",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 96,
-  "pressao_hpa": 1011,
-  "ponto_orvalho_c": 22.2,
+  "umidade_pct": 83,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 23.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -63,9 +104,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202627,
+    "incidencia_100k": 0.0,
+    "populacao": 10783,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-21T13:45:30.954738+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -74,9 +117,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202627,
+    "incidencia_100k": 0.0,
+    "populacao": 10783,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-21T13:45:30.954738+00:00"
   },
-  "_clima_em": "2026-07-22T10:22:28.456305+00:00"
+  "_clima_em": "2026-10-23T13:02:59.426313+00:00"
 }

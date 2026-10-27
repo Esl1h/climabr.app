@@ -1,0 +1,45 @@
+name: Bug
+description: Algo no site, no Worker ou nos scrapers não funciona
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: O que acontece
+      description: Descreva o problema e o que você esperava que acontecesse
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproducao
+    attributes:
+      label: Como reproduzir
+      placeholder: |
+        1. Acesse https://climabr.app/rs/porto-alegre
+        2. Reduza a janela para largura de celular
+        3. O botão de compartilhar fica sobreposto ao título
+    validations:
+      required: true
+
+  - type: dropdown
+    id: superficie
+    attributes:
+      label: Onde ocorre
+      options:
+        - Site no navegador
+        - Acesso por curl
+        - API JSON
+        - Imagem SVG ou PNG
+        - Modo painel (telão)
+        - Scraper (coleta de dados)
+    validations:
+      required: true
+
+  - type: input
+    id: ambiente
+    attributes:
+      label: Navegador e sistema
+      placeholder: Firefox 141 no Fedora 44, ou Safari no iOS 19
+    validations:
+      required: false

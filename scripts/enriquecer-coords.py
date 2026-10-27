@@ -31,7 +31,7 @@ def fetch_centroide(cod_ibge: int, tentativas: int = 3) -> tuple[float, float] |
                 resultado = json.loads(data.decode("utf-8"))
                 c = resultado[0]["centroide"]
                 return float(c["latitude"]), float(c["longitude"])
-        except Exception as e:
+        except Exception:
             if i == tentativas - 1:
                 return None
             time.sleep(2 ** i)

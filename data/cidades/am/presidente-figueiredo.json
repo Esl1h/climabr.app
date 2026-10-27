@@ -4,79 +4,124 @@
   "slug": "presidente-figueiredo",
   "latitude": -1.3709,
   "longitude": -59.9896,
-  "atualizado_em": "2026-07-23T07:39:11.708544+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-26T10:37:34.379449+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-26",
+      "min": 28,
+      "max": 37,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-27",
+      "min": 29,
+      "max": 37,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-28",
+      "min": 28,
+      "max": 38,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-29",
+      "min": 25,
+      "max": 33,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    }
+  ],
   "reservatorio": {
     "nome": "Balbina",
-    "nivel_pct": 90.5,
+    "nivel_pct": 52.7,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-21",
+    "data_medicao": "2026-10-25",
     "distancia_km": 83.2,
     "aproximado": true,
+    "tipo": "RCU",
+    "acumula": true,
     "nota": "Reservatório hidrelétrico mais próximo (83km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-23T09:04:45.956901+00:00"
+    "atualizado_em": "2026-10-26T13:22:03.445691+00:00"
   },
   "queimadas": {
-    "focos_100km": 0,
+    "focos_100km": 10,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-23T09:04:48.697004+00:00"
+    "atualizado_em": "2026-10-26T13:22:05.888560+00:00"
   },
   "uv": {
-    "indice": 7.8,
-    "categoria": "Alto",
+    "indice": 8.8,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 15,
-    "categoria": "Boa",
+    "indice": 51,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 3.1,
-    "pm10": 3.3,
-    "no2": 0.4,
-    "o3": 24.0,
+    "pm25": 7.8,
+    "pm10": 8.4,
+    "no2": 0.5,
+    "o3": 44.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-22T10:22:28.456305+00:00"
+    "atualizado_em": "2026-10-22T13:24:20.613821+00:00"
   },
   "sol": {
-    "nascer": "07:04",
-    "por": "19:07",
+    "nascer": "06:39",
+    "por": "18:48",
     "duracao_h": 12.1,
-    "estacao": "Inverno",
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 24.9,
-    "dias_proxima_cheia": 7,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 75.0,
+    "fase_pct": 36.5,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 24.0,
+  "temperatura_atual": 30.4,
   "vento": {
-    "velocidade_kmh": 10.8,
-    "direcao_graus": 44,
-    "direcao": "NE",
-    "max_kmh": 11.3,
-    "rajada_kmh": 30.6,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 2.9,
+    "direcao_graus": 184,
+    "direcao": "S",
+    "max_kmh": 7.7,
+    "rajada_kmh": 26.3,
+    "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 88,
-  "pressao_hpa": 1011,
-  "ponto_orvalho_c": 22.0,
+  "umidade_pct": 70,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 24.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
     "nivel_incidencia": 0,
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
-    "casos_estimados": 0,
-    "semana_epidemiologica": 202627,
+    "casos_estimados": 5,
+    "incidencia_100k": 16.3,
+    "populacao": 30762,
+    "semana_epidemiologica": 202639,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-14T13:38:33.193590+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -85,9 +130,20 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202627,
+    "incidencia_100k": 0.0,
+    "populacao": 30762,
+    "semana_epidemiologica": 202639,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-14T13:38:33.193590+00:00"
   },
-  "_clima_em": "2026-07-22T10:22:28.456305+00:00"
+  "_clima_em": "2026-10-22T13:24:20.613821+00:00",
+  "agua": {
+    "parametro": "Escherichia coli",
+    "amostras": 6195,
+    "com_presenca": 186,
+    "pct_conformes": 97.0,
+    "periodo": "2026",
+    "fonte": "SISAGUA / Ministério da Saúde",
+    "atualizado_em": "2026-08-09T07:43:36.333302+00:00"
+  }
 }

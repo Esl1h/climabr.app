@@ -18,7 +18,9 @@ export const GET: APIRoute = () => {
     ),
     ...municipios.map(
       (m) =>
-        `  <url><loc>${SITE}/${m.estado}/${m.slug}</loc><changefreq>hourly</changefreq><priority>0.8</priority><lastmod>${HOJE}</lastmod></url>`
+        // daily e não hourly: o real é o build 2x/dia, e frequência acima do
+        // ritmo real só dilui o sinal de frescor das URLs que realmente mexem
+        `  <url><loc>${SITE}/${m.estado}/${m.slug}</loc><changefreq>daily</changefreq><priority>0.8</priority><lastmod>${HOJE}</lastmod></url>`
     ),
   ];
 

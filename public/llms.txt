@@ -61,3 +61,16 @@ Estados: AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA, PB, PR, PE, PI,
 Dados públicos de fontes governamentais brasileiras e internacionais.
 Sem necessidade de autenticação.
 Licença: CC BY 4.0
+
+## Fontes e método
+Página de referência completa: https://climabr.app/fontes
+- Previsão/vento/UV/ar: Open-Meteo, buscada ao vivo no cliente do leitor
+- Alertas meteorológicos: INMET, com geocode por município, build 2x/dia
+- Reservatórios: ONS/ANA, SABESP (SP) e COPASA (MG), dos boletins oficiais
+- Queimadas: NASA FIRMS/INPE, hotspots de satélite num raio de 100 km
+- Epidemiologia (dengue, chikungunya, zika): InfoDengue/Fiocruz/SVS-MS
+- Água: SISAGUA (SVS/MS). Chuva por bairro: Alerta Rio (Rio de Janeiro)
+- Ondas: Open-Meteo Marine/CPTEC. Bandeira tarifária: ANEEL
+- RSS dos destaques e alertas: https://climabr.app/feed.xml
+- Cada resposta JSON de cidade registra "atualizado_em" por bloco; coleta
+  atrasada mais de 48h é sinalizada na própria página HTML.

@@ -4,157 +4,124 @@
   "slug": "resplendor",
   "latitude": -19.2119,
   "longitude": -41.1531,
-  "atualizado_em": "2026-07-21T10:22:44.189167+00:00",
+  "atualizado_em": "2026-10-26T10:58:15.935779+00:00",
   "previsao": [
     {
-      "data": "2026-07-21",
-      "min": 18.1,
-      "max": 26.8,
-      "condicao": "Chuvisco moderado",
-      "condicao_codigo": 53,
-      "chuva_mm": 3.3,
-      "uv": 5.2,
-      "nascer_sol": "06:16",
-      "por_sol": "17:24"
+      "data": "2026-10-26",
+      "min": 24,
+      "max": 32,
+      "condicao": "Chuva",
+      "condicao_codigo": "c",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
     },
     {
-      "data": "2026-07-22",
-      "min": 16.8,
-      "max": 28.6,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "data": "2026-10-27",
+      "min": 21,
+      "max": 24,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
       "chuva_mm": 0,
-      "uv": 6.1,
-      "nascer_sol": "06:16",
-      "por_sol": "17:25"
+      "umidade": 0,
+      "uv": 0.0
     },
     {
-      "data": "2026-07-23",
-      "min": 16.9,
-      "max": 29.9,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
+      "data": "2026-10-28",
+      "min": 18,
+      "max": 25,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
       "chuva_mm": 0,
-      "uv": 6.2,
-      "nascer_sol": "06:16",
-      "por_sol": "17:25"
+      "umidade": 0,
+      "uv": 0.0
     },
     {
-      "data": "2026-07-24",
-      "min": 17.7,
-      "max": 29.8,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "data": "2026-10-29",
+      "min": 19,
+      "max": 30,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
       "chuva_mm": 0,
-      "uv": 5.2,
-      "nascer_sol": "06:16",
-      "por_sol": "17:25"
-    },
-    {
-      "data": "2026-07-25",
-      "min": 18.8,
-      "max": 29.6,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
-      "chuva_mm": 0,
-      "uv": 6.2,
-      "nascer_sol": "06:15",
-      "por_sol": "17:26"
-    },
-    {
-      "data": "2026-07-26",
-      "min": 17.4,
-      "max": 30.9,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
-      "chuva_mm": 0,
-      "uv": 5.7,
-      "nascer_sol": "06:15",
-      "por_sol": "17:26"
-    },
-    {
-      "data": "2026-07-27",
-      "min": 18.7,
-      "max": 27.5,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
-      "chuva_mm": 0,
-      "uv": 4.0,
-      "nascer_sol": "06:15",
-      "por_sol": "17:27"
+      "umidade": 0,
+      "uv": 0.0
     }
   ],
   "reservatorio": {
     "nome": "Aimores",
-    "nivel_pct": 46.0,
+    "nivel_pct": 21.7,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-21",
+    "data_medicao": "2026-10-25",
     "distancia_km": 27.5,
     "aproximado": true,
+    "tipo": "FIO",
+    "acumula": false,
     "nota": "Reservatório hidrelétrico mais próximo (27km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-23T09:04:45.956901+00:00"
+    "atualizado_em": "2026-10-26T13:22:03.445691+00:00"
   },
   "queimadas": {
     "focos_100km": 1,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-23T09:04:48.697004+00:00"
+    "atualizado_em": "2026-10-26T13:22:05.888560+00:00"
   },
   "uv": {
-    "indice": 5.2,
-    "categoria": "Moderado",
+    "indice": 7.2,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 20,
+    "indice": 22,
     "categoria": "Boa",
-    "principal_poluente": "PM10",
-    "pm25": 3.5,
-    "pm10": 5.5,
-    "no2": 4.0,
-    "o3": 45.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 3.0,
+    "pm10": 4.2,
+    "no2": 1.2,
+    "o3": 53.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-21T10:22:44.189167+00:00"
+    "atualizado_em": "2026-10-23T13:02:59.426313+00:00"
   },
   "sol": {
-    "nascer": "06:16",
-    "por": "17:24",
-    "duracao_h": 11.1,
-    "estacao": "Inverno",
+    "nascer": "05:09",
+    "por": "17:48",
+    "duracao_h": 12.7,
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 98.0,
-    "fase_pct": 21.6,
-    "dias_proxima_cheia": 8,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 59.0,
+    "fase_pct": 39.9,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 19.1,
+  "temperatura_atual": 28.5,
   "vento": {
-    "velocidade_kmh": 4.3,
-    "direcao_graus": 156,
-    "direcao": "SSE",
-    "max_kmh": 14.8,
-    "rajada_kmh": 28.4,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 6.0,
+    "direcao_graus": 307,
+    "direcao": "NO",
+    "max_kmh": 15.1,
+    "rajada_kmh": 34.2,
+    "direcao_dominante": "SSE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 95,
-  "pressao_hpa": 1020,
-  "ponto_orvalho_c": 18.3,
+  "umidade_pct": 58,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 19.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
     "nivel_incidencia": 0,
     "nivel_incidencia_label": "Baixa",
-    "casos_semana": 2,
-    "casos_estimados": 4,
-    "semana_epidemiologica": 202628,
+    "casos_semana": 0,
+    "casos_estimados": 0,
+    "incidencia_100k": 0.0,
+    "populacao": 15775,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-23T10:38:57.715680+00:00"
+    "atualizado_em": "2026-10-19T15:36:55.098723+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -163,9 +130,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202628,
+    "incidencia_100k": 0.0,
+    "populacao": 15775,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-23T10:38:57.715680+00:00"
+    "atualizado_em": "2026-10-19T15:36:55.098723+00:00"
   },
-  "_clima_em": "2026-07-21T10:22:44.189167+00:00"
+  "_clima_em": "2026-10-23T13:02:59.426313+00:00"
 }

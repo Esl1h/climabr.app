@@ -4,69 +4,112 @@
   "slug": "sao-sebastiao-do-uatuma",
   "latitude": -1.9418,
   "longitude": -58.7053,
-  "atualizado_em": "2026-07-23T07:39:37.837034+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-26T10:37:38.018032+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-26",
+      "min": 24,
+      "max": 38,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-27",
+      "min": 27,
+      "max": 40,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-28",
+      "min": 26,
+      "max": 39,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-29",
+      "min": 26,
+      "max": 37,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    }
+  ],
   "reservatorio": {
     "nome": "Balbina",
-    "nivel_pct": 90.5,
+    "nivel_pct": 52.7,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-21",
+    "data_medicao": "2026-10-25",
     "distancia_km": 85.5,
     "aproximado": true,
+    "tipo": "RCU",
+    "acumula": true,
     "nota": "Reservatório hidrelétrico mais próximo (85km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-23T09:04:45.956901+00:00"
+    "atualizado_em": "2026-10-26T13:22:03.445691+00:00"
   },
   "queimadas": {
-    "focos_100km": 0,
+    "focos_100km": 14,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-23T09:04:48.697004+00:00"
+    "atualizado_em": "2026-10-26T13:22:05.888560+00:00"
   },
   "uv": {
-    "indice": 7.8,
-    "categoria": "Alto",
+    "indice": 9.2,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 21,
-    "categoria": "Boa",
+    "indice": 56,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 6.2,
-    "pm10": 6.6,
-    "no2": 0.8,
-    "o3": 30.0,
+    "pm25": 14.3,
+    "pm10": 16.1,
+    "no2": 0.4,
+    "o3": 54.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-22T10:22:28.456305+00:00"
+    "atualizado_em": "2026-10-22T13:24:20.613821+00:00"
   },
   "sol": {
-    "nascer": "07:00",
-    "por": "19:02",
-    "duracao_h": 12.0,
-    "estacao": "Inverno",
+    "nascer": "06:34",
+    "por": "18:44",
+    "duracao_h": 12.2,
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 24.9,
-    "dias_proxima_cheia": 7,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 75.0,
+    "fase_pct": 36.5,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.1,
+  "temperatura_atual": 33.5,
   "vento": {
-    "velocidade_kmh": 8.8,
-    "direcao_graus": 39,
-    "direcao": "NE",
-    "max_kmh": 12.5,
-    "rajada_kmh": 32.0,
+    "velocidade_kmh": 13.7,
+    "direcao_graus": 65,
+    "direcao": "ENE",
+    "max_kmh": 14.1,
+    "rajada_kmh": 38.5,
     "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 93,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 21.9,
+  "umidade_pct": 44,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 19.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -74,9 +117,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202627,
+    "incidencia_100k": 0.0,
+    "populacao": 11697,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-21T13:45:30.954738+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -85,9 +130,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202627,
+    "incidencia_100k": 0.0,
+    "populacao": 11697,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-21T13:45:30.954738+00:00"
   },
-  "_clima_em": "2026-07-22T10:22:28.456305+00:00"
+  "_clima_em": "2026-10-22T13:24:20.613821+00:00"
 }
