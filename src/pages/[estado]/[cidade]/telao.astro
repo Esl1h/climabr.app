@@ -100,6 +100,39 @@ const estacaoIcone = estacao ? iconeEstacao(estacao) : '';
 // Emoji grande do tempo, usado como marca d'água do fundo
 const climaEmoji = hoje ? (TEMPO_EMOJI[hoje.condicao_codigo as number] ?? '⛅') : '⛅';
 
+// Avisos INMET ativos para este município (mesma regra da página da cidade)
+interface AvisoTelao {
+  evento: string;
+  severidade: string;
+  nivel: number;
+  fim: string | null;
+  geocodes: number[];
+}
+let avisosCidade: AvisoTelao[] = [];
+try {
+  const fs = await import('node:fs/promises');
+  const path = await import('node:path');
+  const raw = await fs.readFile(path.join(process.cwd(), 'data', 'alertas', `${municipio.estado}.json`), 'utf-8');
+  const agoraTs = Date.now();
+  avisosCidade = (JSON.parse(raw) as AvisoTelao[]).filter(
+    (a) => a.geocodes.includes(municipio.id) && (!a.fim || Date.parse(a.fim) > agoraTs)
+  );
+} catch {
+  // Sem avisos ativos para a UF
+}
+const corAviso = (nivel: number) => (nivel >= 3 ? '#f87171' : nivel === 2 ? '#fb923c' : '#fbbf24');
+const fmtFim = (iso: string) =>
+  new Date(iso).toLocaleString('pt-BR', {
+    day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit',
+    timeZone: 'America/Sao_Paulo',
+  });
+
+// Coleta do build: o painel é um snapshot, então o rodapé diz a idade do dado
+const coletaTexto = dados?.atualizado_em
+  ? new Date(dados.atualizado_em).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo' })
+  : 'sem data';
+const coletaAtrasada = !dados?.atualizado_em || Date.now() - Date.parse(dados.atualizado_em) > 48 * 3600 * 1000;
+
 const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Painel — climabr.app`;
 ---
 
@@ -207,6 +240,20 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       .clima-linha .estacao { display: inline-flex; align-items: center; gap: 0.35em; opacity: 0.92; }
       .clima-linha .sep { opacity: 0.35; margin-right: 0.35em; font-weight: 400; }
 
+      .alertas { display: flex; flex-direction: column; gap: calc(var(--gap) * 0.5); }
+      .alertas[hidden] { display: none; }
+      .alerta {
+        border: 2px solid; border-radius: clamp(0.6rem, 1.6vmin, 1.2rem);
+        padding: clamp(0.5rem, 1.4vmin, 1rem) clamp(0.8rem, 2vmin, 1.4rem);
+        text-align: center;
+      }
+      .alerta strong { display: block; font-size: clamp(1rem, 2.8vmin, 2.2rem); font-weight: 800; }
+      .alerta span { font-size: clamp(0.8rem, 1.9vmin, 1.6rem); color: #e2e8f0; }
+      .rodape {
+        display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.4em 1.2em;
+        font-size: clamp(0.75rem, 1.5vmin, 1.4rem); color: #cbd5e1; font-variant-numeric: tabular-nums;
+      }
+      .rodape .atrasada { color: #fbbf24; font-weight: 700; }
       .grid {
         flex: 1;
         display: grid;
@@ -328,6 +375,23 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
           </span>
         </div>
       </div>
+
+      {avisosCidade.length > 0 && (
+        <div class="alertas" data-alertas>
+          {avisosCidade.map((a) => (
+            <div
+              class="alerta"
+              data-alerta
+              data-fim={a.fim}
+              style={`border-color:${corAviso(a.nivel)}; background:${corAviso(a.nivel)}33; color:${corAviso(a.nivel)}`}
+              role="status"
+            >
+              <strong>⚠ {a.evento}</strong>
+              <span>{a.severidade} · até {a.fim ? fmtFim(a.fim) : 'sem prazo'}</span>
+            </div>
+          ))}
+        </div>
+      )}
 
       <!-- Grid de cards -->
       <div class="grid">
@@ -460,6 +524,11 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
           </div>
         )}
       </div>
+      <footer class="rodape">
+        <span>Coleta dos dados: {coletaTexto}{coletaAtrasada && <span class="atrasada"> · ⚠ coleta atrasada</span>}</span>
+        <span id="ao-vivo">Tempo ao vivo: aguardando</span>
+        <span id="recarrega">Atualiza em --:--</span>
+      </footer>
     </div>
 
     <script>
@@ -485,8 +554,17 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
         });
         aplicarNoite();
       }
+      // Página é um snapshot do build: aviso vencido sai da tela sem esperar o próximo reload
+      function removerAvisosVencidos() {
+        document.querySelectorAll('[data-alerta]').forEach((el) => {
+          const fim = el.getAttribute('data-fim');
+          if (fim && Date.parse(fim) < Date.now()) el.remove();
+        });
+        const caixa = document.querySelector('[data-alertas]');
+        if (caixa && !caixa.querySelector('[data-alerta]')) caixa.remove();
+      }
       tick();
-      setInterval(tick, 1000);
+      setInterval(() => { tick(); removerAvisosVencidos(); }, 1000);
 
       // Hidratação em tempo real pela mesma fonte/cache da página da cidade
       // (Open-Meteo no browser), para o painel não divergir do snapshot do build.
@@ -542,6 +620,9 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
             try { sessionStorage.setItem(chave, JSON.stringify({ t: Date.now(), d: data })); } catch { /* ignora */ }
           } catch { return; } // mantém o snapshot
         }
+
+        const aoVivo = document.getElementById('ao-vivo');
+        if (aoVivo) aoVivo.textContent = `Tempo ao vivo: ${new Date().toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit' })}`;
 
         // Temperatura atual + tema de fundo + condição (ao vivo)
         const cur = data?.current;
@@ -623,7 +704,14 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       });
 
       // Recarrega a cada 10 min para manter dados frescos no telão
-      setTimeout(() => location.reload(), 10 * 60 * 1000);
+      const RECARGA_MS = 10 * 60 * 1000;
+      const fimRecarga = Date.now() + RECARGA_MS;
+      setTimeout(() => location.reload(), RECARGA_MS);
+      setInterval(() => {
+        const seg = Math.max(0, Math.round((fimRecarga - Date.now()) / 1000));
+        const el = document.getElementById('recarrega');
+        if (el) el.textContent = `Atualiza em ${Math.floor(seg / 60)}:${String(seg % 60).padStart(2, '0')}`;
+      }, 1000);
     </script>
   </body>
 </html>

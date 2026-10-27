@@ -10,8 +10,6 @@ Rodar 1x/dia via GitHub Actions (dados atualizam diariamente).
 """
 
 import json
-import sys
-import time
 import unicodedata
 import urllib.request
 from datetime import date, datetime, timezone

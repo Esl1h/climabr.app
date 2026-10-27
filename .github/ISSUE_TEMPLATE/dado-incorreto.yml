@@ -1,0 +1,66 @@
+name: Dado incorreto ou desatualizado
+description: Um valor exibido para uma cidade não confere com a fonte oficial
+title: "[dados] "
+labels: ["dados"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este modelo quando o site mostra um número errado, muito antigo ou
+        divergente da fonte oficial. Se a página não carrega ou algo quebrou,
+        use o modelo de bug.
+
+  - type: input
+    id: cidade
+    attributes:
+      label: Cidade
+      description: Nome e UF, ou a URL da página
+      placeholder: Cotia/SP ou https://climabr.app/sp/cotia
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bloco
+    attributes:
+      label: Qual informação está incorreta
+      options:
+        - Previsão do tempo
+        - Qualidade do ar
+        - Índice UV
+        - Vento
+        - Ondas
+        - Reservatório
+        - Qualidade da água
+        - Dengue, zika ou chikungunya
+        - Queimadas
+        - Sol e lua
+        - Bandeira tarifária
+        - Alertas meteorológicos
+        - Outra
+    validations:
+      required: true
+
+  - type: textarea
+    id: divergencia
+    attributes:
+      label: O que o site mostra e o que deveria mostrar
+      placeholder: |
+        O site mostra reservatório em 52,6%.
+        O boletim da SABESP de 28/07 informa 48,1%.
+    validations:
+      required: true
+
+  - type: input
+    id: fonte
+    attributes:
+      label: Link da fonte oficial
+      description: URL do boletim, painel ou API que mostra o valor correto
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Vale lembrar que os dados são coletados em horários fixos e o site é
+        estático, então uma diferença de algumas horas em relação à fonte é
+        esperada. A data da última coleta aparece no topo de cada página.

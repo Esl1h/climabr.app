@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Offline — ClimaBR.app</title>
+<meta name="robots" content="noindex" />
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px;
+    font-family: system-ui, sans-serif; text-align: center;
+    background: #f6f9f8; color: oklch(0.18 0.015 195); }
+  @media (prefers-color-scheme: dark) {
+    body { background: #040f0d; color: oklch(0.92 0.005 180); }
+  }
+  main { max-width: 24rem; }
+  strong { color: oklch(0.508 0.118 165); }
+  ul { list-style: none; padding: 0; margin: 20px 0 0; }
+  li { margin: 6px 0; }
+  a { color: oklch(0.508 0.118 165); }
+  @media (prefers-color-scheme: dark) {
+    a, strong { color: oklch(0.765 0.177 163); }
+  }
+</style>
+</head>
+<body>
+<main>
+  <p><strong>Sem conexão</strong> e esta página não está no cache local.</p>
+  <p id="sem-salvas">Você ainda não abriu nenhuma cidade neste aparelho.</p>
+  <div id="com-salvas" hidden>
+    <p>Estas cidades abertas recentemente funcionam offline:</p>
+    <ul id="cidades"></ul>
+  </div>
+  <p>Reconecte para atualizar ou navegar para outras cidades.</p>
+</main>
+<script>
+  // Lista as cidades que a página de cidade gravou em climabr_recentes
+  let recentes = [];
+  try { recentes = JSON.parse(localStorage.getItem('climabr_recentes') || '[]'); } catch { /* ignora */ }
+  const validas = Array.isArray(recentes) ? recentes.filter((r) => r && r.uf && r.slug && r.nome) : [];
+  if (validas.length) {
+    const lista = document.getElementById('cidades');
+    for (const r of validas) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = '/' + r.uf + '/' + r.slug;
+      a.textContent = r.nome + '/' + String(r.uf).toUpperCase();
+      li.appendChild(a);
+      lista.appendChild(li);
+    }
+    document.getElementById('com-salvas').hidden = false;
+    document.getElementById('sem-salvas').hidden = true;
+  }
+</script>
+</body>
+</html>

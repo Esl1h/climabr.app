@@ -4,68 +4,111 @@
   "slug": "joaquim-gomes",
   "latitude": -9.0794,
   "longitude": -35.7784,
-  "atualizado_em": "2026-07-21T07:30:26.948033+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-26T10:36:21.713120+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-26",
+      "min": 22,
+      "max": 36,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-27",
+      "min": 23,
+      "max": 36,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-28",
+      "min": 22,
+      "max": 31,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-29",
+      "min": 23,
+      "max": 31,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    }
+  ],
   "queimadas": {
-    "focos_100km": 0,
+    "focos_100km": 9,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-20T09:39:41.257896+00:00"
+    "atualizado_em": "2026-10-26T13:22:05.888560+00:00"
   },
   "uv": {
-    "indice": 7.4,
+    "indice": 7.5,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 55,
+    "indice": 52,
     "categoria": "Moderada",
-    "principal_poluente": "PM2.5",
-    "pm25": 14.2,
-    "pm10": 18.9,
-    "no2": 4.7,
-    "o3": 44.0,
+    "principal_poluente": "PM10",
+    "pm25": 10.7,
+    "pm10": 16.2,
+    "no2": 0.4,
+    "o3": 50.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-20T10:48:29.860843+00:00"
+    "atualizado_em": "2026-10-23T13:02:59.426313+00:00"
   },
   "sol": {
-    "nascer": "05:39",
-    "por": "17:19",
-    "duracao_h": 11.7,
-    "estacao": "Inverno",
+    "nascer": "04:56",
+    "por": "17:18",
+    "duracao_h": 12.4,
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 91.0,
-    "fase_pct": 18.2,
-    "dias_proxima_cheia": 9,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 59.0,
+    "fase_pct": 39.9,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 21.9,
+  "temperatura_atual": 26.1,
   "vento": {
-    "velocidade_kmh": 8.1,
-    "direcao_graus": 141,
-    "direcao": "SE",
-    "max_kmh": 14.3,
-    "rajada_kmh": 32.4,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 15.3,
+    "direcao_graus": 112,
+    "direcao": "ESE",
+    "max_kmh": 19.8,
+    "rajada_kmh": 42.8,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 88,
+  "umidade_pct": 73,
   "pressao_hpa": 1017,
-  "ponto_orvalho_c": 19.8,
+  "ponto_orvalho_c": 20.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
-    "nivel_incidencia": 1,
-    "nivel_incidencia_label": "Média",
-    "casos_semana": 1,
-    "casos_estimados": 8,
-    "semana_epidemiologica": 202627,
+    "nivel_incidencia": 0,
+    "nivel_incidencia_label": "Baixa",
+    "casos_semana": 0,
+    "casos_estimados": 1,
+    "incidencia_100k": 5.9,
+    "populacao": 17080,
+    "semana_epidemiologica": 202639,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-14T13:38:33.193590+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -74,9 +117,20 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202627,
+    "incidencia_100k": 0.0,
+    "populacao": 17080,
+    "semana_epidemiologica": 202639,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-14T13:38:33.193590+00:00"
   },
-  "_clima_em": "2026-07-20T10:48:29.860843+00:00"
+  "_clima_em": "2026-10-23T13:02:59.426313+00:00",
+  "agua": {
+    "parametro": "Escherichia coli",
+    "amostras": 1403,
+    "com_presenca": 200,
+    "pct_conformes": 85.7,
+    "periodo": "2026",
+    "fonte": "SISAGUA / Ministério da Saúde",
+    "atualizado_em": "2026-08-02T09:04:22.153023+00:00"
+  }
 }

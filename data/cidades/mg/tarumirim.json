@@ -4,147 +4,112 @@
   "slug": "tarumirim",
   "latitude": -19.3015,
   "longitude": -41.9019,
-  "atualizado_em": "2026-07-20T10:48:29.860843+00:00",
+  "atualizado_em": "2026-10-26T11:00:06.827711+00:00",
   "previsao": [
     {
-      "data": "2026-07-20",
-      "min": 13.9,
-      "max": 25.6,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "data": "2026-10-26",
+      "min": 22,
+      "max": 34,
+      "condicao": "Chuva",
+      "condicao_codigo": "c",
       "chuva_mm": 0,
-      "uv": 6.2,
-      "nascer_sol": "06:20",
-      "por_sol": "17:27"
+      "umidade": 0,
+      "uv": 0.0
     },
     {
-      "data": "2026-07-21",
-      "min": 18.5,
-      "max": 26.7,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 1.5,
-      "uv": 5.7,
-      "nascer_sol": "06:20",
-      "por_sol": "17:27"
+      "data": "2026-10-27",
+      "min": 20,
+      "max": 23,
+      "condicao": "Chuva",
+      "condicao_codigo": "c",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
     },
     {
-      "data": "2026-07-22",
-      "min": 15.9,
-      "max": 27.1,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
+      "data": "2026-10-28",
+      "min": 20,
+      "max": 25,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
       "chuva_mm": 0,
-      "uv": 6.2,
-      "nascer_sol": "06:19",
-      "por_sol": "17:28"
+      "umidade": 0,
+      "uv": 0.0
     },
     {
-      "data": "2026-07-23",
-      "min": 16.7,
-      "max": 29.0,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
+      "data": "2026-10-29",
+      "min": 19,
+      "max": 29,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
       "chuva_mm": 0,
-      "uv": 6.2,
-      "nascer_sol": "06:19",
-      "por_sol": "17:28"
-    },
-    {
-      "data": "2026-07-24",
-      "min": 16.7,
-      "max": 28.5,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
-      "uv": 5.3,
-      "nascer_sol": "06:19",
-      "por_sol": "17:28"
-    },
-    {
-      "data": "2026-07-25",
-      "min": 18.6,
-      "max": 27.9,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 6.0,
-      "nascer_sol": "06:18",
-      "por_sol": "17:29"
-    },
-    {
-      "data": "2026-07-26",
-      "min": 18.4,
-      "max": 28.7,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
-      "uv": 5.7,
-      "nascer_sol": "06:18",
-      "por_sol": "17:29"
+      "umidade": 0,
+      "uv": 0.0
     }
   ],
   "reservatorio": {
     "nome": "Baguari",
-    "nivel_pct": 42.2,
+    "nivel_pct": 36.3,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-19",
+    "data_medicao": "2026-10-25",
     "distancia_km": 38.6,
     "aproximado": true,
+    "tipo": "FIO",
+    "acumula": false,
     "nota": "Reservatório hidrelétrico mais próximo (39km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-21T09:06:56.070503+00:00"
+    "atualizado_em": "2026-10-26T13:22:03.445691+00:00"
   },
   "queimadas": {
-    "focos_100km": 10,
+    "focos_100km": 7,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-20T09:39:41.257896+00:00"
+    "atualizado_em": "2026-10-26T13:22:05.888560+00:00"
   },
   "uv": {
-    "indice": 6.2,
-    "categoria": "Alto",
+    "indice": 8.2,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 26,
+    "indice": 20,
     "categoria": "Boa",
-    "principal_poluente": "PM10",
-    "pm25": 5.0,
-    "pm10": 8.1,
-    "no2": 2.0,
-    "o3": 54.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 2.6,
+    "pm10": 3.6,
+    "no2": 0.9,
+    "o3": 53.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-20T10:48:29.860843+00:00"
+    "atualizado_em": "2026-10-23T13:02:59.426313+00:00"
   },
   "sol": {
-    "nascer": "06:20",
-    "por": "17:27",
-    "duracao_h": 11.1,
-    "estacao": "Inverno",
+    "nascer": "05:11",
+    "por": "17:51",
+    "duracao_h": 12.7,
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 91.0,
-    "fase_pct": 18.2,
-    "dias_proxima_cheia": 9,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 59.0,
+    "fase_pct": 39.9,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 17.9,
+  "temperatura_atual": 27.3,
   "vento": {
-    "velocidade_kmh": 5.0,
-    "direcao_graus": 167,
-    "direcao": "SSE",
-    "max_kmh": 12.3,
-    "rajada_kmh": 23.4,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 9.4,
+    "direcao_graus": 23,
+    "direcao": "NNE",
+    "max_kmh": 22.0,
+    "rajada_kmh": 40.3,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 87,
-  "pressao_hpa": 1021,
-  "ponto_orvalho_c": 15.7,
+  "umidade_pct": 61,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 19.0,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -152,9 +117,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202626,
+    "incidencia_100k": 0.0,
+    "populacao": 11900,
+    "semana_epidemiologica": 202639,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-12T10:08:34.655895+00:00"
+    "atualizado_em": "2026-10-07T15:24:25.082347+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -163,9 +130,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202626,
+    "incidencia_100k": 0.0,
+    "populacao": 11900,
+    "semana_epidemiologica": 202639,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-12T10:08:34.655895+00:00"
+    "atualizado_em": "2026-10-07T15:24:25.082347+00:00"
   },
-  "_clima_em": "2026-07-20T10:48:29.860843+00:00"
+  "_clima_em": "2026-10-23T13:02:59.426313+00:00"
 }

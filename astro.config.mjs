@@ -22,6 +22,11 @@ function txtUtf8Plugin() {
 
 // https://astro.build/config
 export default defineConfig({
+  // O Astro 7 passou a comprimir espaços entre elementos por regra de JSX, o que
+  // cola texto de elementos inline vizinhos (ex.: "🛰️ ClimaBR.app"). Mantemos a
+  // regra de HTML, preservando a renderização das páginas.
+  compressHTML: true,
+
   vite: {
     plugins: [tailwindcss(), txtUtf8Plugin()],
     resolve: {

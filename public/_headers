@@ -14,6 +14,12 @@
 /sw.js
   Cache-Control: no-cache
 
+# HTML estático, reconstruído 2x/dia: edge cache de 30 min mantém o TTFB
+# baixo em cold cache e ainda garante no máximo meia hora de defasagem,
+# dentro do próprio ritmo de atualização dos dados
+/*
+  Cache-Control: public, max-age=1800, stale-while-revalidate=86400
+
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY

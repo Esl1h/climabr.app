@@ -229,6 +229,8 @@ async function buscarDados(siteUrl: string, estado: string, cidade: string): Pro
 // HTML). O JSON estático só atualiza na coleta diária; isto deixa o card em dia.
 // AQI/UV/dengue/reservatório seguem do JSON (não são "ao vivo" em fonte nenhuma).
 async function hidratarTempo(dados: Dados, siteUrl: string, ctx: ExecutionContext): Promise<void> {
+  // A hidratação sobrescreve atualizado_em com a hora atual: a coleta original fica aqui
+  dados.coleta_em = dados.atualizado_em ?? null;
   const lat = Number(dados.latitude);
   const lon = Number(dados.longitude);
   if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
@@ -281,10 +283,51 @@ async function hidratarTempo(dados: Dados, siteUrl: string, ctx: ExecutionContex
 // Formato 1 — one-liner (para tmux/i3/polybar/prompt)
 // ---------------------------------------------------------------------------
 
+// Avisos INMET ativos do município. A UF vem da API estática (geocódigos por município) e
+// fica no cache do edge, como a previsão do Open-Meteo, para não repetir a leitura a cada curl
+async function buscarAvisos(dados: Dados, siteUrl: string, ctx: ExecutionContext): Promise<void> {
+  const ibge = Number(dados.codigo_ibge);
+  const uf = String(dados.estado ?? '').toLowerCase();
+  if (!Number.isFinite(ibge) || !uf) return;
+
+  const cache = caches.default;
+  const cacheKey = new Request(`${siteUrl}/__avisos/${uf}`);
+  let todos: Dados[] = [];
+  try {
+    const hit = await cache.match(cacheKey);
+    if (hit) {
+      todos = (await hit.json() as { alertas: Dados[] }).alertas;
+    } else {
+      const res = await fetch(`${siteUrl}/api/${uf}/alertas.json`);
+      if (!res.ok) return;
+      const json = await res.json() as { alertas: Dados[] };
+      todos = json.alertas;
+      const toCache = new Response(JSON.stringify(json), { headers: { 'Cache-Control': 'public, max-age=900' } });
+      ctx.waitUntil(cache.put(cacheKey, toCache));
+    }
+  } catch {
+    return; // sem aviso é melhor que derrubar a resposta do terminal
+  }
+
+  const agora = Date.now();
+  dados.avisos = todos.filter((a) =>
+    (a.geocodes as number[] | undefined)?.includes(ibge) && (!a.fim || Date.parse(a.fim as string) > agora)
+  );
+}
+
+function formatarFim(iso: string): string {
+  return new Date(iso).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo' });
+}
+
+// Mesmo limite da página da cidade: coleta com mais de 48h é marcada como atrasada
+const LIMITE_COLETA_MS = 48 * 3600 * 1000;
+
 function formatarOneLiner(dados: Dados, color: boolean): string {
   const cidade = dados.cidade as string || '';
   const uf = (dados.estado as string || '').toUpperCase();
   const partes: string[] = [`${cidade}/${uf}`];
+  const aviso = (dados.avisos as Dados[] | undefined)?.[0];
+  if (aviso) partes.push(`⚠${aviso.evento}`);
 
   const previsao = (dados.previsao as Dados[] | undefined)?.[0];
   if (previsao) {
@@ -318,6 +361,9 @@ function formatarOneLiner(dados: Dados, color: boolean): string {
   const q = dados.queimadas as Dados | undefined;
   if (q && Number(q.focos_100km) > 0) partes.push(`🔥${q.focos_100km}`);
 
+  const coleta = dados.coleta_em as string | null | undefined;
+  if (coleta && Date.now() - new Date(coleta).getTime() > LIMITE_COLETA_MS) partes.push('⚠ coleta antiga');
+
   return partes.join(' ');
 }
 
@@ -340,6 +386,10 @@ function formatarTerminal(dados: Dados, color: boolean): string {
     `${c.bold}${c.white}  ${cidade}/${uf}${c.reset}${temp}  ${c.gray}${agora}${c.reset}`,
     `${c.gray}  ${sep}${c.reset}`,
   ];
+
+  for (const aviso of (dados.avisos as Dados[] | undefined) ?? []) {
+    linhas.push(`  ${c.red}${c.bold}⚠ ${aviso.evento}${c.reset}  ${c.gray}${aviso.severidade} · até ${formatarFim(aviso.fim as string)}${c.reset}`);
+  }
 
   // Previsão 7 dias
   const previsao = dados.previsao as Dados[] | undefined;
@@ -420,6 +470,13 @@ function formatarTerminal(dados: Dados, color: boolean): string {
   if (bt) {
     const cor_bt = bt.cor === 'Verde' ? c.green : bt.cor === 'Amarela' ? c.yellow : c.red;
     linhas.push(`  ${ICONES.tarifa} ${c.bold}Tarifa${c.reset}     Bandeira ${cor_bt}${bt.cor}${c.reset}  ${c.gray}+R$${Number(bt.adicional_kwh).toFixed(5)}/kWh${c.reset}`);
+  }
+
+  const coleta = dados.coleta_em as string | null | undefined;
+  if (coleta) {
+    const quando = new Date(coleta).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+    const atrasada = Date.now() - new Date(coleta).getTime() > LIMITE_COLETA_MS;
+    linhas.push(`  ${c.gray}Coleta dos dados: ${quando}${c.reset}${atrasada ? `  ${c.yellow}⚠ mais de 48h${c.reset}` : ''}`);
   }
 
   const slug = dados.slug as string || '';
@@ -668,6 +725,8 @@ export default {
           // Redireciona para a cidade detectada e responde inline
           const dados = await buscarDados(siteUrl, loc.uf, loc.slug);
           if (dados && !dados._status) {
+            await hidratarTempo(dados, siteUrl, ctx);
+            await buscarAvisos(dados, siteUrl, ctx);
             const cor = !noColor;
             const texto = formatarTerminal(dados, cor);
             return new Response(texto, {
@@ -738,6 +797,7 @@ export default {
         const dados = await buscarDados(siteUrl, estado, cidade);
         if (dados && !dados._status) {
           await hidratarTempo(dados, siteUrl, ctx);
+          await buscarAvisos(dados, siteUrl, ctx);
           const cor = !noColor && curl;
 
           if (format === 'prometheus') {

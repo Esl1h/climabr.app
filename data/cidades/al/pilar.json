@@ -4,58 +4,99 @@
   "slug": "pilar",
   "latitude": -9.6153,
   "longitude": -36.0046,
-  "atualizado_em": "2026-07-21T07:32:40.081767+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-26T10:36:39.499733+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-26",
+      "min": 21,
+      "max": 37,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-27",
+      "min": 23,
+      "max": 36,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-28",
+      "min": 22,
+      "max": 31,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-29",
+      "min": 23,
+      "max": 31,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    }
+  ],
   "queimadas": {
-    "focos_100km": 0,
+    "focos_100km": 8,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-20T09:39:41.257896+00:00"
+    "atualizado_em": "2026-10-26T13:22:05.888560+00:00"
   },
   "uv": {
-    "indice": 7.2,
+    "indice": 7.8,
     "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 54,
+    "indice": 59,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 15.3,
-    "pm10": 20.1,
-    "no2": 8.2,
-    "o3": 44.0,
+    "pm25": 8.8,
+    "pm10": 12.9,
+    "no2": 0.9,
+    "o3": 64.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-20T10:48:29.860843+00:00"
+    "atualizado_em": "2026-10-22T13:24:20.613821+00:00"
   },
   "sol": {
-    "nascer": "05:41",
+    "nascer": "04:57",
     "por": "17:19",
-    "duracao_h": 11.6,
-    "estacao": "Inverno",
+    "duracao_h": 12.4,
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 91.0,
-    "fase_pct": 18.2,
-    "dias_proxima_cheia": 9,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 75.0,
+    "fase_pct": 36.5,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 22.8,
+  "temperatura_atual": 29.7,
   "vento": {
-    "velocidade_kmh": 4.5,
-    "direcao_graus": 247,
-    "direcao": "OSO",
-    "max_kmh": 17.1,
-    "rajada_kmh": 34.2,
+    "velocidade_kmh": 17.5,
+    "direcao_graus": 122,
+    "direcao": "ESE",
+    "max_kmh": 22.0,
+    "rajada_kmh": 42.8,
     "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 94,
+  "umidade_pct": 63,
   "pressao_hpa": 1016,
-  "ponto_orvalho_c": 21.7,
+  "ponto_orvalho_c": 21.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -63,9 +104,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202627,
+    "incidencia_100k": 0.0,
+    "populacao": 35433,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-19T15:36:55.098723+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -74,9 +117,20 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202627,
+    "incidencia_100k": 0.0,
+    "populacao": 35433,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-19T15:36:55.098723+00:00"
   },
-  "_clima_em": "2026-07-20T10:48:29.860843+00:00"
+  "_clima_em": "2026-10-22T13:24:20.613821+00:00",
+  "agua": {
+    "parametro": "Escherichia coli",
+    "amostras": 844,
+    "com_presenca": 0,
+    "pct_conformes": 100.0,
+    "periodo": "2026",
+    "fonte": "SISAGUA / Ministério da Saúde",
+    "atualizado_em": "2026-08-02T09:04:22.153023+00:00"
+  }
 }
