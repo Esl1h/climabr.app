@@ -4,58 +4,99 @@
   "slug": "boquira",
   "latitude": -12.7411,
   "longitude": -42.7223,
-  "atualizado_em": "2026-07-25T07:27:33.065937+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-26T10:38:14.438807+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-26",
+      "min": 27,
+      "max": 36,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-27",
+      "min": 25,
+      "max": 36,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-28",
+      "min": 24,
+      "max": 37,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-29",
+      "min": 24,
+      "max": 38,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    }
+  ],
   "queimadas": {
-    "focos_100km": 1,
+    "focos_100km": 23,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-24T09:01:18.368481+00:00"
+    "atualizado_em": "2026-10-26T13:22:05.888560+00:00"
   },
   "uv": {
-    "indice": 7.0,
-    "categoria": "Alto",
+    "indice": 9.6,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 22,
+    "indice": 25,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 1.8,
-    "pm10": 2.4,
-    "no2": 1.8,
-    "o3": 45.0,
+    "pm25": 6.9,
+    "pm10": 9.6,
+    "no2": 0.4,
+    "o3": 74.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-22T10:22:28.456305+00:00"
+    "atualizado_em": "2026-10-23T13:02:59.426313+00:00"
   },
   "sol": {
-    "nascer": "06:12",
-    "por": "17:41",
-    "duracao_h": 11.5,
-    "estacao": "Inverno",
+    "nascer": "05:21",
+    "por": "17:49",
+    "duracao_h": 12.5,
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 24.9,
-    "dias_proxima_cheia": 7,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 59.0,
+    "fase_pct": 39.9,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 20.1,
+  "temperatura_atual": 30.8,
   "vento": {
-    "velocidade_kmh": 6.7,
-    "direcao_graus": 144,
-    "direcao": "SE",
-    "max_kmh": 7.7,
-    "rajada_kmh": 23.8,
-    "direcao_dominante": "SE",
+    "velocidade_kmh": 9.0,
+    "direcao_graus": 90,
+    "direcao": "E",
+    "max_kmh": 17.7,
+    "rajada_kmh": 33.1,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 74,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 15.4,
+  "umidade_pct": 38,
+  "pressao_hpa": 1017,
+  "ponto_orvalho_c": 14.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -63,9 +104,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202627,
+    "incidencia_100k": 0.0,
+    "populacao": 20588,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-21T13:45:30.954738+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -74,9 +117,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202627,
+    "incidencia_100k": 0.0,
+    "populacao": 20588,
+    "semana_epidemiologica": 202640,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-21T13:45:30.954738+00:00"
   },
-  "_clima_em": "2026-07-22T10:22:28.456305+00:00"
+  "_clima_em": "2026-10-23T13:02:59.426313+00:00"
 }

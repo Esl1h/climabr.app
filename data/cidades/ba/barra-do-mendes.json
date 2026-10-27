@@ -4,68 +4,111 @@
   "slug": "barra-do-mendes",
   "latitude": -11.95,
   "longitude": -42.1095,
-  "atualizado_em": "2026-07-25T07:26:15.818821+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-26T10:38:05.349953+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-26",
+      "min": 27,
+      "max": 33,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-27",
+      "min": 25,
+      "max": 34,
+      "condicao": "Chuva",
+      "condicao_codigo": "c",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-28",
+      "min": 23,
+      "max": 36,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    },
+    {
+      "data": "2026-10-29",
+      "min": 23,
+      "max": 36,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
+      "chuva_mm": 0,
+      "umidade": 0,
+      "uv": 0.0
+    }
+  ],
   "queimadas": {
-    "focos_100km": 0,
+    "focos_100km": 12,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-24T09:01:18.368481+00:00"
+    "atualizado_em": "2026-10-26T13:22:05.888560+00:00"
   },
   "uv": {
-    "indice": 7.2,
-    "categoria": "Alto",
+    "indice": 9.7,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 22,
+    "indice": 24,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 2.5,
-    "pm10": 3.4,
-    "no2": 1.2,
-    "o3": 59.0,
+    "pm25": 7.6,
+    "pm10": 10.6,
+    "no2": 0.4,
+    "o3": 63.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-24T10:13:10.566945+00:00"
+    "atualizado_em": "2026-10-23T13:02:59.426313+00:00"
   },
   "sol": {
-    "nascer": "06:08",
-    "por": "17:41",
-    "duracao_h": 11.5,
-    "estacao": "Inverno",
+    "nascer": "05:19",
+    "por": "17:46",
+    "duracao_h": 12.4,
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 91.0,
-    "fase_pct": 31.7,
-    "dias_proxima_cheia": 5,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 59.0,
+    "fase_pct": 39.9,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 16.9,
+  "temperatura_atual": 26.2,
   "vento": {
-    "velocidade_kmh": 8.1,
-    "direcao_graus": 118,
+    "velocidade_kmh": 12.5,
+    "direcao_graus": 102,
     "direcao": "ESE",
-    "max_kmh": 15.8,
+    "max_kmh": 13.0,
     "rajada_kmh": 32.8,
-    "direcao_dominante": "SE",
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 89,
+  "umidade_pct": 49,
   "pressao_hpa": 1019,
-  "ponto_orvalho_c": 15.0,
+  "ponto_orvalho_c": 14.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
     "nivel_incidencia": 0,
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
-    "casos_estimados": 3,
-    "semana_epidemiologica": 202627,
+    "casos_estimados": 0,
+    "incidencia_100k": 0.0,
+    "populacao": 13852,
+    "semana_epidemiologica": 202639,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-14T13:38:33.193590+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -74,9 +117,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202627,
+    "incidencia_100k": 0.0,
+    "populacao": 13852,
+    "semana_epidemiologica": 202639,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-19T10:09:15.981165+00:00"
+    "atualizado_em": "2026-10-14T13:38:33.193590+00:00"
   },
-  "_clima_em": "2026-07-24T10:13:10.566945+00:00"
+  "_clima_em": "2026-10-23T13:02:59.426313+00:00"
 }

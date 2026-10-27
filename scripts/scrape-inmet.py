@@ -71,7 +71,7 @@ def fetch_previsao_cptec(cptec_id: int, tentativas: int = 3) -> list[dict] | Non
                     "uv": float(p.findtext("iuv", "0") or 0),
                 })
             return previsao if previsao else None
-        except Exception as e:
+        except Exception:
             if i == tentativas - 1:
                 return None
             time.sleep(2 ** i)

@@ -18,8 +18,7 @@ const titulo = aproximado ? 'Reservatório próximo' : 'Reservatório';
 
 {reservatorio && reservatorio.nivel_pct !== null && reservatorio.nivel_pct !== undefined && (
   <section aria-label="Nível do reservatório">
-    <h2 class="mb-3 flex items-center gap-2 text-base font-semibold text-foreground">
-      <span aria-hidden="true">🌊</span> {titulo}
+    <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">{titulo}
     </h2>
     <div class={`rounded-lg border bg-card p-4 ${aproximado ? 'border-muted-foreground/40' : 'border-border'}`}>
       <div class="flex items-center justify-between">

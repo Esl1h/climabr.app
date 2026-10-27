@@ -4,147 +4,112 @@
   "slug": "pratapolis",
   "latitude": -20.7873,
   "longitude": -46.8627,
-  "atualizado_em": "2026-07-24T10:13:10.566945+00:00",
+  "atualizado_em": "2026-10-26T10:58:07.496901+00:00",
   "previsao": [
     {
-      "data": "2026-07-24",
-      "min": 13.7,
-      "max": 25.8,
-      "condicao": "Tempestade",
-      "condicao_codigo": 95,
-      "chuva_mm": 10.0,
-      "uv": 6.2,
-      "nascer_sol": "06:41",
-      "por_sol": "17:46"
-    },
-    {
-      "data": "2026-07-25",
-      "min": 14.4,
-      "max": 23.8,
-      "condicao": "Chuvisco denso",
-      "condicao_codigo": 55,
-      "chuva_mm": 1.5,
-      "uv": 5.6,
-      "nascer_sol": "06:41",
-      "por_sol": "17:46"
-    },
-    {
-      "data": "2026-07-26",
-      "min": 13.6,
-      "max": 25.8,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
+      "data": "2026-10-26",
+      "min": 20,
+      "max": 26,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
       "chuva_mm": 0,
-      "uv": 6.2,
-      "nascer_sol": "06:40",
-      "por_sol": "17:47"
+      "umidade": 0,
+      "uv": 0.0
     },
     {
-      "data": "2026-07-27",
-      "min": 14.4,
-      "max": 26.7,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
+      "data": "2026-10-27",
+      "min": 16,
+      "max": 27,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
       "chuva_mm": 0,
-      "uv": 6.2,
-      "nascer_sol": "06:40",
-      "por_sol": "17:47"
+      "umidade": 0,
+      "uv": 0.0
     },
     {
-      "data": "2026-07-28",
-      "min": 15.6,
-      "max": 27.9,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
+      "data": "2026-10-28",
+      "min": 20,
+      "max": 26,
+      "condicao": "Chuva",
+      "condicao_codigo": "c",
       "chuva_mm": 0,
-      "uv": 6.2,
-      "nascer_sol": "06:39",
-      "por_sol": "17:47"
+      "umidade": 0,
+      "uv": 0.0
     },
     {
-      "data": "2026-07-29",
-      "min": 16.3,
-      "max": 28.7,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
+      "data": "2026-10-29",
+      "min": 19,
+      "max": 25,
+      "condicao": "Chuva",
+      "condicao_codigo": "c",
       "chuva_mm": 0,
-      "uv": 6.2,
-      "nascer_sol": "06:39",
-      "por_sol": "17:48"
-    },
-    {
-      "data": "2026-07-30",
-      "min": 16.4,
-      "max": 28.1,
-      "condicao": "Encoberto",
-      "condicao_codigo": 3,
-      "chuva_mm": 0,
-      "uv": 5.9,
-      "nascer_sol": "06:39",
-      "por_sol": "17:48"
+      "umidade": 0,
+      "uv": 0.0
     }
   ],
   "reservatorio": {
     "nome": "Furnas",
-    "nivel_pct": 66.8,
+    "nivel_pct": 63.1,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-23",
+    "data_medicao": "2026-10-25",
     "distancia_km": 58.6,
     "aproximado": true,
+    "tipo": "RCU",
+    "acumula": true,
     "nota": "Reservatório hidrelétrico mais próximo (59km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-25T08:27:29.047594+00:00"
+    "atualizado_em": "2026-10-26T13:22:03.445691+00:00"
   },
   "queimadas": {
-    "focos_100km": 6,
+    "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-24T09:01:18.368481+00:00"
+    "atualizado_em": "2026-10-26T13:22:05.888560+00:00"
   },
   "uv": {
-    "indice": 6.2,
-    "categoria": "Alto",
+    "indice": 9.2,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 53,
-    "categoria": "Moderada",
+    "indice": 42,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 20.9,
-    "pm10": 21.8,
-    "no2": 16.7,
-    "o3": 31.0,
+    "pm25": 7.2,
+    "pm10": 7.5,
+    "no2": 1.8,
+    "o3": 91.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-24T10:13:10.566945+00:00"
+    "atualizado_em": "2026-10-23T13:02:59.426313+00:00"
   },
   "sol": {
-    "nascer": "06:41",
-    "por": "17:46",
-    "duracao_h": 11.1,
-    "estacao": "Inverno",
+    "nascer": "05:30",
+    "por": "18:13",
+    "duracao_h": 12.7,
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 91.0,
-    "fase_pct": 31.7,
-    "dias_proxima_cheia": 5,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 59.0,
+    "fase_pct": 39.9,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 14.3,
+  "temperatura_atual": 24.1,
   "vento": {
-    "velocidade_kmh": 2.4,
-    "direcao_graus": 189,
+    "velocidade_kmh": 5.2,
+    "direcao_graus": 186,
     "direcao": "S",
-    "max_kmh": 17.6,
-    "rajada_kmh": 38.2,
-    "direcao_dominante": "SE",
+    "max_kmh": 14.6,
+    "rajada_kmh": 32.4,
+    "direcao_dominante": "N",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 92,
+  "umidade_pct": 71,
   "pressao_hpa": 1018,
-  "ponto_orvalho_c": 13.0,
+  "ponto_orvalho_c": 18.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -152,9 +117,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202628,
+    "incidencia_100k": 0.0,
+    "populacao": 8416,
+    "semana_epidemiologica": 202639,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-23T10:38:57.715680+00:00"
+    "atualizado_em": "2026-10-07T15:24:25.082347+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -163,9 +130,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202628,
+    "incidencia_100k": 0.0,
+    "populacao": 8416,
+    "semana_epidemiologica": 202639,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-23T10:38:57.715680+00:00"
+    "atualizado_em": "2026-10-07T15:24:25.082347+00:00"
   },
-  "_clima_em": "2026-07-24T10:13:10.566945+00:00"
+  "_clima_em": "2026-10-23T13:02:59.426313+00:00"
 }

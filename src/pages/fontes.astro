@@ -1,0 +1,61 @@
+---
+import PainelLayout from '../layouts/PainelLayout.astro';
+---
+<PainelLayout title="Fontes de dados e método de atualização | ClimaBR.app" description="De onde vêm os dados do ClimaBR.app: INMET, Open-Meteo, NASA FIRMS, InfoDengue/Fiocruz, ANA, ONS, SABESP/COPASA, CETESB, SVS/MS e ANEEL, e como são coletados e atualizados.">
+  <div class="space-y-8">
+    <header class="space-y-2">
+      <h1 class="text-2xl font-bold">Fontes de dados e método</h1>
+      <p class="text-muted-foreground">Tudo que aparece em um município vem de fonte pública oficial ou de API aberta, coletado automaticamente por workflows agendados (GitHub Actions) e publicado como HTML estático. Nenhum dado é digitado à mão e nenhum dado é inventado: o que não é monitorado para a cidade simplesmente não aparece.</p>
+    </header>
+
+    <section class="space-y-2" aria-label="Fontes usadas por bloco">
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Fontes por bloco</h2>
+      <div class="rounded-lg border border-border bg-card divide-y divide-border text-sm">
+        {[
+          ['Previsão do tempo, temperatura atual, ar (AQI), vento, rajadas e UV horário', 'Open-Meteo' , 'Busca direta no navegador do leitor, ao vivo a cada abertura. Modelos WMO/Open-Meteo; AQI na escala US com PM2.5, PM10, NO2, O3 (Copernicus via Open-Meteo).'],
+          ['Alertas meteorológicos e aviso hidrológico', 'INMET', 'Scrape oficial de avisos por UF, com geocodes dos municípios atingidos; build 2x/dia.'],
+          ['Nível de reservatório de abastecimento', 'ONS/ANA, SABESP (SP), COPASA (MG)', 'Scrape dos boletins oficiais; indicado quando o reservatório mais próximo pode não ser o da cidade.'],
+          ['Focos de queimada (raio de 100 km)', 'NASA FIRMS/INPE', 'Detecção de hotspots de satélite; agregado por município no build.'],
+          ['Dengue, chikungunya e zika', 'InfoDengue / Fiocruz / SVS-MS', 'Semáforo epidemiológico por município (casos notificados e nível 1 a 4); build semanal.'],
+          ['Água (SISAGUA)', 'SVS/Ministério da Saúde', 'Análises de potabilidade do último relatório disponível.'],
+          ['Chuva por bairro (RJ)', 'Alerta Rio / Prefeitura do Rio', 'Estações pluviométricas do município do Rio de Janeiro.'],
+          ['Ondas e surf', 'Open-Meteo Marine / CPTEC-Inpe', 'Altura, período e swell dos pontos costeiros.'],
+          ['Bandeira tarifária', 'ANEEL', 'Bandeira vigente aplicada ao custo da luz; atualizada no build mensal.'],
+          ['Sol, lua, horário', 'Cálculo astronômico determinístico', 'Algoritmos de nascer/pôr do sol e fase da lua; sem fonte externa.'],
+        ].map(([bloco, fonte, metodo]) => [
+          <div class="p-4">
+            <p class="font-semibold text-foreground">{bloco}</p>
+            <p class="mt-1 text-muted-foreground"><span class="font-medium text-foreground/80">Fonte:</span> {fonte} · <span class="font-medium text-foreground/80">Método:</span> {metodo}</p>
+          </div>
+        ])}
+      </div>
+    </section>
+
+    <section class="space-y-2" aria-label="Ciclo de atualização">
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Ciclo de atualização</h2>
+      <div class="rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground space-y-2">
+        <p><strong class="text-foreground">Ao vivo, no browser:</strong> previsão, temperatura atual, AQI, UV, vento e rajadas (busca direta ao Open-Meteo; as estatísticas que você vê decorrem do fetch e não passam por este site).</p>
+        <p><strong class="text-foreground">Build 2x ao dia (9h e 21h horário de Brasília):</strong> HTML estático de todas as páginas, alertas INMET, rankings, feed RSS e sitemap.</p>
+        <p><strong class="text-foreground">Coletas assíncronas (GitHub Actions, 3-6 h):</strong> reservatórios, focos de queimada, água e epidemiologia. No card, cada número traz a fonte no rodapé.</p>
+        <p><strong class="text-foreground">Rastro:</strong> o JSON de cada cidade (<a href="/curl" class="text-primary hover:underline">/curl</a>) traz <code class="font-mono text-xs bg-muted px-1 rounded">atualizado_em</code> por bloco. Se a coleta atrasa mais de 48h, a página avisa.</p>
+      </div>
+    </section>
+
+    <section class="space-y-2" aria-label="Independência">
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Independência</h2>
+      <p class="text-sm text-muted-foreground">O ClimaBR.app não usa cookies de terceiros, não pede login e não vende dado nenhum: os históricos (como o aviso "sua última visita") ficam inteiramente no navegador do leitor. Confira o <a href="/llms.txt" class="text-primary hover:underline">llms.txt</a> para acesso programático.</p>
+    </section>
+  </div>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Como o ClimaBR.app coleta e publica dados ambientais por município",
+    "description": "Ciclo de coleta (GitHub Actions), publicação (HTML estático no Cloudflare Pages) e fontes dos blocos climatológicos e ambientais.",
+    "step": [
+      { "@type": "HowToStep", "name": "Coleta assíncrona por GitHub Actions (3-6 h)" },
+      { "@type": "HowToStep", "name": "Build estático 2x/dia com alertas INMET e rankings" },
+      { "@type": "HowToStep", "name": "Atualização ao vivo no browser via Open-Meteo" },
+    ],
+    "inLanguage": "pt-BR",
+  })} />
+</PainelLayout>

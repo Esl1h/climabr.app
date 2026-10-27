@@ -4,147 +4,112 @@
   "slug": "baependi",
   "latitude": -22.0168,
   "longitude": -44.8221,
-  "atualizado_em": "2026-07-25T09:42:50.384970+00:00",
+  "atualizado_em": "2026-10-26T10:52:18.948579+00:00",
   "previsao": [
     {
-      "data": "2026-07-25",
-      "min": 12.7,
-      "max": 22.2,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.3,
-      "uv": 5.5,
-      "nascer_sol": "06:34",
-      "por_sol": "17:36"
-    },
-    {
-      "data": "2026-07-26",
-      "min": 13.4,
-      "max": 23.4,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
+      "data": "2026-10-26",
+      "min": 17,
+      "max": 23,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
       "chuva_mm": 0,
-      "uv": 6.0,
-      "nascer_sol": "06:34",
-      "por_sol": "17:37"
+      "umidade": 0,
+      "uv": 0.0
     },
     {
-      "data": "2026-07-27",
-      "min": 13.1,
-      "max": 23.8,
-      "condicao": "Parcialmente nublado",
-      "condicao_codigo": 2,
+      "data": "2026-10-27",
+      "min": 11,
+      "max": 21,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
       "chuva_mm": 0,
-      "uv": 6.0,
-      "nascer_sol": "06:34",
-      "por_sol": "17:37"
+      "umidade": 0,
+      "uv": 0.0
     },
     {
-      "data": "2026-07-28",
-      "min": 15.7,
-      "max": 25.0,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
+      "data": "2026-10-28",
+      "min": 11,
+      "max": 22,
+      "condicao": "Parcialmente Nublado",
+      "condicao_codigo": "pn",
       "chuva_mm": 0,
-      "uv": 6.1,
-      "nascer_sol": "06:33",
-      "por_sol": "17:37"
+      "umidade": 0,
+      "uv": 0.0
     },
     {
-      "data": "2026-07-29",
-      "min": 17.2,
-      "max": 26.7,
-      "condicao": "Céu limpo",
-      "condicao_codigo": 0,
+      "data": "2026-10-29",
+      "min": 13,
+      "max": 23,
+      "condicao": "Chuva",
+      "condicao_codigo": "c",
       "chuva_mm": 0,
-      "uv": 6.2,
-      "nascer_sol": "06:33",
-      "por_sol": "17:38"
-    },
-    {
-      "data": "2026-07-30",
-      "min": 16.4,
-      "max": 26.2,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.3,
-      "uv": 6.0,
-      "nascer_sol": "06:32",
-      "por_sol": "17:38"
-    },
-    {
-      "data": "2026-07-31",
-      "min": 14.8,
-      "max": 24.2,
-      "condicao": "Principalmente limpo",
-      "condicao_codigo": 1,
-      "chuva_mm": 0,
-      "uv": 6.1,
-      "nascer_sol": "06:32",
-      "por_sol": "17:39"
+      "umidade": 0,
+      "uv": 0.0
     }
   ],
   "reservatorio": {
     "nome": "Funil",
-    "nivel_pct": 35.9,
+    "nivel_pct": 74.8,
     "variacao_semana_pct": 0.0,
-    "data_medicao": "2026-07-23",
+    "data_medicao": "2026-10-25",
     "distancia_km": 62.7,
     "aproximado": true,
+    "tipo": "RCU",
+    "acumula": true,
     "nota": "Reservatório hidrelétrico mais próximo (63km). Pode não ser o sistema de abastecimento desta cidade.",
     "fonte": "ONS / ANA",
-    "atualizado_em": "2026-07-25T08:27:29.047594+00:00"
+    "atualizado_em": "2026-10-26T13:22:03.445691+00:00"
   },
   "queimadas": {
-    "focos_100km": 21,
+    "focos_100km": 0,
     "fonte": "NASA FIRMS / INPE",
-    "atualizado_em": "2026-07-24T09:01:18.368481+00:00"
+    "atualizado_em": "2026-10-26T13:22:05.888560+00:00"
   },
   "uv": {
-    "indice": 5.5,
-    "categoria": "Moderado",
+    "indice": 7.0,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 39,
+    "indice": 29,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 7.6,
-    "pm10": 7.7,
-    "no2": 6.5,
-    "o3": 28.0,
+    "pm25": 2.3,
+    "pm10": 2.4,
+    "no2": 2.9,
+    "o3": 67.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-07-25T09:42:50.384970+00:00"
+    "atualizado_em": "2026-10-23T13:02:59.426313+00:00"
   },
   "sol": {
-    "nascer": "06:34",
-    "por": "17:36",
-    "duracao_h": 11.0,
-    "estacao": "Inverno",
+    "nascer": "05:21",
+    "por": "18:06",
+    "duracao_h": 12.8,
+    "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 81.0,
-    "fase_pct": 35.1,
-    "dias_proxima_cheia": 4,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 59.0,
+    "fase_pct": 39.9,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 12.7,
+  "temperatura_atual": 20.3,
   "vento": {
-    "velocidade_kmh": 1.1,
-    "direcao_graus": 108,
-    "direcao": "ESE",
-    "max_kmh": 13.1,
-    "rajada_kmh": 29.9,
-    "direcao_dominante": "OSO",
+    "velocidade_kmh": 7.9,
+    "direcao_graus": 254,
+    "direcao": "OSO",
+    "max_kmh": 11.6,
+    "rajada_kmh": 25.9,
+    "direcao_dominante": "SSE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 92,
-  "pressao_hpa": 1021,
-  "ponto_orvalho_c": 11.5,
+  "umidade_pct": 88,
+  "pressao_hpa": 1020,
+  "ponto_orvalho_c": 18.2,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -152,9 +117,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202628,
+    "incidencia_100k": 0.0,
+    "populacao": 18261,
+    "semana_epidemiologica": 202641,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-21T10:42:52.223788+00:00"
+    "atualizado_em": "2026-10-26T15:11:14.299530+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -163,9 +130,11 @@
     "nivel_incidencia_label": "Baixa",
     "casos_semana": 0,
     "casos_estimados": 0,
-    "semana_epidemiologica": 202628,
+    "incidencia_100k": 0.0,
+    "populacao": 18261,
+    "semana_epidemiologica": 202641,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-07-21T10:42:52.223788+00:00"
+    "atualizado_em": "2026-10-26T15:11:14.299530+00:00"
   },
-  "_clima_em": "2026-07-25T09:42:50.384970+00:00"
+  "_clima_em": "2026-10-23T13:02:59.426313+00:00"
 }

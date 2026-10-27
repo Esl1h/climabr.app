@@ -1,0 +1,8 @@
+# Lint focado em correção: pyflakes (código morto, nome indefinido, import não
+# usado) e erros de sintaxe. Regras de estilo puramente cosméticas ficam de
+# fora para não impor reescrita dos scrapers a cada contribuição.
+target-version = "py312"
+line-length = 100
+
+[lint]
+select = ["F", "E9"]

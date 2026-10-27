@@ -236,11 +236,30 @@ especiais. Já está configurado no `wrangler.toml`. Inclui `worker/resvg.wasm`
 
 ### 4.1 Deploy do Worker
 
+Automático: `.github/workflows/deploy-worker.yml` publica a cada push na `main`
+que toque `worker/**` ou `wrangler.toml`. O `deploy.yml` **não** publica o
+Worker; ele cuida só do site.
+
+Manual, quando precisar publicar sem passar pela `main`:
+
 ```bash
 wrangler deploy            # usa main = worker/index.ts do wrangler.toml
 # Validar sem publicar:
 wrangler deploy --dry-run --outdir=/tmp/worker-build
 ```
+
+Depois de publicar, a resposta do modo curl sai com `cache-control:
+public, max-age=900`, então a versão antiga ainda é servida por até 15 minutos.
+Para conferir o deploy na hora, fure o cache:
+
+```bash
+curl -H 'Cache-Control: no-cache' https://climabr.app
+```
+
+**Atenção ao tamanho:** o limite do plano é 1 MiB comprimido e o bundle está em
+~96% dele (980,75 KiB em 30/07/2026), por causa do `resvg.wasm` e da fonte TTF
+do card PNG. Qualquer dependência nova no `worker/` precisa ser medida com
+`--dry-run` antes de entrar.
 
 ### 4.2 Rota do Worker
 
