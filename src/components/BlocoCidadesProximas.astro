@@ -17,7 +17,7 @@ const { vizinhas, ufAtual, id, lateral = false } = Astro.props;
   </h2>
   <div class={lateral ? 'space-y-1.5' : 'grid grid-cols-2 gap-2 sm:grid-cols-3'}>
     {vizinhas.map(({ m, km }) => (
-      <a href={`/${m.estado}/${m.slug}`} class="rounded-lg border border-border bg-card px-3 py-2 hover:bg-accent transition-colors">
+      <a href={`/${m.estado}/${m.slug}`} class="block rounded-lg border border-border bg-card px-3 py-2 hover:bg-accent transition-colors">
         <p class="truncate text-sm text-foreground/80">
           {m.nome}{m.estado !== ufAtual ? ` /${m.estado.toUpperCase()}` : ''}
         </p>
