@@ -28,6 +28,17 @@ try {
   // sem dados
 }
 
+// Bandeira tarifária é nacional: preenche a célula que sobra na grade em qualquer cidade
+let bandeira: { bandeira: string; adicional_por_100kwh: number } | null = null;
+try {
+  const fs = await import('node:fs/promises');
+  const path = await import('node:path');
+  bandeira = JSON.parse(await fs.readFile(path.join(process.cwd(), 'data', 'bandeira.json'), 'utf-8'));
+} catch {
+  // sem bandeira vigente
+}
+const corBandeira = (nome: string) => (nome === 'Verde' ? '#34d399' : nome.startsWith('Amarela') ? '#fbbf24' : '#f87171');
+
 const TEMPO_EMOJI: Record<number, string> = {
   0: '☀️', 1: '🌤', 2: '⛅', 3: '☁️', 45: '🌫', 48: '🌫',
   51: '🌦', 53: '🌦', 55: '🌧', 61: '🌧', 63: '🌧', 65: '🌧',
@@ -524,6 +535,19 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
             </div>
             <div class="card-sub" style="color:#cbd5e1;">
               {lua.iluminacao_pct}% iluminada{lua.dias_proxima_cheia != null ? (lua.dias_proxima_cheia === 0 ? ' · cheia hoje' : ` · cheia em ${lua.dias_proxima_cheia} ${lua.dias_proxima_cheia === 1 ? 'dia' : 'dias'}`) : ''}
+            </div>
+          </div>
+        )}
+
+        <!-- Bandeira tarifária: último item da grade, para fechar a linha de Sol e Lua -->
+        {bandeira && (
+          <div class="card">
+            <div class="card-titulo"><span class="card-ico">⚡</span> Bandeira</div>
+            <div class="card-valor" style={`color:${corBandeira(bandeira.bandeira)}; font-size:clamp(1rem,3vmin,3.2rem);`}>
+              {bandeira.bandeira}
+            </div>
+            <div class="card-sub">
+              {bandeira.adicional_por_100kwh > 0 ? `+R$ ${bandeira.adicional_por_100kwh.toFixed(2)} / 100 kWh` : 'sem custo extra'}
             </div>
           </div>
         )}
