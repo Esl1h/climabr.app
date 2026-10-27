@@ -4,47 +4,84 @@
   "slug": "guia-lopes-da-laguna",
   "latitude": -21.5416,
   "longitude": -55.9961,
-  "atualizado_em": "2026-10-27T10:19:32.444037+00:00",
+  "atualizado_em": "2026-10-27T13:54:54.880481+00:00",
   "previsao": [
     {
       "data": "2026-10-27",
-      "min": 17,
-      "max": 26,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 19.2,
+      "max": 28.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 2.4,
+      "nascer_sol": "06:03",
+      "por_sol": "18:52"
     },
     {
       "data": "2026-10-28",
-      "min": 18,
-      "max": 28,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 19.7,
+      "max": 26.7,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 10.5,
+      "uv": 5.3,
+      "nascer_sol": "06:02",
+      "por_sol": "18:52"
     },
     {
       "data": "2026-10-29",
-      "min": 17,
-      "max": 25,
-      "condicao": "Chuvas Isoladas",
-      "condicao_codigo": "ci",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 19.3,
+      "max": 26.8,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 11.4,
+      "uv": 7.5,
+      "nascer_sol": "06:02",
+      "por_sol": "18:53"
     },
     {
       "data": "2026-10-30",
-      "min": 18,
-      "max": 28,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 19.7,
+      "max": 29.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.5,
+      "uv": 9.2,
+      "nascer_sol": "06:01",
+      "por_sol": "18:53"
+    },
+    {
+      "data": "2026-10-31",
+      "min": 19.1,
+      "max": 29.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 9.3,
+      "nascer_sol": "06:00",
+      "por_sol": "18:54"
+    },
+    {
+      "data": "2026-11-01",
+      "min": 20.8,
+      "max": 30.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.3,
+      "uv": 7.5,
+      "nascer_sol": "06:00",
+      "por_sol": "18:54"
+    },
+    {
+      "data": "2026-11-02",
+      "min": 21.0,
+      "max": 30.4,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 13.9,
+      "uv": 3.4,
+      "nascer_sol": "05:59",
+      "por_sol": "18:55"
     }
   ],
   "queimadas": {
@@ -53,50 +90,50 @@
     "atualizado_em": "2026-10-27T12:29:37.051077+00:00"
   },
   "uv": {
-    "indice": 9.2,
-    "categoria": "Muito Alto",
+    "indice": 2.4,
+    "categoria": "Baixo",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 57,
-    "categoria": "Moderada",
+    "indice": 22,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 7.1,
-    "pm10": 7.5,
-    "no2": 1.2,
-    "o3": 83.0,
+    "pm25": 3.4,
+    "pm10": 3.7,
+    "no2": 1.8,
+    "o3": 73.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-23T13:02:59.426313+00:00"
+    "atualizado_em": "2026-10-27T13:54:54.880481+00:00"
   },
   "sol": {
-    "nascer": "06:06",
-    "por": "18:50",
-    "duracao_h": 12.7,
+    "nascer": "06:03",
+    "por": "18:52",
+    "duracao_h": 12.8,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 59.0,
-    "fase_pct": 39.9,
-    "dias_proxima_cheia": 3,
+    "nome": "Cheia",
+    "iluminacao_pct": 21.0,
+    "fase_pct": 53.4,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 30.5,
+  "temperatura_atual": 25.2,
   "vento": {
-    "velocidade_kmh": 16.4,
-    "direcao_graus": 13,
-    "direcao": "NNE",
-    "max_kmh": 24.8,
-    "rajada_kmh": 54.7,
-    "direcao_dominante": "NNE",
+    "velocidade_kmh": 10.1,
+    "direcao_graus": 73,
+    "direcao": "ENE",
+    "max_kmh": 11.7,
+    "rajada_kmh": 26.3,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 59,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 21.6,
+  "umidade_pct": 51,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 14.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -123,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-15T13:24:26.373794+00:00"
   },
-  "_clima_em": "2026-10-23T13:02:59.426313+00:00"
+  "_clima_em": "2026-10-27T13:54:54.880481+00:00"
 }
