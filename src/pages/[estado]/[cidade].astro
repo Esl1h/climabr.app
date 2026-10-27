@@ -13,6 +13,7 @@ import BlocoVento from '../../components/BlocoVento.astro';
 import BlocoOndas from '../../components/BlocoOndas.astro';
 import BlocoBandeira from '../../components/BlocoBandeira.astro';
 import BlocoAgua from '../../components/BlocoAgua.astro';
+import BlocoCidadesProximas from '../../components/BlocoCidadesProximas.astro';
 import { descricaoTextual } from '../../lib/descricao';
 import { corTemperaturaTexto, catTemperatura } from '../../lib/temperatura';
 import municipiosRaw from '../../../data/municipios.json';
@@ -228,7 +229,7 @@ const temDados = dados && (
   </nav>
 
   <div class="pb-24 lg:grid lg:grid-cols-[26rem_minmax(0,1fr)] lg:items-start lg:gap-x-8 lg:pb-0">
-    <div id="agora" class="lg:sticky lg:top-24">
+    <div id="agora" class="lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto">
       {avisosCidade.length > 0 && (
         <div class="mb-6 space-y-2" data-alertas>
           {avisosCidade.map((a) => {
@@ -394,6 +395,11 @@ const temDados = dados && (
           <a href={href} class="shrink-0 rounded-full border border-input bg-card px-3 py-1 text-foreground/80 hover:bg-accent hover:text-foreground transition-colors">{rotulo}</a>
         ))}
       </nav>
+      {vizinhas.length > 0 && (
+        <div class="hidden lg:block mt-6">
+          <BlocoCidadesProximas vizinhas={vizinhas} ufAtual={municipio.estado} id="cidades-proximas-lateral" lateral />
+        </div>
+      )}
     </div>
     <div class="min-w-0">
       {temDados ? (
@@ -469,21 +475,9 @@ const temDados = dados && (
   </nav>
 
   {vizinhas.length > 0 && (
-    <section aria-label="Cidades próximas" id="cidades-proximas" class="mt-8">
-      <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-        Cidades próximas
-      </h2>
-      <div class="grid grid-cols-2 gap-2 sm:grid-cols-3">
-        {vizinhas.map(({ m, km }) => (
-          <a href={`/${m.estado}/${m.slug}`} class="rounded-lg border border-border bg-card px-3 py-2 hover:bg-accent transition-colors">
-            <p class="truncate text-sm text-foreground/80">
-              {m.nome}{m.estado !== municipio.estado ? ` /${m.estado.toUpperCase()}` : ''}
-            </p>
-            <p class="text-xs text-muted-foreground tabular-nums">{Math.round(km)} km</p>
-          </a>
-        ))}
-      </div>
-    </section>
+    <div class="lg:hidden">
+      <BlocoCidadesProximas vizinhas={vizinhas} ufAtual={municipio.estado} id="cidades-proximas" />
+    </div>
   )}
 
   {outrasDaUf.length > 0 && (

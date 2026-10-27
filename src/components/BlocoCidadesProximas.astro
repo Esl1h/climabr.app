@@ -1,0 +1,28 @@
+---
+import type { Municipio } from '../lib/types';
+
+interface Props {
+  vizinhas: { m: Municipio; km: number }[];
+  ufAtual: string;
+  id: string;
+  // Na coluna lateral do desktop a lista é vertical; no fluxo principal é grade
+  lateral?: boolean;
+}
+const { vizinhas, ufAtual, id, lateral = false } = Astro.props;
+---
+
+<section aria-label="Cidades próximas" id={id} class={lateral ? '' : 'mt-8'}>
+  <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+    Cidades próximas
+  </h2>
+  <div class={lateral ? 'space-y-1.5' : 'grid grid-cols-2 gap-2 sm:grid-cols-3'}>
+    {vizinhas.map(({ m, km }) => (
+      <a href={`/${m.estado}/${m.slug}`} class="rounded-lg border border-border bg-card px-3 py-2 hover:bg-accent transition-colors">
+        <p class="truncate text-sm text-foreground/80">
+          {m.nome}{m.estado !== ufAtual ? ` /${m.estado.toUpperCase()}` : ''}
+        </p>
+        <p class="text-xs text-muted-foreground tabular-nums">{Math.round(km)} km</p>
+      </a>
+    ))}
+  </div>
+</section>
