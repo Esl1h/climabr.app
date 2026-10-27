@@ -420,12 +420,6 @@ const temDados = dados && (
           <BlocoBandeira bandeira={bandeira} />
           <BlocoAlagamentos alagamentos={dados!.alagamentos} />
           <BlocoChuvaRio chuva={dados!.chuva_estacoes} />
-          {(!dados!.ondas || dados!.reservatorio?.nivel_pct == null) && (
-            <ul class="space-y-1 text-xs text-muted-foreground sm:col-span-2">
-              {!dados!.ondas && <li>Ondas: sem dados de mar para esta cidade.</li>}
-              {dados!.reservatorio?.nivel_pct == null && <li>Reservatório: sistema de abastecimento não monitorado online nesta cidade.</li>}
-            </ul>
-          )}
         </div>
       ) : (
         <div class="rounded-lg border border-border bg-card p-8 text-center">

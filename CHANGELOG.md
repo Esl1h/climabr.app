@@ -13,8 +13,7 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
   Previsão, Ar e Saúde, e um menu "Mais" com cidades próximas, compartilhar,
   modos Painel e Mobile e JSON. A barra antiga de ações foi absorvida por ela.
 
-- Marcador "Costeira" no cabeçalho das cidades com dados de mar, e uma linha
-  explicando a ausência de ondas ou de reservatório nas demais.
+- Marcador "Costeira" no cabeçalho das cidades com dados de mar.
 
 - Lista de alertas INMET da home recolhida no celular, para as capitais
   aparecerem na primeira dobra. No desktop continua aberta.
