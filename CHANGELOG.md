@@ -9,6 +9,22 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 
 ### Adicionado
 
+- Barra de seções fixa no celular na página da cidade, com as abas Agora,
+  Previsão, Ar e Saúde, e um menu "Mais" com cidades próximas, compartilhar,
+  modos Painel e Mobile e JSON. A barra antiga de ações foi absorvida por ela.
+
+- Marcador "Costeira" no cabeçalho das cidades com dados de mar, e uma linha
+  explicando a ausência de ondas ou de reservatório nas demais.
+
+- Lista de alertas INMET da home recolhida no celular, para as capitais
+  aparecerem na primeira dobra. No desktop continua aberta.
+
+- Rodapé do Modo Painel diz "Sem conexão: exibindo o snapshot" quando a
+  temperatura ao vivo não carrega, em vez de ficar em "aguardando".
+
+- Formato `?format=md` para terminal e LLMs, com `&secoes=` para escolher as
+  linhas. O JSON da cidade aceita `?campos=` para devolver só as chaves pedidas.
+
 - Bloco de chuva por bairro na página do Rio de Janeiro, com os 33 pluviômetros
   do Alerta Rio: intensidade na última hora pela escala da própria prefeitura,
   acumulado de 24 horas por estação e marcação de quem está sem leitura recente.
