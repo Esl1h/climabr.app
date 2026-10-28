@@ -4,58 +4,136 @@
   "slug": "santo-antonio-do-leste",
   "latitude": -14.8052,
   "longitude": -53.6699,
-  "atualizado_em": "2026-10-28T11:05:28.942409+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-28T14:49:18.419902+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-28",
+      "min": 21.4,
+      "max": 28.6,
+      "condicao": "Chuva isolada forte",
+      "condicao_codigo": 82,
+      "chuva_mm": 27.8,
+      "uv": 1.8,
+      "nascer_sol": "06:00",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-10-29",
+      "min": 21.8,
+      "max": 27.2,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 13.8,
+      "uv": 9.2,
+      "nascer_sol": "06:00",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-10-30",
+      "min": 20.8,
+      "max": 28.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 12.5,
+      "uv": 7.7,
+      "nascer_sol": "05:59",
+      "por_sol": "18:36"
+    },
+    {
+      "data": "2026-10-31",
+      "min": 20.7,
+      "max": 29.5,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 6.3,
+      "uv": 8.6,
+      "nascer_sol": "05:59",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-11-01",
+      "min": 21.2,
+      "max": 29.4,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 6.4,
+      "uv": 8.2,
+      "nascer_sol": "05:58",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-11-02",
+      "min": 21.9,
+      "max": 30.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 7.9,
+      "uv": 8.2,
+      "nascer_sol": "05:58",
+      "por_sol": "18:37"
+    },
+    {
+      "data": "2026-11-03",
+      "min": 21.6,
+      "max": 30.3,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 4.1,
+      "uv": 7.7,
+      "nascer_sol": "05:58",
+      "por_sol": "18:38"
+    }
+  ],
   "queimadas": {
     "focos_100km": 4,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-28T13:17:23.421278+00:00"
   },
   "uv": {
-    "indice": 8.2,
-    "categoria": "Muito Alto",
+    "indice": 1.8,
+    "categoria": "Baixo",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 58,
+    "indice": 54,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 6.3,
-    "pm10": 7.2,
-    "no2": 0.0,
-    "o3": 87.0,
+    "pm25": 7.7,
+    "pm10": 7.8,
+    "no2": 0.6,
+    "o3": 90.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-23T13:02:59.426313+00:00"
+    "atualizado_em": "2026-10-28T14:49:18.419902+00:00"
   },
   "sol": {
-    "nascer": "06:03",
-    "por": "18:34",
-    "duracao_h": 12.5,
+    "nascer": "06:00",
+    "por": "18:36",
+    "duracao_h": 12.6,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 59.0,
-    "fase_pct": 39.9,
-    "dias_proxima_cheia": 3,
+    "nome": "Cheia",
+    "iluminacao_pct": 41.0,
+    "fase_pct": 56.8,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 32.6,
+  "temperatura_atual": 28.5,
   "vento": {
-    "velocidade_kmh": 15.2,
-    "direcao_graus": 339,
-    "direcao": "NNO",
-    "max_kmh": 18.0,
-    "rajada_kmh": 39.2,
-    "direcao_dominante": "N",
+    "velocidade_kmh": 7.8,
+    "direcao_graus": 128,
+    "direcao": "SE",
+    "max_kmh": 12.5,
+    "rajada_kmh": 28.1,
+    "direcao_dominante": "S",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 38,
-  "pressao_hpa": 1015,
-  "ponto_orvalho_c": 16.3,
+  "umidade_pct": 64,
+  "pressao_hpa": 1017,
+  "ponto_orvalho_c": 21.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-23T13:24:52.652923+00:00"
   },
-  "_clima_em": "2026-10-23T13:02:59.426313+00:00",
+  "_clima_em": "2026-10-28T14:49:18.419902+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 1000,

@@ -4,47 +4,84 @@
   "slug": "roteiro",
   "latitude": -9.8687,
   "longitude": -35.9804,
-  "atualizado_em": "2026-10-28T10:53:16.805082+00:00",
+  "atualizado_em": "2026-10-28T14:49:18.419902+00:00",
   "previsao": [
     {
       "data": "2026-10-28",
-      "min": 25,
-      "max": 30,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 25.0,
+      "max": 29.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 7.5,
+      "nascer_sol": "04:54",
+      "por_sol": "17:20"
     },
     {
       "data": "2026-10-29",
-      "min": 23,
-      "max": 31,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 24.4,
+      "max": 29.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.1,
+      "uv": 9.1,
+      "nascer_sol": "04:54",
+      "por_sol": "17:20"
     },
     {
       "data": "2026-10-30",
-      "min": 23,
-      "max": 32,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 24.7,
+      "max": 29.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 9.2,
+      "nascer_sol": "04:54",
+      "por_sol": "17:20"
     },
     {
       "data": "2026-10-31",
-      "min": 24,
-      "max": 32,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.7,
+      "max": 29.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.2,
+      "nascer_sol": "04:53",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-11-01",
+      "min": 25.1,
+      "max": 29.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 9.2,
+      "nascer_sol": "04:53",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-11-02",
+      "min": 24.5,
+      "max": 30.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.1,
+      "uv": 9.1,
+      "nascer_sol": "04:53",
+      "por_sol": "17:21"
+    },
+    {
+      "data": "2026-11-03",
+      "min": 23.8,
+      "max": 29.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.7,
+      "uv": 9.1,
+      "nascer_sol": "04:53",
+      "por_sol": "17:21"
     }
   ],
   "queimadas": {
@@ -53,8 +90,8 @@
     "atualizado_em": "2026-10-28T13:17:23.421278+00:00"
   },
   "uv": {
-    "indice": 9.2,
-    "categoria": "Muito Alto",
+    "indice": 7.5,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
@@ -62,16 +99,16 @@
   "qualidade_ar": {
     "indice": 56,
     "categoria": "Moderada",
-    "principal_poluente": "PM2.5",
-    "pm25": 12.6,
-    "pm10": 16.3,
-    "no2": 1.4,
-    "o3": 95.0,
+    "principal_poluente": "PM10",
+    "pm25": 9.4,
+    "pm10": 14.6,
+    "no2": 0.6,
+    "o3": 47.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-26T14:49:04.790686+00:00"
+    "atualizado_em": "2026-10-28T14:49:18.419902+00:00"
   },
   "sol": {
-    "nascer": "04:55",
+    "nascer": "04:54",
     "por": "17:20",
     "duracao_h": 12.4,
     "estacao": "Primavera",
@@ -79,25 +116,25 @@
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 0.0,
-    "fase_pct": 50.0,
-    "dias_proxima_cheia": 0,
+    "iluminacao_pct": 41.0,
+    "fase_pct": 56.8,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 30.3,
+  "temperatura_atual": 29.3,
   "vento": {
-    "velocidade_kmh": 24.1,
-    "direcao_graus": 81,
-    "direcao": "E",
-    "max_kmh": 27.1,
-    "rajada_kmh": 52.9,
-    "direcao_dominante": "NE",
+    "velocidade_kmh": 16.8,
+    "direcao_graus": 119,
+    "direcao": "ESE",
+    "max_kmh": 17.3,
+    "rajada_kmh": 37.4,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo",
-    "atualizado_em": "2026-10-27T14:15:31.598058+00:00"
+    "atualizado_em": "2026-10-28T15:10:11.390092+00:00"
   },
-  "umidade_pct": 69,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 23.9,
+  "umidade_pct": 66,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 22.3,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -124,20 +161,20 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-19T15:36:55.098723+00:00"
   },
-  "_clima_em": "2026-10-26T14:49:04.790686+00:00",
+  "_clima_em": "2026-10-28T14:49:18.419902+00:00",
   "ondas": {
-    "altura_m": 1.14,
-    "altura_max_m": 1.42,
-    "periodo_s": 5.5,
-    "direcao_graus": 75,
-    "direcao": "ENE",
-    "swell_altura_m": 0.9,
-    "swell_periodo_s": 6.5,
-    "swell_direcao": "E",
-    "surf_nivel": "razoavel",
-    "surf_emoji": "🟡",
-    "surf_descricao": "Surf razoável",
+    "altura_m": 0.76,
+    "altura_max_m": 1.0,
+    "periodo_s": 7.0,
+    "direcao_graus": 114,
+    "direcao": "ESE",
+    "swell_altura_m": 0.74,
+    "swell_periodo_s": 10.5,
+    "swell_direcao": "ESE",
+    "surf_nivel": "bom",
+    "surf_emoji": "🟢",
+    "surf_descricao": "Bom para surf",
     "fonte": "Open-Meteo Marine",
-    "atualizado_em": "2026-10-27T14:15:31.598058+00:00"
+    "atualizado_em": "2026-10-28T15:10:11.390092+00:00"
   }
 }

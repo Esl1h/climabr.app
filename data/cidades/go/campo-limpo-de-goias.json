@@ -4,8 +4,86 @@
   "slug": "campo-limpo-de-goias",
   "latitude": -16.2867,
   "longitude": -49.1026,
-  "atualizado_em": "2026-10-28T11:00:56.029582+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-28T14:49:18.419902+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-28",
+      "min": 20.3,
+      "max": 30.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 13.5,
+      "uv": 6.0,
+      "nascer_sol": "05:40",
+      "por_sol": "18:19"
+    },
+    {
+      "data": "2026-10-29",
+      "min": 19.4,
+      "max": 28.5,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 12.5,
+      "uv": 8.9,
+      "nascer_sol": "05:40",
+      "por_sol": "18:20"
+    },
+    {
+      "data": "2026-10-30",
+      "min": 19.3,
+      "max": 26.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 13.3,
+      "uv": 9.0,
+      "nascer_sol": "05:39",
+      "por_sol": "18:20"
+    },
+    {
+      "data": "2026-10-31",
+      "min": 19.9,
+      "max": 28.8,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 7.9,
+      "uv": 9.4,
+      "nascer_sol": "05:39",
+      "por_sol": "18:20"
+    },
+    {
+      "data": "2026-11-01",
+      "min": 19.8,
+      "max": 28.4,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 9.9,
+      "uv": 9.2,
+      "nascer_sol": "05:39",
+      "por_sol": "18:21"
+    },
+    {
+      "data": "2026-11-02",
+      "min": 19.5,
+      "max": 29.5,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 9.9,
+      "uv": 7.3,
+      "nascer_sol": "05:38",
+      "por_sol": "18:21"
+    },
+    {
+      "data": "2026-11-03",
+      "min": 19.3,
+      "max": 30.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 5.4,
+      "uv": 5.6,
+      "nascer_sol": "05:38",
+      "por_sol": "18:22"
+    }
+  ],
   "reservatorio": {
     "nome": "Corumba-4",
     "nivel_pct": 49.8,
@@ -25,25 +103,25 @@
     "atualizado_em": "2026-10-28T13:17:23.421278+00:00"
   },
   "uv": {
-    "indice": 9.3,
-    "categoria": "Muito Alto",
+    "indice": 6.0,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 47,
+    "indice": 44,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 6.6,
-    "pm10": 6.7,
-    "no2": 1.2,
-    "o3": 116.0,
+    "pm25": 3.2,
+    "pm10": 3.2,
+    "no2": 2.2,
+    "o3": 93.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-26T14:49:04.790686+00:00"
+    "atualizado_em": "2026-10-28T14:49:18.419902+00:00"
   },
   "sol": {
-    "nascer": "05:41",
+    "nascer": "05:40",
     "por": "18:19",
     "duracao_h": 12.6,
     "estacao": "Primavera",
@@ -51,24 +129,24 @@
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 0.0,
-    "fase_pct": 50.0,
-    "dias_proxima_cheia": 0,
+    "iluminacao_pct": 41.0,
+    "fase_pct": 56.8,
+    "dias_proxima_cheia": 2,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 29.7,
+  "temperatura_atual": 30.5,
   "vento": {
-    "velocidade_kmh": 9.0,
-    "direcao_graus": 250,
-    "direcao": "OSO",
-    "max_kmh": 14.9,
-    "rajada_kmh": 37.4,
-    "direcao_dominante": "SO",
+    "velocidade_kmh": 7.3,
+    "direcao_graus": 40,
+    "direcao": "NE",
+    "max_kmh": 14.0,
+    "rajada_kmh": 30.2,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 49,
-  "pressao_hpa": 1013,
-  "ponto_orvalho_c": 17.7,
+  "umidade_pct": 46,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 17.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-22T13:46:08.234426+00:00"
   },
-  "_clima_em": "2026-10-26T14:49:04.790686+00:00",
+  "_clima_em": "2026-10-28T14:49:18.419902+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 525,
