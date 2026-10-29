@@ -4,8 +4,86 @@
   "slug": "sapucai-mirim",
   "latitude": -22.7863,
   "longitude": -45.8486,
-  "atualizado_em": "2026-10-29T11:32:48.725881+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-29T14:55:29.158409+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-29",
+      "min": 14.6,
+      "max": 18.5,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 9.6,
+      "uv": 2.5,
+      "nascer_sol": "05:20",
+      "por_sol": "18:14"
+    },
+    {
+      "data": "2026-10-30",
+      "min": 14.8,
+      "max": 23.7,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 21.4,
+      "uv": 7.9,
+      "nascer_sol": "05:19",
+      "por_sol": "18:14"
+    },
+    {
+      "data": "2026-10-31",
+      "min": 14.4,
+      "max": 24.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 24.8,
+      "uv": 8.4,
+      "nascer_sol": "05:18",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-11-01",
+      "min": 14.0,
+      "max": 23.8,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 6.4,
+      "uv": 8.3,
+      "nascer_sol": "05:18",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-11-02",
+      "min": 16.0,
+      "max": 24.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 4.5,
+      "uv": 1.9,
+      "nascer_sol": "05:17",
+      "por_sol": "18:16"
+    },
+    {
+      "data": "2026-11-03",
+      "min": 16.0,
+      "max": 25.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.3,
+      "uv": 7.7,
+      "nascer_sol": "05:17",
+      "por_sol": "18:17"
+    },
+    {
+      "data": "2026-11-04",
+      "min": 15.8,
+      "max": 24.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.1,
+      "uv": 9.1,
+      "nascer_sol": "05:16",
+      "por_sol": "18:17"
+    }
+  ],
   "reservatorio": {
     "nome": "Jaguari",
     "nivel_pct": 74.7,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-10-29T13:25:19.601367+00:00"
   },
   "uv": {
-    "indice": 9.3,
-    "categoria": "Muito Alto",
+    "indice": 2.5,
+    "categoria": "Baixo",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 21,
-    "categoria": "Boa",
+    "indice": 52,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 3.1,
-    "pm10": 4.2,
-    "no2": 0.8,
-    "o3": 75.0,
+    "pm25": 9.8,
+    "pm10": 10.0,
+    "no2": 4.6,
+    "o3": 61.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-27T13:54:54.880481+00:00"
+    "atualizado_em": "2026-10-29T14:55:29.158409+00:00"
   },
   "sol": {
-    "nascer": "05:21",
-    "por": "18:13",
+    "nascer": "05:20",
+    "por": "18:14",
     "duracao_h": 12.9,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 21.0,
-    "fase_pct": 53.4,
-    "dias_proxima_cheia": 1,
+    "iluminacao_pct": 60.0,
+    "fase_pct": 60.2,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 16.0,
+  "temperatura_atual": 17.9,
   "vento": {
-    "velocidade_kmh": 6.6,
-    "direcao_graus": 112,
-    "direcao": "ESE",
-    "max_kmh": 12.3,
-    "rajada_kmh": 36.0,
-    "direcao_dominante": "SSE",
+    "velocidade_kmh": 7.9,
+    "direcao_graus": 356,
+    "direcao": "N",
+    "max_kmh": 9.0,
+    "rajada_kmh": 24.8,
+    "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 66,
-  "pressao_hpa": 1021,
-  "ponto_orvalho_c": 9.6,
+  "umidade_pct": 94,
+  "pressao_hpa": 1018,
+  "ponto_orvalho_c": 16.9,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-27T14:17:02.423556+00:00"
   },
-  "_clima_em": "2026-10-27T13:54:54.880481+00:00"
+  "_clima_em": "2026-10-29T14:55:29.158409+00:00"
 }

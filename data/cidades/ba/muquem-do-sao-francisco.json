@@ -4,58 +4,136 @@
   "slug": "muquem-do-sao-francisco",
   "latitude": -12.2118,
   "longitude": -43.4987,
-  "atualizado_em": "2026-10-29T11:13:33.039236+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-10-29T14:55:29.158409+00:00",
+  "previsao": [
+    {
+      "data": "2026-10-29",
+      "min": 21.9,
+      "max": 33.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.0,
+      "uv": 9.4,
+      "nascer_sol": "05:22",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-10-30",
+      "min": 22.6,
+      "max": 34.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.4,
+      "nascer_sol": "05:21",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-10-31",
+      "min": 22.4,
+      "max": 34.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.4,
+      "nascer_sol": "05:21",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-11-01",
+      "min": 24.0,
+      "max": 36.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 0.8,
+      "uv": 9.5,
+      "nascer_sol": "05:21",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-11-02",
+      "min": 23.4,
+      "max": 36.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.6,
+      "nascer_sol": "05:21",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-11-03",
+      "min": 23.3,
+      "max": 36.4,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.6,
+      "nascer_sol": "05:20",
+      "por_sol": "17:54"
+    },
+    {
+      "data": "2026-11-04",
+      "min": 25.4,
+      "max": 38.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:20",
+      "por_sol": "17:54"
+    }
+  ],
   "queimadas": {
     "focos_100km": 29,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-10-29T13:25:19.601367+00:00"
   },
   "uv": {
-    "indice": 6.2,
-    "categoria": "Alto",
+    "indice": 9.4,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 56,
+    "indice": 54,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 18.7,
-    "pm10": 20.8,
+    "pm25": 4.2,
+    "pm10": 4.6,
     "no2": 0.4,
-    "o3": 103.0,
+    "o3": 75.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-26T14:49:04.790686+00:00"
+    "atualizado_em": "2026-10-29T14:55:29.158409+00:00"
   },
   "sol": {
-    "nascer": "05:23",
-    "por": "17:52",
+    "nascer": "05:22",
+    "por": "17:53",
     "duracao_h": 12.5,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 0.0,
-    "fase_pct": 50.0,
-    "dias_proxima_cheia": 0,
+    "iluminacao_pct": 60.0,
+    "fase_pct": 60.2,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 32.9,
+  "temperatura_atual": 32.4,
   "vento": {
-    "velocidade_kmh": 9.2,
-    "direcao_graus": 222,
-    "direcao": "SO",
-    "max_kmh": 14.0,
-    "rajada_kmh": 32.0,
-    "direcao_dominante": "O",
+    "velocidade_kmh": 3.0,
+    "direcao_graus": 65,
+    "direcao": "ENE",
+    "max_kmh": 8.1,
+    "rajada_kmh": 19.8,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 44,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 19.0,
+  "umidade_pct": 47,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 19.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-19T15:36:55.098723+00:00"
   },
-  "_clima_em": "2026-10-26T14:49:04.790686+00:00"
+  "_clima_em": "2026-10-29T14:55:29.158409+00:00"
 }

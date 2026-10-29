@@ -4,47 +4,84 @@
   "slug": "canarana",
   "latitude": -13.3298,
   "longitude": -52.3989,
-  "atualizado_em": "2026-10-29T11:22:50.922190+00:00",
+  "atualizado_em": "2026-10-29T14:55:29.158409+00:00",
   "previsao": [
     {
       "data": "2026-10-29",
-      "min": 19,
-      "max": 33,
-      "condicao": "Chuvas Isoladas",
-      "condicao_codigo": "ci",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.6,
+      "max": 32.1,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 3.7,
+      "uv": 9.1,
+      "nascer_sol": "05:56",
+      "por_sol": "18:30"
     },
     {
       "data": "2026-10-30",
-      "min": 23,
-      "max": 35,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.5,
+      "max": 32.3,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 9.4,
+      "uv": 9.3,
+      "nascer_sol": "05:56",
+      "por_sol": "18:30"
     },
     {
       "data": "2026-10-31",
-      "min": 22,
-      "max": 36,
-      "condicao": "Chuva",
-      "condicao_codigo": "c",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 23.2,
+      "max": 32.5,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 7.6,
+      "uv": 4.4,
+      "nascer_sol": "05:56",
+      "por_sol": "18:30"
     },
     {
       "data": "2026-11-01",
-      "min": 25,
-      "max": 39,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 22.7,
+      "max": 33.5,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 7.8,
+      "uv": 9.4,
+      "nascer_sol": "05:55",
+      "por_sol": "18:31"
+    },
+    {
+      "data": "2026-11-02",
+      "min": 23.0,
+      "max": 33.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 9.4,
+      "nascer_sol": "05:55",
+      "por_sol": "18:31"
+    },
+    {
+      "data": "2026-11-03",
+      "min": 22.3,
+      "max": 32.7,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.7,
+      "uv": 9.3,
+      "nascer_sol": "05:55",
+      "por_sol": "18:31"
+    },
+    {
+      "data": "2026-11-04",
+      "min": 22.4,
+      "max": 34.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 8.6,
+      "nascer_sol": "05:54",
+      "por_sol": "18:32"
     }
   ],
   "queimadas": {
@@ -53,50 +90,50 @@
     "atualizado_em": "2026-10-29T13:25:19.601367+00:00"
   },
   "uv": {
-    "indice": 9.2,
+    "indice": 9.1,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 60,
-    "categoria": "Moderada",
+    "indice": 33,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 11.1,
-    "pm10": 11.6,
-    "no2": 0.7,
-    "o3": 92.0,
+    "pm25": 2.6,
+    "pm10": 2.6,
+    "no2": 0.5,
+    "o3": 94.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-26T14:49:04.790686+00:00"
+    "atualizado_em": "2026-10-29T14:55:29.158409+00:00"
   },
   "sol": {
-    "nascer": "05:58",
-    "por": "18:29",
-    "duracao_h": 12.5,
+    "nascer": "05:56",
+    "por": "18:30",
+    "duracao_h": 12.6,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Cheia",
-    "iluminacao_pct": 0.0,
-    "fase_pct": 50.0,
-    "dias_proxima_cheia": 0,
+    "iluminacao_pct": 60.0,
+    "fase_pct": 60.2,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 34.5,
+  "temperatura_atual": 31.9,
   "vento": {
-    "velocidade_kmh": 8.3,
-    "direcao_graus": 202,
-    "direcao": "SSO",
-    "max_kmh": 14.3,
-    "rajada_kmh": 29.9,
-    "direcao_dominante": "SO",
+    "velocidade_kmh": 5.2,
+    "direcao_graus": 94,
+    "direcao": "E",
+    "max_kmh": 12.9,
+    "rajada_kmh": 28.8,
+    "direcao_dominante": "SE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 44,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 20.4,
+  "umidade_pct": 55,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 21.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -123,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-15T13:24:26.373794+00:00"
   },
-  "_clima_em": "2026-10-26T14:49:04.790686+00:00",
+  "_clima_em": "2026-10-29T14:55:29.158409+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 1551,
