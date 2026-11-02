@@ -4,8 +4,86 @@
   "slug": "curvelandia",
   "latitude": -15.6171,
   "longitude": -57.8764,
-  "atualizado_em": "2026-11-02T13:10:30.508342+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-02T17:45:48.233747+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-02",
+      "min": 23.6,
+      "max": 35.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 8.9,
+      "nascer_sol": "06:14",
+      "por_sol": "18:55"
+    },
+    {
+      "data": "2026-11-03",
+      "min": 25.3,
+      "max": 35.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.5,
+      "uv": 8.8,
+      "nascer_sol": "06:14",
+      "por_sol": "18:56"
+    },
+    {
+      "data": "2026-11-04",
+      "min": 25.3,
+      "max": 35.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 9.1,
+      "nascer_sol": "06:13",
+      "por_sol": "18:56"
+    },
+    {
+      "data": "2026-11-05",
+      "min": 25.0,
+      "max": 34.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 5.6,
+      "uv": 9.1,
+      "nascer_sol": "06:13",
+      "por_sol": "18:57"
+    },
+    {
+      "data": "2026-11-06",
+      "min": 25.0,
+      "max": 35.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 9.4,
+      "nascer_sol": "06:13",
+      "por_sol": "18:57"
+    },
+    {
+      "data": "2026-11-07",
+      "min": 24.7,
+      "max": 34.7,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 6.5,
+      "uv": 9.6,
+      "nascer_sol": "06:12",
+      "por_sol": "18:57"
+    },
+    {
+      "data": "2026-11-08",
+      "min": 21.3,
+      "max": 25.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.3,
+      "uv": 6.3,
+      "nascer_sol": "06:12",
+      "por_sol": "18:58"
+    }
+  ],
   "reservatorio": {
     "nome": "Jauru",
     "nivel_pct": 0.0,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-11-02T16:21:44.940978+00:00"
   },
   "uv": {
-    "indice": 7.0,
-    "categoria": "Alto",
+    "indice": 8.9,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 52,
-    "categoria": "Moderada",
+    "indice": 32,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 3.8,
-    "pm10": 3.8,
-    "no2": 1.7,
-    "o3": 55.0,
+    "pm25": 8.4,
+    "pm10": 8.8,
+    "no2": 0.5,
+    "o3": 69.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-29T14:55:29.158409+00:00"
+    "atualizado_em": "2026-11-02T17:45:48.233747+00:00"
   },
   "sol": {
-    "nascer": "06:16",
-    "por": "18:54",
-    "duracao_h": 12.6,
+    "nascer": "06:14",
+    "por": "18:55",
+    "duracao_h": 12.7,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 60.0,
-    "fase_pct": 60.2,
-    "dias_proxima_cheia": 3,
+    "nome": "Gibosa Minguante",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 73.7,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 27.0,
+  "temperatura_atual": 35.1,
   "vento": {
-    "velocidade_kmh": 4.1,
-    "direcao_graus": 131,
-    "direcao": "SE",
-    "max_kmh": 11.7,
-    "rajada_kmh": 24.5,
-    "direcao_dominante": "S",
+    "velocidade_kmh": 7.4,
+    "direcao_graus": 334,
+    "direcao": "NNO",
+    "max_kmh": 10.8,
+    "rajada_kmh": 25.9,
+    "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 74,
-  "pressao_hpa": 1015,
-  "ponto_orvalho_c": 21.9,
+  "umidade_pct": 48,
+  "pressao_hpa": 1008,
+  "ponto_orvalho_c": 22.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-23T13:24:52.652923+00:00"
   },
-  "_clima_em": "2026-10-29T14:55:29.158409+00:00",
+  "_clima_em": "2026-11-02T17:45:48.233747+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 551,

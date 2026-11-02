@@ -4,8 +4,86 @@
   "slug": "itapejara-d-oeste",
   "latitude": -25.9862,
   "longitude": -52.8239,
-  "atualizado_em": "2026-10-31T11:02:59.427918+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-02T17:45:48.233747+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-02",
+      "min": 19.3,
+      "max": 28.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 6.3,
+      "uv": 6.2,
+      "nascer_sol": "05:41",
+      "por_sol": "18:48"
+    },
+    {
+      "data": "2026-11-03",
+      "min": 18.2,
+      "max": 27.9,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 4.7,
+      "uv": 8.8,
+      "nascer_sol": "05:40",
+      "por_sol": "18:49"
+    },
+    {
+      "data": "2026-11-04",
+      "min": 20.7,
+      "max": 29.0,
+      "condicao": "Tempestade com granizo leve",
+      "condicao_codigo": 96,
+      "chuva_mm": 11.3,
+      "uv": 8.2,
+      "nascer_sol": "05:40",
+      "por_sol": "18:50"
+    },
+    {
+      "data": "2026-11-05",
+      "min": 17.7,
+      "max": 29.1,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 29.5,
+      "uv": 9.3,
+      "nascer_sol": "05:39",
+      "por_sol": "18:50"
+    },
+    {
+      "data": "2026-11-06",
+      "min": 14.7,
+      "max": 30.3,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 8.5,
+      "uv": 9.4,
+      "nascer_sol": "05:38",
+      "por_sol": "18:51"
+    },
+    {
+      "data": "2026-11-07",
+      "min": 13.7,
+      "max": 23.3,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 33.5,
+      "uv": 2.5,
+      "nascer_sol": "05:38",
+      "por_sol": "18:52"
+    },
+    {
+      "data": "2026-11-08",
+      "min": 9.9,
+      "max": 20.0,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.6,
+      "nascer_sol": "05:37",
+      "por_sol": "18:52"
+    }
+  ],
   "reservatorio": {
     "nome": "Salto Santiago",
     "nivel_pct": 74.1,
@@ -25,38 +103,38 @@
     "atualizado_em": "2026-11-02T16:21:44.940978+00:00"
   },
   "uv": {
-    "indice": 2.9,
-    "categoria": "Baixo",
+    "indice": 6.2,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 102,
-    "categoria": "Ruim para grupos sensíveis",
+    "indice": 35,
+    "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 20.2,
-    "pm10": 21.4,
-    "no2": 2.8,
-    "o3": 93.0,
+    "pm25": 4.9,
+    "pm10": 5.2,
+    "no2": 1.5,
+    "o3": 81.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-10-29T14:55:29.158409+00:00"
+    "atualizado_em": "2026-11-02T17:45:48.233747+00:00"
   },
   "sol": {
-    "nascer": "05:44",
-    "por": "18:46",
-    "duracao_h": 13.0,
+    "nascer": "05:41",
+    "por": "18:48",
+    "duracao_h": 13.1,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Cheia",
-    "iluminacao_pct": 60.0,
-    "fase_pct": 60.2,
-    "dias_proxima_cheia": 3,
+    "nome": "Gibosa Minguante",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 73.7,
+    "dias_proxima_cheia": 7,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 21.7,
+  "temperatura_atual": 26.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -83,19 +161,19 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-28T15:11:09.496832+00:00"
   },
-  "_clima_em": "2026-10-29T14:55:29.158409+00:00",
+  "_clima_em": "2026-11-02T17:45:48.233747+00:00",
   "vento": {
-    "velocidade_kmh": 7.9,
-    "direcao_graus": 336,
-    "direcao": "NNO",
-    "max_kmh": 10.0,
-    "rajada_kmh": 21.6,
-    "direcao_dominante": "NO",
+    "velocidade_kmh": 8.3,
+    "direcao_graus": 283,
+    "direcao": "ONO",
+    "max_kmh": 18.0,
+    "rajada_kmh": 42.5,
+    "direcao_dominante": "N",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 76,
-  "pressao_hpa": 1016,
-  "ponto_orvalho_c": 17.3,
+  "umidade_pct": 69,
+  "pressao_hpa": 1011,
+  "ponto_orvalho_c": 20.6,
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 1793,
