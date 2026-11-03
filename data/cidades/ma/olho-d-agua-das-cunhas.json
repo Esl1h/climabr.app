@@ -4,58 +4,136 @@
   "slug": "olho-d-agua-das-cunhas",
   "latitude": -4.0946,
   "longitude": -45.1203,
-  "atualizado_em": "2026-11-03T12:39:19.857910+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-03T15:46:57.162213+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-03",
+      "min": 26.3,
+      "max": 36.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 7.9,
+      "nascer_sol": "05:36",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-11-04",
+      "min": 25.3,
+      "max": 36.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.1,
+      "nascer_sol": "05:36",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-11-05",
+      "min": 25.5,
+      "max": 37.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 9.2,
+      "nascer_sol": "05:36",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-11-06",
+      "min": 25.5,
+      "max": 38.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.2,
+      "nascer_sol": "05:36",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-11-07",
+      "min": 25.7,
+      "max": 37.9,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 9.2,
+      "nascer_sol": "05:36",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-11-08",
+      "min": 26.0,
+      "max": 37.8,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 8.5,
+      "nascer_sol": "05:35",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-11-09",
+      "min": 23.7,
+      "max": 36.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 5.4,
+      "uv": 8.5,
+      "nascer_sol": "05:35",
+      "por_sol": "17:53"
+    }
+  ],
   "queimadas": {
     "focos_100km": 38,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-11-03T14:29:42.385852+00:00"
   },
   "uv": {
-    "indice": 9.2,
-    "categoria": "Muito Alto",
+    "indice": 7.9,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 51,
+    "indice": 54,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 7.9,
-    "pm10": 10.6,
+    "pm25": 9.1,
+    "pm10": 11.2,
     "no2": 0.5,
-    "o3": 70.0,
+    "o3": 79.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-01T14:42:24.971438+00:00"
+    "atualizado_em": "2026-11-03T15:46:57.162213+00:00"
   },
   "sol": {
     "nascer": "05:36",
-    "por": "17:51",
+    "por": "17:52",
     "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 96.0,
-    "fase_pct": 70.4,
-    "dias_proxima_cheia": 6,
+    "nome": "Quarto Minguante",
+    "iluminacao_pct": 99.0,
+    "fase_pct": 77.1,
+    "dias_proxima_cheia": 8,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 35.0,
+  "temperatura_atual": 36.2,
   "vento": {
-    "velocidade_kmh": 9.0,
-    "direcao_graus": 60,
-    "direcao": "ENE",
-    "max_kmh": 21.4,
-    "rajada_kmh": 37.8,
+    "velocidade_kmh": 13.1,
+    "direcao_graus": 89,
+    "direcao": "E",
+    "max_kmh": 20.9,
+    "rajada_kmh": 39.2,
     "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 45,
-  "pressao_hpa": 1011,
-  "ponto_orvalho_c": 21.1,
+  "umidade_pct": 40,
+  "pressao_hpa": 1010,
+  "ponto_orvalho_c": 20.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-23T13:24:52.652923+00:00"
   },
-  "_clima_em": "2026-11-01T14:42:24.971438+00:00",
+  "_clima_em": "2026-11-03T15:46:57.162213+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 896,

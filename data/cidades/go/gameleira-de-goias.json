@@ -4,8 +4,86 @@
   "slug": "gameleira-de-goias",
   "latitude": -16.4034,
   "longitude": -48.6738,
-  "atualizado_em": "2026-11-03T12:36:25.200083+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-03T15:46:57.162213+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-03",
+      "min": 19.4,
+      "max": 29.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 9.2,
+      "nascer_sol": "05:36",
+      "por_sol": "18:20"
+    },
+    {
+      "data": "2026-11-04",
+      "min": 19.5,
+      "max": 30.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.6,
+      "uv": 9.7,
+      "nascer_sol": "05:35",
+      "por_sol": "18:20"
+    },
+    {
+      "data": "2026-11-05",
+      "min": 20.1,
+      "max": 30.7,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 5.7,
+      "uv": 7.5,
+      "nascer_sol": "05:35",
+      "por_sol": "18:21"
+    },
+    {
+      "data": "2026-11-06",
+      "min": 19.4,
+      "max": 31.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.2,
+      "uv": 8.8,
+      "nascer_sol": "05:35",
+      "por_sol": "18:21"
+    },
+    {
+      "data": "2026-11-07",
+      "min": 19.9,
+      "max": 31.9,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 17.2,
+      "uv": 9.3,
+      "nascer_sol": "05:34",
+      "por_sol": "18:21"
+    },
+    {
+      "data": "2026-11-08",
+      "min": 19.7,
+      "max": 29.8,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 5.9,
+      "uv": 4.7,
+      "nascer_sol": "05:34",
+      "por_sol": "18:22"
+    },
+    {
+      "data": "2026-11-09",
+      "min": 17.4,
+      "max": 28.3,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.6,
+      "uv": 7.8,
+      "nascer_sol": "05:34",
+      "por_sol": "18:22"
+    }
+  ],
   "reservatorio": {
     "nome": "Corumba-4",
     "nivel_pct": 49.0,
@@ -25,49 +103,49 @@
     "atualizado_em": "2026-11-03T14:29:42.385852+00:00"
   },
   "uv": {
-    "indice": 9.3,
+    "indice": 9.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 26,
+    "indice": 35,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 2.3,
+    "pm25": 2.2,
     "pm10": 2.3,
-    "no2": 0.9,
-    "o3": 87.0,
+    "no2": 0.5,
+    "o3": 99.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-01T14:42:24.971438+00:00"
+    "atualizado_em": "2026-11-03T15:46:57.162213+00:00"
   },
   "sol": {
-    "nascer": "05:37",
-    "por": "18:19",
+    "nascer": "05:36",
+    "por": "18:20",
     "duracao_h": 12.7,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 96.0,
-    "fase_pct": 70.4,
-    "dias_proxima_cheia": 6,
+    "nome": "Quarto Minguante",
+    "iluminacao_pct": 99.0,
+    "fase_pct": 77.1,
+    "dias_proxima_cheia": 8,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 27.0,
+  "temperatura_atual": 28.7,
   "vento": {
-    "velocidade_kmh": 10.2,
-    "direcao_graus": 66,
-    "direcao": "ENE",
-    "max_kmh": 11.1,
-    "rajada_kmh": 25.2,
-    "direcao_dominante": "NE",
+    "velocidade_kmh": 11.2,
+    "direcao_graus": 3,
+    "direcao": "N",
+    "max_kmh": 15.0,
+    "rajada_kmh": 31.0,
+    "direcao_dominante": "NNE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 62,
-  "pressao_hpa": 1016,
+  "umidade_pct": 56,
+  "pressao_hpa": 1014,
   "ponto_orvalho_c": 19.2,
   "dengue": {
     "nivel_alerta": 1,
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-22T13:46:08.234426+00:00"
   },
-  "_clima_em": "2026-11-01T14:42:24.971438+00:00",
+  "_clima_em": "2026-11-03T15:46:57.162213+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 1517,
