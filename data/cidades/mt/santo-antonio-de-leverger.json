@@ -4,8 +4,86 @@
   "slug": "santo-antonio-de-leverger",
   "latitude": -16.5358,
   "longitude": -55.4471,
-  "atualizado_em": "2026-11-05T13:01:44.612936+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-05T16:04:18.060456+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-05",
+      "min": 25.4,
+      "max": 37.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.9,
+      "nascer_sol": "06:02",
+      "por_sol": "18:48"
+    },
+    {
+      "data": "2026-11-06",
+      "min": 25.9,
+      "max": 38.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "06:02",
+      "por_sol": "18:48"
+    },
+    {
+      "data": "2026-11-07",
+      "min": 25.2,
+      "max": 39.4,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 6.5,
+      "uv": 9.2,
+      "nascer_sol": "06:01",
+      "por_sol": "18:49"
+    },
+    {
+      "data": "2026-11-08",
+      "min": 24.1,
+      "max": 32.9,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 18.3,
+      "uv": 7.5,
+      "nascer_sol": "06:01",
+      "por_sol": "18:49"
+    },
+    {
+      "data": "2026-11-09",
+      "min": 23.0,
+      "max": 31.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 7.5,
+      "uv": 8.2,
+      "nascer_sol": "06:01",
+      "por_sol": "18:50"
+    },
+    {
+      "data": "2026-11-10",
+      "min": 23.7,
+      "max": 34.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.1,
+      "uv": 8.3,
+      "nascer_sol": "06:00",
+      "por_sol": "18:50"
+    },
+    {
+      "data": "2026-11-11",
+      "min": 23.6,
+      "max": 34.5,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 9.9,
+      "uv": 7.0,
+      "nascer_sol": "06:00",
+      "por_sol": "18:51"
+    }
+  ],
   "reservatorio": {
     "nome": "Itiquira I",
     "nivel_pct": 131.1,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-11-05T14:49:21.857640+00:00"
   },
   "uv": {
-    "indice": 9.0,
+    "indice": 8.9,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 33,
+    "indice": 49,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 3.0,
-    "pm10": 3.4,
+    "pm25": 9.0,
+    "pm10": 9.6,
     "no2": 0.4,
-    "o3": 89.0,
+    "o3": 75.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-02T17:45:48.233747+00:00"
+    "atualizado_em": "2026-11-05T16:04:18.060456+00:00"
   },
   "sol": {
-    "nascer": "06:03",
-    "por": "18:47",
-    "duracao_h": 12.7,
+    "nascer": "06:02",
+    "por": "18:48",
+    "duracao_h": 12.8,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Minguante",
-    "iluminacao_pct": 100.0,
-    "fase_pct": 73.7,
-    "dias_proxima_cheia": 7,
+    "nome": "Quarto Minguante",
+    "iluminacao_pct": 85.0,
+    "fase_pct": 83.9,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 37.9,
+  "temperatura_atual": 36.9,
   "vento": {
-    "velocidade_kmh": 10.8,
-    "direcao_graus": 323,
+    "velocidade_kmh": 15.3,
+    "direcao_graus": 319,
     "direcao": "NO",
-    "max_kmh": 15.0,
-    "rajada_kmh": 28.1,
+    "max_kmh": 17.4,
+    "rajada_kmh": 37.4,
     "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 36,
-  "pressao_hpa": 1007,
-  "ponto_orvalho_c": 20.2,
+  "umidade_pct": 39,
+  "pressao_hpa": 1009,
+  "ponto_orvalho_c": 20.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-23T13:24:52.652923+00:00"
   },
-  "_clima_em": "2026-11-02T17:45:48.233747+00:00"
+  "_clima_em": "2026-11-05T16:04:18.060456+00:00"
 }

@@ -4,58 +4,136 @@
   "slug": "lago-dos-rodrigues",
   "latitude": -4.5886,
   "longitude": -44.9309,
-  "atualizado_em": "2026-11-05T12:59:47.663051+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-05T16:04:18.060456+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-05",
+      "min": 25.5,
+      "max": 36.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 9.2,
+      "nascer_sol": "05:34",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-11-06",
+      "min": 25.1,
+      "max": 37.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 9.2,
+      "nascer_sol": "05:34",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-11-07",
+      "min": 25.2,
+      "max": 37.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 9.2,
+      "nascer_sol": "05:34",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-11-08",
+      "min": 26.2,
+      "max": 37.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "05:34",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-11-09",
+      "min": 25.5,
+      "max": 37.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.8,
+      "uv": 9.1,
+      "nascer_sol": "05:34",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-11-10",
+      "min": 23.6,
+      "max": 32.9,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 10.1,
+      "uv": 6.5,
+      "nascer_sol": "05:34",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-11-11",
+      "min": 23.8,
+      "max": 33.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.1,
+      "uv": 9.1,
+      "nascer_sol": "05:34",
+      "por_sol": "17:53"
+    }
+  ],
   "queimadas": {
     "focos_100km": 148,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-11-05T14:49:21.857640+00:00"
   },
   "uv": {
-    "indice": 8.2,
+    "indice": 9.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 54,
+    "indice": 55,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 8.3,
-    "pm10": 10.3,
-    "no2": 0.5,
-    "o3": 81.0,
+    "pm25": 20.5,
+    "pm10": 22.9,
+    "no2": 1.7,
+    "o3": 110.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-03T15:46:57.162213+00:00"
+    "atualizado_em": "2026-11-05T16:04:18.060456+00:00"
   },
   "sol": {
-    "nascer": "05:35",
-    "por": "17:51",
+    "nascer": "05:34",
+    "por": "17:52",
     "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Quarto Minguante",
-    "iluminacao_pct": 99.0,
-    "fase_pct": 77.1,
-    "dias_proxima_cheia": 8,
+    "iluminacao_pct": 85.0,
+    "fase_pct": 83.9,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 35.1,
+  "temperatura_atual": 36.0,
   "vento": {
-    "velocidade_kmh": 8.5,
-    "direcao_graus": 111,
-    "direcao": "ESE",
-    "max_kmh": 16.4,
+    "velocidade_kmh": 9.2,
+    "direcao_graus": 59,
+    "direcao": "ENE",
+    "max_kmh": 20.3,
     "rajada_kmh": 34.2,
-    "direcao_dominante": "NE",
+    "direcao_dominante": "NNE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 46,
-  "pressao_hpa": 1010,
-  "ponto_orvalho_c": 21.6,
+  "umidade_pct": 41,
+  "pressao_hpa": 1009,
+  "ponto_orvalho_c": 20.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-23T13:24:52.652923+00:00"
   },
-  "_clima_em": "2026-11-03T15:46:57.162213+00:00"
+  "_clima_em": "2026-11-05T16:04:18.060456+00:00"
 }
