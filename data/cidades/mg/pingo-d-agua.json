@@ -4,8 +4,86 @@
   "slug": "pingo-d-agua",
   "latitude": -19.7434,
   "longitude": -42.4218,
-  "atualizado_em": "2026-11-06T12:54:59.236553+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-06T15:38:13.893218+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-06",
+      "min": 20.7,
+      "max": 32.4,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 0.8,
+      "uv": 9.2,
+      "nascer_sol": "05:05",
+      "por_sol": "18:00"
+    },
+    {
+      "data": "2026-11-07",
+      "min": 21.4,
+      "max": 33.3,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 11.6,
+      "uv": 9.4,
+      "nascer_sol": "05:05",
+      "por_sol": "18:01"
+    },
+    {
+      "data": "2026-11-08",
+      "min": 19.2,
+      "max": 32.5,
+      "condicao": "Tempestade com granizo leve",
+      "condicao_codigo": 96,
+      "chuva_mm": 35.3,
+      "uv": 9.6,
+      "nascer_sol": "05:05",
+      "por_sol": "18:01"
+    },
+    {
+      "data": "2026-11-09",
+      "min": 17.9,
+      "max": 22.2,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 10.4,
+      "uv": 0.7,
+      "nascer_sol": "05:04",
+      "por_sol": "18:02"
+    },
+    {
+      "data": "2026-11-10",
+      "min": 17.2,
+      "max": 22.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 3.8,
+      "uv": 1.4,
+      "nascer_sol": "05:04",
+      "por_sol": "18:03"
+    },
+    {
+      "data": "2026-11-11",
+      "min": 18.3,
+      "max": 25.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.7,
+      "uv": 6.8,
+      "nascer_sol": "05:04",
+      "por_sol": "18:03"
+    },
+    {
+      "data": "2026-11-12",
+      "min": 18.1,
+      "max": 25.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.8,
+      "uv": 8.7,
+      "nascer_sol": "05:03",
+      "por_sol": "18:04"
+    }
+  ],
   "reservatorio": {
     "nome": "Sa Carvalho",
     "nivel_pct": 75.7,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-11-06T14:27:28.066354+00:00"
   },
   "uv": {
-    "indice": 9.5,
+    "indice": 9.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 26,
+    "indice": 44,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 7.0,
-    "pm10": 9.3,
-    "no2": 1.4,
-    "o3": 75.0,
+    "pm25": 8.2,
+    "pm10": 8.4,
+    "no2": 1.9,
+    "o3": 134.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-03T15:46:57.162213+00:00"
+    "atualizado_em": "2026-11-06T15:38:13.893218+00:00"
   },
   "sol": {
-    "nascer": "05:07",
-    "por": "17:59",
+    "nascer": "05:05",
+    "por": "18:00",
     "duracao_h": 12.9,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Quarto Minguante",
-    "iluminacao_pct": 99.0,
-    "fase_pct": 77.1,
-    "dias_proxima_cheia": 8,
+    "iluminacao_pct": 72.0,
+    "fase_pct": 87.3,
+    "dias_proxima_cheia": 11,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 31.4,
+  "temperatura_atual": 30.6,
   "vento": {
-    "velocidade_kmh": 7.5,
-    "direcao_graus": 15,
-    "direcao": "NNE",
-    "max_kmh": 13.7,
-    "rajada_kmh": 38.9,
-    "direcao_dominante": "NNE",
+    "velocidade_kmh": 4.6,
+    "direcao_graus": 315,
+    "direcao": "NO",
+    "max_kmh": 11.7,
+    "rajada_kmh": 23.4,
+    "direcao_dominante": "ESE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 53,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 20.6,
+  "umidade_pct": 54,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 20.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-27T14:17:02.423556+00:00"
   },
-  "_clima_em": "2026-11-03T15:46:57.162213+00:00"
+  "_clima_em": "2026-11-06T15:38:13.893218+00:00"
 }
