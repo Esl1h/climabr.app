@@ -4,8 +4,86 @@
   "slug": "santa-rita-do-trivelato",
   "latitude": -13.833,
   "longitude": -55.2941,
-  "atualizado_em": "2026-11-08T11:49:25.790118+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-08T14:44:13.856246+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-08",
+      "min": 23.2,
+      "max": 33.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.2,
+      "uv": 9.2,
+      "nascer_sol": "06:04",
+      "por_sol": "18:45"
+    },
+    {
+      "data": "2026-11-09",
+      "min": 22.7,
+      "max": 31.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 5.3,
+      "uv": 3.6,
+      "nascer_sol": "06:04",
+      "por_sol": "18:45"
+    },
+    {
+      "data": "2026-11-10",
+      "min": 21.9,
+      "max": 30.0,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 2.7,
+      "uv": 9.2,
+      "nascer_sol": "06:03",
+      "por_sol": "18:46"
+    },
+    {
+      "data": "2026-11-11",
+      "min": 21.6,
+      "max": 29.5,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 17.7,
+      "uv": 9.3,
+      "nascer_sol": "06:03",
+      "por_sol": "18:46"
+    },
+    {
+      "data": "2026-11-12",
+      "min": 21.6,
+      "max": 30.4,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 10.9,
+      "uv": 9.3,
+      "nascer_sol": "06:03",
+      "por_sol": "18:47"
+    },
+    {
+      "data": "2026-11-13",
+      "min": 21.6,
+      "max": 28.7,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 20.2,
+      "uv": 7.5,
+      "nascer_sol": "06:03",
+      "por_sol": "18:47"
+    },
+    {
+      "data": "2026-11-14",
+      "min": 22.0,
+      "max": 30.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 4.6,
+      "uv": 8.0,
+      "nascer_sol": "06:03",
+      "por_sol": "18:47"
+    }
+  ],
   "reservatorio": {
     "nome": "Manso",
     "nivel_pct": 68.7,
@@ -25,62 +103,62 @@
     "atualizado_em": "2026-11-08T13:41:32.925938+00:00"
   },
   "uv": {
-    "indice": 9.7,
+    "indice": 9.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 52,
+    "indice": 51,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
     "pm25": 10.0,
-    "pm10": 10.8,
-    "no2": 0.2,
-    "o3": 79.0,
+    "pm10": 10.7,
+    "no2": 0.4,
+    "o3": 69.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-05T16:04:18.060456+00:00"
+    "atualizado_em": "2026-11-08T14:44:13.856246+00:00"
   },
   "sol": {
-    "nascer": "06:05",
-    "por": "18:44",
+    "nascer": "06:04",
+    "por": "18:45",
     "duracao_h": 12.7,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 85.0,
-    "fase_pct": 83.9,
-    "dias_proxima_cheia": 10,
+    "nome": "Minguante",
+    "iluminacao_pct": 36.0,
+    "fase_pct": 94.1,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 34.3,
+  "temperatura_atual": 31.2,
   "vento": {
-    "velocidade_kmh": 7.3,
-    "direcao_graus": 353,
-    "direcao": "N",
-    "max_kmh": 11.0,
-    "rajada_kmh": 26.3,
-    "direcao_dominante": "NNO",
+    "velocidade_kmh": 12.5,
+    "direcao_graus": 198,
+    "direcao": "SSO",
+    "max_kmh": 20.8,
+    "rajada_kmh": 41.4,
+    "direcao_dominante": "SO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 41,
-  "pressao_hpa": 1010,
-  "ponto_orvalho_c": 19.1,
+  "umidade_pct": 53,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 20.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
     "nivel_incidencia": 0,
     "nivel_incidencia_label": "Baixa",
-    "casos_semana": 0,
-    "casos_estimados": 0,
-    "incidencia_100k": 0.0,
+    "casos_semana": 1,
+    "casos_estimados": 1,
+    "incidencia_100k": 29.7,
     "populacao": 3371,
-    "semana_epidemiologica": 202640,
+    "semana_epidemiologica": 202643,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-10-23T13:24:52.652923+00:00"
+    "atualizado_em": "2026-11-08T15:05:52.299332+00:00"
   },
   "chikungunya": {
     "nivel_alerta": 1,
@@ -91,11 +169,11 @@
     "casos_estimados": 0,
     "incidencia_100k": 0.0,
     "populacao": 3371,
-    "semana_epidemiologica": 202640,
+    "semana_epidemiologica": 202643,
     "fonte": "InfoDengue / Fiocruz / SVS",
-    "atualizado_em": "2026-10-23T13:24:52.652923+00:00"
+    "atualizado_em": "2026-11-08T15:05:52.299332+00:00"
   },
-  "_clima_em": "2026-11-05T16:04:18.060456+00:00",
+  "_clima_em": "2026-11-08T14:44:13.856246+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 204,

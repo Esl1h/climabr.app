@@ -4,8 +4,86 @@
   "slug": "brazopolis",
   "latitude": -22.4912,
   "longitude": -45.6279,
-  "atualizado_em": "2026-11-08T11:51:23.205597+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-08T14:44:13.856246+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-08",
+      "min": 15.3,
+      "max": 21.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.8,
+      "uv": 3.1,
+      "nascer_sol": "05:14",
+      "por_sol": "18:18"
+    },
+    {
+      "data": "2026-11-09",
+      "min": 14.6,
+      "max": 19.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.6,
+      "uv": 1.7,
+      "nascer_sol": "05:13",
+      "por_sol": "18:19"
+    },
+    {
+      "data": "2026-11-10",
+      "min": 13.1,
+      "max": 21.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 5.5,
+      "nascer_sol": "05:13",
+      "por_sol": "18:19"
+    },
+    {
+      "data": "2026-11-11",
+      "min": 14.6,
+      "max": 23.7,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.0,
+      "uv": 4.8,
+      "nascer_sol": "05:12",
+      "por_sol": "18:20"
+    },
+    {
+      "data": "2026-11-12",
+      "min": 16.9,
+      "max": 25.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 5.2,
+      "uv": 5.2,
+      "nascer_sol": "05:12",
+      "por_sol": "18:21"
+    },
+    {
+      "data": "2026-11-13",
+      "min": 13.8,
+      "max": 25.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.5,
+      "uv": 7.4,
+      "nascer_sol": "05:11",
+      "por_sol": "18:21"
+    },
+    {
+      "data": "2026-11-14",
+      "min": 12.1,
+      "max": 26.8,
+      "condicao": "Névoa",
+      "condicao_codigo": 45,
+      "chuva_mm": 0,
+      "uv": 9.5,
+      "nascer_sol": "05:11",
+      "por_sol": "18:22"
+    }
+  ],
   "reservatorio": {
     "nome": "Jaguari",
     "nivel_pct": 77.7,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-11-08T13:41:32.925938+00:00"
   },
   "uv": {
-    "indice": 6.8,
-    "categoria": "Alto",
+    "indice": 3.1,
+    "categoria": "Moderado",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 62,
+    "indice": 58,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 6.4,
-    "pm10": 6.5,
-    "no2": 1.0,
-    "o3": 110.0,
+    "pm25": 5.0,
+    "pm10": 5.1,
+    "no2": 1.9,
+    "o3": 79.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-05T16:04:18.060456+00:00"
+    "atualizado_em": "2026-11-08T14:44:13.856246+00:00"
   },
   "sol": {
-    "nascer": "05:15",
-    "por": "18:16",
-    "duracao_h": 13.0,
+    "nascer": "05:14",
+    "por": "18:18",
+    "duracao_h": 13.1,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Minguante",
-    "iluminacao_pct": 85.0,
-    "fase_pct": 83.9,
-    "dias_proxima_cheia": 10,
+    "nome": "Minguante",
+    "iluminacao_pct": 36.0,
+    "fase_pct": 94.1,
+    "dias_proxima_cheia": 13,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 23.3,
+  "temperatura_atual": 21.3,
   "vento": {
-    "velocidade_kmh": 4.5,
-    "direcao_graus": 346,
-    "direcao": "NNO",
-    "max_kmh": 15.2,
-    "rajada_kmh": 34.9,
-    "direcao_dominante": "SO",
+    "velocidade_kmh": 13.5,
+    "direcao_graus": 196,
+    "direcao": "SSO",
+    "max_kmh": 15.5,
+    "rajada_kmh": 33.1,
+    "direcao_dominante": "S",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 89,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 21.4,
+  "umidade_pct": 67,
+  "pressao_hpa": 1016,
+  "ponto_orvalho_c": 15.0,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-26T15:11:14.299530+00:00"
   },
-  "_clima_em": "2026-11-05T16:04:18.060456+00:00"
+  "_clima_em": "2026-11-08T14:44:13.856246+00:00"
 }
