@@ -4,46 +4,124 @@
   "slug": "altonia",
   "latitude": -23.9026,
   "longitude": -53.9488,
-  "atualizado_em": "2026-11-12T13:45:32.120448+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-13T15:53:39.418362+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-13",
+      "min": 21.6,
+      "max": 32.7,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.3,
+      "nascer_sol": "05:43",
+      "por_sol": "18:57"
+    },
+    {
+      "data": "2026-11-14",
+      "min": 22.0,
+      "max": 32.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 2.3,
+      "uv": 8.4,
+      "nascer_sol": "05:42",
+      "por_sol": "18:58"
+    },
+    {
+      "data": "2026-11-15",
+      "min": 21.5,
+      "max": 30.6,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 5.7,
+      "uv": 8.8,
+      "nascer_sol": "05:42",
+      "por_sol": "18:58"
+    },
+    {
+      "data": "2026-11-16",
+      "min": 21.6,
+      "max": 30.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 8.0,
+      "nascer_sol": "05:41",
+      "por_sol": "18:59"
+    },
+    {
+      "data": "2026-11-17",
+      "min": 21.8,
+      "max": 30.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.1,
+      "uv": 8.3,
+      "nascer_sol": "05:41",
+      "por_sol": "19:00"
+    },
+    {
+      "data": "2026-11-18",
+      "min": 22.4,
+      "max": 31.1,
+      "condicao": "Tempestade com granizo leve",
+      "condicao_codigo": 96,
+      "chuva_mm": 9.0,
+      "uv": 8.6,
+      "nascer_sol": "05:41",
+      "por_sol": "19:00"
+    },
+    {
+      "data": "2026-11-19",
+      "min": 21.8,
+      "max": 32.5,
+      "condicao": "Névoa",
+      "condicao_codigo": 45,
+      "chuva_mm": 0,
+      "uv": 4.7,
+      "nascer_sol": "05:41",
+      "por_sol": "19:01"
+    }
+  ],
   "queimadas": {
     "focos_100km": 5,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-11-13T14:45:10.469142+00:00"
   },
   "uv": {
-    "indice": 9.4,
+    "indice": 9.3,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 47,
-    "categoria": "Boa",
+    "indice": 64,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 5.8,
-    "pm10": 7.7,
-    "no2": 0.6,
-    "o3": 69.0,
+    "pm25": 6.2,
+    "pm10": 6.4,
+    "no2": 0.7,
+    "o3": 123.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-08T14:44:13.856246+00:00"
+    "atualizado_em": "2026-11-13T15:53:39.418362+00:00"
   },
   "sol": {
-    "nascer": "05:45",
-    "por": "18:54",
-    "duracao_h": 13.1,
+    "nascer": "05:43",
+    "por": "18:57",
+    "duracao_h": 13.2,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Minguante",
-    "iluminacao_pct": 36.0,
-    "fase_pct": 94.1,
-    "dias_proxima_cheia": 13,
+    "nome": "Nova",
+    "iluminacao_pct": 64.0,
+    "fase_pct": 11.0,
+    "dias_proxima_cheia": 12,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 25.2,
+  "temperatura_atual": 32.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -70,17 +148,17 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-10-28T15:11:09.496832+00:00"
   },
-  "_clima_em": "2026-11-08T14:44:13.856246+00:00",
+  "_clima_em": "2026-11-13T15:53:39.418362+00:00",
   "vento": {
-    "velocidade_kmh": 16.6,
-    "direcao_graus": 197,
-    "direcao": "SSO",
-    "max_kmh": 21.2,
-    "rajada_kmh": 41.4,
-    "direcao_dominante": "SSO",
+    "velocidade_kmh": 5.5,
+    "direcao_graus": 281,
+    "direcao": "O",
+    "max_kmh": 11.7,
+    "rajada_kmh": 19.8,
+    "direcao_dominante": "E",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 61,
-  "pressao_hpa": 1018,
-  "ponto_orvalho_c": 17.2
+  "umidade_pct": 48,
+  "pressao_hpa": 1014,
+  "ponto_orvalho_c": 20.1
 }

@@ -4,8 +4,86 @@
   "slug": "paraiso-das-aguas",
   "latitude": -19.2282,
   "longitude": -53.1303,
-  "atualizado_em": "2026-11-13T12:55:10.467355+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-13T15:53:39.418362+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-13",
+      "min": 21.0,
+      "max": 31.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.3,
+      "uv": 9.6,
+      "nascer_sol": "05:47",
+      "por_sol": "18:46"
+    },
+    {
+      "data": "2026-11-14",
+      "min": 21.0,
+      "max": 32.1,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 0.9,
+      "uv": 9.6,
+      "nascer_sol": "05:46",
+      "por_sol": "18:47"
+    },
+    {
+      "data": "2026-11-15",
+      "min": 21.1,
+      "max": 31.2,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 10.4,
+      "uv": 8.0,
+      "nascer_sol": "05:46",
+      "por_sol": "18:48"
+    },
+    {
+      "data": "2026-11-16",
+      "min": 20.5,
+      "max": 27.8,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 13.6,
+      "uv": 7.8,
+      "nascer_sol": "05:46",
+      "por_sol": "18:48"
+    },
+    {
+      "data": "2026-11-17",
+      "min": 19.8,
+      "max": 28.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.9,
+      "uv": 8.0,
+      "nascer_sol": "05:46",
+      "por_sol": "18:49"
+    },
+    {
+      "data": "2026-11-18",
+      "min": 20.4,
+      "max": 27.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.0,
+      "uv": 8.4,
+      "nascer_sol": "05:45",
+      "por_sol": "18:49"
+    },
+    {
+      "data": "2026-11-19",
+      "min": 20.7,
+      "max": 29.8,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 4.5,
+      "uv": 7.5,
+      "nascer_sol": "05:45",
+      "por_sol": "18:50"
+    }
+  ],
   "reservatorio": {
     "nome": "Sao Domingos",
     "nivel_pct": 23.6,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-11-13T14:45:10.469142+00:00"
   },
   "uv": {
-    "indice": 7.9,
-    "categoria": "Alto",
+    "indice": 9.6,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 33,
+    "indice": 30,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 3.5,
-    "pm10": 3.7,
-    "no2": 0.5,
-    "o3": 93.0,
+    "pm25": 2.3,
+    "pm10": 2.3,
+    "no2": 0.3,
+    "o3": 88.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-11T15:49:16.402510+00:00"
+    "atualizado_em": "2026-11-13T15:53:39.418362+00:00"
   },
   "sol": {
     "nascer": "05:47",
-    "por": "18:45",
+    "por": "18:46",
     "duracao_h": 13.0,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Nova",
-    "iluminacao_pct": 26.0,
-    "fase_pct": 4.2,
-    "dias_proxima_cheia": 14,
+    "iluminacao_pct": 64.0,
+    "fase_pct": 11.0,
+    "dias_proxima_cheia": 12,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 30.2,
+  "temperatura_atual": 30.8,
   "vento": {
-    "velocidade_kmh": 12.4,
-    "direcao_graus": 336,
-    "direcao": "NNO",
-    "max_kmh": 17.8,
-    "rajada_kmh": 37.4,
-    "direcao_dominante": "NE",
+    "velocidade_kmh": 8.0,
+    "direcao_graus": 322,
+    "direcao": "NO",
+    "max_kmh": 12.1,
+    "rajada_kmh": 26.3,
+    "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 58,
-  "pressao_hpa": 1017,
-  "ponto_orvalho_c": 21.1,
+  "umidade_pct": 54,
+  "pressao_hpa": 1015,
+  "ponto_orvalho_c": 20.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-11-03T16:08:31.338377+00:00"
   },
-  "_clima_em": "2026-11-11T15:49:16.402510+00:00"
+  "_clima_em": "2026-11-13T15:53:39.418362+00:00"
 }
