@@ -4,8 +4,86 @@
   "slug": "pingo-d-agua",
   "latitude": -19.7434,
   "longitude": -42.4218,
-  "atualizado_em": "2026-11-15T12:38:22.311938+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-15T15:17:00.282080+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-15",
+      "min": 20.8,
+      "max": 31.8,
+      "condicao": "Tempestade com granizo leve",
+      "condicao_codigo": 96,
+      "chuva_mm": 26.8,
+      "uv": 9.6,
+      "nascer_sol": "05:02",
+      "por_sol": "18:05"
+    },
+    {
+      "data": "2026-11-16",
+      "min": 21.0,
+      "max": 27.5,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 17.9,
+      "uv": 6.3,
+      "nascer_sol": "05:02",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-11-17",
+      "min": 20.8,
+      "max": 30.6,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 12.5,
+      "uv": 9.1,
+      "nascer_sol": "05:02",
+      "por_sol": "18:07"
+    },
+    {
+      "data": "2026-11-18",
+      "min": 21.3,
+      "max": 32.0,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 8.9,
+      "uv": 9.1,
+      "nascer_sol": "05:02",
+      "por_sol": "18:07"
+    },
+    {
+      "data": "2026-11-19",
+      "min": 21.8,
+      "max": 31.8,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 5.7,
+      "uv": 8.3,
+      "nascer_sol": "05:02",
+      "por_sol": "18:08"
+    },
+    {
+      "data": "2026-11-20",
+      "min": 21.9,
+      "max": 32.1,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 9.3,
+      "uv": 3.3,
+      "nascer_sol": "05:01",
+      "por_sol": "18:08"
+    },
+    {
+      "data": "2026-11-21",
+      "min": 22.2,
+      "max": 32.7,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.2,
+      "uv": 7.7,
+      "nascer_sol": "05:01",
+      "por_sol": "18:09"
+    }
+  ],
   "reservatorio": {
     "nome": "Sa Carvalho",
     "nivel_pct": 89.3,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-11-15T14:09:21.204899+00:00"
   },
   "uv": {
-    "indice": 9.1,
+    "indice": 9.6,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 25,
+    "indice": 33,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 3.8,
-    "pm10": 4.0,
-    "no2": 1.8,
-    "o3": 81.0,
+    "pm25": 3.7,
+    "pm10": 3.8,
+    "no2": 1.4,
+    "o3": 100.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-13T15:53:39.418362+00:00"
+    "atualizado_em": "2026-11-15T15:17:00.282080+00:00"
   },
   "sol": {
-    "nascer": "05:03",
-    "por": "18:04",
+    "nascer": "05:02",
+    "por": "18:05",
     "duracao_h": 13.0,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Nova",
-    "iluminacao_pct": 64.0,
-    "fase_pct": 11.0,
-    "dias_proxima_cheia": 12,
+    "nome": "Crescente",
+    "iluminacao_pct": 90.0,
+    "fase_pct": 17.8,
+    "dias_proxima_cheia": 10,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 30.2,
+  "temperatura_atual": 30.3,
   "vento": {
-    "velocidade_kmh": 1.9,
-    "direcao_graus": 343,
-    "direcao": "NNO",
-    "max_kmh": 16.4,
-    "rajada_kmh": 31.7,
-    "direcao_dominante": "NNO",
+    "velocidade_kmh": 8.7,
+    "direcao_graus": 4,
+    "direcao": "N",
+    "max_kmh": 9.7,
+    "rajada_kmh": 27.4,
+    "direcao_dominante": "N",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 54,
-  "pressao_hpa": 1015,
-  "ponto_orvalho_c": 19.8,
+  "umidade_pct": 56,
+  "pressao_hpa": 1010,
+  "ponto_orvalho_c": 20.5,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-11-11T16:10:50.728727+00:00"
   },
-  "_clima_em": "2026-11-13T15:53:39.418362+00:00"
+  "_clima_em": "2026-11-15T15:17:00.282080+00:00"
 }
