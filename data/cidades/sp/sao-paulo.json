@@ -4,7 +4,7 @@
   "slug": "sao-paulo",
   "latitude": -23.6501,
   "longitude": -46.6481,
-  "atualizado_em": "2026-11-15T15:52:56.904727+00:00",
+  "atualizado_em": "2026-11-16T00:24:00.891837+00:00",
   "previsao": [
     {
       "data": "2026-11-13",
@@ -173,14 +173,81 @@
   "ponto_orvalho_c": 17.5,
   "alagamentos": {
     "data": "2026-11-15",
-    "pontos_total": 0,
-    "ativos": 0,
-    "ativos_intransitaveis": 0,
-    "intransitaveis_total": 0,
-    "pontos": [],
+    "pontos_total": 6,
+    "ativos": 1,
+    "ativos_intransitaveis": 1,
+    "intransitaveis_total": 1,
+    "pontos": [
+      {
+        "zona": "Zona Norte",
+        "subprefeitura": "Casa Verde",
+        "local": "MARGINAL TIETE ASCB EXPRESSA",
+        "referencia": "PTE DA CASA VERDE-JORN.WALTER ABRAHAO",
+        "sentido": "A SENNA/CASTELO B",
+        "inicio": "19:15",
+        "fim": "20:17",
+        "ativo": false,
+        "transitavel": true
+      },
+      {
+        "zona": "Zona Norte",
+        "subprefeitura": "Vila Maria/ Vila Guilherme",
+        "local": "AV MORVAN DIAS DE FIGUEIREDO",
+        "referencia": "AC A PONTE DE VILA GUILHERME",
+        "sentido": "A SENNA/CASTELO B",
+        "inicio": "19:41",
+        "fim": "20:18",
+        "ativo": false,
+        "transitavel": true
+      },
+      {
+        "zona": "Zona Oeste",
+        "subprefeitura": "Pinheiros",
+        "local": "R HONDURAS (JD PAULISTA)",
+        "referencia": "R CANADA (JD PAULISTA)",
+        "sentido": "UNICO",
+        "inicio": "15:49",
+        "fim": "19:54",
+        "ativo": false,
+        "transitavel": true
+      },
+      {
+        "zona": "Zona Leste",
+        "subprefeitura": "Itaim Paulista",
+        "local": "Avenida Marechal Tito",
+        "referencia": "altura do número 7557",
+        "sentido": "ambos",
+        "inicio": "19:40",
+        "fim": null,
+        "ativo": true,
+        "transitavel": false
+      },
+      {
+        "zona": "Zona Sul",
+        "subprefeitura": "Santo Amaro",
+        "local": "R STO ARCADIO",
+        "referencia": "AV ROQUE PETRONI JUNIOR",
+        "sentido": "AMBOS",
+        "inicio": "19:19",
+        "fim": "20:18",
+        "ativo": false,
+        "transitavel": true
+      },
+      {
+        "zona": "Zona Sul",
+        "subprefeitura": "Santo Amaro",
+        "local": "AC RAPHAEL POTENZA",
+        "referencia": "AV ROQUE PETRONI JUNIOR",
+        "sentido": "AMBOS",
+        "inicio": "19:20",
+        "fim": "19:51",
+        "ativo": false,
+        "transitavel": true
+      }
+    ],
     "fonte": "CGE / Prefeitura de São Paulo",
     "url": "https://www.cgesp.org/v3/alagamentos.jsp",
-    "atualizado_em": "2026-11-15T12:52:56.316699-03:00"
+    "atualizado_em": "2026-11-15T21:23:59.648133-03:00"
   },
   "agua": {
     "parametro": "Escherichia coli",
