@@ -4,54 +4,43 @@
   "slug": "lagoa-alegre",
   "latitude": -4.4898,
   "longitude": -42.5649,
-  "atualizado_em": "2026-11-14T14:44:00.763851+00:00",
+  "atualizado_em": "2026-11-16T17:53:11.309365+00:00",
   "previsao": [
     {
-      "data": "2026-11-14",
-      "min": 25.0,
-      "max": 37.7,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.6,
-      "uv": 9.1,
-      "nascer_sol": "05:25",
-      "por_sol": "17:44"
-    },
-    {
-      "data": "2026-11-15",
-      "min": 25.3,
-      "max": 35.7,
-      "condicao": "Chuvisco leve",
-      "condicao_codigo": 51,
-      "chuva_mm": 0.8,
-      "uv": 9.0,
-      "nascer_sol": "05:25",
-      "por_sol": "17:44"
-    },
-    {
       "data": "2026-11-16",
-      "min": 23.4,
-      "max": 36.4,
+      "min": 23.9,
+      "max": 36.5,
       "condicao": "Chuva isolada moderada",
       "condicao_codigo": 81,
-      "chuva_mm": 6.6,
-      "uv": 4.5,
+      "chuva_mm": 8.2,
+      "uv": 6.2,
       "nascer_sol": "05:25",
       "por_sol": "17:44"
     },
     {
       "data": "2026-11-17",
-      "min": 24.5,
-      "max": 36.2,
+      "min": 24.0,
+      "max": 35.1,
       "condicao": "Chuvisco leve",
       "condicao_codigo": 51,
-      "chuva_mm": 0.6,
-      "uv": 9.1,
+      "chuva_mm": 0.7,
+      "uv": 9.0,
       "nascer_sol": "05:25",
       "por_sol": "17:44"
     },
     {
       "data": "2026-11-18",
+      "min": 23.9,
+      "max": 36.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "05:25",
+      "por_sol": "17:45"
+    },
+    {
+      "data": "2026-11-19",
       "min": 23.9,
       "max": 37.8,
       "condicao": "Encoberto",
@@ -62,26 +51,37 @@
       "por_sol": "17:45"
     },
     {
-      "data": "2026-11-19",
-      "min": 23.9,
-      "max": 38.9,
+      "data": "2026-11-20",
+      "min": 24.7,
+      "max": 39.4,
       "condicao": "Encoberto",
       "condicao_codigo": 3,
       "chuva_mm": 0,
-      "uv": 8.9,
+      "uv": 9.1,
       "nascer_sol": "05:25",
       "por_sol": "17:45"
     },
     {
-      "data": "2026-11-20",
-      "min": 24.2,
-      "max": 39.5,
+      "data": "2026-11-21",
+      "min": 24.8,
+      "max": 39.3,
       "condicao": "Principalmente limpo",
       "condicao_codigo": 1,
       "chuva_mm": 0,
-      "uv": 8.7,
+      "uv": 9.1,
       "nascer_sol": "05:25",
-      "por_sol": "17:45"
+      "por_sol": "17:46"
+    },
+    {
+      "data": "2026-11-22",
+      "min": 25.1,
+      "max": 38.9,
+      "condicao": "Céu limpo",
+      "condicao_codigo": 0,
+      "chuva_mm": 0,
+      "uv": 9.7,
+      "nascer_sol": "05:26",
+      "por_sol": "17:46"
     }
   ],
   "queimadas": {
@@ -90,22 +90,22 @@
     "atualizado_em": "2026-11-16T16:10:35.935545+00:00"
   },
   "uv": {
-    "indice": 9.1,
-    "categoria": "Muito Alto",
+    "indice": 6.2,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 47,
-    "categoria": "Boa",
+    "indice": 63,
+    "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 7.9,
-    "pm10": 10.8,
-    "no2": 0.5,
-    "o3": 78.0,
+    "pm25": 10.6,
+    "pm10": 12.8,
+    "no2": 1.0,
+    "o3": 76.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-14T14:44:00.763851+00:00"
+    "atualizado_em": "2026-11-16T17:53:11.309365+00:00"
   },
   "sol": {
     "nascer": "05:25",
@@ -116,12 +116,12 @@
   },
   "lua": {
     "nome": "Crescente",
-    "iluminacao_pct": 79.0,
-    "fase_pct": 14.4,
-    "dias_proxima_cheia": 11,
+    "iluminacao_pct": 97.0,
+    "fase_pct": 21.1,
+    "dias_proxima_cheia": 9,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 36.3,
+  "temperatura_atual": 28.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -148,19 +148,19 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-11-15T15:33:08.722072+00:00"
   },
-  "_clima_em": "2026-11-14T14:44:00.763851+00:00",
+  "_clima_em": "2026-11-16T17:53:11.309365+00:00",
   "vento": {
-    "velocidade_kmh": 6.6,
-    "direcao_graus": 127,
-    "direcao": "SE",
-    "max_kmh": 20.4,
-    "rajada_kmh": 42.8,
+    "velocidade_kmh": 18.8,
+    "direcao_graus": 324,
+    "direcao": "NO",
+    "max_kmh": 18.8,
+    "rajada_kmh": 41.0,
     "direcao_dominante": "NNE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 32,
-  "pressao_hpa": 1010,
-  "ponto_orvalho_c": 16.8,
+  "umidade_pct": 77,
+  "pressao_hpa": 1009,
+  "ponto_orvalho_c": 24.0,
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 2719,

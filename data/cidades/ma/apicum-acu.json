@@ -4,8 +4,86 @@
   "slug": "apicum-acu",
   "latitude": -1.5473,
   "longitude": -45.0856,
-  "atualizado_em": "2026-11-16T13:25:45.985793+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-16T17:53:11.309365+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-16",
+      "min": 25.9,
+      "max": 32.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 8.8,
+      "nascer_sol": "05:39",
+      "por_sol": "17:50"
+    },
+    {
+      "data": "2026-11-17",
+      "min": 24.3,
+      "max": 32.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.6,
+      "uv": 8.3,
+      "nascer_sol": "05:39",
+      "por_sol": "17:51"
+    },
+    {
+      "data": "2026-11-18",
+      "min": 26.2,
+      "max": 32.8,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 8.8,
+      "nascer_sol": "05:39",
+      "por_sol": "17:51"
+    },
+    {
+      "data": "2026-11-19",
+      "min": 26.2,
+      "max": 32.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 8.8,
+      "nascer_sol": "05:39",
+      "por_sol": "17:51"
+    },
+    {
+      "data": "2026-11-20",
+      "min": 26.3,
+      "max": 32.8,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
+      "chuva_mm": 0,
+      "uv": 8.6,
+      "nascer_sol": "05:40",
+      "por_sol": "17:51"
+    },
+    {
+      "data": "2026-11-21",
+      "min": 26.0,
+      "max": 32.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 8.6,
+      "nascer_sol": "05:40",
+      "por_sol": "17:52"
+    },
+    {
+      "data": "2026-11-22",
+      "min": 26.7,
+      "max": 32.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.6,
+      "nascer_sol": "05:40",
+      "por_sol": "17:52"
+    }
+  ],
   "queimadas": {
     "focos_100km": 28,
     "fonte": "NASA FIRMS / INPE",
@@ -19,15 +97,15 @@
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 35,
+    "indice": 24,
     "categoria": "Boa",
-    "principal_poluente": "PM10",
-    "pm25": 9.2,
-    "pm10": 14.5,
-    "no2": 0.2,
-    "o3": 46.0,
+    "principal_poluente": "PM2.5",
+    "pm25": 5.4,
+    "pm10": 7.9,
+    "no2": 0.4,
+    "o3": 33.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-14T14:44:00.763851+00:00"
+    "atualizado_em": "2026-11-16T17:53:11.309365+00:00"
   },
   "sol": {
     "nascer": "05:39",
@@ -38,25 +116,25 @@
   },
   "lua": {
     "nome": "Crescente",
-    "iluminacao_pct": 79.0,
-    "fase_pct": 14.4,
-    "dias_proxima_cheia": 11,
+    "iluminacao_pct": 97.0,
+    "fase_pct": 21.1,
+    "dias_proxima_cheia": 9,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 32.1,
+  "temperatura_atual": 30.5,
   "vento": {
-    "velocidade_kmh": 16.0,
-    "direcao_graus": 61,
-    "direcao": "ENE",
-    "max_kmh": 16.4,
-    "rajada_kmh": 37.8,
+    "velocidade_kmh": 15.4,
+    "direcao_graus": 53,
+    "direcao": "NE",
+    "max_kmh": 16.8,
+    "rajada_kmh": 38.9,
     "direcao_dominante": "ENE",
     "fonte": "Open-Meteo",
-    "atualizado_em": "2026-11-14T15:04:38.862559+00:00"
+    "atualizado_em": "2026-11-16T18:13:58.794071+00:00"
   },
-  "umidade_pct": 56,
-  "pressao_hpa": 1012,
-  "ponto_orvalho_c": 22.3,
+  "umidade_pct": 63,
+  "pressao_hpa": 1010,
+  "ponto_orvalho_c": 22.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -83,20 +161,20 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-11-08T15:05:52.299332+00:00"
   },
-  "_clima_em": "2026-11-14T14:44:00.763851+00:00",
+  "_clima_em": "2026-11-16T17:53:11.309365+00:00",
   "ondas": {
-    "altura_m": 0.44,
-    "altura_max_m": 0.46,
+    "altura_m": 0.36,
+    "altura_max_m": 0.48,
     "periodo_s": 4.0,
     "direcao_graus": 25,
     "direcao": "NNE",
-    "swell_altura_m": 0.4,
-    "swell_periodo_s": 6.2,
+    "swell_altura_m": 0.38,
+    "swell_periodo_s": 6.5,
     "swell_direcao": "NNE",
     "surf_nivel": "razoavel",
     "surf_emoji": "🟡",
     "surf_descricao": "Surf razoável",
     "fonte": "Open-Meteo Marine",
-    "atualizado_em": "2026-11-15T15:32:29.745739+00:00"
+    "atualizado_em": "2026-11-16T18:13:58.794071+00:00"
   }
 }
