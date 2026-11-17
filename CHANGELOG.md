@@ -5,7 +5,7 @@ cada entrada marca um conjunto de mudanças já no ar em <https://climabr.app>.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
-## [Não publicado]
+## [0.4.0] - 2026-11-17
 
 ### Corrigido
 
