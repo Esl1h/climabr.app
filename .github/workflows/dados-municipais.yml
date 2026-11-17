@@ -23,6 +23,13 @@ on:
         required: false
         type: string
 
+# Coletas não podem sobrepor: um commit com lease de checkout antigo falha
+# silenciosamente (continue-on-error) e o dado da rodada se perde. Fila
+# global entre todos os workflows de coleta.
+concurrency:
+  group: coleta-dados
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
