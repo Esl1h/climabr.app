@@ -82,7 +82,9 @@ def fase_lua(d: date) -> dict:
     nomes = ["Nova", "Crescente", "Quarto Crescente", "Gibosa Crescente",
              "Cheia", "Gibosa Minguante", "Quarto Minguante", "Minguante"]
     idx = int(fase * 8) % 8
-    iluminacao = round(abs(math.sin(fase * math.pi * 2)) * 100, 0)
+    # Fração iluminada vista da Terra: (1 - cos(2πf)) / 2, 0% na Nova e 100% na
+    # Cheia. abs(sin()) erro: dava 100% no Quarto Crescente.
+    iluminacao = round((1 - math.cos(fase * math.pi * 2)) / 2 * 100, 0)
     return {
         "nome": nomes[idx],
         "iluminacao_pct": iluminacao,
@@ -241,6 +243,9 @@ def processar_cidade(fc: dict, aq: dict, municipio: dict, agora: str, hoje: date
         "fonte": "Open-Meteo",
     }
 
+    # Sem leitura de temperatura, grava None (o painel mostra "N/A"),
+    # não 0.0 que apareceria como 0°C
+    temperatura = current.get("temperature_2m") if current else None
     return {
         "previsao": previsao,
         "uv": uv_dict,
@@ -248,7 +253,7 @@ def processar_cidade(fc: dict, aq: dict, municipio: dict, agora: str, hoje: date
         "sol": sol_dict,
         "lua": lua_dict,
         "vento": vento_dict,
-        "temperatura_atual": round(float(current.get("temperature_2m", 0) or 0), 1) if current else None,
+        "temperatura_atual": round(float(temperatura), 1) if temperatura is not None else None,
         "umidade_pct": int(current.get("relative_humidity_2m")) if current and current.get("relative_humidity_2m") is not None else None,
         "pressao_hpa": round(float(current.get("pressure_msl"))) if current and current.get("pressure_msl") is not None else None,
         "ponto_orvalho_c": round(float(current.get("dew_point_2m")), 1) if current and current.get("dew_point_2m") is not None else None,
