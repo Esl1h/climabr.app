@@ -3,7 +3,6 @@ import { defineConfig } from 'astro/config';
 import { fileURLToPath } from 'node:url';
 
 import tailwindcss from '@tailwindcss/vite';
-import react from '@astrojs/react';
 
 /** Plugin que força charset=utf-8 em arquivos .txt no dev server */
 function txtUtf8Plugin() {
@@ -35,6 +34,4 @@ export default defineConfig({
       }
     },
   },
-
-  integrations: [react()]
 });

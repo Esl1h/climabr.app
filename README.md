@@ -45,7 +45,7 @@ Toda cidade responde em `/{uf}/{cidade}` com vários formatos:
 
 ## Stack
 
-- Astro (SSG) + Tailwind CSS v4 + React + TypeScript
+- Astro (SSG) + Tailwind CSS v4 + TypeScript
 - Cloudflare Pages (site) + Workers (curl/SVG/PNG/Prometheus, rota `climabr.app/*`)
 - Coleta em Python via GitHub Actions (cron), gerando JSON em `data/cidades/{uf}/{slug}.json`
 
