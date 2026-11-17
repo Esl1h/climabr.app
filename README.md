@@ -72,6 +72,8 @@ worker/                         # Cloudflare Worker (curl/SVG/PNG/Prometheus)
 .github/workflows/             # coleta de dados + deploy
 ```
 
+Diagrama da arquitetura completa em [`docs/arquitetura.html`](docs/arquitetura.html).
+
 ## Desenvolvimento
 
 ```sh
