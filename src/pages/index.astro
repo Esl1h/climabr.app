@@ -61,16 +61,26 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
   day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit',
   timeZone: 'America/Sao_Paulo',
 });
+
+// Chips ao vivo do topo: três capitais de referência + o aviso mais grave do dia
+const chipsTopo = ['sao-paulo', 'rio-de-janeiro', 'brasilia']
+  .map((s) => capitais.find((c) => c.slug === s))
+  .filter((c): c is NonNullable<typeof c> => c != null);
 ---
 
-<PainelLayout title="Previsão do Tempo e Qualidade do Ar por Cidade | ClimaBR.app">
+<PainelLayout larga title="Previsão do Tempo e Qualidade do Ar por Cidade | ClimaBR.app">
   <div class="space-y-10">
-    <div class="mx-auto max-w-xl space-y-8">
-      <div class="text-center space-y-2">
-        <h1 class="text-4xl font-bold tracking-tight">
+    <div class="relative isolate">
+      <!-- Fundo: degradê de céu + malha de pontos com máscara radial (decorativo) -->
+      <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 -top-6 -z-10 h-[34rem] rounded-3xl bg-linear-to-b from-status-info/12 via-primary/5 to-transparent"></div>
+      <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 -top-6 -z-10 h-[34rem]" style="background-image: radial-gradient(color-mix(in oklab, var(--foreground) 22%, transparent) 1px, transparent 1px); background-size: 22px 22px; -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 20%, black 25%, transparent 75%); mask-image: radial-gradient(ellipse 70% 70% at 50% 20%, black 25%, transparent 75%);"></div>
+      <div class="mx-auto grid max-w-6xl items-center gap-12 px-2 py-12 sm:py-16 lg:grid-cols-[1fr_0.9fr]">
+    <div class="mx-auto w-full max-w-xl space-y-8">
+      <div class="text-center space-y-3 lg:text-left">
+        <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight">
           <span>Clima</span><span class="text-primary">BR</span><span class="font-medium text-muted-foreground">.app</span>
         </h1>
-        <p class="text-muted-foreground">Previsão do tempo e painel ambiental para todas as 5.571 cidades brasileiras: qualidade do ar, água, clima e alertas</p>
+        <p class="text-lg text-muted-foreground">Previsão do tempo e painel ambiental para todas as 5.571 cidades brasileiras: qualidade do ar, água, clima e alertas</p>
       </div>
 
       <div class="relative">
@@ -85,7 +95,7 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
           aria-expanded="false"
           aria-controls="busca-home-lista"
           aria-autocomplete="list"
-          class="w-full rounded-lg border border-input bg-card px-4 py-3 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+          class="w-full rounded-full border border-input bg-card/70 backdrop-blur-md px-6 py-4 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
         />
         <ul
           id="busca-home-lista"
@@ -98,10 +108,11 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
       <button
         id="btn-geo"
         aria-live="polite"
-        class="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
+        class="w-full rounded-full border border-input bg-card/70 backdrop-blur-md px-4 py-3 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors"
       >
         📍 Usar minha localização
       </button>
+
 
       <div id="recentes" class="hidden space-y-2">
         <a
@@ -110,20 +121,41 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
           class="hidden items-center justify-between gap-3 rounded-lg border border-primary/40 bg-card px-4 py-3 hover:bg-accent transition-colors"
         >
           <span class="min-w-0">
-            <span class="block text-xs uppercase tracking-wide text-muted-foreground">Minha cidade</span>
+            <span class="block text-sm text-muted-foreground">Minha cidade</span>
             <span id="minha-cidade-nome" class="block truncate font-semibold text-foreground"></span>
           </span>
           <span aria-hidden="true" class="text-primary">→</span>
         </a>
-        <p class="text-xs text-muted-foreground uppercase tracking-wide">Recentes</p>
+        <p class="text-sm text-muted-foreground">Recentes</p>
         <div id="recentes-chips" class="flex flex-wrap gap-2"></div>
+      </div>
+    </div>
+        <a href="/sp/sao-paulo/telao" class="group hidden lg:block" aria-label="Ver exemplo do Modo Painel">
+          <img src="/exemplo-modo-painel.webp" width="1600" height="1000" alt="Exemplo do Modo Painel de São Paulo, com previsão, ar, UV, vento, represa, queimadas e dengue" class="h-auto w-full -rotate-1 rounded-2xl border border-border shadow-2xl transition-transform duration-300 group-hover:rotate-0 group-hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none" />
+        </a>
+      </div>
+
+      <div class="relative mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-2 px-2 pb-6 lg:justify-start" aria-label="Agora em algumas capitais">
+        <span class="text-sm text-muted-foreground">Agora:</span>
+        {chipsTopo.map((c) => (
+          <a href={`/${c.uf}/${c.slug}`} data-agora data-lat={c.latitude} data-lon={c.longitude} class="inline-flex items-baseline gap-2 rounded-full border border-border bg-card/70 px-4 py-2 text-sm backdrop-blur-md transition hover:-translate-y-0.5 hover:border-primary/40 motion-reduce:transition-none motion-reduce:transform-none">
+            <span class="font-medium text-foreground/80">{c.nome}</span>
+            <span data-agora-temp class={`font-bold tabular-nums ${c.temperatura != null ? corTemperaturaTexto(c.temperatura) : ''}`}>{c.temperatura != null ? `${Math.round(c.temperatura)}°` : '—'}</span>
+            <span data-agora-aqi hidden={c.aqi == null} class={`text-xs font-semibold tabular-nums ${c.aqi != null ? corAqiTexto(c.aqi) : ''}`}>{c.aqi != null ? `AQI ${c.aqi}` : ''}</span>
+          </a>
+        ))}
+        {ufsAlerta.length > 0 && (
+          <a href={`/${ufsAlerta[0].uf}`} class={`inline-flex items-center gap-1 rounded-full border px-4 py-2 text-sm font-medium backdrop-blur-md transition hover:-translate-y-0.5 motion-reduce:transition-none motion-reduce:transform-none ${ALERTA_CHIP[ufsAlerta[0].pior.nivel] ?? ALERTA_CHIP[1]}`}>
+            Aviso mais grave: {ufsAlerta[0].pior.evento} em {ufsAlerta[0].uf.toUpperCase()}
+          </a>
+        )}
       </div>
     </div>
 
     <!-- Alertas meteorológicos ativos por estado (INMET) -->
     {ufsAlerta.length > 0 && (
       <section aria-label="Alertas meteorológicos" data-alertas-home>
-        <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+        <h2 class="mb-3 text-sm font-medium text-muted-foreground">
           Alertas meteorológicos ativos
         </h2>
         <!-- No celular a lista começa recolhida, para as capitais aparecerem na primeira dobra; no desktop abre sozinha -->
@@ -154,7 +186,7 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
     <!-- Capitais agora: snapshot do build, hidratado ao vivo por agora-cliente.ts -->
     <section aria-label="Capitais agora">
       <div class="mb-3 flex flex-wrap items-baseline justify-between gap-2">
-        <h2 class="text-base font-semibold text-foreground">Capitais agora</h2>
+        <h2 class="text-2xl font-bold tracking-tight text-foreground">Capitais agora</h2>
         <div class="flex items-center gap-3 text-xs">
           <button
             id="btn-ordenar-agora"
@@ -215,7 +247,7 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
     <!-- Destaques nacionais -->
     <section aria-label="Destaques nacionais">
       <div class="mb-3 flex items-baseline justify-between">
-        <h2 class="text-base font-semibold text-foreground">Brasil agora</h2>
+        <h2 class="text-2xl font-bold tracking-tight text-foreground">Brasil agora</h2>
         <a href="/rankings" class="text-sm text-primary hover:underline">Rankings completos →</a>
       </div>
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
@@ -271,6 +303,78 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
       <p class="mt-2 text-xs text-muted-foreground">Gerado em {geradoEm} · atualiza 2x ao dia</p>
     </section>
 
+    <!-- Formas de acesso: a mesma cidade em vários formatos -->
+    <section aria-labelledby="acesso" class="space-y-6">
+      <div class="space-y-2">
+        <p class="text-lg font-semibold text-primary">Todos os dados da cidade em vários formatos</p>
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h2 id="acesso" class="max-w-3xl text-3xl font-extrabold tracking-tight text-foreground">Dados climáticos, previsão do tempo, queimadas, abastecimento e alertas</h2>
+          <a href="/curl" class="text-sm text-primary hover:underline">Guia completo dos formatos →</a>
+        </div>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 motion-reduce:transition-none motion-reduce:transform-none lg:col-span-2">
+          <h3 class="text-lg font-bold text-foreground">No terminal</h3>
+          <p class="mt-1 text-sm text-muted-foreground">Painel em ANSI com ar, UV, represa, dengue e queimadas.</p>
+          <pre data-copiar class="mt-4 whitespace-pre-wrap break-all rounded-xl bg-muted px-4 py-3 text-sm text-foreground"><code>$ curl climabr.app/sp/sao-paulo</code></pre>
+        </article>
+        <article class="rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 motion-reduce:transition-none motion-reduce:transform-none lg:col-span-2">
+          <h3 class="text-lg font-bold text-foreground">Na barra do tmux, i3 ou polybar</h3>
+          <p class="mt-1 text-sm text-muted-foreground">Uma linha só, pronta para prompt e status bar.</p>
+          <pre data-copiar class="mt-4 whitespace-pre-wrap break-all rounded-xl bg-muted px-4 py-3 text-sm text-foreground"><code>$ curl 'climabr.app/sp/sao-paulo?format=1'</code></pre>
+        </article>
+        <article class="rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 motion-reduce:transition-none motion-reduce:transform-none">
+          <h3 class="text-lg font-bold text-foreground">Prometheus</h3>
+          <p class="mt-1 text-sm text-muted-foreground">Métricas para scraping e alertas no Grafana.</p>
+          <pre class="mt-4 whitespace-pre-wrap break-all rounded-xl bg-muted px-3 py-2 text-xs text-foreground"><code>?format=prometheus</code></pre>
+        </article>
+        <article class="rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 motion-reduce:transition-none motion-reduce:transform-none">
+          <h3 class="text-lg font-bold text-foreground">JSON cru</h3>
+          <p class="mt-1 text-sm text-muted-foreground">Dado aberto por cidade, com filtro de campos.</p>
+          <pre class="mt-4 whitespace-pre-wrap break-all rounded-xl bg-muted px-3 py-2 text-xs text-foreground"><code>/api/sp/sao-paulo.json</code></pre>
+        </article>
+        <article class="rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 motion-reduce:transition-none motion-reduce:transform-none">
+          <h3 class="text-lg font-bold text-foreground">Card para compartilhar</h3>
+          <p class="mt-1 text-sm text-muted-foreground">SVG e PNG para README, Discord e preview social.</p>
+          <pre class="mt-4 whitespace-pre-wrap break-all rounded-xl bg-muted px-3 py-2 text-xs text-foreground"><code>/sp/sao-paulo.svg · .png</code></pre>
+        </article>
+        <article class="rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 motion-reduce:transition-none motion-reduce:transform-none">
+          <h3 class="text-lg font-bold text-foreground">Para LLMs e notas</h3>
+          <p class="mt-1 text-sm text-muted-foreground">Markdown com seções à escolha.</p>
+          <pre class="mt-4 whitespace-pre-wrap break-all rounded-xl bg-muted px-3 py-2 text-xs text-foreground"><code>?format=md&amp;secoes=ar,uv</code></pre>
+        </article>
+        <article class="rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 motion-reduce:transition-none motion-reduce:transform-none sm:col-span-2">
+          <h3 class="text-lg font-bold text-foreground">Modo Painel</h3>
+          <p class="mt-1 text-sm text-muted-foreground">Tela cheia para TV e monitor, com o fundo mudando conforme o tempo.</p>
+          <a href="/sp/sao-paulo/telao" class="mt-4 inline-flex rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:brightness-110 transition">Ver exemplo, São Paulo</a>
+        </article>
+        <article class="rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 motion-reduce:transition-none motion-reduce:transform-none sm:col-span-2">
+          <h3 class="text-lg font-bold text-foreground">Modo Mobile</h3>
+          <p class="mt-1 text-sm text-muted-foreground">Cartões grandes para o celular, instalável como app.</p>
+          <a href="/mobile?c=sp/sao-paulo" class="mt-4 inline-flex rounded-full border border-input bg-card px-5 py-2.5 text-sm text-foreground hover:bg-accent transition-colors">Ver exemplo, São Paulo</a>
+        </article>
+      </div>
+      <ul class="flex flex-wrap gap-x-6 gap-y-1 text-sm text-muted-foreground">
+        <li>Sem cookies e sem rastreio de terceiros</li>
+        <li>Fontes oficiais nomeadas em cada dado</li>
+        <li>Código AGPL-3.0, dados CC-BY-4.0</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="tela-cheia" class="space-y-8">
+      <h2 id="tela-cheia" class="text-3xl font-extrabold tracking-tight text-foreground">O mesmo dado para tela cheia ou no celular</h2>
+      <div class="grid items-start gap-6 lg:grid-cols-[2fr_1fr]">
+        <figure>
+          <a href="/sp/sao-paulo/telao" class="block overflow-hidden rounded-2xl border border-border"><img src="/exemplo-modo-painel.webp" width="1600" height="1000" loading="lazy" alt="Modo Painel de São Paulo: grade escura com previsão, ar, UV, vento, represa, queimadas, dengue, sol, lua e bandeira tarifária" class="h-auto w-full" /></a>
+          <figcaption class="mt-2 text-sm text-muted-foreground">Modo Painel para TV e monitor. <a class="text-primary hover:underline" href="/sp/sao-paulo/telao">Abrir exemplo</a></figcaption>
+        </figure>
+        <figure>
+          <a href="/mobile?c=sp/sao-paulo" class="mx-auto block max-w-[16rem] overflow-hidden rounded-2xl border border-border"><img src="/exemplo-modo-mobile.webp" width="520" height="1125" loading="lazy" alt="Modo Mobile de São Paulo: cartões escuros com previsão, ar, UV, vento, represa, queimadas, dengue, sol e lua" class="h-auto w-full" /></a>
+          <figcaption class="mt-2 text-center text-sm text-muted-foreground">Modo Mobile. <a class="text-primary hover:underline" href="/mobile?c=sp/sao-paulo">Abrir exemplo</a></figcaption>
+        </figure>
+      </div>
+    </section>
+
     <p class="text-center text-xs text-muted-foreground">
       Sua cidade fica salva localmente, sem conta e sem rastreamento.
     </p>
@@ -300,6 +404,8 @@ const geradoEm = new Date().toLocaleString('pt-BR', {
 <script>
   import { carregarIndice, maisProxima } from '../scripts/busca-cidades';
   import { hidratarAgora } from '../scripts/agora-cliente';
+  import { ativarCopiar } from '../scripts/copiar';
+  ativarCopiar();
 
   // Card da última cidade aberta: a home é estática, então o link só existe no cliente
   function mostrarMinhaCidade(r: { uf?: string; slug?: string; nome?: string } | undefined): void {
