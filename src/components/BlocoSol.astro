@@ -33,14 +33,14 @@ const ESTACAO_EMOJI: Record<string, string> = {
 ---
 
 {(sol || lua) && (
-  <section aria-label="Dados astronômicos">
-    <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Sol & Lua
-    </h2>
-    <div class="rounded-lg border border-border bg-card p-4">
+  <section aria-label="Dados astronômicos" class="lg:col-span-2">
+    <h3 class="mb-3 text-sm font-medium text-muted-foreground">Sol & Lua
+    </h3>
+    <div class="rounded-2xl border border-border bg-card p-6">
       <div class="grid grid-cols-2 gap-4">
         {sol && (
           <div class="space-y-2">
-            <p class="text-xs text-muted-foreground uppercase tracking-wide">Sol hoje</p>
+            <p class="text-sm text-muted-foreground">Sol hoje</p>
             <div class="flex items-center gap-2">
               <span class="text-status-moderado">🌅</span>
               <span class="text-sm text-foreground/80">{sol.nascer}</span>
@@ -59,7 +59,7 @@ const ESTACAO_EMOJI: Record<string, string> = {
         )}
         {lua && (
           <div class="space-y-2">
-            <p class="text-xs text-muted-foreground uppercase tracking-wide">Lua</p>
+            <p class="text-sm text-muted-foreground">Lua</p>
             <p class="text-2xl">{LUA_EMOJI[lua.nome] ?? '🌙'}</p>
             <p class="text-sm text-foreground/80">{lua.nome}</p>
             <p class="text-xs text-muted-foreground">{lua.iluminacao_pct}% iluminada</p>

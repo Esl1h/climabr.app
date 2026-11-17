@@ -344,11 +344,6 @@ export async function hidratarClima(): Promise<void> {
   const faixa6h = document.querySelector<HTMLElement>('[data-chuva-6h]');
   const conteudo6h = document.querySelector<HTMLElement>('[data-chuva-6h-conteudo]');
   if (faixa6h && conteudo6h && Array.isArray(hourly?.time)) {
-    // Rótulo por hora: probabilidade quando chove pouco, mm quando pesa
-    const detalhe = (p: number, mm: number): string => (mm > 0.5 ? `${mm} mm` : `${p}%`);
-    const chip = (h: string, p: number, mm: number): string =>
-      `<span class="inline-flex items-center gap-1 tabular-nums ${p >= 50 || mm > 0.5 ? 'font-semibold text-status-info' : 'text-muted-foreground'}">${h} ${detalhe(p, mm)}</span>`;
-
     // O corte "agora" usa o formato sueco sv-SE ("2026-09-26 00:45" no fuso),
     // ordenável como string depois de normalizado pelo horaDeCorte
     const inicio = horaDeCorte(hourly.time);
@@ -359,20 +354,31 @@ export async function hidratarClima(): Promise<void> {
     const totalProb = Math.max(...hourly.time.slice(inicio, inicio + 6)
       .map((_: string, i: number) => hourly.precipitation_probability?.[inicio + i] ?? 0));
 
-    const selo = totalMm > 0.5
-      ? `<span class="font-semibold text-status-info">🌧️ ${totalMm} mm na janela de 6h</span>`
+    const titulo = totalMm > 0.5
+      ? `Vai chover: ${totalMm} mm nas próximas 6 horas`
       : totalProb >= 50
-        ? `<span class="font-semibold text-status-info">Risco de chuva: até ${totalProb}%</span>`
-        : `<span class="font-medium text-muted-foreground">Sem chuva nas próximas 6h</span>`;
+        ? `Risco de chuva: até ${totalProb}% de chance`
+        : 'Sem chuva nas próximas 6 horas';
+    const corTitulo = totalMm > 0.5 || totalProb >= 50 ? 'text-status-info' : 'text-foreground';
 
-    const chips = hourly.time.slice(inicio, inicio + 6)
-      .map((t: string, i: number) =>
-        chip(`${t.slice(11, 13)}h`, hourly.precipitation_probability?.[inicio + i] ?? 0, arred(hourly.precipitation?.[inicio + i] ?? 0)))
-      .join('');
+    // Uma coluna por hora: barra proporcional à chance de chuva, mm só quando chove
+    const colunas = hourly.time.slice(inicio, inicio + 6)
+      .map((t: string, i: number) => {
+        const p = hourly.precipitation_probability?.[inicio + i] ?? 0;
+        const mm = arred(hourly.precipitation?.[inicio + i] ?? 0);
+        const forte = p >= 50 || mm > 0.5;
+        return `<li class="flex flex-1 flex-col items-center gap-1.5">
+          <span class="text-sm font-semibold tabular-nums ${forte ? 'text-status-info' : 'text-muted-foreground'}">${p}%</span>
+          <span class="relative block h-12 w-full max-w-10 overflow-hidden rounded-full bg-muted" aria-hidden="true"><span class="absolute inset-x-0 bottom-0 rounded-full bg-status-info" style="height:${Math.max(p, 4)}%"></span></span>
+          <span class="text-xs tabular-nums text-muted-foreground">${t.slice(11, 13)}h</span>
+          ${mm > 0.5 ? `<span class="text-xs font-semibold text-status-info">${mm} mm</span>` : ''}
+        </li>`;
+      }).join('');
 
-    conteudo6h.innerHTML = `${selo}${chips}`;
+    conteudo6h.innerHTML = `<p class="text-lg font-bold tracking-tight ${corTitulo}">${titulo}</p>
+      <p class="mt-0.5 text-xs text-muted-foreground">Chance de chuva por hora; a barra mostra a probabilidade.</p>
+      <ul class="mt-3 flex items-end gap-2">${colunas}</ul>`;
     conteudo6h.classList.remove('hidden');
-    conteudo6h.classList.add('flex'); // o gap-x entre os chips depende de flex
     faixa6h.classList.remove('hidden');
   }
 

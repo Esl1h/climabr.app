@@ -17,14 +17,14 @@ const titulo = aproximado ? 'Reservatório próximo' : 'Reservatório';
 ---
 
 {reservatorio && reservatorio.nivel_pct !== null && reservatorio.nivel_pct !== undefined && (
-  <section aria-label="Nível do reservatório">
-    <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">{titulo}
-    </h2>
+  <section aria-label="Nível do reservatório" class="lg:col-span-2">
+    <h3 class="mb-3 text-sm font-medium text-muted-foreground">{titulo}
+    </h3>
     <div class={`rounded-lg border bg-card p-4 ${aproximado ? 'border-muted-foreground/40' : 'border-border'}`}>
       <div class="flex items-center justify-between">
         <div>
           <p class="text-sm text-muted-foreground">{reservatorio.nome}</p>
-          <p class={`text-3xl font-bold tabular-nums ${corNivel(reservatorio.nivel_pct)}`}>
+          <p class={`text-5xl font-extrabold tracking-tight tabular-nums ${corNivel(reservatorio.nivel_pct)}`}>
             {reservatorio.nivel_pct.toFixed(1)}%
           </p>
           {reservatorio.distancia_km && (

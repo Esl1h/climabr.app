@@ -15,13 +15,13 @@ function nivelRisco(focos: number): { label: string; cor: string } {
 ---
 
 {queimadas && (
-  <section aria-label="Focos de queimada">
-    <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Queimadas
-    </h2>
-    <div class="rounded-lg border border-border bg-card p-4">
+  <section aria-label="Focos de queimada" class="lg:col-span-2">
+    <h3 class="mb-3 text-sm font-medium text-muted-foreground">Queimadas
+    </h3>
+    <div class="rounded-2xl border border-border bg-card p-6">
       <div class="flex items-center justify-between">
         <div>
-          <p class={`text-3xl font-bold tabular-nums ${nivelRisco(queimadas.focos_100km).cor}`}>
+          <p class={`text-5xl font-extrabold tracking-tight tabular-nums ${nivelRisco(queimadas.focos_100km).cor}`}>
             {queimadas.focos_100km}
           </p>
           <p class="text-sm text-muted-foreground">focos num raio de 100km</p>
