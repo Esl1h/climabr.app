@@ -7,6 +7,32 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 
 ## [Não publicado]
 
+### Corrigido
+
+- `curl climabr.app` sem `https` funcionava só até o 301 do edge; agora o
+  Worker serve o painel em HTTP puro para curl e redireciona navegadores
+  para HTTPS. Requer "Always Use HTTPS" desligado no dashboard (ver
+  DEPLOY.md). Também na raiz: `?format=1` e `?format=prometheus` respondem
+  inline em vez de 302.
+
+- Aviso INMET sem data de fim exibia "até 01/01/1970"; agora mostra "vigente".
+
+- Fase da lua marcava 100% de iluminação no Quarto Crescente; a fração
+  iluminada agora usa (1 - cos(2πf))/2.
+
+- Temperatura ausente no Open-Meteo era gravada como 0.0 e aparecia
+  como 0°C; agora grava null e o painel mostra "N/A".
+
+- Coletas do GitHub Actions não podem mais se sobrepor (grupo
+  `coleta-dados`): um commit com lease desatualizado descartava a rodada
+  silenciosamente.
+
+### Removido
+
+- Stack React/shadcn sem uso (nenhuma página hidratava ilhas): componentes
+  em `src/components/ui/`, `components.json` e 11 dependências, mais
+  `playwright` e `cookie` órfãs nas devDependencies.
+
 ### Adicionado
 
 - Barra de seções fixa no celular na página da cidade, com as abas Agora,
