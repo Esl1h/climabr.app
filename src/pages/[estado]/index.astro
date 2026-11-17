@@ -142,7 +142,7 @@ const normalizar = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g,
               <summary class="cursor-pointer list-none p-4 [&::-webkit-details-marker]:hidden">
                 <span class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                   <strong class={`text-sm font-bold ${cls.texto}`}>{a.evento}</strong>
-                  <span class={`text-xs font-semibold uppercase tracking-wide ${cls.texto}`}>{a.severidade}</span>
+                  <span class={`text-xs font-semibold ${cls.texto}`}>{a.severidade}</span>
                   <span class="text-xs text-muted-foreground">até {fmtVigencia(a.fim)}</span>
                   <span class="text-xs text-muted-foreground">
                     {afetadas.length === cidades.length
@@ -184,7 +184,7 @@ const normalizar = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g,
 
   {temPanorama && (
     <section aria-label="Panorama do estado" class="mb-8">
-      <h2 class="mb-3 text-base font-semibold text-foreground">{nome} agora</h2>
+      <h2 class="mb-3 text-3xl font-extrabold tracking-tight text-foreground">{nome} agora</h2>
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
         {capital && (
           <a

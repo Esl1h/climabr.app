@@ -32,36 +32,35 @@ const banda = (dia: { min: number; max: number }) => {
 ---
 
 {dias.length > 0 && (
-  <section id="bloco-previsao" aria-label="Previsão do tempo" class="scroll-mt-24 sm:col-span-2">
-    <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+  <section id="bloco-previsao" aria-label="Previsão do tempo" class="scroll-mt-24 sm:col-span-2 lg:col-span-4">
+    <h3 class="mb-3 text-sm font-medium text-muted-foreground">
       Previsão 7 dias
-    </h2>
+    </h3>
     <p class="sr-only">
       Previsão para os próximos dias: {dias.map(d => `${d.data}: mínima ${Math.round(d.min)}°C, máxima ${Math.round(d.max)}°C, ${d.condicao}`).join('; ')}
     </p>
     <div
       data-chuva-6h
-      class="mb-2 hidden flex-wrap items-baseline gap-x-3 gap-y-1 rounded-lg border border-border bg-card px-4 py-2.5 text-sm"
+      class="mb-3 hidden rounded-2xl border border-border bg-card p-5"
     >
-      <span class="text-xs uppercase tracking-wider text-muted-foreground">Próximas 6h</span>
-      <span data-chuva-6h-conteudo class="hidden flex-wrap items-baseline gap-x-3"></span>
+      <div data-chuva-6h-conteudo class="hidden"></div>
     </div>
     <div class="grid grid-cols-4 gap-2 sm:grid-cols-7" data-previsao-grid>
       {dias.map((dia) => (
-        <div class="flex flex-col items-center rounded-lg border border-border bg-card px-2 py-3 text-center transition-colors hover:border-primary/40" data-dia>
+        <div class="flex flex-col items-center rounded-2xl border border-border bg-card px-2 py-5 text-center transition-colors hover:border-primary/40" data-dia>
           <span class="text-xs text-muted-foreground capitalize" data-f="dow">{diaSemana(dia.data)}</span>
           <span class="mt-1.5 text-2xl leading-none" data-f="icone" aria-hidden="true">{iconeTempoTexto(dia.condicao ?? '')}</span>
           <span class="mt-1.5 inline-flex items-center gap-1">
             <span class="text-sm leading-none text-status-pessimo" aria-hidden="true">↑</span>
             <span
-              class="text-lg font-bold tabular-nums"
+              class="text-3xl font-extrabold tracking-tight tabular-nums"
               data-f="max"
               style={corTempoInline(dia.max)}
             >{Math.round(dia.max)}°</span>
           </span>
           <span class="inline-flex items-center gap-1">
             <span class="text-xs leading-none text-status-info" aria-hidden="true">↓</span>
-            <span class="text-xs tabular-nums text-muted-foreground" data-f="min">{Math.round(dia.min)}°</span>
+            <span class="text-base tabular-nums text-muted-foreground" data-f="min">{Math.round(dia.min)}°</span>
           </span>
           <span class="relative mt-2 block h-9 w-6 overflow-hidden rounded-full bg-muted" aria-hidden="true">
             <span

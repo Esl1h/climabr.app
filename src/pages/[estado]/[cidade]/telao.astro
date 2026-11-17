@@ -160,7 +160,7 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       * { box-sizing: border-box; }
       html, body { margin: 0; padding: 0; height: 100%; background: #020617; }
       body {
-        font-family: system-ui, -apple-system, sans-serif;
+        font-family: 'Geist Variable', system-ui, -apple-system, sans-serif;
         color: #f1f5f9;
         overflow: hidden;
       }
@@ -170,15 +170,6 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
         position: fixed; inset: 0; z-index: 0;
         background: linear-gradient(160deg, #0f172a, #1e293b);
         transition: background 1.5s ease, filter 1.5s ease;
-      }
-      .cena::before {
-        content: ''; position: absolute; inset: -25%;
-        background: radial-gradient(circle, var(--glow, rgba(255,255,255,0.06)), transparent 60%);
-        animation: flutua 22s ease-in-out infinite alternate;
-      }
-      @keyframes flutua {
-        from { transform: translate(-6%, -4%) scale(1); }
-        to   { transform: translate(6%, 5%) scale(1.15); }
       }
       /* Marca d'água: ícone grande do tempo atual, deixa o clima óbvio no fundo */
       .cena-icone {
@@ -242,7 +233,7 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       .cidade-nome { font-size: clamp(2.8rem, 7.2vmin, 8.5rem); font-weight: 800; line-height: 1; letter-spacing: -0.01em; }
       .cidade-uf { color: #cbd5e1; font-weight: 400; font-size: 0.5em; opacity: 0.7; }
       .temp-atual { font-size: clamp(2.6rem, 6.8vmin, 8rem); font-weight: 800; color: #7dd3fc; line-height: 1; }
-      .relogio { font-size: clamp(1.6rem, 3.6vmin, 4rem); font-weight: 700; color: #f1f5f9; font-variant-numeric: tabular-nums; }
+      .relogio { font-family: 'Geist Mono', ui-monospace, monospace; font-size: clamp(1.6rem, 3.6vmin, 4rem); font-weight: 500; color: #f1f5f9; font-variant-numeric: tabular-nums; }
       .data-hoje { font-size: clamp(1rem, 2.1vmin, 2.2rem); color: #cbd5e1; }
       .clima-linha {
         display: flex; justify-content: center; align-items: center;
@@ -304,11 +295,9 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
         font-size: clamp(0.75rem, 1.6vmin, 1.7rem);
         color: #cbd5e1;
         font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
         display: flex; align-items: center; gap: 0.4em;
       }
-      .card-valor { font-size: clamp(1.9rem, 4.8vmin, 5.5rem); font-weight: 800; line-height: 1; }
+      .card-valor { font-size: clamp(1.9rem, 4.8vmin, 5.5rem); font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
       .card-sub { font-size: clamp(0.8rem, 1.6vmin, 1.7rem); color: #94a3b8; }
       .card-ico { font-size: clamp(1.2rem, 2.5vmin, 2.8rem); }
 
@@ -346,8 +335,17 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       .duo { display: flex; gap: 1em; align-items: baseline; }
       .duo .lbl { font-size: clamp(0.75rem, 1.5vmin, 1.6rem); color: #94a3b8; }
 
+      /* Celular: o painel de TV tem altura fixa e cortava os cards; aqui rola */
+      @media (max-width: 700px) {
+        body { overflow: auto; }
+        .telao { height: auto; min-height: 100dvh; padding-top: 3.5rem; }
+        .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; }
+        .card { min-height: 8.5rem; }
+        .card-wide, .card-larga { grid-column: span 2; grid-row: auto; }
+      }
+
       @media (prefers-reduced-motion: reduce) {
-        .cena::before, .cena::after, .cena-icone { animation: none; }
+        .cena::after, .cena-icone { animation: none; }
       }
     </style>
   </head>

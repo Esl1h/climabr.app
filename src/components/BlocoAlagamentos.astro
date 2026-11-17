@@ -48,13 +48,13 @@ function dataCurta(iso: string): string {
 ---
 
 {alagamentos && (
-  <section aria-label="Pontos de alagamento" class="sm:col-span-2">
-    <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Alagamentos
-    </h2>
-    <div class="rounded-lg border border-border bg-card p-4">
+  <section aria-label="Pontos de alagamento" class="sm:col-span-2 lg:col-span-4">
+    <h3 class="mb-3 text-sm font-medium text-muted-foreground">Alagamentos
+    </h3>
+    <div class="rounded-2xl border border-border bg-card p-6">
       <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
         <div>
-          <p class={`text-3xl font-bold tabular-nums ${cor}`}>{titulo}</p>
+          <p class={`text-5xl font-extrabold tracking-tight tabular-nums ${cor}`}>{titulo}</p>
           <p class="mt-1 text-sm text-muted-foreground">
             {alagamentos.pontos_total === 0
               ? `Nenhum alagamento registrado em ${dataCurta(alagamentos.data)}`
