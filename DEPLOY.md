@@ -33,7 +33,12 @@ Estado dos recursos habilitados na conta Cloudflare do projeto (Account ID no da
 - Cloudflare Fonts (sem efeito prático: fontes são self-hosted via `@fontsource`)
 
 **TLS / DNS (habilitados):**
-- SSL/TLS Full (strict), Always Use HTTPS, TLS mínimo definido, HSTS
+- SSL/TLS Full (strict), TLS mínimo definido, HSTS
+- **"Always Use HTTPS" fica DESLIGADO de propósito**: o redirect de edge roda antes
+  do Worker, o que quebraria `curl climabr.app` (sem scheme, cai no HTTP e só
+  receberia o 301). Quem decide é o Worker (`worker/index.ts`): curl recebe o
+  painel direto em HTTP (dado público, sem cookie/segredo), navegador e crawlers
+  levam 301 para `https`.
 - DNSSEC (DS publicado automaticamente por estar no Cloudflare Registrar)
 
 **Segurança (habilitados):**

@@ -757,6 +757,12 @@ export default {
     const format = url.searchParams.get('format') ?? '';
     const noColor = url.searchParams.has('T') || url.searchParams.has('no-color');
 
+    // HTTP puro: o "Always Use HTTPS" do edge fica desligado e este handler
+    // decide — curl recebe o painel sem TLS, navegador e crawlers vão para https.
+    if (url.protocol === 'http:' && !curl && !format) {
+      return Response.redirect(`https://${url.host}${url.pathname}${url.search}`, 301);
+    }
+
     // www → apex é tratado por uma Page Rule de edge (o Worker roda só no apex)
 
     // Raiz "/" sem cidade: geolocaliza pelo IP
