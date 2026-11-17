@@ -5,6 +5,30 @@ cada entrada marca um conjunto de mudanças já no ar em <https://climabr.app>.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [Não publicado]
+
+### Adicionado
+
+- Home com cara de landing: fundo em degradê com malha de pontos, topo em duas
+  colunas com o Modo Painel ao lado da busca, chips ao vivo de São Paulo, Rio e
+  Brasília com o aviso mais grave do dia, e seção com todos os formatos de
+  acesso (terminal, tmux, Prometheus, JSON, SVG/PNG, Markdown, Modo Painel e
+  Modo Mobile) e os prints dos dois modos.
+- Botão "Copiar" nos comandos `curl` da home e da página da cidade.
+- Página da cidade com a seção "O mesmo dado na tela cheia e no bolso" e os
+  comandos `curl` da própria cidade.
+
+### Alterado
+
+- Página da cidade: temperatura em escala display, herói em duas colunas com
+  resumo recolhido e leituras em grade de quatro colunas.
+- "Próximas 6h" de chuva reescrito: título com o resultado e uma barra por hora
+  com a chance de chuva.
+- Header com busca em pílula e botões redondos de tema e menu, com ícones SVG.
+- Rótulos em caixa de frase no site todo, no lugar de maiúsculas espaçadas.
+- Modos Painel e Mobile com Geist, relógio em Geist Mono e fundo mais calmo; o
+  Modo Painel agora rola no celular em vez de cortar os cards.
+
 ## [0.4.0] - 2026-11-17
 
 ### Corrigido
