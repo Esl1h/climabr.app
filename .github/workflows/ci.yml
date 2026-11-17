@@ -44,6 +44,9 @@ jobs:
       - name: Typecheck do Worker
         run: npx tsc --noEmit -p worker/tsconfig.json
 
+      - name: Testes do Worker
+        run: npm test
+
       - name: Build
         run: npm run build
 
@@ -64,3 +67,8 @@ jobs:
         uses: astral-sh/ruff-action@v3
         with:
           args: check scripts/
+
+      - name: Testes dos cálculos dos scrapers
+        run: |
+          python3 -m pip install pytest --quiet
+          python3 -m pytest -q scripts/tests
