@@ -4,58 +4,136 @@
   "slug": "lago-dos-rodrigues",
   "latitude": -4.5886,
   "longitude": -44.9309,
-  "atualizado_em": "2026-11-19T14:10:43.789771+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-19T17:01:04.161365+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-19",
+      "min": 25.1,
+      "max": 37.1,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 4.0,
+      "uv": 8.8,
+      "nascer_sol": "05:35",
+      "por_sol": "17:55"
+    },
+    {
+      "data": "2026-11-20",
+      "min": 25.9,
+      "max": 37.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 8.8,
+      "nascer_sol": "05:35",
+      "por_sol": "17:55"
+    },
+    {
+      "data": "2026-11-21",
+      "min": 26.2,
+      "max": 37.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 9.0,
+      "nascer_sol": "05:35",
+      "por_sol": "17:56"
+    },
+    {
+      "data": "2026-11-22",
+      "min": 26.4,
+      "max": 38.1,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.2,
+      "uv": 9.0,
+      "nascer_sol": "05:35",
+      "por_sol": "17:56"
+    },
+    {
+      "data": "2026-11-23",
+      "min": 26.5,
+      "max": 38.9,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.0,
+      "nascer_sol": "05:35",
+      "por_sol": "17:56"
+    },
+    {
+      "data": "2026-11-24",
+      "min": 26.7,
+      "max": 39.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.1,
+      "nascer_sol": "05:36",
+      "por_sol": "17:57"
+    },
+    {
+      "data": "2026-11-25",
+      "min": 27.0,
+      "max": 39.2,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 9.0,
+      "nascer_sol": "05:36",
+      "por_sol": "17:57"
+    }
+  ],
   "queimadas": {
     "focos_100km": 116,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-11-19T15:55:30.207271+00:00"
   },
   "uv": {
-    "indice": 1.4,
-    "categoria": "Baixo",
+    "indice": 8.8,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 53,
+    "indice": 54,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 6.7,
-    "pm10": 7.8,
-    "no2": 1.0,
-    "o3": 61.0,
+    "pm25": 8.9,
+    "pm10": 11.4,
+    "no2": 0.8,
+    "o3": 74.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-16T17:53:11.309365+00:00"
+    "atualizado_em": "2026-11-19T17:01:04.161365+00:00"
   },
   "sol": {
-    "nascer": "05:34",
-    "por": "17:54",
+    "nascer": "05:35",
+    "por": "17:55",
     "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Crescente",
-    "iluminacao_pct": 97.0,
-    "fase_pct": 21.1,
-    "dias_proxima_cheia": 9,
+    "nome": "Quarto Crescente",
+    "iluminacao_pct": 69.0,
+    "fase_pct": 31.3,
+    "dias_proxima_cheia": 6,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 32.6,
+  "temperatura_atual": 37.1,
   "vento": {
-    "velocidade_kmh": 4.0,
-    "direcao_graus": 355,
-    "direcao": "N",
-    "max_kmh": 15.6,
-    "rajada_kmh": 27.7,
-    "direcao_dominante": "ENE",
+    "velocidade_kmh": 6.7,
+    "direcao_graus": 76,
+    "direcao": "ENE",
+    "max_kmh": 14.4,
+    "rajada_kmh": 26.6,
+    "direcao_dominante": "NE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 50,
-  "pressao_hpa": 1008,
-  "ponto_orvalho_c": 20.7,
+  "umidade_pct": 38,
+  "pressao_hpa": 1007,
+  "ponto_orvalho_c": 20.4,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-11-08T15:05:52.299332+00:00"
   },
-  "_clima_em": "2026-11-16T17:53:11.309365+00:00"
+  "_clima_em": "2026-11-19T17:01:04.161365+00:00"
 }
