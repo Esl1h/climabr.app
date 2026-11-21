@@ -4,8 +4,86 @@
   "slug": "pingo-d-agua",
   "latitude": -19.7434,
   "longitude": -42.4218,
-  "atualizado_em": "2026-11-21T13:26:27.399259+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-21T15:53:31.086566+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-21",
+      "min": 22.6,
+      "max": 32.4,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 6.2,
+      "uv": 8.2,
+      "nascer_sol": "05:01",
+      "por_sol": "18:09"
+    },
+    {
+      "data": "2026-11-22",
+      "min": 22.3,
+      "max": 32.3,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 13.3,
+      "uv": 8.3,
+      "nascer_sol": "05:01",
+      "por_sol": "18:10"
+    },
+    {
+      "data": "2026-11-23",
+      "min": 22.8,
+      "max": 33.2,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 27.5,
+      "uv": 7.5,
+      "nascer_sol": "05:01",
+      "por_sol": "18:10"
+    },
+    {
+      "data": "2026-11-24",
+      "min": 23.0,
+      "max": 32.0,
+      "condicao": "Tempestade com granizo leve",
+      "condicao_codigo": 96,
+      "chuva_mm": 10.6,
+      "uv": 9.6,
+      "nascer_sol": "05:01",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-11-25",
+      "min": 22.5,
+      "max": 33.5,
+      "condicao": "Tempestade com granizo leve",
+      "condicao_codigo": 96,
+      "chuva_mm": 26.7,
+      "uv": 9.5,
+      "nascer_sol": "05:01",
+      "por_sol": "18:11"
+    },
+    {
+      "data": "2026-11-26",
+      "min": 22.8,
+      "max": 33.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 12.7,
+      "uv": 5.4,
+      "nascer_sol": "05:01",
+      "por_sol": "18:12"
+    },
+    {
+      "data": "2026-11-27",
+      "min": 18.1,
+      "max": 26.2,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 24.3,
+      "uv": 2.1,
+      "nascer_sol": "05:01",
+      "por_sol": "18:13"
+    }
+  ],
   "reservatorio": {
     "nome": "Sa Carvalho",
     "nivel_pct": 38.8,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-11-21T14:49:12.380337+00:00"
   },
   "uv": {
-    "indice": 8.8,
+    "indice": 8.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 50,
+    "indice": 37,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 8.4,
-    "pm10": 8.5,
-    "no2": 1.5,
-    "o3": 134.0,
+    "pm25": 6.1,
+    "pm10": 6.1,
+    "no2": 1.6,
+    "o3": 118.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-18T16:54:56.026338+00:00"
+    "atualizado_em": "2026-11-21T15:53:31.086566+00:00"
   },
   "sol": {
-    "nascer": "05:02",
-    "por": "18:07",
+    "nascer": "05:01",
+    "por": "18:09",
     "duracao_h": 13.1,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 59.0,
-    "fase_pct": 27.9,
-    "dias_proxima_cheia": 7,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 87.0,
+    "fase_pct": 38.1,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 31.1,
+  "temperatura_atual": 31.8,
   "vento": {
-    "velocidade_kmh": 4.8,
-    "direcao_graus": 53,
-    "direcao": "NE",
-    "max_kmh": 11.0,
-    "rajada_kmh": 37.4,
-    "direcao_dominante": "NNE",
+    "velocidade_kmh": 7.2,
+    "direcao_graus": 360,
+    "direcao": "N",
+    "max_kmh": 9.5,
+    "rajada_kmh": 27.4,
+    "direcao_dominante": "NNO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 57,
-  "pressao_hpa": 1008,
-  "ponto_orvalho_c": 21.4,
+  "umidade_pct": 58,
+  "pressao_hpa": 1009,
+  "ponto_orvalho_c": 22.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-11-11T16:10:50.728727+00:00"
   },
-  "_clima_em": "2026-11-18T16:54:56.026338+00:00"
+  "_clima_em": "2026-11-21T15:53:31.086566+00:00"
 }

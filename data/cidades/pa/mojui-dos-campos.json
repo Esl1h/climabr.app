@@ -4,8 +4,86 @@
   "slug": "mojui-dos-campos",
   "latitude": -3.0704,
   "longitude": -54.5752,
-  "atualizado_em": "2026-11-21T13:29:38.676367+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-21T15:53:31.086566+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-21",
+      "min": 24.2,
+      "max": 36.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.0,
+      "uv": 9.0,
+      "nascer_sol": "06:16",
+      "por_sol": "18:32"
+    },
+    {
+      "data": "2026-11-22",
+      "min": 23.8,
+      "max": 36.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 9.0,
+      "nascer_sol": "06:16",
+      "por_sol": "18:32"
+    },
+    {
+      "data": "2026-11-23",
+      "min": 27.0,
+      "max": 37.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.0,
+      "nascer_sol": "06:16",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-11-24",
+      "min": 26.9,
+      "max": 37.0,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.0,
+      "nascer_sol": "06:16",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-11-25",
+      "min": 26.9,
+      "max": 38.1,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 9.0,
+      "nascer_sol": "06:17",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-11-26",
+      "min": 27.5,
+      "max": 38.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.9,
+      "uv": 9.2,
+      "nascer_sol": "06:17",
+      "por_sol": "18:34"
+    },
+    {
+      "data": "2026-11-27",
+      "min": 24.8,
+      "max": 37.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 3.6,
+      "uv": 9.1,
+      "nascer_sol": "06:17",
+      "por_sol": "18:34"
+    }
+  ],
   "reservatorio": {
     "nome": "Curua-Una",
     "nivel_pct": 27.7,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-11-21T14:49:12.380337+00:00"
   },
   "uv": {
-    "indice": 7.3,
-    "categoria": "Alto",
+    "indice": 9.0,
+    "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 139,
+    "indice": 114,
     "categoria": "Ruim para grupos sensíveis",
     "principal_poluente": "PM2.5",
-    "pm25": 49.6,
-    "pm10": 51.1,
-    "no2": 4.8,
-    "o3": 160.0,
+    "pm25": 26.7,
+    "pm10": 29.7,
+    "no2": 2.0,
+    "o3": 86.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-18T16:54:56.026338+00:00"
+    "atualizado_em": "2026-11-21T15:53:31.086566+00:00"
   },
   "sol": {
-    "nascer": "06:15",
-    "por": "18:31",
+    "nascer": "06:16",
+    "por": "18:32",
     "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 59.0,
-    "fase_pct": 27.9,
-    "dias_proxima_cheia": 7,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 87.0,
+    "fase_pct": 38.1,
+    "dias_proxima_cheia": 4,
     "fonte": "Cálculo astronômico"
   },
   "temperatura_atual": 36.0,
   "vento": {
-    "velocidade_kmh": 8.6,
-    "direcao_graus": 61,
-    "direcao": "ENE",
-    "max_kmh": 12.8,
-    "rajada_kmh": 33.5,
-    "direcao_dominante": "E",
+    "velocidade_kmh": 10.7,
+    "direcao_graus": 49,
+    "direcao": "NE",
+    "max_kmh": 13.4,
+    "rajada_kmh": 35.6,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 40,
-  "pressao_hpa": 1008,
-  "ponto_orvalho_c": 20.3,
+  "umidade_pct": 38,
+  "pressao_hpa": 1010,
+  "ponto_orvalho_c": 19.6,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-11-13T16:14:57.651205+00:00"
   },
-  "_clima_em": "2026-11-18T16:54:56.026338+00:00",
+  "_clima_em": "2026-11-21T15:53:31.086566+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 2090,
