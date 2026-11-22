@@ -4,8 +4,86 @@
   "slug": "nova-santa-helena",
   "latitude": -10.9189,
   "longitude": -54.9067,
-  "atualizado_em": "2026-11-22T13:07:35.612420+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-22T15:53:44.476354+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-22",
+      "min": 22.5,
+      "max": 31.9,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 2.7,
+      "uv": 8.2,
+      "nascer_sol": "06:05",
+      "por_sol": "18:45"
+    },
+    {
+      "data": "2026-11-23",
+      "min": 22.5,
+      "max": 32.6,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 14.6,
+      "uv": 4.8,
+      "nascer_sol": "06:06",
+      "por_sol": "18:46"
+    },
+    {
+      "data": "2026-11-24",
+      "min": 22.5,
+      "max": 32.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 9.4,
+      "nascer_sol": "06:06",
+      "por_sol": "18:46"
+    },
+    {
+      "data": "2026-11-25",
+      "min": 23.4,
+      "max": 32.8,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 6.8,
+      "uv": 9.4,
+      "nascer_sol": "06:06",
+      "por_sol": "18:47"
+    },
+    {
+      "data": "2026-11-26",
+      "min": 22.5,
+      "max": 32.4,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 11.1,
+      "uv": 9.4,
+      "nascer_sol": "06:06",
+      "por_sol": "18:47"
+    },
+    {
+      "data": "2026-11-27",
+      "min": 23.0,
+      "max": 32.6,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.5,
+      "uv": 9.3,
+      "nascer_sol": "06:06",
+      "por_sol": "18:48"
+    },
+    {
+      "data": "2026-11-28",
+      "min": 22.0,
+      "max": 31.7,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 6.6,
+      "uv": 2.7,
+      "nascer_sol": "06:06",
+      "por_sol": "18:48"
+    }
+  ],
   "reservatorio": {
     "nome": "Sinop",
     "nivel_pct": 21.6,
@@ -25,22 +103,22 @@
     "atualizado_em": "2026-11-22T14:45:17.214306+00:00"
   },
   "uv": {
-    "indice": 9.3,
+    "indice": 8.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 59,
+    "indice": 57,
     "categoria": "Moderada",
     "principal_poluente": "PM2.5",
-    "pm25": 13.7,
-    "pm10": 14.6,
-    "no2": 0.1,
-    "o3": 49.0,
+    "pm25": 14.2,
+    "pm10": 15.1,
+    "no2": 0.2,
+    "o3": 54.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-20T16:40:02.469280+00:00"
+    "atualizado_em": "2026-11-22T15:53:44.476354+00:00"
   },
   "sol": {
     "nascer": "06:05",
@@ -50,25 +128,25 @@
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Quarto Crescente",
-    "iluminacao_pct": 79.0,
-    "fase_pct": 34.7,
-    "dias_proxima_cheia": 5,
+    "nome": "Gibosa Crescente",
+    "iluminacao_pct": 93.0,
+    "fase_pct": 41.5,
+    "dias_proxima_cheia": 3,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 27.0,
+  "temperatura_atual": 31.3,
   "vento": {
-    "velocidade_kmh": 13.3,
-    "direcao_graus": 33,
-    "direcao": "NNE",
-    "max_kmh": 14.8,
-    "rajada_kmh": 34.2,
+    "velocidade_kmh": 5.9,
+    "direcao_graus": 360,
+    "direcao": "N",
+    "max_kmh": 9.5,
+    "rajada_kmh": 25.2,
     "direcao_dominante": "NNE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 83,
-  "pressao_hpa": 1010,
-  "ponto_orvalho_c": 23.8,
+  "umidade_pct": 58,
+  "pressao_hpa": 1012,
+  "ponto_orvalho_c": 22.1,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-11-08T15:05:52.299332+00:00"
   },
-  "_clima_em": "2026-11-20T16:40:02.469280+00:00",
+  "_clima_em": "2026-11-22T15:53:44.476354+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 63,
