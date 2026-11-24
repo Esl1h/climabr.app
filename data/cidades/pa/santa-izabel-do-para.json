@@ -4,58 +4,136 @@
   "slug": "santa-izabel-do-para",
   "latitude": -1.3652,
   "longitude": -48.1293,
-  "atualizado_em": "2026-11-22T13:18:04.858786+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-24T19:18:08.306095+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-24",
+      "min": 24.4,
+      "max": 33.8,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.5,
+      "uv": 7.6,
+      "nascer_sol": "05:53",
+      "por_sol": "18:04"
+    },
+    {
+      "data": "2026-11-25",
+      "min": 24.6,
+      "max": 34.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.1,
+      "uv": 8.5,
+      "nascer_sol": "05:53",
+      "por_sol": "18:05"
+    },
+    {
+      "data": "2026-11-26",
+      "min": 24.4,
+      "max": 34.9,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.6,
+      "uv": 8.5,
+      "nascer_sol": "05:53",
+      "por_sol": "18:05"
+    },
+    {
+      "data": "2026-11-27",
+      "min": 24.5,
+      "max": 35.2,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 1.8,
+      "uv": 7.2,
+      "nascer_sol": "05:54",
+      "por_sol": "18:05"
+    },
+    {
+      "data": "2026-11-28",
+      "min": 24.2,
+      "max": 35.0,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.5,
+      "uv": 8.2,
+      "nascer_sol": "05:54",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-11-29",
+      "min": 24.2,
+      "max": 34.9,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
+      "chuva_mm": 0,
+      "uv": 7.8,
+      "nascer_sol": "05:54",
+      "por_sol": "18:06"
+    },
+    {
+      "data": "2026-11-30",
+      "min": 23.8,
+      "max": 35.6,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 6.8,
+      "nascer_sol": "05:55",
+      "por_sol": "18:07"
+    }
+  ],
   "queimadas": {
     "focos_100km": 157,
     "fonte": "NASA FIRMS / INPE",
     "atualizado_em": "2026-11-24T17:59:32.797638+00:00"
   },
   "uv": {
-    "indice": 8.6,
-    "categoria": "Muito Alto",
+    "indice": 7.6,
+    "categoria": "Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 50,
+    "indice": 38,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 9.3,
-    "pm10": 12.9,
-    "no2": 0.5,
-    "o3": 58.0,
+    "pm25": 7.5,
+    "pm10": 9.9,
+    "no2": 1.1,
+    "o3": 52.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-21T15:53:31.086566+00:00"
+    "atualizado_em": "2026-11-24T19:18:08.306095+00:00"
   },
   "sol": {
-    "nascer": "05:52",
-    "por": "18:03",
+    "nascer": "05:53",
+    "por": "18:04",
     "duracao_h": 12.2,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Gibosa Crescente",
-    "iluminacao_pct": 87.0,
-    "fase_pct": 38.1,
-    "dias_proxima_cheia": 4,
+    "iluminacao_pct": 100.0,
+    "fase_pct": 48.2,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 33.6,
+  "temperatura_atual": 30.6,
   "vento": {
-    "velocidade_kmh": 12.1,
-    "direcao_graus": 90,
-    "direcao": "E",
-    "max_kmh": 13.8,
-    "rajada_kmh": 33.8,
+    "velocidade_kmh": 11.6,
+    "direcao_graus": 58,
+    "direcao": "ENE",
+    "max_kmh": 16.1,
+    "rajada_kmh": 34.9,
     "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 47,
-  "pressao_hpa": 1010,
-  "ponto_orvalho_c": 20.9,
+  "umidade_pct": 67,
+  "pressao_hpa": 1009,
+  "ponto_orvalho_c": 23.7,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -82,5 +160,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-11-13T16:14:57.651205+00:00"
   },
-  "_clima_em": "2026-11-21T15:53:31.086566+00:00"
+  "_clima_em": "2026-11-24T19:18:08.306095+00:00"
 }

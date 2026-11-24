@@ -4,8 +4,86 @@
   "slug": "barao-do-monte-alto",
   "latitude": -21.2648,
   "longitude": -42.2784,
-  "atualizado_em": "2026-11-24T15:39:24.081982+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-24T19:18:08.306095+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-24",
+      "min": 23.4,
+      "max": 32.6,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 10.0,
+      "uv": 8.7,
+      "nascer_sol": "04:58",
+      "por_sol": "18:13"
+    },
+    {
+      "data": "2026-11-25",
+      "min": 24.2,
+      "max": 34.4,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 14.7,
+      "uv": 8.6,
+      "nascer_sol": "04:58",
+      "por_sol": "18:14"
+    },
+    {
+      "data": "2026-11-26",
+      "min": 20.6,
+      "max": 29.5,
+      "condicao": "Tempestade com granizo leve",
+      "condicao_codigo": 96,
+      "chuva_mm": 117.6,
+      "uv": 7.9,
+      "nascer_sol": "04:58",
+      "por_sol": "18:14"
+    },
+    {
+      "data": "2026-11-27",
+      "min": 19.9,
+      "max": 24.2,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 12.0,
+      "uv": 0.8,
+      "nascer_sol": "04:58",
+      "por_sol": "18:15"
+    },
+    {
+      "data": "2026-11-28",
+      "min": 20.8,
+      "max": 29.5,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 2.1,
+      "uv": 7.7,
+      "nascer_sol": "04:58",
+      "por_sol": "18:16"
+    },
+    {
+      "data": "2026-11-29",
+      "min": 22.5,
+      "max": 31.2,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 23.1,
+      "uv": 5.7,
+      "nascer_sol": "04:58",
+      "por_sol": "18:16"
+    },
+    {
+      "data": "2026-11-30",
+      "min": 20.2,
+      "max": 25.9,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 32.9,
+      "uv": 5.8,
+      "nascer_sol": "04:58",
+      "por_sol": "18:17"
+    }
+  ],
   "reservatorio": {
     "nome": "Barra Brauna",
     "nivel_pct": 69.7,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-11-24T17:59:32.797638+00:00"
   },
   "uv": {
-    "indice": 8.8,
+    "indice": 8.7,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 31,
+    "indice": 39,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 5.1,
-    "pm10": 5.1,
-    "no2": 0.8,
-    "o3": 107.0,
+    "pm25": 6.4,
+    "pm10": 6.5,
+    "no2": 2.6,
+    "o3": 85.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-21T15:53:31.086566+00:00"
+    "atualizado_em": "2026-11-24T19:18:08.306095+00:00"
   },
   "sol": {
     "nascer": "04:58",
-    "por": "18:11",
-    "duracao_h": 13.2,
+    "por": "18:13",
+    "duracao_h": 13.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
     "nome": "Gibosa Crescente",
-    "iluminacao_pct": 87.0,
-    "fase_pct": 38.1,
-    "dias_proxima_cheia": 4,
+    "iluminacao_pct": 100.0,
+    "fase_pct": 48.2,
+    "dias_proxima_cheia": 1,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 33.1,
+  "temperatura_atual": 31.6,
   "vento": {
-    "velocidade_kmh": 14.3,
-    "direcao_graus": 307,
-    "direcao": "NO",
-    "max_kmh": 15.2,
-    "rajada_kmh": 34.2,
+    "velocidade_kmh": 7.6,
+    "direcao_graus": 356,
+    "direcao": "N",
+    "max_kmh": 14.6,
+    "rajada_kmh": 33.1,
     "direcao_dominante": "ONO",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 57,
-  "pressao_hpa": 1008,
-  "ponto_orvalho_c": 23.4,
+  "umidade_pct": 63,
+  "pressao_hpa": 1009,
+  "ponto_orvalho_c": 23.8,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,5 +173,5 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-11-11T16:10:50.728727+00:00"
   },
-  "_clima_em": "2026-11-21T15:53:31.086566+00:00"
+  "_clima_em": "2026-11-24T19:18:08.306095+00:00"
 }
