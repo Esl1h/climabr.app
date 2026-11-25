@@ -4,8 +4,86 @@
   "slug": "mojui-dos-campos",
   "latitude": -3.0704,
   "longitude": -54.5752,
-  "atualizado_em": "2026-11-25T15:27:29.320023+00:00",
-  "previsao": [],
+  "atualizado_em": "2026-11-25T18:23:26.487090+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-25",
+      "min": 26.5,
+      "max": 36.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 8.9,
+      "nascer_sol": "06:17",
+      "por_sol": "18:33"
+    },
+    {
+      "data": "2026-11-26",
+      "min": 26.8,
+      "max": 37.2,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 8.9,
+      "nascer_sol": "06:17",
+      "por_sol": "18:34"
+    },
+    {
+      "data": "2026-11-27",
+      "min": 27.0,
+      "max": 36.9,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 0.8,
+      "uv": 8.9,
+      "nascer_sol": "06:17",
+      "por_sol": "18:34"
+    },
+    {
+      "data": "2026-11-28",
+      "min": 25.2,
+      "max": 37.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.9,
+      "uv": 8.9,
+      "nascer_sol": "06:18",
+      "por_sol": "18:34"
+    },
+    {
+      "data": "2026-11-29",
+      "min": 24.1,
+      "max": 36.2,
+      "condicao": "Chuvisco moderado",
+      "condicao_codigo": 53,
+      "chuva_mm": 1.5,
+      "uv": 8.5,
+      "nascer_sol": "06:18",
+      "por_sol": "18:35"
+    },
+    {
+      "data": "2026-11-30",
+      "min": 24.8,
+      "max": 37.0,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.3,
+      "uv": 7.5,
+      "nascer_sol": "06:18",
+      "por_sol": "18:35"
+    },
+    {
+      "data": "2026-12-01",
+      "min": 25.9,
+      "max": 37.6,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.4,
+      "uv": 7.5,
+      "nascer_sol": "06:18",
+      "por_sol": "18:36"
+    }
+  ],
   "reservatorio": {
     "nome": "Curua-Una",
     "nivel_pct": 24.7,
@@ -25,50 +103,50 @@
     "atualizado_em": "2026-11-25T17:27:52.855105+00:00"
   },
   "uv": {
-    "indice": 8.8,
+    "indice": 8.9,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 149,
-    "categoria": "Ruim para grupos sensíveis",
+    "indice": 182,
+    "categoria": "Ruim",
     "principal_poluente": "PM2.5",
-    "pm25": 66.8,
-    "pm10": 69.8,
-    "no2": 5.4,
-    "o3": 173.0,
+    "pm25": 126.7,
+    "pm10": 130.9,
+    "no2": 13.5,
+    "o3": 274.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-23T19:47:22.716526+00:00"
+    "atualizado_em": "2026-11-25T18:23:26.487090+00:00"
   },
   "sol": {
-    "nascer": "06:16",
+    "nascer": "06:17",
     "por": "18:33",
     "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 97.0,
-    "fase_pct": 44.9,
-    "dias_proxima_cheia": 2,
+    "nome": "Cheia",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 51.6,
+    "dias_proxima_cheia": 0,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 35.7,
+  "temperatura_atual": 36.2,
   "vento": {
-    "velocidade_kmh": 12.3,
-    "direcao_graus": 56,
+    "velocidade_kmh": 11.6,
+    "direcao_graus": 55,
     "direcao": "NE",
-    "max_kmh": 15.6,
-    "rajada_kmh": 38.9,
-    "direcao_dominante": "NE",
+    "max_kmh": 16.2,
+    "rajada_kmh": 40.0,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
   "umidade_pct": 39,
-  "pressao_hpa": 1006,
-  "ponto_orvalho_c": 19.8,
+  "pressao_hpa": 1007,
+  "ponto_orvalho_c": 20.0,
   "dengue": {
     "nivel_alerta": 1,
     "nivel_label": "Atenção",
@@ -95,7 +173,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-11-13T16:14:57.651205+00:00"
   },
-  "_clima_em": "2026-11-23T19:47:22.716526+00:00",
+  "_clima_em": "2026-11-25T18:23:26.487090+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 2090,

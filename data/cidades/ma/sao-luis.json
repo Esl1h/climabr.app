@@ -4,47 +4,84 @@
   "slug": "sao-luis",
   "latitude": -2.6339,
   "longitude": -44.2807,
-  "atualizado_em": "2026-11-25T15:16:13.874345+00:00",
+  "atualizado_em": "2026-11-25T18:23:26.487090+00:00",
   "previsao": [
     {
       "data": "2026-11-25",
-      "min": 27,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
-      "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "min": 27.0,
+      "max": 33.9,
+      "condicao": "Chuvisco denso",
+      "condicao_codigo": 55,
+      "chuva_mm": 1.7,
+      "uv": 8.2,
+      "nascer_sol": "05:36",
+      "por_sol": "17:51"
     },
     {
       "data": "2026-11-26",
-      "min": 27,
-      "max": 34,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 26.8,
+      "max": 34.3,
+      "condicao": "Parcialmente nublado",
+      "condicao_codigo": 2,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 8.4,
+      "nascer_sol": "05:36",
+      "por_sol": "17:52"
     },
     {
       "data": "2026-11-27",
-      "min": 26,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 26.6,
+      "max": 34.3,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 8.3,
+      "nascer_sol": "05:37",
+      "por_sol": "17:52"
     },
     {
       "data": "2026-11-28",
-      "min": 27,
-      "max": 33,
-      "condicao": "Parcialmente Nublado",
-      "condicao_codigo": "pn",
+      "min": 26.4,
+      "max": 34.4,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.1,
+      "uv": 8.8,
+      "nascer_sol": "05:37",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-11-29",
+      "min": 27.0,
+      "max": 34.7,
+      "condicao": "Principalmente limpo",
+      "condicao_codigo": 1,
       "chuva_mm": 0,
-      "umidade": 0,
-      "uv": 0.0
+      "uv": 8.7,
+      "nascer_sol": "05:37",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-11-30",
+      "min": 27.0,
+      "max": 35.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 1.2,
+      "uv": 8.7,
+      "nascer_sol": "05:38",
+      "por_sol": "17:53"
+    },
+    {
+      "data": "2026-12-01",
+      "min": 27.0,
+      "max": 34.3,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 2.4,
+      "uv": 6.8,
+      "nascer_sol": "05:38",
+      "por_sol": "17:54"
     }
   ],
   "queimadas": {
@@ -53,50 +90,50 @@
     "atualizado_em": "2026-11-25T17:27:52.855105+00:00"
   },
   "uv": {
-    "indice": 8.6,
+    "indice": 8.2,
     "categoria": "Muito Alto",
     "fonte": "Open-Meteo",
     "pico_inicio": "10:00",
     "pico_fim": "14:00"
   },
   "qualidade_ar": {
-    "indice": 32,
+    "indice": 41,
     "categoria": "Boa",
     "principal_poluente": "PM2.5",
-    "pm25": 7.4,
-    "pm10": 10.3,
-    "no2": 1.6,
-    "o3": 57.0,
+    "pm25": 8.1,
+    "pm10": 11.3,
+    "no2": 1.0,
+    "o3": 55.0,
     "fonte": "Open-Meteo / Copernicus",
-    "atualizado_em": "2026-11-23T19:47:22.716526+00:00"
+    "atualizado_em": "2026-11-25T18:23:26.487090+00:00"
   },
   "sol": {
     "nascer": "05:36",
     "por": "17:51",
-    "duracao_h": 12.2,
+    "duracao_h": 12.3,
     "estacao": "Primavera",
     "fonte": "Open-Meteo"
   },
   "lua": {
-    "nome": "Gibosa Crescente",
-    "iluminacao_pct": 97.0,
-    "fase_pct": 44.9,
-    "dias_proxima_cheia": 2,
+    "nome": "Cheia",
+    "iluminacao_pct": 100.0,
+    "fase_pct": 51.6,
+    "dias_proxima_cheia": 0,
     "fonte": "Cálculo astronômico"
   },
-  "temperatura_atual": 30.5,
+  "temperatura_atual": 32.3,
   "vento": {
-    "velocidade_kmh": 17.8,
-    "direcao_graus": 34,
+    "velocidade_kmh": 21.4,
+    "direcao_graus": 51,
     "direcao": "NE",
-    "max_kmh": 18.9,
-    "rajada_kmh": 41.0,
-    "direcao_dominante": "NE",
+    "max_kmh": 21.5,
+    "rajada_kmh": 45.0,
+    "direcao_dominante": "ENE",
     "fonte": "Open-Meteo"
   },
-  "umidade_pct": 64,
-  "pressao_hpa": 1008,
-  "ponto_orvalho_c": 22.9,
+  "umidade_pct": 54,
+  "pressao_hpa": 1009,
+  "ponto_orvalho_c": 21.9,
   "dengue": {
     "nivel_alerta": 2,
     "nivel_label": "Alerta",
@@ -123,7 +160,7 @@
     "fonte": "InfoDengue / Fiocruz / SVS",
     "atualizado_em": "2026-11-20T17:01:54.240251+00:00"
   },
-  "_clima_em": "2026-11-23T19:47:22.716526+00:00",
+  "_clima_em": "2026-11-25T18:23:26.487090+00:00",
   "agua": {
     "parametro": "Escherichia coli",
     "amostras": 551,
