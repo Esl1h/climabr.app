@@ -1,8 +1,8 @@
 name: Deploy do Worker
 
-# Workflow separado do deploy.yml de propósito. Aquele roda 2x/dia por cron para
-# republicar o site com os dados novos, e o Worker não muda quando o dado muda:
-# juntar os dois criaria uma versão nova do Worker duas vezes por dia sem motivo.
+# Workflow separado do deploy.yml de propósito. Aquele republica o site a cada
+# coleta de dados, e o Worker não muda quando o dado muda: juntar os dois
+# criaria uma versão nova do Worker a cada coleta sem motivo.
 # Aqui o filtro `paths` do próprio GitHub resolve o gatilho, sem comparar diff.
 #
 # A falta deste workflow deixou a correção do PR #26 dois meses mesclada e fora
