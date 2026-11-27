@@ -10,7 +10,8 @@ Substitui CPTEC para previsão e adiciona campos novos:
 
 Open-Meteo: https://open-meteo.com — sem autenticação, suporta batch
 Air Quality: https://air-quality-api.open-meteo.com
-Rodar a cada 3h via GitHub Actions.
+Rodar 3x/dia via GitHub Actions: a coleta é incremental e começa pelas
+cidades mais desatualizadas (ver FRESCO_HORAS).
 """
 
 import json
@@ -34,6 +35,9 @@ DELAY_BATCH = 3.0  # segundos entre lotes (respeita o rate limit do Open-Meteo)
 FRESCO_HORAS = 20  # não recoleta cidade já atualizada nas últimas N horas
 PAUSA_429 = 60.0   # pausa antes de repetir um lote que tomou 429
 MAX_429_SEGUIDOS = 3  # lotes seguidos com 429 = cota esgotada, encerra a rodada
+TENTATIVAS_LOTE = 3   # tentativas por lote com erro de rede antes de pular o lote
+PAUSA_ERRO = 5.0      # pausa antes de repetir um lote que falhou por erro de rede
+TIMEOUT_S = 15        # por requisição; handshake travado gasta o timeout inteiro
 LIMITE_MINUTOS = float(os.environ.get("LIMITE_MINUTOS", "25"))  # orçamento de tempo da rodada
 
 # WMO Weather Codes → descrição PT-BR
@@ -131,7 +135,7 @@ def fetch_batch(lats: list[float], lons: list[float]) -> tuple[list[dict], list[
               "&timezone=America%2FSao_Paulo&forecast_days=7")
 
     req = urllib.request.Request(url_fc, headers={"User-Agent": "climabr.app/1.0"})
-    with urllib.request.urlopen(req, timeout=20) as r:
+    with urllib.request.urlopen(req, timeout=TIMEOUT_S) as r:
         fc_data = json.loads(r.read())
     if not isinstance(fc_data, list):
         fc_data = [fc_data]
@@ -141,7 +145,7 @@ def fetch_batch(lats: list[float], lons: list[float]) -> tuple[list[dict], list[
               "&current=us_aqi,pm2_5,pm10,european_aqi,carbon_monoxide,nitrogen_dioxide,ozone"
               "&timezone=America%2FSao_Paulo")
     req2 = urllib.request.Request(url_aq, headers={"User-Agent": "climabr.app/1.0"})
-    with urllib.request.urlopen(req2, timeout=20) as r:
+    with urllib.request.urlopen(req2, timeout=TIMEOUT_S) as r:
         aq_data = json.loads(r.read())
     if not isinstance(aq_data, list):
         aq_data = [aq_data]
@@ -318,6 +322,7 @@ def main():
     # a próxima rodada retoma pelas cidades mais desatualizadas.
     inicio_exec = time.monotonic()
     seguidos_429 = 0
+    falhas_lote = 0
     inicio = 0
     while inicio < total:
         if time.monotonic() - inicio_exec > LIMITE_MINUTOS * 60:
@@ -332,8 +337,9 @@ def main():
         try:
             fc_list, aq_list = fetch_batch(lats, lons)
             seguidos_429 = 0
-        except urllib.error.HTTPError as e:
-            if e.code == 429:
+            falhas_lote = 0
+        except Exception as e:
+            if isinstance(e, urllib.error.HTTPError) and e.code == 429:
                 seguidos_429 += 1
                 if seguidos_429 >= MAX_429_SEGUIDOS:
                     print(f"  429 persistente ({MAX_429_SEGUIDOS} lotes seguidos); cota do "
@@ -344,14 +350,16 @@ def main():
                       f"{PAUSA_429:.0f}s para repetir.", file=sys.stderr)
                 time.sleep(PAUSA_429)
                 continue  # repete o mesmo lote
-            print(f"  ERRO lote {inicio}-{inicio+len(lote)}: {e}", file=sys.stderr)
+            # Timeout, handshake SSL, 5xx: costumam ser transitórios, então repete
+            # o lote antes de desistir dele (pular deixa 25 cidades sem clima por dia)
+            falhas_lote += 1
+            print(f"  ERRO lote {inicio}-{inicio+len(lote)} "
+                  f"(tentativa {falhas_lote}/{TENTATIVAS_LOTE}): {e}", file=sys.stderr)
+            if falhas_lote < TENTATIVAS_LOTE:
+                time.sleep(PAUSA_ERRO)
+                continue  # repete o mesmo lote
             erros += len(lote)
-            inicio += BATCH_SIZE
-            time.sleep(3)
-            continue
-        except Exception as e:
-            print(f"  ERRO lote {inicio}-{inicio+len(lote)}: {e}", file=sys.stderr)
-            erros += len(lote)
+            falhas_lote = 0
             inicio += BATCH_SIZE
             time.sleep(3)
             continue

@@ -1,6 +1,8 @@
 """Testes dos cálculos puros dos scrapers (sem rede)."""
 
 import importlib.util
+import json
+import sys
 from datetime import date
 from pathlib import Path
 
@@ -55,3 +57,44 @@ def test_estacao_ano_hemisferios():
     assert om.estacao_ano(date(2026, 6, 15), 10.0) == "Primavera"
     assert om.estacao_ano(date(2026, 12, 21), -23.5) == "Verão"
     assert om.estacao_ano(date(2026, 3, 19), -23.5) == "Verão"
+
+
+def preparar_main(tmp_path, monkeypatch, fetch_batch):
+    """Roda main() com 1 município, sem rede, sem pausas e com dados em tmp_path."""
+    municipios = [{"nome": "Teste", "estado": "sp", "slug": "teste", "lat": -23.5, "lon": -46.6}]
+    arquivo = tmp_path / "municipios.json"
+    arquivo.write_text(json.dumps(municipios), encoding="utf-8")
+    monkeypatch.setattr(om, "MUNICIPIOS", arquivo)
+    monkeypatch.setattr(om, "DATA_DIR", tmp_path / "cidades")
+    monkeypatch.setattr(om.time, "sleep", lambda _s: None)
+    monkeypatch.setattr(sys, "argv", ["scrape-openmeteo.py"])
+    monkeypatch.setattr(om, "fetch_batch", fetch_batch)
+    return tmp_path / "cidades" / "sp" / "teste.json"
+
+
+def test_main_repete_lote_com_erro_de_rede(tmp_path, monkeypatch):
+    chamadas = []
+
+    def falha_uma_vez(lats, lons):
+        chamadas.append(1)
+        if len(chamadas) == 1:
+            raise TimeoutError("_ssl.c:1112: The handshake operation timed out")
+        return [{"daily": {}, "current": {"temperature_2m": 21.5}}], [{}]
+
+    salvo = preparar_main(tmp_path, monkeypatch, falha_uma_vez)
+    om.main()
+    assert len(chamadas) == 2
+    assert json.loads(salvo.read_text(encoding="utf-8"))["temperatura_atual"] == 21.5
+
+
+def test_main_desiste_do_lote_depois_das_tentativas(tmp_path, monkeypatch):
+    chamadas = []
+
+    def sempre_falha(lats, lons):
+        chamadas.append(1)
+        raise TimeoutError("handshake")
+
+    salvo = preparar_main(tmp_path, monkeypatch, sempre_falha)
+    om.main()
+    assert len(chamadas) == om.TENTATIVAS_LOTE
+    assert not salvo.exists()
