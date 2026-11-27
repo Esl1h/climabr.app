@@ -335,8 +335,11 @@ export default {
       if (querPng || querSvg) {
         // Cache no edge: SVG/PNG não dependem do user-agent e o PNG (resvg)
         // é o ponto mais caro de CPU. Evita recomputar em hits repetidos.
+        // A chave ignora a query string: ?a=1, ?a=2... não podem forçar um render novo
+        // por requisição. /sp/cotia.png e /sp/cotia?format=png são o mesmo card.
         const cache = caches.default;
-        const hit = await cache.match(request);
+        const cacheKey = new Request(`${siteUrl}/__img/${estado}/${cidade}.${querPng ? 'png' : 'svg'}`);
+        const hit = await cache.match(cacheKey);
         if (hit) return hit;
 
         const dados = await buscarDados(siteUrl, estado, cidade);
@@ -356,7 +359,7 @@ export default {
                   ...SECURITY_HEADERS,
                 },
               });
-              ctx.waitUntil(cache.put(request, resp.clone()));
+              ctx.waitUntil(cache.put(cacheKey, resp.clone()));
               return resp;
             } catch {
               // Degradação graciosa: se o wasm falhar, devolve o SVG
@@ -372,7 +375,7 @@ export default {
               ...SECURITY_HEADERS,
             },
           });
-          ctx.waitUntil(cache.put(request, resp.clone()));
+          ctx.waitUntil(cache.put(cacheKey, resp.clone()));
           return resp;
         }
       }
