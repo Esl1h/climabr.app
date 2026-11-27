@@ -38,6 +38,17 @@ def test_processar_cidade_temperatura_nula_vira_none():
     assert saida["temperatura_atual"] is None
 
 
+def test_mesclar_apaga_condicao_atual_sem_leitura():
+    existente = {"temperatura_atual": 30.0, "umidade_pct": 80, "qualidade_ar": {"aqi": 40}}
+    novos = {"temperatura_atual": None, "umidade_pct": 55, "qualidade_ar": None}
+    saida = om.mesclar(existente, novos)
+    # Sem leitura agora: não pode ficar a temperatura antiga sob carimbo novo
+    assert saida["temperatura_atual"] is None
+    assert saida["umidade_pct"] == 55
+    # O bloco de qualidade do ar tem carimbo próprio e continua válido
+    assert saida["qualidade_ar"] == {"aqi": 40}
+
+
 def test_estacao_ano_hemisferios():
     # Viradas por data, invertidas no Hemisfério Sul
     assert om.estacao_ano(date(2026, 6, 15), -23.5) == "Outono"

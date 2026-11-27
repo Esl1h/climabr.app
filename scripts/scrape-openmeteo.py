@@ -259,6 +259,23 @@ def processar_cidade(fc: dict, aq: dict, municipio: dict, agora: str, hoje: date
         "ponto_orvalho_c": round(float(current.get("dew_point_2m")), 1) if current and current.get("dew_point_2m") is not None else None,
     }
 
+# Condições atuais vêm do mesmo bloco "current" e valem pelo atualizado_em da rodada
+CAMPOS_ATUAIS = ("temperatura_atual", "umidade_pct", "pressao_hpa", "ponto_orvalho_c")
+
+
+def mesclar(existente: dict, novos: dict) -> dict:
+    """Sobrepõe os dados novos no JSON da cidade.
+
+    None é ignorado (o bloco de qualidade do ar tem carimbo próprio e segue
+    válido), exceto nas condições atuais: sem leitura agora, o valor antigo
+    não pode ficar sob um carimbo novo.
+    """
+    existente.update({k: v for k, v in novos.items() if v is not None})
+    for campo in CAMPOS_ATUAIS:
+        existente[campo] = novos.get(campo)
+    return existente
+
+
 def main():
     municipios: list[dict] = json.loads(MUNICIPIOS.read_text(encoding="utf-8"))
 
@@ -371,7 +388,7 @@ def main():
                 "atualizado_em": agora,
                 "_clima_em": agora,  # marca de frescura própria do Open-Meteo (skip incremental)
             })
-            existente.update({k: v for k, v in novos.items() if v is not None})
+            mesclar(existente, novos)
             arquivo.write_text(json.dumps(existente, ensure_ascii=False, indent=2), encoding="utf-8")
             ok += 1
 
