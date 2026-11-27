@@ -15,12 +15,16 @@ Requisitos: Node 22 e Python 3.12.
 
 ```sh
 npm install
+sh scripts/dados-restaurar.sh   # baixa data/cidades, alertas e bandeira (branch `dados`)
 npm run dev            # site em localhost:4321
 npm run check          # typecheck (astro check)
 npm run build          # build completo, gera ./dist
 ```
 
-Os scrapers rodam isolados e escrevem em `data/`:
+Os dados coletados (`data/cidades`, `data/alertas`, `data/bandeira.json`) não ficam
+na `main`: vivem no branch `dados`, que guarda só o snapshot mais recente (sem
+histórico) e é regravado por force push a cada coleta. Por isso esses caminhos estão
+no `.gitignore`. Os scrapers rodam isolados e escrevem em `data/`:
 
 ```sh
 python3 scripts/scrape-alertas.py          # avisos do INMET

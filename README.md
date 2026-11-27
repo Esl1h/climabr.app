@@ -47,7 +47,7 @@ Toda cidade responde em `/{uf}/{cidade}` com vários formatos:
 
 - Astro (SSG) + Tailwind CSS v4 + TypeScript
 - Cloudflare Pages (site) + Workers (curl/SVG/PNG/Prometheus, rota `climabr.app/*`)
-- Coleta em Python via GitHub Actions (cron), gerando JSON em `data/cidades/{uf}/{slug}.json`
+- Coleta em Python via GitHub Actions (cron), gerando JSON em `data/cidades/{uf}/{slug}.json` e publicando no branch `dados`
 
 ## Fontes de dados
 
@@ -65,7 +65,7 @@ Todas públicas e oficiais, com atribuição registrada no dado e no bloco que o
 ## Estrutura
 
 ```
-data/cidades/{uf}/{slug}.json   # dados coletados por município
+data/cidades/{uf}/{slug}.json   # dados coletados por município (branch `dados`; sh scripts/dados-restaurar.sh)
 scripts/                        # scrapers Python (um por fonte)
 src/                            # site Astro (páginas, layout, componentes)
 worker/                         # Cloudflare Worker (curl/SVG/PNG/Prometheus)
@@ -93,7 +93,7 @@ npx wrangler pages deploy dist/ --project-name=climabr-app --branch=main
 npx wrangler deploy                                    # publica o Worker
 ```
 
-O deploy também é automático: `deploy.yml` builda e publica a cada push na `main` e 2x/dia; a coleta roda em `dados-diarios.yml`, `dados-ana.yml` e `dados-inmet.yml`. Guia completo de infraestrutura e custos em [`DEPLOY.md`](DEPLOY.md).
+O deploy também é automático: `deploy.yml` builda e publica a cada push na `main` e ao fim das coletas diária e municipal; a coleta roda em `dados-diarios.yml`, `dados-ana.yml` e `dados-inmet.yml`. Guia completo de infraestrutura e custos em [`DEPLOY.md`](DEPLOY.md).
 
 ## Contribuindo
 

@@ -4,10 +4,9 @@ name: Coleta de fontes municipais
 # São Paulo e pluviômetros do Alerta Rio. As duas são leves (uma requisição
 # cada), então ficam no mesmo job.
 #
-# O site é estático e publica às 9h e 21h UTC (deploy.yml). A coleta roda 10 min
-# antes de cada publicação para que as páginas saiam com o dado do dia. Rodar
-# mais vezes não adiantaria: commits em data/cidades/** não disparam deploy
-# (paths-ignore em deploy.yml), então só o build seguinte leria o arquivo.
+# O site é estático e só lê esses arquivos no build. Commits em data/cidades/**
+# não disparam deploy (paths-ignore em deploy.yml), então o deploy.yml publica
+# quando este workflow termina (workflow_run), sem depender de horário.
 #
 # Às 8h50 UTC a coleta diária (dados-diarios.yml, que começa às 8h com timeout
 # de 40 min) já terminou, evitando dois commits concorrentes nos mesmos arquivos.
@@ -23,9 +22,9 @@ on:
         required: false
         type: string
 
-# Coletas não podem sobrepor: um commit com lease de checkout antigo falha
-# silenciosamente (continue-on-error) e o dado da rodada se perde. Fila
-# global entre todos os workflows de coleta.
+# Coletas não podem sobrepor: o push com lease de um snapshot antigo é
+# recusado e o dado da rodada se perde. Fila global entre todos os workflows
+# de coleta.
 concurrency:
   group: coleta-dados
   cancel-in-progress: false
@@ -40,6 +39,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
+
+      - name: Restaurar dados do branch dados
+        run: sh scripts/dados-restaurar.sh
 
       - name: Setup Python
         uses: actions/setup-python@v7
@@ -58,11 +60,7 @@ jobs:
         run: python3 scripts/scrape-alertario.py
         continue-on-error: true
 
-      - name: Commit dados
+      - name: Publicar dados no branch dados
         if: always()
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          commit_message: 'dados: fontes municipais (CGE-SP, Alerta Rio)'
-          file_pattern: 'data/cidades/sp/sao-paulo.json data/cidades/rj/rio-de-janeiro.json'
-          push_options: '--force-with-lease'
-        continue-on-error: true
+        run: |
+          sh scripts/dados-publicar.sh 'dados: fontes municipais (CGE-SP, Alerta Rio)'

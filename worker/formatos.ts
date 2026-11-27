@@ -51,17 +51,6 @@ export const LUA_EMOJI: Record<string, string> = {
   'Quarto Minguante': '🌗', 'Minguante': '🌘',
 };
 
-// WMO Weather Codes → descrição PT-BR (espelha scripts/scrape-openmeteo.py e o cliente)
-export const WMO_DESCRICAO: Record<number, string> = {
-  0: 'Céu limpo', 1: 'Principalmente limpo', 2: 'Parcialmente nublado', 3: 'Encoberto',
-  45: 'Névoa', 48: 'Névoa com gelo',
-  51: 'Chuvisco leve', 53: 'Chuvisco moderado', 55: 'Chuvisco denso',
-  61: 'Chuva leve', 63: 'Chuva moderada', 65: 'Chuva forte',
-  71: 'Neve leve', 73: 'Neve moderada', 75: 'Neve forte', 77: 'Granizo',
-  80: 'Chuva isolada leve', 81: 'Chuva isolada moderada', 82: 'Chuva isolada forte',
-  95: 'Tempestade', 96: 'Tempestade com granizo leve', 99: 'Tempestade com granizo forte',
-};
-
 export function pad(s: string, n: number): string {
   // Pad sem contar escape codes ANSI
   const visible = s.replace(/\x1b\[[^m]*m/g, '');

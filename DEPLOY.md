@@ -43,7 +43,14 @@ Estado dos recursos habilitados na conta Cloudflare do projeto (Account ID no da
 
 **Segurança (habilitados):**
 - WAF Free Managed Ruleset + DDoS (sempre ativo)
-- Rate Limiting: 1 regra grátis, por IP, ~50 req/10s, ação Block curto
+- Rate Limiting: 1 regra grátis, por IP, ~50 req/10s, ação Block curto.
+  O bloqueio responde `429` com o texto `error code: 1015` (`retry-after: 10`). Uma
+  visita normal faz ~26 requisições à origem (HTML, `/_astro/*`, `/api/busca.json`),
+  então poucos usuários atrás do mesmo IP (CGNAT de operadora, escritório) chegam
+  ao limite. Recomendado: restringir a expressão da regra ao que custa CPU no
+  Worker (`.png`, `.svg`, `?format=` e User-Agent de curl) ou excluir `/_astro/*`
+  e `/api/busca.json`. O front trata 429 (mensagem com botão "Tentar de novo" na
+  busca, cópia em cache no service worker), mas a regra larga ainda derruba a visita.
 - Page Shield: Script Monitoring (free, só inventário; detecção maliciosa é Enterprise).
   Baseline esperada de script externo: apenas `static.cloudflareinsights.com/beacon.min.js`.
 
@@ -102,8 +109,16 @@ Em **Settings → Secrets and variables → Actions → New repository secret**,
 | `CLOUDFLARE_API_TOKEN` | Cloudflare → My Profile → API Tokens (ver 2.3) |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare Dashboard → canto direito, ou na URL |
 
-Sem esses secrets, os workflows ainda rodam: os scrapers fazem `git commit`
-dos JSONs como fallback (sem subir para o R2). O site só não faz deploy automático.
+Sem esses secrets, os workflows de coleta ainda rodam: os scrapers publicam os JSONs
+no branch `dados` (sem subir para o R2). O site só não faz deploy automático.
+
+**Branch `dados`:** os dados coletados (`data/cidades`, `data/alertas`,
+`data/bandeira.json`) não ficam na `main`. Cada workflow de coleta restaura o snapshot
+(`scripts/dados-restaurar.sh`), coleta e publica de volta (`scripts/dados-publicar.sh`)
+como um commit único, por force push com lease. O histórico é descartado a cada
+publicação: versionados na `main`, esses arquivos somavam ~3 MB/dia no `.git`. CI e
+deploy também restauram o branch antes do build. O branch `dados` não deve ser
+apagado nem editado à mão; o publicar recusa snapshots com menos de 5.000 cidades.
 
 ### 1.3 Workflows já configurados
 
@@ -114,7 +129,8 @@ Em `.github/workflows/`:
 | `dados-inmet.yml` | 1x/dia (05h) | Previsão CPTEC (fallback) |
 | `dados-ana.yml` | 1x/dia (06h30) | Reservatórios ONS + queimadas NASA FIRMS |
 | `dados-diarios.yml` | 08h diário | Open-Meteo (previsão/UV/ar/sol/lua/vento), SABESP, COPASA, dengue |
-| `deploy.yml` | 09h + 21h + push na main | Build Astro + deploy Cloudflare Pages |
+| `dados-clima.yml` | 02h30 + 14h30 | Rodadas extras só do Open-Meteo (continuam de onde a anterior parou) |
+| `deploy.yml` | fim da coleta diária e da municipal, 21h (reserva), push na main | Build Astro + deploy Cloudflare Pages |
 
 Para coletar ondas/surf, adicionar ao `dados-ana.yml` (ou criar workflow):
 ```yaml
@@ -300,7 +316,7 @@ curl localhost:8788/sp/cotia.svg             # card SVG
 
 | Serviço | Limite grátis | Uso do ClimaBR |
 |---|---|---|
-| **Cloudflare Pages** | 500 builds/mês | ~300/mês (2 deploys/dia + pushes) ✅ |
+| **Cloudflare Pages** | 500 builds/mês | ~360/mês (até 4 deploys/dia + pushes) ✅ |
 | **Pages bandwidth** | ilimitado | ✅ sem custo de tráfego |
 | **R2 armazenamento** | 10 GB/mês | JSONs somam ~50 MB ✅ |
 | **R2 operações** | 1M escritas + 10M leituras/mês | ✅ folgado |
@@ -351,7 +367,7 @@ Adicionar workflow de deploy para Pages:
 
 Os JSONs podem ser servidos via **jsDelivr** (CDN grátis do GitHub):
 ```
-https://cdn.jsdelivr.net/gh/Esl1h/climabr.app/data/cidades/sp/cotia.json
+https://cdn.jsdelivr.net/gh/Esl1h/climabr.app@dados/data/cidades/sp/cotia.json
 ```
 
 > Recomendação: manter Cloudflare. O free tier é generoso e o Worker é o que

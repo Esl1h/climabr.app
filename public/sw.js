@@ -49,6 +49,11 @@ async function networkFirst(requisicao, nomeCache, limite) {
     if (resposta.ok) {
       await cache.put(requisicao, resposta.clone());
       aparar(cache, limite);
+    } else if (resposta.status === 429 || resposta.status >= 500) {
+      // Rate limit e erro de servidor chegam como resposta (o fetch não lança):
+      // a cópia em cache é melhor que "error code: 1015" na tela
+      const emCache = await cache.match(requisicao);
+      if (emCache) return emCache;
     }
     return resposta;
   } catch (erro) {

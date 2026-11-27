@@ -1,0 +1,46 @@
+name: Coleta clima (Open-Meteo)
+
+# Rodadas extras só do Open-Meteo. A rodada de dados-diarios.yml cabe em 20 min e
+# atualiza uma fração das cidades; o script é incremental (mais antigas primeiro,
+# pula as com menos de 20 h), então cada rodada continua de onde a anterior parou.
+# Ao esgotar a cota do dia ele encerra sozinho (429 seguidos), sem erro.
+
+on:
+  schedule:
+    - cron: '30 2 * * *'
+    - cron: '30 14 * * *'
+  workflow_dispatch:
+
+# Mesma fila das outras coletas: duas coletas sobre snapshots diferentes perdem dado.
+concurrency:
+  group: coleta-dados
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Restaurar dados do branch dados
+        run: sh scripts/dados-restaurar.sh
+
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Open-Meteo, previsão, UV, qualidade do ar, sol/lua
+        env:
+          LIMITE_MINUTOS: '20'
+        run: python3 scripts/scrape-openmeteo.py
+
+      - name: Publicar dados no branch dados
+        if: always()
+        run: |
+          sh scripts/dados-publicar.sh 'dados: coleta de clima (Open-Meteo)'

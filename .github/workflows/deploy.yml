@@ -1,8 +1,14 @@
-name: Deploy Cloudflare Pages (2x/dia)
+name: Deploy Cloudflare Pages
 
 on:
+  # Publica depois de cada coleta que leva dado novo ao site (diária e municipal),
+  # com o checkout já trazendo o commit dela. Os crons atrasam horas e por tempos
+  # diferentes, então a ordem "coleta, depois deploy" não pode depender deles.
+  workflow_run:
+    workflows: ['Coleta dados diários', 'Coleta de fontes municipais']
+    types: [completed]
   schedule:
-    - cron: '0 9 * * *'
+    # Reserva, caso o gatilho acima falhe ou a coleta seja cancelada na fila
     - cron: '0 21 * * *'
   push:
     branches:
@@ -15,13 +21,24 @@ on:
 permissions:
   contents: read
 
+# Um build novo substitui o que está na fila: dois gatilhos juntos (coleta e
+# push) não precisam de dois builds em paralelo.
+concurrency:
+  group: deploy-pages
+  cancel-in-progress: false
+
 jobs:
   deploy:
+    # Coleta cancelada na fila não trouxe dado novo
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion != 'cancelled'
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
     steps:
       - uses: actions/checkout@v7
+
+      - name: Restaurar dados do branch dados
+        run: sh scripts/dados-restaurar.sh
 
       - name: Setup Node
         uses: actions/setup-node@v7
