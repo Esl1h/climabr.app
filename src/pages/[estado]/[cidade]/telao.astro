@@ -2,6 +2,8 @@
 import '../../../styles/global.css';
 import municipiosRaw from '../../../../data/municipios.json';
 import type { Municipio, DadosCidade } from '../../../lib/types';
+import { iconeTempoWmo } from '../../../lib/icone-tempo';
+import { temaDoTempo } from '../../../lib/wmo';
 
 export async function getStaticPaths() {
   const municipios = municipiosRaw as Municipio[];
@@ -39,12 +41,6 @@ try {
 }
 const corBandeira = (nome: string) => (nome === 'Verde' ? '#34d399' : nome.startsWith('Amarela') ? '#fbbf24' : '#f87171');
 
-const TEMPO_EMOJI: Record<number, string> = {
-  0: '☀️', 1: '🌤', 2: '⛅', 3: '☁️', 45: '🌫', 48: '🌫',
-  51: '🌦', 53: '🌦', 55: '🌧', 61: '🌧', 63: '🌧', 65: '🌧',
-  71: '❄️', 73: '❄️', 75: '❄️', 77: '🌨', 80: '🌦', 81: '🌦',
-  82: '⛈', 95: '⛈', 96: '⛈', 99: '⛈',
-};
 const LUA_EMOJI: Record<string, string> = {
   'Nova': '🌑', 'Crescente': '🌒', 'Quarto Crescente': '🌓', 'Gibosa Crescente': '🌔',
   'Cheia': '🌕', 'Gibosa Minguante': '🌖', 'Quarto Minguante': '🌗', 'Minguante': '🌘',
@@ -81,18 +77,7 @@ const SURF_COR: Record<string, string> = {
 };
 
 // Tema do plano de fundo conforme a condição do tempo (WMO weather code)
-function temaDoTempo(code?: number | string | null): string {
-  const c = Number(code);
-  if (!Number.isFinite(c)) return 'clima-limpo';
-  if (c <= 1) return 'clima-limpo';
-  if (c === 2) return 'clima-nublado';
-  if (c === 3 || c === 45 || c === 48) return 'clima-encoberto';
-  if ((c >= 51 && c <= 67) || (c >= 80 && c <= 82)) return 'clima-chuva';
-  if ((c >= 71 && c <= 77) || c === 85 || c === 86) return 'clima-neve';
-  if (c >= 95) return 'clima-tempestade';
-  return 'clima-limpo';
-}
-const tema = temaDoTempo(hoje?.condicao_codigo);
+const tema = temaDoTempo(Number(hoje?.condicao_codigo));
 const nascer = sol?.nascer ?? '';
 const por = sol?.por ?? '';
 
@@ -109,7 +94,7 @@ const estacao = sol?.estacao ?? '';
 const estacaoIcone = estacao ? iconeEstacao(estacao) : '';
 
 // Emoji grande do tempo, usado como marca d'água do fundo
-const climaEmoji = hoje ? (TEMPO_EMOJI[hoje.condicao_codigo as number] ?? '⛅') : '⛅';
+const climaEmoji = hoje ? iconeTempoWmo(hoje.condicao_codigo as number) : '⛅';
 
 // Avisos INMET ativos para este município (mesma regra da página da cidade)
 interface AvisoTelao {
@@ -372,7 +357,7 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
           </div>
         </div>
         <div class="clima-linha" style="font-size: clamp(1.1rem, 2.3vmin, 2.5rem);" hidden={!hoje && !estacao}>
-          <span id="condicao">{hoje ? `${TEMPO_EMOJI[hoje.condicao_codigo as number] ?? '⛅'} ${hoje.condicao}` : ''}</span>
+          <span id="condicao">{hoje ? `${iconeTempoWmo(hoje.condicao_codigo as number)} ${hoje.condicao}` : ''}</span>
           {estacao && (
             <span class="estacao">
               {hoje && <span class="sep">|</span>}
@@ -426,7 +411,7 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
                 return (
                   <div class="prev-dia" data-dia>
                     <div class="d" data-f="d">{dia}</div>
-                    <div class="e" data-f="e">{TEMPO_EMOJI[d.condicao_codigo as number] ?? '⛅'}</div>
+                    <div class="e" data-f="e">{iconeTempoWmo(d.condicao_codigo as number)}</div>
                     <div class="t" style="color:#f87171;" data-f="tmax">{Math.round(d.max)}°</div>
                     <div class="t" style="color:#64748b;" data-f="tmin">{Math.round(d.min)}°</div>
                   </div>
@@ -558,6 +543,10 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
     </div>
 
     <script>
+      import { iconeTempoWmo } from '../../../lib/icone-tempo';
+      import { TEMAS_TEMPO, WMO_DESCRICAO, temaDoTempo } from '../../../lib/wmo';
+      import { gravarCache, lerCache } from '../../../scripts/cache-sessao';
+
       // Plano de fundo dia/noite: compara o horário local com nascer/pôr do sol
       const nascer = document.body.dataset.nascer || '';
       const por = document.body.dataset.por || '';
@@ -597,29 +586,6 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
       const lat = parseFloat(document.body.dataset.lat || '');
       const lon = parseFloat(document.body.dataset.lon || '');
 
-      const WMO: Record<number, string> = {
-        0: 'Céu limpo', 1: 'Principalmente limpo', 2: 'Parcialmente nublado', 3: 'Encoberto',
-        45: 'Névoa', 48: 'Névoa com gelo', 51: 'Chuvisco leve', 53: 'Chuvisco moderado', 55: 'Chuvisco denso',
-        61: 'Chuva leve', 63: 'Chuva moderada', 65: 'Chuva forte', 71: 'Neve leve', 73: 'Neve moderada', 75: 'Neve forte',
-        77: 'Granizo', 80: 'Chuva isolada leve', 81: 'Chuva isolada moderada', 82: 'Chuva isolada forte',
-        85: 'Neve isolada', 86: 'Neve isolada forte', 95: 'Tempestade', 96: 'Tempestade com granizo leve', 99: 'Tempestade com granizo forte',
-      };
-      const EMOJI: Record<number, string> = {
-        0: '☀️', 1: '🌤', 2: '⛅', 3: '☁️', 45: '🌫', 48: '🌫', 51: '🌦', 53: '🌦', 55: '🌧',
-        61: '🌧', 63: '🌧', 65: '🌧', 71: '❄️', 73: '❄️', 75: '❄️', 77: '🌨', 80: '🌦', 81: '🌦',
-        82: '⛈', 95: '⛈', 96: '⛈', 99: '⛈',
-      };
-      const TEMAS = ['clima-limpo', 'clima-nublado', 'clima-encoberto', 'clima-chuva', 'clima-neve', 'clima-tempestade'];
-      function temaDoTempo(c: number): string {
-        if (!Number.isFinite(c)) return 'clima-limpo';
-        if (c <= 1) return 'clima-limpo';
-        if (c === 2) return 'clima-nublado';
-        if (c === 3 || c === 45 || c === 48) return 'clima-encoberto';
-        if ((c >= 51 && c <= 67) || (c >= 80 && c <= 82)) return 'clima-chuva';
-        if ((c >= 71 && c <= 77) || c === 85 || c === 86) return 'clima-neve';
-        if (c >= 95) return 'clima-tempestade';
-        return 'clima-limpo';
-      }
       const arred = (n: number) => Math.round(n * 10) / 10;
       function diaSemana(dataStr: string): string {
         return new Date(dataStr + 'T12:00:00').toLocaleDateString('pt-BR', { weekday: 'short' }).slice(0, 3);
@@ -633,11 +599,7 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
           + `&timezone=America%2FSao_Paulo&forecast_days=7`;
         const chave = `om:${lat},${lon}`;
 
-        let data: any;
-        try {
-          const raw = sessionStorage.getItem(chave);
-          if (raw) { const o = JSON.parse(raw); if (Date.now() - o.t < 600000) data = o.d; }
-        } catch { /* ignora */ }
+        let data: any = lerCache(chave);
         // Sem resposta, o rodapé diz que o painel está no snapshot, em vez de ficar em "aguardando"
         const semConexao = () => {
           const aoVivoSemConexao = document.getElementById('ao-vivo');
@@ -648,7 +610,7 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
             const res = await fetch(url);
             if (!res.ok) return semConexao();
             data = await res.json();
-            try { sessionStorage.setItem(chave, JSON.stringify({ t: Date.now(), d: data })); } catch { /* ignora */ }
+            gravarCache(chave, data);
           } catch { return semConexao(); } // mantém o snapshot
         }
 
@@ -674,16 +636,16 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
 
           const code = Number(cur.weather_code);
           if (Number.isFinite(code)) {
-            document.body.classList.remove(...TEMAS);
+            document.body.classList.remove(...TEMAS_TEMPO);
             document.body.classList.add(temaDoTempo(code));
             const condEl = document.getElementById('condicao');
-            if (condEl) { condEl.textContent = `${EMOJI[code] ?? '⛅'} ${WMO[code] ?? ''}`; condEl.hidden = false; }
+            if (condEl) { condEl.textContent = `${iconeTempoWmo(code)} ${WMO_DESCRICAO[code] ?? ''}`; condEl.hidden = false; }
             aplicarNoite();
             // Marca d'água do fundo: à noite com céu limpo, mostra a lua
             const icoEl = document.getElementById('cena-icone');
             if (icoEl) {
               const noite = document.body.classList.contains('noite');
-              icoEl.textContent = (noite && code <= 1) ? '🌙' : (EMOJI[code] ?? '⛅');
+              icoEl.textContent = (noite && code <= 1) ? '🌙' : iconeTempoWmo(code);
             }
           }
         }
@@ -711,7 +673,7 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
             const idx = i + 1; // pula hoje
             if (idx >= daily.time.length) return;
             setF(dia, 'd', diaSemana(daily.time[idx]));
-            setF(dia, 'e', EMOJI[Number(daily.weather_code[idx])] ?? '⛅');
+            setF(dia, 'e', iconeTempoWmo(Number(daily.weather_code[idx])));
             setF(dia, 'tmax', `${Math.round(daily.temperature_2m_max[idx])}°`);
             setF(dia, 'tmin', `${Math.round(daily.temperature_2m_min[idx])}°`);
           });

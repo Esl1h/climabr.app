@@ -12,20 +12,8 @@
 import { corAqi, catAqi } from './cores-status';
 import { corTemperatura, catTemperatura } from '../lib/temperatura';
 import { iconeTempoWmo } from '../lib/icone-tempo';
-
-// WMO Weather Codes → descrição PT-BR (espelha scripts/scrape-openmeteo.py)
-const WMO_DESCRICAO: Record<number, string> = {
-  0: 'Céu limpo', 1: 'Principalmente limpo', 2: 'Parcialmente nublado', 3: 'Encoberto',
-  45: 'Névoa', 48: 'Névoa com gelo',
-  51: 'Chuvisco leve', 53: 'Chuvisco moderado', 55: 'Chuvisco denso',
-  61: 'Chuva leve', 63: 'Chuva moderada', 65: 'Chuva forte',
-  71: 'Neve leve', 73: 'Neve moderada', 75: 'Neve forte',
-  77: 'Granizo', 80: 'Chuva isolada leve', 81: 'Chuva isolada moderada', 82: 'Chuva isolada forte',
-  85: 'Neve isolada', 86: 'Neve isolada forte',
-  95: 'Tempestade', 96: 'Tempestade com granizo leve', 99: 'Tempestade com granizo forte',
-};
-
-const TTL_MS = 10 * 60_000; // cache curto no client: evita martelar a API e piscar a tela
+import { WMO_DESCRICAO } from '../lib/wmo';
+import { gravarCache, lerCache } from './cache-sessao';
 
 interface DiaPrevisao {
   data: string;
@@ -60,20 +48,13 @@ async function buscarOpenMeteo(lat: number, lon: number): Promise<any> {
     + `&timezone=America%2FSao_Paulo&forecast_days=7`;
 
   const chave = `om:${lat},${lon}`;
-  try {
-    const raw = sessionStorage.getItem(chave);
-    if (raw) {
-      const { t, d } = JSON.parse(raw);
-      if (Date.now() - t < TTL_MS) return d;
-    }
-  } catch { /* sessionStorage indisponível: segue para a rede */ }
+  const emCache = lerCache(chave);
+  if (emCache !== undefined) return emCache;
 
   const res = await fetch(url);
   if (!res.ok) throw new Error(`open-meteo ${res.status}`);
   const d = await res.json();
-  try {
-    sessionStorage.setItem(chave, JSON.stringify({ t: Date.now(), d }));
-  } catch { /* cota cheia/privado: ignora */ }
+  gravarCache(chave, d);
   return d;
 }
 
@@ -82,18 +63,13 @@ async function buscarAr(lat: number, lon: number): Promise<any | null> {
   const url = `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${lat}&longitude=${lon}`
     + `&current=us_aqi,pm2_5,pm10&timezone=America%2FSao_Paulo`;
   const chave = `om-aq:${lat},${lon}`;
-  try {
-    const raw = sessionStorage.getItem(chave);
-    if (raw) {
-      const { t, d } = JSON.parse(raw);
-      if (Date.now() - t < TTL_MS) return d;
-    }
-  } catch { /* segue para a rede */ }
+  const emCache = lerCache(chave);
+  if (emCache !== undefined) return emCache;
   try {
     const res = await fetch(url);
     if (!res.ok) return null;
     const d = await res.json();
-    try { sessionStorage.setItem(chave, JSON.stringify({ t: Date.now(), d })); } catch { /* ignora */ }
+    gravarCache(chave, d);
     return d;
   } catch {
     return null;

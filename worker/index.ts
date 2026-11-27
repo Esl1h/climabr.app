@@ -19,7 +19,8 @@ import { Resvg, initWasm } from '@resvg/resvg-wasm';
 import resvgWasm from './resvg.wasm';
 // @ts-ignore — o wrangler empacota o .ttf como ArrayBuffer (rule type = Data)
 import cardFontTtf from './card-font.ttf';
-import { extrairPathInfo, formatarSvg, formatarOneLiner, formatarMarkdown, formatarPrometheus, formatarTerminal, WMO_DESCRICAO, type Dados } from './formatos';
+import { extrairPathInfo, formatarSvg, formatarOneLiner, formatarMarkdown, formatarPrometheus, formatarTerminal, type Dados } from './formatos';
+import { WMO_DESCRICAO } from '../src/lib/wmo';
 
 // Fonte (subset Inter Medium) para o resvg renderizar texto no PNG.
 // Sem fonte carregada o resvg não desenha texto algum (só as formas).

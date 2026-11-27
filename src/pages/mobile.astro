@@ -103,9 +103,10 @@ const titulo = 'Modo Mobile — climabr.app';
     <div id="aviso">Carregando…</div>
 
     <script>
-      const TEMPO_EMOJI: Record<number, string> = { 0:'☀️',1:'🌤',2:'⛅',3:'☁️',45:'🌫',48:'🌫',51:'🌦',53:'🌦',55:'🌧',61:'🌧',63:'🌧',65:'🌧',71:'❄️',73:'❄️',75:'❄️',77:'🌨',80:'🌦',81:'🌦',82:'⛈',85:'🌨',86:'🌨',95:'⛈',96:'⛈',99:'⛈' };
+      import { iconeTempoWmo } from '../lib/icone-tempo';
+      import { WMO_DESCRICAO, temaDoTempo } from '../lib/wmo';
+
       const LUA_EMOJI: Record<string, string> = { 'Nova':'🌑','Crescente':'🌒','Quarto Crescente':'🌓','Gibosa Crescente':'🌔','Cheia':'🌕','Gibosa Minguante':'🌖','Quarto Minguante':'🌗','Minguante':'🌘' };
-      const WMO: Record<number, string> = { 0:'Céu limpo',1:'Principalmente limpo',2:'Parcialmente nublado',3:'Encoberto',45:'Névoa',48:'Névoa com gelo',51:'Chuvisco leve',53:'Chuvisco moderado',55:'Chuvisco denso',61:'Chuva leve',63:'Chuva moderada',65:'Chuva forte',71:'Neve leve',73:'Neve moderada',75:'Neve forte',77:'Granizo',80:'Chuva isolada leve',81:'Chuva isolada moderada',82:'Chuva isolada forte',95:'Tempestade',96:'Tempestade com granizo leve',99:'Tempestade com granizo forte' };
       const SURF_COR: Record<string, string> = { bom:'#34d399', razoavel:'#fbbf24', ruim:'#f87171', perigoso:'#ef4444', desconhecido:'#94a3b8' };
       const corAqi = (i: number) => i <= 50 ? '#34d399' : i <= 100 ? '#fbbf24' : i <= 150 ? '#fb923c' : '#f87171';
       const corUv = (i: number) => i < 3 ? '#34d399' : i < 6 ? '#fbbf24' : i < 8 ? '#fb923c' : i < 11 ? '#f87171' : '#a78bfa';
@@ -119,16 +120,6 @@ const titulo = 'Modo Mobile — climabr.app';
       const grau = (d: number) => ['N','NE','L','SE','S','SO','O','NO'][Math.round(d / 45) % 8];
       const esc = (s: any) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c] as string));
 
-      function temaDoTempo(c: number): string {
-        if (!Number.isFinite(c)) return 'clima-limpo';
-        if (c <= 1) return 'clima-limpo';
-        if (c === 2) return 'clima-nublado';
-        if (c === 3 || c === 45 || c === 48) return 'clima-encoberto';
-        if ((c >= 51 && c <= 67) || (c >= 80 && c <= 82)) return 'clima-chuva';
-        if ((c >= 71 && c <= 77) || c === 85 || c === 86) return 'clima-neve';
-        if (c >= 95) return 'clima-tempestade';
-        return 'clima-limpo';
-      }
       function iconeEstacao(e: string): string {
         const n = (e || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
         if (n.includes('verao')) return '🌻';
@@ -146,7 +137,7 @@ const titulo = 'Modo Mobile — climabr.app';
         const prev = d.previsao ?? [];
         const hoje = prev[0];
         if (prev.length) {
-          const dias = prev.slice(1, 7).map((x: any) => `<div class="prev-dia"><div class="d">${diaSemana(x.data)}</div><div class="e">${TEMPO_EMOJI[x.condicao_codigo] ?? '⛅'}</div><div class="t" style="color:#f87171">${Math.round(x.max)}°</div><div class="t" style="color:#64748b">${Math.round(x.min)}°</div></div>`).join('');
+          const dias = prev.slice(1, 7).map((x: any) => `<div class="prev-dia"><div class="d">${diaSemana(x.data)}</div><div class="e">${iconeTempoWmo(x.condicao_codigo)}</div><div class="t" style="color:#f87171">${Math.round(x.max)}°</div><div class="t" style="color:#64748b">${Math.round(x.min)}°</div></div>`).join('');
           out.push(`<div class="card card-wide"><div class="card-titulo"><span class="card-ico">⛅</span> Previsão</div>${hoje ? `<div class="duo"><span class="card-valor" style="color:#f87171">${Math.round(hoje.max)}°</span><span class="card-valor" style="color:#38bdf8;font-size:clamp(1.2rem,5vmin,1.9rem)">${Math.round(hoje.min)}°</span>${hoje.chuva_mm > 0 ? `<span class="card-sub">💧${hoje.chuva_mm}mm</span>` : ''}</div>` : ''}<div class="prev-dias">${dias}</div></div>`);
         }
         const ar = d.qualidade_ar;
@@ -178,13 +169,13 @@ const titulo = 'Modo Mobile — climabr.app';
         const cl = document.getElementById('clima-linha')!;
         const cond = document.getElementById('condicao')!;
         const est = document.getElementById('estacao')!;
-        if (hoje) cond.textContent = `${TEMPO_EMOJI[hoje.condicao_codigo] ?? '⛅'} ${hoje.condicao ?? ''}`;
+        if (hoje) cond.textContent = `${iconeTempoWmo(hoje.condicao_codigo)} ${hoje.condicao ?? ''}`;
         const estacao = d.sol?.estacao;
         if (estacao) { est.textContent = `${iconeEstacao(estacao)} ${estacao}`; est.hidden = false; }
         cl.hidden = !(hoje || estacao);
         document.getElementById('grid')!.innerHTML = tiles(d);
         const ico = document.getElementById('cena-icone')!;
-        ico.textContent = hoje ? (TEMPO_EMOJI[hoje.condicao_codigo] ?? '⛅') : '⛅';
+        ico.textContent = hoje ? iconeTempoWmo(hoje.condicao_codigo) : '⛅';
         document.body.className = temaDoTempo(Number(hoje?.condicao_codigo));
         aplicarNoite(d.sol?.nascer, d.sol?.por);
       }
@@ -212,7 +203,7 @@ const titulo = 'Modo Mobile — climabr.app';
           d.previsao = dy.time.slice(0, 7).map((t: string, i: number) => ({
             data: t, max: arred(dy.temperature_2m_max[i]), min: arred(dy.temperature_2m_min[i]),
             chuva_mm: arred(dy.precipitation_sum?.[i] ?? 0),
-            condicao: WMO[dy.weather_code[i]] ?? '', condicao_codigo: dy.weather_code[i],
+            condicao: WMO_DESCRICAO[dy.weather_code[i]] ?? '', condicao_codigo: dy.weather_code[i],
           }));
           if (dy.uv_index_max?.[0] != null) d.uv = { indice: arred(dy.uv_index_max[0]), categoria: catUv(arred(dy.uv_index_max[0])) };
         }

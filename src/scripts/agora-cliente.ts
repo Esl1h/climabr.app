@@ -17,8 +17,7 @@
  */
 import { corAqi, catAqi } from './cores-status';
 import { corTemperatura } from '../lib/temperatura';
-
-const TTL_MS = 10 * 60_000; // mesmo cache curto da página de cidade
+import { gravarCache, lerCache } from './cache-sessao';
 
 interface Ponto {
   el: HTMLElement;
@@ -37,13 +36,8 @@ function comoLista(d: unknown): any[] {
 const emVoo = new Map<string, Promise<any[] | null>>();
 
 function buscarLote(url: string, chave: string): Promise<any[] | null> {
-  try {
-    const raw = sessionStorage.getItem(chave);
-    if (raw) {
-      const { t, d } = JSON.parse(raw);
-      if (Date.now() - t < TTL_MS) return Promise.resolve(comoLista(d));
-    }
-  } catch { /* sessionStorage indisponível: segue para a rede */ }
+  const emCache = lerCache(chave);
+  if (emCache !== undefined) return Promise.resolve(comoLista(emCache));
 
   const pendente = emVoo.get(url);
   if (pendente) return pendente;
@@ -53,7 +47,7 @@ function buscarLote(url: string, chave: string): Promise<any[] | null> {
       const res = await fetch(url);
       if (!res.ok) return null;
       const d = await res.json();
-      try { sessionStorage.setItem(chave, JSON.stringify({ t: Date.now(), d })); } catch { /* cota cheia/privado: ignora */ }
+      gravarCache(chave, d);
       return comoLista(d);
     } catch {
       return null;
