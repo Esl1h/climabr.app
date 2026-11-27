@@ -5,9 +5,9 @@ on:
     - cron: '0 8 * * *'
   workflow_dispatch:
 
-# Coletas não podem sobrepor: um commit com lease de checkout antigo falha
-# silenciosamente (continue-on-error) e o dado da rodada se perde. Fila
-# global entre todos os workflows de coleta.
+# Coletas não podem sobrepor: o push com lease de um snapshot antigo é
+# recusado e o dado da rodada se perde. Fila global entre todos os workflows
+# de coleta.
 concurrency:
   group: coleta-dados
   cancel-in-progress: false
@@ -22,6 +22,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
+
+      - name: Restaurar dados do branch dados
+        run: sh scripts/dados-restaurar.sh
 
       - name: Setup Python
         uses: actions/setup-python@v7
@@ -61,11 +64,7 @@ jobs:
         run: python3 scripts/scrape-bandeira.py
         continue-on-error: true
 
-      - name: Commit dados locais (fallback)
+      - name: Publicar dados no branch dados
         if: always()
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          commit_message: 'dados: coleta diária (Open-Meteo, SABESP, COPASA, dengue, alertas)'
-          file_pattern: 'data/cidades/**/*.json data/alertas/*.json data/bandeira.json'
-          push_options: '--force-with-lease'
-        continue-on-error: true
+        run: |
+          sh scripts/dados-publicar.sh 'dados: coleta diária (Open-Meteo, SABESP, COPASA, dengue, alertas)'

@@ -11,7 +11,7 @@ on:
     - cron: '30 14 * * *'
   workflow_dispatch:
 
-# Mesma fila das outras coletas: dois commits com checkouts diferentes perdem dado.
+# Mesma fila das outras coletas: duas coletas sobre snapshots diferentes perdem dado.
 concurrency:
   group: coleta-dados
   cancel-in-progress: false
@@ -27,6 +27,9 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      - name: Restaurar dados do branch dados
+        run: sh scripts/dados-restaurar.sh
+
       - name: Setup Python
         uses: actions/setup-python@v7
         with:
@@ -37,11 +40,7 @@ jobs:
           LIMITE_MINUTOS: '20'
         run: python3 scripts/scrape-openmeteo.py
 
-      - name: Commit dados
+      - name: Publicar dados no branch dados
         if: always()
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          commit_message: 'dados: coleta de clima (Open-Meteo)'
-          file_pattern: 'data/cidades/**/*.json'
-          push_options: '--force-with-lease'
-        continue-on-error: true
+        run: |
+          sh scripts/dados-publicar.sh 'dados: coleta de clima (Open-Meteo)'
