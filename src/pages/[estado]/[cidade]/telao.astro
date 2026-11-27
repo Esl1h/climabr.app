@@ -734,10 +734,20 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
         if (e.key === 'f' || e.key === 'F') fsBtn?.click();
       });
 
-      // Recarrega a cada 10 min para manter dados frescos no telão
-      const RECARGA_MS = 10 * 60 * 1000;
+      // Recarrega a cada 10 min para manter dados frescos no telão. Só recarrega se
+      // o servidor responder bem: uma página de erro (429, 5xx) não carrega este
+      // script, e o telão ficaria parado nela até alguém mexer. O atraso aleatório
+      // evita que telões ligados juntos recarreguem no mesmo segundo.
+      const RECARGA_MS = 10 * 60 * 1000 + Math.random() * 60 * 1000;
       const fimRecarga = Date.now() + RECARGA_MS;
-      setTimeout(() => location.reload(), RECARGA_MS);
+      async function recarregar() {
+        try {
+          const r = await fetch(location.href, { cache: 'no-store', signal: AbortSignal.timeout(15000) });
+          if (r.ok) return location.reload();
+        } catch { /* sem rede: tenta de novo abaixo */ }
+        setTimeout(recarregar, 30000);
+      }
+      setTimeout(recarregar, RECARGA_MS);
       setInterval(() => {
         const seg = Math.max(0, Math.round((fimRecarga - Date.now()) / 1000));
         const el = document.getElementById('recarrega');
