@@ -43,7 +43,14 @@ Estado dos recursos habilitados na conta Cloudflare do projeto (Account ID no da
 
 **Segurança (habilitados):**
 - WAF Free Managed Ruleset + DDoS (sempre ativo)
-- Rate Limiting: 1 regra grátis, por IP, ~50 req/10s, ação Block curto
+- Rate Limiting: 1 regra grátis, por IP, ~50 req/10s, ação Block curto.
+  O bloqueio responde `429` com o texto `error code: 1015` (`retry-after: 10`). Uma
+  visita normal faz ~26 requisições à origem (HTML, `/_astro/*`, `/api/busca.json`),
+  então poucos usuários atrás do mesmo IP (CGNAT de operadora, escritório) chegam
+  ao limite. Recomendado: restringir a expressão da regra ao que custa CPU no
+  Worker (`.png`, `.svg`, `?format=` e User-Agent de curl) ou excluir `/_astro/*`
+  e `/api/busca.json`. O front trata 429 (mensagem com botão "Tentar de novo" na
+  busca, cópia em cache no service worker), mas a regra larga ainda derruba a visita.
 - Page Shield: Script Monitoring (free, só inventário; detecção maliciosa é Enterprise).
   Baseline esperada de script externo: apenas `static.cloudflareinsights.com/beacon.min.js`.
 
@@ -114,7 +121,8 @@ Em `.github/workflows/`:
 | `dados-inmet.yml` | 1x/dia (05h) | Previsão CPTEC (fallback) |
 | `dados-ana.yml` | 1x/dia (06h30) | Reservatórios ONS + queimadas NASA FIRMS |
 | `dados-diarios.yml` | 08h diário | Open-Meteo (previsão/UV/ar/sol/lua/vento), SABESP, COPASA, dengue |
-| `deploy.yml` | 09h + 21h + push na main | Build Astro + deploy Cloudflare Pages |
+| `dados-clima.yml` | 02h30 + 14h30 | Rodadas extras só do Open-Meteo (continuam de onde a anterior parou) |
+| `deploy.yml` | fim da coleta diária e da municipal, 21h (reserva), push na main | Build Astro + deploy Cloudflare Pages |
 
 Para coletar ondas/surf, adicionar ao `dados-ana.yml` (ou criar workflow):
 ```yaml
@@ -300,7 +308,7 @@ curl localhost:8788/sp/cotia.svg             # card SVG
 
 | Serviço | Limite grátis | Uso do ClimaBR |
 |---|---|---|
-| **Cloudflare Pages** | 500 builds/mês | ~300/mês (2 deploys/dia + pushes) ✅ |
+| **Cloudflare Pages** | 500 builds/mês | ~360/mês (até 4 deploys/dia + pushes) ✅ |
 | **Pages bandwidth** | ilimitado | ✅ sem custo de tráfego |
 | **R2 armazenamento** | 10 GB/mês | JSONs somam ~50 MB ✅ |
 | **R2 operações** | 1M escritas + 10M leituras/mês | ✅ folgado |

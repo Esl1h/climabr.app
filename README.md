@@ -93,7 +93,7 @@ npx wrangler pages deploy dist/ --project-name=climabr-app --branch=main
 npx wrangler deploy                                    # publica o Worker
 ```
 
-O deploy também é automático: `deploy.yml` builda e publica a cada push na `main` e 2x/dia; a coleta roda em `dados-diarios.yml`, `dados-ana.yml` e `dados-inmet.yml`. Guia completo de infraestrutura e custos em [`DEPLOY.md`](DEPLOY.md).
+O deploy também é automático: `deploy.yml` builda e publica a cada push na `main` e ao fim das coletas diária e municipal; a coleta roda em `dados-diarios.yml`, `dados-ana.yml` e `dados-inmet.yml`. Guia completo de infraestrutura e custos em [`DEPLOY.md`](DEPLOY.md).
 
 ## Contribuindo
 
