@@ -597,7 +597,9 @@ const titulo = `${municipio.nome}/${municipio.estado.toUpperCase()} — Modo Pai
           + `&current=temperature_2m,weather_code,relative_humidity_2m,pressure_msl,dew_point_2m`
           + `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_sum`
           + `&timezone=America%2FSao_Paulo&forecast_days=7`;
-        const chave = `om:${lat},${lon}`;
+        // Chave própria: a página da cidade guarda em `om:` um payload mais completo
+        // (hourly, UV) e leria este, menor, do cache da mesma aba
+        const chave = `om-telao:${lat},${lon}`;
 
         let data: any = lerCache(chave);
         // Sem resposta, o rodapé diz que o painel está no snapshot, em vez de ficar em "aguardando"
