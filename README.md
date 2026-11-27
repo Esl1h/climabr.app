@@ -47,7 +47,7 @@ Toda cidade responde em `/{uf}/{cidade}` com vários formatos:
 
 - Astro (SSG) + Tailwind CSS v4 + TypeScript
 - Cloudflare Pages (site) + Workers (curl/SVG/PNG/Prometheus, rota `climabr.app/*`)
-- Coleta em Python via GitHub Actions (cron), gerando JSON em `data/cidades/{uf}/{slug}.json`
+- Coleta em Python via GitHub Actions (cron), gerando JSON em `data/cidades/{uf}/{slug}.json` e publicando no branch `dados`
 
 ## Fontes de dados
 
@@ -65,7 +65,7 @@ Todas públicas e oficiais, com atribuição registrada no dado e no bloco que o
 ## Estrutura
 
 ```
-data/cidades/{uf}/{slug}.json   # dados coletados por município
+data/cidades/{uf}/{slug}.json   # dados coletados por município (branch `dados`; sh scripts/dados-restaurar.sh)
 scripts/                        # scrapers Python (um por fonte)
 src/                            # site Astro (páginas, layout, componentes)
 worker/                         # Cloudflare Worker (curl/SVG/PNG/Prometheus)

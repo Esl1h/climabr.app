@@ -109,8 +109,16 @@ Em **Settings → Secrets and variables → Actions → New repository secret**,
 | `CLOUDFLARE_API_TOKEN` | Cloudflare → My Profile → API Tokens (ver 2.3) |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare Dashboard → canto direito, ou na URL |
 
-Sem esses secrets, os workflows ainda rodam: os scrapers fazem `git commit`
-dos JSONs como fallback (sem subir para o R2). O site só não faz deploy automático.
+Sem esses secrets, os workflows de coleta ainda rodam: os scrapers publicam os JSONs
+no branch `dados` (sem subir para o R2). O site só não faz deploy automático.
+
+**Branch `dados`:** os dados coletados (`data/cidades`, `data/alertas`,
+`data/bandeira.json`) não ficam na `main`. Cada workflow de coleta restaura o snapshot
+(`scripts/dados-restaurar.sh`), coleta e publica de volta (`scripts/dados-publicar.sh`)
+como um commit único, por force push com lease. O histórico é descartado a cada
+publicação: versionados na `main`, esses arquivos somavam ~3 MB/dia no `.git`. CI e
+deploy também restauram o branch antes do build. O branch `dados` não deve ser
+apagado nem editado à mão; o publicar recusa snapshots com menos de 5.000 cidades.
 
 ### 1.3 Workflows já configurados
 
@@ -359,7 +367,7 @@ Adicionar workflow de deploy para Pages:
 
 Os JSONs podem ser servidos via **jsDelivr** (CDN grátis do GitHub):
 ```
-https://cdn.jsdelivr.net/gh/Esl1h/climabr.app/data/cidades/sp/cotia.json
+https://cdn.jsdelivr.net/gh/Esl1h/climabr.app@dados/data/cidades/sp/cotia.json
 ```
 
 > Recomendação: manter Cloudflare. O free tier é generoso e o Worker é o que
