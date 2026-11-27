@@ -37,3 +37,27 @@ describe('ranking da busca', () => {
     expect(buscar('campinas')[0]).toMatchObject({ uf: 'sp', slug: 'campinas' });
   });
 });
+
+describe('carregarIndice', () => {
+  it('trata 429 como falha mesmo com corpo JSON válido, e tenta de novo na chamada seguinte', async () => {
+    const { buscar, carregarIndice } = await carregarModulo();
+    vi.stubGlobal('fetch', async () => new Response('[["Natal","natal","rn",null,null]]', { status: 429 }));
+    expect(await carregarIndice()).toBeNull();
+    expect(buscar('natal')).toEqual([]);
+
+    vi.stubGlobal('fetch', async () => GET({} as Contexto));
+    expect(await carregarIndice()).not.toBeNull();
+    expect(buscar('natal')[0]).toMatchObject({ uf: 'rn', slug: 'natal' });
+  });
+
+  it('limita o tempo de espera com um sinal de timeout', async () => {
+    const { carregarIndice } = await carregarModulo();
+    const chamadas: (RequestInit | undefined)[] = [];
+    vi.stubGlobal('fetch', async (_url: string, init?: RequestInit) => {
+      chamadas.push(init);
+      return GET({} as Contexto);
+    });
+    await carregarIndice();
+    expect(chamadas[0]?.signal).toBeInstanceOf(AbortSignal);
+  });
+});

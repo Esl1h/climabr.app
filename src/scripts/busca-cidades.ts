@@ -17,18 +17,29 @@ export const normalizar = (s: string): string =>
 
 let indice: CidadeIndice[] | null = null;
 let carregando: Promise<CidadeIndice[] | null> | null = null;
+let falhou = false;
+
+// Sem timeout, uma rede que aceita a conexão e não responde deixa a lista em
+// "Carregando…" para sempre. O sinal também cobre a leitura do corpo.
+const TIMEOUT_INDICE_MS = 10_000;
 
 export function carregarIndice(): Promise<CidadeIndice[] | null> {
   if (indice) return Promise.resolve(indice);
   if (!carregando) {
-    carregando = fetch('/api/busca.json')
-      .then((r) => r.json())
+    falhou = false;
+    carregando = fetch('/api/busca.json', { signal: AbortSignal.timeout(TIMEOUT_INDICE_MS) })
+      .then((r) => {
+        // 429 (rate limit) e 5xx chegam como resposta, não como exceção do fetch
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
       .then((bruto: [string, string, string, number | null, number | null][]) => {
         indice = bruto.map(([nome, slug, uf, lat, lon]) => ({ nome, slug, uf, lat, lon, chave: normalizar(nome) }));
         return indice;
       })
       .catch(() => {
         carregando = null; // permite nova tentativa
+        falhou = true;
         return null;
       });
   }
@@ -107,7 +118,20 @@ function render(input: HTMLInputElement): void {
   if (!indice) {
     const li = document.createElement('li');
     li.className = 'px-3 py-2 text-sm text-muted-foreground';
-    li.textContent = 'Carregando municípios…';
+    if (falhou) {
+      li.textContent = 'Não foi possível carregar os municípios. ';
+      const tentar = document.createElement('button');
+      tentar.type = 'button';
+      tentar.className = 'underline';
+      tentar.textContent = 'Tentar de novo';
+      tentar.addEventListener('click', () => {
+        carregarIndice().then(() => render(input));
+        render(input);
+      });
+      li.appendChild(tentar);
+    } else {
+      li.textContent = 'Carregando municípios…';
+    }
     lista.appendChild(li);
   } else {
     const resultados = buscar(input.value);
@@ -122,7 +146,8 @@ function render(input: HTMLInputElement): void {
         li.setAttribute('role', 'option');
         li.setAttribute('aria-selected', 'false');
         const a = document.createElement('a');
-        a.href = `/${m.uf}/${m.slug}`;
+        // Barra final: sem ela o servidor responde com redirect antes da página
+        a.href = `/${m.uf}/${m.slug}/`;
         a.className = 'flex items-center justify-between gap-2 px-3 py-2 text-sm text-foreground/80 hover:bg-accent hover:text-foreground transition-colors';
         const nome = document.createElement('span');
         nome.textContent = m.nome;
