@@ -1,0 +1,194 @@
+{
+  "cidade": "São Paulo",
+  "estado": "SP",
+  "slug": "sao-paulo",
+  "latitude": -23.6501,
+  "longitude": -46.6481,
+  "atualizado_em": "2026-11-28T17:11:47.799783+00:00",
+  "previsao": [
+    {
+      "data": "2026-11-28",
+      "min": 17.1,
+      "max": 25.2,
+      "condicao": "Chuva isolada forte",
+      "condicao_codigo": 82,
+      "chuva_mm": 40.4,
+      "uv": 1.1,
+      "nascer_sol": "05:11",
+      "por_sol": "18:38"
+    },
+    {
+      "data": "2026-11-29",
+      "min": 18.5,
+      "max": 23.5,
+      "condicao": "Chuvisco leve",
+      "condicao_codigo": 51,
+      "chuva_mm": 0.8,
+      "uv": 5.5,
+      "nascer_sol": "05:11",
+      "por_sol": "18:38"
+    },
+    {
+      "data": "2026-11-30",
+      "min": 18.8,
+      "max": 23.2,
+      "condicao": "Chuva isolada moderada",
+      "condicao_codigo": 81,
+      "chuva_mm": 7.8,
+      "uv": 5.0,
+      "nascer_sol": "05:11",
+      "por_sol": "18:39"
+    },
+    {
+      "data": "2026-12-01",
+      "min": 18.4,
+      "max": 27.0,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 4.9,
+      "uv": 7.3,
+      "nascer_sol": "05:11",
+      "por_sol": "18:40"
+    },
+    {
+      "data": "2026-12-02",
+      "min": 19.5,
+      "max": 28.2,
+      "condicao": "Tempestade",
+      "condicao_codigo": 95,
+      "chuva_mm": 6.4,
+      "uv": 7.2,
+      "nascer_sol": "05:11",
+      "por_sol": "18:40"
+    },
+    {
+      "data": "2026-12-03",
+      "min": 17.5,
+      "max": 22.0,
+      "condicao": "Chuva isolada leve",
+      "condicao_codigo": 80,
+      "chuva_mm": 9.2,
+      "uv": 4.1,
+      "nascer_sol": "05:11",
+      "por_sol": "18:41"
+    },
+    {
+      "data": "2026-12-04",
+      "min": 16.2,
+      "max": 19.8,
+      "condicao": "Encoberto",
+      "condicao_codigo": 3,
+      "chuva_mm": 0,
+      "uv": 4.1,
+      "nascer_sol": "05:11",
+      "por_sol": "18:42"
+    }
+  ],
+  "reservatorio": {
+    "nome": "Sistema Integrado Metropolitano",
+    "nivel_pct": 70.4,
+    "variacao_semana_pct": 1.9,
+    "variacao_diaria_pct": 0.269,
+    "data_medicao": "2026-11-28",
+    "sistema_id": 75,
+    "fonte": "SABESP",
+    "atualizado_em": "2026-11-28T16:55:36.248703+00:00"
+  },
+  "queimadas": {
+    "focos_100km": 0,
+    "fonte": "NASA FIRMS / INPE",
+    "atualizado_em": "2026-11-28T15:43:10.733282+00:00"
+  },
+  "uv": {
+    "indice": 1.1,
+    "categoria": "Baixo",
+    "fonte": "Open-Meteo",
+    "pico_inicio": "10:00",
+    "pico_fim": "14:00"
+  },
+  "qualidade_ar": {
+    "indice": 51,
+    "categoria": "Moderada",
+    "principal_poluente": "PM2.5",
+    "pm25": 6.8,
+    "pm10": 7.1,
+    "no2": 11.9,
+    "o3": 92.0,
+    "fonte": "Open-Meteo / Copernicus",
+    "atualizado_em": "2026-11-28T16:36:26.961913+00:00"
+  },
+  "sol": {
+    "nascer": "05:11",
+    "por": "18:38",
+    "duracao_h": 13.4,
+    "estacao": "Primavera",
+    "fonte": "Open-Meteo"
+  },
+  "lua": {
+    "nome": "Cheia",
+    "iluminacao_pct": 87.0,
+    "fase_pct": 61.8,
+    "dias_proxima_cheia": 3,
+    "fonte": "Cálculo astronômico"
+  },
+  "temperatura_atual": 23.3,
+  "dengue": {
+    "nivel_alerta": 1,
+    "nivel_label": "Atenção",
+    "nivel_incidencia": 1,
+    "nivel_incidencia_label": "Média",
+    "casos_semana": 369,
+    "casos_estimados": 1550,
+    "incidencia_100k": 12.7,
+    "populacao": 12200180,
+    "semana_epidemiologica": 202645,
+    "fonte": "InfoDengue / Fiocruz / SVS",
+    "atualizado_em": "2026-11-22T16:15:00.113392+00:00"
+  },
+  "chikungunya": {
+    "nivel_alerta": 1,
+    "nivel_label": "Atenção",
+    "nivel_incidencia": 0,
+    "nivel_incidencia_label": "Baixa",
+    "casos_semana": 0,
+    "casos_estimados": 9,
+    "incidencia_100k": 0.1,
+    "populacao": 12200180,
+    "semana_epidemiologica": 202645,
+    "fonte": "InfoDengue / Fiocruz / SVS",
+    "atualizado_em": "2026-11-22T16:15:00.113392+00:00"
+  },
+  "vento": {
+    "velocidade_kmh": 9.3,
+    "direcao_graus": 205,
+    "direcao": "SSO",
+    "max_kmh": 12.1,
+    "rajada_kmh": 36.4,
+    "direcao_dominante": "SE",
+    "fonte": "Open-Meteo"
+  },
+  "_clima_em": "2026-11-28T16:36:26.961913+00:00",
+  "umidade_pct": 82,
+  "pressao_hpa": 1013,
+  "ponto_orvalho_c": 20.0,
+  "alagamentos": {
+    "data": "2026-11-28",
+    "pontos_total": 0,
+    "ativos": 0,
+    "ativos_intransitaveis": 0,
+    "intransitaveis_total": 0,
+    "pontos": [],
+    "fonte": "CGE / Prefeitura de São Paulo",
+    "url": "https://www.cgesp.org/v3/alagamentos.jsp",
+    "atualizado_em": "2026-11-28T14:11:46.758666-03:00"
+  },
+  "agua": {
+    "parametro": "Escherichia coli",
+    "amostras": 9959,
+    "com_presenca": 54,
+    "pct_conformes": 99.5,
+    "periodo": "2026",
+    "fonte": "SISAGUA / Ministério da Saúde",
+    "atualizado_em": "2026-11-08T13:57:07.054740+00:00"
+  }
+}
